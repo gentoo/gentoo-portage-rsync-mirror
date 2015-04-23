@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcxxrt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.26 2015/04/23 08:10:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/ChangeLog,v 1.27 2015/04/23 08:43:26 aballier Exp $
+
+  23 Apr 2015; Alexis Ballier <aballier@gentoo.org>
+  libcxxrt-0.0_p20150423.ebuild, libcxxrt-9999.ebuild:
+  enable static-libs by default
 
 *libcxxrt-0.0_p20150423 (23 Apr 2015)
 

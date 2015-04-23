@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-0.0_p20150423.ebuild,v 1.1 2015/04/23 08:10:50 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcxxrt/libcxxrt-0.0_p20150423.ebuild,v 1.2 2015/04/23 08:43:26 aballier Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ if [ "${PV%9999}" = "${PV}" ] ; then
 else
 	KEYWORDS=""
 fi
-IUSE="libunwind static-libs"
+IUSE="libunwind +static-libs"
 
 RDEPEND="libunwind? ( >=sys-libs/libunwind-1.0.1-r1[static-libs?] )"
 DEPEND="${RDEPEND}
