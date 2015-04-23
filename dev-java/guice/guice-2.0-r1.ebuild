@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/guice-2.0-r1.ebuild,v 1.1 2015/04/11 22:25:47 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/guice-2.0-r1.ebuild,v 1.2 2015/04/23 06:52:14 fordfrog Exp $
 
 EAPI="5"
 
@@ -21,9 +21,9 @@ IUSE=""
 COMMON_DEPEND="dev-java/aopalliance:1
 	dev-java/asm:3
 	dev-java/cglib:3"
-RDEPEND=">=virtual/jre-1.6
+RDEPEND="|| ( virtual/jre:1.6 virtual/jre:1.7 )
 	${COMMON_DEPEND}"
-DEPEND=">=virtual/jdk-1.6
+DEPEND="|| ( virtual/jdk:1.6 virtual/jdk:1.7 )
 	${COMMON_DEPEND}"
 
 S="${WORKDIR}/${P}-src/"

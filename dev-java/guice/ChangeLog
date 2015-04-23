@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/guice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/ChangeLog,v 1.4 2015/04/11 22:25:47 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/guice/ChangeLog,v 1.5 2015/04/23 06:52:14 fordfrog Exp $
+
+  23 Apr 2015; Miroslav Šulc <fordfrog@gentoo.org> guice-2.0-r1.ebuild:
+  guice-2.0-r1 does not build with jdk 1.8
 
 *guice-3.0-r1 (11 Apr 2015)
 *guice-2.0-r1 (11 Apr 2015)
