@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pscan
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.13 2010/01/15 21:50:34 fauli Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pscan/ChangeLog,v 1.14 2015/04/23 00:49:03 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -pscan-20000721.ebuild:
+  Remove old.
 
   15 Jan 2010; Christian Faulhammer <fauli@gentoo.org>
   pscan-20000721-r1.ebuild:
@@ -48,4 +51,3 @@
 
   18 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> +pscan-20000721.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-
