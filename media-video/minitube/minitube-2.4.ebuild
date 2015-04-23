@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.4.ebuild,v 1.1 2015/04/19 08:58:32 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.4.ebuild,v 1.2 2015/04/23 16:39:23 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -48,7 +48,7 @@ pkg_pretend() {
 		eerror "https://console.developers.google.com/ and"
 		eerror "https://github.com/flaviotordini/minitube/blob/master/README.md"
 		eerror "for more information. Once you have generated your key,"
-		eerror "please export to to your environment ie :"
+		eerror "please export it to your environment ie :"
 		eerror "'export MINITUBE_GOOGLE_API_KEY=\"YourAPIKeyHere\""
 		eerror "and then try to merge this package again"
 		eerror ""

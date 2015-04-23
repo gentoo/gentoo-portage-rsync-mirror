@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.75 2015/04/14 10:15:37 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.76 2015/04/23 16:31:44 hwoarang Exp $
+
+*lxc-1.1.2 (23 Apr 2015)
+
+  23 Apr 2015; Markos Chandras <hwoarang@gentoo.org> +lxc-1.1.2.ebuild,
+  files/lxc.initd.3:
+  Version bump. Bug #546232. Fix lxc path in the openrc init script. Bug #547266
 
   14 Apr 2015; Yixun Lan <dlan@gentoo.org> lxc-1.1.1-r1.ebuild:
   add arm64 support, tested on cortex-a53 board

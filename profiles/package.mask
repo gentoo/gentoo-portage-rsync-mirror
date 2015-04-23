@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16496 2015/04/21 19:00:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16497 2015/04/23 16:41:54 hwoarang Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -48,12 +48,6 @@ games-strategy/freecnc
 # on dev-ruby/json instead. Nothing depends on this package.
 # Removal in 30 days.
 dev-ruby/json_pure
-
-# Markos Chandras <hwoarang@gentoo.org> (19 Apr 2015)
-# Old releases are broken due to Google API changes. 2.4
-# has some API support but it is not very user friendly.
-# Head over to #546866 for more information
-media-video/minitube
 
 # James Le Cuirot <chewi@gentoo.org> (18 Apr 2015)
 # Old, unmaintained, not used by anything, and superseded by
