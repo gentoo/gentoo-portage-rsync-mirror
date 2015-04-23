@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-2.0_pre1.ebuild,v 1.2 2015/01/30 12:26:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-2.0_pre2.ebuild,v 1.1 2015/04/23 15:42:43 jer Exp $
 
 EAPI=5
 inherit eutils systemd toolchain-funcs

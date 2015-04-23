@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.3.2.ebuild,v 1.4 2015/04/01 20:57:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.1 2015/04/23 15:34:04 pesa Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 QTC_PLUGINS=('android:android|qmakeandroidsupport' autotools:autotoolsprojectmanager baremetal
 	bazaar clang:clangcodemodel clearcase cmake:cmakeprojectmanager cvs git ios mercurial
 	perforce python:pythoneditor qbs:qbsprojectmanager qnx subversion valgrind winrt)
-IUSE="debug doc test ${QTC_PLUGINS[@]%:*}"
+IUSE="debug doc systemd test ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
 QT_PV="5.3.2:5"
@@ -55,9 +55,10 @@ RDEPEND="
 	>=dev-qt/qtwidgets-${QT_PV}
 	>=dev-qt/qtx11extras-${QT_PV}
 	>=dev-qt/qtxml-${QT_PV}
-	>=sys-devel/gdb-7.4[client(+),python]
+	>=sys-devel/gdb-7.5[client,python]
 	clang? ( >=sys-devel/clang-3.2:= )
 	qbs? ( >=dev-util/qbs-1.3.4 )
+	systemd? ( sys-apps/systemd:= )
 "
 DEPEND="${RDEPEND}
 	>=dev-qt/linguist-tools-${QT_PV}
@@ -111,6 +112,7 @@ src_configure() {
 		IDE_PACKAGE_MODE=1 \
 		LLVM_INSTALL_DIR="${EPREFIX}/usr" \
 		QBS_INSTALL_DIR="${EPREFIX}/usr" \
+		$(use systemd && echo CONFIG+=journald) \
 		$(use test && echo BUILD_TESTS=1) \
 		USE_SYSTEM_BOTAN=1
 }

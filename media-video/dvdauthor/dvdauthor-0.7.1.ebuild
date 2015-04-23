@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.7.1.ebuild,v 1.3 2015/02/06 10:09:20 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.7.1.ebuild,v 1.4 2015/04/23 15:54:25 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
 IUSE="graphicsmagick"
 
 RDEPEND=">=dev-libs/fribidi-0.19.2

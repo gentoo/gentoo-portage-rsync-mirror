@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/lz4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.39 2015/04/16 12:12:11 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lz4/ChangeLog,v 1.40 2015/04/23 15:56:43 jer Exp $
+
+  23 Apr 2015; Jeroen Roovers <jer@gentoo.org> lz4-0_p120.ebuild:
+  Stable for HPPA (bug #524420).
 
   16 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> lz4-0_p120.ebuild:
   sparc stable wrt bug #524420
