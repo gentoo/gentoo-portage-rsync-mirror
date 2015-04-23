@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/ldap3
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldap3/ChangeLog,v 1.1 2015/04/23 20:45:25 chutzpah Exp $
+
+*ldap3-0.9.8.2 (23 Apr 2015)
+
+  23 Apr 2015; Patrick McLean <chutzpah@gentoo.org> +ldap3-0.9.8.2.ebuild,
+  +metadata.xml:
+  Initial version of ldap3.
+
