@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.225 2015/04/15 11:19:20 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.226 2015/04/23 11:51:48 tommy Exp $
+
+*subversion-1.7.20 (23 Apr 2015)
+
+  23 Apr 2015; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
+  +subversion-1.7.20.ebuild:
+  Version bump for bug 545348
 
   15 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> subversion-1.8.13.ebuild:
   Removed dependency on swig again (as requested by Arfrever).
