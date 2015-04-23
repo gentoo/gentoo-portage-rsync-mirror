@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.76 2014/12/01 09:26:06 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.77 2015/04/23 06:16:07 jlec Exp $
+
+  23 Apr 2015; Justin Lecher <jlec@gentoo.org> metadata.xml, pwgen-2.07.ebuild:
+  Add local USE description
 
   01 Dec 2014; Justin Lecher <jlec@gentoo.org> -pwgen-2.06-r1.ebuild:
   Drop old vulnerable versions, #488300

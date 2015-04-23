@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.157 2015/04/23 04:48:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.158 2015/04/23 06:30:21 jlec Exp $
+
+  23 Apr 2015; Justin Lecher <jlec@gentoo.org> -dos2unix-6.0.5.ebuild,
+  -dos2unix-7.2.ebuild:
+  Drop old
 
   23 Apr 2015; Jeroen Roovers <jer@gentoo.org> dos2unix-6.0.6.ebuild:
   Stable for PPC64 (bug #522520).

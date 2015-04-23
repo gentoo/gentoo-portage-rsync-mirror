@@ -5,4 +5,7 @@
   <maintainer>
     <email>jlec@gentoo.org</email>
   </maintainer>
+  <use>
+    <flag name="livecd">Install init script for root password scrambling on boot</flag>
+  </use>
 </pkgmetadata>

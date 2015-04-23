@@ -195,6 +195,7 @@ app-admin/puppet:augeas - Enable augeas support
 app-admin/puppet:diff - Enable diff support
 app-admin/puppet:rrdtool - Enable rrdtool support
 app-admin/puppet:shadow - Enable shadow support
+app-admin/pwgen:livecd - Install init script for root password scrambling on boot
 app-admin/rsyslog:dbi - Build the general database output module (requires dev-db/libdbi)
 app-admin/rsyslog:elasticsearch - Build the Elasticsearch output module (requires net-misc/curl)
 app-admin/rsyslog:gcrypt - Add support for encrypted log files using dev-libs/libgcrypt
