@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/polytable
-# Copyright 2000-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.19 2012/03/10 18:00:58 slyfox Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/polytable/ChangeLog,v 1.20 2015/04/23 00:07:21 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -polytable-0.7.2.ebuild:
+  Remove old.
 
   10 Mar 2012; Sergei Trofimovich <slyfox@gentoo.org> polytable-0.7.2.ebuild,
   polytable-0.8.2.ebuild:
@@ -61,4 +64,3 @@
   20 Mar 2004; Andres Loeh <kosmikus@gentoo.org> metadata.xml,
   polytable-0.7.2.ebuild:
   Initial import.
-

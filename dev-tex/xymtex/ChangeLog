@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/xymtex
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.8 2012/09/11 10:31:42 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xymtex/ChangeLog,v 1.9 2015/04/23 00:15:16 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -xymtex-5.00.ebuild:
+  Remove old.
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
@@ -31,4 +34,3 @@
   +xymtex-5.00.ebuild, +metadata.xml:
   New package, fixes bug 310559. Thanks to ZyX <kp-pav@yandex.ru> for the
   original ebuild.
-

@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/essays1743
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.25 2012/08/27 17:38:40 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/essays1743/ChangeLog,v 1.26 2015/04/23 00:04:17 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -essays1743-1.0.ebuild,
+  -essays1743-1.203.1.ebuild:
+  Remove old.
 
   27 Aug 2012; Raúl Porcel <armin76@gentoo.org> essays1743-2.000.ebuild:
   alpha/ia64/s390/sh/sparc stable wrt #419057
@@ -85,4 +89,3 @@
   +essays1743-1.0.ebuild:
   Initial import. Ebuild submitted by Ronald Hummelink
   <ronald@hummelink.net>; bug #72089.
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/shtool
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.28 2012/02/12 14:57:08 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shtool/ChangeLog,v 1.29 2015/04/23 00:20:36 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -shtool-2.0.2.ebuild,
+  -shtool-2.0.3.ebuild, -shtool-2.0.4.ebuild:
+  Remove old.
 
   12 Feb 2012; Raúl Porcel <armin76@gentoo.org> shtool-2.0.2.ebuild,
   shtool-2.0.8.ebuild:
