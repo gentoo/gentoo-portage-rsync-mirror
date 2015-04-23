@@ -1,13 +1,13 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/dfc-3.0.0.ebuild,v 1.2 2013/12/29 17:17:41 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/dfc-3.0.5.ebuild,v 1.1 2015/04/23 01:42:18 dlan Exp $
 
-EAPI=4
+EAPI=5
 inherit cmake-utils
 
 DESCRIPTION="A simple CLI tool that display file system usage, with colors"
 HOMEPAGE="http://projects.gw-computing.net/projects/dfc"
-SRC_URI="http://projects.gw-computing.net/attachments/download/63/${P}.tar.gz"
+SRC_URI="http://projects.gw-computing.net/attachments/download/467/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -25,6 +25,8 @@ src_configure() {
 		-DDFC_DOC_PATH="${EPREFIX}"/usr/share/doc/${PF}
 		# disable automagic dependency
 		$(cmake-utils_use nls NLS_ENABLED)
+		-DLFS_ENABLED=ON
+		-DGRIM=OFF
 	)
 
 	cmake-utils_src_configure
