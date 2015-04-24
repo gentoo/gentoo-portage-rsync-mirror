@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.229 2015/04/24 07:38:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.230 2015/04/24 10:34:18 pinkbyte Exp $
+
+  24 Apr 2015; Sergey Popov <pinkbyte@gentoo.org> gcc-config-1.7.3.ebuild,
+  gcc-config-1.8.ebuild, gcc-config-1.8-r1.ebuild:
+  Fix HOMEPAGE
 
 *gcc-config-1.8-r1 (24 Apr 2015)
 

@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.585 2015/04/17 05:58:37 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.586 2015/04/24 10:44:27 eras Exp $
+
+*postfix-3.1_pre20150421 (24 Apr 2015)
+
+  24 Apr 2015; Eray Aslan <eras@gentoo.org> +postfix-3.1_pre20150421.ebuild,
+  -postfix-3.1_pre20150330.ebuild:
+  Version bump
 
   17 Apr 2015; Eray Aslan <eras@gentoo.org> -postfix-2.10.6.ebuild:
   Remove old

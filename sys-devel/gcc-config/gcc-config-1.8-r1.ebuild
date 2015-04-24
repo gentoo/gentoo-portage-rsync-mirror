@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.8-r1.ebuild,v 1.1 2015/04/24 07:38:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.8-r1.ebuild,v 1.2 2015/04/24 10:34:18 pinkbyte Exp $
 
 EAPI=5
 
 inherit eutils unpacker toolchain-funcs multilib
 
 DESCRIPTION="utility to manage compilers"
-HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/gcc-config.git"
+HOMEPAGE="https://gitweb.gentoo.org/proj/gcc-config.git/"
 SRC_URI="mirror://gentoo/${P}.tar.xz
 	http://dev.gentoo.org/~vapier/dist/${P}.tar.xz"
 
