@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit git-r3 flag-o-matic multilib toolchain-funcs
+inherit git-r3 multilib
 
 DESCRIPTION="CGO bindings for libusb"
 HOMEPAGE="https://github.com/hanwen/usb"
@@ -15,12 +15,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-COMMON_DEPEND="virtual/libusb
-		virtual/udev"
-DEPEND="${COMMON_DEPEND} 
-		dev-lang/go"
-
-RDEPEND="${COMMON_DEPEND}"
+DEPEND=">=dev-lang/go-1.4"
+RDEPEND=""
 
 # Tests require a connected mtp device
 RESTRICT="test"
@@ -28,16 +24,13 @@ RESTRICT="test"
 GO_PN="/usr/$(get_libdir)/go/src/github.com/hanwen/usb"
 
 src_install() {
-	dodir "${GO_PN}"
-
-	rm -r "${S}/.git" || die "Failed to remove .git directory"
+	insinto "${GO_PN}"
 
 	for i in LICENSE *.go; do
-		cp "${S}/${i}" "${D}/${GO_PN}" || die "Install failed"
+	  doins "${i}" || die "Install failed"
 	done
 }
 
 src_test() {
 	go test -ldflags '-extldflags=-fno-PIC' ${GO_PN} || die
 }
-
