@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/g-sorcery
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.12 2015/04/22 08:00:18 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-sorcery/ChangeLog,v 1.13 2015/04/24 21:57:49 jauhien Exp $
+
+*g-sorcery-0.2 (24 Apr 2015)
+
+  24 Apr 2015; Jauhien Piatlicki <jauhien@gentoo.org> +g-sorcery-0.2.ebuild,
+  g-sorcery-9999.ebuild:
+  version bump
 
   22 Apr 2015; Jauhien Piatlicki <jauhien@gentoo.org> g-sorcery-9999.ebuild:
   Gentoo git overlays server hostname has been changed
