@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.167 2015/04/19 09:36:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.169 2015/04/24 20:38:00 hwoarang Exp $
+
+  24 Apr 2015; Markos Chandras <hwoarang@gentoo.org>
+  -buildbot-0.8.7_p1-r1.ebuild:
+  Drop old ebuilds resulting to alpha/ia64/ppc/pp64/s390/sh/sparc to lose their
+  stable keyword
+
+*buildbot-0.8.12 (24 Apr 2015)
+
+  24 Apr 2015; Markos Chandras <hwoarang@gentoo.org> +buildbot-0.8.12.ebuild:
+  Version bump
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> buildbot-0.8.10.ebuild:
   x86 stable wrt bug #536174
