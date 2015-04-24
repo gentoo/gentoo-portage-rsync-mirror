@@ -5,6 +5,7 @@ Description=Vixie Cron Daemon
 Type=forking
 ExecStart=/usr/sbin/cron
 ExecStop=/bin/kill -TERM $MAINPID
+IgnoreSIGPIPE=false
 
 [Install]
 WantedBy=multi-user.target
