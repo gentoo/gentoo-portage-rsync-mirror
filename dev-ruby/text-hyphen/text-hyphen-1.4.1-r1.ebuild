@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/text-hyphen-1.4.1-r1.ebuild,v 1.6 2015/04/19 09:52:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-hyphen/text-hyphen-1.4.1-r1.ebuild,v 1.7 2015/04/24 07:13:57 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -25,4 +25,9 @@ ruby_add_bdepend "
 	)
 	test? (
 		>=dev-ruby/hoe-2.8.0
+		dev-ruby/test-unit:2
 	)"
+
+all_ruby_prepare() {
+	sed -i -e '2igem "test-unit", ">= 2.0"' test/test_*.rb || die
+}

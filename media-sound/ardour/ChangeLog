@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.141 2015/04/23 07:15:26 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.142 2015/04/24 07:16:52 nativemad Exp $
+
+*ardour-4.0-r2 (24 Apr 2015)
+
+  24 Apr 2015; Andreas Schuerch <nativemad@gentoo.org> ardour-4.0-r1.ebuild,
+  +ardour-4.0-r2.ebuild, ardour-9999.ebuild:
+  Correct .desktop file, See Bug 547518. Also set Cflags properly.
 
 *ardour-4.0-r1 (23 Apr 2015)
 

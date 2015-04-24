@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-4.0-r1.ebuild,v 1.1 2015/04/23 07:15:26 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-4.0-r1.ebuild,v 1.2 2015/04/24 07:16:52 nativemad Exp $
 
 EAPI=5
 
@@ -128,7 +128,7 @@ src_install() {
 	mv ${PN}.1 ${PN}${SLOT}.1
 	doman ${PN}${SLOT}.1
 	newicon icons/icon/ardour_icon_mac.png ${PN}${SLOT}.png
-	make_desktop_entry ardour3 ardour3 ardour3 AudioVideo
+	make_desktop_entry ardour4 ardour4 ardour4 AudioVideo
 }
 
 pkg_postinst() {
