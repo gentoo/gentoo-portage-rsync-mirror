@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/gs-elpa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-elpa/ChangeLog,v 1.5 2015/04/22 07:37:27 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gs-elpa/ChangeLog,v 1.6 2015/04/24 22:04:52 jauhien Exp $
+
+  24 Apr 2015; Jauhien Piatlicki <jauhien@gentoo.org> gs-elpa-9999.ebuild:
+  app-portage/g-sorcery 0.2 release
 
   22 Apr 2015; Jauhien Piatlicki <jauhien@gentoo.org> gs-elpa-9999.ebuild:
   master gs-elpa needs features from live g-sorcery
