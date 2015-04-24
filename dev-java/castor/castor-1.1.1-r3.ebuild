@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-1.1.1-r3.ebuild,v 1.1 2015/04/11 21:58:31 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-1.1.1-r3.ebuild,v 1.2 2015/04/24 12:28:59 monsieurp Exp $
 EAPI=5
 
 JAVA_PKG_IUSE="doc examples source"
@@ -50,7 +50,7 @@ src_unpack() {
 
 	cd "${S}/lib"
 	rm -v *.jar tests/*.jar
-	java-pkg_jar-from cglib-2.1 cglib.jar
+	java-pkg_jar-from cglib-3 cglib.jar
 	java-pkg_jar-from commons-logging \
 		commons-logging-api.jar	commons-logging-1.1.jar
 	java-pkg_jar-from jakarta-oro-2.0
