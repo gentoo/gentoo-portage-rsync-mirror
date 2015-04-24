@@ -1,6 +1,10 @@
 # ChangeLog for net-proxy/squidguard
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.48 2015/01/07 14:03:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squidguard/ChangeLog,v 1.49 2015/04/24 10:16:20 eras Exp $
+
+  24 Apr 2015; Eray Aslan <eras@gentoo.org> squidguard-1.4-r4.ebuild,
+  squidguard-1.5_beta.ebuild:
+  Do not hard code squid user and group id - bug #537610
 
   07 Jan 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Reassign and cleanup as discussed at https://www.mail-archive.com/gentoo-

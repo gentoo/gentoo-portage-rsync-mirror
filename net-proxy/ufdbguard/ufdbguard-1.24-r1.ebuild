@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.24-r1.ebuild,v 1.5 2014/08/10 20:36:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/ufdbguard/ufdbguard-1.24-r1.ebuild,v 1.6 2015/04/24 10:18:43 eras Exp $
 
 EAPI="2"
 
@@ -32,9 +32,8 @@ RDEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
-	# create the squid user exactly as done by net-proxy/squid-3.1.9
-	enewgroup squid 31
-	enewuser squid 31 -1 /var/cache/squid squid
+	enewgroup squid
+	enewuser squid -1 -1 /var/cache/squid squid
 }
 
 src_prepare() {

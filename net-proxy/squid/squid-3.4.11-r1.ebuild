@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.11-r1.ebuild,v 1.11 2015/02/25 11:04:26 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/squid-3.4.11-r1.ebuild,v 1.12 2015/04/24 10:15:11 eras Exp $
 
 EAPI=5
 inherit autotools eutils linux-info pam toolchain-funcs user versionator
@@ -56,8 +56,8 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-	enewgroup squid 31
-	enewuser squid 31 -1 /var/cache/squid squid
+	enewgroup squid
+	enewuser squid -1 -1 /var/cache/squid squid
 }
 
 src_prepare() {
