@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/chessx/chessx-1.3.0.ebuild,v 1.1 2015/04/21 16:30:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/chessx/chessx-1.3.0.ebuild,v 1.2 2015/04/24 14:25:56 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils qmake-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="dev-qt/qtprintsupport:5
+RDEPEND="dev-qt/qtprintsupport:5
 	dev-qt/qtsvg:5
 	dev-qt/qtgui:5
 	dev-qt/qtnetwork:5
@@ -22,7 +22,8 @@ DEPEND="dev-qt/qtprintsupport:5
 	dev-qt/qtmultimedia:5
 	dev-qt/qtxml:5
 	sys-libs/zlib"
-RDEPEND=${DEPEND}
+DEPEND="${RDEPEND}
+	dev-qt/linguist-tools"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-zlib.patch

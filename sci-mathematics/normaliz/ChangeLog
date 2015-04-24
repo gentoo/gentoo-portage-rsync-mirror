@@ -1,6 +1,12 @@
 # ChangeLog for sci-mathematics/normaliz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.26 2015/03/25 14:12:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/normaliz/ChangeLog,v 1.27 2015/04/24 14:18:38 tomka Exp $
+
+  24 Apr 2015; Thomas Kahle <tomka@gentoo.org>
+  -files/normaliz-2.10-respect-flags.patch,
+  -files/normaliz-2.5-respect-flags.patch, -normaliz-2.10.1.ebuild,
+  -normaliz-2.5-r1.ebuild:
+  remove old
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> normaliz-2.12.2.ebuild:
   Stable for x86, wrt bug #542270
