@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0-r2.ebuild,v 1.3 2015/04/24 15:24:10 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-6.14-r1.ebuild,v 1.1 2015/04/24 15:24:10 nicolasbock Exp $
 
 EAPI=5
 
@@ -43,6 +43,9 @@ DEPEND="
 			)"
 RDEPEND="!static? ( ${DEPEND} )"
 
+PATCHES=(
+	"${FILESDIR}/fix_rare_crash-6.14.patch"
+	)
 DOCS=( )
 AUTOTOOLS_AUTORECONF=1
 BUILD_DIR="${S}"

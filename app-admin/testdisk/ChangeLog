@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.60 2015/04/21 16:27:26 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.61 2015/04/24 15:24:10 nicolasbock Exp $
+
+*testdisk-6.14-r1 (24 Apr 2015)
+
+  24 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org>
+  +files/fix_rare_crash-6.14.patch, +testdisk-6.14-r1.ebuild,
+  testdisk-7.0-r2.ebuild:
+  app-admin/testdisk: Updated testdisk-6.14.  Added patch suggested by jospezial
+  (Comment 5 of Bug 537932).
 
   21 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> metadata.xml,
   testdisk-7.0-r2.ebuild:
