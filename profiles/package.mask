@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16499 2015/04/23 22:45:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16500 2015/04/24 14:32:44 pinkbyte Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Sergey Popov <pinkbyte@gentoo.org> (24 Apr 2015)
+# Dead upstream, nothing in tree uses it
+# Masked for removal in 30 days
+net-libs/libcapsinetwork
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
 # Upstream has discontinued the project; doesn't build on modern systems.
