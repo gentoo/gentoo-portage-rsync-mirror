@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgig
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.13 2014/08/10 21:08:47 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgig/ChangeLog,v 1.14 2015/04/23 23:27:23 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/libgig-gcc-4.3.patch,
+  -libgig-3.2.1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libgig-3.2.1.ebuild,
   libgig-3.3.0.ebuild:

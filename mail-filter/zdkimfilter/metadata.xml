@@ -11,11 +11,6 @@
 	</flag>
 </use>
 <use>
-	<flag name='mysql'>
-	MySQL client based statistics based storage.
-	</flag>
-</use>
-<use>
 	<flag name='opendbx'>
 	An alternate statistics based storage engine.
 	</flag>

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdstatus
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.20 2012/12/16 13:51:16 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.21 2015/04/23 23:22:17 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -cdstatus-0.94a.ebuild,
+  -cdstatus-0.95.04.ebuild, -files/cdstatus-0.94a-gentoo.diff:
+  Remove old.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> cdstatus-0.97.03.ebuild:
   Stable for x86, wrt bug #441394

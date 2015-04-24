@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/codecgraph
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.8 2014/08/10 21:04:44 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/codecgraph/ChangeLog,v 1.9 2015/04/23 23:24:29 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -codecgraph-20090522.ebuild,
+  -files/20080422-makefile-prefix.diff, -files/20080507-makefile-prefix.diff,
+  -files/20090522-makefile-prefix.diff:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   codecgraph-20090522.ebuild, codecgraph-20120114.ebuild:

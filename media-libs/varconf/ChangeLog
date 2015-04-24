@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/varconf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.35 2014/08/10 21:12:34 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.36 2015/04/23 23:28:24 mrueg Exp $
+
+  23 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/varconf-0.6.5-gcc43.patch,
+  -varconf-0.6.5.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> varconf-0.6.5.ebuild,
   varconf-0.6.6.ebuild, varconf-0.6.7.ebuild:
