@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.127 2015/02/16 19:45:45 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.128 2015/04/24 01:35:16 xmw Exp $
+
+*radvd-2.11 (24 Apr 2015)
+
+  24 Apr 2015; Michael Weber <xmw@gentoo.org> +radvd-2.11.ebuild:
+  Version bump
 
 *radvd-2.10 (16 Feb 2015)
 
