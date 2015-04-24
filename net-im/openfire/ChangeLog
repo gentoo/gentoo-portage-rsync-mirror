@@ -1,6 +1,11 @@
 # ChangeLog for net-im/openfire
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.64 2015/04/01 20:13:31 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/openfire/ChangeLog,v 1.65 2015/04/24 21:03:48 slyfox Exp $
+
+*openfire-3.10.0 (24 Apr 2015)
+
+  24 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org> +openfire-3.10.0.ebuild:
+  Version bump, bug #547552 by Agostino Sarubbo: CVE-2014-3451, CVE-2015-2080
 
 *openfire-3.9.3-r1 (01 Apr 2015)
 
