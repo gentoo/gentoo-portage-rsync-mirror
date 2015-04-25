@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-0.3.ebuild,v 1.10 2014/10/12 18:49:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/install-xattr-0.3.ebuild,v 1.11 2015/04/25 16:36:44 floppym Exp $
 
 EAPI=5
 DESCRIPTION="Wrapper to coreutil's install to preserve Filesystem Extended Attributes"
@@ -9,7 +9,7 @@ HOMEPAGE="http://dev.gentoo.org/~blueness/install-xattr/"
 inherit toolchain-funcs
 
 if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/elfix.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/elfix.git"
 	KEYWORDS="alpha ~arm64 hppa ia64 ~m68k ~sh sparc"
 	inherit git-2
 else

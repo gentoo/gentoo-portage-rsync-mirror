@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.13 2012/07/08 17:34:30 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparse/sparse-0.4.3.ebuild,v 1.14 2015/04/25 16:38:01 floppym Exp $
 
 EAPI="2"
 
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 	xml? ( virtual/pkgconfig )"
 
 src_prepare() {
-	# http://git.overlays.gentoo.org/gitweb/?p=proj/sparse.git;a=summary
+	# http://cgit.gentoo.org/proj/sparse.git
 	epatch "${FILESDIR}"/${P}-gentoo.patch
 }
 

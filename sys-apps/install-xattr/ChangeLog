@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/install-xattr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.34 2015/03/30 02:41:26 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/install-xattr/ChangeLog,v 1.35 2015/04/25 16:36:44 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> install-xattr-0.3.ebuild,
+  install-xattr-0.4.ebuild, install-xattr-9999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
   30 Mar 2015;  <tgall@gentoo.org> install-xattr-0.4.ebuild:
   stable on arm64

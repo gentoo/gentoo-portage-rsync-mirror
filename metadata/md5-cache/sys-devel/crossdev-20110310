@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/portage-2.1 app-shells/bash !sys-devel/crossdev-wrappers
 SLOT=0
 SRC_URI=mirror://gentoo/crossdev-20110310.tar.xz http://dev.gentoo.org/~vapier/dist/crossdev-20110310.tar.xz
-_md5_=6802aa8000b517ab79b6b1cdce02edb5
+_md5_=3be99a5cf3887d8bc8a6d8569624f001

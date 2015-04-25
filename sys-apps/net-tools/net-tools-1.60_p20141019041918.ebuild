@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20141019041918.ebuild,v 1.1 2014/10/19 04:24:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60_p20141019041918.ebuild,v 1.2 2015/04/25 16:36:44 floppym Exp $
 
 EAPI="3"
 
@@ -45,7 +45,7 @@ maint_pkg_create() {
 	local d="${T}/${patches}"
 	mkdir "${d}"
 	git format-patch -o "${d}" master..gentoo > /dev/null
-	echo "From http://git.overlays.gentoo.org/gitweb/?p=proj/net-tools.git" > "${d}"/README
+	echo "From http://cgit.gentoo.org/proj/net-tools.git" > "${d}"/README
 	tar cf - -C "${T}" ${d##*/} | xz > "${T}"/${patches}.tar.xz
 	rm -rf "${d}"
 

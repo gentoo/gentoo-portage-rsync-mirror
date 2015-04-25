@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-27.ebuild,v 1.9 2015/03/16 00:13:27 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-27.ebuild,v 1.10 2015/04/25 16:40:29 floppym Exp $
 
 EAPI=5
 
 if [ "${PV}" = "9999" ]; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/udev-gentoo-scripts.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/udev-gentoo-scripts.git"
 	inherit git-r3
 else
 	SRC_URI="http://dev.gentoo.org/~williamh/dist/${P}.tar.bz2"

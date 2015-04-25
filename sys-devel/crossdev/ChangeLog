@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/crossdev
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.114 2014/10/31 02:19:16 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.115 2015/04/25 16:38:01 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> crossdev-20100814.ebuild,
+  crossdev-20101011.ebuild, crossdev-20110310.ebuild, crossdev-20110705.ebuild,
+  crossdev-20110819.ebuild, crossdev-20111011.ebuild, crossdev-20111018.ebuild,
+  crossdev-20111118.ebuild, crossdev-20111221.ebuild, crossdev-20120214.ebuild,
+  crossdev-20120227.ebuild, crossdev-20120228.ebuild, crossdev-20120229.ebuild,
+  crossdev-20120301.ebuild, crossdev-20120305.ebuild, crossdev-20120529.ebuild,
+  crossdev-20120531.ebuild, crossdev-20120721.ebuild, crossdev-20120913.ebuild,
+  crossdev-20130628.ebuild, crossdev-20131011.ebuild, crossdev-20131107.ebuild,
+  crossdev-20140118.ebuild, crossdev-20140729.ebuild, crossdev-20140917.ebuild,
+  crossdev-20141030.ebuild, crossdev-99999999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
 *crossdev-20141030 (31 Oct 2014)
 
