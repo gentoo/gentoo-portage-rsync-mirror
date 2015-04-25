@@ -1,16 +1,16 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.1.2.ebuild,v 1.1 2015/04/21 17:43:30 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.2.ebuild,v 1.1 2015/04/25 20:26:59 sping Exp $
 
 EAPI=5
 
 inherit webapp
 
-DESCRIPTION="Wordpress php and mysql based content management system (CMS)"
+DESCRIPTION="Wordpress PHP and MySQL based content management system (CMS)"
 HOMEPAGE="http://wordpress.org/"
 SRC_URI="http://wordpress.org/${P/_rc/-RC}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="virtual/httpd-php
@@ -20,11 +20,27 @@ S=${WORKDIR}/${PN}
 
 need_httpd_cgi
 
+IUSE="+akismet examples +themes vhosts"
+
+# Override default of SLOT="${PVR}"
+WEBAPP_MANUAL_SLOT=yes
+SLOT="${PV}"  
+
 src_install() {
 	webapp_src_preinst
 
 	dohtml readme.html
 	rm readme.html license.txt || die
+
+	if ! use akismet ; then
+		rm -R wp-content/plugins/akismet/ || die
+	fi
+	if ! use examples ; then
+		rm wp-content/plugins/hello.php || die
+	fi
+	if ! use themes ; then
+		rm -R wp-content/themes/*/ || die
+	fi
 
 	[[ -f wp-config.php ]] || cp wp-config-sample.php wp-config.php
 
