@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mecab-python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.25 2015/04/08 08:05:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mecab-python/ChangeLog,v 1.26 2015/04/25 12:28:39 jer Exp $
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> mecab-python-0.996.ebuild:
+  Stable for PPC64 (bug #530964).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> mecab-python-0.996.ebuild:
   Drop old Python implementations

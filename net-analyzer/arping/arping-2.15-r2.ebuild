@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.15-r1.ebuild,v 1.1 2015/04/25 01:55:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-2.15-r2.ebuild,v 1.1 2015/04/25 12:10:38 jer Exp $
 
 EAPI=5
+inherit autotools eutils
 
 DESCRIPTION="A utility to see if a specific IP address is taken and what MAC address owns it"
 HOMEPAGE="http://www.habets.pp.se/synscan/programs.php?prog=arping"
@@ -18,3 +19,9 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!net-misc/iputils[arping(+)]"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.15-setgroups.patch
+
+	eautoreconf
+}
