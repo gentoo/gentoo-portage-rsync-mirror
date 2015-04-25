@@ -1,6 +1,18 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.138 2015/04/04 22:31:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.139 2015/04/25 00:09:50 vapier Exp $
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/iputils-99999999-openssl.patch,
+  +files/iputils-99999999-tftpd-syslog.patch, -files/iputils-20070202-idn.patch,
+  -files/iputils-20071127-infiniband.patch,
+  -files/iputils-20071127-kernel-ifaddr.patch,
+  -files/iputils-20100418-aliasing.patch,
+  -files/iputils-20100418-makefile.patch, -files/iputils-20100418-openssl.patch,
+  -files/iputils-20100418-printf-size.patch,
+  -files/iputils-20100418-proper-libs.patch,
+  -files/iputils-20101006-owl-pingsock.diff, iputils-99999999.ebuild:
+  Update patches against latest git.
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r1.ebuild:
   Mark arm64/m68k/s390/sh stable.
