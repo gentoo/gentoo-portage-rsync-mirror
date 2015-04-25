@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1439 2015/04/25 15:46:24 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1441 2015/04/25 18:59:21 zmedico Exp $
+
+  25 Apr 2015; Zac Medico <zmedico@gentoo.org> metadata.xml:
+  Update changelog and doc links.
+
+  25 Apr 2015; Zac Medico <zmedico@gentoo.org> portage-2.2.14.ebuild,
+  portage-2.2.15.ebuild, portage-2.2.17.ebuild, portage-2.2.18.ebuild,
+  portage-2.2.8-r2.ebuild, portage-9999.ebuild:
+  Update HOMEPAGE, thanks to charles17 for reporting (bug 547542).
 
   25 Apr 2015; Brian Dolbec <dolsen@gentoo.org> portage-9999.ebuild:
   Update EGIT_REPO_URI

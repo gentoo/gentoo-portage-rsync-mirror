@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.113 2015/04/25 15:46:24 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-9999.ebuild,v 1.114 2015/04/25 18:32:08 zmedico Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ PYTHON_REQ_USE='bzip2(+)'
 inherit distutils-r1 git-r3 multilib
 
 DESCRIPTION="Portage is the package management and distribution system for Gentoo"
-HOMEPAGE="http://www.gentoo.org/proj/en/portage/index.xml"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Portage"
 
 LICENSE="GPL-2"
 KEYWORDS=""

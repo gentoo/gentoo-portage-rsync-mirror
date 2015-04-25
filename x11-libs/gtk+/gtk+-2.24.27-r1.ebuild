@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.27-r1.ebuild,v 1.1 2015/03/20 19:58:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.27-r1.ebuild,v 1.2 2015/04/25 18:40:54 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -77,7 +77,10 @@ RDEPEND="${COMMON_DEPEND}
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 	)
 "
-PDEPEND="vim-syntax? ( app-vim/gtk-syntax )"
+# librsvg for svg icons (PDEPEND to avoid circular dep), bug #547710
+PDEPEND="gnome-base/librsvg[${MULTILIB_USEDEP}]
+	vim-syntax? ( app-vim/gtk-syntax )
+"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="To make the gtk2 file chooser use 'current directory' mode by default,

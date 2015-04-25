@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.775 2015/03/29 10:20:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.776 2015/04/25 18:40:54 tetromino Exp $
+
+  25 Apr 2015; Alexandre Rostovtsev <tetromino@gentoo.org> gtk+-2.24.27.ebuild,
+  gtk+-2.24.27-r1.ebuild, gtk+-3.14.9.ebuild, gtk+-3.14.10.ebuild:
+  Add librsvg[${MULTILIB_USEDEP}] to pdepend to ensure normal icon themes
+  (png/svg) can always be loaded (bug #547710, thanks to haarp and nE0sIghT).
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gtk+-2.24.27.ebuild,
   gtk+-3.14.9.ebuild:

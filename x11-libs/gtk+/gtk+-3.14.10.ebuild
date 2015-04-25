@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.10.ebuild,v 1.1 2015/03/28 09:52:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.10.ebuild,v 1.2 2015/04/25 18:40:54 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -93,7 +93,10 @@ RDEPEND="${COMMON_DEPEND}
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 	)
 "
-PDEPEND="vim-syntax? ( app-vim/gtk-syntax )"
+# librsvg for svg icons (PDEPEND to avoid circular dep), bug #547710
+PDEPEND="gnome-base/librsvg[${MULTILIB_USEDEP}]
+	vim-syntax? ( app-vim/gtk-syntax )
+"
 
 MULTILIB_CHOST_TOOLS=(
 	/usr/bin/gtk-query-immodules-3.0
