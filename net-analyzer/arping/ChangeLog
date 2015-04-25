@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/arping
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.101 2015/04/14 17:21:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.102 2015/04/25 01:55:22 vapier Exp $
+
+*arping-2.15-r1 (25 Apr 2015)
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org> +arping-2.15-r1.ebuild:
+  Stop renaming to arping2, but block iputils[arping] instead.
 
   14 Apr 2015; Jeroen Roovers <jer@gentoo.org> -arping-2.14.ebuild:
   Old.

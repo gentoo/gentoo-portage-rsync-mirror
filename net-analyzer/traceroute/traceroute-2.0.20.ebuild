@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.20.ebuild,v 1.10 2015/04/18 15:56:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/traceroute-2.0.20.ebuild,v 1.11 2015/04/25 01:45:29 vapier Exp $
 
 EAPI=5
 
@@ -15,7 +15,8 @@ SLOT="0"
 KEYWORDS="alpha amd64 arm ~arm64 hppa ~ia64 ~m68k ~mips ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static"
 
-RDEPEND="!<net-misc/iputils-20121221-r1"
+RDEPEND="!<net-misc/iputils-20121221-r1
+	!net-misc/iputils[traceroute]"
 
 src_compile() {
 	use static && append-ldflags -static

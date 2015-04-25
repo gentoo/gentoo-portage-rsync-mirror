@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/traceroute
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.107 2015/04/18 15:56:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.108 2015/04/25 01:45:29 vapier Exp $
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org> traceroute-2.0.20.ebuild,
+  traceroute-2.0.21.ebuild:
+  Block iputils built w/USE=traceroute.
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> traceroute-2.0.20.ebuild:
   x86 stable wrt bug #517380

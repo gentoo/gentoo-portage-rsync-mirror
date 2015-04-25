@@ -1,6 +1,22 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.142 2015/04/25 01:05:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.144 2015/04/25 01:54:49 vapier Exp $
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r2.ebuild,
+  iputils-99999999.ebuild:
+  Fix install of arping and add blocker against net-misc/arping.
+
+*iputils-20121221-r2 (25 Apr 2015)
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/iputils-20121221-parallel-doc.patch,
+  +files/iputils-20121221-tftpd-setid.patch,
+  +files/iputils-20121221-tftpd-syslog.patch, +iputils-20121221-r2.ebuild,
+  iputils-99999999.ebuild, metadata.xml:
+  Add fix from upstream for checking tftpd set*id calls. Add USE flags to
+  control all the utils (other than ping) as they are all fairly uncommon.  Drop
+  ipg entirely as it is a pretty useless script.  Re-add support for traceroute
+  via the new USE flag.
 
   25 Apr 2015; Mike Frysinger <vapier@gentoo.org> +files/rarpd.conf.d,
   +files/rarpd.init.d, iputils-99999999.ebuild:
