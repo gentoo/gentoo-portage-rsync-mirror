@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/docker-py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.21 2015/04/05 03:45:47 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.23 2015/04/25 21:28:31 alunduil Exp $
+
+  25 Apr 2015; Alex Brandt <alunduil@gentoo.org> -docker-py-1.0.0.ebuild:
+  remove version 1.0.0
+
+*docker-py-1.1.0-r2 (25 Apr 2015)
+
+  25 Apr 2015; Alex Brandt <alunduil@gentoo.org> +docker-py-1.1.0-r2.ebuild:
+  add version 1.1.0-r2  * fix dependence lists (extraneous items and missing
+  properties)
 
   05 Apr 2015; Alex Brandt <alunduil@gentoo.org> docker-py-1.1.0-r1.ebuild:
   fix die handling in doc preparation
