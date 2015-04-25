@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/layman-dbtools
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/ChangeLog,v 1.3 2011/09/20 22:15:23 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/ChangeLog,v 1.4 2015/04/25 16:25:44 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  layman-dbtools-0_p20100322.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
   20 Sep 2011; Michał Górny <mgorny@gentoo.org>
   layman-dbtools-0_p20100322.ebuild:
@@ -15,4 +19,3 @@
   22 Mar 2010; Sebastian Pipping <sping@gentoo.org>
   +layman-dbtools-0_p20100322.ebuild, +metadata.xml:
   New package
-

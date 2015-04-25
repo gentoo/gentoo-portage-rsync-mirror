@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.599 2015/04/19 21:06:27 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.600 2015/04/25 16:30:29 blueness Exp $
+
+  25 Apr 2015; Anthony G. Basile <blueness@gentoo.org> gnupg-2.1.3-r3.ebuild:
+  Keyword ~ppc ~ppc64.  Bug #546478.
 
 *gnupg-2.0.27-r1 (19 Apr 2015)
 *gnupg-2.1.3-r3 (19 Apr 2015)

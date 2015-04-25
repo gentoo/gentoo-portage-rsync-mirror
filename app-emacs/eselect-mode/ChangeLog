@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/eselect-mode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.58 2015/04/17 11:34:40 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/eselect-mode/ChangeLog,v 1.59 2015/04/25 16:09:08 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> eselect-mode-9999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
   17 Apr 2015; Ulrich Müller <ulm@gentoo.org> -eselect-mode-1.4.3.ebuild:
   Remove old.

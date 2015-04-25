@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/layman-dbtools-0_p20100322.ebuild,v 1.3 2011/09/20 22:15:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman-dbtools/layman-dbtools-0_p20100322.ebuild,v 1.4 2015/04/25 16:25:44 floppym Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2"
@@ -11,10 +11,10 @@ RESTRICT_PYTHON_ABIS="3.*"
 inherit git-2 python
 
 DESCRIPTION="Tools to work with layman-global.txt/repositories.xml like files"
-HOMEPAGE="http://git.overlays.gentoo.org/gitweb/?p=proj/repositories-xml-format.git;a=summary"
+HOMEPAGE="http://cgit.gentoo.org/proj/repositories-xml-format.git"
 SRC_URI=""
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/repositories-xml-format.git
-	http://git.overlays.gentoo.org/gitroot/proj/repositories-xml-format.git"
+EGIT_REPO_URI="git://anongit.gentoo.org/proj/repositories-xml-format.git
+	http://anongit.gentoo.org/git/proj/repositories-xml-format.git"
 EGIT_COMMIT="8c4d7440c6d47f7ed690edafb7c0af53742f3297"
 
 if [[ ${PV} != 0_p20100322 ]]; then

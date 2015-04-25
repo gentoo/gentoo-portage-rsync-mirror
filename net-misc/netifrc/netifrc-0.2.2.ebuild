@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.2.2.ebuild,v 1.11 2014/07/27 11:13:00 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netifrc/netifrc-0.2.2.ebuild,v 1.12 2015/04/25 16:28:24 floppym Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ DESCRIPTION="Gentoo Network Interface Management Scripts"
 HOMEPAGE="http://www.gentoo.org/proj/en/base/openrc/"
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/${PN}.git"
 	inherit git-2
 else
 	SRC_URI="http://dev.gentoo.org/~robbat2/distfiles/${P}.tar.bz2"

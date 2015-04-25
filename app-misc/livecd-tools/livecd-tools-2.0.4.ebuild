@@ -1,11 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.4.ebuild,v 1.3 2014/06/03 01:10:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/livecd-tools-2.0.4.ebuild,v 1.4 2015/04/25 16:09:41 floppym Exp $
 
 EAPI=5
 
 if [[ ${PV} == "9999" ]]; then
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/livecd-tools.git"
+	EGIT_REPO_URI="git://anongit.gentoo.org/proj/livecd-tools.git"
 	inherit git-2
 else
 	SRC_URI="https://dev.gentoo.org/~zerochaos/distfiles/${P}.tar.xz"

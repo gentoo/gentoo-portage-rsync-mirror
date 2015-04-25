@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.18-r1.ebuild,v 1.2 2015/01/30 18:07:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-2.0.18-r1.ebuild,v 1.3 2015/04/25 16:27:40 floppym Exp $
 
 EAPI=5
 
 if [[ ${PV} == *9999* ]]; then
 	SRC_ECLASS="git-2"
-	EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/catalyst.git"
+	EGIT_REPO_URI="anongit.gentoo.org/proj/catalyst.git"
 	EGIT_MASTER="master"
 	SRC_URI=""
 	KEYWORDS=""

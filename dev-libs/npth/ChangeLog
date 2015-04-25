@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/npth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/npth/ChangeLog,v 1.4 2015/04/14 05:36:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/npth/ChangeLog,v 1.5 2015/04/25 16:29:14 blueness Exp $
+
+  25 Apr 2015; Anthony G. Basile <blueness@gentoo.org> npth-0.91.ebuild,
+  npth-1.0.ebuild, npth-1.1.ebuild:
+  Keyword ~ppc ~ppc64.  Bug #546478.
 
   14 Apr 2015; Jeroen Roovers <jer@gentoo.org> npth-1.1.ebuild:
   Marked ~hppa (bug #546478).

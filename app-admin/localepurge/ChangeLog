@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/localepurge
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.65 2015/04/13 23:17:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/localepurge/ChangeLog,v 1.66 2015/04/25 16:07:38 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> localepurge-0.5.4-r2.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
   13 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
   -files/localepurge-0.5.3.3-prefix.patch, -localepurge-0.5.2.ebuild,

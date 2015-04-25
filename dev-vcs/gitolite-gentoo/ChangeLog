@@ -1,6 +1,14 @@
 # ChangeLog for dev-vcs/gitolite-gentoo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.45 2015/04/02 16:37:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitolite-gentoo/ChangeLog,v 1.46 2015/04/25 16:27:57 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org>
+  gitolite-gentoo-2.3.1-r1.ebuild, gitolite-gentoo-2.3.3-r1.ebuild,
+  gitolite-gentoo-3.5.3.1.ebuild, gitolite-gentoo-3.6.1-r1.ebuild,
+  gitolite-gentoo-3.6.1.ebuild, gitolite-gentoo-3.6.2.1.ebuild,
+  gitolite-gentoo-3.6.2.2.ebuild, gitolite-gentoo-3.6.2.3.ebuild,
+  gitolite-gentoo-3.6.2.4.ebuild, gitolite-gentoo-9999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
 *gitolite-gentoo-3.6.2.4 (02 Apr 2015)
 

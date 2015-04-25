@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/devmanual
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.14 2014/12/21 10:11:45 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/devmanual/ChangeLog,v 1.15 2015/04/25 16:08:42 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> devmanual-0_pre20141116.ebuild,
+  devmanual-9999.ebuild:
+  Replace links pointing at git.overlays.gentoo.org.
 
   21 Dec 2014; Markos Chandras <hwoarang@gentoo.org> devmanual-9999.ebuild:
   Drop keywords from live ebuild now that the mask has been lifted

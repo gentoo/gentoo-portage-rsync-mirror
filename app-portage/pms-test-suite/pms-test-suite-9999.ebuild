@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-9999.ebuild,v 1.2 2014/07/06 13:16:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pms-test-suite/pms-test-suite-9999.ebuild,v 1.3 2015/04/25 16:25:44 floppym Exp $
 
 EAPI=4
 
@@ -14,8 +14,8 @@ DISTUTILS_SRC_TEST=setup.py
 inherit base distutils
 
 #if LIVE
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/${PN}.git
-	http://git.overlays.gentoo.org/gitroot/proj/${PN}.git
+EGIT_REPO_URI="git://anongit.gentoo.org/proj/${PN}.git
+	http://anongit.gentoo.org/git/proj/${PN}.git
 	http://bitbucket.org/mgorny/${PN}.git"
 inherit git-2
 #endif
