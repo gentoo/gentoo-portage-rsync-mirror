@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.231 2015/04/08 07:30:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.232 2015/04/25 13:57:49 floppym Exp $
+
+  25 Apr 2015; Mike Gilbert <floppym@gentoo.org> layman-9999.ebuild:
+  Switch to anongit.gentoo.org.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> layman-2.0.0-r1.ebuild,
   layman-2.0.0-r3.ebuild:

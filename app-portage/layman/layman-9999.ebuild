@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.41 2015/03/27 22:19:56 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-9999.ebuild,v 1.42 2015/04/25 13:57:49 floppym Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ inherit eutils distutils-r1 git-2 linux-info prefix
 DESCRIPTION="Tool to manage Gentoo overlays"
 HOMEPAGE="http://layman.sourceforge.net"
 SRC_URI=""
-EGIT_REPO_URI="git://git.overlays.gentoo.org/proj/layman.git"
+EGIT_REPO_URI="git://anongit.gentoo.org/proj/layman.git"
 
 LICENSE="GPL-2"
 SLOT="0"
