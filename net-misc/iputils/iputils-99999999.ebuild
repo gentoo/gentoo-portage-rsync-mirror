@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.16 2015/04/25 00:46:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.17 2015/04/25 01:05:42 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -83,6 +83,9 @@ src_install() {
 	into /usr
 	dobin clockdiff
 	dosbin rarpd rdisc ipg tftpd tracepath $(ipv6 tracepath6)
+
+	newinitd "${FILESDIR}"/rarpd.init.d rarpd
+	newconfd "${FILESDIR}"/rarpd.conf.d rarpd
 
 	dodoc INSTALL RELNOTES
 	use ipv6 \
