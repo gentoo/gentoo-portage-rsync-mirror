@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.322 2015/04/24 09:58:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.323 2015/04/25 09:24:38 jer Exp $
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> thunderbird-31.6.0.ebuild:
+  Stable for PPC64 (bug #545232).
 
   24 Apr 2015; Agostino Sarubbo <ago@gentoo.org> thunderbird-31.6.0.ebuild:
   Stable for x86, wrt bug #545232

@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/pms
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.51 2014/06/01 14:43:14 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/pms/ChangeLog,v 1.52 2015/04/25 09:02:52 ulm Exp $
+
+  25 Apr 2015; Ulrich Müller <ulm@gentoo.org> pms-9999.ebuild:
+  Update repository URIs, bug 547648.
 
   01 Jun 2014; Ulrich Müller <ulm@gentoo.org> pms-5-r2.ebuild:
   Drop ~sparc-fbsd keyword because of unsatified dependencies.

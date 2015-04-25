@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16500 2015/04/24 14:32:44 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16501 2015/04/25 09:03:47 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -602,32 +602,6 @@ dev-libs/libzypp
 # CVE-2015-{0219,0220,0221,0222}
 # #536586
 =dev-python/django-1.5*
-
-# Hans de Graaff <graaff@gentoo.org> (23 Feb 2015)
-# Mask chef and its dependencies for removal in 60 days.
-# This package lacks a maintainer and the version currently
-# in the tree is very much out-of-date. Several calls for a
-# new maintainer have gone unanswered. The version of chef
-# in the gentoo tree depends on old versions of various ruby
-# packages, one of which has an open security bug. It is also
-# only available for ruby 1.9 which reached end-of-life.
-app-admin/chef
-app-admin/chef-expander
-app-admin/chef-server
-app-admin/chef-server-api
-app-admin/chef-server-webui
-app-admin/chef-solr
-dev-ruby/merb-assets
-dev-ruby/merb-core
-dev-ruby/merb-haml
-dev-ruby/merb-helpers
-dev-ruby/merb-param-protection
-dev-ruby/mixlib-authentication
-dev-ruby/mixlib-cli
-dev-ruby/mixlib-config
-dev-ruby/mixlib-log
-dev-ruby/ohai
-=dev-ruby/rest-client-1.6.7-r1
 
 # Joerg Bornkessel <hd_brummy@gentoo.org> (12 Feb 2015)
 # dead on upstream since years,
