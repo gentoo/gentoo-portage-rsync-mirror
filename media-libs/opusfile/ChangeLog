@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opusfile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.11 2014/09/14 10:03:46 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.12 2015/04/25 06:33:14 jer Exp $
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> opusfile-0.6.ebuild:
+  Marked ~ppc64 (bug #543524).
 
 *opusfile-0.6 (14 Sep 2014)
 

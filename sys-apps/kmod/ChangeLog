@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.191 2015/04/24 19:30:37 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.192 2015/04/25 06:49:01 jer Exp $
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> kmod-20.ebuild:
+  Stable for HPPA PPC64 (bug #547502).
 
   24 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> kmod-20.ebuild:
   x86 stable wrt byg #547502
