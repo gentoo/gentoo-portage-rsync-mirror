@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta7-r1.ebuild,v 1.2 2015/03/08 07:58:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta8.ebuild,v 1.1 2015/04/24 23:19:34 vapier Exp $
 
 EAPI=5
 
@@ -31,13 +31,13 @@ DOCS=(
 )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-1.7.2.1-long-long.patch #436164
+	epatch "${FILESDIR}"/${P}-filan-build.patch
 	touch doc/${PN}.1 || die
 }
 
 src_configure() {
-	tc-export AR
 	filter-flags -Wall '-Wno-error*' #293324
+	tc-export AR
 	econf \
 		$(use_enable ssl openssl) \
 		$(use_enable readline) \
