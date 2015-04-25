@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/google-apputils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.8 2015/03/13 16:50:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.9 2015/04/25 11:52:19 jer Exp $
+
+  25 Apr 2015; Jeroen Roovers <jer@gentoo.org> google-apputils-0.4.0.ebuild:
+  Marked ~ppc64 too.
 
   13 Mar 2015; Mike Frysinger <vapier@gentoo.org> google-apputils-0.4.0.ebuild:
   Add ia64 love.

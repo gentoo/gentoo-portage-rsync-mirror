@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/google-apputils-0.4.0.ebuild,v 1.7 2015/03/13 16:50:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/google-apputils-0.4.0.ebuild,v 1.8 2015/04/25 11:52:19 jer Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="http://google-apputils-python.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~arm64 ~ia64 ~m68k ~mips ~s390 ~sh x86"
+KEYWORDS="amd64 ~arm ~arm64 ~ia64 ~m68k ~mips ~ppc64 ~s390 ~sh x86"
 IUSE="test"
 
 RDEPEND="dev-python/python-dateutil[${PYTHON_USEDEP}]
