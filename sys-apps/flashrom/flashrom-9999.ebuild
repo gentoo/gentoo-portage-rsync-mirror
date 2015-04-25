@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.11 2015/04/18 03:18:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/flashrom/flashrom-9999.ebuild,v 1.12 2015/04/25 11:07:15 swegener Exp $
 
 EAPI="5"
 
@@ -116,7 +116,7 @@ src_test() {
 src_install() {
 	dosbin flashrom
 	doman flashrom.8
-	dodoc ChangeLog README Documentation/*.txt
+	dodoc README Documentation/*.txt
 
 	if use tools ; then
 		if use amd64 ; then
