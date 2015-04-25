@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/fleet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.13 2015/04/17 23:31:39 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.14 2015/04/25 21:51:42 alunduil Exp $
+
+*fleet-0.10.0-r1 (25 Apr 2015)
+
+  25 Apr 2015; Alex Brandt <alunduil@gentoo.org> +files/fleet.socket,
+  +fleet-0.10.0-r1.ebuild, files/fleet.service:
+  add version 0.10.0-r1  provided by Stefan Junker <code@stefanjunker.de>  *
+  renamed: fleetd.service -> fleet.service * added fleet.socket * added elog
+  message elaborating
 
   17 Apr 2015; Alex Brandt <alunduil@gentoo.org> -fleet-0.9.0.ebuild:
   remove version 0.9.0
