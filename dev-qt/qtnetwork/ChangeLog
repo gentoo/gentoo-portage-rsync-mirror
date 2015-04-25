@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtnetwork
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.14 2015/04/22 16:22:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.15 2015/04/25 18:24:48 kensington Exp $
+
+  25 Apr 2015; Michael Palimaka <kensington@gentoo.org> metadata.xml:
+  Add description for bindist USE flag.
 
   22 Apr 2015; Michael Palimaka <kensington@gentoo.org> qtnetwork-5.4.1.ebuild:
   Introduce bindist USE flag to better handle OpenSSL EC support wrt bug
