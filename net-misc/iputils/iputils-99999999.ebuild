@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.14 2015/04/25 00:09:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.16 2015/04/25 00:46:38 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -29,7 +29,10 @@ IUSE="caps doc gnutls idn ipv6 SECURITY_HAZARD ssl static"
 LIB_DEPEND="caps? ( sys-libs/libcap[static-libs(+)] )
 	idn? ( net-dns/libidn[static-libs(+)] )
 	ipv6? ( ssl? (
-		gnutls? ( net-libs/gnutls[static-libs(+)] )
+		gnutls? (
+			net-libs/gnutls[openssl(+)]
+			net-libs/gnutls[static-libs(+)]
+		)
 		!gnutls? ( dev-libs/openssl:0[static-libs(+)] )
 	) )"
 RDEPEND="!net-misc/rarpd
@@ -53,6 +56,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-99999999-openssl.patch #335436
 	epatch "${FILESDIR}"/${PN}-99999999-tftpd-syslog.patch
 	epatch "${FILESDIR}"/${PN}-20121221-makefile.patch
+	epatch "${FILESDIR}"/${PN}-20121221-strtod.patch #472592
 	use SECURITY_HAZARD && epatch "${FILESDIR}"/${PN}-20071127-nonroot-floodping.patch
 	use static && append-ldflags -static
 }

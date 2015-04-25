@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/iputils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.139 2015/04/25 00:09:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.141 2015/04/25 00:46:38 vapier Exp $
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/iputils-20121221-strtod.patch, iputils-99999999.ebuild:
+  Fix -i number parsing in some locales #472592 by Sergey Fionov.
+
+  25 Apr 2015; Mike Frysinger <vapier@gentoo.org> iputils-20121221-r1.ebuild,
+  iputils-99999999.ebuild:
+  Require gnutls be built w/USE=openssl #546116 by Patrick Lauer.
 
   25 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   +files/iputils-99999999-openssl.patch,
