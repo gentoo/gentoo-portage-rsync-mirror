@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.20.3.ebuild,v 1.1 2015/01/02 23:05:57 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/webmock-1.20.3.ebuild,v 1.2 2015/04/26 19:03:13 graaff Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG.md README.md"
 inherit ruby-fakegem
 
 DESCRIPTION="Allows stubbing HTTP requests and setting expectations on HTTP requests"
-HOMEPAGE="http://github.com/bblimke/webmock"
+HOMEPAGE="https://github.com/bblimke/webmock"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,7 +43,8 @@ all_ruby_prepare() {
 }
 
 each_ruby_test() {
-	each_fakegem_test
+	${RUBY} -S rake test NO_CONNECTION=true || die
+	${RUBY} -S rspec-2 spec || die
 
 	einfo "Delay to allow the test server to stop"
 	sleep 10

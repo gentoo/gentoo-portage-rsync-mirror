@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/webmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.40 2015/02/20 23:13:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/webmock/ChangeLog,v 1.41 2015/04/26 19:03:13 graaff Exp $
+
+  26 Apr 2015; Hans de Graaff <graaff@gentoo.org> webmock-1.20.3.ebuild:
+  Make sure tests work when rspec:3 is also installed.
 
   20 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -webmock-1.7.4.ebuild:
   Remove old.
