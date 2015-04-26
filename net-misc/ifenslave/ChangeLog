@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/ifenslave
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.33 2014/08/28 09:19:42 kumba Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ChangeLog,v 1.34 2015/04/26 22:58:44 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/modules.d-bond,
+  -files/modules.d-bond-1.1.0-r3, -ifenslave-1.1.0-r3.ebuild,
+  -ifenslave-1.1.0-r4.ebuild, -ifenslave-1.1.0-r5.ebuild:
+  Remove old.
 
   28 Aug 2014; Joshua Kinard <kumba@gentoo.org> ifenslave-1.1.0-r6.ebuild:
   Added ~mips to KEYWORDS, per #521148.

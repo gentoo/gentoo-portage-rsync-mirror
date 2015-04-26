@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/sobby
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.36 2014/06/22 18:44:33 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sobby/ChangeLog,v 1.37 2015/04/26 22:53:40 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/sobby-conf-0.4.3,
+  -files/sobby-init-0.4.3, -sobby-0.4.7.ebuild:
+  Remove old.
 
   22 Jun 2014; Markus Meier <maekke@gentoo.org> sobby-0.4.8.ebuild:
   add ~arm, bug #511566

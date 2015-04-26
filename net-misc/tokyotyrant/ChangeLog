@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/tokyotyrant
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.11 2014/01/08 06:30:37 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tokyotyrant/ChangeLog,v 1.12 2015/04/26 22:51:11 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -files/fix_makefiles.patch,
+  -tokyotyrant-1.1.40.ebuild:
+  Remove old.
 
   08 Jan 2014; Mike Frysinger <vapier@gentoo.org> tokyotyrant-1.1.40.ebuild,
   tokyotyrant-1.1.41-r1.ebuild:
