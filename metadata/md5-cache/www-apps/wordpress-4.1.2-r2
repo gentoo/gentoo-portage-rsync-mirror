@@ -10,4 +10,4 @@ RDEPEND=virtual/httpd-php || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) >=app-
 SLOT=4.1.2
 SRC_URI=http://wordpress.org/wordpress-4.1.2.tar.gz
 _eclasses_=webapp	25b9b1696f5e698711f47d45c3d45e3e
-_md5_=d618c2802f2c18dd2be217d8642b4225
+_md5_=6e31a312bc21ec13cc5356103e07a552

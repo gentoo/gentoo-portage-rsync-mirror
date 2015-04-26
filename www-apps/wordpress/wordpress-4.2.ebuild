@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.2.ebuild,v 1.1 2015/04/25 20:26:59 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.2.ebuild,v 1.2 2015/04/26 00:12:37 patrick Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE="+akismet examples +themes vhosts"
 
 # Override default of SLOT="${PVR}"
 WEBAPP_MANUAL_SLOT=yes
-SLOT="${PV}"  
+SLOT="${PV}"
 
 src_install() {
 	webapp_src_preinst
