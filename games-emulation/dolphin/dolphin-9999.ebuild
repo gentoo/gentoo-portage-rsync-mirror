@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.23 2015/03/09 21:07:44 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.24 2015/04/26 19:36:46 twitch153 Exp $
 
 EAPI=5
 
@@ -36,7 +36,8 @@ RDEPEND=">=media-libs/glew-1.10
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
 	bluetooth? ( net-wireless/bluez )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg
+			!!>=media-video/libav-10 )
 	lzo? ( dev-libs/lzo )
 	openal? ( media-libs/openal )
 	opengl? ( virtual/opengl )
@@ -49,7 +50,7 @@ DEPEND="${RDEPEND}
 	media-libs/freetype
 	media-libs/libsoundtouch
 	>=sys-devel/gcc-4.6.0
-	x11-libs/wxGTK:${WX_GTK_VER}
+	x11-libs/wxGTK:${WX_GTK_VER}[webkit]
 	"
 
 pkg_pretend() {

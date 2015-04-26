@@ -1,6 +1,11 @@
 # ChangeLog for sci-electronics/xcircuit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.68 2015/03/20 15:25:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/xcircuit/ChangeLog,v 1.69 2015/04/26 19:56:49 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/xcircuit-3.6.165-implicit.patch, -xcircuit-3.4.30.ebuild,
+  -xcircuit-3.6.165.ebuild:
+  Remove old.
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
   xcircuit-3.4.30.ebuild, xcircuit-3.6.165.ebuild, xcircuit-3.7.48.ebuild,

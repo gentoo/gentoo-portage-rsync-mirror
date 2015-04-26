@@ -1,6 +1,10 @@
 # ChangeLog for sci-electronics/freehdl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.19 2014/08/10 20:27:48 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/freehdl/ChangeLog,v 1.20 2015/04/26 19:54:05 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -freehdl-0.0.3.ebuild,
+  -freehdl-0.0.4.ebuild, -freehdl-0.0.6.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> freehdl-0.0.3.ebuild,
   freehdl-0.0.4.ebuild, freehdl-0.0.6.ebuild, freehdl-0.0.7.ebuild:

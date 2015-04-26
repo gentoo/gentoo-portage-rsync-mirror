@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.33 2015/04/18 12:47:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.34 2015/04/26 19:36:46 twitch153 Exp $
+
+*dolphin-4.0.2-r5 (26 Apr 2015)
+
+  26 Apr 2015; Devan Franchini <twitch153@gentoo.org> +dolphin-4.0.2-r5.ebuild,
+  -dolphin-4.0.2-r4.ebuild, dolphin-9999.ebuild:
+  Adds webkit USE flag dependency for wxGTK and check to ensure \!>=media-
+  video/libav-10 bug #546602
 
   18 Apr 2015; Sven Wegener <swegener@gentoo.org> dolphin-3.5-r1.ebuild,
   dolphin-4.0-r1.ebuild, dolphin-4.0.2-r4.ebuild:

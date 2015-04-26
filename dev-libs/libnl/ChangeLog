@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.225 2015/04/23 04:34:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnl/ChangeLog,v 1.226 2015/04/26 19:57:19 zlogene Exp $
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> libnl-3.2.25.ebuild:
+  ia64 stable wrt bug #509544
 
   23 Apr 2015; Jeroen Roovers <jer@gentoo.org> libnl-3.2.25.ebuild:
   Stable for PPC64 (bug #509544).
