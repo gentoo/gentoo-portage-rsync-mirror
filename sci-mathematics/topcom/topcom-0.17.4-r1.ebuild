@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/topcom/topcom-0.17.4.ebuild,v 1.1 2012/07/12 06:19:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/topcom/topcom-0.17.4-r1.ebuild,v 1.1 2015/04/26 10:57:52 tomka Exp $
 
 EAPI=4
 
@@ -50,4 +50,11 @@ src_install () {
 	use doc && dohtml "${DISTDIR}"/TOPCOM-manual.html
 
 	use examples && dodoc -r "${S}"/examples
+
+	mv "${ED}"/usr/bin/cube "${ED}"/usr/bin/topcom_cube || die
+}
+
+pkg_postinst() {
+	elog "Due to a file collision with media-libs/lib3ds the helper"
+	elog "'cube' has been installed as topcom_cube (see bug #547030)."
 }
