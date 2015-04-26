@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.15.4.ebuild,v 1.1 2015/04/19 15:29:03 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hplip/hplip-3.15.4.ebuild,v 1.2 2015/04/26 12:02:08 billie Exp $
 
 EAPI=5
 
@@ -61,7 +61,6 @@ RDEPEND="${COMMON_DEPEND}
 		)
 		fax? (
 			>=dev-python/reportlab-2.6[${PYTHON_USEDEP}]
-			>=dev-python/dbus-python-1.1.1-r1[${PYTHON_USEDEP}]
 		)
 		qt4? (
 			>=dev-python/PyQt4-4.9.6-r2[dbus,X,${PYTHON_USEDEP}]
