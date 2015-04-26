@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_Util
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.54 2015/03/19 20:56:48 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.55 2015/04/26 07:31:01 jer Exp $
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> PEAR-XML_Util-1.2.3-r1.ebuild:
+  Stable for HPPA (bug #547748).
 
 *PEAR-XML_Util-1.2.3-r1 (19 Mar 2015)
 

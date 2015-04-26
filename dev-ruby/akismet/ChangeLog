@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/akismet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/akismet/ChangeLog,v 1.5 2015/01/27 19:12:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/akismet/ChangeLog,v 1.6 2015/04/26 07:10:34 graaff Exp $
+
+*akismet-2.0.0 (26 Apr 2015)
+
+  26 Apr 2015; Hans de Graaff <graaff@gentoo.org> +akismet-2.0.0.ebuild:
+  Version bump.
 
   27 Jan 2015; Hans de Graaff <graaff@gentoo.org> akismet-1.0.2.ebuild:
   Drop unneeded test-unit dependency, add ruby22.

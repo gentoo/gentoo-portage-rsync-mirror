@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwids
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.167 2015/04/21 19:47:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwids/ChangeLog,v 1.168 2015/04/26 07:25:04 jer Exp $
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> hwids-20150129.ebuild:
+  Stable for PPC64 (bug #546184).
 
 *hwids-20150421 (21 Apr 2015)
 

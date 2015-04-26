@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.321 2015/04/18 11:09:14 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.322 2015/04/26 07:07:26 jer Exp $
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> ppc64/package.use.mask:
+  Mask USE=lxpanel for xfce-extra/xfce4-power-manager (bug #520296).
 
   18 Apr 2015; Markos Chandras <hwoarang@gentoo.org> package.use.mask:
   Mask samba useflag for sys-auth/sssd

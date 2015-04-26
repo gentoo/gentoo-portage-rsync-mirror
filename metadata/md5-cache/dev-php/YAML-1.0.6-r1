@@ -3,10 +3,10 @@ DEPEND=dev-lang/php:* >=dev-php/pear-1.9.0
 DESCRIPTION=The Symfony YAML Component
 EAPI=5
 HOMEPAGE=http://pear.symfony-project.com/
-KEYWORDS=~amd64 ~hppa ~x86
+KEYWORDS=~amd64 hppa ~x86
 LICENSE=MIT
 RDEPEND=dev-lang/php:* >=dev-php/pear-1.9.0
 SLOT=0
 SRC_URI=http://pear.symfony-project.com/get/YAML-1.0.6.tgz
 _eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-pear-lib-r1	d953dd90cfa8143851da6736f3fd4c76	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=4744226631fbe3a1729c4254d6d41e38
+_md5_=0b1c8d947004fce69a698398e27d54da

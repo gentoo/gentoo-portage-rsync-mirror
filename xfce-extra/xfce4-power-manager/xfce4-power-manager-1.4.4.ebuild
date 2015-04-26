@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.4.4.ebuild,v 1.1 2015/03/22 14:31:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/xfce4-power-manager-1.4.4.ebuild,v 1.2 2015/04/26 07:08:28 jer Exp $
 
 EAPI=5
 inherit linux-info xfconf
@@ -11,7 +11,7 @@ SRC_URI="mirror://xfce/src/apps/${PN}/${PV%.*}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE="debug kernel_linux lxpanel networkmanager policykit systemd +xfce_plugins_power"
 
 COMMON_DEPEND=">=dev-libs/dbus-glib-0.100.2:=
