@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.262 2015/04/21 20:36:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.263 2015/04/26 13:33:44 zlogene Exp $
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> rsync-3.1.1.ebuild:
+  sparc stable wrt bug #540000
 
   21 Apr 2015; Jeroen Roovers <jer@gentoo.org> rsync-3.1.1.ebuild:
   Stable for PPC64 (bug #540000).

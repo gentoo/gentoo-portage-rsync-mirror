@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.75 2015/04/21 19:11:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.76 2015/04/26 13:31:22 zlogene Exp $
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  hicolor-icon-theme-0.15.ebuild:
+  sparc stable wrt bug #545868
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> hicolor-icon-theme-0.15.ebuild:
   ppc stable wrt bug #545868
