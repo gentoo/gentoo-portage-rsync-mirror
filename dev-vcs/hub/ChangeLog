@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/hub
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.17 2015/04/07 14:23:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hub/ChangeLog,v 1.18 2015/04/26 04:52:26 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -hub-1.12.2-r1.ebuild:
+  Remove ruby19-only.
 
   07 Mar 2015; Justin Lecher <jlec@gentoo.org> hub-2.2.0.ebuild:
   Install zsh-completions unconditionally; do not install broken bash-
