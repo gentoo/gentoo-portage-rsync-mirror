@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-readahead/systemd-readahead-216.ebuild,v 1.1 2015/01/17 15:52:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd-readahead/systemd-readahead-216.ebuild,v 1.2 2015/04/26 09:50:35 pacho Exp $
 
 EAPI=5
 inherit systemd toolchain-funcs udev
@@ -11,7 +11,7 @@ SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
 
 LICENSE="LGPL-2.1 MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
 IUSE=""
 
 S=${WORKDIR}/systemd-${PV}
