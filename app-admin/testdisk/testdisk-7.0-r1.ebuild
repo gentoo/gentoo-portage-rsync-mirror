@@ -1,8 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0-r1.ebuild,v 1.1 2015/04/20 21:21:56 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/testdisk-7.0-r1.ebuild,v 1.2 2015/04/26 12:42:21 nicolasbock Exp $
 
 EAPI=5
+
+AUTOTOOLS_AUTORECONF=1
 
 inherit autotools-utils eutils flag-o-matic
 
@@ -38,10 +40,9 @@ DEPEND="
 			)"
 RDEPEND="!static? ( ${DEPEND} )"
 
-PATCHES=( "${FILESDIR}/install-gentoo.patch" )
+AUTOTOOLS_IN_SOURCE_BUILD=1
 DOCS=( )
-AUTOTOOLS_AUTORECONF=1
-BUILD_DIR="${S}"
+PATCHES=( "${FILESDIR}/install-gentoo.patch" )
 
 src_configure() {
 	local myconf

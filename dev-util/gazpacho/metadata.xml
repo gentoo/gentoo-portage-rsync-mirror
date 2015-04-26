@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-	<maintainer>
-		<email>ikelos@gentoo.org</email>
-		<name>Mike Auty</name>
-	</maintainer>
-	<longdescription>gazpacho is a glade clone which aims to be fully compatible with .glade files. It uses a unique layout for its GUI using one window instead of several.</longdescription>
-</pkgmetadata>

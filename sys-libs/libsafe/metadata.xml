@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-<maintainer>
-<email>maintainer-needed@gentoo.org</email>
-</maintainer>
-<longdescription>The libsafe library protects a process against the exploitation of buffer overflow vulnerabilities in process stacks. Libsafe works with any existing pre-compiled executable (but is incompatible with libc5-linked processes) and can be used transparently, even on a system-wide basis.</longdescription>
-</pkgmetadata>

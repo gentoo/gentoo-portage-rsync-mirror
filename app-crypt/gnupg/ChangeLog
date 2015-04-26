@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.600 2015/04/25 16:30:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.601 2015/04/26 12:51:31 blueness Exp $
+
+  26 Apr 2015; Anthony G. Basile <blueness@gentoo.org> gnupg-2.1.3-r3.ebuild:
+  Keyword ~arm and ~mips.  Bug #546478.
 
   25 Apr 2015; Anthony G. Basile <blueness@gentoo.org> gnupg-2.1.3-r3.ebuild:
   Keyword ~ppc ~ppc64.  Bug #546478.
