@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.44 2015/04/26 17:10:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.46 2015/04/26 20:49:51 ulm Exp $
+
+  26 Apr 2015; Ulrich Müller <ulm@gentoo.org> imaxima-1.0-r3.ebuild:
+  Change dependency to dev-texlive/texlive-latexrecommended, since breqn.sty
+  from dev-tex/mh seems not to work with recent TeX Live versions. Bug 524114.
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> imaxima-1.0-r3.ebuild:
   ppc stable wrt bug #502978
