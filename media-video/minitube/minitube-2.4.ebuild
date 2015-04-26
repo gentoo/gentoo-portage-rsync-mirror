@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.4.ebuild,v 1.2 2015/04/23 16:39:23 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.4.ebuild,v 1.3 2015/04/26 10:22:07 hwoarang Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -38,7 +38,7 @@ RDEPEND="${DEPEND}"
 DOCS="AUTHORS CHANGES TODO"
 
 #455976
-PATCHES=( "${FILESDIR}"/${PN}-2.1.3-disable-updates.patch )
+PATCHES=( "${FILESDIR}"/${P}-disable-updates.patch )
 
 pkg_pretend() {
 	if [[ -z ${MINITUBE_GOOGLE_API_KEY} ]]; then
