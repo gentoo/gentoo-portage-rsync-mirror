@@ -1970,7 +1970,6 @@ dev-libs/libverto:glib - Support event loops using dev-libs/glib
 dev-libs/libverto:libev - Support event loops using dev-libs/libev
 dev-libs/libverto:libevent - Support event loops using dev-libs/libevent
 dev-libs/libverto:tevent - Support event loops using sys-libs/tevent
-dev-libs/libzypp:libproxy - Use net-libs/libproxy for getting the HTTP/HTTPS/SOCKS proxy configuration
 dev-libs/link-grammar:aspell - Adds support for app-text/aspell spell checker
 dev-libs/link-grammar:hunspell - Adds support for app-text/hunspell spell checker
 dev-libs/log4cplus:iconv - Use inconv for wchar_t <-> char conversions. See also log4cplus's unicode.txt documentation
@@ -4495,25 +4494,6 @@ media-video/mplayer:vidix - Support for vidix video output
 media-video/mplayer:xanim - Enables support for xanim based codecs
 media-video/mplayer:xvmc - Enables X-Video Motion Compensation support
 media-video/mplayer:zoran - Enables ZR360[56]7/ZR36060 video output
-media-video/mplayer2:bluray - Enable playback of Blu-ray filesystems
-media-video/mplayer2:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
-media-video/mplayer2:cdio - Use libcdio for CD support (instead of cdparanoia)
-media-video/mplayer2:cpudetection - Enables runtime CPU detection (useful for bindist, compatibility on other CPUs)
-media-video/mplayer2:dvdnav - Use forked libdvdnav, navigate menus in GUIs
-media-video/mplayer2:enca - Enables support for charset discovery and conversion
-media-video/mplayer2:md5sum - Enables md5sum video output
-media-video/mplayer2:mng - MNG input support
-media-video/mplayer2:mp3 - Enable support for mp3 decoding over media-sound/mpg123 instead of relying on ffmpeg support.
-media-video/mplayer2:network - Enables network streaming support
-media-video/mplayer2:pnm - Add PNM video output option, to create PPM/PGM/PGMYUV images
-media-video/mplayer2:postproc - Enable image post-processing via libpostproc
-media-video/mplayer2:pvr - Enable Video4Linux2 MPEG PVR
-media-video/mplayer2:quvi - Enable support for streaming sites using media-libs/libquvi
-media-video/mplayer2:radio - Enable V4L2 radio interface and support
-media-video/mplayer2:shm - Enable support for shm
-media-video/mplayer2:symlink - Copy all binaries and configuration into locations occupied by media-video/mplayer and thus act like drop-in replacement.
-media-video/mplayer2:tga - Enables Targa video output
-media-video/mplayer2:yuv4mpeg - Enables yuv4mpeg video output
 media-video/mpv:bluray - Enable playback of Blu-ray filesystems
 media-video/mpv:bs2b - Enable Bauer stereophonic-to-binaural headphone filter
 media-video/mpv:cdio - Enable CDDA support via dev-libs/libcdio-paranoia
@@ -4548,7 +4528,6 @@ media-video/rtmpdump:gnutls - Use GnuTLS library instead of the default OpenSSL
 media-video/rtmpdump:polarssl - Use PolarSSL library instead of the default OpenSSL
 media-video/smplayer:autoshutdown - Enable the option to shutdown your computer after finishing the playlist. This requires dev-qt/qtdbus as dependency.
 media-video/smplayer:streaming - Support for streaming video sites through net-misc/youtube-dl (MPV only).
-media-video/smplayer2:download-subs - Enable subtitle downloader (requires QuaZip)
 media-video/totem:flash - Install browser plugin for playing embedded Adobe Flash videos. Warning: breaks non-video Flash objects on many websites.
 media-video/totem:lirc - Enable support for controlling Totem with a remote control using app-misc/lirc
 media-video/totem:nautilus - Enable the nautilus extension

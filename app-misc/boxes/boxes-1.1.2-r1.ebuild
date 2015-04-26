@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.1.2-r1.ebuild,v 1.7 2015/04/23 04:49:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/boxes-1.1.2-r1.ebuild,v 1.8 2015/04/26 13:25:38 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/ascii-boxes/boxes/archive/v${PV}.tar.gz -> ${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 ~sparc x86"
+KEYWORDS="alpha amd64 ia64 ~mips ppc ppc64 sparc x86"
 IUSE=""
 
 DEPEND="
