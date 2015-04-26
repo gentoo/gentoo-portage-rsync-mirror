@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.93 2015/04/18 15:54:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.94 2015/04/26 22:12:24 zlogene Exp $
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> speech-tools-2.1-r2.ebuild:
+  ia64 stable wrt bug #510600
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> speech-tools-2.1-r2.ebuild:
   x86 stable wrt bug #510600

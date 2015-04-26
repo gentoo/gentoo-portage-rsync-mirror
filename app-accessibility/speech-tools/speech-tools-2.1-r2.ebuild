@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r2.ebuild,v 1.10 2015/04/18 15:54:35 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/speech-tools-2.1-r2.ebuild,v 1.11 2015/04/26 22:12:24 zlogene Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.festvox.org/packed/festival/${PV}/${MY_P}-release.tar.gz
 
 LICENSE="FESTIVAL HPND BSD rc regexp-UofT"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
 IUSE="nas X"
 
 RDEPEND="
