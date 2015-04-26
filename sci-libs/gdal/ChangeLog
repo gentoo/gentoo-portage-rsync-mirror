@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/gdal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.164 2015/04/18 12:47:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gdal/ChangeLog,v 1.165 2015/04/26 14:50:53 zlogene Exp $
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> gdal-1.11.1-r3.ebuild:
+  x86 stable wrt bug #540132
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> gdal-1.11.1-r3.ebuild:
   ppc64 stable wrt bug #540132
