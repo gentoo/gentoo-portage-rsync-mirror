@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.104 2015/04/19 09:44:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.105 2015/04/26 07:33:03 jer Exp $
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> mg-20150323.ebuild:
+  Stable for HPPA (bug #547604).
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> mg-20141127.ebuild:
   x86 stable wrt bug #536006

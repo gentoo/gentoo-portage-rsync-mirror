@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16501 2015/04/25 09:03:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16502 2015/04/26 07:55:25 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (26 Apr 2015)
+# Ruby packages that only work with ruby19. Masked for removal in 30
+# days.
+#
+# Only compatible with ruby19.
+app-misc/booh
+# Only compatible with ruby19. New versions bring in many new
+# dependencies and this would require a dedicated maintainer.
+dev-ruby/adhearsion
+dev-ruby/adhearsion-loquacious
+# Newer versions depend on beta versions of unreleased and
+# unmaintained software. No upstream release in two years.
+dev-ruby/em-http-request
+# Old slot, nothing in the tree depends on it.
+dev-ruby/haml:0
+# Only compatible with ruby19.
+dev-ruby/ipaddress
 
 # Sergey Popov <pinkbyte@gentoo.org> (24 Apr 2015)
 # Dead upstream, nothing in tree uses it

@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.245 2015/03/21 09:37:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.246 2015/04/26 07:40:31 jer Exp $
+
+  26 Apr 2015; Jeroen Roovers <jer@gentoo.org> package.use.mask:
+  Mask USE=garbd for dev-db/mariadb (bug #544378).
 
   21 Mar 2015; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Unmask USE=test for dev-python/urllib3.
