@@ -1,10 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.37 2015/03/13 12:53:22 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.38 2015/04/26 16:26:12 jer Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
 
+# Jeroen Roovers <jer@gentoo.org> (26 Apr 2015)
+# mongodb support is nice, but dev-libs/mongo-c-driver upstream is not ready
+# yet (bug #542210)
+net-analyzer/pmacct mongodb
 
 # Matthias Maier <tamiko@gentoo.org> (13 Mar 2015)
 # Masking glusterfs for the time being, see entry for app-emulation/qemu of

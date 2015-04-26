@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencolorio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/ChangeLog,v 1.11 2015/01/29 17:54:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencolorio/ChangeLog,v 1.12 2015/04/26 16:17:42 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> opencolorio-1.0.9-r1.ebuild:
+  x86 stable wrt bug #535472
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> opencolorio-1.0.8.ebuild,
   opencolorio-1.0.9-r1.ebuild, opencolorio-1.0.9.ebuild:

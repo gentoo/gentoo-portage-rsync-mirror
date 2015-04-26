@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.2.5.ebuild,v 1.4 2015/04/08 18:45:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.2.5.ebuild,v 1.5 2015/04/26 16:11:37 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ SRC_URI="mirror://mysql/Downloads/MySQLGUITools/${MY_P}.tar.gz https://github.co
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug doc gnome-keyring"
 
 # glibc: deprecated mutex functions, removed in 2.36.0

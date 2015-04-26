@@ -3,10 +3,10 @@ DEPEND=dev-lang/perl:=[-build(-)]
 DESCRIPTION=Sort a file or merge sort multiple files
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/File-Sort/
-KEYWORDS=~amd64 ~x86
+KEYWORDS=~amd64 x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/C/CN/CNANDOR/File-Sort-1.01.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=418acd4b93919928165b338bc30d900b
+_md5_=30f3f19fabcb502b91f962b85fe2c7e4

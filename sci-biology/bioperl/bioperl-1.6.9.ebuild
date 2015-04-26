@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.9.ebuild,v 1.5 2015/04/18 18:29:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-1.6.9.ebuild,v 1.6 2015/04/26 16:09:56 pacho Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ MIN_PV=$PV
 DESCRIPTION="Perl tools for bioinformatics - Core modules"
 HOMEPAGE="http://www.bioperl.org/"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="-minimal graphviz sqlite ${SUBPROJECTS}"
 
 REQUIRED_USE="minimal? ( !graphviz )"

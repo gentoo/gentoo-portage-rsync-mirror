@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xastir
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.40 2015/02/21 17:42:14 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xastir/ChangeLog,v 1.41 2015/04/26 16:24:01 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> xastir-2.0.6.ebuild:
+  x86 stable wrt bug #535486
 
   21 Feb 2015; Thomas Beierlein <tomjbe@gentoo.org> xastir-2.0.6.ebuild:
   Fix slot dependencies for media-libs/tiff and sys-libs/db

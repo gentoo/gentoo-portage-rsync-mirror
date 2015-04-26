@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Sort
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sort/ChangeLog,v 1.6 2014/08/26 15:14:23 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Sort/ChangeLog,v 1.7 2015/04/26 16:10:24 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> File-Sort-1.10.0-r1.ebuild:
+  x86 stable wrt bug #539426
 
 *File-Sort-1.10.0-r1 (26 Aug 2014)
 

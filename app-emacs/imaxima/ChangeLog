@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.42 2014/09/11 15:09:36 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.43 2015/04/26 16:24:28 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> imaxima-1.0-r3.ebuild:
+  x86 stable wrt bug #502978
 
   11 Sep 2014; Ulrich Müller <ulm@gentoo.org> imaxima-1.0-r3.ebuild:
   Invoke Emacs with proper flags, bug 522582.

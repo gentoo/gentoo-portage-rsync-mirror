@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.56 2015/04/18 18:29:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.57 2015/04/26 16:09:56 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> bioperl-1.6.9.ebuild:
+  x86 stable wrt bug #539426
 
   18 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> bioperl-1.6.9.ebuild:
   Use REQUIRED_USE instead of dieing on invalid use-flag combination, bug
