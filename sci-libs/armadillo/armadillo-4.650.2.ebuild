@@ -15,18 +15,16 @@ SRC_URI="mirror://sourceforge/arma/${P}.tar.gz"
 LICENSE="MPL-2.0"
 SLOT="0/4"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="arpack atlas blas debug doc examples hdf5 lapack mkl tbb test"
+IUSE="arpack blas debug doc examples hdf5 lapack mkl tbb test"
 REQUIRED_USE="test? ( lapack )"
 
 RDEPEND="
 	dev-libs/boost
 	arpack? ( sci-libs/arpack )
-	atlas? ( sci-libs/atlas[lapack] )
 	blas? ( virtual/blas )
 	lapack? ( virtual/lapack )"
 DEPEND="${RDEPEND}
 	arpack? ( virtual/pkgconfig )
-	atlas? ( virtual/pkgconfig )
 	blas? ( virtual/pkgconfig )
 	hdf5? ( sci-libs/hdf5 )
 	lapack? ( virtual/pkgconfig )
@@ -54,19 +52,6 @@ src_configure() {
 		mycmakeargs+=(
 			-DARPACK_FOUND=ON
 			-DARPACK_LIBRARY="$($(tc-getPKG_CONFIG) --libs arpack)"
-		)
-	fi
-	if use atlas; then
-		local c=atlas-cblas l=atlas-clapack
-		$(tc-getPKG_CONFIG) --exists ${c}-threads && c+=-threads
-		$(tc-getPKG_CONFIG) --exists ${l}-threads && l+=-threads
-		mycmakeargs+=(
-			-DCBLAS_FOUND=ON
-			-DCBLAS_INCLUDE_DIR="$($(tc-getPKG_CONFIG) --cflags-only-I ${c} | sed 's/-I//')"
-			-DCBLAS_LIBRARIES="$($(tc-getPKG_CONFIG) --libs ${c})"
-			-DCLAPACK_FOUND=ON
-			-DCLAPACK_INCLUDE_DIR="$($(tc-getPKG_CONFIG) --cflags-only-I ${l} | sed 's/-I//')"
-			-DCLAPACK_LIBRARIES="$($(tc-getPKG_CONFIG) --libs ${l})"
 		)
 	fi
 	if use blas; then
