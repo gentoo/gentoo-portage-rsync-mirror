@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tilt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.38 2015/03/02 10:37:33 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.39 2015/04/26 18:29:44 graaff Exp $
+
+  26 Apr 2015; Hans de Graaff <graaff@gentoo.org> tilt-1.4.1.ebuild:
+  Skip the optional haml dependency since rails is no longer marked stable.
 
   02 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -tilt-1.4.1-r1.ebuild:
   Remove old.
