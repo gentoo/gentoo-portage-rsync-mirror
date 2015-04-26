@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1443 2015/04/26 14:59:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1444 2015/04/26 15:42:47 zlogene Exp $
+
+  26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
+  alpha stable wrt bug #541116
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
   arm stable wrt bug #541116

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/nettle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.121 2015/04/10 04:24:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nettle/ChangeLog,v 1.122 2015/04/26 15:38:17 alonbl Exp $
+
+  26 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/nettle-1.14-make-as-needed.patch,
+  -files/nettle-2.0-binutils-2.22.patch, -nettle-1.15.ebuild:
+  Cleanup, bug#531426
 
   10 Apr 2015; Michał Górny <mgorny@gentoo.org> nettle-3.1.ebuild:
   Wrap version.h, bug #546104.

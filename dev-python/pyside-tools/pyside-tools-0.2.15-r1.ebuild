@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.15-r1.ebuild,v 1.1 2015/03/23 10:11:42 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside-tools/pyside-tools-0.2.15-r1.ebuild,v 1.2 2015/04/26 15:53:56 pacho Exp $
 
 EAPI=5
 CMAKE_IN_SOURCE_BUILD="1"
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/PySide/Tools/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE="test"
 
 RDEPEND="
