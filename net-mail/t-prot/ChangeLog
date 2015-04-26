@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/t-prot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.50 2015/01/05 19:01:22 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/t-prot/ChangeLog,v 1.51 2015/04/26 02:13:20 radhermit Exp $
+
+*t-prot-3.4 (26 Apr 2015)
+
+  26 Apr 2015; Tim Harder <radhermit@gentoo.org> +t-prot-3.4.ebuild:
+  Version bump.
 
   05 Jan 2015; Tim Harder <radhermit@gentoo.org> -t-prot-2.101.ebuild,
   -t-prot-3.0.ebuild:
