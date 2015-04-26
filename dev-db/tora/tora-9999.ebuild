@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-9999.ebuild,v 1.6 2014/12/28 15:20:50 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-9999.ebuild,v 1.7 2015/04/26 18:00:30 zmedico Exp $
 
 EAPI=5
 
@@ -55,6 +55,9 @@ src_prepare() {
 		CMakeLists.txt || die "Removal of COPYING file failed"
 	# 'svn info' needs .svn subdirectory
 	[[ ${PV} != 9999 ]] || cp -a "${ESVN_WC_PATH}"/.svn .svn || die
+	# bug 547520
+	grep -rlZ '$$ORIGIN' . | xargs -0 sed -i 's|:$$ORIGIN[^:"]*||' || \
+		die 'Removal of $$ORIGIN failed'
 }
 
 src_configure() {

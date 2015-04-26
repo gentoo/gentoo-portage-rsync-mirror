@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-3.0.0_pre20140929.ebuild,v 1.2 2014/12/29 02:28:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-3.0.0_pre20140929.ebuild,v 1.3 2015/04/26 18:00:30 zmedico Exp $
 
 EAPI=5
 
@@ -54,6 +54,9 @@ src_prepare() {
 	sed -i \
 		-e "/COPYING/ d" \
 		CMakeLists.txt || die "Removal of COPYING file failed"
+	# bug 547520
+	grep -rlZ '$$ORIGIN' . | xargs -0 sed -i 's|:$$ORIGIN[^:"]*||' || \
+		die 'Removal of $$ORIGIN failed'
 }
 
 src_configure() {
