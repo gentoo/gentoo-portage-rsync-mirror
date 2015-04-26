@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/rbldnsd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.31 2015/04/08 18:16:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/rbldnsd/ChangeLog,v 1.32 2015/04/26 16:42:20 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> rbldnsd-0.997a-r1.ebuild:
+  x86 stable wrt bug #533610
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> rbldnsd-0.997.ebuild,
   rbldnsd-0.997a-r1.ebuild, rbldnsd-0.997a.ebuild:

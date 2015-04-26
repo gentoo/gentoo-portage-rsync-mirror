@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.74 2015/04/24 21:13:53 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.75 2015/04/26 16:53:04 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> binutils-config-4-r2.ebuild:
+  ppc stable wrt bug #547330
 
   24 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> binutils-config-4-r2.ebuild:
   arm stable wrt bug #547330

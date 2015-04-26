@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/javacc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.40 2014/03/10 16:57:43 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.41 2015/04/26 17:00:23 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> javacc-5.0-r1.ebuild:
+  ppc stable wrt bug #315557
 
   10 Mar 2014; Johannes Huber <johu@gentoo.org> javacc-5.0-r1.ebuild:
   x86 stable, bug #315557

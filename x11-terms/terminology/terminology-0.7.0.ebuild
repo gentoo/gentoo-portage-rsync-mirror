@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/terminology-0.7.0.ebuild,v 1.1 2014/10/12 16:37:51 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/terminology-0.7.0.ebuild,v 1.2 2015/04/26 16:41:56 pacho Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.enlightenment.org/rel/apps/${PN}/${P}.tar.xz"
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 x86"
 IUSE=""
 
 RDEPEND="

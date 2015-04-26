@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.55 2015/04/19 13:28:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.56 2015/04/26 16:46:45 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> umfpack-5.6.2.ebuild:
+  x86 stable wrt bug #534650
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> umfpack-5.6.2.ebuild:
   Stable for amd64, wrt bug #534650
