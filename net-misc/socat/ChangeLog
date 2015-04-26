@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/socat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.157 2015/04/24 23:19:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/ChangeLog,v 1.158 2015/04/26 01:08:36 radhermit Exp $
+
+  26 Apr 2015; Tim Harder <radhermit@gentoo.org> socat-2.0.0_beta8.ebuild:
+  Fix patch filename.
 
 *socat-2.0.0_beta8 (25 Apr 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta8.ebuild,v 1.1 2015/04/24 23:19:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/socat/socat-2.0.0_beta8.ebuild,v 1.2 2015/04/26 01:08:36 radhermit Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ DOCS=(
 )
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-filan-build.patch
+	epatch "${FILESDIR}"/${PN}-1.7.3.0-filan-build.patch
 	touch doc/${PN}.1 || die
 }
 
