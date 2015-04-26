@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rgen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.9 2015/04/16 17:58:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.10 2015/04/26 17:21:55 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> rgen-0.6.6.ebuild:
+  ppc stable wrt bug #536168
 
 *rgen-0.6.6-r2 (16 Apr 2015)
 

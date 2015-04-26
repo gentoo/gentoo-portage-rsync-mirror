@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.5.0-r2.ebuild,v 1.6 2015/04/14 12:17:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-augeas/ruby-augeas-0.5.0-r2.ebuild,v 1.7 2015/04/26 17:21:45 pacho Exp $
 
 EAPI=5
 # jruby -> native extentions
@@ -17,7 +17,7 @@ SRC_URI="http://download.augeas.net/ruby/${P}.gem"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 hppa ia64 ~ppc sparc x86"
+KEYWORDS="amd64 hppa ia64 ppc sparc x86"
 IUSE=""
 
 RDEPEND=">=app-admin/augeas-1.1.0"

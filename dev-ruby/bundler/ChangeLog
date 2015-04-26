@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.82 2015/04/24 14:16:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.83 2015/04/26 17:12:54 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> bundler-1.7.3.ebuild:
+  ppc stable wrt bug #542574
 
 *bundler-1.8.7 (24 Apr 2015)
 

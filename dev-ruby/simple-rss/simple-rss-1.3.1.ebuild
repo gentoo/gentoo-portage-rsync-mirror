@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/simple-rss-1.3.1.ebuild,v 1.8 2015/04/26 16:39:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/simple-rss/simple-rss-1.3.1.ebuild,v 1.9 2015/04/26 17:04:27 mrueg Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -14,7 +14,7 @@ DESCRIPTION="A simple, flexible, extensible, and liberal RSS and Atom reader for
 HOMEPAGE="http://simple-rss.rubyforge.org/"
 LICENSE="LGPL-2"
 
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 SLOT="0"
 IUSE=""
 

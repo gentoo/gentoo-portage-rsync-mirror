@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.4 2015/04/26 16:24:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.5 2015/04/26 17:10:50 pacho Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://sites.google.com/site/imaximaimath/download-and-install/${MY_P}
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="examples"
 
 RDEPEND="virtual/latex-base

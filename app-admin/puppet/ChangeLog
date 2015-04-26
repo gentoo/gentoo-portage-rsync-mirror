@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.214 2015/04/16 17:54:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.215 2015/04/26 17:21:36 pacho Exp $
+
+  26 Apr 2015; Pacho Ramos <pacho@gentoo.org> puppet-3.7.3.ebuild:
+  ppc stable wrt bug #536168
 
 *puppet-4.0.0 (16 Apr 2015)
 

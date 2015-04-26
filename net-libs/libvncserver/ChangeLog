@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.94 2015/04/21 18:43:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.96 2015/04/26 17:26:17 ulm Exp $
+
+  26 Apr 2015; Ulrich Müller <ulm@gentoo.org> libvncserver-0.9.10-r1.ebuild:
+  Straight to stable on alpha, hppa, ia64, ppc, and ppc64. The "vaapi" flag is
+  in use.mask on these architectures, so the change from -r0 to -r1 shouldn't
+  have any effect there. Bug 523590.
+
+*libvncserver-0.9.10-r1 (26 Apr 2015)
+
+  26 Apr 2015; Ulrich Müller <ulm@gentoo.org> +libvncserver-0.9.10-r1.ebuild:
+  Add missing econf option, bug 523590 comment 18. Proxy commit for Alex Xu.
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> libvncserver-0.9.10.ebuild:
   ppc stable wrt bug #523590
