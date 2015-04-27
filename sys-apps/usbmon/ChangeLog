@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/usbmon
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbmon/ChangeLog,v 1.7 2013/12/05 12:59:54 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbmon/ChangeLog,v 1.8 2015/04/27 00:01:59 mrueg Exp $
+
+  27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -usbmon-5.ebuild,
+  -usbmon-6.ebuild:
+  Remove old.
 
 *usbmon-6-r1 (05 Dec 2013)
 
@@ -33,4 +37,3 @@
 
   01 Apr 2007; Robin H. Johnson <robbat2@gentoo.org> +usbmon-4.ebuild:
   Initial commit. Ebuild by Robin H. Johnson <robbat2@gentoo.org>.
-

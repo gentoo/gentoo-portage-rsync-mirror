@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/stunnel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.220 2015/04/21 04:43:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/ChangeLog,v 1.222 2015/04/27 00:28:08 blueness Exp $
+
+  27 Apr 2015; Anthony G. Basile <blueness@gentoo.org> -stunnel-5.15.ebuild,
+  stunnel-5.08.ebuild:
+  Drop all but necessary KEYWORDS on vulnerable version.
+
+*stunnel-5.16-r1 (27 Apr 2015)
+
+  27 Apr 2015; Anthony G. Basile <blueness@gentoo.org> +stunnel-5.16-r1.ebuild,
+  -stunnel-5.16.ebuild:
+  CONFIG_PROTECT stunnel.conf.  Bug #547422.
 
   21 Apr 2015; Jeroen Roovers <jer@gentoo.org> stunnel-5.14.ebuild:
   Stable for HPPA (bug #546908).
