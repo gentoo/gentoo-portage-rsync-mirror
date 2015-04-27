@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipsc
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsc/ChangeLog,v 1.9 2011/12/18 19:59:59 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipsc/ChangeLog,v 1.10 2015/04/26 23:03:36 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -ipsc-0.4.3.2.ebuild:
+  Remove old.
 
   18 Dec 2011; Pawel Hajdan jr <phajdan.jr@gentoo.org> ipsc-0.4.3.2-r2.ebuild:
   x86 stable wrt bug #393841
@@ -41,4 +44,3 @@
   14 Jun 2006; Tony Vroon <chainsaw@gentoo.org> +metadata.xml,
   +ipsc-0.4.3.2.ebuild:
   Initial commit. Ebuild by me. Patches by the Debian packager, Juan Alvarez.
-

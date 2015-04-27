@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-4.8.6-r1.ebuild,v 1.1 2014/11/15 02:38:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/qtwebkit-4.8.6-r1.ebuild,v 1.2 2015/04/26 23:01:54 pesa Exp $
 
 EAPI=5
 
@@ -47,13 +47,17 @@ QCONFIG_ADD="webkit"
 QCONFIG_DEFINE="QT_WEBKIT"
 
 src_prepare() {
-	# Fix version number in generated pkgconfig file, bug 406443
-	sed -i -e 's/^isEmpty(QT_BUILD_TREE)://' \
-		src/3rdparty/webkit/Source/WebKit/qt/QtWebKit.pro || die
-
 	# Remove -Werror from CXXFLAGS
 	sed -i -e '/QMAKE_CXXFLAGS\s*+=/ s:-Werror::g' \
 		src/3rdparty/webkit/Source/WebKit.pri || die
+
+	# Fix version number in generated pkgconfig file (bug 406443)
+	sed -i -e 's/^isEmpty(QT_BUILD_TREE)://' \
+		src/3rdparty/webkit/Source/WebKit/qt/QtWebKit.pro || die
+
+	# Prevent automagic dependency on qt-mobility (bug 547350)
+	sed -i -e 's/contains(MOBILITY_CONFIG,\s*\w\+)/false/' \
+		src/3rdparty/webkit/Source/WebCore/features.pri || die
 
 	if use icu; then
 		sed -i -e '/CONFIG\s*+=\s*text_breaking_with_icu/ s:^#\s*::' \

@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/fakechroot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.24 2015/04/21 17:48:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakechroot/ChangeLog,v 1.25 2015/04/26 23:26:29 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -fakechroot-2.11.ebuild,
+  -fakechroot-2.12.ebuild, -fakechroot-2.14.ebuild, -fakechroot-2.15.ebuild,
+  -fakechroot-2.16.ebuild, -fakechroot-2.9.ebuild,
+  -files/fakechroot-2.14-fix_chk_fail.patch,
+  -files/fakechroot-2.15-fix_chk_fail.patch,
+  -files/fakechroot-2.9-glibc-2.10-compat.patch:
+  Remove old.
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> fakechroot-2.17.2.ebuild:
   x86 stable wrt bug #517676

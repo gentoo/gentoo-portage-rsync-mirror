@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/dmidecode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.53 2015/04/14 11:01:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmidecode/ChangeLog,v 1.54 2015/04/26 23:24:02 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -dmidecode-2.10.ebuild,
+  -dmidecode-2.11.ebuild, -dmidecode-2.12.ebuild:
+  Remove old.
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> dmidecode-2.12-r1.ebuild:
   Stable for ia64, wrt bug #530282

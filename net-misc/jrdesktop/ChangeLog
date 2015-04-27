@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/jrdesktop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/ChangeLog,v 1.7 2014/08/10 20:45:01 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jrdesktop/ChangeLog,v 1.8 2015/04/26 23:02:56 mrueg Exp $
+
+  26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -jrdesktop-0.2.0030.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jrdesktop-0.2.0030.ebuild,
   jrdesktop-0.3.1.0.ebuild:
