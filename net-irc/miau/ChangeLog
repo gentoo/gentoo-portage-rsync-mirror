@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/miau
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.16 2012/02/16 19:03:24 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/miau/ChangeLog,v 1.17 2015/04/27 01:40:10 mrueg Exp $
+
+  27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -miau-0.6.5.ebuild:
+  Remove old.
 
   16 Feb 2012; Pawel Hajdan jr <phajdan.jr@gentoo.org> miau-0.6.6.ebuild:
   x86 stable wrt bug #397153
@@ -72,4 +75,3 @@
   10 Oct 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +miau-0.5.3.ebuild:
   Initial import. Closes bug #65696.
-
