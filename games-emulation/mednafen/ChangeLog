@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.55 2015/03/15 23:04:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.56 2015/04/27 06:49:14 mr_bones_ Exp $
+
+  27 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> mednafen-0.9.38.1.ebuild,
+  metadata.xml:
+  add pax marking with modified patch from Scall via bug #526978
 
   15 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/mednafen-0.9.28-automake-1.13.patch,
