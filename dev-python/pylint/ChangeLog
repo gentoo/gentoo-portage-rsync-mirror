@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.128 2015/04/27 02:21:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.129 2015/04/27 05:46:42 patrick Exp $
+
+*pylint-0.25.2 (27 Apr 2015)
+
+  27 Apr 2015; Patrick Lauer <patrick@gentoo.org> +pylint-0.25.2.ebuild:
+  Restore 0.25 again, still needed by oslo-vmware
 
   27 Apr 2015; Patrick Lauer <patrick@gentoo.org> -pylint-0.25.2.ebuild,
   -pylint-1.3.0.ebuild, -pylint-1.3.1.ebuild:

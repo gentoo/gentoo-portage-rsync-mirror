@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/spideroak-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/ChangeLog,v 1.54 2015/04/26 23:52:22 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/ChangeLog,v 1.55 2015/04/27 05:40:56 patrick Exp $
+
+  27 Apr 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unused useflag description from metadata.xml
 
   26 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
   -files/spideroak-bin-5.0.1-headless.patch, -spideroak-bin-5.0.3.ebuild:

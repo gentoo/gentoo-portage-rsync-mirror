@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-scp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.49 2015/03/13 23:13:29 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-scp/ChangeLog,v 1.50 2015/04/27 05:47:16 graaff Exp $
+
+  27 Apr 2015; Hans de Graaff <graaff@gentoo.org> net-scp-1.2.1.ebuild:
+  Add ruby22. Update HOMEPAGE.
 
   13 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -net-scp-1.0.4-r1.ebuild:
   Remove old.

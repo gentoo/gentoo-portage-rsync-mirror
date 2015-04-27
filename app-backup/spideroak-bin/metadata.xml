@@ -11,7 +11,4 @@
 	<email>blueness@gentoo.org</email>
 	<name>Anthony G. Basile</name>
 </maintainer>
-<use>
-	<flag name='headless'>Build without graphic frontend</flag>
-</use>
 </pkgmetadata>
