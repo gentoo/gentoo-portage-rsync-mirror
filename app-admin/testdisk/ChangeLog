@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/testdisk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.65 2015/04/27 14:45:59 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/testdisk/ChangeLog,v 1.66 2015/04/27 16:08:43 nicolasbock Exp $
+
+  27 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> testdisk-6.14-r1.ebuild:
+  app-admin/testdisk: app-admin/testdisk-6.14-r1 stable on amd64
 
   27 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> testdisk-7.0-r2.ebuild:
   app-admin/testdisk: app-admin/testdisk-7.0-r2 stable on amd64.
