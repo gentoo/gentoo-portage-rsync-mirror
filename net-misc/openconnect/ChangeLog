@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.43 2015/04/08 18:04:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.44 2015/04/27 19:01:33 floppym Exp $
+
+  27 Apr 2015; Mike Gilbert <floppym@gentoo.org> -openconnect-5.01.ebuild,
+  -openconnect-5.02.ebuild, -openconnect-5.03.ebuild,
+  -openconnect-5.99-r1.ebuild, -openconnect-5.99.ebuild,
+  -openconnect-7.01.ebuild, -openconnect-7.04.ebuild, -openconnect-7.05.ebuild,
+  openconnect-6.00.ebuild, openconnect-7.02.ebuild, openconnect-7.06.ebuild:
+  Use krb5 virtual, bug 547556. Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> openconnect-4.08.ebuild,
   openconnect-5.01.ebuild, openconnect-5.02.ebuild, openconnect-5.03.ebuild,
