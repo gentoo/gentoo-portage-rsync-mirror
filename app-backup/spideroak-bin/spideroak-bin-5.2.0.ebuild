@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.0.3.ebuild,v 1.5 2015/03/21 08:09:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/spideroak-bin-5.2.0.ebuild,v 1.1 2015/04/26 23:40:25 blueness Exp $
 
 EAPI="5"
 
@@ -16,14 +16,14 @@ RESTRICT="mirror strip"
 
 LICENSE="spideroak"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="dbus headless"
+KEYWORDS="~amd64 ~x86"
+IUSE="dbus X"
 
 DEPEND="dev-util/patchelf"
 RDEPEND="
 	app-crypt/mit-krb5[keyutils]
 	dbus? ( sys-apps/dbus )
-	!headless? (
+	X? (
 		media-libs/fontconfig
 		media-libs/freetype:2
 		dev-libs/glib:2
@@ -42,8 +42,6 @@ S=${WORKDIR}
 QA_PREBUILT="*"
 
 src_prepare() {
-	use headless && epatch "${FILESDIR}"/${PN}-5.0.1-headless.patch
-
 	# Set RPATH for preserve-libs handling (bug #400979).
 	cd "${S}/opt/SpiderOak/lib" || die
 	local x
@@ -57,7 +55,8 @@ src_prepare() {
 
 src_install() {
 	#install the wrapper script
-	dobin usr/bin/SpiderOak
+	exeinto /usr/bin
+	doexe usr/bin/SpiderOak
 
 	# inotify_dir_watcher needs to be marked executable, bug #453266
 	#chmod a+rx opt/SpiderOak/lib/inotify_dir_watcher
@@ -80,14 +79,14 @@ src_install() {
 	#install the manpage
 	doman usr/share/man/man1/SpiderOak.1.gz
 
-	if ! use headless ; then
+	if use X; then
 		domenu usr/share/applications/spideroak.desktop
 		doicon usr/share/pixmaps/SpiderOak.png
 	fi
 }
 
 pkg_postinst() {
-	if use headless; then
+	if ! use X; then
 		einfo "For instructions on running SpiderOak without a GUI, please read the FAQ:"
 		einfo "  https://spideroak.com/faq/questions/62/how_do_i_install_spideroak_on_a_headless_linux_server/"
 		einfo "  https://spideroak.com/faq/questions/67/how_can_i_use_spideroak_from_the_commandline/"

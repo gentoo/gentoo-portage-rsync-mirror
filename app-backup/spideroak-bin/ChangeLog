@@ -1,6 +1,16 @@
 # ChangeLog for app-backup/spideroak-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/ChangeLog,v 1.52 2015/03/22 01:55:45 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/spideroak-bin/ChangeLog,v 1.54 2015/04/26 23:52:22 blueness Exp $
+
+  26 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  -files/spideroak-bin-5.0.1-headless.patch, -spideroak-bin-5.0.3.ebuild:
+  Remove older stable.
+
+*spideroak-bin-5.2.0 (26 Apr 2015)
+
+  26 Apr 2015; Anthony G. Basile <blueness@gentoo.org>
+  +spideroak-bin-5.2.0.ebuild:
+  Version bump.
 
 *spideroak-bin-5.1.10 (22 Mar 2015)
 
