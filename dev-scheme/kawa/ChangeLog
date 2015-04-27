@@ -1,6 +1,13 @@
 # ChangeLog for dev-scheme/kawa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.14 2014/02/24 02:27:12 phajdan.jr Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/kawa/ChangeLog,v 1.15 2015/04/27 20:26:48 monsieurp Exp $
+
+*kawa-1.14 (27 Apr 2015)
+
+  27 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +files/kawa-1.14.patch,
+  +kawa-1.14.ebuild:
+  Version and EAPI 5 bump. Remove dev-java/servlet-api dependency. Fix bug
+  350224.
 
   24 Feb 2014; Pawel Hajdan jr <phajdan.jr@gentoo.org> kawa-1.10.ebuild:
   x86 stable wrt bug #354753
@@ -77,4 +84,3 @@
 
   Kawa is a Scheme environment, written in Java, and that compiles Scheme 
   code into Java byte-codes.
-
