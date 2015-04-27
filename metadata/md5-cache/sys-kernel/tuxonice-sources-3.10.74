@@ -11,5 +11,5 @@ RDEPEND=>=sys-apps/tuxonice-userui-1.0 || ( >=sys-power/hibernate-script-2.0 sys
 RESTRICT=binchecks strip
 SLOT=3.10.74
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.10.tar.xz mirror://gentoo/genpatches-3.10-82.base.tar.xz mirror://gentoo/genpatches-3.10-82.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.10-82.experimental.tar.xz ) http://tuxonice.nigelcunningham.com.au/downloads/all/tuxonice-for-linux-3.10.69-2015-02-14.patch.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	b544eac9542c54048d7dd55302455f51	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	ef485ca7c25fc941c3e0471de5b1055b	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=cdbf644d863d52df20c29dc598935242

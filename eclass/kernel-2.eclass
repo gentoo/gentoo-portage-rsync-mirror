@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.301 2015/03/20 00:13:32 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.302 2015/04/27 18:59:42 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -363,9 +363,14 @@ detect_version() {
 		KV_PATCH_ARR=(${KV_PATCH//\./ })
 
 		# the different majorminor versions have different patch start versions
-		OKV_DICT=(["2"]="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))" ["3"]="2.6.39" ["4"]="3.19")
+		OKV_DICT=(["2"]="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))" ["3"]="2.6.39" ["4"]="3.19" ["41"] = "4.0")
 		if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
 			OKV=${OKV_DICT["${KV_MAJOR}"]}
+			if [[ ${KV_MAJOR} -ge 4 ]]  && [[ ${KV_PATCH_ARR} -ge 1 ]]; then
+				OKV=${OKV_DICT["${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"]}
+			else
+				OKV=${OKV_DICT["${KV_MAJOR}"]}
+			fi
 			KERNEL_URI="${KERNEL_BASE_URI}/testing/patch-${CKV//_/-}.xz
 						${KERNEL_BASE_URI}/linux-${OKV}.tar.xz"
 			UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.xz"
