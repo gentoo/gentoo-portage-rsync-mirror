@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/p11-kit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.84 2015/04/26 13:19:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/p11-kit/ChangeLog,v 1.85 2015/04/27 12:31:27 ago Exp $
+
+  27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> p11-kit-0.20.7.ebuild:
+  Stable for ia64, wrt bug #525260
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> p11-kit-0.20.7.ebuild:
   sparc stable wrt bug #525260

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.365 2015/04/26 17:18:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.366 2015/04/27 12:35:00 ago Exp $
+
+  27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> systemd-216-r3.ebuild:
+  Stable for sparc, wrt bug #525112
 
   26 Apr 2015; Mike Gilbert <floppym@gentoo.org> systemd-219_p112.ebuild:
   Fix SRC_URI.

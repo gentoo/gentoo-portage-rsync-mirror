@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.533 2015/04/10 08:30:28 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.534 2015/04/27 12:32:21 ago Exp $
+
+  27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> gnutls-3.3.10-r2.ebuild:
+  Stable for sparc, wrt bug #492522
 
   10 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> gnutls-3.3.14.ebuild,
   gnutls-3.4.0.ebuild, metadata.xml:
