@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.234 2015/04/26 16:51:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.236 2015/04/27 18:29:34 zerochaos Exp $
+
+  27 Apr 2015; Rick Farina <zerochaos@gentoo.org> wpa_supplicant-2.4-r1.ebuild:
+  arm stable, bug #524928
+
+*wpa_supplicant-2.4-r1 (27 Apr 2015)
+
+  27 Apr 2015; Rick Farina <zerochaos@gentoo.org>
+  +files/wpa_supplicant-2.4-cve-2015-1863.patch, +wpa_supplicant-2.4-r1.ebuild,
+  -wpa_supplicant-2.4.ebuild:
+  add patch for bug #547492 while not loading arch teams working on bug #524928
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> wpa_supplicant-2.4.ebuild:
   ppc stable wrt bug #524928
