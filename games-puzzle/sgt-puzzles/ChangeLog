@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/sgt-puzzles
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.20 2015/04/26 16:00:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/sgt-puzzles/ChangeLog,v 1.21 2015/04/27 15:54:42 mr_bones_ Exp $
+
+  27 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/sgt-puzzles-9306-gentoo.patch, -sgt-puzzles-9306.ebuild:
+  old
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> sgt-puzzles-9861.ebuild:
   x86 stable wrt bug #547136
