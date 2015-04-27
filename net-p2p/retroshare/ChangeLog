@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/retroshare
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.9 2014/12/26 11:50:04 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.10 2015/04/27 09:51:51 pinkbyte Exp $
+
+*retroshare-0.6.0_pre20150415 (27 Apr 2015)
+
+  27 Apr 2015; Sergey Popov <pinkbyte@gentoo.org>
+  +retroshare-0.6.0_pre20150415.ebuild,
+  +files/retroshare-0.6.0-force-sqlcipher.patch, metadata.xml:
+  Version bump, take maintainership
 
   26 Dec 2014; Michael Palimaka <kensington@gentoo.org>
   -retroshare-0.5.4e.ebuild, -retroshare-0.5.5a.ebuild,
