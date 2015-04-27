@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16504 2015/04/26 13:07:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16505 2015/04/27 06:12:16 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (27 Apr 2015)
+# rubyforge.org has not been available for almost a year, making the
+# rubyforge package obsolete. echoe is a leaf package that still
+# depends on it. Masked for removal in 30 days.
+dev-ruby/echoe
+dev-ruby/rubyforge
 
 # Hans de Graaff <graaff@gentoo.org> (26 Apr 2015)
 # Ruby packages that only work with ruby19. Masked for removal in 30

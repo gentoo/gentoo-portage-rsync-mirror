@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/trousers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.56 2015/04/08 07:12:41 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/trousers/ChangeLog,v 1.57 2015/04/27 06:15:58 alonbl Exp $
+
+  27 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> trousers-0.3.13.ebuild:
+  autoreconf, bug#547654, thanks to Martin Dummer
 
 *trousers-0.3.13 (08 Apr 2015)
 

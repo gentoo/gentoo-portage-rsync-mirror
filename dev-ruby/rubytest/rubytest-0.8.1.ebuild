@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytest/rubytest-0.8.1.ebuild,v 1.5 2014/08/19 11:45:33 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubytest/rubytest-0.8.1.ebuild,v 1.6 2015/04/27 06:16:26 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_TEST=""
 RUBY_FAKEGEM_RECIPE_DOC="yard"
