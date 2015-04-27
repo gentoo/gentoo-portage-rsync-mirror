@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ultimate
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.26 2014/08/10 20:54:00 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ultimate/ChangeLog,v 1.27 2015/04/27 01:30:09 mrueg Exp $
+
+  27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -ultimate-3.0.2.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ultimate-3.0.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

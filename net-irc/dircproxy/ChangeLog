@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/dircproxy
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.30 2010/04/13 18:39:38 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.31 2015/04/27 01:29:14 mrueg Exp $
+
+  27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -dircproxy-1.0.5-r1.ebuild,
+  -dircproxy-1.1.0-r2.ebuild, -files/1.0.5-CVE-2007-5226.patch,
+  -files/1.1.0-less-lag-on-attach.patch, -files/dircproxy-gcc4.patch:
+  Remove old.
 
   13 Apr 2010; Raúl Porcel <armin76@gentoo.org> dircproxy-1.2.0_rc1.ebuild:
   alpha/sparc stable wrt #310429
@@ -133,4 +138,3 @@
   14 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
 
   Initial ebuild, dircproxy version 1.0.3.. Enjoy!
-
