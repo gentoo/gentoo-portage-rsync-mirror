@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1049 2015/04/24 20:09:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1050 2015/04/27 03:44:16 vapier Exp $
+
+  27 Apr 2015; Mike Frysinger <vapier@gentoo.org> glibc-2.20-r2.ebuild,
+  glibc-2.21.ebuild:
+  Reject gcc-4.8.[0-3] and gcc-4.9.0 due to miscompilation bugs #547420 by Marc
+  Burkhardt.
 
   24 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> glibc-2.20-r2.ebuild:
   sparc stable wrt bug #544034
