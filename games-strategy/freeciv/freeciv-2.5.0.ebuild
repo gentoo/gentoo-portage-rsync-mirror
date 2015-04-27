@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.5.0.ebuild,v 1.3 2015/04/26 16:01:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeciv/freeciv-2.5.0.ebuild,v 1.4 2015/04/27 19:49:53 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils games
@@ -12,17 +12,17 @@ SRC_URI="mirror://sourceforge/freeciv/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
-IUSE="auth aimodules dedicated +gtk ipv6 mapimg modpack mysql nls postgres qt5 readline sdl +server +sound sqlite system-lua"
+IUSE="auth aimodules dedicated +gtk ipv6 mapimg modpack mysql nls qt5 readline sdl +server +sound sqlite system-lua"
 
+# postgres isn't yet really supported by upstream
 RDEPEND="app-arch/bzip2
 	app-arch/xz-utils
 	net-misc/curl
 	sys-libs/zlib
 	auth? (
 		mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql )
 		sqlite? ( dev-db/sqlite:3 )
-		!mysql? ( !postgres? ( !sqlite? ( virtual/mysql ) ) )
+		!mysql? ( ( !sqlite? ( virtual/mysql ) ) )
 	)
 	readline? ( sys-libs/readline:0 )
 	dedicated? ( aimodules? ( dev-libs/libltdl:0 ) )
@@ -86,13 +86,12 @@ src_configure() {
 	local myclient myopts mydatabase
 
 	if use auth ; then
-		if use !mysql && use !postgres && use !sqlite ; then
+		if use !mysql && use !sqlite ; then
 			einfo "No database backend chosen, defaulting"
 			einfo "to mysql!"
 			mydatabase=mysql
 		else
 			use mysql && mydatabase="${mydatabase} mysql"
-			use postgres && mydatabase="${mydatabase} postgres"
 			use sqlite && mydatabase="${mydatabase} sqlite3"
 		fi
 	else
