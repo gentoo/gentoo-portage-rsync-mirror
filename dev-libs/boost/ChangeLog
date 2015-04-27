@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/boost
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.351 2015/04/16 12:55:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/ChangeLog,v 1.352 2015/04/27 13:02:44 pinkbyte Exp $
+
+  27 Apr 2015; Sergey Popov <pinkbyte@gentoo.org> -boost-1.52.0-r6.ebuild,
+  boost-1.52.0-r7.ebuild:
+  Transfer stable keywords to newer revision, drop really old one
 
   16 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> boost-1.55.0-r2.ebuild:
   sparc stable wrt bug #525286
