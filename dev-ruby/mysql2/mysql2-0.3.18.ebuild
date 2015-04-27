@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/mysql2-0.3.18.ebuild,v 1.1 2015/03/03 18:20:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/mysql2-0.3.18.ebuild,v 1.2 2015/04/27 08:59:10 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -23,7 +23,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
 IUSE=""
 
 DEPEND="${DEPEND} virtual/mysql[-static]"
-RDEPEND="${RDEPEND} virtual/mysql[-static]"
+RDEPEND="${RDEPEND} virtual/mysql:=[-static]"
 
 each_ruby_configure() {
 	${RUBY} -Cext/mysql2 extconf.rb --with-mysql-config "${EPREFIX}/usr/bin/mysqlconfig" || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.4.6.ebuild,v 1.1 2015/02/27 07:22:48 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/rubygems-2.4.6.ebuild,v 1.2 2015/04/27 08:40:05 graaff Exp $
 
 EAPI=5
 
@@ -110,14 +110,4 @@ pkg_postinst() {
 	ewarn "To switch between available Ruby profiles, execute as root:"
 	ewarn "\teselect ruby set ruby(20|21|...)"
 	ewarn
-}
-
-pkg_postrm() {
-	ewarn "If you have uninstalled dev-ruby/rubygems, Ruby applications are unlikely"
-	ewarn "to run in current shells because of missing auto_gem."
-	ewarn "Please run \"unset RUBYOPT\" in your shells before using ruby"
-	ewarn "or start new shells"
-	ewarn
-	ewarn "If you have not uninstalled dev-ruby/rubygems, please do not unset "
-	ewarn "RUBYOPT"
 }

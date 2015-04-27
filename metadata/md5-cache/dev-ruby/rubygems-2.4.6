@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
 DEPEND=ruby_targets_ruby19? ( test? ( >=dev-ruby/minitest-4:0[ruby_targets_ruby19] dev-ruby/rdoc[ruby_targets_ruby19] ) ) ruby_targets_ruby20? ( test? ( >=dev-ruby/minitest-4:0[ruby_targets_ruby20] dev-ruby/rdoc[ruby_targets_ruby20] ) ) ruby_targets_ruby21? ( test? ( >=dev-ruby/minitest-4:0[ruby_targets_ruby21] dev-ruby/rdoc[ruby_targets_ruby21] ) ) ruby_targets_ruby22? ( test? ( >=dev-ruby/minitest-4:0[ruby_targets_ruby22] dev-ruby/rdoc[ruby_targets_ruby22] ) ) ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby21? ( dev-lang/ruby:2.1 ) ruby_targets_ruby22? ( dev-lang/ruby:2.2 )
 DESCRIPTION=Centralized Ruby extension management system
 EAPI=5
@@ -12,4 +12,4 @@ REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 ruby_targets_ruby21 ru
 SLOT=0
 SRC_URI=http://production.cf.rubygems.org/rubygems/rubygems-2.4.6.tgz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	2257adeaac9408ab545ef49ae751bae6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=120fc055ded559c80c9f1624c30544ea
+_md5_=c05c0c0db8a6518ba8cc384af2302eb6

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.33 2015/03/03 18:20:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql2/ChangeLog,v 1.34 2015/04/27 08:59:10 graaff Exp $
+
+  27 Apr 2015; Hans de Graaff <graaff@gentoo.org> mysql2-0.3.18.ebuild:
+  Make sure mysql2 is recompiled when the virtual/mysql (sub)slot changes.
 
 *mysql2-0.3.18 (03 Mar 2015)
 
