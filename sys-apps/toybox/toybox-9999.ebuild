@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/toybox/toybox-9999.ebuild,v 1.2 2014/10/19 03:25:11 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/toybox/toybox-9999.ebuild,v 1.3 2015/04/27 03:01:26 patrick Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils multiprocessing savedconfig toolchain-funcs
 
 if [[ ${PV} == 9999 ]]; then
 	inherit git-r3
-	EGIT_REPO_URI="https://github.com/gfto/toybox.git"
+	EGIT_REPO_URI="https://github.com/landley/toybox.git"
 else
 	SRC_URI="http://landley.net/code/toybox/downloads/${P}.tar.bz2"
 	KEYWORDS="~amd64 ~x86"
