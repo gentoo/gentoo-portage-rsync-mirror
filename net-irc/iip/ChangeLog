@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/iip
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.13 2010/10/19 21:15:30 flameeyes Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/iip/ChangeLog,v 1.14 2015/04/27 02:06:19 mrueg Exp $
+
+  27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -iip-1.1.0.ebuild:
+  Remove old.
 
   19 Oct 2010; Diego E. Pettenò <flameeyes@gentoo.org> iip-1.2.ebuild:
   QA: remove econf from src_prepare on EAPI=2.
@@ -57,4 +60,3 @@
   27 Sep 2003; Chuck Short <zul@gentoo.org> iip-1.1.0.ebuild:
   Initial version, originally contributed by Andrew Bevitt <andrew@volutin.net>,
   modified by me because RDEPEND and DEPEND were missing from the initial ebuild.
-
