@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.16-r1.ebuild,v 1.1 2015/04/27 00:25:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-5.16-r1.ebuild,v 1.2 2015/04/27 02:50:36 blueness Exp $
 
 EAPI="5"
 
-inherit ssl-cert eutils systemd user
+inherit ssl-cert eutils multilib systemd user
 
 DESCRIPTION="TLS/SSL - Port Wrapper"
 HOMEPAGE="http://www.stunnel.org/index.html"
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.stunnel.org/stunnel/archive/${PV%%.*}.x/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="ipv6 selinux tcpd"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
@@ -41,6 +41,7 @@ src_prepare() {
 
 src_configure() {
 	econf \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
 		$(use_enable ipv6) \
 		$(use_enable tcpd libwrap) \
 		--with-ssl="${EPREFIX}"/usr \
