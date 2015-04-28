@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sshkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sshkit/ChangeLog,v 1.3 2015/03/05 06:01:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sshkit/ChangeLog,v 1.4 2015/04/28 19:00:42 graaff Exp $
+
+  28 Apr 2015; Hans de Graaff <graaff@gentoo.org> sshkit-1.7.1.ebuild:
+  Add ruby22.
 
 *sshkit-1.7.1 (05 Mar 2015)
 
