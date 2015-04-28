@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.502 2015/03/23 16:02:40 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.503 2015/04/28 19:39:25 eras Exp $
+
+*dovecot-2.2.16-r1 (28 Apr 2015)
+
+  28 Apr 2015; Eray Aslan <eras@gentoo.org> +dovecot-2.2.16-r1.ebuild,
+  +files/CVE-2015-3420.patch:
+  Security bump - bug #547872
 
   23 Mar 2015; Eray Aslan <eras@gentoo.org> -dovecot-2.2.13.ebuild,
   -dovecot-2.2.14-r1.ebuild, -dovecot-2.2.14.ebuild, -dovecot-2.2.15-r1.ebuild,
