@@ -4,9 +4,9 @@ DESCRIPTION=Sans-serif font designed for literacy use
 EAPI=5
 HOMEPAGE=http://scripts.sil.org/Andika
 IUSE=X
-KEYWORDS=~amd64 ~arm ~arm64 ~x86
+KEYWORDS=amd64 arm ~arm64 x86
 LICENSE=OFL-1.1
 SLOT=0
 SRC_URI=http://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=Andika-5.000.zip&filename=Andika-5.000.zip -> andika-5.000.zip
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=157679202dab24f7df3d3d01ce04ae24
+_md5_=3b656448735abcf22ae610329d3a018d

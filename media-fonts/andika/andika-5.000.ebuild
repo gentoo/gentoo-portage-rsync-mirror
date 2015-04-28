@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/andika/andika-5.000.ebuild,v 1.1 2015/03/07 08:20:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/andika/andika-5.000.ebuild,v 1.2 2015/04/28 09:13:56 yngwin Exp $
 
 EAPI=5
 inherit font
@@ -11,7 +11,7 @@ SRC_URI="http://scripts.sil.org/cms/scripts/render_download.php?format=file&medi
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~arm64 ~x86"
+KEYWORDS="amd64 arm ~arm64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"

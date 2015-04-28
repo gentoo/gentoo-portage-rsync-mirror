@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.77 2015/04/28 05:02:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.78 2015/04/28 09:27:48 zlogene Exp $
+
+  28 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
+  hicolor-icon-theme-0.15.ebuild:
+  arm stable wrt bug #545868
 
   28 Apr 2015; Jeroen Roovers <jer@gentoo.org> hicolor-icon-theme-0.15.ebuild:
   Stable for PPC64 (bug #545868).
