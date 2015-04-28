@@ -1,6 +1,11 @@
 # ChangeLog for x11-themes/zukitwo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.25 2015/04/07 14:48:59 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo/ChangeLog,v 1.26 2015/04/27 23:10:08 sping Exp $
+
+*zukitwo-2014.10.22 (27 Apr 2015)
+
+  27 Apr 2015; Sebastian Pipping <sping@gentoo.org> +zukitwo-2014.10.22.ebuild:
+  Bump to 2014.10.22 (bug #512378)
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -zukitwo-2012.07.02-r1.ebuild,
   -zukitwo-2012.07.02.ebuild, -zukitwo-2012.12.16.ebuild,
