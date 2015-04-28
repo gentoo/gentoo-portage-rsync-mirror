@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.72 2015/04/28 02:15:35 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.73 2015/04/28 06:57:37 mr_bones_ Exp $
+
+  28 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -smpeg-0.4.4-r9.ebuild:
+  old
 
   28 Apr 2015; Jack Morgan <jmorgan@gentoo.org> smpeg-0.4.4-r10.ebuild:
   ppc64 stable wrt bug #525766
