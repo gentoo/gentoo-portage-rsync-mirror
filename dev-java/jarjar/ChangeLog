@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jarjar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.35 2014/08/10 20:16:22 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.36 2015/04/28 02:05:46 monsieurp Exp $
+
+*jarjar-1.4 (28 Apr 2015)
+
+  28 Apr 2015; Patrice Clement <monsieurp@gentoo.org> +jarjar-1.4.ebuild:
+  Version bump. Drop ia64 ppc ppc64 x86-fbsd KEYWORDS. Fix bug 263636.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jarjar-0.9.ebuild:
   QA: drop trailing '.' from DESCRIPTION
