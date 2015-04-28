@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.354 2015/04/20 03:01:53 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.355 2015/04/28 03:04:54 patrick Exp $
+
+  28 Apr 2015; Patrick Lauer <patrick@gentoo.org> use.mask:
+  Mask ayatana useflag until dependencies catch up
 
   20 Apr 2015; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Mask qt5 useflag for quassel
