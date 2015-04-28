@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.104 2015/04/21 18:43:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.105 2015/04/28 09:53:15 ago Exp $
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
+  notification-daemon-3.14.1.ebuild:
+  Stable for sparc, wrt bug #545864
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org>
   notification-daemon-3.14.1.ebuild:

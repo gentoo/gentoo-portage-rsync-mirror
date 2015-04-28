@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bsearch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bsearch/ChangeLog,v 1.24 2015/04/27 08:57:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bsearch/ChangeLog,v 1.25 2015/04/28 09:48:48 ago Exp $
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> bsearch-1.5.0-r1.ebuild:
+  Stable for sparc, wrt bug #542634
 
   27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> bsearch-1.5.0-r1.ebuild:
   Stable for ppc64, wrt bug #542634

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/fira-sans/fira-sans-4.002.ebuild,v 1.2 2015/03/07 03:24:10 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/fira-sans/fira-sans-4.002.ebuild,v 1.4 2015/04/28 09:56:16 yngwin Exp $
 
 EAPI=5
 inherit font versionator
@@ -14,7 +14,7 @@ SRC_URI="http://www.carrois.com/downloads/fira_$(get_major_version)_${MY_MINOR:0
 
 LICENSE="OFL-1.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 arm ~arm64 x86"
 IUSE=""
 
 DEPEND="app-arch/unzip"

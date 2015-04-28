@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.149 2015/04/28 04:58:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.150 2015/04/28 09:43:33 ago Exp $
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> gentoo-0.20.6.ebuild:
+  Stable for sparc, wrt bug #546022
 
   28 Apr 2015; Jeroen Roovers <jer@gentoo.org> gentoo-0.20.6.ebuild:
   Stable for PPC64 (bug #546022).

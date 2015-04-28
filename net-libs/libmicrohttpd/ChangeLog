@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.89 2015/04/19 09:40:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.90 2015/04/28 09:46:26 ago Exp $
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.39.ebuild:
+  Stable for sparc, wrt bug #545814
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libmicrohttpd-0.9.39.ebuild:
   Stable for x86, wrt bug #545814

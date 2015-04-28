@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.24.4.ebuild,v 1.7 2015/04/21 19:11:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/dcraw-9.24.4.ebuild,v 1.8 2015/04/28 09:49:45 ago Exp $
 
 EAPI=5
 inherit eutils readme.gentoo toolchain-funcs
@@ -13,7 +13,7 @@ SRC_URI="http://www.cybercom.net/~dcoffin/dcraw/archive/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-solaris"
 LANGS=" ca cs de da eo es fr hu it nl pl pt ru sv zh_CN zh_TW"
 IUSE="nls gimp jpeg jpeg2k lcms ${LANGS// / linguas_}"
 

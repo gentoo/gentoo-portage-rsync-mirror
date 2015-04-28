@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.115 2015/04/25 10:28:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.116 2015/04/28 09:51:56 ago Exp $
+
+  28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> ed-1.10.ebuild:
+  Stable for sparc, wrt bug #545204
 
   25 Apr 2015; Jeroen Roovers <jer@gentoo.org> ed-1.10.ebuild:
   Stable for PPC64 (bug #545204).
