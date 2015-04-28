@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.220 2015/04/26 19:53:30 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.221 2015/04/28 05:48:17 jer Exp $
+
+  28 Apr 2015; Jeroen Roovers <jer@gentoo.org> libpcap-1.6.2-r1.ebuild:
+  Stable for PPC64 (bug #526030).
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> libpcap-1.6.2-r1.ebuild:
   ia64 stable wrt bug #526030
