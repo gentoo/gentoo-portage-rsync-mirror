@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1595 2015/04/27 18:59:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1596 2015/04/28 14:14:29 kensington Exp $
+
+  28 Apr 2015; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass:
+  Update SRC_URI.
 
   27 Apr 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Handle 4.1 base kernel. See bug #547894.
