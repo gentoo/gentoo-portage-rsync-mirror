@@ -1,6 +1,10 @@
 # PPC Specific use flags
 #
 
+# Patrick Lauer <patrick@gentoo.org> (28 Apr 2015)
+# dependencies not keyworded yet
+ayatana
+
 # Anthony G. Basile <blueness@gentoo.org> (30 Sep 2014)
 # sys-libs/libseccomp has not been ported to ppc/ppc64, bug #524148
 seccomp
