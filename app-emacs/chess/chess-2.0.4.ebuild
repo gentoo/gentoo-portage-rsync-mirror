@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0.4.ebuild,v 1.1 2015/04/28 07:07:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/chess/chess-2.0.4.ebuild,v 1.2 2015/04/28 21:08:04 ulm Exp $
 
 EAPI=5
 NEED_EMACS=24
@@ -29,8 +29,9 @@ RDEPEND="|| ( games-board/stockfish
 		games-board/sjeng
 		games-board/crafty )"
 
-DOCS="AUTHORS NEWS TODO"
+ELISP_REMOVE="chess-pkg.el"
 SITEFILE="50${PN}-gentoo-${PV}.el"
+DOCS="AUTHORS NEWS TODO"
 
 src_install() {
 	elisp_src_install
