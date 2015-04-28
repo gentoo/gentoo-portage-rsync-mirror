@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9961 2015/04/27 08:07:10 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9963 2015/04/28 18:29:57 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Apr 2015; Ulrich Müller <ulm@gentoo.org> package.mask:
+  Mask dev-tex/mh for removal.
+
+  28 Apr 2015; Sebastian Pipping <sping@gentoo.org> package.mask:
+  Mask <www-apps/wordpress-4.2.1 for removal in 30 days
 
   27 Apr 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask rubinius 1.x for removal.
