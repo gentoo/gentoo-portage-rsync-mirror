@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.39-r1.ebuild,v 1.1 2015/02/10 07:43:14 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/terminus-font/terminus-font-4.39-r1.ebuild,v 1.2 2015/04/28 10:04:05 yngwin Exp $
 
 EAPI=5
 inherit eutils font
@@ -11,8 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}/${P}.tar.gz"
 
 LICENSE="OFL-1.1 GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc
-	~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="a-like-o +center-tilde distinct-l +pcf +pcf-unicode-only +psf quote
 	raw-font-data ru-dv +ru-g ru-i ru-k"
 

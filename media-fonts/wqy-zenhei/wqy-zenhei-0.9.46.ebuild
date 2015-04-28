@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/wqy-zenhei-0.9.46.ebuild,v 1.1 2015/02/21 06:39:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/wqy-zenhei-0.9.46.ebuild,v 1.2 2015/04/28 10:07:38 yngwin Exp $
 
 EAPI=5
 DISABLE_AUTOFORMATTING=true
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/project/wqy/${PN}-snapshot/${PV}-May/${P}-May.tar.
 
 LICENSE="GPL-2-with-font-exception"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
+KEYWORDS="amd64 arm ppc ppc64 x86 ~x86-fbsd"
 IUSE=""
 
 S="${WORKDIR}/${PN}"

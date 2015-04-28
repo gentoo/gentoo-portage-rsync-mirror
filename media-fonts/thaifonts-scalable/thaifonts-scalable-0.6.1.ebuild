@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/thaifonts-scalable-0.6.1.ebuild,v 1.2 2015/04/08 14:03:17 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/thaifonts-scalable/thaifonts-scalable-0.6.1.ebuild,v 1.3 2015/04/28 10:06:05 yngwin Exp $
 
 EAPI=5
 inherit font
@@ -11,7 +11,7 @@ SRC_URI="ftp://linux.thai.net/pub/thailinux/software/thai-ttf/ttf-tlwg-${PV}.tar
 
 LICENSE="|| ( GPL-2-with-font-exception GPL-3-with-font-exception )"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 ~arm ~arm64 x86"
 IUSE=""
 
 S="${WORKDIR}/ttf-tlwg-${PV}"
