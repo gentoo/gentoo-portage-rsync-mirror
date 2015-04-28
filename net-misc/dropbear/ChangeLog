@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.125 2015/04/26 18:22:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.126 2015/04/28 05:05:50 jer Exp $
+
+  28 Apr 2015; Jeroen Roovers <jer@gentoo.org> dropbear-2014.66.ebuild:
+  Stable for PPC64 (bug #535598).
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> dropbear-2014.66.ebuild:
   amd64 stable wrt bug #535598
