@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/ddt
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ddt/ChangeLog,v 1.1 2015/04/28 20:18:36 prometheanfire Exp $
+
+*ddt-1.0.0 (28 Apr 2015)
+
+  28 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> +ddt-1.0.0.ebuild,
+  +metadata.xml:
+  adding for tempest-lib-0.5.0
