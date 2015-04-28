@@ -4,10 +4,10 @@ DESCRIPTION=Imaxima enables graphical output in Maxima sessions with emacs
 EAPI=5
 HOMEPAGE=http://sites.google.com/site/imaximaimath/
 IUSE=examples
-KEYWORDS=~amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
+KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos
 LICENSE=GPL-2+
 RDEPEND=virtual/latex-base app-text/ghostscript-gpl >=dev-texlive/texlive-latexrecommended-2012 >=sci-mathematics/maxima-5.29 >=virtual/emacs-23
 SLOT=0
 SRC_URI=https://sites.google.com/site/imaximaimath/download-and-install/imaxima-imath-1.0.tar.gz
 _eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=36939c415d18bdf7b29972cff01bbd32
+_md5_=573af6569f69bd2a6c3cd3998928eca5

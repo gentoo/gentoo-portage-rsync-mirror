@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.7 2015/04/26 20:49:51 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-1.0-r3.ebuild,v 1.8 2015/04/28 17:18:30 ulm Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://sites.google.com/site/imaximaimath/download-and-install/${MY_P}
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="examples"
 
 # texlive-latexrecommended needed for breqn.sty

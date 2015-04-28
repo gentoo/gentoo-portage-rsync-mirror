@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/miniupnpc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.43 2014/05/02 12:53:17 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/ChangeLog,v 1.44 2015/04/28 17:25:56 maksbotan Exp $
+
+*miniupnpc-1.9.20150424 (28 Apr 2015)
+
+  28 Apr 2015; Maxim Koltsov <maksbotan@gentoo.org>
+  +miniupnpc-1.9.20150424.ebuild:
+  Bump to 1.9.20150424, bug #539568, thanks to Nikoli. Fixes security bug
+  512666.
 
   02 May 2014; Jeroen Roovers <jer@gentoo.org> miniupnpc-1.8.ebuild:
   Stable for HPPA (bug #506794).
