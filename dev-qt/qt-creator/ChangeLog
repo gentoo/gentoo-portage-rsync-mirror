@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt-creator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.48 2015/04/23 15:34:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/ChangeLog,v 1.49 2015/04/28 16:11:47 pesa Exp $
+
+  28 Apr 2015; Davide Pesavento <pesa@gentoo.org> qt-creator-3.4.0.ebuild:
+  Raise dev-util/qbs dep to match bundled version and to fix bug 537244.
 
 *qt-creator-3.4.0 (23 Apr 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.3.4.ebuild,v 1.1 2015/03/18 20:39:40 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.4.0.ebuild,v 1.1 2015/04/28 16:08:28 pesa Exp $
 
 EAPI=5
 
@@ -42,9 +42,10 @@ src_prepare() {
 	sed -i -e 's/!haveNodeJs()/true/' \
 		tests/auto/blackbox/tst_blackbox.cpp || die
 
-	if ! use test; then
-		sed -i -e '/SUBDIRS = auto/d' \
-			tests/tests.pro || die
+	if use test; then
+		sed -i -e '/SUBDIRS =/ s:=.*:= auto:' tests/tests.pro || die
+	else
+		sed -i -e '/SUBDIRS =/ d' tests/tests.pro || die
 	fi
 }
 
@@ -52,7 +53,8 @@ src_configure() {
 	local myqmakeargs=(
 		qbs.pro # bug 523218
 		-recursive
-		CONFIG+=disable_rpath
+		CONFIG+=qbs_disable_rpath
+		CONFIG+=qbs_enable_project_file_updates
 		QBS_INSTALL_PREFIX="${EPREFIX}/usr"
 		QBS_LIBRARY_DIRNAME="$(get_libdir)"
 	)

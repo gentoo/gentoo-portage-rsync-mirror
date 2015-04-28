@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.1 2015/04/23 15:34:04 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.2 2015/04/28 16:11:47 pesa Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ RDEPEND="
 	>=dev-qt/qtxml-${QT_PV}
 	>=sys-devel/gdb-7.5[client,python]
 	clang? ( >=sys-devel/clang-3.2:= )
-	qbs? ( >=dev-util/qbs-1.3.4 )
+	qbs? ( >=dev-util/qbs-1.4.0 )
 	systemd? ( sys-apps/systemd:= )
 "
 DEPEND="${RDEPEND}
