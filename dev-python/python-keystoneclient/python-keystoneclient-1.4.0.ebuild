@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-1.4.0.ebuild,v 1.1 2015/04/22 20:58:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-keystoneclient/python-keystoneclient-1.4.0.ebuild,v 1.2 2015/04/28 00:55:04 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -72,7 +72,6 @@ RDEPEND="
 	>=dev-python/stevedore-1.3.0[${PYTHON_USEDEP}]
 "
 PATCHES=(
-"${FILESDIR}/cve-2015-1852-master-keystoneclient.patch"
 )
 
 python_prepare_all() {
