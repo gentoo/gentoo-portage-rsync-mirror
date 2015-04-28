@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/syb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.34 2015/03/11 11:43:49 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/syb/ChangeLog,v 1.35 2015/04/28 20:50:37 slyfox Exp $
+
+  28 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org> syb-0.4.3.ebuild:
+  alpha/amd64/ia64/ppc/ppc64/sparc/x86 stable wrt bug #546260 (stabilize pandoc-
+  citeproc depends)
 
 *syb-0.4.4 (11 Mar 2015)
 

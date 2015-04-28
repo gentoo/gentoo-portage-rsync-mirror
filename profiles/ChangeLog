@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9963 2015/04/28 18:29:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9964 2015/04/28 20:48:02 chewi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 Apr 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
+  dev-java/jna-posix has been removed.
 
   28 Apr 2015; Ulrich Müller <ulm@gentoo.org> package.mask:
   Mask dev-tex/mh for removal.

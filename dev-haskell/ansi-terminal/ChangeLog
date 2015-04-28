@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/ansi-terminal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.36 2014/12/13 13:19:37 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ansi-terminal/ChangeLog,v 1.37 2015/04/28 20:39:26 slyfox Exp $
+
+  28 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  ansi-terminal-0.6.2.1.ebuild:
+  alpha/amd64/ia64/ppc/ppc64/sparc stable wrt bug #546260 (stabilize pandoc-
+  citeproc depends)
 
 *ansi-terminal-0.6.2.1 (13 Dec 2014)
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16508 2015/04/28 18:29:57 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16509 2015/04/28 20:48:02 chewi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -332,11 +332,6 @@ app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
 app-emulation/emul-linux-x86-jna
 <x11-drivers/ati-drivers-14
-
-# James Le Cuirot <chewi@gentoo.org> (28 Mar 2015)
-# Formerly required by NetBeans. Upstream has been dead for
-# years. Removal in 30 days.
-dev-java/jna-posix
 
 # Ian Delaney <idella4@gentoo.org> (28 Mar 2015)
 # old package with no active maintainers

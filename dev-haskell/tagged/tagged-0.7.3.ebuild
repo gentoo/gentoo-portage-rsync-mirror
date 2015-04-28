@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagged/tagged-0.7.3.ebuild,v 1.1 2014/12/14 05:54:14 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagged/tagged-0.7.3.ebuild,v 1.2 2015/04/28 20:43:51 slyfox Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://hackage/packages/archive/${PN}/${PV}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/${PV}"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 ia64 ppc ppc64 sparc x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/ghc-7.4.1:=

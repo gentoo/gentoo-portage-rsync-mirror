@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/unbounded-delays
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unbounded-delays/ChangeLog,v 1.5 2015/04/04 09:21:38 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/unbounded-delays/ChangeLog,v 1.6 2015/04/28 20:40:38 slyfox Exp $
+
+  28 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  unbounded-delays-0.1.0.9.ebuild:
+  x86/amd64 stable wrt bug #546260 (stabilize pandoc-citeproc depends)
 
 *unbounded-delays-0.1.0.9 (04 Apr 2015)
 

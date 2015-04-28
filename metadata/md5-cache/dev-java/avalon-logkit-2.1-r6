@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-java/log4j:0 java-virtuals/jms:0 java-virtuals/javamail:0 java-virtuals/servlet-api:2.5 >=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=2.0
 SRC_URI=mirror://apache/excalibur/excalibur-logkit/source/avalon-logkit-2.1-src.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	65bbb59987d777c1106ae8aa4bf36e7b	java-utils-2	2257adeaac9408ab545ef49ae751bae6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	8f4127eaee79040ecb5e8d8a528d7084	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=9ef3162febc7c2b809aa9e234c7c27d3

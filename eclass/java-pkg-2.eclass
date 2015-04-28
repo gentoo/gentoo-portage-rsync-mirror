@@ -1,11 +1,11 @@
 # Eclass for Java packages
 #
 # Copyright (c) 2004-2005, Thomas Matthijs <axxo@gentoo.org>
-# Copyright (c) 2004-2011, Gentoo Foundation
+# Copyright (c) 2004-2015, Gentoo Foundation
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.39 2012/07/21 11:57:30 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg-2.eclass,v 1.40 2015/04/28 20:35:40 chewi Exp $
 
 # @ECLASS: java-pkg-2.eclass
 # @MAINTAINER:
@@ -123,33 +123,40 @@ java-pkg-2_src_test() {
 	[[ -e "${EANT_BUILD_XML:=build.xml}" ]] || return
 
 	if [[ ${EANT_TEST_TARGET} ]] || java-pkg-2_supports-test ${EANT_BUILD_XML}; then
-		local opts task
+		local opts task_re junit_re pkg
 
 		if [[ ${EANT_TEST_JUNIT_INTO} ]]; then
 			java-pkg_jar-from --into "${EANT_TEST_JUNIT_INTO}" junit
 		fi
 
-		ANT_TASKS=${EANT_TEST_ANT_TASKS:-${ANT_TASKS:-${EANT_ANT_TASKS}}}
-
-		if [[ ${DEPEND} = *dev-java/ant-junit* ]]; then
-
-			if [[ ${ANT_TASKS} && "${ANT_TASKS}" != none ]]; then
-				ANT_TASKS="${ANT_TASKS} ant-junit"
-			else
-				ANT_TASKS="ant-junit"
-			fi
-
-			task=true
+		if [[ ${EANT_TEST_GENTOO_CLASSPATH} ]]; then
+			EANT_GENTOO_CLASSPATH="${EANT_TEST_GENTOO_CLASSPATH}"
 		fi
 
-		if [[ ${task} ]] || [[ ${DEPEND} = *dev-java/junit* ]]; then
-			opts="-Djunit.jar=\"$(java-pkg_getjar junit junit.jar)\""
-			if [[ ${EANT_TEST_GENTOO_CLASSPATH} ]]; then
-				EANT_GENTOO_CLASSPATH="${EANT_TEST_GENTOO_CLASSPATH},junit"
-			elif [[ ${EANT_GENTOO_CLASSPATH} ]]; then
-				EANT_GENTOO_CLASSPATH+=',junit'
+		ANT_TASKS=${EANT_TEST_ANT_TASKS:-${ANT_TASKS:-${EANT_ANT_TASKS}}}
+
+		task_re="\bdev-java/ant-junit(4)?(-[^:]+)?(:\S+)\b"
+		junit_re="\bdev-java/junit(-[^:]+)?(:\S+)\b"
+
+		if [[ ${DEPEND} =~ ${task_re} ]]; then
+			pkg="ant-junit${BASH_REMATCH[1]}${BASH_REMATCH[3]}"
+			pkg="${pkg%:0}"
+
+			if [[ ${ANT_TASKS} && "${ANT_TASKS}" != none ]]; then
+				ANT_TASKS="${ANT_TASKS} ${pkg}"
 			else
-				EANT_GENTOO_CLASSPATH=junit
+				ANT_TASKS="${pkg}"
+			fi
+		elif [[ ${DEPEND} =~ ${junit_re} ]]; then
+			pkg="junit${BASH_REMATCH[2]}"
+			pkg="${pkg%:0}"
+
+			opts="-Djunit.jar=\"$(java-pkg_getjar ${pkg} junit.jar)\""
+
+			if [[ ${EANT_GENTOO_CLASSPATH} ]]; then
+				EANT_GENTOO_CLASSPATH+=",${pkg}"
+			else
+				EANT_GENTOO_CLASSPATH="${pkg}"
 			fi
 		fi
 
