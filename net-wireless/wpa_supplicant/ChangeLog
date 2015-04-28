@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.236 2015/04/27 18:29:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.237 2015/04/28 08:06:27 zlogene Exp $
+
+  28 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> -wpa_supplicant-2.0-r2.ebuild,
+  -wpa_supplicant-2.2-r1.ebuild:
+  Drop unsecure versions
 
   27 Apr 2015; Rick Farina <zerochaos@gentoo.org> wpa_supplicant-2.4-r1.ebuild:
   arm stable, bug #524928

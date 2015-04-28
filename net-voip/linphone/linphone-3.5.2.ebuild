@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.5.2.ebuild,v 1.5 2013/10/14 12:27:50 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.5.2.ebuild,v 1.6 2015/04/28 08:01:48 bircoph Exp $
 
 EAPI=5
 
@@ -16,7 +16,8 @@ KEYWORDS="amd64 x86"
 # TODO: run-time test for ipv6: does it need mediastreamer[ipv6]?
 IUSE="doc gsm-nonstandard gtk ipv6 ncurses nls ssl video"
 
-RDEPEND=">=media-libs/mediastreamer-2.8.2[video?,ipv6?]
+RDEPEND="
+	=media-libs/mediastreamer-2.8*[video?,ipv6?]
 	>=net-libs/libeXosip-3.0.2
 	>=net-libs/libosip-3.0.0
 	<net-libs/libosip-4
@@ -24,19 +25,27 @@ RDEPEND=">=media-libs/mediastreamer-2.8.2[video?,ipv6?]
 	>=net-libs/libsoup-2.26
 	>=net-libs/ortp-0.20.0
 	<net-libs/ortp-0.22.0
-	gtk? ( dev-libs/glib:2
+	gtk? (
+		dev-libs/glib:2
 		>=gnome-base/libglade-2.4.0:2.0
 		>=x11-libs/gtk+-2.4.0:2
-		x11-libs/libnotify )
-	gsm-nonstandard? ( >=media-libs/mediastreamer-2.8.2[gsm] )
-	ncurses? ( sys-libs/readline
-		sys-libs/ncurses )
-	ssl? ( dev-libs/openssl )"
+		x11-libs/libnotify
+	)
+	gsm-nonstandard? ( =media-libs/mediastreamer-2.8*[gsm] )
+	ncurses? (
+		sys-libs/readline:=
+		sys-libs/ncurses
+	)
+	ssl? ( dev-libs/openssl:= )
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-text/sgmltools-lite )
-	nls? ( dev-util/intltool
-		sys-devel/gettext )"
+	nls? (
+		dev-util/intltool
+		sys-devel/gettext
+	)
+"
 
 IUSE_LINGUAS=" fr it de ja es pl cs nl sv pt_BR hu ru zh_CN"
 IUSE="${IUSE}${IUSE_LINGUAS// / linguas_}"

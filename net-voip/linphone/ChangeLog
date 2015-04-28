@@ -1,6 +1,14 @@
 # ChangeLog for net-voip/linphone
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.78 2014/11/12 13:46:03 bircoph Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/ChangeLog,v 1.80 2015/04/28 08:20:02 bircoph Exp $
+
+  28 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> -linphone-3.4.3-r1.ebuild,
+  linphone-3.6.1.ebuild, -files/linphone-3.4.3-nls.patch:
+  Fix dependencies on mediastreamer, bugs 504268, 519798.
+  Remove old version.
+
+  28 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> linphone-3.5.2.ebuild:
+  Linphone-3.5 works only with mediastreamer-2.8, bug 545196.
 
   12 Nov 2014; Andrew Savchenko <bircoph@gentoo.org> metadata.xml:
   Package is now directly maintained instead of proxy-maintaining.

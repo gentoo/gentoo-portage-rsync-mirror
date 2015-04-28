@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.6.1.ebuild,v 1.1 2013/10/09 18:58:15 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-voip/linphone/linphone-3.6.1.ebuild,v 1.2 2015/04/28 08:20:02 bircoph Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="assistant doc gsm-nonstandard gtk ipv6 libnotify ncurses nls sqlite ssl tools upnp video"
 
 RDEPEND="
-	>=media-libs/mediastreamer-2.9.0[video?,ipv6?]
+	>=media-libs/mediastreamer-2.9.0[ipv6?,upnp?,video?]
 	>=net-libs/libeXosip-4.0.0
 	>=net-libs/libosip-4.0.0
 	>=net-libs/ortp-0.22.0
@@ -30,19 +30,22 @@ RDEPEND="
 		assistant? ( >=net-libs/libsoup-2.26 )
 		libnotify? ( x11-libs/libnotify )
 	)
-	gsm-nonstandard? ( >=media-libs/mediastreamer-2.8.2[gsm] )
+	gsm-nonstandard? ( >=media-libs/mediastreamer-2.9.0[gsm] )
 	ncurses? (
-		sys-libs/readline
+		sys-libs/readline:0
 		sys-libs/ncurses
 	)
 	sqlite? ( dev-db/sqlite:3 )
 	ssl? ( dev-libs/openssl:0 )
 	tools? ( dev-libs/libxml2 )
-	upnp? ( net-libs/libupnp )"
+	upnp? ( net-libs/libupnp )
+	video? ( >=media-libs/mediastreamer-2.9.0[v4l] )
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( app-text/sgmltools-lite )
-	nls? ( dev-util/intltool )"
+	nls? ( dev-util/intltool )
+"
 
 IUSE_LINGUAS=" fr it de he ja es pl cs nl sr sv pt_BR hu ru zh_CN"
 IUSE="${IUSE}${IUSE_LINGUAS// / linguas_}"
