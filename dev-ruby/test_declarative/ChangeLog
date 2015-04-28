@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/test_declarative
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.14 2014/11/26 02:26:23 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test_declarative/ChangeLog,v 1.15 2015/04/28 19:05:48 graaff Exp $
+
+  28 Apr 2015; Hans de Graaff <graaff@gentoo.org>
+  test_declarative-0.0.5-r2.ebuild:
+  Drop rbx. Document ruby22 status.
 
   26 Nov 2014; Manuel Rüger <mrueg@gentoo.org> test_declarative-0.0.5-r2.ebuild:
   Drop jruby target.
