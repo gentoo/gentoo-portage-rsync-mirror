@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-15.04.0.ebuild,v 1.1 2015/04/16 14:44:32 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/wxmaxima/wxmaxima-15.04.0-r1.ebuild,v 1.1 2015/04/28 15:21:10 grozin Exp $
 
 EAPI=5
 
@@ -33,6 +33,7 @@ src_prepare() {
 
 	sed -e 's:share/wxMaxima:share/wxmaxima:g' \
 		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp src/Config.cpp \
+		-i src/wxMaxima.cpp src/wxMaximaFrame.cpp src/Dirstructure.h src/Dirstructure.cpp \
 		|| die "sed failed"
 
 	# correct gettext behavior
