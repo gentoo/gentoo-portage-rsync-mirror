@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2013-r2.ebuild,v 1.1 2015/02/28 17:45:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/texlive-core/texlive-core-2014-r4.ebuild,v 1.1 2015/04/28 10:35:48 blueness Exp $
 
 EAPI=5
 
 #TL_UPSTREAM_PATCHLEVEL="1"
-PATCHLEVEL="44"
-TL_SOURCE_VERSION=20130530
+PATCHLEVEL="50"
+TL_SOURCE_VERSION=20140525
 
 inherit eutils flag-o-matic toolchain-funcs libtool texlive-common
 
@@ -26,22 +26,24 @@ SRC_URI="${SRC_URI} mirror://gentoo/${PN}-patches-${PATCHLEVEL}.tar.xz"
 TL_CORE_BINEXTRA_MODULES="
 	a2ping adhocfilelist asymptote bundledoc ctanify ctanupload ctie cweb
 	de-macro dtl dtxgen dvi2tty dviasm dvicopy dvidvi dviljk dvipos findhyph
-	fragmaster hyphenex installfont lacheck latex2man latexfileversion
-	latexpand ltxfileinfo listings-ext match_parens mkjobtexmf patgen pdfcrop
-	pdftools pfarrei pkfix pkfix-helper purifyeps seetexk sty2dtx synctex
-	texcount texdef texdiff texdirflatten texdoc texliveonfly texloganalyser
-	texware tie tpic2pdftex typeoutfileinfo web	collection-binextra
+	fragmaster hyphenex installfont lacheck latex-git-log latex2man
+	latexfileversion latexpand latexindent ltxfileinfo ltximg listings-ext
+	match_parens mkjobtexmf patgen pdfcrop pdftools pfarrei pkfix pkfix-helper
+	purifyeps seetexk sty2dtx synctex texcount texdef texdiff texdirflatten
+	texdoc texliveonfly texloganalyser texware tie tpic2pdftex typeoutfileinfo
+	web collection-binextra
 	"
 TL_CORE_BINEXTRA_DOC_MODULES="
 	a2ping.doc adhocfilelist.doc asymptote.doc bundledoc.doc ctanify.doc
 	ctanupload.doc ctie.doc cweb.doc de-macro.doc dtxgen.doc dvi2tty.doc
 	dvicopy.doc	dviljk.doc dvipos.doc findhyph.doc fragmaster.doc
-	installfont.doc	latex2man.doc latexfileversion.doc latexpand.doc
-	ltxfileinfo.doc listings-ext.doc match_parens.doc mkjobtexmf.doc patgen.doc
-	pdfcrop.doc pdftools.doc pfarrei.doc pkfix.doc pkfix-helper.doc
-	purifyeps.doc sty2dtx.doc synctex.doc texcount.doc texdef.doc texdiff.doc
-	texdirflatten.doc texdoc.doc texliveonfly.doc texloganalyser.doc texware.doc
-	tie.doc tpic2pdftex.doc	typeoutfileinfo web.doc
+	installfont.doc	latex-git-log.doc latex2man.doc latexfileversion.doc
+	latexpand.doc latexindent.doc ltxfileinfo.doc ltximg.doc listings-ext.doc
+	match_parens.doc mkjobtexmf.doc patgen.doc pdfcrop.doc pdftools.doc
+	pfarrei.doc pkfix.doc pkfix-helper.doc purifyeps.doc sty2dtx.doc synctex.doc
+	texcount.doc texdef.doc texdiff.doc texdirflatten.doc texdoc.doc
+	texliveonfly.doc texloganalyser.doc texware.doc tie.doc tpic2pdftex.doc
+	typeoutfileinfo.doc web.doc
 	"
 TL_CORE_BINEXTRA_SRC_MODULES="
 	adhocfilelist.source hyphenex.source listings-ext.source mkjobtexmf.source
@@ -87,24 +89,30 @@ COMMON_DEPEND="${MODULAR_X_DEPEND}
 	!app-text/tetex
 	!<app-text/texlive-2007
 	!app-text/xetex
-	!<dev-texlive/texlive-basic-2013
+	!<dev-texlive/texlive-basic-2014
 	!<dev-texlive/texlive-metapost-2011
 	!app-text/dvibook
+	!dev-tex/luatex
+	!app-text/dvipdfm
+	!app-text/dvipdfmx
+	!app-text/xdvipdfmx
 	sys-libs/zlib
 	>=media-libs/libpng-1.2.43-r2:0=
 	>=app-text/poppler-0.12.3-r3:=
 	>=x11-libs/cairo-1.12
 	>=x11-libs/pixman-0.18
+	dev-libs/zziplib
+	app-text/libpaper
 	xetex? (
 		>=media-libs/harfbuzz-0.9.20[icu,graphite]
 		>=dev-libs/icu-50:=
 		app-text/teckit
 		media-libs/fontconfig
 		media-gfx/graphite2
-		media-libs/freetype:2
 	)
-	>=dev-libs/kpathsea-6.1.1_p20130530
-	cjk? ( >=dev-libs/ptexenc-1.3.1_p20130530 )"
+	media-libs/freetype:2
+	>=dev-libs/kpathsea-6.2.0
+	cjk? ( >=dev-libs/ptexenc-1.3.2_p20140525-r1 )"
 
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
@@ -117,11 +125,7 @@ RDEPEND="${COMMON_DEPEND}
 	>=app-text/dvipsk-5.993_p20130530
 	>=dev-tex/bibtexu-3.71_p20130530
 	virtual/perl-Getopt-Long
-	xetex? ( >=app-text/xdvipdfmx-0.7.9_p20130530 )
 	tk? ( dev-perl/perl-tk )"
-
-# texdoc needs luatex.
-PDEPEND=">=dev-tex/luatex-0.76"
 
 S="${WORKDIR}/${P}_build"
 B="${WORKDIR}/${MY_PV}"
@@ -183,6 +187,8 @@ src_configure() {
 		--with-system-graphite2 \
 		--with-system-cairo \
 		--with-system-pixman \
+		--with-system-zziplib \
+		--with-system-libpaper \
 		--without-texinfo \
 		--disable-dialog \
 		--disable-multiplatform \
@@ -199,23 +205,21 @@ src_configure() {
 		--disable-bibtex-x \
 		--disable-dvipng \
 		--disable-dvipsk \
-		--disable-dvipdfmx \
 		--disable-chktex \
 		--disable-lcdf-typetools \
 		--disable-pdfopen \
 		--disable-ps2eps \
 		--disable-ps2pkm \
 		--disable-detex \
-		--disable-ttf2pk \
+		--disable-ttf2pk2 \
 		--disable-tex4htk \
 		--disable-cjkutils \
 		--disable-xdvik \
 		--disable-xindy \
-		--disable-luatex \
+		--enable-luatex \
 		--disable-dvi2tty \
 		--disable-dvisvgm \
 		--disable-vlna \
-		--disable-xdvipdfmx \
 		--enable-shared \
 		--disable-native-texlive-build \
 		--disable-largefile \
@@ -232,9 +236,9 @@ src_configure() {
 
 src_compile() {
 	tc-export CC CXX AR RANLIB
-	emake SHELL="${EPREFIX}"/bin/sh texmf="${EPREFIX}"${TEXMF_PATH:-/usr/share/texmf-dist} || die "emake failed"
+	emake SHELL="${EPREFIX}"/bin/sh texmf="${EPREFIX}"${TEXMF_PATH:-/usr/share/texmf-dist}
 
-	cd "${B}"
+	cd "${B}" || die
 	# Mimic updmap --syncwithtrees to enable only fonts installed
 	# Code copied from updmap script
 	for i in `egrep '^(Mixed|Kanji)?Map' "texmf-dist/web2c/updmap.cfg" | sed 's@.* @@'`; do
@@ -251,9 +255,9 @@ src_compile() {
 
 src_install() {
 	dodir ${TEXMF_PATH:-/usr/share/texmf-dist}/web2c
-	emake DESTDIR="${D}" texmf="${ED}${TEXMF_PATH:-/usr/share/texmf-dist}" run_texlinks="true" run_mktexlsr="true" install || die "install failed"
+	emake DESTDIR="${D}" texmf="${ED}${TEXMF_PATH:-/usr/share/texmf-dist}" run_texlinks="true" run_mktexlsr="true" install
 
-	cd "${B}"
+	cd "${B}" || die
 	dodir /usr/share # just in case
 	cp -pR texmf-dist "${ED}/usr/share/" || die "failed to install texmf trees"
 	cp -pR "${WORKDIR}"/tlpkg "${ED}/usr/share/" || die "failed to install tlpkg files"
@@ -264,19 +268,19 @@ src_install() {
 
 	docinto texk
 	cd "${B}/texk"
-	dodoc ChangeLog README || die "failed to install texk docs"
+	dodoc ChangeLog README
 
 	docinto dviljk
 	cd "${B}/texk/dviljk"
-	dodoc ChangeLog README NEWS || die "failed to install dviljk docs"
+	dodoc ChangeLog README NEWS
 
 	docinto makeindexk
 	cd "${B}/texk/makeindexk"
-	dodoc ChangeLog NOTES README || die "failed to install makeindexk docs"
+	dodoc ChangeLog NOTES README
 
 	docinto web2c
 	cd "${B}/texk/web2c"
-	dodoc ChangeLog NEWS PROJECTS README || die "failed to install web2c docs"
+	dodoc ChangeLog NEWS PROJECTS README
 
 	use doc || rm -rf "${ED}/usr/share/texmf-dist/doc"
 
@@ -314,28 +318,6 @@ src_install() {
 	# Ditto for pdftex
 	mv "${ED}/usr/bin/pdftex" "${ED}/usr/bin/pdftex-${P}"
 	dosym "pdftex-${P}" /usr/bin/pdftex
-}
-
-pkg_preinst() {
-	# Remove stray files to keep the upgrade path sane
-	if has_version =app-text/texlive-core-2007* ; then
-		for i in pdftex/pdflatex aleph/aleph aleph/lamed omega/lambda omega/omega xetex/xetex xetex/xelatex tex/tex pdftex/etex pdftex/pdftex pdftex/pdfetex ; do
-			for j in log fmt ; do
-				local file="${EROOT}/var/lib/texmf/web2c/${i}.${j}"
-				if [ -f "${file}" ] ; then
-					elog "Removing stray ${file} from TeXLive 2007 install."
-					rm -f "${file}"
-				fi
-			done
-		done
-		for j in base log ; do
-			local file="${EROOT}/var/lib/texmf/web2c/metafont/mf.${j}"
-			if [ -f "${file}" ] ; then
-				elog "Removing stray ${file} from TeXLive 2007 install."
-				rm -f "${file}"
-			fi
-		done
-	fi
 }
 
 pkg_postinst() {
