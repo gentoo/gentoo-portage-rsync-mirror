@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.161.2_p1.ebuild,v 1.1 2015/04/25 06:00:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.162.4_p1.ebuild,v 1.1 2015/04/29 04:35:37 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -12,7 +12,7 @@ inherit chromium multilib unpacker toolchain-funcs
 
 DESCRIPTION="A new browser for our friends"
 HOMEPAGE="http://vivaldi.com/"
-VIVALDI_BASE_URI="${HOMEPAGE}download/download.php?f=${PN}-snapshot_${PV/_p/-}_"
+VIVALDI_BASE_URI="${HOMEPAGE}download/${PN^}_TP3.${PV/_p/-}_"
 SRC_URI="
 	amd64? ( ${VIVALDI_BASE_URI}amd64.deb -> ${P}-amd64.deb )
 	x86? ( ${VIVALDI_BASE_URI}i386.deb -> ${P}-i386.deb )
@@ -59,7 +59,7 @@ RDEPEND="
 
 QA_PREBUILT="*"
 S=${WORKDIR}
-VIVALDI_HOME="opt/${PN}-snapshot"
+VIVALDI_HOME="opt/${PN}"
 
 src_unpack() {
 	unpack_deb ${A}
@@ -67,12 +67,12 @@ src_unpack() {
 
 src_prepare() {
 	sed -i \
-		-e 's|vivaldi-snapshot|vivaldi|g' \
-		usr/share/applications/${PN}-snapshot.desktop \
-		usr/share/xfce4/helpers/${PN}-snapshot.desktop || die
+		-e 's|vivaldi-preview|vivaldi|g' \
+		usr/share/applications/${PN}-preview.desktop \
+		usr/share/xfce4/helpers/${PN}.desktop || die
 
-	mv usr/share/doc/${PN}-snapshot usr/share/doc/${PF} || die
-	rm usr/bin/${PN}-snapshot || die
+	mv usr/share/doc/${PN}-preview usr/share/doc/${PF} || die
+	rm usr/bin/${PN}-preview || die
 	rm _gpgbuilder || die
 
 	local c d

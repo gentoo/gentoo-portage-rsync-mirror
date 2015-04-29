@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.291 2015/04/29 04:00:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.292 2015/04/29 04:42:39 vapier Exp $
+
+*netpbm-10.70.00 (29 Apr 2015)
+
+  29 Apr 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/netpbm-10.70-system-libs.patch, +netpbm-10.70.00.ebuild:
+  Version bump.
 
   29 Apr 2015; Mike Frysinger <vapier@gentoo.org> netpbm-10.66.00.ebuild:
   Handle test failures when USE=-tiff and USE=-jpeg2k #545418 by Jonathan

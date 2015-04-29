@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.119 2015/04/24 00:44:27 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.121 2015/04/29 04:57:40 jer Exp $
+
+  29 Apr 2015; Jeroen Roovers <jer@gentoo.org> x11vnc-0.9.13_p20150111.ebuild:
+  Stable for HPPA (bug #515268).
+
+  29 Apr 2015; Jeroen Roovers <jer@gentoo.org> x11vnc-0.9.13_p20150111.ebuild:
+  Stable for PPC64 (bug #515268).
 
 *x11vnc-0.9.13_p20150111 (24 Apr 2015)
 
