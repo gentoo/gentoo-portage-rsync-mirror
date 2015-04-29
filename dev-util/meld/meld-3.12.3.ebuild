@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.3.ebuild,v 1.3 2015/03/15 13:20:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.3.ebuild,v 1.4 2015/04/29 14:54:50 leio Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ IUSE=""
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-libs/glib-2.34:2
+	>=dev-libs/glib-2.36:2
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-3.8:3[cairo,${PYTHON_USEDEP}]
 	gnome-base/gsettings-desktop-schemas
