@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.503 2015/04/28 19:39:25 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.504 2015/04/29 06:04:45 jer Exp $
+
+  29 Apr 2015; Jeroen Roovers <jer@gentoo.org> dovecot-2.2.16-r1.ebuild:
+  Stable for HPPA PPC64 (bug #547872).
 
 *dovecot-2.2.16-r1 (28 Apr 2015)
 
