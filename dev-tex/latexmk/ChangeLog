@@ -1,6 +1,15 @@
 # ChangeLog for dev-tex/latexmk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.71 2015/01/05 23:30:29 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/ChangeLog,v 1.73 2015/04/29 15:27:14 aballier Exp $
+
+  29 Apr 2015; Alexis Ballier <aballier@gentoo.org> -latexmk-437.ebuild,
+  -latexmk-439.ebuild:
+  remove old
+
+*latexmk-443a (29 Apr 2015)
+
+  29 Apr 2015; Alexis Ballier <aballier@gentoo.org> +latexmk-443a.ebuild:
+  version bump
 
 *latexmk-441 (05 Jan 2015)
 

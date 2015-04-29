@@ -1,6 +1,14 @@
 # ChangeLog for dev-tex/chktex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.57 2015/04/13 09:13:40 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.59 2015/04/29 15:15:35 aballier Exp $
+
+*chktex-1.7.4 (29 Apr 2015)
+
+  29 Apr 2015; Alexis Ballier <aballier@gentoo.org> +chktex-1.7.4.ebuild:
+  version bump
+
+  29 Apr 2015; Alexis Ballier <aballier@gentoo.org> chktex-1.7.3.ebuild:
+  set VARTEXFONTS to within the sandbox, bug #538672
 
 *chktex-1.7.3 (13 Apr 2015)
 

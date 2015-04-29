@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-437.ebuild,v 1.2 2014/08/10 21:26:39 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latexmk/latexmk-443a.ebuild,v 1.1 2015/04/29 15:26:16 aballier Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/latex-base
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}
+S="${WORKDIR}/${PN}"
 
 src_install() {
 	newbin latexmk.pl latexmk
