@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.0.ebuild,v 1.1 2015/04/28 20:50:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.0.ebuild,v 1.2 2015/04/29 18:15:28 xarthisius Exp $
 
 EAPI=5
 
@@ -84,13 +84,13 @@ CONFIG_CHECK="
 	~MEMCG_SWAP ~MEMCG_SWAP_ENABLED
 	~RESOURCE_COUNTERS
 	~CGROUP_PERF
-	~CFS_BANDWIDTH
 "
 
 ERROR_MEMCG_SWAP="CONFIG_MEMCG_SWAP: is required if you wish to limit swap usage of containers"
+ERROR_MEMCG_SWAP_ENABLED="CONFIG_MEMCG_SWAP_ENABLED: you need to enable memcg_swap in order to 
+	  limit swap usage of containers"
 ERROR_RESOURCE_COUNTERS="CONFIG_RESOURCE_COUNTERS: is optional for container statistics gathering"
 ERROR_CGROUP_PERF="CONFIG_CGROUP_PERF: is optional for container statistics gathering"
-ERROR_CFS_BANDWIDTH="CONFIG_CFS_BANDWIDTH: is optional for container statistics gathering"
 
 pkg_setup() {
 	if kernel_is lt 3 8; then

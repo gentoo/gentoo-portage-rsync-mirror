@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.42 2015/04/28 20:50:02 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.43 2015/04/29 18:15:28 xarthisius Exp $
+
+  29 Apr 2015; Kacper Kowalik <xarthisius@gentoo.org> docker-1.6.0.ebuild:
+  Drop ~CFS_BANDWIDTH as it's not yet used by 1.6.0, add warning message for
+  CONFIG_MEMCG_SWAP_ENABLED. Thanks to Thomas Capricelli for the report
 
 *docker-1.6.0 (28 Apr 2015)
 
