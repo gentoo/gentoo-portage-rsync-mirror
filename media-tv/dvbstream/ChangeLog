@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/dvbstream
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/ChangeLog,v 1.11 2012/04/29 15:01:15 tomka Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/dvbstream/ChangeLog,v 1.12 2015/04/29 20:32:24 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -dvbstream-0.5.ebuild,
+  -dvbstream-0.7_pre20080302-r1.ebuild, -dvbstream-0.7_pre20080302.ebuild:
+  Remove old.
 
   29 Apr 2012; Thomas Kahle <tomka@gentoo.org>
   dvbstream-0.7_pre20080516.ebuild:
@@ -54,4 +58,3 @@
   +dvbstream-0.5.ebuild:
   Initial import of ebuild. See bug #48742. Based on ebuild from Ben De luca
   <bedel@allmail.net>.
-
