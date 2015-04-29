@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/bobotpp
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.26 2012/02/06 17:23:33 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bobotpp/ChangeLog,v 1.27 2015/04/29 20:20:08 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -bobotpp-2.2.2.ebuild,
+  -files/bobotpp-2.2.2-gcc43.patch:
+  Remove old.
 
   06 Feb 2012; Brent Baude <ranger@gentoo.org> bobotpp-2.2.3.ebuild:
   Marking bobotpp-2.2.3 ppc for bug 397149
@@ -105,4 +109,3 @@
   13 Jul 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml,
   +bobotpp-2.1.4.ebuild:
   Initial import, ebuild written by me.
-

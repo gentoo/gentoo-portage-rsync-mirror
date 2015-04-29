@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/tvmovie2vdr
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/ChangeLog,v 1.9 2009/07/19 17:55:56 tove Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvmovie2vdr/ChangeLog,v 1.10 2015/04/29 20:31:12 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -tvmovie2vdr-0.5.12.ebuild:
+  Remove old.
 
   19 Jul 2009; Torsten Veller <tove@gentoo.org> tvmovie2vdr-0.5.12.ebuild,
   tvmovie2vdr-0.5.13.ebuild:
@@ -42,4 +45,3 @@
   31 May 2007; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +tvmovie2vdr-0.5.12.ebuild:
   Initial import of ebuild. Based on the ebuild from gentoo.de.
-

@@ -1,6 +1,14 @@
 # ChangeLog for net-news/liferea
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.247 2014/10/31 08:41:27 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/liferea/ChangeLog,v 1.248 2015/04/29 20:13:46 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/liferea-1.7.4-libnotify-0.7.patch,
+  -files/liferea-1.7.6-unread-feeds.patch, -liferea-1.10.0.ebuild,
+  -liferea-1.10.1a.ebuild, -liferea-1.10.3.ebuild, -liferea-1.8.0.ebuild,
+  -liferea-1.8.5.ebuild, -liferea-1.9.4_p20120821.ebuild,
+  -liferea-1.9.6_p20121021.ebuild:
+  Remove old.
 
   31 Oct 2014; Pacho Ramos <pacho@gentoo.org> liferea-1.10.8.ebuild,
   liferea-1.8.0.ebuild, liferea-1.8.5.ebuild, liferea-1.8.8.ebuild:

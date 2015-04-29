@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/cmdftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.10 2015/01/26 10:40:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/cmdftp/ChangeLog,v 1.11 2015/04/29 20:26:15 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -cmdftp-0.9.6.ebuild,
+  -cmdftp-0.9.7.ebuild:
+  Remove old.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> cmdftp-0.9.8.ebuild:
   Stable for x86, wrt bug #535564

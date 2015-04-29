@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/netkit-ftpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.24 2012/12/06 20:20:23 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/netkit-ftpd/ChangeLog,v 1.25 2015/04/29 20:27:15 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -netkit-ftpd-0.17-r7.ebuild:
+  Remove old.
 
   06 Dec 2012; Ulrich Müller <ulm@gentoo.org> netkit-ftpd-0.17-r7.ebuild,
   netkit-ftpd-0.17-r8.ebuild:

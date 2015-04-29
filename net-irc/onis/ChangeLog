@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/onis
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.13 2012/12/16 13:54:14 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/onis/ChangeLog,v 1.14 2015/04/29 20:24:13 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -onis-0.6.1.ebuild:
+  Remove old.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> onis-0.8.2.ebuild:
   Stable for x86, wrt bug #441446

@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/ngircd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.61 2015/02/22 09:16:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ngircd/ChangeLog,v 1.62 2015/04/29 20:23:36 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -ngircd-0.12.1.ebuild,
+  -ngircd-13.ebuild, -ngircd-17.1.ebuild, -ngircd-18.ebuild:
+  Remove old.
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> ngircd-0.12.1.ebuild,
   ngircd-13.ebuild, ngircd-17.1.ebuild, ngircd-18.ebuild, ngircd-20.3.ebuild:
