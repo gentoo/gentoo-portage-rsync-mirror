@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_Util
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.57 2015/04/26 17:00:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_Util/ChangeLog,v 1.58 2015/04/29 09:07:17 ago Exp $
+
+  29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-XML_Util-1.2.3-r1.ebuild:
+  Stable for alpha/amd64/arm/ia64/ppc64/sparc, wrt bug #547748
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> PEAR-XML_Util-1.2.3-r1.ebuild:
   ppc stable wrt bug #547748

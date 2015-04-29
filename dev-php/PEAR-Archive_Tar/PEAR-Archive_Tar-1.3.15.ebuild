@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/PEAR-Archive_Tar-1.3.15.ebuild,v 1.4 2015/04/26 17:27:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Archive_Tar/PEAR-Archive_Tar-1.3.15.ebuild,v 1.5 2015/04/29 09:08:15 ago Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ DESCRIPTION="Tar file management class"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ppc ~ppc64 ~s390 ~sh ~sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 ~s390 ~sh sparc x86"
 IUSE=""
 SRC_URI="http://pear.php.net/get/${MY_P}.tgz"
 DEPEND="dev-lang/php:*[pcre(+)]

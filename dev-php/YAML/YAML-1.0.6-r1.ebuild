@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/YAML-1.0.6-r1.ebuild,v 1.3 2015/04/26 16:41:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/YAML-1.0.6-r1.ebuild,v 1.4 2015/04/29 09:05:55 ago Exp $
 
 EAPI=5
 
@@ -15,5 +15,5 @@ HOMEPAGE="http://pear.symfony-project.com/"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 hppa x86"
+KEYWORDS="amd64 hppa x86"
 IUSE=""

@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/YAML
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.10 2015/04/26 16:41:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/YAML/ChangeLog,v 1.11 2015/04/29 09:05:55 ago Exp $
+
+  29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> YAML-1.0.6-r1.ebuild:
+  Stable for amd64, wrt bug #547750
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> YAML-1.0.6-r1.ebuild:
   x86 stable wrt bug #547750
