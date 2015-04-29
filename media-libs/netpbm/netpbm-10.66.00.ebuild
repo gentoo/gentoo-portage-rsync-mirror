@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.16 2015/04/29 01:58:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.66.00.ebuild,v 1.17 2015/04/29 04:00:38 vapier Exp $
 
 EAPI="4"
 
@@ -74,6 +74,7 @@ src_prepare() {
 	local del=(
 		$(usex jbig '' 'jbigtopnm pnmtojbig jbig-roundtrip')
 		$(usex rle '' 'utahrle-roundtrip')
+		$(usex tiff '' 'tiff-roundtrip')
 	)
 	if [[ ${#del[@]} -gt 0 ]] ; then
 		sed -i -r $(printf -- ' -e /%s.test/d' "${del[@]}") test/Test-Order || die
@@ -81,7 +82,9 @@ src_prepare() {
 	del=(
 		pnmtofiasco fiascotopnm # We always disable fiasco
 		$(usex jbig '' 'jbigtopnm pnmtojbig')
+		$(usex jpeg2k '' 'jpeg2ktopam pamtojpeg2k')
 		$(usex rle '' 'pnmtorle rletopnm')
+		$(usex tiff '' 'pamtotiff pnmtotiff pnmtotiffcmyk tifftopnm')
 	)
 	if [[ ${#del[@]} -gt 0 ]] ; then
 		sed -i -r $(printf -- ' -e s/\<%s\>(:.ok)?//' "${del[@]}") test/all-in-place.{ok,test} || die
