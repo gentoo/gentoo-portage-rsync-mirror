@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.117 2015/04/29 15:26:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.118 2015/04/29 19:48:27 williamh Exp $
+
+  29 Apr 2015; William Hubbs <williamh@gentoo.org>
+  udev-init-scripts-9999.ebuild:
+  Drop buildtime dependencies and upgrade the blocker to !<openrc-0.14 due to
+  the fix in start-stop-daemon for closing stdin when --background is used.
 
   29 Apr 2015; William Hubbs <williamh@gentoo.org>
   udev-init-scripts-9999.ebuild:

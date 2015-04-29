@@ -1,6 +1,10 @@
 # ChangeLog for www-client/jd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.28 2014/07/14 00:15:14 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/jd/ChangeLog,v 1.29 2015/04/29 19:42:54 mrueg Exp $
+
+  29 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -jd-2.6.5_p100425.ebuild,
+  -jd-2.7.5_p101228.ebuild, -jd-2.8.0_p110203.ebuild:
+  Remove old.
 
   14 Jul 2014; Julian Ospald <hasufell@gentoo.org> jd-2.8.5_p120826.ebuild:
   fix all USE flags
