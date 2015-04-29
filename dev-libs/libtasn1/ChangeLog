@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.239 2015/04/29 09:18:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.240 2015/04/29 19:14:47 alonbl Exp $
+
+*libtasn1-4.5 (29 Apr 2015)
+
+  29 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> +libtasn1-4.5.ebuild:
+  Version bump
 
   29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libtasn1-4.4.ebuild:
   Stable for sparc, wrt bug #544922
