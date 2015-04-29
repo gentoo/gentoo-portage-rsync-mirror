@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.5.ebuild,v 1.3 2014/11/24 16:41:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/plasma-nm-0.9.3.5.ebuild,v 1.4 2015/04/29 17:23:53 hwoarang Exp $
 
 EAPI=5
 
@@ -38,6 +38,8 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	sys-devel/gettext
 "
+
+PATCHES=( "${FILESDIR}"/${P}-openconnect.patch )
 
 src_configure() {
 	local mycmakeargs=(
