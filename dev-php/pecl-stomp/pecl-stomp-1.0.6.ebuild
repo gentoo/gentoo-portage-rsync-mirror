@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-stomp/pecl-stomp-1.0.5-r1.ebuild,v 1.1 2014/09/29 18:24:58 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-stomp/pecl-stomp-1.0.6.ebuild,v 1.1 2015/04/29 01:40:29 grknight Exp $
 
 EAPI="5"
 
@@ -19,8 +19,15 @@ LICENSE="PHP-3"
 SLOT="0"
 IUSE="+ssl"
 
+for target in ${USE_PHP}; do
+	slot=${target/php}
+	slot=${slot/-/.}
+	PHPUSEDEPEND="${PHPUSEDEPEND}
+	php_targets_${target}? ( dev-lang/php:${slot}[ssl?] )"
+done
+
 DEPEND="${DEPEND}
-	ssl? ( dev-lang/php[ssl] )
+	${PHPUSEDEPEND}
 "
 
 RDEPEND="${DEPEND}"

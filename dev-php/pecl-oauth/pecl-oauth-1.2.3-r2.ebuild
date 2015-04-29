@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-oauth/pecl-oauth-1.2.3-r1.ebuild,v 1.1 2014/09/30 22:56:20 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-oauth/pecl-oauth-1.2.3-r2.ebuild,v 1.1 2015/04/29 01:33:04 grknight Exp $
 
 EAPI="5"
 PHP_EXT_NAME="oauth"
@@ -19,5 +19,12 @@ LICENSE="BSD"
 SLOT="0"
 IUSE=""
 
-DEPEND="dev-lang/php[hash]"
+for target in ${USE_PHP}; do
+	slot=${target/php}
+	slot=${slot/-/.}
+	PHPUSEDEPEND="${PHPUSEDEPEND}
+	php_targets_${target}? ( dev-lang/php:${slot}[hash] )"
+done
+
+DEPEND="${PHPUSEDEPEND}"
 RDEPEND="${DEPEND}"
