@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.8.2.ebuild,v 1.11 2012/07/25 14:07:54 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cjk-latex/cjk-latex-4.8.4.ebuild,v 1.1 2015/04/29 15:38:32 aballier Exp $
 
 EAPI=4
 
-inherit latex-package elisp-common toolchain-funcs multilib eutils autotools
+inherit latex-package elisp-common toolchain-funcs multilib eutils
 
 MY_P="${P/-latex/}"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.ffii.org/pub/cjk/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 IUSE="doc emacs"
 
 DEPEND="virtual/latex-base
@@ -35,9 +35,6 @@ src_prepare() {
 	sed -i -e "/^pk_files/s/no/yes/" \
 		-e "/^dpi_x/s/300/500/" \
 		texmf/hbf2gf/*.cfg || die
-	epatch "${FILESDIR}/${P}-kpathsea_version.patch"
-	cd "${S}/utils/hbf2gf"
-	eautoreconf
 }
 
 src_configure() {
@@ -85,6 +82,7 @@ src_compile() {
 
 	einfo "Generating pk fonts"
 	for gf in *.gf ; do
+		einfo "${gf}"
 		gftopk $gf || die
 	done
 }
@@ -104,12 +102,14 @@ src_install() {
 	cd "${S}"
 
 	# Install pk fonts
-	for d in texmf/fonts/pk/modeless/*/* ; do
-		insinto /usr/share/${d}
+	pushd texmf &>/dev/null
+	for d in fonts/pk/modeless/*/* ; do
+		insinto ${TEXMF}/${d}
 		for f in "${T}"/${d##*/}*.pk ; do
 			newins $f `basename ${f/.pk/.500pk}` || die "newins failed"
 		done
 	done
+	popd &>/dev/null
 
 	insinto "${TEXMF}/tex/latex/${PN}"
 	doins -r texinput/* || die "installing texinput files failed"
