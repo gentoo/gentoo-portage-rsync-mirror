@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1597 2015/04/28 20:35:40 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1598 2015/04/29 00:07:30 mpagano Exp $
+
+  29 Apr 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
+  Add kernel-2 env var K_BASE_VER as different versions of git sources use
+  different base versions.
 
   28 Apr 2015; James Le Cuirot <chewi@gentoo.org> java-pkg-2.eclass,
   java-utils-2.eclass, ant-tasks.eclass:

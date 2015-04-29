@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.302 2015/04/27 18:59:42 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.303 2015/04/29 00:07:30 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -37,6 +37,8 @@
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except using ewarn instead of einfo
 # K_SYMLINK				- if this is set, then forcably create symlink anyway
 #
+# K_BASE_VER			- for git-sources, declare the base version this patch is 
+#						  based off of.
 # K_DEFCONFIG			- Allow specifying a different defconfig target.
 #						  If length zero, defaults to "defconfig".
 # K_WANT_GENPATCHES		- Apply genpatches to kernel source. Provide any
@@ -363,14 +365,10 @@ detect_version() {
 		KV_PATCH_ARR=(${KV_PATCH//\./ })
 
 		# the different majorminor versions have different patch start versions
-		OKV_DICT=(["2"]="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))" ["3"]="2.6.39" ["4"]="3.19" ["41"] = "4.0")
+		OKV_DICT=(["2"]="${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))" ["3"]="2.6.39" ["4"]="3.19")
+
 		if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
-			OKV=${OKV_DICT["${KV_MAJOR}"]}
-			if [[ ${KV_MAJOR} -ge 4 ]]  && [[ ${KV_PATCH_ARR} -ge 1 ]]; then
-				OKV=${OKV_DICT["${KV_MAJOR}.$((${KV_PATCH_ARR} - 1))"]}
-			else
-				OKV=${OKV_DICT["${KV_MAJOR}"]}
-			fi
+			OKV=${K_BASE_VER:-$OKV_DICT["${KV_MAJOR}"]}
 			KERNEL_URI="${KERNEL_BASE_URI}/testing/patch-${CKV//_/-}.xz
 						${KERNEL_BASE_URI}/linux-${OKV}.tar.xz"
 			UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.xz"
@@ -383,7 +381,7 @@ detect_version() {
 		fi
 
 		if [[ ${RELEASETYPE} == -rc-git ]]; then
-			OKV=${OKV_DICT["${KV_MAJOR}"]}
+			OKV=${K_BASE_VER:-$OKV_DICT["${KV_MAJOR}"]}
 			KERNEL_URI="${KERNEL_BASE_URI}/snapshots/patch-${KV_MAJOR}.${KV_PATCH}${RELEASE}.xz
 						${KERNEL_BASE_URI}/testing/patch-${KV_MAJOR}.${KV_PATCH}${RELEASE/-git*}.xz
 						${KERNEL_BASE_URI}/linux-${OKV}.tar.xz"

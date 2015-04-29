@@ -1,15 +1,15 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaml/pecl-yaml-1.1.0-r1.ebuild,v 1.1 2013/08/15 13:36:40 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-yaml/pecl-yaml-1.1.1-r1.ebuild,v 1.1 2015/04/29 00:14:43 grknight Exp $
 
-EAPI="4"
+EAPI=5
 
 PHP_EXT_NAME="yaml"
 PHP_EXT_INI="yes"
 PHP_EXT_ZENDEXT="no"
 DOCS="CREDITS EXPERIMENTAL README"
 
-USE_PHP="php5-5 php5-4"
+USE_PHP="php5-6 php5-5 php5-4"
 
 inherit php-ext-pecl-r2
 
