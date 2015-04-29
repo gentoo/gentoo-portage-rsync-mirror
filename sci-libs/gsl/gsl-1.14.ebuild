@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14.ebuild,v 1.11 2015/03/31 20:16:02 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/gsl/gsl-1.14.ebuild,v 1.12 2015/04/29 06:35:06 patrick Exp $
 
 EAPI="3"
 
@@ -84,4 +84,8 @@ pkg_postinst() {
 		elog "To use ${p} ${ESELECT_PROF} implementation, you have to issue (as root):"
 		elog "\t eselect ${p} set ${ESELECT_PROF}"
 	fi
+}
+
+src_test() {
+	emake -j1 check || die
 }
