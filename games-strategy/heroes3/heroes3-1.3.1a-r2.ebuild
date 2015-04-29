@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.17 2015/03/29 08:17:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r2.ebuild,v 1.18 2015/04/29 05:22:05 mr_bones_ Exp $
 
 #	[x] Base Install Required (+4 MB)
 #	[x] Scenarios (+7 MB)
@@ -26,6 +26,7 @@ HOMEPAGE="http://www.lokigames.com/products/heroes3/"
 # here so someone else can stabilize loki_setupdb and loki_patch for PPC and
 # then KEYWORD this appropriately.
 SRC_URI="x86? ( mirror://lokigames/${PN}/${P}-cdrom-x86.run )
+	amd64? ( mirror://lokigames/${PN}/${P}-cdrom-x86.run )
 	ppc? ( mirror://lokigames/${PN}/${P}-ppc.run )"
 # This is commented because the server is unreachable.
 #	linguas_es? ( ${LANGPACKPATHPREFIX}-es.tar.gz )
@@ -38,7 +39,7 @@ LICENSE="LOKI-EULA"
 SLOT="0"
 IUSE="nocd maps music sounds videos"
 #linguas_en linguas_es linguas_pl linguas_de"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 RESTRICT="strip"
 
 DEPEND="=dev-util/xdelta-1*
@@ -91,7 +92,7 @@ pkg_setup() {
 
 src_unpack() {
 	cdrom_get_cds hiscore.tar.gz
-	use x86 && unpack_makeself ${P}-cdrom-x86.run
+	(use x86 || use amd64) && unpack_makeself ${P}-cdrom-x86.run
 	use ppc && unpack_makeself ${P}-ppc.run
 
 #	for i in ${LINGUAS}
@@ -117,7 +118,7 @@ src_install() {
 
 	if use nocd
 	then
-		doins -r "${CDROM_ROOT}"/{data,maps,mp3} || die "copying data"
+		doins -r "${CDROM_ROOT}"/{data,maps,mp3}
 	else
 		if use maps
 		then
@@ -199,7 +200,6 @@ src_install() {
 	cp "${FILESDIR}"/heroes3-wrapper.sh "${T}"/heroes3 || die
 	sed -i -e "s:GAMES_PREFIX_OPT:${GAMES_PREFIX_OPT}:" "${T}"/heroes3 || die
 	dogamesbin "${T}"/heroes3
-
 }
 
 pkg_postinst() {
