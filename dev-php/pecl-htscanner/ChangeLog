@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/pecl-htscanner
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-htscanner/ChangeLog,v 1.7 2014/10/09 20:49:52 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/pecl-htscanner/ChangeLog,v 1.8 2015/04/29 01:07:56 grknight Exp $
+
+*pecl-htscanner-1.0.1-r2 (29 Apr 2015)
+
+  29 Apr 2015; Brian Evans <grknight@gentoo.org>
+  +pecl-htscanner-1.0.1-r2.ebuild, -pecl-htscanner-1.0.1-r1.ebuild:
+  Revbump to make dependencies more specific and silence repoman
 
 *pecl-htscanner-1.0.1-r1 (30 Sep 2014)
 
