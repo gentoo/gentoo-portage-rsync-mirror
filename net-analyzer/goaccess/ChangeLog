@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/goaccess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.8 2015/04/07 06:47:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/goaccess/ChangeLog,v 1.9 2015/04/29 22:47:56 idella4 Exp $
+
+*goaccess-0.9 (29 Apr 2015)
+
+  29 Apr 2015; Ian Delaney <idella4@gentoo.org> +goaccess-0.9.ebuild,
+  metadata.xml:
+  bump; adjust metadata.xml to accommodate changed flag, ebuild supplied by
+  proxy maintainer in bug #530112
 
 *goaccess-0.8.5 (07 Apr 2015)
 
