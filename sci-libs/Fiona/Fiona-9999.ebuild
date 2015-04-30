@@ -1,33 +1,44 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/Fiona-9999.ebuild,v 1.5 2015/04/03 12:41:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/Fiona-9999.ebuild,v 1.6 2015/04/30 15:13:16 slis Exp $
 
 EAPI="5"
+PYTHON_COMPAT=( python{2_6,2_7,3_3,3_4} )
 
-PYTHON_COMPAT=( python2_7 python3_{3,4} )
+inherit distutils-r1
 
-inherit distutils-r1 git-r3
-
-DESCRIPTION="OGR's neat, nimble, no-nonsense API"
+DESCRIPTION="Fiona is OGR's neat, nimble, no-nonsense API"
 HOMEPAGE="https://pypi.python.org/pypi/Fiona"
-SRC_URI=""
-EGIT_REPO_URI="http://github.com/Toblerity/${PN}.git"
+
+if [[ ${PV} == "9999" ]] ; then
+	inherit git-r3
+	SRC_URI=""
+	EGIT_REPO_URI="http://github.com/Toblerity/${PN}.git"
+else
+	SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS=""
 IUSE="test"
 
-RDEPEND="
-	dev-python/click[${PYTHON_USEDEP}]
-	>=sci-libs/gdal-1.8[${PYTHON_USEDEP}]"
+RDEPEND=">=sci-libs/gdal-1.8
+	dev-python/click"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]
-	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
-		dev-python/pytest[${PYTHON_USEDEP}]
-		)"
+	test? ( dev-python/nose )
+	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
+	${PYTHON_DEPS}"
+
+src_prepare() {
+	epatch "${FILESDIR}/scriptname.patch"
+}
+
+pkg_postinst() {
+	einfo "Fiona script is installed as /usr/bin/Fiona"
+}
 
 python_test() {
 	esetup.py test
