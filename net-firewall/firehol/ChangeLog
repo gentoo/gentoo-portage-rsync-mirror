@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.56 2015/04/14 15:19:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.57 2015/04/30 18:12:41 alonbl Exp $
+
+  30 Apr 2015; Alon Bar-Lev <alonbl@gentoo.org> firehol-2.0.2.ebuild:
+  Override ip6tables at configure as it has no effect, bug#547188
 
 *firehol-2.0.2 (14 Apr 2015)
 

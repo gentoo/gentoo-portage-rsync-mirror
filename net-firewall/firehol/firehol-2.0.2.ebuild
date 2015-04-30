@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-2.0.2.ebuild,v 1.1 2015/04/14 15:19:30 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-2.0.2.ebuild,v 1.2 2015/04/30 18:12:41 alonbl Exp $
 
 EAPI=5
 inherit eutils linux-info
@@ -14,10 +14,11 @@ SLOT="0"
 IUSE="doc"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 
-DEPEND="sys-apps/iproute2"
 RDEPEND="net-firewall/iptables
 	sys-apps/iproute2[-minimal]
-	virtual/modutils"
+	virtual/modutils
+	app-arch/gzip"
+DEPEND="${RDEPEND}"
 
 pkg_setup() {
 	local KCONFIG_OPTS="~NF_CONNTRACK_IPV4 ~NF_CONNTRACK_MARK ~NF_NAT ~NF_NAT_FTP ~NF_NAT_IRC \
@@ -39,11 +40,15 @@ src_prepare() {
 }
 
 src_configure() {
+	# removing IP6TABLES_CMD has no effect and enable build
+	# without ipv6 available
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-autosave="${EPREFIX}/var/lib/iptables/rules-save" \
 		--with-autosave6="${EPREFIX}/var/lib/ip6tables/rules-save" \
-		$(use_enable doc)
+		$(use_enable doc) \
+		IP6TABLES_CMD=/bin/false \
+		IP6TABLES_SAVE_CMD=/bin/false
 }
 
 src_install() {

@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install prepare setup
-DEPEND=sys-apps/iproute2
+DEPEND=net-firewall/iptables sys-apps/iproute2[-minimal] virtual/modutils app-arch/gzip
 DESCRIPTION=iptables firewall generator
 EAPI=5
 HOMEPAGE=http://firehol.sourceforge.net/
 IUSE=doc
 KEYWORDS=~amd64 ~ppc ~sparc ~x86
 LICENSE=GPL-2
-RDEPEND=net-firewall/iptables sys-apps/iproute2[-minimal] virtual/modutils
+RDEPEND=net-firewall/iptables sys-apps/iproute2[-minimal] virtual/modutils app-arch/gzip
 SLOT=0
 SRC_URI=http://firehol.org/download/releases/v2.0.2/firehol-2.0.2.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=ca4392eda999dca05d00f3b4b852b9da
+_md5_=763f3601d93a6b9578a374e70fed504a
