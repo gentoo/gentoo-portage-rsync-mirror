@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keybase/keybase-0.7.8.ebuild,v 1.1 2015/04/29 22:56:26 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keybase/keybase-0.7.8.ebuild,v 1.2 2015/04/30 03:16:31 nicolasbock Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/keybase/node-client/archive/v${PV}.tar.gz -> ${P}.ta
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
@@ -25,6 +25,7 @@ src_unpack() {
 }
 
 src_install() {
+	dodoc CHANGELOG.md README.md SIGNED.md
 	insinto "/opt/${PN}"
 	doins -r package.json bin certs json lib node_modules sql
 	dosym "${D}/opt/${PN}/bin/main.js" "${ROOT}/usr/bin/keybase"
