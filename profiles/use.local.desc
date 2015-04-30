@@ -4927,6 +4927,7 @@ net-firewall/fwknop:extras - Install example apparmor policy
 net-firewall/fwknop:gdbm - Replace file digest-cache with gdbm
 net-firewall/fwknop:gpg - Enable GPG support via app-crypt/gpgme
 net-firewall/fwknop:server - Build fwknopd server
+net-firewall/fwknop:udp-server - Build fwknopd with UDP server mode only
 net-firewall/ipsec-tools:hybrid - Makes available both mode-cfg and xauth support
 net-firewall/ipsec-tools:idea - Enable support for the IDEA algorithm
 net-firewall/ipsec-tools:nat - Enable NAT-Traversal

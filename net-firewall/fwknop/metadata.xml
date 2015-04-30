@@ -12,5 +12,6 @@
 		<flag name="gpg">Enable GPG support via <pkg>app-crypt/gpgme</pkg></flag>
 		<flag name="server">Build fwknopd server</flag>
 		<flag name="extras">Install example apparmor policy</flag>
+		<flag name="udp-server">Build fwknopd with UDP server mode only</flag>
 	</use>
 </pkgmetadata>

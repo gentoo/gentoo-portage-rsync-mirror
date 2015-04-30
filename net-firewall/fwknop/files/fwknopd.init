@@ -1,15 +1,15 @@
 #!/sbin/runscript
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/files/fwknopd.init,v 1.1 2014/04/27 10:50:49 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/files/fwknopd.init,v 1.2 2015/04/29 23:18:49 idella4 Exp $
 
 extra_commands="checkconfig"
 extra_started_commands="reload"
 
-FWKNOPD_CONFDIR="${FWKNOPD_CONFDIR:-/etc/fwknop}"
-FWKNOPD_CONFIG="${FWKNOPD_CONFDIR}/fwknopd.conf"
-FWKNOPD_PIDFILE="${FWKNOPD_PIDFILE:-/run/fwknop/${SVCNAME}.pid}"
-FWKNOPD_BINARY="${FWKNOPD_BINARY:-/usr/sbin/fwknopd}"
+: ${FWKNOPD_CONFDIR:=/etc/fwknop}
+: ${FWKNOPD_CONFIG:=${FWKNOPD_CONFDIR}/fwknopd.conf}
+: ${FWKNOPD_PIDFILE:=/run/fwknop/${SVCNAME}.pid}
+: ${FWKNOPD_BINARY:=/usr/sbin/fwknopd}
 
 depend() {
 	need iptables
@@ -17,47 +17,52 @@ depend() {
 	if [ "${rc_need+set}" = "set" ]; then
 		: # Do nothing, the user has explicitly set rc_need
 	else
-		warn_addr=''
+		warn_intf=''
 		for x in $(awk '/^PCAP_INTF/{ sub(";$", ""); print $2 }' "${FWKNOPD_CONFIG}" 2>/dev/null); do
-			warn_addr="${warn_addr} $x"
+			warn_intf="${warn_intf} $x"
 		done
 		unset x
-		if [ "${warn_addr:+set}" = "set" ]; then
+		if [ "${warn_intf:+set}" = "set" ]; then
 			need net
 			ewarn "You are binding an interface in PCAP_INTF statement in your fwknopd.conf!"
-			ewarn "You must add rc_need=\"net.FOO\" to your /etc/conf.d/${SVCNAME}"
+			ewarn "You must add rc_need=\"net.FOO\" to your /etc/conf.d/${SVCNAME},"
 			ewarn "where FOO is the following interface(s):"
-			ewarn "${warn_addr}"
+			ewarn "${warn_intf}"
 		else
 			# if PCAP_INTF and PCAP_FILE are not set, then fwknopd uses eth0
-			if [ -z "$(grep "^PCAP_FILE" "${FWKNOPD_CONFIG}")" ]; then
+			if [ -z "$(grep \"^PCAP_FILE\" ${FWKNOPD_CONFIG})" ]; then
 				need net
-				ewarn "You are not binding any interface in PCAP_INTF statement in your fwknopd.conf,"
-				ewarn "neither you providing PCAP_FILE option. Therefore fwknopd will listen on eth0."
-				ewarn "You must add rc_need=\"net.eth0\" to your /etc/conf.d/${SVCNAME}"
+				ewarn "You are not binding any interface in PCAP_INTF statement in your 
+fwknopd.conf,"
+				ewarn "neither you are providing PCAP_FILE option. Thus fwknopd will listen on 
+eth0."
+				ewarn "You must add rc_need=\"net.eth0\" to your /etc/conf.d/${SVCNAME}."
 			fi
 		fi
-		unset warn_addr
+		unset warn_intf
 	fi
 }
 
 checkconfig() {
 	if [ ! -e "${FWKNOPD_CONFDIR}"/fwknopd.conf ]; then
 		eerror "You need ${FWKNOPD_CONFDIR}/fwknopd.conf file to run fwknopd"
-		eerror "Example configuration located at /etc/fwknop/fwknopd.conf.example"
+		eerror "Example is located at /etc/fwknop/fwknopd.conf.example"
 		return 1
 	fi
 
 	if [ ! -e "${FWKNOPD_CONFDIR}"/access.conf ]; then
 		eerror "You need ${FWKNOPD_CONFDIR}/access.conf file to run fwknopd"
-		eerror "Example configuration located at /etc/fwknop/access.conf.example"
+		eerror "Example is located at /etc/fwknop/access.conf.example"
 		return 1
 	fi
 
-	[ "${FWKNOPD_PIDFILE}" != "/run/fwknop/fwknopd.pid" ] \
+	[ "${FWKNOPD_PIDFILE}" != "/run/fwknop/${SVCNAME}.pid" ] \
 		&& FWKNOPD_OPTS="${FWKNOPD_OPTS} --pid-file=${FWKNOPD_PIDFILE}"
+
 	[ "${FWKNOPD_CONFDIR}" != "/etc/fwknop" ] \
-		&& FWKNOPD_OPTS="${FWKNOPD_OPTS} -c ${FWKNOPD_CONFDIR}/fwknopd.conf -a ${FWKNOPD_CONFDIR}/access.conf"
+		&& FWKNOPD_OPTS="${FWKNOPD_OPTS} \
+			--config=${FWKNOPD_CONFDIR}/fwknopd.conf \
+			--access-file=${FWKNOPD_CONFDIR}/access.conf"
 
 	return 0
 }
@@ -68,7 +73,7 @@ start() {
 	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --start \
 		--exec "${FWKNOPD_BINARY}" --pidfile="${FWKNOPD_PIDFILE}" \
-		-- "${FWKNOPD_OPTS}"
+		-- ${FWKNOPD_OPTS}
 	eend $?
 }
 
@@ -91,3 +96,4 @@ reload() {
 		--exec "${FWKNOPD_BINARY}" --pidfile "${FWKNOPD_PIDFILE}"
 	eend $?
 }
+

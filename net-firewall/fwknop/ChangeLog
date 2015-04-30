@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/fwknop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/ChangeLog,v 1.3 2014/05/28 16:19:46 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/ChangeLog,v 1.4 2015/04/29 23:18:49 idella4 Exp $
+
+*fwknop-2.6.6 (29 Apr 2015)
+
+  29 Apr 2015; Ian Delaney <idella4@gentoo.org> +fwknop-2.6.6.ebuild,
+  -files/fwknop-2.6.0-remove-extra-run-from-paths.patch, -fwknop-2.6.2.ebuild,
+  files/fwknopd.confd, files/fwknopd.init, metadata.xml:
+  bump; ebuild supplied by Coacher in bug #519716, newinitd and newconfd files
+  updated, removed prior version to avoid any mismatch, closes bug #519716
 
   28 May 2014; Sven Vermeulen <swift@gentoo.org> -fwknop-2.6.1.ebuild:
   Remove 2.6.1 ebuild (double free bug). Thanks to Coacher (itumaykin@)
