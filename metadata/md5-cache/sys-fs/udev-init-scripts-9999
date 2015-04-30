@@ -4,8 +4,8 @@ DESCRIPTION=udev startup scripts for openrc
 EAPI=5
 HOMEPAGE=http://www.gentoo.org
 LICENSE=GPL-2
-RDEPEND=>=virtual/udev-180 !<sys-fs/udev-217 !<sys-apps/openrc-0.14
+RDEPEND=>=virtual/udev-180 !<sys-apps/openrc-0.14
 RESTRICT=test
 SLOT=0
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=8667300be10ebe45209d18f830fcd224
+_md5_=166aee9c9fb525cf417efa6a967f7a86
