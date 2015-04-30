@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Apache-Test
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.101 2014/11/19 19:31:11 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-Test/ChangeLog,v 1.102 2015/04/30 20:32:47 dilfridge Exp $
+
+*Apache-Test-1.390.0 (30 Apr 2015)
+
+  30 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Apache-Test-1.390.0.ebuild:
+  Version bump
 
   19 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   Apache-Test-1.380.0-r1.ebuild:
