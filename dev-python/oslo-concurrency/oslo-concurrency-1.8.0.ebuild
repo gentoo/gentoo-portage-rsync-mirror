@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-concurrency/oslo-concurrency-1.8.0.ebuild,v 1.1 2015/04/30 16:48:59 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-concurrency/oslo-concurrency-1.8.0.ebuild,v 1.2 2015/04/30 17:16:11 prometheanfire Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
 inherit distutils-r1
 
@@ -25,7 +25,7 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		<dev-python/hacking-0.11[${PYTHON_USEDEP}]
 		>=dev-python/oslotest-1.2.0[${PYTHON_USEDEP}]
 		>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
-		>=dev-python/futures-2.1.6[${PYTHON_USEDEP}]
+		virtual/python-futures[${PYTHON_USEDEP}]
 		>=dev-python/oslo-sphinx-2.2.0[${PYTHON_USEDEP}]
 		>=dev-python/sphinx-1.1.2[${PYTHON_USEDEP}]
 		!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
@@ -45,7 +45,9 @@ RDEPEND="
 	!~dev-python/retrying-1.3.0[${PYTHON_USEDEP}]
 "
 
-# This time half the doc files are missing; Do you want them?
+python_prepare() {
+	sed -i '/futures/d' test-requirements.txt || die
+}
 
 python_test() {
 	nosetests tests/ || die "test failed under ${EPYTHON}"
