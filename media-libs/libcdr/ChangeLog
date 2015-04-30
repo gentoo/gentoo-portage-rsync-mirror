@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libcdr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.40 2015/02/15 14:59:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdr/ChangeLog,v 1.41 2015/04/30 05:57:28 jer Exp $
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> libcdr-0.1.1.ebuild:
+  Marked ~ppc64 (bug #538520).
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libcdr-0.1.1.ebuild:
   Stable for x86, wrt bug #534684

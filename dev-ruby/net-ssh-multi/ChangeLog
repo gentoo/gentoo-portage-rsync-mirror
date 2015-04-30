@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/net-ssh-multi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.18 2015/04/12 06:52:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/net-ssh-multi/ChangeLog,v 1.19 2015/04/30 05:37:49 graaff Exp $
+
+  30 Apr 2015; Hans de Graaff <graaff@gentoo.org> net-ssh-multi-1.2.1.ebuild:
+  Add ruby22.
 
 *net-ssh-multi-1.2.1 (12 Apr 2015)
 

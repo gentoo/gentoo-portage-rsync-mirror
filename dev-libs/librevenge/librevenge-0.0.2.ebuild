@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-0.0.2.ebuild,v 1.3 2015/02/15 14:59:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librevenge/librevenge-0.0.2.ebuild,v 1.4 2015/04/30 05:55:28 jer Exp $
 
 EAPI="5"
 
@@ -11,10 +11,10 @@ HOMEPAGE="http://sf.net/p/libwpd/librevenge"
 if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.code.sf.net/p/libwpd/librevenge"
 	inherit git-r3 autotools
-	KEYWORDS=""
+	KEYWORDS="~ppc64"
 else
 	SRC_URI="http://sf.net/projects/libwpd/files/${PN}/${P}/${P}.tar.xz"
-	KEYWORDS="~alpha amd64 ~arm ~hppa ~mips x86 ~x86-fbsd"
+	KEYWORDS="~alpha amd64 ~arm ~hppa ~mips ~ppc64 x86 ~x86-fbsd"
 fi
 
 LICENSE="|| ( MPL-2.0 LGPL-2.1 )"

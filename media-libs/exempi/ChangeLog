@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.44 2015/04/28 09:50:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.45 2015/04/30 05:42:50 jer Exp $
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> exempi-2.2.1.ebuild:
+  Stable for PPC64 (bug #545852).
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> exempi-2.2.1.ebuild:
   Stable for sparc, wrt bug #545852

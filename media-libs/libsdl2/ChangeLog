@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsdl2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.33 2015/04/03 05:56:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl2/ChangeLog,v 1.34 2015/04/30 05:48:53 jer Exp $
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> libsdl2-2.0.3-r200.ebuild:
+  Marked ~ppc64 (bug #508226).
 
   03 Apr 2015; Markus Meier <maekke@gentoo.org> libsdl2-2.0.3-r200.ebuild:
   arm stable, bug #538720
