@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.395 2015/04/04 22:34:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.397 2015/04/30 09:05:02 vapier Exp $
+
+  30 Apr 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add CPE info via Chromium OS.
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> busybox-1.23.1-r1.ebuild:
   Mark m68k/s390/sh stable.

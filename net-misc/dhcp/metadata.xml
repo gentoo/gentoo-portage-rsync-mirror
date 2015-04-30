@@ -8,4 +8,7 @@
 		<flag name='client'>Install the dhclient program</flag>
 		<flag name='server'>Install the dhcpd and dhcrelay programs</flag>
 	</use>
+	<upstream>
+		<remote-id type="cpe">cpe:/a:isc:dhcp</remote-id>
+	</upstream>
 </pkgmetadata>

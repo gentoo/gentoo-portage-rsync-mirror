@@ -22,4 +22,7 @@ under a MIT-style license.
     <flag name="multicall">Build all the programs as one little binary (to save space)</flag>
     <flag name="shadow">Enable shadow password support</flag>
   </use>
+<upstream>
+  <remote-id type="cpe">cpe:/a:matt_johnston:dropbear_ssh_server</remote-id>
+</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dropbear
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.127 2015/04/28 09:50:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/ChangeLog,v 1.128 2015/04/30 09:01:20 vapier Exp $
+
+  30 Apr 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Add CPE info via Chromium OS.
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> dropbear-2014.66.ebuild:
   Stable for sparc, wrt bug #535598
