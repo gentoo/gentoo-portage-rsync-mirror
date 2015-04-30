@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.72-r2.ebuild,v 1.1 2015/04/29 17:26:40 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.72-r2.ebuild,v 1.2 2015/04/30 08:48:34 vapier Exp $
 
 EAPI=5
 
 inherit eutils toolchain-funcs flag-o-matic user systemd
 
 DESCRIPTION="Small forwarding DNS server"
-HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/"
+HOMEPAGE="http://www.thekelleys.org.uk/dnsmasq/doc.html"
 SRC_URI="http://www.thekelleys.org.uk/dnsmasq/${P}.tar.xz"
 
 LICENSE="|| ( GPL-2 GPL-3 )"
