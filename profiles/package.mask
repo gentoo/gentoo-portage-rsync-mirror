@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16512 2015/04/30 14:13:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16513 2015/04/30 20:05:30 grknight Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -35,6 +35,7 @@
 # security bug 526542.  Masked for removal in 30 days
 # Please update your code to the latest version
 <dev-php/smarty-2.6.29
+=dev-php/PEAR-PhpDocumentor-1.4.4
 
 # Ryan Hill <rhill@gentoo.org> (28 Apr 2015)
 # Moving to /lib/gentoo/functions.sh broke the eclass

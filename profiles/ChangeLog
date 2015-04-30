@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9966 2015/04/30 14:13:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9967 2015/04/30 20:05:30 grknight Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  30 Apr 2015; <grknight@gentoo.org> package.mask:
+  Adjust package mask for smarty to include PEAR-PhpDocumentor-1.4.4 while work
+  is done on that package
 
   30 Apr 2015; <grknight@gentoo.org> package.mask:
   Mask <dev-php/smarty-2.6.29 as it is unknown if vulnerable to security bug

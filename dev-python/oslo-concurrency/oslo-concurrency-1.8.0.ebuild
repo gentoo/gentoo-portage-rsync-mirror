@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-concurrency/oslo-concurrency-1.8.0.ebuild,v 1.2 2015/04/30 17:16:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-concurrency/oslo-concurrency-1.8.0.ebuild,v 1.3 2015/04/30 20:28:16 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -45,8 +45,9 @@ RDEPEND="
 	!~dev-python/retrying-1.3.0[${PYTHON_USEDEP}]
 "
 
-python_prepare() {
+python_prepare_all() {
 	sed -i '/futures/d' test-requirements.txt || die
+	distutils-r1_python_prepare_all
 }
 
 python_test() {

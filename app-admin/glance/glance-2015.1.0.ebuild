@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2015.1.0.ebuild,v 1.1 2015/04/30 19:00:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2015.1.0.ebuild,v 1.2 2015/04/30 20:19:50 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 git-2 user
+inherit distutils-r1 user
 
 DESCRIPTION="Provides services for discovering, registering, and retrieving
 virtual machine images"
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="doc mysql postgres +sqlite +swift test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
