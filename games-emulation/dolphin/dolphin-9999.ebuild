@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.24 2015/04/26 19:36:46 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.25 2015/04/30 22:42:32 twitch153 Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ DEPEND="${RDEPEND}
 	media-libs/freetype
 	media-libs/libsoundtouch
 	>=sys-devel/gcc-4.6.0
-	x11-libs/wxGTK:${WX_GTK_VER}[webkit]
+	x11-libs/wxGTK:${WX_GTK_VER}
 	"
 
 pkg_pretend() {
