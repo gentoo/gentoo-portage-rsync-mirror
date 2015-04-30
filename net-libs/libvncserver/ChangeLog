@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.96 2015/04/26 17:26:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.97 2015/04/30 10:56:26 ago Exp $
+
+  30 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libvncserver-0.9.10-r1.ebuild:
+  Stable for amd64, wrt bug #515268
 
   26 Apr 2015; Ulrich Müller <ulm@gentoo.org> libvncserver-0.9.10-r1.ebuild:
   Straight to stable on alpha, hppa, ia64, ppc, and ppc64. The "vaapi" flag is

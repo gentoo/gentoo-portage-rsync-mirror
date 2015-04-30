@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/smarty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.138 2015/01/13 02:03:51 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.140 2015/04/30 10:58:05 ago Exp $
+
+  30 Apr 2015; Agostino Sarubbo <ago@gentoo.org> smarty-3.1.21-r1.ebuild:
+  Stable for alpha/hppa/ia64/ppc/ppc64/sparc/x86, wrt bug #526542
+
+  30 Apr 2015; Agostino Sarubbo <ago@gentoo.org> smarty-3.1.21-r1.ebuild:
+  Stable for amd64, wrt bug #526542
 
 *smarty-3.1.21-r1 (13 Jan 2015)
 

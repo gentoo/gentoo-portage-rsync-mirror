@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rabbitmq-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.49 2015/04/08 18:04:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/ChangeLog,v 1.50 2015/04/30 10:38:43 ultrabug Exp $
+
+*rabbitmq-server-3.5.1 (30 Apr 2015)
+
+  30 Apr 2015; Ultrabug <ultrabug@gentoo.org> -rabbitmq-server-3.1.4.ebuild,
+  -rabbitmq-server-3.2.3.ebuild, rabbitmq-server-3.2.4.ebuild,
+  rabbitmq-server-3.3.4.ebuild, +rabbitmq-server-3.5.1.ebuild:
+  fix doc perms #546812 thx to Coacher, version bump, drop old
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> rabbitmq-server-3.1.4.ebuild,
   rabbitmq-server-3.2.3.ebuild, rabbitmq-server-3.2.4.ebuild:

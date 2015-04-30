@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-3.1.21-r1.ebuild,v 1.1 2015/01/13 02:03:51 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-3.1.21-r1.ebuild,v 1.3 2015/04/30 10:58:05 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.smarty.net/files/${MY_P}.tar.gz
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86"
 IUSE="doc"
 
 DEPEND="doc? ( app-arch/unzip )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.2.4.ebuild,v 1.6 2015/04/08 18:04:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.2.4.ebuild,v 1.7 2015/04/30 10:38:43 ultrabug Exp $
 
 EAPI="5"
 
@@ -57,14 +57,6 @@ src_install() {
 		newsbin "${FILESDIR}"/rabbitmq-script-wrapper ${script}
 	done
 
-	# create the directory where our log file will go.
-	diropts -m 0770 -o rabbitmq -g rabbitmq
-	keepdir /var/log/rabbitmq /etc/rabbitmq
-
-	# create the mnesia directory
-	diropts -m 0770 -o rabbitmq -g rabbitmq
-	dodir /var/lib/rabbitmq{,/mnesia}
-
 	# install the init script
 	newinitd "${FILESDIR}"/rabbitmq-server.init-r3 rabbitmq
 	systemd_dounit "${FILESDIR}/rabbitmq.service"
@@ -72,6 +64,14 @@ src_install() {
 	# install documentation
 	doman docs/*.[15]
 	dodoc README
+
+	# create the directory where our log file will go.
+	diropts -m 0770 -o rabbitmq -g rabbitmq
+	keepdir /var/log/rabbitmq /etc/rabbitmq
+
+	# create the mnesia directory
+	diropts -m 0770 -o rabbitmq -g rabbitmq
+	dodir /var/lib/rabbitmq{,/mnesia}
 }
 
 pkg_preinst() {

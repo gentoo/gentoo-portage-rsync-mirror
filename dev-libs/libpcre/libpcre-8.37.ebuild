@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.35-r1.ebuild,v 1.1 2014/09/04 06:49:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/libpcre-8.37.ebuild,v 1.1 2015/04/30 11:00:06 polynomial-c Exp $
 
 EAPI="4"
 
@@ -49,7 +49,6 @@ src_prepare() {
 		echo "Libs.private: @PTHREAD_CFLAGS@" >> ${pc} #454478
 	done
 	sed -i -e "s:-lpcre ::" libpcrecpp.pc.in || die
-	epatch "${FILESDIR}"/${P}-export-output.patch
 	elibtoolize
 }
 

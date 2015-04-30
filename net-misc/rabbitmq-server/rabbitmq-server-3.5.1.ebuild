@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.1.4.ebuild,v 1.6 2015/04/08 18:04:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rabbitmq-server/rabbitmq-server-3.5.1.ebuild,v 1.1 2015/04/30 10:38:43 ultrabug Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit eutils python-single-r1 systemd user
+inherit eutils python-any-r1 systemd user
 
 DESCRIPTION="RabbitMQ is a high-performance AMQP-compliant message broker written in Erlang"
 HOMEPAGE="http://www.rabbitmq.com/"
@@ -24,13 +24,13 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.5
 	app-text/xmlto
 	dev-libs/libxslt
-	dev-python/simplejson
+	$(python_gen_any_dep 'dev-python/simplejson[${PYTHON_USEDEP}]')
 "
 
 pkg_setup() {
 	enewgroup rabbitmq
 	enewuser rabbitmq -1 -1 /var/lib/rabbitmq rabbitmq
-	python-single-r1_pkg_setup
+	python-any-r1_pkg_setup
 }
 
 src_compile() {
@@ -44,7 +44,7 @@ src_install() {
 
 	einfo "Setting correct RABBITMQ_HOME in scripts"
 	sed -e "s:^RABBITMQ_HOME=.*:RABBITMQ_HOME=\"${targetdir}\":g" \
-		-i scripts/rabbitmq-env
+		-i scripts/rabbitmq-env || die
 
 	einfo "Installing Erlang modules to ${targetdir}"
 	insinto "${targetdir}"
@@ -57,14 +57,6 @@ src_install() {
 		newsbin "${FILESDIR}"/rabbitmq-script-wrapper ${script}
 	done
 
-	# create the directory where our log file will go.
-	diropts -m 0770 -o rabbitmq -g rabbitmq
-	keepdir /var/log/rabbitmq /etc/rabbitmq
-
-	# create the mnesia directory
-	diropts -m 0770 -o rabbitmq -g rabbitmq
-	dodir /var/lib/rabbitmq{,/mnesia}
-
 	# install the init script
 	newinitd "${FILESDIR}"/rabbitmq-server.init-r3 rabbitmq
 	systemd_dounit "${FILESDIR}/rabbitmq.service"
@@ -72,6 +64,14 @@ src_install() {
 	# install documentation
 	doman docs/*.[15]
 	dodoc README
+
+	# create the directory where our log file will go.
+	diropts -m 0770 -o rabbitmq -g rabbitmq
+	keepdir /var/log/rabbitmq /etc/rabbitmq
+
+	# create the mnesia directory
+	diropts -m 0770 -o rabbitmq -g rabbitmq
+	dodir /var/lib/rabbitmq{,/mnesia}
 }
 
 pkg_preinst() {
@@ -91,5 +91,11 @@ pkg_preinst() {
 		elog "Please read release notes before upgrading:"
 		elog
 		elog "http://www.rabbitmq.com/release-notes/README-3.0.0.txt"
+	fi
+	if has_version "<net-misc/rabbitmq-server-3.3.0"; then
+		elog
+		elog "This release changes the behaviour of the default guest user:"
+		elog
+		elog "http://www.rabbitmq.com/access-control.html"
 	fi
 }
