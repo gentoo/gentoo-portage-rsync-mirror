@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.171 2015/04/26 13:28:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.172 2015/04/30 04:39:34 jer Exp $
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> expat-2.1.0-r4.ebuild:
+  Stable for PPC64 (bug #545846).
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> expat-2.1.0-r4.ebuild:
   sparc stable wrt bug #545846

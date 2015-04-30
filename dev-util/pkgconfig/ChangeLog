@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.165 2015/04/21 18:41:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/ChangeLog,v 1.166 2015/04/30 04:41:02 jer Exp $
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> pkgconfig-0.28-r2.ebuild:
+  Stable for PPC64 (bug #545848).
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> pkgconfig-0.28-r2.ebuild:
   ppc stable wrt bug #545848
