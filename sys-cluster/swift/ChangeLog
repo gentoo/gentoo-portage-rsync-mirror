@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/swift
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.43 2015/04/28 20:33:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/ChangeLog,v 1.44 2015/04/30 19:40:22 prometheanfire Exp $
+
+*swift-2.3.0 (30 Apr 2015)
+
+  30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> +swift-2.3.0.ebuild:
+  more kilo
 
   28 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> -swift-9999.ebuild:
   removing swift based on git master (because keeping up to date on deps sucks)

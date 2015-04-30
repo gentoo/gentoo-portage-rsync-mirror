@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/liberasurecode
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liberasurecode/ChangeLog,v 1.1 2015/04/30 19:34:46 prometheanfire Exp $
+
+*liberasurecode-1.0.7 (30 Apr 2015)
+
+  30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +liberasurecode-1.0.7.ebuild, +metadata.xml:
+  adding for swift 1.3.0 pycelib
