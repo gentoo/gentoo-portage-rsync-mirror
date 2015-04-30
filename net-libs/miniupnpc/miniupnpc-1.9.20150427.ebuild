@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.9.20150424.ebuild,v 1.1 2015/04/28 17:25:56 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/miniupnpc/miniupnpc-1.9.20150427.ebuild,v 1.1 2015/04/30 13:34:36 maksbotan Exp $
 
 EAPI=5
 
@@ -8,10 +8,7 @@ inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="UPnP client library and a simple UPnP client"
 HOMEPAGE="http://miniupnp.free.fr/"
-#SRC_URI="http://miniupnp.free.fr/files/${P}.tar.gz"
-# https://github.com/miniupnp/miniupnp/issues/111
-MY_COMMIT="e501f5625dd171d0133fadd31ba1d3ce7cb5424f"
-SRC_URI="https://github.com/miniupnp/miniupnp/archive/${MY_COMMIT}.tar.gz -> ${P}.tar.gz"
+SRC_URI="http://miniupnp.free.fr/files/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0/12"
@@ -21,15 +18,16 @@ IUSE="ipv6 kernel_linux static-libs"
 RDEPEND=""
 DEPEND="kernel_linux? ( sys-apps/lsb-release sys-apps/which )"
 
-S="${WORKDIR}/miniupnp-${MY_COMMIT}/${PN}"
-
 src_prepare() {
 	epatch_user
+
+	# These bins are not installed, upnpc-static requires building static lib
+	sed -i -e '/EXECUTABLES =/s/ upnpc-static listdevices//' Makefile || die
 
 	if ! use static-libs; then
 		sed -i \
 			-e '/FILESTOINSTALL =/s/ $(LIBRARY)//' \
-			-e '/$(INSTALL) -m 644 $(LIBRARY) $(INSTALLDIRLIB)/d' \
+			-e '/$(INSTALL) -m 644 $(LIBRARY) $(DESTDIR)$(INSTALLDIRLIB)/d' \
 			Makefile || die
 	fi
 }
