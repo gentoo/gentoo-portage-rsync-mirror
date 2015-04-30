@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-2.1.0-r1.ebuild,v 1.1 2015/04/14 11:55:28 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/plowshare-2.1.0-r1.ebuild,v 1.2 2015/04/30 14:47:02 voyageur Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-fix_git_invocation.patch
 
 	# Fix doc install path
-	sed -i -e "/^DOCDIR/s|plowshare4|${P}|" Makefile || die "sed failed"
+	sed -i -e "/^DOCDIR/s|plowshare|${PF}|" Makefile || die "sed failed"
 
 	if ! use bash-completion
 	then

@@ -1,6 +1,11 @@
 # ChangeLog for virtual/udev
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.91 2014/08/03 12:30:42 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/udev/ChangeLog,v 1.92 2015/04/30 14:51:11 williamh Exp $
+
+*udev-217 (30 Apr 2015)
+
+  30 Apr 2015; William Hubbs <williamh@gentoo.org> +udev-217.ebuild:
+  Bump the udev virtual for #547916
 
   03 Aug 2014; Samuli Suominen <ssuominen@gentoo.org> udev-215.ebuild:
   Help Portage make the right decision by introducing USE="systemd" wrt #515230.
