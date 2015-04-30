@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/semantic_version
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/semantic_version/ChangeLog,v 1.1 2015/04/30 18:58:56 prometheanfire Exp $
+
+*semantic_version-2.4.1 (30 Apr 2015)
+
+  30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> +metadata.xml,
+  +semantic_version-2.4.1.ebuild:
+  for kilo
