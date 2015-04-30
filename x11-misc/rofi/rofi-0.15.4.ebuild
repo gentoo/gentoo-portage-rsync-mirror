@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/rofi-0.14.12.ebuild,v 1.2 2014/12/19 13:54:49 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/rofi-0.15.4.ebuild,v 1.1 2015/04/30 16:03:51 jer Exp $
 
 EAPI=5
-inherit autotools eutils
+inherit autotools eutils toolchain-funcs
 
 DESCRIPTION="A window switcher, run dialog and dmenu replacement"
 HOMEPAGE="https://davedavenport.github.io/rofi/"
@@ -32,13 +32,14 @@ DEPEND="
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-0.14.9-optional-i3.patch \
-		"${FILESDIR}"/${PN}-0.14.12-run_test_sh.patch
+		"${FILESDIR}"/${PN}-0.15.4-Werror.patch
+
 	eautoreconf
 }
 
 src_configure() {
-	econf $(use_with i3)
+	tc-export CC
+	econf $(usex i3 '' --disable-i3support)
 }
 
 src_test() {

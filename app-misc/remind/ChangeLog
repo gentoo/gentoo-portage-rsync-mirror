@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/remind
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.14 2014/07/19 14:20:29 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/remind/ChangeLog,v 1.15 2015/04/30 16:12:21 jer Exp $
+
+*remind-03.01.14 (30 Apr 2015)
+
+  30 Apr 2015; Jeroen Roovers <jer@gentoo.org> +remind-03.01.14.ebuild:
+  Version bump.
 
   19 Jul 2014; Jeroen Roovers <jer@gentoo.org> -remind-03.01.12.ebuild,
   -files/03.01.12-test.patch:
