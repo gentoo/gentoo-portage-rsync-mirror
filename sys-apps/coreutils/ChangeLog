@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.393 2015/03/21 12:43:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.394 2015/04/30 07:03:46 vapier Exp $
+
+  30 Apr 2015; Mike Frysinger <vapier@gentoo.org> coreutils-8.23.ebuild:
+  Add fix from upstream for building w/clang found via Chromium OS.
 
   21 Mar 2015; Michał Górny <mgorny@gentoo.org> coreutils-8.23.ebuild:
   Keyword x86-fbsd, bug #507536 by nigoro.
