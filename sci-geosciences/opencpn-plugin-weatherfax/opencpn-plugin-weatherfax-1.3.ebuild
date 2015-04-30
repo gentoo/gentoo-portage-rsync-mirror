@@ -1,10 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn-plugin-weatherfax/opencpn-plugin-weatherfax-1.3.ebuild,v 1.1 2015/01/21 23:30:27 mschiff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/opencpn-plugin-weatherfax/opencpn-plugin-weatherfax-1.3.ebuild,v 1.2 2015/04/30 16:44:27 mschiff Exp $
 
 EAPI=5
 
-inherit cmake-utils
+WX_GTK_VER="2.8"
+inherit cmake-utils wxwidgets
 
 MY_PN="weatherfax_pi"
 

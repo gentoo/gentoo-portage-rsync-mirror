@@ -1,0 +1,10 @@
+# ChangeLog for dev-db/lmdb++
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/lmdb++/ChangeLog,v 1.1 2015/04/30 16:47:51 nicolasbock Exp $
+
+*lmdb++-0.9.14.0 (30 Apr 2015)
+
+  30 Apr 2015; Nicolas Bock <nicolasbock@gentoo.org> +lmdb++-0.9.14.0.ebuild,
+  +metadata.xml:
+  dev-db/lmdb++: New ebuild (Bug 548202)  Thanks to Arto Bendiken
+  <arto@bendiken.net> for the initial ebuild.

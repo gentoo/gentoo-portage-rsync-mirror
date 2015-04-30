@@ -1,6 +1,12 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.953 2015/04/24 05:48:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.954 2015/04/30 16:44:32 idella4 Exp $
+
+  30 Apr 2015; Ian Delaney <idella4@gentoo.org> +files/qt4-select.patch,
+  vlc-2.2.0.ebuild, vlc-2.2.1.ebuild:
+  add patch to address selection of qt4 vs qt5, patch by Karol Herbst, comment
+  19, bug #541678, tested and endorsed by users and proxy maintainer, limited to
+  versioned ebuilds for now, finally closes said bug
 
   24 Apr 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.0.ebuild,
   vlc-2.2.1.ebuild, vlc-2.2.9999.ebuild, vlc-9999.ebuild:

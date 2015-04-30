@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.10 2015/04/24 05:48:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.11 2015/04/30 16:44:32 idella4 Exp $
 
 EAPI="5"
 
@@ -260,6 +260,9 @@ src_prepare() {
 
 	# Bug #541928
 	epatch "${FILESDIR}"/${P}-fix-xcb.patch
+
+	# Bug #541678
+	epatch "${FILESDIR}"/qt4-select.patch
 
 	# Don't use --started-from-file when not using dbus.
 	if ! use dbus ; then
