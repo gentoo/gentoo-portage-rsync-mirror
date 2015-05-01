@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/R
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.244 2015/04/21 21:17:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.245 2015/05/01 13:35:41 gienah Exp $
+
+*R-3.2.0-r1 (01 May 2015)
+
+  01 May 2015; Mark Wright <gienah@gentoo.org> +R-3.2.0-r1.ebuild,
+  +files/R-3.2.0-omitted-extern-R_running_as_main_program.patch,
+  -R-3.2.0.ebuild:
+  Fix bug 547478 upstream R bug
+  https://bugs.r-project.org/bugzilla3/show_bug.cgi?id=15899 thanks to Kobboi
+  for reporting. Revbump R-3.2.0 to R-3.2.0-r1 dropping the broken R-3.2.0 to
+  force the upgrade of R.
 
 *R-3.2.0 (21 Apr 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for www-client/epiphany
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.313 2014/12/23 23:27:53 eva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/ChangeLog,v 1.314 2015/05/01 13:49:42 eva Exp $
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> epiphany-3.14.2.ebuild:
+  Add missing gnome-common dependency, bug #547902.
 
 *epiphany-3.14.2 (23 Dec 2014)
 

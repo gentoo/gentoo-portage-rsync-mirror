@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.2.0.ebuild,v 1.1 2015/04/21 21:17:14 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-3.2.0-r1.ebuild,v 1.1 2015/05/01 13:35:41 gienah Exp $
 
 EAPI=5
 
@@ -74,7 +74,8 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-2.11.1-parallel.patch \
 		"${FILESDIR}"/${PN}-2.13.1-zlib_header_fix.patch \
-		"${FILESDIR}"/${PN}-3.0.0-rmath-shared.patch
+		"${FILESDIR}"/${PN}-3.0.0-rmath-shared.patch \
+		"${FILESDIR}"/${PN}-3.2.0-omitted-extern-R_running_as_main_program.patch
 
 	# fix packages.html for doc (gentoo bug #205103)
 	sed -i \
