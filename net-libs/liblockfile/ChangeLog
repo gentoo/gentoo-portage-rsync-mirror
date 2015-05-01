@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/liblockfile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.77 2014/08/01 18:27:25 tgall Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/ChangeLog,v 1.78 2015/05/01 03:14:45 mrueg Exp $
+
+  01 May 2015; Manuel Rüger <mrueg@gentoo.org> -files/1.08-stale_lock.patch,
+  -liblockfile-1.08.ebuild:
+  Remove old.
 
   01 Aug 2014;  <tgall@gentoo.org> liblockfile-1.09.ebuild:
   arm64, initial support

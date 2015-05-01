@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openpgm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.28 2015/04/08 18:04:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openpgm/ChangeLog,v 1.29 2015/05/01 03:07:00 mrueg Exp $
+
+  01 May 2015; Manuel Rüger <mrueg@gentoo.org> -openpgm-5.1.116.ebuild:
+  Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> openpgm-5.2.122.ebuild:
   Drop old Python implementations

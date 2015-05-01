@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libetpan
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.104 2014/08/10 20:49:13 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libetpan/ChangeLog,v 1.105 2015/05/01 03:11:34 mrueg Exp $
+
+  01 May 2015; Manuel Rüger <mrueg@gentoo.org> -libetpan-1.0.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libetpan-1.0.ebuild,
   libetpan-1.1.ebuild, libetpan-1.5.ebuild:
