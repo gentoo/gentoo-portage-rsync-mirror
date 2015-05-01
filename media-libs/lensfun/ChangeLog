@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.85 2015/04/08 17:59:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.86 2015/05/01 19:15:46 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> lensfun-0.2.8-r1.ebuild:
+  Stable for PPC64 (bug #524436).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> lensfun-0.2.8.ebuild:
   Drop old Python implementations
