@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/Sub-Name virtual/perl-Scalar-List-Utils >=dev-perl/B-Hooks-OP-Check-0.190.0 dev-perl/B-Hooks-EndOfScope >=dev-perl/extutils-depends-0.302 test? ( >=virtual/perl-Test-Simple-0.88 ) dev-lang/perl:=[-build(-)]
+DEPEND=dev-perl/Sub-Name virtual/perl-Scalar-List-Utils >=dev-perl/B-Hooks-OP-Check-0.190.0 dev-perl/B-Hooks-EndOfScope >=dev-perl/ExtUtils-Depends-0.302 test? ( >=virtual/perl-Test-Simple-0.88 ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Adding keywords to perl, in perl
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Devel-Declare/
@@ -10,4 +10,4 @@ RDEPEND=dev-perl/Sub-Name virtual/perl-Scalar-List-Utils >=dev-perl/B-Hooks-OP-C
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Devel-Declare-0.006014.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=5f9b5c455090ffbe53b5c5b9a33fce07
+_md5_=09172a7c7e056c744fe179a3be686960

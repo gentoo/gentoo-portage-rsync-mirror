@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/Goo-Canvas-0.60.0-r1.ebuild,v 1.1 2014/08/25 01:59:17 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/Goo-Canvas-0.60.0-r1.ebuild,v 1.2 2015/05/01 12:00:29 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="x11-libs/goocanvas:0
 	dev-perl/glib-perl
 	dev-perl/Cairo"
 DEPEND="${RDEPEND}
-	dev-perl/extutils-depends
+	dev-perl/ExtUtils-Depends
 	dev-perl/extutils-pkgconfig"
 
 PATCHES=(

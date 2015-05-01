@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/GStreamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.22 2014/08/31 11:43:14 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/ChangeLog,v 1.23 2015/05/01 11:56:51 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  GStreamer-0.180.0.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   31 Aug 2014; Mikle Kolyada <zlogene@gentoo.org> -GStreamer-0.170.0.ebuild:
   Drop old.

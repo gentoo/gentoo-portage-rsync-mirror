@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Declare/Devel-Declare-0.6.14.ebuild,v 1.1 2013/09/06 19:51:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Declare/Devel-Declare-0.6.14.ebuild,v 1.2 2015/05/01 11:55:19 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-perl/B-Hooks-EndOfScope
 "
 DEPEND="${RDEPEND}
-	>=dev-perl/extutils-depends-0.302
+	>=dev-perl/ExtUtils-Depends-0.302
 	test? (
 		>=virtual/perl-Test-Simple-0.88
 	)

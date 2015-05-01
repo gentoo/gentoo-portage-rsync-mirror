@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-OP-Check/B-Hooks-OP-Check-0.190.0-r1.ebuild,v 1.1 2014/08/26 15:55:38 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Hooks-OP-Check/B-Hooks-OP-Check-0.190.0-r1.ebuild,v 1.2 2015/05/01 11:45:33 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="virtual/perl-parent"
-DEPEND=">=dev-perl/extutils-depends-0.302
+DEPEND=">=dev-perl/ExtUtils-Depends-0.302
 	${RDEPEND}"
 
 SRC_TEST=do

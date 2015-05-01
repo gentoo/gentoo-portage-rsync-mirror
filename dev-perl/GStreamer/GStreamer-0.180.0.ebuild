@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/GStreamer-0.180.0.ebuild,v 1.3 2013/05/15 14:14:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GStreamer/GStreamer-0.180.0.ebuild,v 1.4 2015/05/01 11:56:51 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="
 	>=dev-perl/glib-perl-1.180.0
 "
 DEPEND="${RDEPEND}
-	>=dev-perl/extutils-depends-0.205.0
+	>=dev-perl/ExtUtils-Depends-0.205.0
 	>=dev-perl/extutils-pkgconfig-1.70.0
 	virtual/pkgconfig
 "

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Devel-Declare
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Declare/ChangeLog,v 1.28 2014/10/16 10:49:54 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-Declare/ChangeLog,v 1.29 2015/05/01 11:55:19 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Devel-Declare-0.6.14.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   16 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Devel-Declare-0.6.11.ebuild:
   Drop old.

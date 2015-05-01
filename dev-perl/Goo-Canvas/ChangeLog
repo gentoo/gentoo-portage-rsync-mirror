@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Goo-Canvas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/ChangeLog,v 1.10 2014/08/25 01:59:17 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Goo-Canvas/ChangeLog,v 1.11 2015/05/01 12:00:29 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Goo-Canvas-0.60.0-r1.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
 *Goo-Canvas-0.60.0-r1 (25 Aug 2014)
 

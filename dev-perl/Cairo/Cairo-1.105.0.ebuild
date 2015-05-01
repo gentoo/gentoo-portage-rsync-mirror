@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.105.0.ebuild,v 1.1 2015/04/18 19:03:27 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.105.0.ebuild,v 1.2 2015/05/01 11:53:47 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
-	>=dev-perl/extutils-depends-0.200.0
+	>=dev-perl/ExtUtils-Depends-0.200.0
 	>=dev-perl/extutils-pkgconfig-1.0.0
 	test? (
 		dev-perl/Test-Number-Delta

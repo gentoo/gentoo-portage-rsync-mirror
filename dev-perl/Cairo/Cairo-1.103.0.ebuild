@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.103.0.ebuild,v 1.10 2014/04/18 17:37:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Cairo/Cairo-1.103.0.ebuild,v 1.11 2015/05/01 11:53:47 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=x11-libs/cairo-1.0.0
 "
 DEPEND="${RDEPEND}
-	>=dev-perl/extutils-depends-0.205.0
+	>=dev-perl/ExtUtils-Depends-0.205.0
 	>=dev-perl/extutils-pkgconfig-1.70.0
 	test? (
 		dev-perl/Test-Number-Delta

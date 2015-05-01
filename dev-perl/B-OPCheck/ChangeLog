@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/B-OPCheck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-OPCheck/ChangeLog,v 1.9 2015/03/14 14:23:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-OPCheck/ChangeLog,v 1.10 2015/05/01 11:48:58 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  B-OPCheck-0.290.0-r1.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   14 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   B-OPCheck-0.290.0-r1.ebuild:
