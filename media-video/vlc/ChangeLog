@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.954 2015/04/30 16:44:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.955 2015/05/01 18:54:21 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> vlc-2.2.1.ebuild:
+  Marked ~ppc64 (bug #489436).
 
   30 Apr 2015; Ian Delaney <idella4@gentoo.org> +files/qt4-select.patch,
   vlc-2.2.0.ebuild, vlc-2.2.1.ebuild:

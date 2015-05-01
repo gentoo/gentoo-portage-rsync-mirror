@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.95 2015/04/16 03:02:15 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.96 2015/05/01 19:01:01 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> libaio-0.3.110.ebuild:
+  Stable for PPC64 (bug #525980).
 
   16 Apr 2015; Yixun Lan <dlan@gentoo.org> metadata.xml:
   add Gokturk Yeksek as proxy-maintainer
