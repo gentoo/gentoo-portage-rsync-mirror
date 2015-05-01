@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Coro
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Coro/ChangeLog,v 1.19 2014/12/18 20:49:19 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Coro/ChangeLog,v 1.20 2015/05/01 21:11:36 dilfridge Exp $
+
+*Coro-6.420.0 (01 May 2015)
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> +Coro-6.420.0.ebuild:
+  Version bump
 
 *Coro-6.410.0 (18 Dec 2014)
 
