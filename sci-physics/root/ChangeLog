@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/root
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.145 2015/04/15 08:48:36 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/ChangeLog,v 1.146 2015/05/01 15:30:02 bircoph Exp $
+
+  01 May 2015; Andrew Savchenko <bircoph@gentoo.org> root-5.34.26.ebuild:
+  5.34.26 have no support for pythia-8.2
 
   15 Apr 2015; Andrew Savchenko <bircoph@gentoo.org> root-6.02.05-r2.ebuild:
   Set ROOTSYS during make install, since a different value (e.g. from

@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9968 2015/05/01 12:54:24 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9969 2015/05/01 15:13:48 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +default/linux/amd64/13.0/systemd/eapi,
+  +default/linux/amd64/13.0/systemd/parent, default/linux/amd64/ChangeLog,
+  profiles.desc:
+  Add basic systemd profile for amd64
 
   01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> updates/2Q-2015:
   Fix capitalization of dev-perl/ExtUtils-Depends

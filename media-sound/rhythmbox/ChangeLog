@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/rhythmbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.269 2015/04/08 17:59:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/ChangeLog,v 1.270 2015/05/01 15:06:54 eva Exp $
+
+*rhythmbox-3.2.1 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +rhythmbox-3.2.1.ebuild:
+  Version bump, bug #545886.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> rhythmbox-3.0.3.ebuild:
   Drop old Python implementations
