@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.36 2015/04/28 02:05:46 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.37 2015/05/01 01:00:07 monsieurp Exp $
+
+  01 May 2015; Patrice Clement <monsieurp@gentoo.org> jarjar-1.4.ebuild:
+  Adjust SLOTs in CDEPEND.
 
 *jarjar-1.4 (28 Apr 2015)
 
