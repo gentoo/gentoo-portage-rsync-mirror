@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-218.ebuild,v 1.1 2014/12/17 17:17:42 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-218.ebuild,v 1.2 2015/05/01 18:31:06 floppym Exp $
 
 EAPI=5
 
@@ -204,6 +204,12 @@ multilib_src_configure() {
 		--with-rootprefix=
 		$(multilib_is_native_abi && echo "--with-rootlibdir=/$(get_libdir)")
 	)
+
+	if ! multilib_is_native_abi; then
+		econf_args+=(
+			MOUNT_{CFLAGS,LIBS}=' '
+		)
+	fi
 
 	# Use pregenerated copies when possible wrt #480924
 	[[ ${PV} = 9999* ]] || econf_args+=( --disable-manpages )

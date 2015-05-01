@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.136 2015/05/01 14:10:03 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.137 2015/05/01 18:04:57 maksbotan Exp $
+
+*vzctl-4.9.1 (01 May 2015)
+
+  01 May 2015; Maxim Koltsov <maksbotan@gentoo.org> +vzctl-4.9.1.ebuild,
+  -vzctl-4.9.ebuild:
+  Hot-fix 4.9 into 4.9.1, by slepnoga
 
 *vzctl-4.9 (01 May 2015)
 

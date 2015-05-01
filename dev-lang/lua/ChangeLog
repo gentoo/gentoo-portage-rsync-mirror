@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lua
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.198 2015/03/31 19:09:24 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/ChangeLog,v 1.199 2015/05/01 18:25:13 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> lua-5.1.5-r3.ebuild:
+  Stable for PPC64 (bug #520864).
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> lua-5.1.5-r2.ebuild,
   lua-5.1.5-r100.ebuild, lua-5.2.3.ebuild, lua-5.2.3-r1.ebuild:
