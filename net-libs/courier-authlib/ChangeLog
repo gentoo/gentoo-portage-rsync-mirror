@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/courier-authlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.167 2015/05/01 03:10:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/ChangeLog,v 1.168 2015/05/01 04:42:23 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> courier-authlib-0.66.1.ebuild:
+  Stable for HPPA PPC64 (bug #548176).
 
   01 May 2015; Manuel Rüger <mrueg@gentoo.org>
   -courier-authlib-0.63.0-r1.ebuild, -courier-authlib-0.64.0.ebuild:

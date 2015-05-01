@@ -1,15 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/fwknop-2.6.6.ebuild,v 1.1 2015/04/29 23:18:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/fwknop-2.6.6.ebuild,v 1.2 2015/05/01 04:45:42 idella4 Exp $
 
 EAPI=5
 
-# Does work with python 2.7, does not work with python 3.3 on my machine
-# More feedback is welcome
+# Does work with python2_7, does not work with python3_3 on my machine
+# More feedback is welcome, since setup.py does not provide any info
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_OPTIONAL=1
+DISTUTILS_SINGLE_IMPL=1
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
+
 inherit autotools-utils distutils-r1 systemd
 
 DESCRIPTION="Single Packet Authorization and Port Knocking application"
@@ -21,23 +23,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="client extras gdbm gpg python server udp-server"
 
-RDEPEND="python? ( ${PYTHON_DEPS} )
+RDEPEND="
 	client? ( net-misc/wget[ssl] )
 	gpg? (
 		dev-libs/libassuan
 		dev-libs/libgpg-error
-	)"
-
+	)
+	python? ( ${PYTHON_DEPS} )
+"
 DEPEND="${RDEPEND}
 	gdbm? ( sys-libs/gdbm )
 	gpg? ( app-crypt/gpgme )
 	server? (
 		!udp-server? ( net-libs/libpcap )
 		net-firewall/iptables
-	)"
+	)
+"
 
-REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )
-	udp-server? ( server )"
+REQUIRED_USE="
+	python? ( ${PYTHON_REQUIRED_USE} )
+	udp-server? ( server )
+"
 
 DOCS=( ChangeLog README.md )
 
