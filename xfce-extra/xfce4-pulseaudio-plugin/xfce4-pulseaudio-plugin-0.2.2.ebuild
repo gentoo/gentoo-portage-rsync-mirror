@@ -17,9 +17,9 @@ IUSE="debug keybinder"
 RDEPEND=">=dev-libs/glib-2.24.0:=
 	media-sound/pulseaudio:=
 	>=x11-libs/gtk+-3.6.0:3=
-	>=xfce-base/libxfce4ui-4.11.0:=
+	>=xfce-base/libxfce4ui-4.11.0:=[gtk3(+)]
 	>=xfce-base/libxfce4util-4.9.0:=
-	>=xfce-base/xfce4-panel-4.11.0:=
+	>=xfce-base/xfce4-panel-4.11.0:=[gtk3(+)]
 	>=xfce-base/xfconf-4.6.0:=
 	keybinder? ( dev-libs/keybinder:3= )"
 DEPEND="${RDEPEND}
