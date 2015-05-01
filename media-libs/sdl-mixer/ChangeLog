@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdl-mixer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.138 2015/04/21 18:40:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/ChangeLog,v 1.139 2015/05/01 19:49:11 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> sdl-mixer-1.2.12-r4.ebuild:
+  Stable for PPC64 (bug #525500).
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> sdl-mixer-1.2.12-r4.ebuild:
   ppc stable wrt bug #525500

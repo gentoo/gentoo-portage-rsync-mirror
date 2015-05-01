@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.94 2015/04/08 18:04:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.95 2015/05/01 19:58:01 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  Stable for PPC64 (bug #542890).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> spice-gtk-0.20-r1.ebuild,
   spice-gtk-0.21.ebuild, spice-gtk-0.25-r1.ebuild:
