@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-44.0.2369.0.ebuild,v 1.2 2015/04/20 02:05:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-44.0.2383.0.ebuild,v 1.1 2015/05/01 07:03:18 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -157,7 +157,8 @@ pkg_pretend() {
 		die 'At least gcc 4.8 is required, see bugs: #535730, #525374, #518668.'
 	fi
 
-	# Check build requirements, bug #541816 .
+	# Check build requirements, bug #541816 and bug #471810 .
+	CHECKREQS_MEMORY="3G"
 	CHECKREQS_DISK_BUILD="5G"
 	eshopts_push -s extglob
 	if is-flagq '-g?(gdb)?([1-9])'; then
@@ -192,7 +193,6 @@ src_prepare() {
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r7.patch"
 	epatch "${FILESDIR}/${PN}-libsecret-r0.patch"
-	epatch "${FILESDIR}/${PN}-system-libvpx-r0.patch"
 
 	if use widevine; then
 		local WIDEVINE_VERSION="$(< "${ROOT}/usr/$(get_libdir)/chromium-browser/widevine.version")"
