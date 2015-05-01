@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.84 2015/05/01 04:55:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.85 2015/05/01 12:16:12 zlogene Exp $
+
+  01 May 2015; Mikle Kolyada <zlogene@gentoo.org> patch-2.7.5.ebuild:
+  amd64 stable wrt bug #548120
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> patch-2.7.5.ebuild:
   Stable for HPPA PPC64 (bug #548120).

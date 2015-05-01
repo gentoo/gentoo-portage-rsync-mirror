@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-WebKit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/ChangeLog,v 1.18 2014/08/25 16:40:49 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-WebKit/ChangeLog,v 1.19 2015/05/01 12:06:33 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Gtk2-WebKit-0.90.0-r1.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
 *Gtk2-WebKit-0.90.0-r1 (25 Aug 2014)
 

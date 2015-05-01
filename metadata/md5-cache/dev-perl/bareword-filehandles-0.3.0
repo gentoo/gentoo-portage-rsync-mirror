@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/B-Hooks-OP-Check dev-perl/Lexical-SealRequireHints virtual/perl-XSLoader >=virtual/perl-ExtUtils-MakeMaker-6.310.0 dev-perl/extutils-depends test? ( >=virtual/perl-Test-Simple-0.880.0 ) dev-lang/perl:=[-build(-)]
+DEPEND=dev-perl/B-Hooks-OP-Check dev-perl/Lexical-SealRequireHints virtual/perl-XSLoader >=virtual/perl-ExtUtils-MakeMaker-6.310.0 dev-perl/ExtUtils-Depends test? ( >=virtual/perl-Test-Simple-0.880.0 ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Disables bareword filehandles
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/bareword-filehandles/
@@ -10,4 +10,4 @@ RDEPEND=dev-perl/B-Hooks-OP-Check dev-perl/Lexical-SealRequireHints virtual/perl
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/I/IL/ILMARI/bareword-filehandles-0.003.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=47d1ec6328c8c216a653852e4bee9fcd
+_md5_=98ee3dc311881149c8be7c8ebc6bc26c

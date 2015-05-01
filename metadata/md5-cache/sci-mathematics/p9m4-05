@@ -1,13 +1,14 @@
-DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=dev-python/wxpython sci-mathematics/prover9 dev-python/setuptools || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+DEFINED_PHASES=compile configure install prepare setup test
+DEPEND=dev-python/wxpython:* sci-mathematics/prover9 dev-python/setuptools >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
 DESCRIPTION=This is a Graphical User Interface for Prover9 and Mace4
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.cs.unm.edu/~mccune/mace4/
-IUSE=examples
+IUSE=examples python_targets_python2_7
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-python/wxpython sci-mathematics/prover9 || ( =dev-lang/python-2.7* =dev-lang/python-2.6* =dev-lang/python-2.5* )
+RDEPEND=dev-python/wxpython:* sci-mathematics/prover9 >=dev-lang/python-2.7.5-r2:2.7 >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
+REQUIRED_USE=python_targets_python2_7
 SLOT=0
 SRC_URI=http://www.cs.unm.edu/~mccune/prover9/gui/p9m4-v05.tar.gz http://dev.gentoo.org/~gienah/2big4tree/sci-mathematics/p9m4/p9m4-v05-64bit.patch.bz2
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	distutils	92e738ea29389cb3f34778d7a349ac71	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=1b59034e25b59ac30e007e191d52f735
+_eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_md5_=d031cb3a9f89d5580ea5e6c211c8de33

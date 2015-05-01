@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.160.0-r1.ebuild,v 1.1 2014/08/25 01:58:05 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gnome2-wnck/gnome2-wnck-0.160.0-r1.ebuild,v 1.2 2015/05/01 12:29:26 dilfridge Exp $
 
 EAPI=5
 
@@ -23,4 +23,4 @@ RDEPEND=">=dev-perl/glib-perl-1.180.0
 	>=x11-libs/libwnck-2.20:1"
 DEPEND="${RDEPEND}
 	>=dev-perl/extutils-pkgconfig-1.03
-	>=dev-perl/extutils-depends-0.2"
+	>=dev-perl/ExtUtils-Depends-0.2"

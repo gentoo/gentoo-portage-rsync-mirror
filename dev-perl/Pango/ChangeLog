@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Pango
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.45 2014/09/12 17:30:33 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/ChangeLog,v 1.46 2015/05/01 12:08:10 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> Pango-1.224.0.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   12 Sep 2014; Mikle Kolyada <zlogene@gentoo.org> -Pango-1.223.0.ebuild:
   Drop old.

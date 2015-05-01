@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.7.0-r1.ebuild,v 1.2 2014/12/12 22:57:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/gtk2-gladexml-1.7.0-r1.ebuild,v 1.3 2015/05/01 12:31:23 dilfridge Exp $
 
 EAPI=5
 
@@ -22,5 +22,5 @@ RDEPEND="x11-libs/gtk+:2
 	>=dev-perl/glib-perl-1.020
 	>=dev-perl/gtk2-perl-1.012"
 DEPEND="${RDEPEND}
-	>=dev-perl/extutils-depends-0.300
+	>=dev-perl/ExtUtils-Depends-0.300
 	dev-perl/extutils-pkgconfig"
