@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Gtk2-Notify
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/ChangeLog,v 1.8 2014/08/25 02:06:04 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Gtk2-Notify/ChangeLog,v 1.9 2015/05/01 12:03:17 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Gtk2-Notify-0.05-r1.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
 *Gtk2-Notify-0.05-r1 (25 Aug 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/p9m4
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.6 2014/08/10 20:24:01 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.7 2015/05/01 12:06:35 gienah Exp $
+
+  01 May 2015; Mark Wright <gienah@gentoo.org> p9m4-05.ebuild:
+  EAPI=5. Use python 2.7. Thanks to Ian Delaney for helping to upgrade to
+  distutils-r1, fixes bug 544896 =/sci-mathematics/p9m4-05 request for
+  conversion to new EAPI & eclass.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> p9m4-05.ebuild:
   QA: drop trailing '.' from DESCRIPTION

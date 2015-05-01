@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/gtk2-perl net-libs/webkit-gtk:2 dev-perl/glib-perl dev-perl/extutils-pkgconfig dev-perl/extutils-depends dev-lang/perl:=[-build(-)]
+DEPEND=dev-perl/gtk2-perl net-libs/webkit-gtk:2 dev-perl/glib-perl dev-perl/extutils-pkgconfig dev-perl/ExtUtils-Depends dev-lang/perl:=[-build(-)]
 DESCRIPTION=Web content engine library for Gtk2
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Gtk2-WebKit/
@@ -9,4 +9,4 @@ RDEPEND=dev-perl/gtk2-perl net-libs/webkit-gtk:2 dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/F/FL/FLORA/Gtk2-WebKit-0.09.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=eee14cb3c0bb60762397b7355cb0832c
+_md5_=e24fc57ed0000c2ad155b97a5c6329ea

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/Pango-1.224.0.ebuild,v 1.10 2014/03/04 20:16:04 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pango/Pango-1.224.0.ebuild,v 1.11 2015/05/01 12:08:10 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 "
 DEPEND="
 	${RDEPEND}
-	>=dev-perl/extutils-depends-0.300.0
+	>=dev-perl/ExtUtils-Depends-0.300.0
 	>=dev-perl/extutils-pkgconfig-1.30.0
 "
 

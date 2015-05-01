@@ -1,11 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/p9m4-05.ebuild,v 1.3 2014/08/10 20:24:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/p9m4-05.ebuild,v 1.4 2015/05/01 12:06:35 gienah Exp $
 
-EAPI="4"
-PYTHON_DEPEND="2:2.5"
+EAPI="5"
 
-inherit base distutils
+PYTHON_COMPAT=( python2_7 )
+DISTUTILS_SINGLE_IMPL=1
+
+inherit distutils-r1
 
 MY_PN="p9m4-v"
 MY_P="${MY_PN}${PV}"
@@ -20,31 +22,34 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="examples"
 
-RDEPEND="dev-python/wxpython
+RDEPEND="dev-python/wxpython:*
 		sci-mathematics/prover9"
 DEPEND="${RDEPEND}
 		dev-python/setuptools"
 
-PATCHES=("${DISTDIR}/${MY_PN}05-64bit.patch.bz2"
+PATCHES=( "${DISTDIR}/${MY_PN}05-64bit.patch.bz2"
 		"${FILESDIR}/${MY_PN}05-use-inst-paths.patch"
 		"${FILESDIR}/${MY_PN}05-package.patch"
-		"${FILESDIR}/${MY_PN}05-python2.6.patch")
+		"${FILESDIR}/${MY_PN}05-python2.6.patch" )
 
 S="${WORKDIR}/${MY_P}/"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
+python_check_deps() {
+	has_version "dev-python/foo[${PYTHON_USEDEP}]"
 }
 
-src_prepare() {
+pkg_setup() {
+	python-single-r1_pkg_setup
+}
+
+python_prepare_all() {
 	rm -f p9m4-v05/bin/prover9 \
 		p9m4-v05/bin/mace4 \
 		p9m4-v05/bin/interpformat \
 		p9m4-v05/bin/prooftrans \
 		p9m4-v05/bin/isofilter \
 		p9m4-v05/bin/isofilter2 || die "Could not rm old executables"
-	base_src_prepare
+	distutils-r1_python_prepare_all
 	mkdir p9m4 || die "Could not create directory p9m4"
 	mv Mac-setup.py \
 		Win32-setup.py \
@@ -60,11 +65,9 @@ src_prepare() {
 		|| die "Could not move package p9m4 python files to p9m4 directory"
 	touch p9m4/__init__.py \
 		|| die "Could not create empty p9m4/__init__.py file"
-	distutils_src_prepare
 }
 
-src_install() {
-	distutils_src_install
+python_install_all() {
 	dosym /usr/bin/prover9-mace4.py /usr/bin/prover9-mace4
 	insinto /usr/share
 	dodir /usr/share/${PN}/Images
@@ -103,8 +106,4 @@ src_install() {
 			|| die "Could not cd to Samples/Non-Equality/Prover9"
 		doins *.in
 	fi
-}
-
-pkg_postinst() {
-	distutils_pkg_postinst
 }

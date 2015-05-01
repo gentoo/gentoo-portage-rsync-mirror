@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.177 2015/04/05 02:15:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.178 2015/05/01 12:14:43 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  glib-perl-1.280.0.ebuild, glib-perl-1.301.0.ebuild, glib-perl-1.305.0.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   05 Apr 2015; Mike Frysinger <vapier@gentoo.org> glib-perl-1.301.0.ebuild:
   Mark sh stable.
