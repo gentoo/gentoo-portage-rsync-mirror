@@ -3,11 +3,11 @@ DEPEND=dev-db/sqlite:3 || ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-util/intltool s
 DESCRIPTION=A Statistical Language Model based Chinese input method library
 EAPI=5
 HOMEPAGE=https://sunpinyin.googlecode.com/
-KEYWORDS=amd64 ~ppc ~ppc64 ~x86
+KEYWORDS=amd64 ~ppc ppc64 ~x86
 LICENSE=LGPL-2.1 CDDL
 PDEPEND=app-i18n/sunpinyin-data
 RDEPEND=dev-db/sqlite:3
 SLOT=0/1
 SRC_URI=http://dev.gentoo.org/~yngwin/distfiles/sunpinyin-2.0.4_pre20130108.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=59ccda9dd830db239936ef811cbeb34f
+_md5_=28c11593e2e88ec9f6696ffe65121d36

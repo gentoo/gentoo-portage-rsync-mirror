@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx-rime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/ChangeLog,v 1.13 2015/04/19 11:46:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-rime/ChangeLog,v 1.14 2015/05/01 05:51:42 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> fcitx-rime-0.3.1.ebuild:
+  Stable for PPC64 (bug #540844).
 
   19 Apr 2015; Anthony G. Basile <blueness@gentoo.org> fcitx-rime-0.2.0.ebuild,
   fcitx-rime-0.2.2.ebuild, fcitx-rime-0.3.0.ebuild, fcitx-rime-0.3.1.ebuild:

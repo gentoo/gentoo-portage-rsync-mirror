@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gflags
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.32 2014/10/25 16:43:46 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gflags/ChangeLog,v 1.33 2015/05/01 05:49:26 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> gflags-2.1.1-r1.ebuild:
+  Stable for PPC64 (bug #540844).
 
   25 Oct 2014; Michael Palimaka <kensington@gentoo.org> -gflags-2.0-r1.ebuild,
   -gflags-2.0.ebuild:

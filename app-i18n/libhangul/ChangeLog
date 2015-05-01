@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libhangul
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.35 2015/04/20 19:15:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libhangul/ChangeLog,v 1.36 2015/05/01 05:33:20 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> libhangul-0.1.0.ebuild:
+  Stable for PPC64 (bug #540844).
 
   20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -libhangul-0.0.10.ebuild:
   Remove old.

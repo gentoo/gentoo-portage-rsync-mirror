@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/kyotocabinet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.28 2015/03/03 06:05:08 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kyotocabinet/ChangeLog,v 1.29 2015/05/01 05:44:59 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> kyotocabinet-1.2.76-r1.ebuild:
+  Stable for PPC64 (bug #540844).
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> kyotocabinet-1.2.76-r1.ebuild:
   add arm64 support, tested on A53 board
