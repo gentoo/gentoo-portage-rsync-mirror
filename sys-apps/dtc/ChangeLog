@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dtc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.21 2015/03/03 09:48:46 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.22 2015/05/01 06:08:05 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> dtc-1.4.1.ebuild:
+  Stable for PPC64 (bug #535644).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> dtc-1.4.1.ebuild:
   add arm64 support, tested on A53 board
