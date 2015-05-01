@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9967 2015/04/30 20:05:30 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9968 2015/05/01 12:54:24 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> updates/2Q-2015:
+  Fix capitalization of dev-perl/ExtUtils-Depends
 
   30 Apr 2015; <grknight@gentoo.org> package.mask:
   Adjust package mask for smarty to include PEAR-PhpDocumentor-1.4.4 while work

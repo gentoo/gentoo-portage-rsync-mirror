@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1598 2015/04/29 00:07:30 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1599 2015/05/01 12:34:31 grknight Exp $
+
+  01 May 2015; <grknight@gentoo.org> mysql.eclass, mysql-multilib.eclass,
+  mysql-v2.eclass:
+  Update git urls for mysql-extras
 
   29 Apr 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Add kernel-2 env var K_BASE_VER as different versions of git sources use

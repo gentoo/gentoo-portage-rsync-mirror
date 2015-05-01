@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.40.0-r1.ebuild,v 1.1 2014/08/25 02:07:27 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-spell/gtk2-spell-1.40.0-r1.ebuild,v 1.2 2015/05/01 12:44:59 dilfridge Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	>=dev-perl/gtk2-perl-1.012
 "
 DEPEND="${RDEPEND}
-	dev-perl/extutils-depends
+	dev-perl/ExtUtils-Depends
 	dev-perl/extutils-pkgconfig
 	virtual/pkgconfig
 "

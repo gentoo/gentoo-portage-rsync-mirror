@@ -9,3 +9,4 @@ slotmove =dev-lang/scala-2.10* 0 2.10
 slotmove =dev-lang/scala-2.11* 0 2.11
 move dev-perl/Cgi-Simple dev-perl/CGI-Simple
 move net-mail/git-mailz dev-vcs/git-mailz
+move dev-perl/extutils-depends dev-perl/ExtUtils-Depends

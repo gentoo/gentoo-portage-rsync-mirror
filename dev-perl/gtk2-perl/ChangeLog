@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-perl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.150 2014/07/26 14:38:05 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-perl/ChangeLog,v 1.151 2015/05/01 12:41:42 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  gtk2-perl-1.247.0.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   26 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -gtk2-perl-1.242.0.ebuild, -gtk2-perl-1.244.0.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.12.0.ebuild,v 1.1 2015/03/08 15:06:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/xfconf-4.12.0.ebuild,v 1.2 2015/05/01 12:51:57 dilfridge Exp $
 
 EAPI=5
 inherit xfconf
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	sys-devel/gettext
 	perl? (
-		dev-perl/extutils-depends
+		dev-perl/ExtUtils-Depends
 		dev-perl/extutils-pkgconfig
 		)"
 

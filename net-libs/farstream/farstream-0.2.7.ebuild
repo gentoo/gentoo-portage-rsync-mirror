@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.2.7.ebuild,v 1.7 2015/03/29 12:51:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/farstream/farstream-0.2.7.ebuild,v 1.8 2015/05/01 12:51:19 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,8 +32,8 @@ COMMONDEPEND="
 	upnp? ( >=net-libs/gupnp-igd-0.2:= )
 "
 RDEPEND="${COMMONDEPEND}
-	media-libs/gst-plugins-good:1.0
-	media-libs/gst-plugins-bad:1.0
+	>=media-libs/gst-plugins-good-1.4:1.0
+	>=media-libs/gst-plugins-bad-1.4:1.0
 	media-plugins/gst-plugins-libnice:1.0
 "
 DEPEND="${COMMONDEPEND}

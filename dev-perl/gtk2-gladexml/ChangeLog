@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/gtk2-gladexml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.54 2014/12/12 22:57:28 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-gladexml/ChangeLog,v 1.55 2015/05/01 12:31:23 dilfridge Exp $
+
+  01 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  gtk2-gladexml-1.7.0-r1.ebuild:
+  dev-perl/extutils-depends just became dev-perl/ExtUtils-Depends
 
   12 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   gtk2-gladexml-1.7.0-r1.ebuild:
