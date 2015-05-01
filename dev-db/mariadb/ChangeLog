@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.101 2015/03/25 18:22:33 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.102 2015/05/01 02:57:38 grknight Exp $
+
+*mariadb-5.5.43 (01 May 2015)
+
+  01 May 2015; Brian Evans <grknight@gentoo.org> +mariadb-5.5.43.ebuild,
+  -mariadb-5.5.41.ebuild, -mariadb-5.5.42.ebuild:
+  Version bump for 5.5 series; remove vulnerable 5.5 versions wrt bug 546724
 
   25 Mar 2015; Brian Evans <grknight@gentoo.org> mariadb-10.0.17.ebuild:
   Add additional ~arm64 keyword to latest version
