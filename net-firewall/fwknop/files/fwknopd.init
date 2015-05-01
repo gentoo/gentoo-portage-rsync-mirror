@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/files/fwknopd.init,v 1.3 2015/05/01 04:45:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwknop/files/fwknopd.init,v 1.4 2015/05/01 09:55:00 idella4 Exp $
 
 extra_commands="checkconfig"
 extra_started_commands="reload"
@@ -32,8 +32,7 @@ depend() {
 			# if PCAP_INTF and PCAP_FILE are not set, then fwknopd uses eth0
 			if [ -z "$(grep '^PCAP_FILE' ${FWKNOPD_CONFIG})" ]; then
 				need net
-				ewarn "You are not binding any interface in PCAP_INTF statement in your 
-fwknopd.conf,"
+				ewarn "You are not binding any interface in PCAP_INTF statement in your fwknopd.conf,"
 				ewarn "neither you are providing PCAP_FILE option. Thus fwknopd will listen on eth0."
 				ewarn "You must add rc_need=\"net.eth0\" to your /etc/conf.d/${SVCNAME}."
 			fi
@@ -95,4 +94,3 @@ reload() {
 		--exec "${FWKNOPD_BINARY}" --pidfile "${FWKNOPD_PIDFILE}"
 	eend $?
 }
-
