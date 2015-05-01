@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/courier-unicode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-unicode/ChangeLog,v 1.4 2015/03/03 22:21:11 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-unicode/ChangeLog,v 1.5 2015/05/01 04:30:22 jer Exp $
+
+  01 May 2015; Jeroen Roovers <jer@gentoo.org> courier-unicode-1.1.ebuild:
+  Marked ~ppc64 (bug #532520).
 
   03 Mar 2015; Markus Meier <maekke@gentoo.org> courier-unicode-1.1.ebuild:
   add ~arm, bug #532520
