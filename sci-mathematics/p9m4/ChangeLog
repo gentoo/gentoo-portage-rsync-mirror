@@ -1,6 +1,14 @@
 # ChangeLog for sci-mathematics/p9m4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.7 2015/05/01 12:06:35 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/p9m4/ChangeLog,v 1.8 2015/05/01 14:14:44 gienah Exp $
+
+*p9m4-05-r1 (01 May 2015)
+
+  01 May 2015; Mark Wright <gienah@gentoo.org> +p9m4-05-r1.ebuild,
+  -p9m4-05.ebuild:
+  Thanks to Ian Delaney for reviewing: the norm is to revbump with the change of
+  eclass, decided in the early stages of the making of the new eclasses; for
+  consistency
 
   01 May 2015; Mark Wright <gienah@gentoo.org> p9m4-05.ebuild:
   EAPI=5. Use python 2.7. Thanks to Ian Delaney for helping to upgrade to
