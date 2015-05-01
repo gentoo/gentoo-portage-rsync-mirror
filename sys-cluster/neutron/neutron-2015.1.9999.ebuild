@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.9999.ebuild,v 1.1 2015/04/30 20:52:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.9999.ebuild,v 1.2 2015/05/01 17:27:21 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -122,9 +122,6 @@ RDEPEND="
 	dhcp? ( net-dns/dnsmasq[dhcp-tools] )"
 
 PATCHES=(
-	"${FILESDIR}/0001-Fixes-bug-in-interface-handling-of-ip_lib.py.patch"
-	"${FILESDIR}/0002-moving-vxlan-module-check-to-sanity-checks-and-makin.patch"
-	"${FILESDIR}/0003-fixes-error-logging-to-use-the-right-exception-paren.patch"
 )
 
 pkg_setup() {
