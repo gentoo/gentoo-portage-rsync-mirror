@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/dbus-glib-0.100
 	>=x11-libs/gtk+-3.2:3
 	>=xfce-base/garcon-0.3
 	>=xfce-base/libxfce4util-4.11
-	>=xfce-base/libxfce4ui-4.11
+	>=xfce-base/libxfce4ui-4.11[gtk3(+)]
 	>=xfce-base/xfconf-4.10
 	!xfce-base/xfce-utils"
 DEPEND="${RDEPEND}
