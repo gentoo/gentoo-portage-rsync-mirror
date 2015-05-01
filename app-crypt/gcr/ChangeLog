@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gcr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.54 2015/04/18 08:24:38 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/ChangeLog,v 1.55 2015/05/01 13:15:52 eva Exp $
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> gcr-3.12.2.ebuild,
+  gcr-3.14.0.ebuild:
+  Add missing USE dependency on gtk+:3[X], bug #547354.
 
   18 Apr 2015; Mart Raudsepp <leio@gentoo.org> gcr-3.14.0.ebuild:
   Fix glib version requirement

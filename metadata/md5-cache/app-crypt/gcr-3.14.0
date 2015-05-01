@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install postinst postrm preinst prepare setup test unpack
-DEPEND=>=app-crypt/gnupg-2 >=app-crypt/p11-kit-0.19 >=dev-libs/glib-2.38:2 >=dev-libs/libgcrypt-1.2.2:0= >=dev-libs/libtasn1-1:= >=sys-apps/dbus-1 gtk? ( >=x11-libs/gtk+-3:3[introspection?] ) introspection? ( >=dev-libs/gobject-introspection-1.34 ) || ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-libs/gobject-introspection-common dev-libs/libxslt dev-libs/vala-common dev-util/gdbus-codegen >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.35 sys-devel/gettext virtual/pkgconfig vala? ( || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils >=sys-apps/sed-4 test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
+DEPEND=>=app-crypt/gnupg-2 >=app-crypt/p11-kit-0.19 >=dev-libs/glib-2.38:2 >=dev-libs/libgcrypt-1.2.2:0= >=dev-libs/libtasn1-1:= >=sys-apps/dbus-1 gtk? ( >=x11-libs/gtk+-3:3[X,introspection?] ) introspection? ( >=dev-libs/gobject-introspection-1.34 ) || ( >=dev-lang/python-2.7.5-r2:2.7 ) dev-libs/gobject-introspection-common dev-libs/libxslt dev-libs/vala-common dev-util/gdbus-codegen >=dev-util/gtk-doc-am-1.9 >=dev-util/intltool-0.35 sys-devel/gettext virtual/pkgconfig vala? ( || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 app-arch/xz-utils >=sys-apps/sed-4 test? ( !prefix? ( x11-base/xorg-server[xvfb] ) x11-apps/xhost )
 DESCRIPTION=Libraries for cryptographic UIs and accessing PKCS#11 modules
 EAPI=5
 HOMEPAGE=https://developer.gnome.org/gcr/
 IUSE=debug gtk +introspection vala test
 KEYWORDS=~alpha amd64 ~arm ~arm64 ~ia64 ~mips ppc ppc64 ~sh ~sparc x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=GPL-2+ LGPL-2+
-RDEPEND=>=app-crypt/gnupg-2 >=app-crypt/p11-kit-0.19 >=dev-libs/glib-2.38:2 >=dev-libs/libgcrypt-1.2.2:0= >=dev-libs/libtasn1-1:= >=sys-apps/dbus-1 gtk? ( >=x11-libs/gtk+-3:3[introspection?] ) introspection? ( >=dev-libs/gobject-introspection-1.34 ) !<gnome-base/gnome-keyring-3.3
+RDEPEND=>=app-crypt/gnupg-2 >=app-crypt/p11-kit-0.19 >=dev-libs/glib-2.38:2 >=dev-libs/libgcrypt-1.2.2:0= >=dev-libs/libtasn1-1:= >=sys-apps/dbus-1 gtk? ( >=x11-libs/gtk+-3:3[X,introspection?] ) introspection? ( >=dev-libs/gobject-introspection-1.34 ) !<gnome-base/gnome-keyring-3.3
 REQUIRED_USE=vala? ( introspection )
 SLOT=0/1
 SRC_URI=mirror://gnome/sources/gcr/3.14/gcr-3.14.0.tar.xz
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome.org	8fef8f967214f56e08fa92d61163d891	gnome2	10c513def52488230abb60a4b19a03b9	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	vala	a41415fe361172827ed11b6a32ee38fb	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=90c26bea26f1c351c6340029b168f8db
+_md5_=374fde37f17b1a6b575a463221be4e13
