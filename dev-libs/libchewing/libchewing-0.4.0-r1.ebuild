@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.4.0-r1.ebuild,v 1.3 2015/04/19 11:41:03 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/libchewing-0.4.0-r1.ebuild,v 1.4 2015/05/01 05:29:26 jer Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/chewing/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~x86"
 IUSE="static-libs test"
 
 DEPEND="
