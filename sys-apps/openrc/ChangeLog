@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.339 2015/04/26 03:44:34 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.340 2015/05/01 22:21:08 williamh Exp $
+
+*openrc-0.15 (01 May 2015)
+
+  01 May 2015; William Hubbs <williamh@gentoo.org> +openrc-0.15.ebuild:
+  Version bump for systemd-nspawn support
 
 *openrc-0.14 (26 Apr 2015)
 
