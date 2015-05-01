@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/libsecret
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.47 2015/04/08 07:30:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libsecret/ChangeLog,v 1.48 2015/05/01 16:54:42 eva Exp $
+
+*libsecret-0.18.2 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +libsecret-0.18.2.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> libsecret-0.16.ebuild,
   libsecret-0.18.ebuild:
