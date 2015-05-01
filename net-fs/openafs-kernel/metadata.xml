@@ -17,9 +17,4 @@
 	<name>Andrew Savchenko</name>
 	<description>maintainer, please CC on bugs</description>
 </maintainer>
-<maintainer>
-	<email>andrej.filipcic@ijs.si</email>
-	<name>Andrej Filipcic</name>
-	<description>inactive maintainer</description>
-</maintainer>
 </pkgmetadata>

@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/gtksourceviewmm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.33 2014/04/27 09:34:15 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtksourceviewmm/ChangeLog,v 1.34 2015/05/01 15:39:18 eva Exp $
+
+*gtksourceviewmm-3.12.0 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gtksourceviewmm-3.12.0.ebuild:
+  Version bump.
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> gtksourceviewmm-3.2.0.ebuild:
   Move to ~ppc as they won't stabilize newer deps

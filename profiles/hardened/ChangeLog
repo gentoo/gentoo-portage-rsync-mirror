@@ -1,6 +1,13 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.81 2015/04/19 01:30:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.82 2015/05/01 15:57:39 bircoph Exp $
+
+  01 May 2015; Andrew Savchenko <bircoph@gentoo.org> linux/package.mask,
+  linux/package.use.mask:
+  Mask net-fs/openafs-kernel since it can't be used on hardened
+  kernels due to lack of C99 support by upstream (and they can't do
+  that) and hardened kernel requirement of C99 struct init.
+  See bug 540196, comment 9.
 
   19 Apr 2015; Chris Reffett <creffett@gentoo.org>
   linux/amd64/no-multilib/package.mask:

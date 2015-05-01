@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/pangomm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.79 2015/03/29 10:23:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pangomm/ChangeLog,v 1.80 2015/05/01 15:51:20 eva Exp $
+
+*pangomm-2.36.0 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +pangomm-2.36.0.ebuild:
+  Version bump.
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> pangomm-2.34.0-r1.ebuild:
   Stable for HPPA (bug #534012).

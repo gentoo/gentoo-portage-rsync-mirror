@@ -17,11 +17,6 @@
 	<name>Andrew Savchenko</name>
 	<description>maintainer, please CC on bugs</description>
 </maintainer>
-<maintainer>
-	<email>andrej.filipcic@ijs.si</email>
-	<name>Andrej Filipcic</name>
-	<description>inactive maintainer</description>
-</maintainer>
 <use>
 	<flag name='modules'>Build libafs kernel module. Disable only if you know
 	what you're doing: without this module OpenAFS client will not work.</flag>
