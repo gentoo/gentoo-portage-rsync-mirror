@@ -1,42 +1,42 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-baz/gr-baz-9999.ebuild,v 1.1 2012/09/10 02:30:22 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-baz/gr-baz-9999.ebuild,v 1.2 2015/05/01 01:49:12 zerochaos Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
+PYTHON_COMPAT=( python2_7 )
 
-#inherit autotools subversion python
-inherit autotools git-2 python
+inherit cmake-utils git-r3 python-single-r1
 
 DESCRIPTION="Gnuradio baz"
 HOMEPAGE="http://wiki.spench.net/wiki/Gr-baz"
-#ESVN_REPO_URI="http://svn.spench.net/main/gr-baz/"
 EGIT_REPO_URI="https://github.com/balint256/gr-baz.git"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="armadillo doc rtlsdr uhd"
 
-DEPEND="net-wireless/gnuradio"
-RDEPEND="${DEPEND}"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-pkg_setup() {
-	python_set_active_version 2
-	python_pkg_setup
-}
-
-src_prepare() {
-	eautoreconf
-}
+RDEPEND="dev-libs/boost[threads,${PYTHON_USEDEP}]
+	>=net-wireless/gnuradio-3.7.0[${PYTHON_USEDEP}]
+	armadillo? ( sci-libs/armadillo )
+	rtlsdr? ( virtual/libusb:1 )
+	uhd? ( net-wireless/uhd[${PYTHON_USEDEP}] )
+	${PYTHON_DEPS}"
+DEPEND="${RDEPEND}
+	doc? ( app-doc/doxygen )
+	virtual/pkgconfig"
 
 src_configure() {
-	econf --enable-dependency-tracking
+	mycmakeargs=(
+		-DPYTHON_EXECUTABLE="${PYTHON}"
+	)
+	cmake-utils_src_configure
 }
-
 src_install() {
-	default_src_install
+	cmake-utils_src_install
 	insinto /usr/share/${PN}
-	doins samples/*.grc
+	doins -r samples/*
 }

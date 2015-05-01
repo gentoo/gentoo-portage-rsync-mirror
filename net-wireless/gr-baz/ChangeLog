@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/gr-baz
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-baz/ChangeLog,v 1.1 2012/09/10 02:30:22 zerochaos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/gr-baz/ChangeLog,v 1.2 2015/05/01 01:49:12 zerochaos Exp $
+
+  01 May 2015; Rick Farina <zerochaos@gentoo.org> gr-baz-9999.ebuild,
+  metadata.xml:
+  update, get working, still the worst kind of automagic deps with no possible
+  way to override anything
 
 *gr-baz-9999 (10 Sep 2012)
 
