@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/gnome-settings-daemon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.155 2015/03/28 16:07:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-settings-daemon/ChangeLog,v 1.156 2015/05/01 22:00:01 eva Exp $
+
+*gnome-settings-daemon-3.14.4 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-settings-daemon-3.14.4.ebuild:
+  Version bump.
 
 *gnome-settings-daemon-3.14.3 (28 Mar 2015)
 
