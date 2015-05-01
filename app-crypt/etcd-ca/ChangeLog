@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/etcd-ca
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/etcd-ca/ChangeLog,v 1.1 2014/10/16 23:58:42 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/etcd-ca/ChangeLog,v 1.2 2015/05/01 08:50:30 zmedico Exp $
+
+*etcd-ca-0_p20150423 (01 May 2015)
+
+  01 May 2015; Zac Medico <zmedico@gentoo.org> +etcd-ca-0_p20150423.ebuild:
+  0_p20150423 version bump
 
 *etcd-ca-0_p20140903 (16 Oct 2014)
 
