@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1599 2015/05/01 12:34:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1600 2015/05/02 20:23:56 chewi Exp $
+
+  02 May 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass:
+  Make java-pkg_doso always install with mode 0755, which is more like
+  dolib.so. Closes bug #225729.
 
   01 May 2015; <grknight@gentoo.org> mysql.eclass, mysql-multilib.eclass,
   mysql-v2.eclass:

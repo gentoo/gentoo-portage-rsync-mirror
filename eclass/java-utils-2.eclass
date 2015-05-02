@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.159 2015/04/28 20:35:40 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.160 2015/05/02 20:23:56 chewi Exp $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:
@@ -412,7 +412,7 @@ java-pkg_doso() {
 			# install if it isn't a symlink
 			if [[ ! -L "${lib}" ]] ; then
 				INSDESTTREE="${JAVA_PKG_LIBDEST}" \
-					INSOPTIONS="${LIBOPTIONS}" \
+					INSOPTIONS="-m0755" \
 					doins "${lib}" || die "failed to install ${lib}"
 				java-pkg_append_ JAVA_PKG_LIBRARY "${JAVA_PKG_LIBDEST}"
 				debug-print "Installing ${lib} to ${JAVA_PKG_LIBDEST}"

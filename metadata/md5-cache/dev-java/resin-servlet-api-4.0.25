@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.6 >=dev-java/java-config-2.1.9-r1 source? ( app-arch/zip )
 SLOT=3.0
 SRC_URI=http://www.caucho.com/download/resin-4.0.25-src.zip
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	8f4127eaee79040ecb5e8d8a528d7084	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	4241a8d9ed765c83041b38ac128505cd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=9b3251e14cd9c22eb887017831b2f602
