@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.0.2.ebuild,v 1.5 2015/04/08 07:30:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/tracker-1.2.6.ebuild,v 1.2 2015/05/02 13:23:05 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
-VALA_MIN_API_VERSION="0.14"
+VALA_MIN_API_VERSION="0.18"
 
 inherit autotools eutils gnome2 linux-info multilib python-any-r1 vala versionator virtualx
 
@@ -19,7 +19,7 @@ IUSE="cue eds elibc_glibc exif ffmpeg firefox-bookmarks flac gif gsf
 gstreamer gtk iptc +iso +jpeg +miner-fs mp3 nautilus networkmanager
 pdf playlist rss test thunderbird +tiff upnp-av upower +vorbis +xml xmp xps"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 REQUIRED_USE="
 	?? ( gstreamer ffmpeg )
@@ -34,14 +34,14 @@ REQUIRED_USE="
 RDEPEND="
 	>=app-i18n/enca-1.9
 	>=dev-db/sqlite-3.7.16:=
-	>=dev-libs/glib-2.38:2
+	>=dev-libs/glib-2.40:2
 	>=dev-libs/gobject-introspection-0.9.5
 	>=dev-libs/icu-4.8.1.1:=
 	|| (
 		>=media-gfx/imagemagick-5.2.1[png,jpeg=]
 		media-gfx/graphicsmagick[imagemagick,png,jpeg=] )
 	>=media-libs/libpng-1.2:0=
-	>=media-libs/libmediaart-0.1:1.0
+	>=media-libs/libmediaart-0.5:1.0
 	>=x11-libs/pango-1:=
 	sys-apps/util-linux
 
@@ -69,7 +69,7 @@ RDEPEND="
 	iptc? ( media-libs/libiptcdata )
 	iso? ( >=sys-libs/libosinfo-0.2.9:= )
 	jpeg? ( virtual/jpeg:0 )
-	upower? ( || ( >=sys-power/upower-0.9 sys-power/upower-pm-utils ) )
+	upower? ( || ( >=sys-power/upower-0.9:= sys-power/upower-pm-utils ) )
 	mp3? ( >=media-libs/taglib-1.6 )
 	networkmanager? ( >=net-misc/networkmanager-0.8 )
 	pdf? (
@@ -81,7 +81,7 @@ RDEPEND="
 	thunderbird? ( || (
 		>=mail-client/thunderbird-5.0
 		>=mail-client/thunderbird-bin-5.0 ) )
-	tiff? ( media-libs/tiff )
+	tiff? ( media-libs/tiff:0 )
 	upnp-av? ( >=media-libs/gupnp-dlna-0.9.4:2.0 )
 	vorbis? ( >=media-libs/libvorbis-0.22 )
 	xml? ( >=dev-libs/libxml2-2.6 )
@@ -93,7 +93,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	$(vala_depend)
 	>=dev-util/gtk-doc-am-1.8
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.40.0
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	gtk? ( >=dev-libs/libgee-0.3 )
@@ -142,6 +142,12 @@ src_prepare() {
 	sed -e '\%/steroids/tracker/tracker_sparql_update_async%,+3 d' \
 		-i tests/tracker-steroids/tracker-test.c || die
 
+	# Looks like sorting got fixed but not test reference files
+	sort "${S}"/tests/libtracker-data/functions/functions-tracker-1.out \
+		-o "${S}"/tests/libtracker-data/functions/functions-tracker-1.out || die
+	sort "${S}"/tests/libtracker-data/functions/functions-tracker-2.out \
+		-o "${S}"/tests/libtracker-data/functions/functions-tracker-2.out || die
+
 	eautoreconf # See bug #367975
 	gnome2_src_prepare
 	vala_src_prepare
@@ -173,15 +179,18 @@ src_configure() {
 		--enable-abiword \
 		--enable-artwork \
 		--enable-dvi \
+		--enable-enca \
+		--enable-guarantee-metadata \
 		--enable-icon \
+		--enable-introspection \
+		--enable-libmediaart \
+		--enable-libpng \
+		--enable-miner-apps \
+		--enable-miner-user-guides \
 		--enable-ps \
 		--enable-text \
-		--enable-guarantee-metadata \
-		--enable-introspection \
-		--enable-libpng \
-		--enable-libmediaart \
 		--enable-tracker-fts \
-		--enable-enca \
+		--enable-tracker-writeback \
 		--with-unicode-support=libicu \
 		$(use_enable cue libcue) \
 		$(use_enable eds miner-evolution) \
