@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.25.0.ebuild,v 1.1 2015/04/18 14:25:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/calibre/calibre-2.27.0.ebuild,v 1.1 2015/05/02 14:39:13 yngwin Exp $
 
 EAPI=5
 inherit eutils fdo-mime bash-completion-r1 multilib toolchain-funcs
@@ -57,6 +57,7 @@ COMMON_DEPEND="
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5
 	dev-qt/qtwidgets:5
+	media-fonts/liberation-fonts
 	>=media-gfx/imagemagick-6.5.9[jpeg,png]
 	media-libs/fontconfig
 	>=media-libs/freetype-2:=
@@ -65,7 +66,6 @@ COMMON_DEPEND="
 	sys-libs/zlib
 	virtual/libusb:1=
 	virtual/python-imaging[python_targets_python2_7(-)]
-	virtual/ttf-fonts
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
