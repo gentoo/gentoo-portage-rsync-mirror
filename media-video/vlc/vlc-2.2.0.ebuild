@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.11 2015/04/30 16:44:32 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-2.2.0.ebuild,v 1.12 2015/05/02 06:28:37 idella4 Exp $
 
 EAPI="5"
 
@@ -306,8 +306,10 @@ src_configure() {
 	fi
 
 	local qt_flag=""
-	if use qt4 || use qt5 ; then
-		qt_flag="--enable-qt"
+	if use qt4 ; then
+		qt_flag="--enable-qt=4"
+	elif use qt5 ; then
+		qt_flag="--enable-qt=5"
 	fi
 
 	econf \

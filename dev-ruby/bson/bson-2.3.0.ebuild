@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-2.3.0.ebuild,v 1.2 2015/01/05 19:31:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/bson-2.3.0.ebuild,v 1.3 2015/05/02 06:13:24 graaff Exp $
 
 EAPI=5
 # jruby → support needs to be written properly
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -47,7 +47,7 @@ all_ruby_prepare() {
 
 each_ruby_configure() {
 	case ${RUBY} in
-		*/ruby19|*/ruby20|*/ruby21)
+		*/ruby19|*/ruby20|*/ruby21|*/ruby22)
 			${RUBY} -C ext/bson extconf.rb || die "extconf.rb failed"
 			;;
 		*/jruby)
@@ -58,7 +58,7 @@ each_ruby_configure() {
 
 each_ruby_compile() {
 	case ${RUBY} in
-		*/ruby19|*/ruby20|*/ruby21)
+		*/ruby19|*/ruby20|*/ruby21|*/ruby22)
 			emake -C ext/bson V=1 CFLAGS="${CFLAGS} -fPIC" archflag="${LDFLAGS}"
 			cp ext/bson/*$(get_modname) lib/ || die
 			;;

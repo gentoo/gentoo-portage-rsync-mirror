@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bson
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.17 2015/03/09 18:21:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.18 2015/05/02 06:13:24 graaff Exp $
+
+  02 May 2015; Hans de Graaff <graaff@gentoo.org> bson-2.3.0.ebuild:
+  Add ruby22.
 
   09 Mar 2015; Hans de Graaff <graaff@gentoo.org> bson-1.12.0.ebuild:
   Fix SRC_URI and RUBY_S for bug 542600.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/blankslate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/ChangeLog,v 1.19 2015/03/20 06:48:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/blankslate/ChangeLog,v 1.20 2015/05/02 06:10:00 graaff Exp $
+
+  02 May 2015; Hans de Graaff <graaff@gentoo.org> blankslate-2.1.2.4.ebuild:
+  Add ruby22.
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> blankslate-3.1.3.ebuild:
   Add missing ~alpha keyword since all other packages from bug 501152 have been
