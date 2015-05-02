@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/docker-py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.23 2015/04/25 21:28:31 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/ChangeLog,v 1.25 2015/05/02 15:48:35 alunduil Exp $
+
+  02 May 2015; Alex Brandt <alunduil@gentoo.org> -docker-py-1.1.0.ebuild:
+  remove version 1.1.0
+
+*docker-py-1.2.1 (02 May 2015)
+
+  02 May 2015; Alex Brandt <alunduil@gentoo.org> +docker-py-1.2.1.ebuild:
+  add version 1.2.1
 
   25 Apr 2015; Alex Brandt <alunduil@gentoo.org> -docker-py-1.0.0.ebuild:
   remove version 1.0.0

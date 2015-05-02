@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/gproftpd
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.24 2012/05/03 05:37:17 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.25 2015/05/02 15:34:44 dilfridge Exp $
+
+*gproftpd-8.3.2-r1 (02 May 2015)
+
+  02 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +gproftpd-8.3.2-r1.ebuild:
+  Port to EAPI=5
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gproftpd-8.3.2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

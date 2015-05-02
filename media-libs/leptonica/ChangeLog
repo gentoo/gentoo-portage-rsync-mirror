@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.36 2015/05/01 23:24:02 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.37 2015/05/02 15:59:06 chewi Exp $
+
+*leptonica-1.72-r1 (02 May 2015)
+
+  02 May 2015; James Le Cuirot <chewi@gentoo.org> +leptonica-1.72-r1.ebuild,
+  -leptonica-1.72.ebuild:
+  Add SLOT restrictions to some dependencies following an enlightening
+  discussion on IRC.
 
 *leptonica-1.72 (01 May 2015)
 

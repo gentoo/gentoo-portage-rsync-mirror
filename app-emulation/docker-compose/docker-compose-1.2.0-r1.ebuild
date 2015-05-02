@@ -1,17 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker-compose/docker-compose-1.2.0_rc3.ebuild,v 1.1 2015/04/05 03:34:14 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker-compose/docker-compose-1.2.0-r1.ebuild,v 1.1 2015/05/02 15:59:55 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit bash-completion-r1 distutils-r1 vcs-snapshot
-
-MY_PV="${PV//_/}"
+inherit bash-completion-r1 distutils-r1
 
 DESCRIPTION="Multi-container orchestration for Docker"
 HOMEPAGE="https://www.docker.com/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PN}-${MY_PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -29,7 +27,6 @@ CDEPEND="
 	>=dev-python/pyyaml-3.10[${PYTHON_USEDEP}]
 	<dev-python/pyyaml-4[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.2.1[${PYTHON_USEDEP}]
-	<dev-python/requests-2.6[${PYTHON_USEDEP}]
 	>=dev-python/six-1.3.0[${PYTHON_USEDEP}]
 	<dev-python/six-2[${PYTHON_USEDEP}]
 	>=dev-python/texttable-0.8.1[${PYTHON_USEDEP}]
@@ -45,6 +42,14 @@ DEPEND="
 	)
 "
 RDEPEND="${CDEPEND}"
+
+python_prepare_all() {
+	local PATCHES=(
+		"${FILESDIR}"/requests-requirements.patch
+	)
+
+	distutils-r1_python_prepare_all
+}
 
 python_test() {
 	nosetests tests/unit || die "tests failed under ${EPYTHON}"

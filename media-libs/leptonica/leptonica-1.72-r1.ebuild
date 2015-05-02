@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.72.ebuild,v 1.1 2015/05/01 23:24:02 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.72-r1.ebuild,v 1.1 2015/05/02 15:59:06 chewi Exp $
 
 EAPI=5
 
@@ -19,11 +19,11 @@ IUSE="gif jpeg jpeg2k png static-libs test tiff utils webp zlib"
 REQUIRED_USE="test? ( jpeg png tiff )"
 
 DEPEND="gif? ( media-libs/giflib:=[${MULTILIB_USEDEP}] )
-	jpeg? ( virtual/jpeg:=[${MULTILIB_USEDEP}] )
+	jpeg? ( virtual/jpeg:0=[${MULTILIB_USEDEP}] )
 	jpeg2k? ( media-libs/openjpeg:2=[${MULTILIB_USEDEP}] )
-	png? ( media-libs/libpng:=[${MULTILIB_USEDEP}]
+	png? ( media-libs/libpng:0=[${MULTILIB_USEDEP}]
 		   sys-libs/zlib:=[${MULTILIB_USEDEP}] )
-	tiff? ( media-libs/tiff:=[${MULTILIB_USEDEP}] )
+	tiff? ( media-libs/tiff:0=[${MULTILIB_USEDEP}] )
 	webp? ( media-libs/libwebp:=[${MULTILIB_USEDEP}] )
 	zlib? ( sys-libs/zlib:=[${MULTILIB_USEDEP}] )"
 RDEPEND="${DEPEND}"
