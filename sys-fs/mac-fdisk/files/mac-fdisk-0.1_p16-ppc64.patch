@@ -44,32 +44,6 @@
 -unsigned long bitfield_get(unsigned long bf, int base, int length);
 +unsigned int bitfield_set(unsigned int *bf, int base, int length, unsigned int value);
 +unsigned int bitfield_get(unsigned int bf, int base, int length);
---- a/dpme.h
-+++ b/dpme.h
-@@ -61,7 +61,7 @@
- //
- typedef	unsigned char	u8;
- typedef	unsigned short	u16;
--typedef	unsigned long	u32;
-+typedef	unsigned int	u32;
- 
- 
- // Physical block zero of the disk has this format
-@@ -113,10 +113,10 @@
- #endif
-     u32     dpme_boot_block         ;
-     u32     dpme_boot_bytes         ;
--    u8     *dpme_load_addr          ;
--    u8     *dpme_load_addr_2        ;
--    u8     *dpme_goto_addr          ;
--    u8     *dpme_goto_addr_2        ;
-+    u32     dpme_load_addr          ;
-+    u32     dpme_load_addr_2        ;
-+    u32     dpme_goto_addr          ;
-+    u32     dpme_goto_addr_2        ;
-     u32     dpme_checksum           ;
-     char    dpme_process_id[16]     ;
-     u32     dpme_boot_args[32]      ;
 --- a/dump.c
 +++ b/dump.c
 @@ -61,16 +61,16 @@

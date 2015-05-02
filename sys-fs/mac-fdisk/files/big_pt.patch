@@ -1,5 +1,5 @@
---- partition_map.c	2009-07-22 15:06:58.739072858 +0000
-+++ /home/jjezak/partition_map.c	2009-07-22 15:10:01.069051603 +0000
+--- a/partition_map.c
++++ b/partition_map.c
 @@ -25,6 +25,11 @@
   * WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. 
   */

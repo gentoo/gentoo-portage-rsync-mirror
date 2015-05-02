@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/mac-fdisk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.25 2012/05/15 19:52:34 halcy0n Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mac-fdisk/ChangeLog,v 1.26 2015/05/02 11:14:31 jer Exp $
+
+*mac-fdisk-0.1_p16 (02 May 2015)
+
+  02 May 2015; Jeroen Roovers <jer@gentoo.org> -mac-fdisk-0.1-r6.ebuild,
+  +mac-fdisk-0.1_p16.ebuild, files/mac-fdisk-0.1-headers.patch,
+  files/mac-fdisk-0.1-r6-ppc64.patch, +files/mac-fdisk-0.1_p16-ppc64.patch,
+  files/big_pt.patch, files/largerthan2gb.patch, files/mac-fdisk-amd64.patch:
+  EAPI bump. Use bumped Debian patch level in PV. Clean up patches.
 
   15 May 2012; Mark Loeser <halcy0n@gentoo.org> mac-fdisk-0.1-r7.ebuild:
   Stable for ppc/ppc64; bug #397231

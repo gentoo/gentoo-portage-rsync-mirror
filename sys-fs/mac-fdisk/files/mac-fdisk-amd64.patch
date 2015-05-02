@@ -1,6 +1,5 @@
-diff -Naur mac-fdisk-0.1.bak/fdisklabel.c mac-fdisk-0.1/fdisklabel.c
---- mac-fdisk-0.1.bak/fdisklabel.c	2007-03-16 10:56:26.000000000 -0400
-+++ mac-fdisk-0.1/fdisklabel.c	2007-03-16 10:56:13.000000000 -0400
+--- a/fdisklabel.c
++++ b/fdisklabel.c
 @@ -72,7 +72,7 @@
  static int bsd_readlabel  (struct partition *p, struct disklabel *d);
  static int bsd_writelabel (struct partition *p, struct disklabel *d);
@@ -161,9 +160,8 @@ diff -Naur mac-fdisk-0.1.bak/fdisklabel.c mac-fdisk-0.1/fdisklabel.c
  static int
  bsd_translate_fstype (int linux_type)
  {
-diff -Naur mac-fdisk-0.1.bak/fdisklabel.h mac-fdisk-0.1/fdisklabel.h
---- mac-fdisk-0.1.bak/fdisklabel.h	2007-03-16 10:56:26.000000000 -0400
-+++ mac-fdisk-0.1/fdisklabel.h	2007-03-16 10:56:13.000000000 -0400
+--- a/fdisklabel.h
++++ b/fdisklabel.h
 @@ -35,7 +35,7 @@
  #define	BSD_MAXPARTITIONS 8
  #define BSD_LINUX_BOOTDIR "/usr/ucb/mdec"
@@ -173,9 +171,8 @@ diff -Naur mac-fdisk-0.1.bak/fdisklabel.h mac-fdisk-0.1/fdisklabel.h
  #define BSD_LABELSECTOR   1
  #define BSD_LABELOFFSET   0
  #define	BSD_BBSIZE        8192		/* size of boot area, with label */
-diff -Naur mac-fdisk-0.1.bak/kernel-defs.h mac-fdisk-0.1/kernel-defs.h
---- mac-fdisk-0.1.bak/kernel-defs.h	2007-03-16 10:56:26.000000000 -0400
-+++ mac-fdisk-0.1/kernel-defs.h	2007-03-16 10:56:13.000000000 -0400
+--- a/kernel-defs.h
++++ b/kernel-defs.h
 @@ -15,8 +15,14 @@
  /* from asm/ioctl.h */
  #define _IOC_NRBITS	8
