@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/vnstat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.70 2015/05/01 15:54:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/ChangeLog,v 1.71 2015/05/02 09:26:13 jer Exp $
+
+  02 May 2015; Jeroen Roovers <jer@gentoo.org> vnstat-1.13.ebuild:
+  Stable for HPPA PPC64 (bug #548344).
 
 *vnstat-1.14 (01 May 2015)
 

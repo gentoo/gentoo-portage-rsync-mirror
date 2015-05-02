@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r3.ebuild,v 1.6 2015/04/18 15:54:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/ncpfs/ncpfs-2.2.6-r3.ebuild,v 1.7 2015/05/02 09:27:48 jer Exp $
 
 EAPI=5
 inherit eutils pam
@@ -11,7 +11,7 @@ SRC_URI="ftp://platan.vc.cvut.cz/pub/linux/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~mips ppc ~ppc64 x86"
+KEYWORDS="amd64 ~mips ppc ppc64 x86"
 IUSE="nls pam php"
 
 DEPEND="nls? ( sys-devel/gettext )

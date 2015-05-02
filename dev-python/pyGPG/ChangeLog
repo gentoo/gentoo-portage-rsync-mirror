@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyGPG
 # Copyright 2012-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/ChangeLog,v 1.10 2015/02/18 15:17:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyGPG/ChangeLog,v 1.11 2015/05/02 09:02:59 jer Exp $
+
+  02 May 2015; Jeroen Roovers <jer@gentoo.org> pyGPG-0.1.ebuild:
+  Marked ~ppc64 (bug #539366).
 
   18 Feb 2015; Joshua Kinard <kumba@gentoo.org> pyGPG-0.1.ebuild:
   added ~mips, per #539366.

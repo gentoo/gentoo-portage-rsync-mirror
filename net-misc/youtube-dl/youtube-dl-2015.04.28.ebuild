@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2015.04.28.ebuild,v 1.2 2015/05/01 15:42:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-dl/youtube-dl-2015.04.28.ebuild,v 1.3 2015/05/02 09:14:51 jer Exp $
 
 EAPI=5
 
@@ -25,9 +25,6 @@ DEPEND="
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-
-	epatch_user
-
 	if ! use offensive; then
 		sed -i -e "/__version__/s|'$|-gentoo_no_offensive_sites'|g" \
 			youtube_dl/version.py || die
@@ -53,6 +50,8 @@ src_prepare() {
 			$( printf 'youtube_dl/extractor/%s.py ' ${mxxx[@]} ) \
 			test/test_age_restriction.py || die
 	fi
+
+	epatch_user
 }
 
 src_compile() {

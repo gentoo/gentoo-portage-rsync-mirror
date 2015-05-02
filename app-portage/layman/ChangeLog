@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/layman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.232 2015/04/25 13:57:49 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/ChangeLog,v 1.233 2015/05/02 09:03:46 jer Exp $
+
+  02 May 2015; Jeroen Roovers <jer@gentoo.org> layman-2.3.0.ebuild:
+  Marked ~ppc64 (bug #539366).
 
   25 Apr 2015; Mike Gilbert <floppym@gentoo.org> layman-9999.ebuild:
   Switch to anongit.gentoo.org.
