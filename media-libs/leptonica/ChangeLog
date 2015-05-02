@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.35 2015/02/24 08:48:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.36 2015/05/01 23:24:02 chewi Exp $
+
+*leptonica-1.72 (01 May 2015)
+
+  01 May 2015; James Le Cuirot <chewi@gentoo.org> +leptonica-1.72.ebuild,
+  -files/leptonica-1.68-zlib-include.patch, -leptonica-1.68.ebuild,
+  -leptonica-1.69.ebuild, -leptonica-1.70.ebuild, metadata.xml:
+  Taking over maintainership as I am in close contact with upstream. Version
+  bump with multilib support. Drop some old unused versions.
 
   24 Feb 2015; Agostino Sarubbo <ago@gentoo.org> leptonica-1.71-r1.ebuild:
   Stable for alpha, wrt bug #524542

@@ -1,6 +1,12 @@
 # ChangeLog for net-im/empathy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.164 2015/04/08 18:03:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/empathy/ChangeLog,v 1.165 2015/05/01 23:15:40 eva Exp $
+
+*empathy-3.12.9 (01 May 2015)
+
+  01 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +empathy-3.12.9.ebuild,
+  files/empathy-3.12.7-Fix-parallel-build-in-extensions.patch:
+  Version bump. Update parallel fix patch to cover missing case.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> empathy-3.12.7.ebuild:
   Drop old Python implementations

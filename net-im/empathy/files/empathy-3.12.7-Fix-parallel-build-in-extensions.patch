@@ -1,4 +1,4 @@
-From 24e4480421483685dfc493ad38089c286a8c5f4a Mon Sep 17 00:00:00 2001
+From 7af14d9ca148e4d1ec2eb70d7b655bb2fc5a052f Mon Sep 17 00:00:00 2001
 From: =?UTF-8?q?R=C3=A9mi=20Cardona?= <remi@gentoo.org>
 Date: Sun, 30 Nov 2014 22:10:59 +0100
 Subject: [PATCH] Fix parallel build in extensions/
@@ -32,12 +32,14 @@ running the recipe once will generate both files.
 
 https://bugs.gentoo.org/show_bug.cgi?id=515894
 https://bugzilla.gnome.org/show_bug.cgi?id=685837
+
+Signed-off-by: Gilles Dartiguelongue <eva@gentoo.org>
 ---
- extensions/Makefile.am | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+ extensions/Makefile.am | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/extensions/Makefile.am b/extensions/Makefile.am
-index 79622d4..ebe5fac 100644
+index 79622d4..9082496 100644
 --- a/extensions/Makefile.am
 +++ b/extensions/Makefile.am
 @@ -66,7 +66,7 @@ extensions.html: _gen/all.xml $(tools_dir)/doc-generator.xsl
@@ -49,6 +51,15 @@ index 79622d4..ebe5fac 100644
  	$(top_srcdir)/tools/glib-gtypes-generator.py
  	$(AM_V_GEN)$(PYTHON) $(top_srcdir)/tools/glib-gtypes-generator.py \
  		$< _gen/gtypes Emp
+@@ -82,7 +82,7 @@ _gen/enums.h: _gen/all.xml \
+ 		Emp \
+ 		$< _gen/enums
+ 
+-_gen/interfaces-body.h _gen/interfaces.h: _gen/all.xml \
++_gen/int%rfaces-body.h _gen/int%rfaces.h: _gen/all.xml \
+ 	$(tools_dir)/glib-interfaces-gen.py
+ 	$(AM_V_GEN)$(PYTHON) $(tools_dir)/glib-interfaces-gen.py \
+ 		Emp _gen/interfaces-body.h _gen/interfaces.h $<
 -- 
-2.1.3
+2.3.6
 
