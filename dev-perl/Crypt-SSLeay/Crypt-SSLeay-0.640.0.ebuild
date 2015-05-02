@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.640.0.ebuild,v 1.12 2014/02/01 23:36:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.640.0.ebuild,v 1.13 2015/05/02 18:04:29 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE="test"
 SRC_TEST="do"
 
 RDEPEND="
-	>=dev-libs/openssl-0.9.7c
+	>=dev-libs/openssl-0.9.7c:0
 	virtual/perl-MIME-Base64
 "
 DEPEND="${RDEPEND}
