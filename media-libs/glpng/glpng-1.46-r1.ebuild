@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/glpng-1.46.ebuild,v 1.2 2015/03/25 00:08:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glpng/glpng-1.46-r1.ebuild,v 1.1 2015/05/02 16:12:49 chewi Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -14,10 +14,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="static-libs"
 
-RDEPEND="virtual/opengl
-	virtual/glu
-	media-libs/libpng:0=
-	sys-libs/zlib"
+RDEPEND="virtual/opengl[${MULTILIB_USEDEP}]
+	virtual/glu[${MULTILIB_USEDEP}]
+	media-libs/libpng:0=[${MULTILIB_USEDEP}]
+	sys-libs/zlib:=[${MULTILIB_USEDEP}]"
 DEPEND=${RDEPEND}
 
 S=${WORKDIR}/${PN}

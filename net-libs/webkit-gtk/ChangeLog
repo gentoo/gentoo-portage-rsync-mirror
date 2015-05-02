@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.314 2015/04/08 18:04:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.315 2015/05/02 16:18:20 eva Exp $
+
+*webkit-gtk-2.6.6 (02 May 2015)
+
+  02 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +webkit-gtk-2.6.6.ebuild:
+  Version bump. Fixes build with newer glib, bug #543066. Add support for
+  building with ruby 2.2, bug #534010. Add missing webgl? ( opengl )
+  constraint, bug #533704. Fix build with older glibc releases, bug #533976.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> webkit-gtk-2.4.8-r200.ebuild,
   webkit-gtk-2.4.8.ebuild:

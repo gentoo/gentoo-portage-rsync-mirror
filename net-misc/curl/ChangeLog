@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.405 2015/04/29 10:47:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.406 2015/05/02 16:03:02 blueness Exp $
+
+  02 May 2015; Anthony G. Basile <blueness@gentoo.org> curl-7.42.1.ebuild:
+  Stable on arm, ppc and ppc64.  Bug #548130.
 
 *curl-7.42.1 (29 Apr 2015)
 
