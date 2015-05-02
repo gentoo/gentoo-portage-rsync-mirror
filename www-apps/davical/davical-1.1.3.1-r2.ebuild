@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/davical-1.1.3.1-r1.ebuild,v 1.1 2015/02/14 02:13:24 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/davical/davical-1.1.3.1-r2.ebuild,v 1.1 2015/05/02 03:12:18 grknight Exp $
 
 EAPI=5
 
@@ -14,15 +14,15 @@ LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
+DEPEND=">=dev-php/awl-0.55
+	sys-devel/gettext"
 RDEPEND="app-admin/pwgen
-	dev-lang/php[calendar,curl,pdo,postgres,xml]
+	dev-lang/php:*[calendar,curl,pdo,postgres,xml]
 	dev-perl/DBI
 	dev-perl/DBD-Pg
 	dev-perl/yaml
 	>=dev-php/awl-0.55
 	virtual/httpd-php"
-DEPEND="${RDEPEND}
-doc? ( dev-php/PEAR-PhpDocumentor )"
 
 S="${WORKDIR}/${PN}.git"
 
@@ -36,20 +36,13 @@ src_prepare() {
 
 src_compile() {
 	emake built-po
-
-	if use doc ; then
-		einfo "Generating documentation"
-		phpdoc -q -c "docs/api/phpdoc.ini"\
-			|| die "Documentation failed to build"
-	fi
 }
 
 src_install() {
 	webapp_src_preinst
 
 	dodoc-php INSTALL README debian/README.Debian \
-		testing/README.regression_tests TODO debian/changelog \
-		|| die "dodoc failed"
+		testing/README.regression_tests TODO debian/changelog
 
 	einfo "Installing web files"
 	insinto "${MY_HTDOCSDIR}"
