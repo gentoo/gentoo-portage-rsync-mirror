@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.4.0.ebuild,v 1.1 2015/04/28 16:08:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.4.0.ebuild,v 1.2 2015/05/02 16:59:49 pesa Exp $
 
 EAPI=5
 
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 
 src_prepare() {
 	# fix plugins libdir
+	# v1.4.1 will contain a fix: https://codereview.qt-project.org/111532
 	sed -i -e "/destdirPrefix/ s:/lib:/$(get_libdir):" \
 		src/plugins/plugins.pri || die
 

@@ -1,48 +1,50 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-3.5-r1.ebuild,v 1.2 2015/04/18 12:47:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0.2-r7.ebuild,v 1.1 2015/05/02 16:50:01 twitch153 Exp $
 
 EAPI=5
 
-WX_GTK_VER="2.9"
+WX_GTK_VER="3.0"
 
-inherit cmake-utils eutils flag-o-matic pax-utils toolchain-funcs versionator wxwidgets games
+inherit cmake-utils eutils pax-utils toolchain-funcs versionator wxwidgets games
+
+SRC_URI="https://github.com/${PN}-emu/${PN}/archive/${PV}.zip -> ${P}.zip"
+KEYWORDS="~amd64"
 
 DESCRIPTION="Gamecube and Wii game emulator"
 HOMEPAGE="https://www.dolphin-emu.org/"
-SRC_URI="https://github.com/${PN}-emu/${PN}/archive/${PV}.zip -> ${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64"
 IUSE="alsa ao bluetooth doc ffmpeg +lzo openal opengl openmp portaudio pulseaudio"
 
 RESTRICT="mirror"
 
 RDEPEND=">=media-libs/glew-1.6
-	>=media-libs/libsdl-1.2[joystick]
 	<media-libs/libsfml-2.0
+	>=net-libs/miniupnpc-1.8
+	media-libs/libsdl2[haptic,joystick]
 	sys-libs/readline:=
 	x11-libs/libXext
 	x11-libs/libXrandr
 	alsa? ( media-libs/alsa-lib )
 	ao? ( media-libs/libao )
 	bluetooth? ( net-wireless/bluez )
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg
+		!!>=media-video/libav-10 )
 	lzo? ( dev-libs/lzo )
 	openal? ( media-libs/openal )
 	opengl? ( virtual/opengl )
-	portaudio?  ( media-libs/portaudio )
+	portaudio? ( media-libs/portaudio )
 	pulseaudio? ( media-sound/pulseaudio )
 	"
 DEPEND="${RDEPEND}
 	app-arch/zip
 	media-gfx/nvidia-cg-toolkit
 	media-libs/freetype
+	media-libs/libsoundtouch
 	>=sys-devel/gcc-4.6.0
-	sys-devel/gettext
-	virtual/pkgconfig
-	x11-libs/wxGTK:2.9
+	x11-libs/wxGTK:${WX_GTK_VER}
 	"
 
 pkg_pretend() {
@@ -56,63 +58,58 @@ pkg_pretend() {
 			die ${msg}
 		fi
 	fi
+
 }
 
 src_prepare() {
 
-	if [[ $(gcc-version) = "4.8" ]]; then
-		epatch "${FILESDIR}"/${PN}-emu-${PV}-gcc-4.8.patch
-	fi
-
+	# Remove automatic dependencies to prevent building without flags enabled.
 	if use !alsa; then
-		sed -i -e '/^include(FindALSA/d' CMakeLists.txt || die
+		sed -i -e '/include(FindALSA/d' CMakeLists.txt || die
 	fi
 	if use !ao; then
-		sed -i -e '/^check_lib(AO/d' CMakeLists.txt || die
+		sed -i -e '/check_lib(AO/d' CMakeLists.txt || die
 	fi
 	if use !bluetooth; then
-		sed -i -e '/^check_lib(BLUEZ/d' CMakeLists.txt || die
+		sed -i -e '/check_lib(BLUEZ/d' CMakeLists.txt || die
 	fi
 	if use !openal; then
-		sed -i -e '/^include(FindOpenAL/d' CMakeLists.txt || die
+		sed -i -e '/include(FindOpenAL/d' CMakeLists.txt || die
 	fi
 	if use !portaudio; then
 		sed -i -e '/CMAKE_REQUIRED_LIBRARIES portaudio/d' CMakeLists.txt || die
 	fi
 	if use !pulseaudio; then
-		sed -i -e '/^check_lib(PULSEAUDIO/d' CMakeLists.txt || die
+		sed -i -e '/check_lib(PULSEAUDIO/d' CMakeLists.txt || die
 	fi
 
 	# Remove ALL the bundled libraries, aside from:
 	# - SOIL: The sources are not public.
-	# - Bochs_disasm: Don't know what it is.
+	# - Bochs-disasm: Don't know what it is.
 	# - CLRun: Part of OpenCL
+	# - polarssl: Currently fails the check as is.
 	mv Externals/SOIL . || die
 	mv Externals/Bochs_disasm . || die
 	mv Externals/CLRun . || die
-	rm -r Externals/* || die "Failed to remove bundled libs"
+	mv Externals/polarssl . || die
+	rm -r Externals/* || die
+	mv polarssl Externals || die
 	mv CLRun Externals || die
 	mv Bochs_disasm Externals || die
 	mv SOIL Externals || die
+
+	# Add call for FindX11 as FindOpenGL does not include it implicitly
+	# anymore for >=cmake-3.2. For more info, see: 
+	# https://public.kitware.com/Bug/print_bug_page.php?bug_id=15268
+	if has_version ">=dev-util/cmake-3.2"; then
+		sed -i -e '/if(NOT ANDROID)/a include(FindX11)' CMakeLists.txt || die
+
+		# Fix syntax warnings in FindMiniupnpc.cmake
+		sed -i -e 's/\"\"/\\\"\\\"/g' CMakeTests/FindMiniupnpc.cmake || die
+	fi
 }
 
 src_configure() {
-
-	if $($(tc-getPKG_CONFIG) --exists nvidia-cg-toolkit); then
-		append-flags "$($(tc-getPKG_CONFIG) --cflags nvidia-cg-toolkit)"
-	else
-		append-flags "-I/opt/nvidia-cg-toolkit/include"
-	fi
-
-	if $($(tc-getPKG_CONFIG) --exists nvidia-cg-toolkit); then
-		append-ldflags "$($(tc-getPKG_CONFIG) --libs-only-L nvidia-cg-toolkit)"
-	else
-		if has_version ">=media-gfx/nvidia-cg-toolkit-3.1.0013"; then
-			append-ldflags "-L/opt/nvidia-cg-toolkit/lib64"
-		elif has_version "<=media-gfx/nvidia-cg-toolkit-2.1.0017-r1"; then
-			append-ldflags "-L/opt/nvidia-cg-toolkit/lib"
-		fi
-	fi
 
 	local mycmakeargs=(
 		"-DDOLPHIN_WC_REVISION=${PV}"
@@ -120,8 +117,8 @@ src_configure() {
 		"-Dprefix=${GAMES_PREFIX}"
 		"-Ddatadir=${GAMES_DATADIR}/${PN}"
 		"-Dplugindir=$(games_get_libdir)/${PN}"
-		$(cmake-utils_use ffmpeg ENCODE_FRAMEDUMPS)
-		$(cmake-utils_use openmp OPENMP )
+		$( cmake-utils_use ffmpeg ENCODE_FRAMEDUMPS )
+		$( cmake-utils_use openmp OPENMP )
 	)
 
 	cmake-utils_src_configure

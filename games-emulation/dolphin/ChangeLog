@@ -1,6 +1,16 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.35 2015/04/30 22:42:32 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.37 2015/05/02 16:50:01 twitch153 Exp $
+
+*dolphin-4.0-r2 (02 May 2015)
+*dolphin-4.0.2-r7 (02 May 2015)
+
+  02 May 2015; Devan Franchini <twitch153@gentoo.org> +dolphin-4.0-r2.ebuild,
+  +dolphin-4.0.2-r7.ebuild, -dolphin-4.0-r1.ebuild, -dolphin-4.0.2-r6.ebuild:
+  Adds patching to CMake build system for FindX11 if >=cmake-3.2, bug #548384
+
+  02 May 2015; Devan Franchini <twitch153@gentoo.org> -dolphin-3.5-r1.ebuild:
+  Removes dolphin-3.5-r1 from tree
 
 *dolphin-4.0.2-r6 (30 Apr 2015)
 

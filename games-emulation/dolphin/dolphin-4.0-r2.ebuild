@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0-r1.ebuild,v 1.2 2015/04/18 12:47:01 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-4.0-r2.ebuild,v 1.1 2015/05/02 16:50:01 twitch153 Exp $
 
 EAPI=5
 
@@ -96,6 +96,16 @@ src_prepare() {
 	mv CLRun Externals || die
 	mv Bochs_disasm Externals || die
 	mv SOIL Externals || die
+
+	# Add call for FindX11 as FindOpenGL does not include it implicitly
+	# anymore for >=cmake-3.2. For more info, see: 
+	# https://public.kitware.com/Bug/print_bug_page.php?bug_id=15268
+	if has_version ">=dev-util/cmake-3.2"; then
+		sed -i -e '/if(NOT ANDROID)/a include(FindX11)' CMakeLists.txt || die
+
+		# Fix syntax warnings in FindMiniupnpc.cmake
+		sed -i -e 's/\"\"/\\\"\\\"/g' CMakeTests/FindMiniupnpc.cmake || die
+	fi
 }
 
 src_configure() {
