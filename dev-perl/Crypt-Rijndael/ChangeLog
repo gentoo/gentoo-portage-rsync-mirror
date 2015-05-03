@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Rijndael
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.46 2015/05/02 16:48:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Rijndael/ChangeLog,v 1.47 2015/05/03 13:21:15 dilfridge Exp $
+
+  03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Crypt-Rijndael-1.120.0.ebuild:
+  Whitespace
 
 *Crypt-Rijndael-1.120.0 (02 May 2015)
 
