@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.670 2015/05/03 09:29:11 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.671 2015/05/03 16:43:10 jauhien Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -61,10 +61,6 @@ x11-libs/cairo openvg
 # Cluster code is still under development, only base functionality
 # is implemented. Masking for testing and evaluation.
 app-admin/clsync cluster mhash
-
-# Jauhien Piatlicki <jauhien@gentoo.org> (10 Feb 2015)
-# Mask until sys-devel/llvm-3.6 is in the tree
-dev-lang/rust system-llvm
 
 # Ben de Groot <yngwin@gentoo.org> (07 Feb 2015)
 # Mask for all arches, can be unmasked on arm once keyworded there
