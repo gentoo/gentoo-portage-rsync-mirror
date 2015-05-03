@@ -1,6 +1,12 @@
 # ChangeLog for dev-haskell/quickcheck
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.71 2014/12/14 05:38:50 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.72 2015/05/03 08:59:38 slyfox Exp $
+
+*quickcheck-1.2.0.1-r1 (03 May 2015)
+
+  03 May 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/quickcheck-1.2.0.1-ghc-7.10.patch, +quickcheck-1.2.0.1-r1.ebuild:
+  Port to ghc-7.10.
 
 *quickcheck-2.7.6 (14 Dec 2014)
 
