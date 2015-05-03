@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ethon/ethon-0.7.3.ebuild,v 1.1 2015/03/02 06:11:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ethon/ethon-0.7.3.ebuild,v 1.2 2015/05/03 07:36:10 graaff Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND+="net-misc/curl"
 
 ruby_add_rdepend ">=dev-ruby/ffi-1.3.0"
 
-ruby_add_bdepend "test? ( dev-ruby/sinatra )"
+ruby_add_bdepend "test? ( dev-ruby/sinatra dev-ruby/mime-types )"
 
 all_ruby_prepare() {
 	rm Gemfile || die

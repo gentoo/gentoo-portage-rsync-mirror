@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.9.1.ebuild,v 1.3 2015/04/18 12:50:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday/faraday-0.9.1.ebuild,v 1.4 2015/05/03 07:49:49 graaff Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ ruby_add_rdepend ">=dev-ruby/multipart-post-1.2.0 <dev-ruby/multipart-post-3"
 ruby_add_bdepend "test? (
 		>=dev-ruby/test-unit-2.4
 		dev-ruby/httpclient
+		dev-ruby/rack-test
 		dev-ruby/sinatra
 		dev-ruby/net-http-persistent
 		dev-ruby/patron
