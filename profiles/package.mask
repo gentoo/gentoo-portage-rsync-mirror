@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16514 2015/05/02 16:04:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16515 2015/05/03 05:44:20 prometheanfire Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -184,12 +184,6 @@ dev-java/sun-j2me-bin
 # Doesn't build with never perl versions.
 # Masked for removal in 30 days.
 dev-perl/Apache-AuthTicket
-
-# Matthew Thode <prometheanfire@gentoo.org> (2 Apr 2015)
-# removing firmware package I accidently added
-# people should move to linux-firmware
-# Masked for removal in 30 days
-sys-firmware/iwl7265-ucode
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (2 Apr 2015)
 # Ancient, dead upstream. File collisions (bug 535700)
