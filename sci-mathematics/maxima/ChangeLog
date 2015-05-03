@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/maxima
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.122 2015/05/01 15:16:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.123 2015/05/03 04:19:28 grozin Exp $
+
+  03 May 2015; Andrey Grozin <grozin@gentoo.org> maxima-5.36.1.ebuild:
+  sys-proclaim is now on unconditionally, closing #548060
 
 *maxima-5.36.1 (01 May 2015)
 

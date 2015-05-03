@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.27 2015/03/19 21:51:22 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ubertooth-9999.ebuild,v 1.28 2015/05/03 04:45:41 zerochaos Exp $
 
 EAPI="5"
 
@@ -14,11 +14,9 @@ HOMEPAGE="http://ubertooth.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="+bluez +dfu +specan +pcap +python +ubertooth1-firmware +udev"
-REQUIRED_USE="dfu? ( python )
-		specan? ( python )
-		ubertooth1-firmware? ( dfu )
-		python? ( || ( dfu specan ) )"
+IUSE="+bluez +specan +pcap +python +ubertooth1-firmware +udev"
+REQUIRED_USE="	specan? ( python )
+		python? (  specan )"
 DEPEND="bluez? ( net-wireless/bluez:= )
 	>=net-libs/libbtbb-${PV}:=
 	pcap? ( net-libs/libbtbb[pcap] )
@@ -28,7 +26,6 @@ RDEPEND="${DEPEND}
 		>=dev-python/pyside-1.0.2
 		>=dev-python/numpy-1.3
 		>=dev-python/pyusb-1.0.0_alpha1 )
-	dfu? ( >=dev-python/pyusb-1.0.0_alpha1 )
 	udev? ( virtual/udev )"
 
 MY_PV=${PV/\./-}
@@ -53,10 +50,6 @@ pkg_setup() {
 	if use python; then
 		python_pkg_setup;
 		DISTUTILS_SETUP_FILES=()
-		if use dfu; then
-			DISTUTILS_SETUP_FILES+=("${S}/python/usb_dfu|setup.py")
-			PYTHON_MODNAME="dfu"
-		fi
 		if use specan; then
 			DISTUTILS_SETUP_FILES+=("${S}/python/specan_ui|setup.py")
 			PYTHON_MODNAME+=" specan"
@@ -72,7 +65,7 @@ src_prepare() {
 src_configure() {
 	mycmakeargs=(
 		$(cmake-utils_use_enable bluez USE_BLUEZ)
-		$(cmake-utils_use_enable pcap USE_PCAP)
+		$(cmake-utils_use pcap USE_PCAP)
 		$(cmake-utils_use_enable udev INSTALL_UDEV_RULES)
 		-DDISABLE_PYTHON=true
 	)

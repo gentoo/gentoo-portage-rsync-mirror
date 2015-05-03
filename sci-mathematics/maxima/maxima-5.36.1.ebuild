@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.36.1.ebuild,v 1.1 2015/05/01 15:16:45 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/maxima-5.36.1.ebuild,v 1.2 2015/05/03 04:19:28 grozin Exp $
 
 EAPI=5
 
@@ -116,9 +116,6 @@ src_prepare() {
 		fi
 	done
 
-	# this file is wrong in 5.35.1
-	rm -f src/sys-proclaim.lisp
-
 	# bug #343331
 	rm share/Makefile.in || die
 	rm src/Makefile.in || die
@@ -147,8 +144,7 @@ src_configure() {
 		done
 	fi
 
-	# re-generate sys-proclaim.lisp (only affects gcl)
-	econf ${CONFS} --enable-sys-proclaim $(use_with tk wish) --with-lispdir="${SITELISP}"/${PN}
+	econf ${CONFS} $(use_with tk wish) --with-lispdir="${SITELISP}"/${PN}
 }
 
 src_install() {
