@@ -1,6 +1,17 @@
 # ChangeLog for dev-haskell/test-framework-quickcheck2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.37 2015/04/06 00:48:27 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/test-framework-quickcheck2/ChangeLog,v 1.38 2015/05/03 22:02:39 slyfox Exp $
+
+  03 May 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  -test-framework-quickcheck2-0.2.10.ebuild,
+  -test-framework-quickcheck2-0.2.12-r1.ebuild,
+  -test-framework-quickcheck2-0.2.12.1.ebuild,
+  -test-framework-quickcheck2-0.2.12.2.ebuild,
+  -test-framework-quickcheck2-0.2.12.3.ebuild,
+  -test-framework-quickcheck2-0.2.5.ebuild,
+  -test-framework-quickcheck2-0.3.0.1-r1.ebuild,
+  -test-framework-quickcheck2-0.3.0.3-r1.ebuild:
+  Dropped old.
 
 *test-framework-quickcheck2-0.3.0.3-r2 (06 Apr 2015)
 
