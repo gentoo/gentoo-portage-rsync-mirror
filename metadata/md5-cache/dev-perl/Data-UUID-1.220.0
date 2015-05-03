@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=virtual/perl-Digest-MD5 virtual/perl-ExtUtils-MakeMaker dev-lang/perl:=[-build(-)]
+DESCRIPTION=Perl extension for generating Globally/Universally Unique Identifiers (GUIDs/UUIDs)
+EAPI=5
+HOMEPAGE=http://search.cpan.org/dist/Data-UUID/
+KEYWORDS=~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris
+LICENSE=BSD
+RDEPEND=virtual/perl-Digest-MD5 dev-lang/perl:=[-build(-)]
+SLOT=0
+SRC_URI=mirror://cpan/authors/id/R/RJ/RJBS/Data-UUID-1.220.tar.gz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=103dc44c2078c1eef2c7fe183efe3a9f

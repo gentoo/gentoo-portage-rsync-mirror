@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Date-Calc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.54 2014/08/21 14:52:03 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.55 2015/05/03 12:55:32 dilfridge Exp $
+
+*Date-Calc-6.400.0 (03 May 2015)
+
+  03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Date-Calc-6.400.0.ebuild:
+  Version bump
 
 *Date-Calc-6.300.0-r1 (21 Aug 2014)
 

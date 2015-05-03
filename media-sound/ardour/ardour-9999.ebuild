@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.17 2015/04/24 07:16:52 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-9999.ebuild,v 1.18 2015/05/03 12:32:14 nativemad Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ fi
 
 LICENSE="GPL-2"
 SLOT="4"
-IUSE="altivec doc jack nls lv2 cpu_flags_x86_sse"
+IUSE="altivec doc jack lv2 cpu_flags_x86_sse"
 
 RDEPEND="media-libs/aubio
 	media-libs/liblo
@@ -68,7 +68,7 @@ DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	virtual/pkgconfig
 	>=media-sound/jack-audio-connection-kit-0.120
-	nls? ( sys-devel/gettext )
+	sys-devel/gettext
 	doc? ( app-doc/doxygen[dot] )"
 	if ! [ ${PV} = 9999 ]; then
 		DEPEND="${DEPEND}"
@@ -118,10 +118,9 @@ src_configure() {
 		--prefix=/usr \
 		--configdir=/etc \
 		--optimize \
-		--no-jack-metadata \
-		$(use jack && echo "--with-backends=alsa,jack" || echo "--with-backends=alsa --no-jack --libjack=weak") \
+		--nls \
+		$(use jack && echo "--with-backends=alsa,jack" || echo "--with-backends=alsa  --libjack=weak") \
 		$(use lv2 && echo "--lv2" || echo "--no-lv2") \
-		$(use nls && echo "--nls" || echo "--no-nls") \
 		$({ use altivec || use cpu_flags_x86_sse; } && echo "--fpu-optimization" || echo "--no-fpu-optimization") \
 		$(use doc && echo "--docs")
 }

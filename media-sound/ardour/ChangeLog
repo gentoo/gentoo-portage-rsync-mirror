@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/ardour
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.142 2015/04/24 07:16:52 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.144 2015/05/03 12:34:24 nativemad Exp $
+
+  03 May 2015; Andreas Schuerch <nativemad@gentoo.org> ChangeLog:
+  signing didn't worked..:
+
+  03 May 2015; Andreas Schuerch <nativemad@gentoo.org> ardour-4.0-r2.ebuild,
+  ardour-9999.ebuild:
+  nls useflag removed #547620. Changed jack configure options for 9999 #548308.
+  Also remove older 4.0 revisions.
 
 *ardour-4.0-r2 (24 Apr 2015)
 

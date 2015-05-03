@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Data-UUID
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.63 2014/08/22 20:54:57 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-UUID/ChangeLog,v 1.64 2015/05/03 12:47:44 dilfridge Exp $
+
+*Data-UUID-1.220.0 (03 May 2015)
+
+  03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Data-UUID-1.220.0.ebuild:
+  Version bump
 
 *Data-UUID-1.217.0-r1 (22 Aug 2014)
 *Data-UUID-1.219.0-r1 (22 Aug 2014)
