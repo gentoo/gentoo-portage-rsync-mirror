@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ICal/Data-ICal-0.220.0.ebuild,v 1.1 2015/05/02 18:16:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ICal/Data-ICal-0.220.0.ebuild,v 1.2 2015/05/03 10:48:14 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE="test"
 
 RDEPEND="
 	dev-perl/Class-Accessor
-	dev-perl/class-returnvalue
+	dev-perl/Class-ReturnValue
 	dev-perl/Text-vFile-asData
 "
 DEPEND="${RDEPEND}

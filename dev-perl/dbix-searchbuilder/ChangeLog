@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/dbix-searchbuilder
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.94 2015/01/18 17:36:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/ChangeLog,v 1.95 2015/05/03 10:50:33 dilfridge Exp $
+
+  03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  dbix-searchbuilder-1.630.0.ebuild, dbix-searchbuilder-1.650.0.ebuild,
+  dbix-searchbuilder-1.660.0.ebuild:
+  dev-perl/class-returnvalue just became dev-perl/Class-ReturnValue
 
   18 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   dbix-searchbuilder-1.660.0.ebuild:

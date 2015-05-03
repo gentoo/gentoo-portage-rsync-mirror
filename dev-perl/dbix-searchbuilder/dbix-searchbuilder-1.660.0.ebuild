@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.660.0.ebuild,v 1.3 2015/01/18 17:36:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/dbix-searchbuilder/dbix-searchbuilder-1.660.0.ebuild,v 1.4 2015/05/03 10:50:33 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE="test"
 RDEPEND="
 	>=dev-perl/Cache-Simple-TimedExpiry-0.210.0
 	>=dev-perl/capitalization-0.30.0
-	>=dev-perl/class-returnvalue-0.400.0
+	>=dev-perl/Class-ReturnValue-0.400.0
 	dev-perl/Class-Accessor
 	dev-perl/Clone
 	dev-perl/DBI

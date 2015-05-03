@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.93 2015/04/06 19:55:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.94 2015/05/03 10:53:47 dilfridge Exp $
+
+  03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.9-r1.ebuild:
+  dev-perl/class-returnvalue just became dev-perl/Class-ReturnValue
 
   06 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.9-r1.ebuild:
   log-dispatch was moved to Log-Dispatch
