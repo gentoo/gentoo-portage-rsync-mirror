@@ -1,6 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r2.ebuild,v 1.1 2011/12/31 15:42:32 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/cancd-0.1.0-r3.ebuild,v 1.1 2015/05/03 17:27:52 bircoph Exp $
+
+EAPI=5
 
 inherit eutils
 
@@ -13,9 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}"/${P}-build.patch #246734
 	epatch "${FILESDIR}"/${P}-c-cleanup.patch
 	# slight makefile cleanup
@@ -26,12 +26,8 @@ src_unpack() {
 		Makefile || die
 }
 
-src_compile() {
-	emake cancd || die "emake failed"
-}
-
 src_install() {
-	dosbin cancd || die "dosbin failed"
+	dosbin cancd
 	newinitd "${FILESDIR}"/cancd-init.d cancd
 	newconfd "${FILESDIR}"/cancd-conf.d cancd
 	newinitd "${FILESDIR}"/netconsole-init.d netconsole

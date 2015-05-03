@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2005 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/files/netconsole-init.d,v 1.3 2005/11/19 01:33:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cancd/files/netconsole-init.d,v 1.4 2015/05/03 17:27:52 bircoph Exp $
 
 depend() {
 	need net
@@ -45,7 +45,7 @@ checkconfig() {
 		return 1
 	fi
 
-	LC_ALL=C /sbin/ifconfig "${DEVICE}" 1>/dev/null 2>/dev/null
+	LC_ALL=C ifconfig "${DEVICE}" 1>/dev/null 2>/dev/null
 	ret=$?
 
 	if [ -z "${DEVICE}" -o "${ret}" -gt 0 ]; then
