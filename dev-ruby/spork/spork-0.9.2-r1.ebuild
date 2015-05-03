@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/spork-0.9.2-r1.ebuild,v 1.8 2015/04/14 12:19:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spork/spork-0.9.2-r1.ebuild,v 1.9 2015/05/03 12:10:49 jer Exp $
 
 EAPI=5
 
@@ -17,6 +17,6 @@ DESCRIPTION="Spork is Tim Harper's implementation of test server"
 HOMEPAGE="https://github.com/sporkrb/spork"
 LICENSE="MIT"
 
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~ppc ppc64 ~sparc x86 ~x86-fbsd"
 SLOT="0"
 IUSE=""
