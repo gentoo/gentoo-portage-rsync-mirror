@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/acts_as_list-0.4.0.ebuild,v 1.3 2014/08/05 16:00:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/acts_as_list-0.7.0.ebuild,v 1.1 2015/05/03 19:12:08 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20"
@@ -15,14 +15,14 @@ RUBY_FAKEGEM_EXTRAINSTALL="init.rb"
 RUBY_FAKEGEM_GEMSPEC="${PN}.gemspec"
 
 DESCRIPTION="Capabilities for sorting and reordering a number of objects in a list"
-HOMEPAGE="http://rake.rubyforge.org/"
+HOMEPAGE="https://github.com/swanandp/acts_as_list"
 
 LICENSE="MIT"
 SLOT="3"
 KEYWORDS="~amd64 ~x86 ~x86-macos"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/activerecord-3"
+ruby_add_rdepend ">=dev-ruby/activerecord-3:*"
 
 ruby_add_bdepend "
 	test? (

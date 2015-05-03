@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/ubertooth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.29 2015/05/03 04:45:41 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ubertooth/ChangeLog,v 1.30 2015/05/03 19:10:49 zerochaos Exp $
+
+  03 May 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
+  update to distutils-r1
 
   03 May 2015; Rick Farina <zerochaos@gentoo.org> ubertooth-9999.ebuild:
   changed from python dfu to C dfu implementation
