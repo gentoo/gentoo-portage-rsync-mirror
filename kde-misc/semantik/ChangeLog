@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/semantik
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.17 2015/04/08 18:12:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.18 2015/05/03 16:05:06 mrueg Exp $
+
+*semantik-0.9.4 (03 May 2015)
+
+  03 May 2015; Manuel Rüger <mrueg@gentoo.org> +semantik-0.9.4.ebuild,
+  -semantik-0.9.1.ebuild:
+  Version bump. Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> semantik-0.9.1.ebuild:
   Drop old Python implementations

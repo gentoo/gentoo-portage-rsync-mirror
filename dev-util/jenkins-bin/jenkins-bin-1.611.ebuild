@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.610.ebuild,v 1.1 2015/04/20 13:35:11 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.611.ebuild,v 1.1 2015/05/03 16:17:34 mrueg Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ src_install() {
 	newins "${DISTDIR}"/${P}.war ${PN/-bin/}.war
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}.logrotate ${PN/-bin/}
+	newins "${FILESDIR}"/${PN}-r1.logrotate ${PN/-bin/}
 
 	newinitd "${FILESDIR}"/${PN}.init2 jenkins
 	newconfd "${FILESDIR}"/${PN}.confd jenkins

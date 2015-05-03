@@ -1,6 +1,12 @@
 # ChangeLog for app-eselect/eselect-rust
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-rust/ChangeLog,v 1.1 2015/03/31 16:56:12 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-rust/ChangeLog,v 1.2 2015/05/03 16:21:00 jauhien Exp $
+
+*eselect-rust-0.3_pre20150428 (03 May 2015)
+
+  03 May 2015; Jauhien Piatlicki <jauhien@gentoo.org>
+  +eselect-rust-0.3_pre20150428.ebuild, -eselect-rust-0.2_pre20150206.ebuild:
+  version bump
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org>
   +eselect-rust-0.2_pre20150206.ebuild, +metadata.xml:

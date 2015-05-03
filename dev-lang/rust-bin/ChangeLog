@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/rust-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/ChangeLog,v 1.6 2015/04/20 21:32:09 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/ChangeLog,v 1.7 2015/05/03 16:30:06 jauhien Exp $
+
+*rust-bin-1.0.0_beta3 (03 May 2015)
+
+  03 May 2015; Jauhien Piatlicki <jauhien@gentoo.org>
+  +rust-bin-1.0.0_beta3.ebuild, -rust-bin-1.0.0_beta.ebuild:
+  version bump
 
 *rust-bin-1.0.0_beta2 (20 Apr 2015)
 

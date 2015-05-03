@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_alpha2.ebuild,v 1.4 2015/04/11 14:05:16 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust/rust-1.0.0_beta3.ebuild,v 1.1 2015/05/03 16:25:22 jauhien Exp $
 
 EAPI=5
 
@@ -8,13 +8,20 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit eutils python-any-r1
 
-MY_PV="rustc-1.0.0-alpha.2"
+RUST_CHANNEL="beta"
+
+BETA_NUM="${PV##*beta}"
+MY_PV="${PV/_/-}"
+# beta => beta BUT beta2 => beta.2
+[ -n "${BETA_NUM}" ] && MY_PV="${MY_PV/beta/beta.}"
+MY_P="rustc-${MY_PV}"
+
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
 
-SRC_URI="http://static.rust-lang.org/dist/${MY_PV}-src.tar.gz
-	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-02-17-f1bb6c2-linux-i386-191ed5ec4f17e32d36abeade55a1c6085e51245c.tar.bz2 )
-	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-02-17-f1bb6c2-linux-x86_64-acec86045632f4f3f085c072ba696f889906dffe.tar.bz2 )"
+SRC_URI="http://static.rust-lang.org/dist/${MY_P}-src.tar.gz
+	x86?   ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-03-27-5520801-linux-i386-1ef82402ed16f5a6d2f87a9a62eaa83170e249ec.tar.bz2 )
+	amd64? ( http://static.rust-lang.org/stage0-snapshots/rust-stage0-2015-03-27-5520801-linux-x86_64-ef2154372e97a3cb687897d027fd51c8f2c5f349.tar.bz2 )"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 SLOT="1.0"
@@ -24,7 +31,7 @@ IUSE="clang debug doc libcxx +system-llvm"
 REQUIRED_USE="libcxx? ( clang )"
 
 CDEPEND="libcxx? ( sys-libs/libcxx )
-	>=app-eselect/eselect-rust-0.2_pre20150206
+	>=app-eselect/eselect-rust-0.3_pre20150428
 	!dev-lang/rust:0
 "
 DEPEND="${CDEPEND}
@@ -36,12 +43,12 @@ DEPEND="${CDEPEND}
 RDEPEND="${CDEPEND}
 "
 
-S=${WORKDIR}/${MY_PV}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
-	unpack "${MY_PV}-src.tar.gz" || die
-	mkdir "${MY_PV}/dl" || die
-	cp "${DISTDIR}/rust-stage0"* "${MY_PV}/dl/" || die
+	unpack "${MY_P}-src.tar.gz" || die
+	mkdir "${MY_P}/dl" || die
+	cp "${DISTDIR}/rust-stage0"* "${MY_P}/dl/" || die
 }
 
 src_prepare() {
@@ -56,8 +63,8 @@ src_configure() {
 		--prefix="${EPREFIX}/usr" \
 		--libdir="${EPREFIX}/usr/lib/${P}" \
 		--mandir="${EPREFIX}/usr/share/${P}/man" \
+		--release-channel=${RUST_CHANNEL} \
 		--disable-manage-submodules \
-		--disable-verify-install \
 		$(use_enable clang) \
 		$(use_enable debug) \
 		$(use_enable debug llvm-assertions) \
@@ -101,17 +108,17 @@ src_install() {
 	EOF
 	doenvd "${T}"/50${P}
 
+	cat <<-EOF > "${T}/provider-${P}"
+	/usr/bin/rustdoc
+	/usr/bin/rust-gdb
+	EOF
 	dodir /etc/env.d/rust
-	touch "${D}/etc/env.d/rust/provider-${P}" || die
+	insinto /etc/env.d/rust
+	doins "${T}/provider-${P}"
 }
 
 pkg_postinst() {
 	eselect rust update --if-unset
-
-	elog "Rust uses slots now, use 'eselect rust list'"
-	elog "and 'eselect rust set' to list and set rust version."
-	elog "For more information see 'eselect rust help'"
-	elog "and http://wiki.gentoo.org/wiki/Project:Eselect/User_guide"
 
 	elog "Rust installs a helper script for calling GDB now,"
 	elog "for your convenience it is installed under /usr/bin/rust-gdb-${PV}."

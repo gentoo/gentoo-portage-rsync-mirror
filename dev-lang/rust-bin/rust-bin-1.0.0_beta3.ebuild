@@ -1,26 +1,28 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_beta.ebuild,v 1.1 2015/04/11 20:41:26 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_beta3.ebuild,v 1.1 2015/05/03 16:30:06 jauhien Exp $
 
 EAPI=5
 
 inherit eutils bash-completion-r1
 
+BETA_NUM="${PV##*beta}"
 MY_PV="${PV/_/-}"
+# beta => beta BUT beta2 => beta.2
+[ -n "${BETA_NUM}" ] && MY_PV="${MY_PV/beta/beta.}"
+MY_P="rustc-${MY_PV}"
 DESCRIPTION="Systems programming language from Mozilla"
 HOMEPAGE="http://www.rust-lang.org/"
-SRC_URI="amd64? ( http://static.rust-lang.org/dist/rust-${MY_PV}-x86_64-unknown-linux-gnu.tar.gz )
-	x86? ( http://static.rust-lang.org/dist/rust-${MY_PV}-i686-unknown-linux-gnu.tar.gz )"
+SRC_URI="amd64? ( http://static.rust-lang.org/dist/${MY_P}-x86_64-unknown-linux-gnu.tar.gz )
+	x86? ( http://static.rust-lang.org/dist/${MY_P}-i686-unknown-linux-gnu.tar.gz )"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
+IUSE=""
 
-IUSE="cargo-bundled doc"
-
-DEPEND=">=app-eselect/eselect-rust-0.2_pre20150206
+DEPEND=">=app-eselect/eselect-rust-0.3_pre20150428
 	!dev-lang/rust:0
-	cargo-bundled? ( !dev-rust/cargo )
 "
 RDEPEND="${DEPEND}"
 
@@ -30,19 +32,18 @@ src_unpack() {
 	local postfix
 	use amd64 && postfix=x86_64-unknown-linux-gnu
 	use x86 && postfix=i686-unknown-linux-gnu
-	mv "${WORKDIR}/rust-${MY_PV}-${postfix}" "${S}" || die
+	mv "${WORKDIR}/${MY_P}-${postfix}" "${S}" || die
 }
 
 src_install() {
 	local components=rustc
-	use cargo-bundled && components="${components},cargo"
-	use doc && components="${components},rust-docs"
 	./install.sh \
 		--components="${components}" \
 		--disable-verify \
 		--prefix="${D}/opt/${P}" \
 		--mandir="${D}/usr/share/${P}/man" \
-		--disable-ldconfig
+		--disable-ldconfig \
+		|| die
 
 	local rustc=rustc-bin-${PV}
 	local rustdoc=rustdoc-bin-${PV}
@@ -62,23 +63,17 @@ src_install() {
 	EOF
 	doenvd "${T}"/50${P}
 
+	cat <<-EOF > "${T}/provider-${P}"
+	/usr/bin/rustdoc
+	/usr/bin/rust-gdb
+	EOF
 	dodir /etc/env.d/rust
-	touch "${D}/etc/env.d/rust/provider-${P}" || die
-	if use cargo-bundled ; then
-		dosym "/opt/${P}/bin/cargo" /usr/bin/cargo
-		dosym "/opt/${P}/share/zsh/site-functions/_cargo" /usr/share/zsh/site-functions/_cargo
-		newbashcomp "${D}/opt/${P}/etc/bash_completion.d/cargo" cargo
-		rm -rf "${D}/opt/${P}/etc"
-	fi
+	insinto /etc/env.d/rust
+	doins "${T}/provider-${P}"
 }
 
 pkg_postinst() {
 	eselect rust update --if-unset
-
-	elog "Rust uses slots now, use 'eselect rust list'"
-	elog "and 'eselect rust set' to list and set rust version."
-	elog "For more information see 'eselect rust help'"
-	elog "and http://wiki.gentoo.org/wiki/Project:Eselect/User_guide"
 
 	elog "Rust installs a helper script for calling GDB now,"
 	elog "for your convenience it is installed under /usr/bin/rust-gdb-bin-${PV},"
