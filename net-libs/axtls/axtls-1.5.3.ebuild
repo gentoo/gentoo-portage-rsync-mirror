@@ -1,10 +1,10 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.4.8.ebuild,v 1.8 2012/09/23 08:09:43 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/axtls/axtls-1.5.3.ebuild,v 1.1 2015/05/03 15:53:48 blueness Exp $
 
-EAPI="4"
+EAPI="5"
 
-inherit eutils multilib savedconfig toolchain-funcs user
+inherit eutils multilib multilib-minimal savedconfig toolchain-funcs user
 
 ################################################################################
 # axtls CONFIG MINI-HOWTO
@@ -37,11 +37,11 @@ MY_PN=${PN/tls/TLS}
 DESCRIPTION="Embedded client/server TLSv1 SSL library and small HTTP(S) server"
 HOMEPAGE="http://axtls.sourceforge.net/"
 SRC_URI="mirror://sourceforge/axtls/${MY_PN}-${PV}.tar.gz"
-S="${WORKDIR}/${MY_PN}"
+S="${WORKDIR}/${PN}-code"
 
 LICENSE="BSD GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ~mips ppc ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~x86"
 
 IUSE="httpd cgi-lua cgi-php static static-libs doc"
 
@@ -72,100 +72,99 @@ pkg_setup() {
 }
 
 src_prepare() {
-	tc-export CC
+	tc-export AR CC
 
-	epatch "${FILESDIR}/explicit-libdir.patch"
-
-	sed -i -e 's:^LIBDIR.*/lib:LIBDIR = $(PREFIX)/'"$(get_libdir):" \
-		"${S}"/Makefile
-
-	#Use CC as the host compiler for mconf
-	sed -i -e "s:^HOSTCC.*:HOSTCC=${CC}:" \
-		"${S}"/config/Rules.mak
+	epatch "${FILESDIR}/explicit-libdir-r1.patch"
 
 	#We want CONFIG_DEBUG to avoid stripping
 	#but not for debugging info
-	sed -i -e 's: -g::' \
-		"${S}"/config/Rules.mak
-	sed -i -e 's: -g::' \
-		"${S}"/config/makefile.conf
+	sed -i -e 's: -g::' config/Rules.mak || die
+	sed -i -e 's: -g::' config/makefile.conf || die
+
+	multilib_copy_sources
 }
 
 use_flag_config() {
-	cp "${FILESDIR}"/config "${S}"/config/.config
+	cp "${FILESDIR}"/config config/.config || die
 
 	#Respect CFLAGS/LDFLAGS
 	sed -i -e "s:^CONFIG_EXTRA_CFLAGS_OPTIONS.*$:CONFIG_EXTRA_CFLAGS_OPTIONS=\"${CFLAGS}\":" \
-		"${S}"/config/.config
+		config/.config || die
 	sed -i -e "s:^CONFIG_EXTRA_LDFLAGS_OPTIONS.*$:CONFIG_EXTRA_LDFLAGS_OPTIONS=\"${LDLAGS}\":" \
-		"${S}"/config/.config
+		config/.config || die
 
 	#The logic is that the default config file enables everything and we disable
 	#here with sed unless a USE flags says to keep it
 	if use httpd; then
 		if ! use static; then
 			sed -i -e 's:^CONFIG_HTTP_STATIC_BUILD:# CONFIG_HTTP_STATIC_BUILD:' \
-				"${S}"/config/.config
+				config/.config || die
 		fi
 		if ! use cgi-php && ! use cgi-lua; then
 			sed -i -e 's:^CONFIG_HTTP_HAS_CGI:# CONFIG_HTTP_HAS_CGI:' \
-				"${S}"/config/.config
+				config/.config || die
 		fi
 		if ! use cgi-php; then
-			sed -i -e 's:,.php::' "${S}"/config/.config
+			sed -i -e 's:,.php::' config/.config || die
 		fi
 		if ! use cgi-lua; then
 			sed -i -e 's:\.lua,::' \
 				-e 's:lua:php:' \
 				-e 's:^CONFIG_HTTP_ENABLE_LUA:# CONFIG_HTTP_ENABLE_LUA:' \
-				"${S}"/config/.config
+				config/.config || die
 		fi
 	else
 		sed -i -e 's:^CONFIG_AXHTTPD:# CONFIG_AXHTTPD:' \
-			"${S}"/config/.config
+			config/.config || die
 	fi
 
-	yes "n" | emake -j1 oldconfig > /dev/null
+	yes "n" | emake -j1 oldconfig > /dev/null || die
 }
 
-src_configure() {
-	tc-export CC
+multilib_src_configure() {
+	#Per-ABI substitutions.
+	sed -i -e 's:^LIBDIR.*/lib:LIBDIR = $(PREFIX)/'"$(get_libdir):" \
+		Makefile || die
+
+	#Use CC as the host compiler for mconf
+	sed -i -e "s:^HOSTCC.*:HOSTCC=${CC}:" \
+		config/Rules.mak || die
 
 	if use savedconfig; then
 		restore_config config/.config
-		if [ -f config/.config ]; then
+		if [[ -f config/.config ]]; then
 			ewarn "Using saved config, all other USE flags ignored"
 		else
 			ewarn "No saved config, seeding with the default"
-			cp "${FILESDIR}"/config "${S}"/config/.config
+			cp "${FILESDIR}"/config config/.config || die
 		fi
-		yes "" | emake -j1 oldconfig > /dev/null
+		yes "" | emake -j1 oldconfig > /dev/null || die
 	else
 		use_flag_config
 	fi
 }
 
-src_compile() {
-	default
-	if use doc; then
-		emake docs
-		mv www README
-	fi
-}
-
-src_install() {
-	if use savedconfig; then
+multilib_src_install() {
+	if multilib_is_native_abi && use savedconfig; then
 		save_config config/.config
 	fi
 
 	emake PREFIX="${ED}/usr" install
 
 	if ! use static-libs; then
-		rm -f "${ED}"/usr/$(get_libdir)/libaxtls.a
+		rm -f "${ED}"/usr/$(get_libdir)/libaxtls.a || die
 	fi
 
-	if [ -f "${ED}"/usr/bin/htpasswd ]; then
-		mv "${ED}"/usr/bin/{,ax}htpasswd
+	# The build system needs to install before it builds docs
+	if multilib_is_native_abi && use doc; then
+		emake docs
+		dodoc -r docsrc/html
+	fi
+}
+
+multilib_src_install_all() {
+	if [[ -f "${ED}"/usr/bin/htpasswd ]]; then
+		mv "${ED}"/usr/bin/{,ax}htpasswd || die
 	fi
 
 	if use httpd; then
@@ -174,9 +173,5 @@ src_install() {
 	fi
 
 	docompress -x /usr/share/doc/${PF}/README
-	dodoc -r README
-
-	if use doc; then
-		dodoc -r docsrc/html
-	fi
+	dodoc README
 }
