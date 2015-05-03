@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/asciidoctor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/asciidoctor/ChangeLog,v 1.7 2014/12/24 10:51:29 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/asciidoctor/ChangeLog,v 1.8 2015/05/03 06:59:09 graaff Exp $
+
+  03 May 2015; Hans de Graaff <graaff@gentoo.org> asciidoctor-1.5.2.ebuild:
+  Add missing test dependency no rspec-expectations.
 
   24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -asciidoctor-0.1.4.ebuild,
   -asciidoctor-1.5.1.ebuild:

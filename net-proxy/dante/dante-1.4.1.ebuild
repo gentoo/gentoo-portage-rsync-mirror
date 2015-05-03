@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.1.ebuild,v 1.2 2014/11/02 09:29:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/dante/dante-1.4.1.ebuild,v 1.3 2015/05/03 06:58:26 jer Exp $
 
 EAPI="5"
 
@@ -35,7 +35,8 @@ src_prepare() {
 	epatch	\
 		"${FILESDIR}"/${PN}-1.4.0-socksify.patch \
 		"${FILESDIR}"/${PN}-1.4.0-osdep-format-macro.patch \
-		"${FILESDIR}"/${PN}-1.4.0-cflags.patch
+		"${FILESDIR}"/${PN}-1.4.0-cflags.patch \
+		"${FILESDIR}"/${PN}-1.4.0-HAVE_SENDBUF_IOCTL.patch
 
 	sed -i \
 		-e 's:/etc/socks\.conf:"${EPREFIX}"/etc/socks/socks.conf:' \
