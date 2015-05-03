@@ -18,6 +18,7 @@
 	<flag name="cli">Build mpv CLI player</flag>
 	<flag name="cdio">Enable CDDA support via <pkg>dev-libs/libcdio-paranoia</pkg></flag>
 	<flag name="doc-pdf">Build documentation in pdf format</flag>
+	<flag name="drm">Enable Kernel Mode Setting / Direct Rendering Manager based video output</flag>
 	<flag name="dvdnav">Enable support for DVD navigation using <pkg>media-libs/libdvdnav</pkg></flag>
 	<flag name="egl">Enable EGL backend for X11 OpenGL video output (experimental)</flag>
 	<flag name="enca">Enable support for charset discovery and conversion using <pkg>app-i18n/enca</pkg></flag>

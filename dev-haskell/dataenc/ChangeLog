@@ -1,6 +1,18 @@
 # ChangeLog for dev-haskell/dataenc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.45 2015/02/01 22:55:34 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/dataenc/ChangeLog,v 1.48 2015/05/03 21:59:14 slyfox Exp $
+
+*dataenc-0.14.0.5 (03 May 2015)
+
+  03 May 2015; Sergei Trofimovich <slyfox@gentoo.org> +dataenc-0.14.0.5.ebuild:
+  Restored accidentally dropped latest stable ebuild.
+
+  03 May 2015; Sergei Trofimovich <slyfox@gentoo.org> -dataenc-0.14.0.3.ebuild,
+  -dataenc-0.14.0.5.ebuild:
+  Drop old.
+
+  03 May 2015; Sergei Trofimovich <slyfox@gentoo.org> dataenc-0.14.0.7.ebuild:
+  Allow QuickCheck-2.8.
 
   01 Feb 2015; Alexander Vershilov <qnikst@gentoo.org>
   dataenc-0.14.0.5-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.70 2015/03/31 20:23:31 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.71 2015/05/03 21:38:11 maksbotan Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
 [[ ${PV} == *9999* ]] || \
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
+IUSE="+alsa bluray bs2b cdio +cli doc-pdf drm dvb +dvd dvdnav egl +enca encode
 +iconv jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit
 openal +opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux v4l
 vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
@@ -61,7 +61,7 @@ RDEPEND="
 			egl? ( media-libs/mesa[egl] )
 		)
 		lcms? ( >=media-libs/lcms-2.6:2 )
-		vaapi? ( >=x11-libs/libva-0.34.0[X(+),opengl?] )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
 		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -74,6 +74,7 @@ RDEPEND="
 		dev-libs/libcdio
 		dev-libs/libcdio-paranoia
 	)
+	drm? ( x11-libs/libdrm )
 	dvb? ( virtual/linuxtv-dvb-headers )
 	dvd? (
 		>=media-libs/libdvdread-4.1.3
@@ -146,7 +147,7 @@ pkg_setup() {
 
 	einfo "For additional format support you need to enable the support on your"
 	einfo "libavcodec/libavformat provider:"
-	einfo "    media-video/libav or media-video/ffmpeg"
+	einfo "    media-video/ffmpeg or media-video/libav"
 	einfo
 	einfo "Selected provider will affect mpv features and behaviour:"
 	einfo "    https://github.com/mpv-player/mpv/wiki/FFmpeg-versus-Libav"
@@ -235,6 +236,7 @@ src_configure() {
 		$(use_enable vaapi vaapi-vpp)
 		$(usex vaapi "$(use_enable opengl vaapi-glx)" '--disable-vaapi-glx')
 		$(use_enable libcaca caca)
+		$(use_enable drm)
 		$(use_enable jpeg)
 		$(use_enable raspberry-pi rpi)
 		$(use_enable raspberry-pi rpi-gles)

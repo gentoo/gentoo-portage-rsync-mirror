@@ -1,36 +1,34 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.9.1.ebuild,v 1.2 2015/05/03 08:29:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.9.1.ebuild,v 1.3 2015/05/03 21:38:11 maksbotan Exp $
 
 EAPI=5
+
+EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
+
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE='threads(+)'
+
 inherit eutils python-any-r1 waf-utils pax-utils fdo-mime gnome2-utils
+[[ ${PV} == *9999* ]] && inherit git-r3
 
 WAF_V="1.8.4"
 
 DESCRIPTION="Media player based on MPlayer and mplayer2"
 HOMEPAGE="http://mpv.io/"
 SRC_URI="http://ftp.waf.io/pub/release/waf-${WAF_V}"
-DOCS=( README.md etc/example.conf etc/input.conf )
-
-if [[ ${PV} == *9999* ]]; then
-	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
-	inherit git-r3
-	KEYWORDS="~hppa"
-else
-	SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
-	DOCS+=( RELEASE_NOTES )
-fi
+[[ ${PV} == *9999* ]] || \
+SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 # See Copyright in source tarball and bug #506946. Waf is BSD, libmpv is ISC.
 LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
-IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
+[[ ${PV} == *9999* ]] || \
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+IUSE="+alsa bluray bs2b cdio +cli doc-pdf drm dvb +dvd dvdnav egl +enca encode
 +iconv jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit
-openal +opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux
-v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
+openal +opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux v4l
+vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -63,7 +61,7 @@ RDEPEND="
 			egl? ( media-libs/mesa[egl] )
 		)
 		lcms? ( >=media-libs/lcms-2.6:2 )
-		vaapi? ( >=x11-libs/libva-0.34.0[X(+),opengl?] )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
 		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -76,6 +74,7 @@ RDEPEND="
 		dev-libs/libcdio
 		dev-libs/libcdio-paranoia
 	)
+	drm? ( x11-libs/libdrm )
 	dvb? ( virtual/linuxtv-dvb-headers )
 	dvd? (
 		>=media-libs/libdvdread-4.1.3
@@ -93,7 +92,7 @@ RDEPEND="
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
 	lua? (
-		!luajit? ( =dev-lang/lua-5.1*:= )
+		!luajit? ( >=dev-lang/lua-5.1:= )
 		luajit? ( dev-lang/luajit:2 )
 	)
 	openal? ( >=media-libs/openal-1.13 )
@@ -123,38 +122,51 @@ DEPEND="${RDEPEND}
 RDEPEND+="
 	selinux? ( sec-policy/selinux-mplayer )
 "
+DOCS=( Copyright README.md etc/example.conf etc/input.conf )
+[[ ${PV} == *9999* ]] || \
+DOCS+=( RELEASE_NOTES )
 
 pkg_setup() {
-	if ! use libass; then
+	if use !libass; then
+		ewarn
 		ewarn "You've disabled the libass flag. No OSD or subtitles will be displayed."
-	fi
-
-	if use libav; then
-		einfo "You have enabled media-video/libav instead of media-video/ffmpeg."
-		einfo "Upstream recommends media-video/ffmpeg, as some functionality is not"
-		einfo "provided by media-video/libav."
+		ewarn
 	fi
 
 	if use openal; then
-		ewarn "You have enabled the openal audio output which is a fallback"
-		ewarn "and disabled by upstream."
+		ewarn
+		ewarn "You've enabled the openal audio output which is fallback and is disabled by upstream."
+		ewarn
 	fi
 
 	if use sdl; then
-		ewarn "You have enabled the sdl video and audio outputs which are fallbacks"
-		ewarn "and are disabled by upstream."
+		ewarn
+		ewarn "You've enabled the sdl video and audio outputs which are fallbacks and are disabled by upstream."
+		ewarn
 	fi
 
 	einfo "For additional format support you need to enable the support on your"
 	einfo "libavcodec/libavformat provider:"
 	einfo "    media-video/ffmpeg or media-video/libav"
+	einfo
+	einfo "Selected provider will affect mpv features and behaviour:"
+	einfo "    https://github.com/mpv-player/mpv/wiki/FFmpeg-versus-Libav"
 
 	python-any-r1_pkg_setup
 }
 
-src_prepare() {
+src_unpack() {
+	if [[ ${PV} == *9999* ]]; then
+		git-r3_src_unpack
+	else
+		default_src_unpack
+	fi
+
 	cp "${DISTDIR}"/waf-${WAF_V} "${S}"/waf || die
 	chmod 0755 "${S}"/waf || die
+}
+
+src_prepare() {
 	epatch_user
 }
 
@@ -224,6 +236,7 @@ src_configure() {
 		$(use_enable vaapi vaapi-vpp)
 		$(usex vaapi "$(use_enable opengl vaapi-glx)" '--disable-vaapi-glx')
 		$(use_enable libcaca caca)
+		$(use_enable drm)
 		$(use_enable jpeg)
 		$(use_enable raspberry-pi rpi)
 		$(use_enable raspberry-pi rpi-gles)
