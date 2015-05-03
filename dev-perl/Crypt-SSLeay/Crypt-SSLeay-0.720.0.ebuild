@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.720.0.ebuild,v 1.1 2015/05/02 18:04:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.720.0.ebuild,v 1.2 2015/05/03 17:39:20 dilfridge Exp $
 
 EAPI=5
 
@@ -24,9 +24,9 @@ DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-CBuilder-0.280.205
 	virtual/perl-Getopt-Long
 	>=dev-perl/Path-Class-0.260.0
+	>=dev-perl/Try-Tiny-0.190.0
 	test? (
 		>=virtual/perl-Test-Simple-0.190.0
-		>=dev-perl/Try-Tiny-0.190.0
 	)
 "
 # PDEPEND: circular dependencies bug #144761

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-SSLeay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.88 2015/05/02 18:04:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/ChangeLog,v 1.89 2015/05/03 17:39:20 dilfridge Exp $
+
+  03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Crypt-SSLeay-0.720.0.ebuild:
+  Make dependency on Try::Tiny unconditional, bug 548500
 
 *Crypt-SSLeay-0.720.0 (02 May 2015)
 
