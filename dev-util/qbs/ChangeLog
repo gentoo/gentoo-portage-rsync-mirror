@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/qbs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/ChangeLog,v 1.15 2015/05/02 16:59:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/ChangeLog,v 1.16 2015/05/03 11:40:23 pesa Exp $
+
+  03 May 2015; Davide Pesavento <pesa@gentoo.org> qbs-1.4.0.ebuild:
+  Add examples USE flag.
 
   02 May 2015; Davide Pesavento <pesa@gentoo.org> qbs-1.4.0.ebuild:
   Mention upstream patch in comment, thanks to Jake Petroules

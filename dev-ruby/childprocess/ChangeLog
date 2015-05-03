@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.63 2015/04/26 17:13:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.64 2015/05/03 11:59:44 jer Exp $
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org> childprocess-0.5.3.ebuild:
+  Stable for PPC64 (bug #542574).
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> childprocess-0.5.3.ebuild:
   ppc stable wrt bug #542574
