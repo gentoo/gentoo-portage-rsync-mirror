@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/qu-prolog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.93 2015/05/03 09:28:30 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/ChangeLog,v 1.94 2015/05/03 09:47:21 keri Exp $
+
+*qu-prolog-9.5 (03 May 2015)
+
+  03 May 2015; <keri@gentoo.org> +qu-prolog-9.5.ebuild,
+  +files/qu-prolog-9.5-cflags.patch, +files/qu-prolog-9.5-portage.patch:
+  Version bump
 
   03 May 2015; <keri@gentoo.org> qu-prolog-9.1-r1.ebuild:
   Fix installation of rl_command. Closes #547412
