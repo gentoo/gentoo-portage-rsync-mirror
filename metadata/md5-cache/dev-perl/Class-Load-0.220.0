@@ -4,10 +4,10 @@ DESCRIPTION=A working (require q{Class::Name}) and more
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Class-Load/
 IUSE=test
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=~amd64 ~hppa ~ppc ~ppc64 ~x86
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=virtual/perl-Carp dev-perl/Data-OptList virtual/perl-Exporter >=dev-perl/Module-Implementation-0.40.0 >=dev-perl/Module-Runtime-0.12.0 >=dev-perl/Package-Stash-0.140.0 virtual/perl-Scalar-List-Utils dev-perl/Try-Tiny dev-perl/namespace-clean dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/E/ET/ETHER/Class-Load-0.22.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=87334d764a8d9b79db655e54f02242f4
+_md5_=b05c36f7c6a44a4d9d7bb65355cfa55d

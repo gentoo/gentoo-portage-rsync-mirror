@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/namespace-clean
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.34 2015/03/29 09:30:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/ChangeLog,v 1.35 2015/05/03 08:15:42 jer Exp $
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org>
+  namespace-clean-0.240.0-r1.ebuild:
+  Mark ~ppc64 (bug #548352).
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
   namespace-clean-0.240.0-r1.ebuild:

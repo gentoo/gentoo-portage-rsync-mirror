@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.128 2015/05/03 06:52:22 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.129 2015/05/03 08:29:53 jer Exp $
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org> mpv-0.9.1.ebuild:
+  Mark ~hppa (bug #548446).
 
   03 May 2015; Ben de Groot <yngwin@gentoo.org> mpv-0.8.3.ebuild:
   Mark stable on amd64 wrt bug #525148

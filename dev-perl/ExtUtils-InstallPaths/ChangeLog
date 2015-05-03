@@ -1,6 +1,14 @@
 # ChangeLog for dev-perl/ExtUtils-InstallPaths
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-InstallPaths/ChangeLog,v 1.3 2014/11/09 10:37:51 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-InstallPaths/ChangeLog,v 1.5 2015/05/03 08:25:26 jer Exp $
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org>
+  ExtUtils-InstallPaths-0.10.0.ebuild:
+  Mark ~hppa (bug #548352).
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org>
+  ExtUtils-InstallPaths-0.10.0.ebuild:
+  Mark ~ppc64 (bug #548352).
 
   09 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   ExtUtils-InstallPaths-0.10.0.ebuild:

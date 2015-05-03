@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-Tiny/Module-Build-Tiny-0.39.0.ebuild,v 1.1 2015/02/21 23:40:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-Tiny/Module-Build-Tiny-0.39.0.ebuild,v 1.3 2015/05/03 08:26:55 jer Exp $
 
 EAPI=5
 MODULE_AUTHOR=LEONT
@@ -9,7 +9,7 @@ inherit perl-module
 
 DESCRIPTION='A tiny replacement for Module::Build'
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86"
 IUSE="test"
 
 RDEPEND="

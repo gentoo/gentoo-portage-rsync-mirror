@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/namespace-clean-0.240.0-r1.ebuild,v 1.2 2015/03/29 09:30:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/namespace-clean/namespace-clean-0.240.0-r1.ebuild,v 1.3 2015/05/03 08:15:42 jer Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Keep imports and functions out of your namespace"
 
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~ppc ~x86 ~ppc-aix ~x64-macos"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~ppc-aix ~x64-macos"
 IUSE="test"
 
 RDEPEND="
