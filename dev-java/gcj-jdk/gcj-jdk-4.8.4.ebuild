@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.8.2.ebuild,v 1.1 2014/07/14 18:45:53 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.8.4.ebuild,v 1.1 2015/05/03 20:33:18 chewi Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SLOT="0"
 IUSE="X"
 
 ECJ_GCJ_SLOT="4.2"
-API_DIFF_PV="${PV}"
+API_DIFF_PV="4.8.2"
 
 # perl is needed for javac wrapper
 RDEPEND="

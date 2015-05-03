@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.133 2015/03/22 20:08:22 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.134 2015/05/03 20:48:01 eva Exp $
+
+*libxmlpp-2.38.0 (03 May 2015)
+
+  03 May 2015; Gilles Dartiguelongue <eva@gentoo.org> +libxmlpp-2.38.0.ebuild:
+  Version bump.
 
 *libxmlpp-2.36.0-r1 (22 Mar 2015)
 
