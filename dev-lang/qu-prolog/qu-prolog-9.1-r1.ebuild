@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-9.1-r1.ebuild,v 1.1 2015/03/21 15:29:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/qu-prolog/qu-prolog-9.1-r1.ebuild,v 1.2 2015/05/03 09:28:30 keri Exp $
 
 EAPI=5
 
@@ -67,7 +67,8 @@ src_install() {
 	use qt4 && dobin src/xqp/xqp
 
 	insinto /usr/$(get_libdir)/${PN}/bin
-	doins bin/{rl_commands,qc1.qup,qecat,qg,qp}.qx
+	doins bin/rl_commands
+	doins bin/{qc1.qup,qecat,qg,qp}.qx
 
 	insinto /usr/$(get_libdir)/${PN}/library
 	doins prolog/library/*.qo

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.14-r2.ebuild,v 1.1 2015/04/19 11:07:53 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.14-r2.ebuild,v 1.2 2015/05/03 09:23:08 tamiko Exp $
 
 EAPI=5
 
@@ -39,7 +39,8 @@ LICENSE="LGPL-2.1"
 # TODO: Reenable IUSE wireshark-plugins
 IUSE="audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm lxc \
 	+macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
-	selinux +udev uml +vepa virtualbox virt-network xen elibc_glibc systemd"
+	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
+	elibc_glibc systemd"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 	lxc? ( caps libvirtd )
 	openvz? ( libvirtd )
@@ -56,8 +57,6 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 # We can use both libnl:1.1 and libnl:3, but if you have both installed, the
 # package will use 3 by default. Since we don't have slot pinning in an API,
 # we must go with the most recent
-
-# wireshark-plugins? ( net-analyzer/wireshark:= )
 RDEPEND="sys-libs/readline
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
@@ -101,6 +100,7 @@ RDEPEND="sys-libs/readline
 	selinux? ( >=sys-libs/libselinux-2.0.85 )
 	systemd? ( sys-apps/systemd )
 	virtualbox? ( || ( app-emulation/virtualbox >=app-emulation/virtualbox-bin-2.2.0 ) )
+	wireshark-plugins? ( net-analyzer/wireshark:= )
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( virtual/udev >=x11-libs/libpciaccess-0.10.9 )
 	virt-network? ( net-dns/dnsmasq[script]
@@ -333,7 +333,7 @@ src_configure() {
 	myconf+=" $(use_with audit)"
 
 	# wireshark dissector
-	# myconf+=" $(use_with wireshark-plugins wireshark-dissector)"
+	myconf+=" $(use_with wireshark-plugins wireshark-dissector)"
 
 	## stuff we don't yet support
 	myconf+=" --without-netcf"

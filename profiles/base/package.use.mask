@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.669 2015/04/19 20:04:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.670 2015/05/03 09:29:11 tamiko Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Matthias Maier <tamiko@gentoo.org> (03 May 2015)
+# mask use flag until #546126 is resolved
+>=app-emulation/libvirt-1.2.14 wireshark-plugins
 
 # James Le Cuirot <chewi@gentoo.org> (05 Apr 2015)
 # dev-java/sun-j2me-bin is going away.

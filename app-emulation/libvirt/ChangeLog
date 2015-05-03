@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.422 2015/04/19 11:07:53 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.423 2015/05/03 09:23:08 tamiko Exp $
+
+  03 May 2015; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.13-r2.ebuild,
+  libvirt-1.2.14-r2.ebuild:
+  reenable wireshark-plugins use flag
 
 *libvirt-1.2.14-r2 (19 Apr 2015)
 *libvirt-1.2.13-r2 (19 Apr 2015)
