@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/icinga2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.35 2015/04/22 21:24:15 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/icinga2/ChangeLog,v 1.36 2015/05/03 05:25:06 prometheanfire Exp $
+
+  03 May 2015; Matthew Thode <prometheanfire@gentoo.org> files/icinga2.initd:
+  fixing reload in init script bug 548302
 
 *icinga2-2.3.4 (22 Apr 2015)
 

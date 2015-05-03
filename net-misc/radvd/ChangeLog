@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.131 2015/04/26 17:14:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.132 2015/05/03 05:04:37 prometheanfire Exp $
+
+  03 May 2015; Matthew Thode <prometheanfire@gentoo.org> files/radvd.service:
+  fixing the systemd unit file for bug 548192
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> radvd-2.10.ebuild:
   ppc stable wrt bug #547534

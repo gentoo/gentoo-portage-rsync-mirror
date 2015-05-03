@@ -68,12 +68,14 @@ stop() {
 }
 
 reload() {
-    ebegin "Checking icinga2 configuration"
-    "$DAEMON" daemon --validate >/dev/null 2>&1
-    if [ $? -ne 0 ]; then
-        eerror "Icinga2 detected configuration errors, run '$DAEMON daemon --validate' for details"
-        return 1
-    fi
+    checkconfig || return 1
+
     ebegin "Reloading icinga2"
     start-stop-daemon --signal HUP --pidfile "$ICINGA2_PID_FILE"
+
+    local retval=$?
+    if [ $retval -ne 0 ]; then
+        ewarn "Error reloading icinga2."
+    fi
+    eend $retval
 }

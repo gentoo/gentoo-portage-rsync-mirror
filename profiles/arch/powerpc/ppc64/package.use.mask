@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.64 2015/04/26 16:36:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.65 2015/05/03 05:07:35 yngwin Exp $
+
+# Ben de Groot <yngwin@gentoo.org> (03 May 2015)
+# media-libs/rubberband lacks ppc64 keyword, bug #548446
+media-video/mpv rubberband
 
 # Jeroen Roovers <jer@gentoo.org> (26 Apr 2015)
 # Needs the entire LXDE to be useful (bug #520296)
@@ -40,7 +44,7 @@ gnome-extra/sushi office
 net-misc/networkmanager wimax
 
 # Kacper Kowalik <xarthisius@gentoo.org> (09 Mar 2012)
-# Mask media-video/ffmpeg[vpx] and media-video/mplayer[vpx] 
+# Mask media-video/ffmpeg[vpx] and media-video/mplayer[vpx]
 # on ppc64 as there is no stable version yet
 media-video/ffmpeg vpx
 

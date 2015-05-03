@@ -1,32 +1,36 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.7.3.ebuild,v 1.5 2015/03/28 01:53:34 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.9.1.ebuild,v 1.1 2015/05/03 05:28:08 yngwin Exp $
 
 EAPI=5
-EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE='threads(+)'
-
 inherit eutils python-any-r1 waf-utils pax-utils fdo-mime gnome2-utils
-[[ ${PV} == *9999* ]] && inherit git-r3
 
-WAF_V="1.8.1"
+WAF_V="1.8.4"
 
-DESCRIPTION="Free, open source, and cross-platform media player (fork of MPlayer/mplayer2)"
+DESCRIPTION="Media player based on MPlayer and mplayer2"
 HOMEPAGE="http://mpv.io/"
 SRC_URI="http://ftp.waf.io/pub/release/waf-${WAF_V}"
-[[ ${PV} == *9999* ]] || \
-SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+DOCS=( README.md etc/example.conf etc/input.conf )
 
-LICENSE="GPL-2"
+if [[ ${PV} == *9999* ]]; then
+	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
+	inherit git-r3
+	KEYWORDS=""
+else
+	SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+	DOCS+=( RELEASE_NOTES )
+fi
+
+# See Copyright in source tarball and bug #506946. Waf is BSD, libmpv is ISC.
+LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
-[[ ${PV} == *9999* ]] || \
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
-+iconv jack joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
-lirc lua luajit mpg123 openal +opengl oss portaudio postproc pulseaudio pvr
-samba sdl selinux v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver
-+xv"
++iconv jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit
+openal +opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux
+v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
@@ -47,8 +51,8 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	libav? ( >=media-video/libav-10:0=[encode?,threads,vaapi?,vdpau?] )
-	!libav? ( >=media-video/ffmpeg-2.1.4:0=[encode?,threads,vaapi?,vdpau?] )
+	libav? ( >=media-video/libav-11:0=[encode?,threads,vaapi?,vdpau?] )
+	!libav? ( >=media-video/ffmpeg-2.4.0:0=[encode?,threads,vaapi?,vdpau?] )
 	sys-libs/zlib
 	X? (
 		x11-libs/libX11
@@ -83,24 +87,18 @@ RDEPEND="
 	jpeg? ( virtual/jpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? (
-		>=media-libs/libass-0.9.10:=[enca?,fontconfig]
+		>=media-libs/libass-0.12.1:=[enca?,fontconfig]
 		virtual/ttf-fonts
 	)
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
-	lirc? ( app-misc/lirc )
 	lua? (
-		!luajit? ( >=dev-lang/lua-5.1:= )
+		!luajit? ( =dev-lang/lua-5.1*:= )
 		luajit? ( dev-lang/luajit:2 )
 	)
-	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
-	portaudio? ( >=media-libs/portaudio-19_pre20111121 )
-	postproc? (
-		libav? ( >=media-libs/libpostproc-10.20140517:0= )
-		!libav? ( >=media-video/ffmpeg-2.1.4:0= )
-	)
 	pulseaudio? ( media-sound/pulseaudio )
+	rubberband? ( >=media-libs/rubberband-1.8.0 )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
 	v4l? ( media-libs/libv4l )
@@ -125,12 +123,26 @@ DEPEND="${RDEPEND}
 RDEPEND+="
 	selinux? ( sec-policy/selinux-mplayer )
 "
-DOCS=( Copyright README.md etc/example.conf etc/input.conf )
 
 pkg_setup() {
-	if use !libass; then
-		ewarn
+	if ! use libass; then
 		ewarn "You've disabled the libass flag. No OSD or subtitles will be displayed."
+	fi
+
+	if use libav; then
+		einfo "You have enabled media-video/libav instead of media-video/ffmpeg."
+		einfo "Upstream recommends media-video/ffmpeg, as some functionality is not"
+		einfo "provided by media-video/libav."
+	fi
+
+	if use openal; then
+		ewarn "You have enabled the openal audio output which is a fallback"
+		ewarn "and disabled by upstream."
+	fi
+
+	if use sdl; then
+		ewarn "You have enabled the sdl video and audio outputs which are fallbacks"
+		ewarn "and are disabled by upstream."
 	fi
 
 	einfo "For additional format support you need to enable the support on your"
@@ -140,18 +152,9 @@ pkg_setup() {
 	python-any-r1_pkg_setup
 }
 
-src_unpack() {
-	if [[ ${PV} == *9999* ]]; then
-		git-r3_src_unpack
-	else
-		default_src_unpack
-	fi
-
+src_prepare() {
 	cp "${DISTDIR}"/waf-${WAF_V} "${S}"/waf || die
 	chmod 0755 "${S}"/waf || die
-}
-
-src_prepare() {
 	epatch_user
 }
 
@@ -165,6 +168,7 @@ src_configure() {
 		--disable-build-date	# keep build reproducible
 		--disable-optimize	# do not add '-O2' to CFLAGS
 		--disable-debug-build	# do not add '-g' to CFLAGS
+		--disable-test		# avoid dev-util/cmocka automagic
 		$(use_enable doc-pdf pdf-build)
 		$(use_enable vf-dlopen vf-dlopen-filters)
 		$(use_enable cli zsh-comp)
@@ -177,22 +181,19 @@ src_configure() {
 		$(use_enable libass)
 		$(use_enable libass libass-osd)
 		$(use_enable encode encoding)
-		$(use_enable joystick)
-		$(use_enable lirc)
 		$(use_enable bluray libbluray)
 		$(use_enable dvd dvdread)
 		$(use_enable dvdnav)
 		$(use_enable cdio cdda)
 		$(use_enable enca)
-		$(use_enable mpg123)
 		$(use_enable ladspa)
+		$(use_enable rubberband)
 		$(use_enable bs2b libbs2b)
 		$(use_enable lcms lcms2)
 		--disable-vapoursynth	# vapoursynth is not packaged
 		--disable-vapoursynth-lazy
 		--enable-libavfilter
 		--enable-libavdevice
-		$(use_enable postproc libpostproc)
 		$(usex luajit '--lua=luajit' '')
 
 		# audio outputs
@@ -201,7 +202,6 @@ src_configure() {
 		$(use_enable oss oss-audio)
 		--disable-rsound	# media-sound/rsound is in pro-audio overlay only
 		$(use_enable pulseaudio pulse)
-		$(use_enable portaudio)
 		$(use_enable jack)
 		$(use_enable openal)
 		$(use_enable alsa)
@@ -225,6 +225,8 @@ src_configure() {
 		$(usex vaapi "$(use_enable opengl vaapi-glx)" '--disable-vaapi-glx')
 		$(use_enable libcaca caca)
 		$(use_enable jpeg)
+		$(use_enable raspberry-pi rpi)
+		$(use_enable raspberry-pi rpi-gles)
 
 		# hwaccels
 		$(use_enable vaapi vaapi-hwaccel)
@@ -235,7 +237,6 @@ src_configure() {
 		$(use_enable v4l tv-v4l2)
 		$(use_enable v4l libv4l2)
 		$(use_enable pvr)
-		$(use_enable dvb)
 		$(use_enable dvb dvbin)
 	)
 	waf-utils_src_configure "${mywafargs[@]}"
