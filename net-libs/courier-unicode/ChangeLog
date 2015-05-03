@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/courier-unicode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-unicode/ChangeLog,v 1.5 2015/05/01 04:30:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-unicode/ChangeLog,v 1.6 2015/05/03 07:15:55 jer Exp $
+
+  03 May 2015; Jeroen Roovers <jer@gentoo.org> courier-unicode-1.1.ebuild:
+  Stable for HPPA PPC64 (bug #548176).
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> courier-unicode-1.1.ebuild:
   Marked ~ppc64 (bug #532520).

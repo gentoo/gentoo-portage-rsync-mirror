@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/configliere-0.4.22.ebuild,v 1.3 2014/11/03 15:09:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/configliere-0.4.22.ebuild,v 1.4 2015/05/03 07:06:08 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -22,7 +22,7 @@ IUSE=""
 
 ruby_add_rdepend "
 	>=dev-ruby/highline-1.5.2
-	>=dev-ruby/multi_json-1.1"
+	>=dev-ruby/multi_json-1.10.1"
 
 all_ruby_prepare() {
 	rm Gemfile* || die

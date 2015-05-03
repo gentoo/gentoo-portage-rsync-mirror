@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/coolio-1.3.0.ebuild,v 1.1 2015/04/03 10:52:58 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/coolio/coolio-1.3.0.ebuild,v 1.2 2015/05/03 07:30:31 graaff Exp $
 
 EAPI=5
 
 # iobuffer: -rbx
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
-RUBY_FAKEGEM_RECIPE_TEST="rspec2"
+RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_EXTRADOC="CHANGES.md README.md"
 RUBY_FAKEGEM_NAME="cool.io"
 
@@ -36,6 +36,10 @@ all_ruby_prepare() {
 	sed -i -e '/[Bb]undler/d' Rakefile || die
 	sed -i -e '28i  s.add_dependency "iobuffer"' ${RUBY_FAKEGEM_GEMSPEC} || die
 	sed -i -e '/git ls-files/d' ${RUBY_FAKEGEM_GEMSPEC} || die
+
+	# Avoid dependency on rake-compiler
+	sed -i -e '/extensiontask/ s:^:#:' \
+		-e '/ExtensionTask/,/^end/ s:^:#:' Rakefile || die
 
 	# Remove specs that require network connectivity
 	rm spec/dns_spec.rb || die

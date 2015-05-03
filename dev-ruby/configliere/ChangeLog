@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/configliere
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.8 2014/11/03 15:09:09 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.9 2015/05/03 07:06:08 graaff Exp $
+
+  03 May 2015; Hans de Graaff <graaff@gentoo.org> configliere-0.4.22.ebuild:
+  Update dependency to the version in the gemspec.
 
   03 Nov 2014; Manuel Rüger <mrueg@gentoo.org> configliere-0.4.18-r1.ebuild,
   configliere-0.4.22.ebuild:
