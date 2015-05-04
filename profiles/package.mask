@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16516 2015/05/03 08:08:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16517 2015/05/03 23:22:10 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -185,19 +185,6 @@ dev-java/sun-j2me-bin
 # Dead upstream. Fails to build (bug #543644).
 >=sys-devel/dragonegg-3.6
 
-# Mikle Kolyada <zlogene@gentoo.org> (2 Apr 2015)
-# Dead upstream. Fails tests (byg #442770).
-# Doesn't build with never perl versions.
-# Masked for removal in 30 days.
-dev-perl/Apache-AuthTicket
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (2 Apr 2015)
-# Ancient, dead upstream. File collisions (bug 535700)
-# and build failures (bug 277670). Masked for removal in
-# 30 days.
-dev-perl/Eidetic
-app-admin/rackview
-
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (30 Mar 2015)
 # Does not build against glibc-2.20 or modern X servers, bug #544904.
 # Removal in 30 days.
@@ -350,12 +337,6 @@ virtual/httpd-php:5.3
 # Anthony G. Basile <blueness@gentoo.org> (28 Jan 2015)
 # Its broken and we're waiting for fixes from upstream, bug #536196
 =net-misc/tor-0.2.6.2_alpha-r1
-
-# Mikle Kolyada <zlogene@gentoo.org> (22 Jan 2015)
-# Unclear license (bug 253443).
-# No one uses it anymore. You can
-# use dev-perl/Geo-IP instead.
-dev-perl/IP-Country
 
 # Anthony G. Basile <blueness@gentoo.org> (9 Jan 2015)
 # p.mask the -9999 version
