@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1066 2015/04/26 17:43:59 zorry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1067 2015/05/04 03:02:04 vapier Exp $
+
+  04 May 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.8.4.ebuild:
+  Mark arm stable #545124.
 
   26 Apr 2015; Magnus Granberg <zorry@gentoo.org> gcc-5.1.0.ebuild:
   Add hardened support to gcc 5.1

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ldns
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.65 2015/03/02 09:34:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ldns/ChangeLog,v 1.66 2015/05/04 03:15:23 radhermit Exp $
+
+  04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ldns-1.6.17.ebuild:
   Stable for ppc, wrt bug #525270

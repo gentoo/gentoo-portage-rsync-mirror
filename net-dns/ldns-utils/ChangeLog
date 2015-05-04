@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ldns-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.33 2015/01/15 08:39:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.34 2015/05/04 03:14:39 radhermit Exp $
+
+  04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
   15 Jan 2015; Agostino Sarubbo <ago@gentoo.org> ldns-utils-1.6.12.ebuild:
   Stable for ppc, wrt bug #536226

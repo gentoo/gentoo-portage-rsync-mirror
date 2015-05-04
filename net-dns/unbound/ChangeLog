@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/unbound
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.92 2015/05/04 00:49:30 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/ChangeLog,v 1.93 2015/05/04 03:16:14 radhermit Exp $
+
+  04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
+  Remove myself as maintainer.
 
 *unbound-1.5.3 (04 May 2015)
 
