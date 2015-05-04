@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/deep_merge
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deep_merge/ChangeLog,v 1.8 2015/02/01 11:36:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/deep_merge/ChangeLog,v 1.9 2015/05/04 02:18:46 robbat2 Exp $
+
+  04 May 2015; Robin H. Johnson <robbat2@gentoo.org> deep_merge-1.0.1.ebuild:
+  Infra bump to add ~x86 keyword.
 
   01 Feb 2015; Hans de Graaff <graaff@gentoo.org> deep_merge-1.0.1.ebuild:
   Add ruby22.
