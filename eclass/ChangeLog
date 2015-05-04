@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1601 2015/05/04 18:59:30 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1602 2015/05/04 20:02:26 grknight Exp $
+
+  04 May 2015; <grknight@gentoo.org> php-ext-source-r2.eclass:
+  Fix documentation of 3 variables in php-ext-source-r2 eclass
 
   04 May 2015; <grknight@gentoo.org> php-ext-source-r2.eclass:
   Make USE_PHP a REQUIRED variable for the php-ext-source-r2 eclass
