@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/posix_ipc/posix_ipc-0.9.8.ebuild,v 1.2 2015/04/30 17:07:27 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/posix_ipc/posix_ipc-0.9.8.ebuild,v 1.3 2015/05/04 15:18:47 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
+DISTUTILS_IN_SOURCE_BUILD=1
 
 inherit distutils-r1
 

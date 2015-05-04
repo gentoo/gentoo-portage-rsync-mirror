@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.9.1.ebuild,v 1.4 2015/05/04 12:47:36 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.9.1.ebuild,v 1.5 2015/05/04 15:21:35 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -17,7 +17,6 @@ DOCS=( README.md etc/example.conf etc/input.conf )
 if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 	inherit git-r3
-	KEYWORDS=""
 else
 	SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
@@ -63,7 +62,7 @@ RDEPEND="
 			egl? ( media-libs/mesa[egl] )
 		)
 		lcms? ( >=media-libs/lcms-2.6:2 )
-		vaapi? ( >=x11-libs/libva-0.34.0[X(+),opengl?] )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
 		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -94,7 +93,7 @@ RDEPEND="
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
 	lua? (
-		!luajit? ( =dev-lang/lua-5.1*:= )
+		!luajit? ( || ( =dev-lang/lua-5.1*:= =dev-lang/lua-5.2*:= ) )
 		luajit? ( dev-lang/luajit:2 )
 	)
 	openal? ( >=media-libs/openal-1.13 )

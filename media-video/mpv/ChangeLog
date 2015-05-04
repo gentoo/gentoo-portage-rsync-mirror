@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mpv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.132 2015/05/04 13:15:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/ChangeLog,v 1.133 2015/05/04 15:21:35 yngwin Exp $
+
+  04 May 2015; Ben de Groot <yngwin@gentoo.org> mpv-0.8.3.ebuild,
+  mpv-0.9.1.ebuild, mpv-9999.ebuild:
+  ebuild improvements, thanks to Nikoli and kensington
 
   04 May 2015; Ben de Groot <yngwin@gentoo.org> metadata.xml:
   Make my de facto primary maintainer role more explicit

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.0.ebuild,v 1.1 2015/04/30 21:04:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.0.ebuild,v 1.2 2015/05/04 15:09:48 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -42,7 +42,7 @@ RDEPEND="
 	>=dev-python/boto-2.32.1[${PYTHON_USEDEP}]
 	>=dev-python/decorator-3.4.0[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.16.1[${PYTHON_USEDEP}]
-	<dev-python/eventlet-0.17.0[${PYTHON_USEDEP}]
+	!~dev-python/eventlet-0.17.0[${PYTHON_USEDEP}]
 	>=dev-python/jinja-2.6[${PYTHON_USEDEP}]
 	>=dev-python/keystonemiddleware-1.5.0[${PYTHON_USEDEP}]
 	<dev-python/keystonemiddleware-1.6.0[${PYTHON_USEDEP}]

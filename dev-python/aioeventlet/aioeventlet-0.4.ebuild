@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aioeventlet/aioeventlet-0.4.ebuild,v 1.1 2015/02/26 05:12:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aioeventlet/aioeventlet-0.4.ebuild,v 1.2 2015/05/04 15:02:32 prometheanfire Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="
-	>=dev-python/eventlet-0.17.1[${PYTHON_USEDEP}]
+	dev-python/eventlet[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep '>=dev-python/asyncio-0.4.1[${PYTHON_USEDEP}]' 'python3_3')
 	$(python_gen_cond_dep '>=dev-python/trollius-0.3[${PYTHON_USEDEP}]' 'python2_7')"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

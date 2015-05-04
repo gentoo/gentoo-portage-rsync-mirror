@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/aioeventlet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aioeventlet/ChangeLog,v 1.1 2015/02/26 05:12:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aioeventlet/ChangeLog,v 1.2 2015/05/04 15:02:32 prometheanfire Exp $
+
+  04 May 2015; Matthew Thode <prometheanfire@gentoo.org> aioeventlet-0.4.ebuild:
+  relaxing constraint on eventlet
 
 *aioeventlet-0.4 (26 Feb 2015)
 
