@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/glance
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.67 2015/04/30 20:19:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/ChangeLog,v 1.69 2015/05/04 15:55:00 prometheanfire Exp $
+
+  04 May 2015; Matthew Thode <prometheanfire@gentoo.org> glance-2015.1.0.ebuild,
+  glance-2015.1.9999.ebuild:
+  turns out you can't glob in quotes
+
+  04 May 2015; Matthew Thode <prometheanfire@gentoo.org> glance-2015.1.0.ebuild,
+  glance-2015.1.9999.ebuild:
+  fix installing files that don't exist
 
   30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> glance-2015.1.0.ebuild:
   adding keywords
