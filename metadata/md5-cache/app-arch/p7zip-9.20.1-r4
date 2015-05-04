@@ -11,4 +11,4 @@ REQUIRED_USE=kde? ( wxwidgets )
 SLOT=0
 SRC_URI=mirror://sourceforge/p7zip/p7zip_9.20.1_src_all.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=4df91b31198aba0c369c679773b8c3ab
+_md5_=cba90ab5115702013e4f723e9bafbf7c

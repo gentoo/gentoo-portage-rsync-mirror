@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gazebo/gazebo-5.1.0.ebuild,v 1.1 2015/04/14 15:51:09 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gazebo/gazebo-5.1.0.ebuild,v 1.2 2015/05/04 12:14:40 aballier Exp $
 
 EAPI=5
 
@@ -39,6 +39,7 @@ RDEPEND="
 	media-libs/freeimage
 "
 DEPEND="${RDEPEND}
+	dev-qt/qttest:4
 	app-text/ronn
 	virtual/pkgconfig
 "

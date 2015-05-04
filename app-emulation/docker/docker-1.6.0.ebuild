@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.0.ebuild,v 1.2 2015/04/29 18:15:28 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.0.ebuild,v 1.3 2015/05/04 12:05:27 jlec Exp $
 
 EAPI=5
 
@@ -62,6 +62,7 @@ RDEPEND="
 	aufs? (
 		|| (
 			sys-fs/aufs3
+			sys-fs/aufs4
 			sys-kernel/aufs-sources
 		)
 	)
