@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/mime-types
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.65 2015/04/11 09:21:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mime-types/ChangeLog,v 1.67 2015/05/04 05:26:37 graaff Exp $
+
+  04 May 2015; Hans de Graaff <graaff@gentoo.org> mime-types-1.25.1.ebuild,
+  mime-types-2.4.3.ebuild, mime-types-2.4.3-r1.ebuild, mime-types-2.5.ebuild:
+  Add missing ~alpha keywords, bug 521318.
+
+*mime-types-2.5 (04 May 2015)
+
+  04 May 2015; Hans de Graaff <graaff@gentoo.org> +mime-types-2.5.ebuild:
+  Version bump.
 
   11 Apr 2015; Hans de Graaff <graaff@gentoo.org> mime-types-1.25.1.ebuild:
   Add ruby22.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50-r2.ebuild,v 1.1 2015/03/05 04:45:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/arcload-0.50-r3.ebuild,v 1.1 2015/05/04 05:01:22 kumba Exp $
 
 EAPI=4
 
@@ -36,10 +36,10 @@ src_prepare() {
 	epatch "${PATCHDIR}"/${P}-makefile-targets.patch
 
 	# Patches borrowed from Debian:
-	# - Load ELF64 images on 32-bit systems
+	# - Load ELF64 images on 32-bit systems - XXX: #543978
 	# - Pass an arcload label name directly on the PROM cmdline.
 	# - Look for arc.cf in /etc and fallback to /.
-	epatch "${PATCHDIR}"/${P}_deb-elf64-on-m32.patch
+#	epatch "${PATCHDIR}"/${P}_deb-elf64-on-m32.patch
 	epatch "${PATCHDIR}"/${P}_deb-cmdline-config.patch
 	epatch "${PATCHDIR}"/${P}_deb-config-in-etc.patch
 

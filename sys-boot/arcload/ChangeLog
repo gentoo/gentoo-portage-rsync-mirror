@@ -1,6 +1,13 @@
 # ChangeLog for sys-boot/arcload
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.18 2015/03/21 18:22:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcload/ChangeLog,v 1.19 2015/05/04 05:01:22 kumba Exp $
+
+*arcload-0.50-r3 (04 May 2015)
+
+  04 May 2015; Joshua Kinard <kumba@gentoo.org> -arcload-0.50-r2.ebuild,
+  +arcload-0.50-r3.ebuild:
+  Comment out the 'deb-elf64-on-m32' patch due to problems on some systems. See
+  #543978.
 
   21 Mar 2015; Joshua Kinard <kumba@gentoo.org> +arcload-0.50-r1.ebuild:
   Add arcload-0.50-r1 back until Bug #543978 can be resolved.
