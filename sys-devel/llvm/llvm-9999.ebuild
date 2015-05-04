@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.104 2015/04/16 11:55:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.105 2015/05/04 16:01:35 voyageur Exp $
 
 EAPI=5
 
@@ -465,11 +465,14 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	insinto /usr/share/vim/vimfiles/syntax
-	doins utils/vim/*.vim
+	pushd utils/vim >/dev/null || die
+	for dir in */; do
+		insinto /usr/share/vim/vimfiles/${dir}
+		doins ${dir}/*.vim
+	done
 
 	if use clang; then
-		cd tools/clang || die
+		pushd tools/clang >/dev/null || die
 
 		if use static-analyzer ; then
 			dobin tools/scan-build/ccc-analyzer

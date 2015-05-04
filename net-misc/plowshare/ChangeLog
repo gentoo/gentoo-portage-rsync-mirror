@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/plowshare
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.35 2015/04/30 14:47:02 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/plowshare/ChangeLog,v 1.36 2015/05/04 16:16:07 voyageur Exp $
+
+*plowshare-2.1.1 (04 May 2015)
+
+  04 May 2015; Bernard Cafarelli <voyageur@gentoo.org> +plowshare-2.1.1.ebuild:
+  Version bump
 
   30 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org>
   plowshare-2.1.0-r1.ebuild:

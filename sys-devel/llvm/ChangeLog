@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.238 2015/04/16 11:55:18 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.239 2015/05/04 16:01:35 voyageur Exp $
+
+  04 May 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
+  Fix vim files installation, thanks Tobias Jakobi. Note this does not fix
+  USE=clang build, which still needs the cmake rewrite
 
   16 Apr 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.3-r3.ebuild,
   llvm-3.4.2.ebuild, llvm-3.5.0.ebuild, llvm-3.5.1.ebuild, llvm-3.5.2.ebuild,
