@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.407 2015/05/03 06:14:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.408 2015/05/04 10:06:39 ago Exp $
+
+  04 May 2015; Agostino Sarubbo <ago@gentoo.org> curl-7.42.1.ebuild:
+  Stable for amd64, wrt bug #548130
 
   03 May 2015; Jeroen Roovers <jer@gentoo.org> curl-7.42.1.ebuild:
   Stable for HPPA (bug #548130).
