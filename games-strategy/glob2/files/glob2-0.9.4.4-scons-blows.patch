@@ -1,5 +1,5 @@
---- SConstruct.orig	2010-11-19 17:56:30.206360948 -0500
-+++ SConstruct	2010-11-19 17:58:48.914746243 -0500
+--- SConstruct.orig
++++ SConstruct
 @@ -1,6 +1,7 @@
  EnsureSConsVersion(0, 96, 92)
  import sys

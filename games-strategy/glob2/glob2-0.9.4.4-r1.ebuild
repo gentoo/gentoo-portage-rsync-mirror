@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.4-r1.ebuild,v 1.4 2013/12/24 12:57:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.9.4.4-r1.ebuild,v 1.5 2015/05/04 21:21:32 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils gnome2-utils scons-utils games
@@ -27,7 +27,7 @@ RDEPEND="
 	virtual/opengl"
 DEPEND="${RDEPEND}"
 
-PATCHES=( "${FILESDIR}"/${P}-{gcc44,scons-blows,underlinking}.patch )
+PATCHES=( "${FILESDIR}"/${P}-{gcc44,scons-blows,underlinking,gcc49}.patch )
 
 src_configure() {
 	myesconsargs=(

@@ -1,6 +1,5 @@
-diff -burN glob2-0.9.4.4.orig/SConstruct glob2-0.9.4.4/SConstruct
---- glob2-0.9.4.4.orig/SConstruct	2009-08-30 21:23:30.000000000 +0200
-+++ glob2-0.9.4.4/SConstruct	2013-10-24 21:03:46.755492770 +0200
+--- glob2-0.9.4.4.orig/SConstruct
++++ glob2-0.9.4.4/SConstruct
 @@ -110,6 +110,16 @@
              print "Could not find libz or zlib1.dll"
              missing.append("zlib")
