@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1600 2015/05/02 20:23:56 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1601 2015/05/04 18:59:30 grknight Exp $
+
+  04 May 2015; <grknight@gentoo.org> php-ext-source-r2.eclass:
+  Make USE_PHP a REQUIRED variable for the php-ext-source-r2 eclass
 
   02 May 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass:
   Make java-pkg_doso always install with mode 0755, which is more like
