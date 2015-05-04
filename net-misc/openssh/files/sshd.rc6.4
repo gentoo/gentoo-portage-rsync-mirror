@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6.4,v 1.4 2015/04/13 05:12:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6.4,v 1.5 2015/05/04 02:56:25 vapier Exp $
 
 extra_commands="checkconfig"
 extra_started_commands="reload"
@@ -13,26 +13,24 @@ extra_started_commands="reload"
 
 depend() {
 	use logger dns
-	if [ "${rc_need+set}" = "set" ]; then
+	if [ "${rc_need+set}" = "set" ] ; then
 		: # Do nothing, the user has explicitly set rc_need
 	else
-		warn_addr=''
+		local x warn_addr
 		for x in $(awk '/^ListenAddress/{ print $2 }' "$SSHD_CONFIG" 2>/dev/null) ; do
-			case "$x" in
+			case "${x}" in
 				0.0.0.0|0.0.0.0:*) ;;
 				::|\[::\]*) ;;
-				*) warn_addr="${warn_addr} $x" ;;
+				*) warn_addr="${warn_addr} ${x}" ;;
 			esac
 		done
-		unset x
-		if [ "${warn_addr:+set}" = "set" ]; then
+		if [ -n "${warn_addr}" ] ; then
 			need net
 			ewarn "You are binding an interface in ListenAddress statement in your sshd_config!"
 			ewarn "You must add rc_need=\"net.FOO\" to your /etc/conf.d/sshd"
 			ewarn "where FOO is the interface(s) providing the following address(es):"
 			ewarn "${warn_addr}"
 		fi
-		unset warn_addr
 	fi
 }
 

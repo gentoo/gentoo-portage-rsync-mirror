@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.19 2015/04/25 01:54:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-99999999.ebuild,v 1.20 2015/05/04 02:35:57 vapier Exp $
 
 # For released versions, we precompile the man/html pages and store
 # them in a tarball on our mirrors.  This avoids ugly issues while
@@ -109,7 +109,10 @@ src_install() {
 	local u
 	for u in clockdiff rarpd rdisc tftpd tracepath ; do
 		if use ${u} ; then
-			dosbin ${u}
+			case ${u} in
+			clockdiff) dobin ${u};;
+			*) dosbin ${u};;
+			esac
 			doman doc/${u}.8
 		fi
 	done
