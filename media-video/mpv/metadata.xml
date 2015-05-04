@@ -2,10 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer>
-	<email>maksbotan@gentoo.org</email>
+	<email>yngwin@gentoo.org</email>
+	<description>primary maintainer</description>
 </maintainer>
 <maintainer>
-	<email>yngwin@gentoo.org</email>
+	<email>maksbotan@gentoo.org</email>
 </maintainer>
 <maintainer>
 	<email>nikoli@gmx.us</email>
