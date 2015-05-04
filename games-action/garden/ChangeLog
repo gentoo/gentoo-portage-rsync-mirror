@@ -1,6 +1,14 @@
 # ChangeLog for games-action/garden
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.14 2014/07/28 18:54:45 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/ChangeLog,v 1.15 2015/05/04 21:32:13 mr_bones_ Exp $
+
+*garden-1.0.9 (04 May 2015)
+
+  04 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/garden-1.0.8-dash.patch, +files/garden-1.0.9-dash.patch,
+  +files/garden-1.0.9-resources.patch, +garden-1.0.9.ebuild,
+  garden-1.0.8-r1.ebuild:
+  version bump
 
   28 Jul 2014; Michael Sterrett <mr_bones_@gentoo.org> -garden-1.0.8.ebuild:
   old
