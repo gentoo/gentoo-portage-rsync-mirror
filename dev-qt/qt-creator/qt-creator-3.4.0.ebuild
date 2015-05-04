@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.3 2015/05/04 00:09:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.4 2015/05/04 19:50:14 pesa Exp $
 
 EAPI=5
 
@@ -57,7 +57,7 @@ RDEPEND="
 	>=dev-qt/qtxml-${QT_PV}
 	>=sys-devel/gdb-7.5[client,python]
 	clang? ( >=sys-devel/clang-3.2:= )
-	qbs? ( >=dev-util/qbs-1.4.0 )
+	qbs? ( >=dev-util/qbs-1.4.0-r1 )
 	systemd? ( sys-apps/systemd:= )
 	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )
 "
@@ -119,6 +119,8 @@ src_configure() {
 		IDE_PACKAGE_MODE=1 \
 		LLVM_INSTALL_DIR="${EPREFIX}/usr" \
 		QBS_INSTALL_DIR="${EPREFIX}/usr" \
+		CONFIG+=qbs_disable_rpath \
+		CONFIG+=qbs_enable_project_file_updates \
 		$(use systemd && echo CONFIG+=journald) \
 		$(use test && echo BUILD_TESTS=1) \
 		USE_SYSTEM_BOTAN=1
