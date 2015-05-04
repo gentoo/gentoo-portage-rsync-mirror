@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.2 2015/04/28 16:11:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.4.0.ebuild,v 1.3 2015/05/04 00:09:31 pesa Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~arm ~x86"
 QTC_PLUGINS=('android:android|qmakeandroidsupport' autotools:autotoolsprojectmanager baremetal
 	bazaar clang:clangcodemodel clearcase cmake:cmakeprojectmanager cvs git ios mercurial
 	perforce python:pythoneditor qbs:qbsprojectmanager qnx subversion valgrind winrt)
-IUSE="debug doc systemd test ${QTC_PLUGINS[@]%:*}"
+IUSE="doc systemd test webkit ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
 QT_PV="5.3.2:5"
@@ -59,6 +59,7 @@ RDEPEND="
 	clang? ( >=sys-devel/clang-3.2:= )
 	qbs? ( >=dev-util/qbs-1.4.0 )
 	systemd? ( sys-apps/systemd:= )
+	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )
 "
 DEPEND="${RDEPEND}
 	>=dev-qt/linguist-tools-${QT_PV}
@@ -92,6 +93,12 @@ src_prepare() {
 				src/plugins/plugins.pro || die "failed to disable ${plugin%:*} plugin"
 		fi
 	done
+
+	# automagic dep on qtwebkit (bug 538236)
+	if ! use webkit; then
+		sed -i -e 's/isEmpty(QT\.webkitwidgets\.name)/true/' \
+			src/plugins/help/help.pro || die "failed to disable webkit"
+	fi
 
 	# disable broken or unreliable tests
 	sed -i -e '/lexer/d' tests/auto/cplusplus/cplusplus.pro || die

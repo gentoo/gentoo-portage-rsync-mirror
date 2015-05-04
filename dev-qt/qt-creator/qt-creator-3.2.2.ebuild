@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.7 2015/04/01 20:57:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt-creator/qt-creator-3.2.2.ebuild,v 1.8 2015/05/04 00:09:31 pesa Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~arm ~ppc ~x86"
 QTC_PLUGINS=(android autotools:autotoolsprojectmanager baremetal bazaar
 	clang:clangcodemodel clearcase cmake:cmakeprojectmanager cvs git
 	ios mercurial perforce python:pythoneditor qnx subversion valgrind)
-IUSE="debug doc test ${QTC_PLUGINS[@]%:*}"
+IUSE="debug doc test webkit ${QTC_PLUGINS[@]%:*}"
 
 # minimum Qt version required
 QT_PV="4.8.5:4"
@@ -47,8 +47,9 @@ RDEPEND="
 	>=dev-qt/qtscript-${QT_PV}
 	>=dev-qt/qtsql-${QT_PV}
 	>=dev-qt/qtsvg-${QT_PV}[accessibility]
-	>=sys-devel/gdb-7.4[client(+),python]
+	>=sys-devel/gdb-7.5[client,python]
 	clang? ( >=sys-devel/clang-3.2:= )
+	webkit? ( >=dev-qt/qtwebkit-${QT_PV} )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -74,6 +75,12 @@ src_prepare() {
 				src/plugins/plugins.pro || die "failed to disable ${plugin%:*} plugin"
 		fi
 	done
+
+	# automagic dep on qtwebkit (bug 538236)
+	if ! use webkit; then
+		sed -i -e 's/contains(QT_CONFIG, webkit).*$/DEFINES += QT_NO_WEBKIT/' \
+			src/plugins/help/help.pro || die "failed to disable webkit"
+	fi
 
 	# disable broken or unreliable tests
 	sed -i -e '/lexer/d' tests/auto/cplusplus/cplusplus.pro || die
@@ -112,9 +119,10 @@ src_install() {
 	# install documentation
 	if use doc; then
 		emake docs
-		insinto /usr/share/doc/${PF}
+		# don't use ${PF} or the doc will not be found
+		insinto /usr/share/doc/qtcreator
 		doins share/doc/qtcreator/qtcreator{,-dev}.qch
-		docompress -x /usr/share/doc/${PF}/qtcreator{,-dev}.qch
+		docompress -x /usr/share/doc/qtcreator/qtcreator{,-dev}.qch
 	fi
 
 	# install desktop file
