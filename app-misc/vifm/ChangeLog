@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/vifm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.51 2015/02/21 12:05:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vifm/ChangeLog,v 1.52 2015/05/04 09:26:53 nimiux Exp $
+
+  04 May 2015; Chema Alonso <nimiux@gentoo.org> vifm-0.7.2.ebuild,
+  vifm-0.7.7.ebuild, vifm-0.7.8.ebuild:
+  Update homepage
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> vifm-0.7.8.ebuild:
   Stable for ppc, wrt bug #533696
