@@ -1,6 +1,11 @@
 # ChangeLog for sci-libs/armadillo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.32 2015/04/03 12:32:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/armadillo/ChangeLog,v 1.33 2015/05/04 13:57:42 jlec Exp $
+
+  04 May 2015; Justin Lecher <jlec@gentoo.org> armadillo-4.600.4.ebuild,
+  armadillo-4.650.2.ebuild, armadillo-4.650.4.ebuild, metadata.xml:
+  Remove atlas support, fixes bug #541524, fixes https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/108; thanks Marius Brehler
 
 *armadillo-4.650.4 (03 Apr 2015)
 
