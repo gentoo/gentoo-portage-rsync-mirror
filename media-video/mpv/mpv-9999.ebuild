@@ -1,30 +1,32 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.71 2015/05/03 21:38:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.72 2015/05/04 12:47:36 yngwin Exp $
 
 EAPI=5
-
-EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
-
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE='threads(+)'
-
 inherit eutils python-any-r1 waf-utils pax-utils fdo-mime gnome2-utils
-[[ ${PV} == *9999* ]] && inherit git-r3
 
 WAF_V="1.8.4"
 
 DESCRIPTION="Media player based on MPlayer and mplayer2"
 HOMEPAGE="http://mpv.io/"
 SRC_URI="http://ftp.waf.io/pub/release/waf-${WAF_V}"
-[[ ${PV} == *9999* ]] || \
-SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+DOCS=( README.md etc/example.conf etc/input.conf )
+
+if [[ ${PV} == *9999* ]]; then
+	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
+	inherit git-r3
+	KEYWORDS=""
+else
+	SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
+	DOCS+=( RELEASE_NOTES )
+fi
 
 # See Copyright in source tarball and bug #506946. Waf is BSD, libmpv is ISC.
 LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
-[[ ${PV} == *9999* ]] || \
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 IUSE="+alsa bluray bs2b cdio +cli doc-pdf drm dvb +dvd dvdnav egl +enca encode
 +iconv jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit
 openal +opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux v4l
@@ -61,7 +63,7 @@ RDEPEND="
 			egl? ( media-libs/mesa[egl] )
 		)
 		lcms? ( >=media-libs/lcms-2.6:2 )
-		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+),opengl?] )
 		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -92,7 +94,7 @@ RDEPEND="
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
 	lua? (
-		!luajit? ( >=dev-lang/lua-5.1:= )
+		!luajit? ( =dev-lang/lua-5.1*:= )
 		luajit? ( dev-lang/luajit:2 )
 	)
 	openal? ( >=media-libs/openal-1.13 )
@@ -122,51 +124,38 @@ DEPEND="${RDEPEND}
 RDEPEND+="
 	selinux? ( sec-policy/selinux-mplayer )
 "
-DOCS=( Copyright README.md etc/example.conf etc/input.conf )
-[[ ${PV} == *9999* ]] || \
-DOCS+=( RELEASE_NOTES )
 
 pkg_setup() {
-	if use !libass; then
-		ewarn
-		ewarn "You've disabled the libass flag. No OSD or subtitles will be displayed."
-		ewarn
+	if ! use libass; then
+		ewarn "You have disabled the libass flag. No OSD or subtitles will be displayed."
 	fi
 
 	if use openal; then
-		ewarn
-		ewarn "You've enabled the openal audio output which is fallback and is disabled by upstream."
-		ewarn
+		ewarn "You have enabled the openal audio output which is a fallback"
+		ewarn "and disabled by upstream."
 	fi
 
 	if use sdl; then
-		ewarn
-		ewarn "You've enabled the sdl video and audio outputs which are fallbacks and are disabled by upstream."
-		ewarn
+		ewarn "You have enabled the sdl video and audio outputs which are fallbacks"
+		ewarn "and disabled by upstream."
+	fi
+
+	if use libav; then
+		einfo "You have enabled media-video/libav instead of media-video/ffmpeg."
+		einfo "Upstream recommends media-video/ffmpeg, as some functionality is not"
+		einfo "provided by media-video/libav."
 	fi
 
 	einfo "For additional format support you need to enable the support on your"
 	einfo "libavcodec/libavformat provider:"
 	einfo "    media-video/ffmpeg or media-video/libav"
-	einfo
-	einfo "Selected provider will affect mpv features and behaviour:"
-	einfo "    https://github.com/mpv-player/mpv/wiki/FFmpeg-versus-Libav"
 
 	python-any-r1_pkg_setup
 }
 
-src_unpack() {
-	if [[ ${PV} == *9999* ]]; then
-		git-r3_src_unpack
-	else
-		default_src_unpack
-	fi
-
+src_prepare() {
 	cp "${DISTDIR}"/waf-${WAF_V} "${S}"/waf || die
 	chmod 0755 "${S}"/waf || die
-}
-
-src_prepare() {
 	epatch_user
 }
 
