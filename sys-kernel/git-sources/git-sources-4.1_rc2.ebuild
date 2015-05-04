@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-4.1_rc2.ebuild,v 1.1 2015/05/04 07:04:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/git-sources-4.1_rc2.ebuild,v 1.2 2015/05/04 09:44:54 mpagano Exp $
 
 EAPI="5"
 UNIPATCH_STRICTORDER="yes"
@@ -8,7 +8,6 @@ K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
 K_NOUSEPR="yes"
 K_SECURITY_UNSUPPORTED="yes"
-K_DEBLOB_AVAILABLE=0
 K_BASE_VER="4.0"
 ETYPE="sources"
 CKV="${PVR/-r/-git}"
