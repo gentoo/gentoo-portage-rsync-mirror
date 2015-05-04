@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-2.0_pre2.ebuild,v 1.1 2015/04/23 15:42:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-2.0.ebuild,v 1.1 2015/05/04 05:31:22 jer Exp $
 
 EAPI=5
 inherit eutils systemd toolchain-funcs
@@ -11,14 +11,16 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${P/_/-}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS=""
-IUSE="caps ipv6 libedit readline +rtc selinux"
-REQUIRED_USE="?? ( libedit readline )"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="caps +cmdmon ipv6 libedit +ntp +phc +pps readline +refclock +rtc selinux +adns"
+REQUIRED_USE="
+	?? ( libedit readline )
+"
 
 CDEPEND="
 	caps? ( sys-libs/libcap )
 	libedit? ( dev-libs/libedit )
-	readline? ( >=sys-libs/readline-4.1-r4 )
+	readline? ( >=sys-libs/readline-4.1-r4:= )
 "
 DEPEND="
 	${CDEPEND}
@@ -59,8 +61,14 @@ src_configure() {
 	local CHRONY_CONFIGURE="
 	./configure \
 		$(usex caps '' --disable-linuxcaps) \
+		$(usex cmdmon '' --disable-cmdmon) \
 		$(usex ipv6 '' --disable-ipv6) \
+		$(usex ntp '' --disable-ntp) \
+		$(usex phc '' --disable-phc) \
+		$(usex pps '' --disable-pps) \
 		$(usex rtc '' --disable-rtc) \
+		$(usex refclock '' --disable-refclock) \
+		$(usex adns '' --disable-asyncdns) \
 		${CHRONY_EDITLINE} \
 		${EXTRA_ECONF} \
 		--docdir=/usr/share/doc/${PF} \
@@ -68,6 +76,7 @@ src_configure() {
 		--mandir=/usr/share/man \
 		--prefix=/usr \
 		--sysconfdir=/etc/chrony \
+		--disable-sechash \
 		--without-nss \
 		--without-tomcrypt
 	"

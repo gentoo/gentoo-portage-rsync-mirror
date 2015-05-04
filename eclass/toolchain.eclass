@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.665 2015/04/23 19:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.666 2015/05/04 05:43:08 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1784,7 +1784,7 @@ gcc_movelibs() {
 			if [[ ${FROMDIR} != "${TODIR}" && -d ${FROMDIR} ]] ; then
 				local files=$(find "${FROMDIR}" -maxdepth 1 ! -type d 2>/dev/null)
 				if [[ -n ${files} ]] ; then
-					mv ${files} "${TODIR}"
+					mv ${files} "${TODIR}" || die
 				fi
 			fi
 		done
@@ -1794,7 +1794,7 @@ gcc_movelibs() {
 		FROMDIR="${PREFIX}/lib/${OS_MULTIDIR}"
 		for x in "${D}${FROMDIR}"/pkgconfig/libgcj*.pc ; do
 			[[ -f ${x} ]] || continue
-			sed -i "/^libdir=/s:=.*:=${LIBPATH}/${MULTIDIR}:" "${x}"
+			sed -i "/^libdir=/s:=.*:=${LIBPATH}/${MULTIDIR}:" "${x}" || die
 			mv "${x}" "${D}${FROMDIR}"/pkgconfig/libgcj-${GCC_PV}.pc || die
 		done
 	done
@@ -1823,11 +1823,11 @@ fix_libtool_libdir_paths() {
 
 	sed -i \
 		-e "/^libdir=/s:=.*:='${dir}':" \
-		./${dir}/*.la
+		./${dir}/*.la || die
 	sed -i \
 		-e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${LIBPATH}/\1:g" \
 		$(find ./${PREFIX}/lib* -maxdepth 3 -name '*.la') \
-		./${dir}/*.la
+		./${dir}/*.la || die
 
 	popd >/dev/null
 }

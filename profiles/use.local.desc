@@ -5633,7 +5633,13 @@ net-misc/cgminer:knc - Enable support for mining with KnC miners
 net-misc/cgminer:minion - Enable support for mining with BlackArrow Bitfury
 net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
 net-misc/cgminer:spondoolies - Enable support for Spondoolies
-net-misc/chrony:rtc - Include support for the Linux Real Time Clock interface
+net-misc/chrony:adns - Support for asynchronous DNS
+net-misc/chrony:cmdmon - Support for command and monitoring
+net-misc/chrony:ntp - Support for the Network Time Protocol (NTP)
+net-misc/chrony:phc - Support for the PTP (Precision Time Protocol) Hardware Clock (PHC) interface
+net-misc/chrony:pps - Support for the Linux Real Time Clock (RTC) interface
+net-misc/chrony:refclock - Support for reference clocks
+net-misc/chrony:rtc - Support for the Linux Real Time Clock interface
 net-misc/connman:ethernet - Enable ethernet support.
 net-misc/connman:l2tp - Use net-dialup/xl2tpd for L2TP VPN support.
 net-misc/connman:ofono - Use net-misc/ofono for telephony support.
