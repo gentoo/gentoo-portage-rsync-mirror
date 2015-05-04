@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.4.0.ebuild,v 1.3 2015/05/03 11:40:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/qbs/qbs-1.4.0-r1.ebuild,v 1.1 2015/05/04 14:02:12 pesa Exp $
 
 EAPI=5
 
-inherit multilib pax-utils qmake-utils
+inherit eutils multilib pax-utils qmake-utils
 
 DESCRIPTION="Qt Build Suite"
 HOMEPAGE="http://wiki.qt.io/Qbs"
@@ -34,10 +34,8 @@ DEPEND="${RDEPEND}
 "
 
 src_prepare() {
-	# fix plugins libdir
-	# v1.4.1 will contain a fix: https://codereview.qt-project.org/111532
-	sed -i -e "/destdirPrefix/ s:/lib:/$(get_libdir):" \
-		src/plugins/plugins.pri || die
+	epatch "${FILESDIR}"/${PV}-fix-plugins-destdir.patch
+	epatch "${FILESDIR}"/${PV}-install-missing-header.patch
 
 	# disable tests that require nodejs (bug 527652)
 	sed -i -e 's/!haveNodeJs()/true/' \
