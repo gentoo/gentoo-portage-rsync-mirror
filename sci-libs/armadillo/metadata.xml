@@ -18,10 +18,6 @@
   templates and template meta-programming.
 </longdescription>
   <use>
-    <flag name="atlas">
-    Link with <pkg>sci-libs/atlas</pkg> libraries for cblas and
-    clapack
-  </flag>
     <flag name="arpack">
     Link with <pkg>sci-libs/arpack</pkg> libraries for eigen decomposition
   </flag>
