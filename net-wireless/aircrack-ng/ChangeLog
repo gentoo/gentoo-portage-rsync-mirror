@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/aircrack-ng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.91 2015/02/05 03:46:03 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/aircrack-ng/ChangeLog,v 1.93 2015/05/04 04:24:59 zerochaos Exp $
+
+  04 May 2015; Rick Farina <zerochaos@gentoo.org> aircrack-ng-1.2_rc2.ebuild,
+  aircrack-ng-9999.ebuild, metadata.xml:
+  handle unstable->experimental
+
+*aircrack-ng-1.2_rc2 (04 May 2015)
+
+  04 May 2015; Rick Farina <zerochaos@gentoo.org> +aircrack-ng-1.2_rc2.ebuild,
+  aircrack-ng-9999.ebuild:
+  version bump, minor cleanup
 
 *aircrack-ng-1.2_rc1-r1 (05 Feb 2015)
 

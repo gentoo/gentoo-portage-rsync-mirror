@@ -6160,6 +6160,7 @@ net-voip/yate:wpcard - Enable Wanpipe card driver
 net-voip/yate:zaptel - Enable Zaptel driver
 net-wireless/aircrack-ng:airdrop-ng - Build airdrop-ng
 net-wireless/aircrack-ng:airgraph-ng - Build airgraph-ng
+net-wireless/aircrack-ng:experimental - Build the "experimental" tools which may randomly fail to run properly
 net-wireless/aircrack-ng:netlink - Use netlink for channel control instead of WEXT
 net-wireless/aircrack-ng:unstable - Build the "unstable" tools which may randomly fail to run properly
 net-wireless/bladerf:tecla - use libtecla for command line editing, tab completion, and history
