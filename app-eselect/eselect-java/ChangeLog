@@ -1,6 +1,9 @@
 # ChangeLog for app-eselect/eselect-java
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-java/ChangeLog,v 1.1 2015/03/31 16:49:37 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-java/ChangeLog,v 1.2 2015/05/04 07:00:04 ago Exp $
+
+  04 May 2015; Agostino Sarubbo <ago@gentoo.org> eselect-java-0.1.0.ebuild:
+  Add ~ia64, wrt bug #465136
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> +eselect-java-0.1.0.ebuild,
   +metadata.xml:

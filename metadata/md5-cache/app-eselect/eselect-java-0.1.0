@@ -2,10 +2,10 @@ DEFINED_PHASES=-
 DESCRIPTION=A set of eselect modules for Java
 EAPI=5
 HOMEPAGE=http://www.gentoo.org/proj/en/java/
-KEYWORDS=amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd
+KEYWORDS=amd64 ~arm ~ia64 ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd
 LICENSE=GPL-2
 PDEPEND=>=virtual/jre-1.5
 RDEPEND=!app-eselect/eselect-ecj !app-eselect/eselect-maven !<dev-java/java-config-2.2 app-admin/eselect
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~sera/distfiles/eselect-java-0.1.0.tar.gz
-_md5_=e92f3b423ece72c0fbdb14a0287c8f30
+_md5_=58b6c1661310b2b1d7e264c5111bc70c

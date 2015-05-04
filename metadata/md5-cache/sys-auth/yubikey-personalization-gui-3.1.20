@@ -1,13 +1,13 @@
 DEFINED_PHASES=configure install
-DEPEND=>=sys-auth/ykpers-1.14.0 >=sys-auth/libyubikey-1.6 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-libs/glib:2 virtual/libusb:1 virtual/pkgconfig
+DEPEND=>=sys-auth/ykpers-1.14.0 >=sys-auth/libyubikey-1.6 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qttest:4 dev-libs/glib:2 virtual/libusb:1 virtual/pkgconfig
 DESCRIPTION=GUI for personalization of Yubico's YubiKey
 EAPI=5
 HOMEPAGE=https://github.com/Yubico/yubikey-personalization-gui
 IUSE=debug
 KEYWORDS=~amd64
 LICENSE=BSD-2
-RDEPEND=>=sys-auth/ykpers-1.14.0 >=sys-auth/libyubikey-1.6 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-libs/glib:2 virtual/libusb:1
+RDEPEND=>=sys-auth/ykpers-1.14.0 >=sys-auth/libyubikey-1.6 dev-qt/qtcore:4 dev-qt/qtgui:4 dev-qt/qttest:4 dev-libs/glib:2 virtual/libusb:1
 SLOT=0
 SRC_URI=http://yubico.github.io/yubikey-personalization-gui/releases/yubikey-personalization-gui-3.1.20.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	ea709b525d28e3087eddedb2f884dbbe	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=8a1b8cc2a8309071ad27985e46750f87
+_md5_=916e33b515f21d97d67bdaff34d93aae

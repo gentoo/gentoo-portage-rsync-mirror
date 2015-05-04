@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/yubikey-personalization-gui/yubikey-personalization-gui-3.1.20.ebuild,v 1.1 2015/04/14 07:34:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/yubikey-personalization-gui/yubikey-personalization-gui-3.1.20.ebuild,v 1.2 2015/05/04 06:52:27 jlec Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ RDEPEND="
 	>=sys-auth/libyubikey-1.6
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
+	dev-qt/qttest:4
 	dev-libs/glib:2
 	virtual/libusb:1"
 DEPEND="${RDEPEND}

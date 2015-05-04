@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/a2jmidid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.13 2015/01/03 14:46:28 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/a2jmidid/ChangeLog,v 1.14 2015/05/04 06:43:17 idella4 Exp $
+
+  04 May 2015; Ian Delaney <idella4@gentoo.org> +files/a2jmidid-link.patch,
+  a2jmidid-8-r1.ebuild:
+  add patch to fix linking issue, fixes bug #518382
 
 *a2jmidid-8-r1 (03 Jan 2015)
 
