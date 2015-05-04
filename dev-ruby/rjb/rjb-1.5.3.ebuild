@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rjb/rjb-1.4.9.ebuild,v 1.1 2014/04/25 05:36:25 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rjb/rjb-1.5.3.ebuild,v 1.1 2015/05/04 03:47:31 zerochaos Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ all_ruby_prepare() {
 each_ruby_prepare() {
 	#dev-lang/ruby might need the "hardened" flag to enforce the following:
 	if use hardened; then
-		paxctl -v /usr/bin/ruby 2>/dev/null | grep MPROTECT | grep disabled || ewarn '!!! rjb may only work if ruby is MPROTECT disabled, but not really sure\n  please disable it if required using paxctl -m /usr/bin/ruby'
+		paxctl -v /usr/bin/ruby 2>/dev/null | grep MPROTECT | grep disabled || ewarn '!!! rjb will only work if ruby is MPROTECT disabled\n  please disable it if required using paxctl -m /usr/bin/ruby'
 	fi
 	# force compilation of class file for our JVM
 	rm -rf data
@@ -69,5 +69,14 @@ each_ruby_install() {
 }
 
 each_ruby_test() {
-	${RUBY} -C test -I../lib:.:../ext test.rb || die
+	if use hardened; then
+		paxctl -v ${RUBY} 2>/dev/null | grep MPROTECT | grep -q disabled
+		if [ $? = 0 ]; then
+			${RUBY} -C test -I../lib:.:../ext test.rb || die
+		else
+			ewarn "${RUBY} has MPROTECT enabled, rjb will not work until it is disabled, skipping tests."
+		fi
+	else
+		${RUBY} -C test -I../lib:.:../ext test.rb || die
+	fi
 }

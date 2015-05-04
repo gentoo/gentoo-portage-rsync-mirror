@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.505 2015/04/23 05:13:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.507 2015/05/04 03:52:12 vapier Exp $
+
+*util-linux-2.26.2 (04 May 2015)
+
+  04 May 2015; Mike Frysinger <vapier@gentoo.org> +util-linux-2.26.2.ebuild:
+  Version bump.
+
+  04 May 2015; Mike Frysinger <vapier@gentoo.org> util-linux-2.25.2-r2.ebuild,
+  +files/util-linux-2.25-parallel-setarch.patch:
+  Fix parallel building w/setarch man page links #511812 by Thomas D.
 
   23 Apr 2015; Jeroen Roovers <jer@gentoo.org> util-linux-2.25.2-r2.ebuild:
   Stable for PPC64 (bug #536906).

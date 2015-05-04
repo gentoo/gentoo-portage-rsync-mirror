@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.25.2-r2.ebuild,v 1.14 2015/05/04 03:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.26.2.ebuild,v 1.1 2015/05/04 03:52:12 vapier Exp $
 
-EAPI="4"
+EAPI="5"
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
@@ -16,7 +16,7 @@ if [[ ${PV} == 9999 ]] ; then
 	inherit git-2 autotools
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/utils/util-linux/util-linux.git"
 else
-	KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
 	SRC_URI="mirror://kernel/linux/utils/util-linux/v${PV:0:4}/${MY_P}.tar.xz"
 fi
 
@@ -62,7 +62,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-runuser-bash-completion.patch #522288
 	epatch "${FILESDIR}"/${PN}-2.25-parallel-setarch.patch #511812
 	if [[ ${PV} == 9999 ]] ; then
 		po/update-potfiles
@@ -87,6 +86,7 @@ lfs_fallocate_test() {
 multilib_src_configure() {
 	lfs_fallocate_test
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
+	export ac_cv_header_security_pam_appl_h=$(multilib_native_usex pam) #545042
 	# We manually set --libdir to the default since on prefix, econf will set it to
 	# a value which the configure script does not recognize.  This makes it set the
 	# usrlib_execdir to a bad value. bug #518898#c2, fixed upstream for >2.25
@@ -149,7 +149,7 @@ multilib_src_install() {
 		emake DESTDIR="${D}" install-usrlib_execLTLIBRARIES \
 			install-pkgconfigDATA install-uuidincHEADERS \
 			install-nodist_blkidincHEADERS install-nodist_mountincHEADERS \
-			install-nodist_smartcolsincHEADERS
+			install-nodist_smartcolsincHEADERS install-nodist_fdiskincHEADERS
 	fi
 
 	if multilib_is_native_abi; then

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rjb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rjb/ChangeLog,v 1.5 2015/03/16 20:30:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rjb/ChangeLog,v 1.6 2015/05/04 03:47:31 zerochaos Exp $
+
+*rjb-1.5.3 (04 May 2015)
+
+  04 May 2015; Rick Farina <zerochaos@gentoo.org> +rjb-1.5.3.ebuild,
+  -rjb-1.4.9.ebuild:
+  version bump, improved hardened hack^H^H^H^Hhandling
 
   16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -rjb-1.4.8.ebuild:
   Cleanup.
