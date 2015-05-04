@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.1.ebuild,v 1.9 2015/02/27 08:14:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-7.6.1.ebuild,v 1.10 2015/05/04 08:19:53 vapier Exp $
 
 EAPI="3"
 
@@ -17,14 +17,6 @@ is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 RPM=
 MY_PV=${PV}
 case ${PV} in
-*.*.*.*.*.*)
-	# fedora version: gdb-6.8.50.20090302-8.fc11.src.rpm
-	inherit versionator rpm
-	gvcr() { get_version_component_range "$@"; }
-	MY_PV=$(gvcr 1-4)
-	RPM="${PN}-${MY_PV}-$(gvcr 5).fc$(gvcr 6).src.rpm"
-	SRC_URI="mirror://fedora/development/source/SRPMS/${RPM}"
-	;;
 *.*.50.*)
 	# weekly snapshots
 	SRC_URI="ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.bz2"

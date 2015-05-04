@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.36 2015/04/04 18:28:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.37 2015/05/04 08:19:53 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -18,23 +18,29 @@ is_cross() { [[ ${CHOST} != ${CTARGET} ]] ; }
 RPM=
 MY_PV=${PV}
 case ${PV} in
-*.*.*.*.*.*)
-	# fedora version: gdb-6.8.50.20090302-8.fc11.src.rpm
-	inherit versionator rpm
-	gvcr() { get_version_component_range "$@"; }
-	MY_PV=$(gvcr 1-4)
-	RPM="${PN}-${MY_PV}-$(gvcr 5).fc$(gvcr 6).src.rpm"
-	SRC_URI="mirror://fedora/development/source/SRPMS/${RPM}"
-	;;
-*.*.50.*)
-	# weekly snapshots
-	SRC_URI="ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.xz"
-	;;
 9999*)
 	# live git tree
 	EGIT_REPO_URI="git://sourceware.org/git/binutils-gdb.git"
 	inherit git-2
 	SRC_URI=""
+	;;
+*.*.50.2???????)
+	# weekly snapshots
+	SRC_URI="ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-${PV}.tar.xz"
+	;;
+*.*.*.*.*.*)
+	# fedora versions; note we swap the rpm & fedora core versions.
+	# gdb-6.8.50.20090302-8.fc11.src.rpm -> gdb-6.8.50.20090302.11.8.ebuild
+	# gdb-7.9-11.fc23.src.rpm -> gdb-7.9.23.11.ebuild
+	inherit versionator rpm
+	gvcr() { get_version_component_range "$@"; }
+	parse_fedora_ver() {
+		set -- $(get_version_components)
+		MY_PV=$(gvcr 1-$(( $# - 2 )))
+		RPM="${PN}-${MY_PV}-$(gvcr $#).fc$(gvcr $(( $# - 1 ))).src.rpm"
+	}
+	parse_fedora_ver
+	SRC_URI="mirror://fedora-dev/development/rawhide/source/SRPMS/g/${RPM}"
 	;;
 *)
 	# Normal upstream release
