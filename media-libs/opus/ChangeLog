@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.41 2015/04/26 16:53:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.42 2015/05/05 09:47:49 jer Exp $
+
+  05 May 2015; Jeroen Roovers <jer@gentoo.org> opus-1.1.ebuild:
+  Stable for PPC64 (bug #500868).
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> opus-1.1.ebuild:
   ppc stable wrt bug #500868

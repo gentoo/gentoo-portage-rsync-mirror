@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.195 2015/04/19 19:21:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.196 2015/05/05 09:40:41 jer Exp $
+
+  05 May 2015; Jeroen Roovers <jer@gentoo.org> rb_libtorrent-0.16.17.ebuild:
+  Stable for PPC64 (bug #522764).
 
 *rb_libtorrent-1.0.4 (19 Apr 2015)
 

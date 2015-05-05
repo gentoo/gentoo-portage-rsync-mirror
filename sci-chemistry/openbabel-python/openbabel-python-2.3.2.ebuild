@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.13 2015/03/02 09:22:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/openbabel-python/openbabel-python-2.3.2.ebuild,v 1.14 2015/05/05 09:41:37 jlec Exp $
 
 EAPI=5
 
@@ -59,6 +59,7 @@ src_configure() {
 			-DPYTHON_BINDINGS=ON
 			-DPYTHON_EXECUTABLE=${PYTHON}
 			-DPYTHON_INCLUDE_DIR="${EPREFIX}/usr/include/${EPYTHON}"
+			-DPYTHON_INCLUDE_PATH="${EPREFIX}/usr/include/${EPYTHON}"
 			-DPYTHON_LIBRARY="${EPREFIX}/usr/$(get_libdir)/lib${EPYTHON}.so"
 			-DENABLE_TESTS=ON"
 
