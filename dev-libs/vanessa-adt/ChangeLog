@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/vanessa-adt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.18 2014/08/10 20:40:09 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-adt/ChangeLog,v 1.19 2015/05/05 16:25:39 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -vanessa-adt-0.0.4_beta4.ebuild,
+  -vanessa-adt-0.0.7.ebuild, -vanessa-adt-0.0.8.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   vanessa-adt-0.0.4_beta4.ebuild, vanessa-adt-0.0.6.ebuild,

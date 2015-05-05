@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-12.4.5-r1.ebuild,v 1.8 2015/04/08 07:30:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bareos/bareos-12.4.5-r1.ebuild,v 1.9 2015/05/05 16:03:52 mschiff Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="acl clientonly +director examples ipv6 logwatch mysql ndmp postgres python qt4
-		readline scsi-crypto sql-pooling +sqlite3 ssl static +storage-daemon tcpd
+		readline scsi-crypto sql-pooling +sqlite ssl static +storage-daemon tcpd
 		vim-syntax X"
 
 DEPEND="
@@ -27,7 +27,7 @@ DEPEND="
 	!clientonly? (
 		postgres? ( dev-db/postgresql:*[threads] )
 		mysql? ( virtual/mysql )
-		sqlite3? ( dev-db/sqlite:3 )
+		sqlite? ( dev-db/sqlite:3 )
 		director? ( virtual/mta )
 	)
 	qt4? (
@@ -70,7 +70,7 @@ S=${WORKDIR}/${PN}-Release-${PV}
 pkg_setup() {
 	use mysql && export mydbtypes+="mysql"
 	use postgres && export mydbtypes+=" postgresql"
-	use sqlite3 && export mydbtypes+=" sqlite3"
+	use sqlite && export mydbtypes+=" sqlite"
 
 	# create the daemon group and user
 	if [ -z "$(egetent group bareos 2>/dev/null)" ]; then
@@ -159,8 +159,8 @@ src_configure() {
 		$(use_with postgres postgresql) \
 		$(use_with python) \
 		$(use_with readline readline /usr) \
-		$(use_with sqlite3) \
-		$(use sqlite3 || echo "--without-sqlite3") \
+		$(use_with sqlite sqlite3) \
+		$(use sqlite || echo "--without-sqlite3") \
 		$(use_with ssl openssl) \
 		$(use_with tcpd tcp-wrappers) \
 		"
@@ -386,7 +386,7 @@ pkg_postinst() {
 		einfo
 	fi
 
-	if use sqlite3; then
+	if use sqlite; then
 		einfo
 		einfo "Be aware that Bareos does not officially support SQLite database."
 		einfo "Best use it only for a client-only installation. See Bug #445540."
