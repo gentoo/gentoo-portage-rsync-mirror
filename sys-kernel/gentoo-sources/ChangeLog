@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1543 2015/05/01 15:37:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1544 2015/05/05 20:02:53 mpagano Exp $
+
+*gentoo-sources-3.12.42 (05 May 2015)
+
+  05 May 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-3.12.42.ebuild:
+  Linux patch 3.12.41. Linux patch 3.12.42.
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> gentoo-sources-3.18.11.ebuild:
   Stable for PPC64 (bug #540866).
