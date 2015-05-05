@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/cri
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.17 2015/05/03 06:09:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/cri/ChangeLog,v 1.18 2015/05/05 06:18:39 graaff Exp $
+
+  05 May 2015; Hans de Graaff <graaff@gentoo.org> cri-2.7.0.ebuild:
+  Add ruby22.
 
 *cri-2.7.0 (03 May 2015)
 
