@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9976 2015/05/03 23:22:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9978 2015/05/05 09:17:59 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Removing x11-themes/gtk-engines-qtcurve (bug #544406)
+
+  05 May 2015; Ian Delaney <idella4@gentoo.org> package.mask:
+  remove entry for mask / removal of sci-geosciences/LatLongUTMconversion
 
   03 May 2015; Mikle Kolyada <zlogene@gentoo.org> package.mask:
   Drop obsolete perl masks

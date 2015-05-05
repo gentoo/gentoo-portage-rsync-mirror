@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/mrtg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.125 2014/08/13 09:28:10 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.126 2015/05/05 09:07:23 jer Exp $
+
+  05 May 2015; Jeroen Roovers <jer@gentoo.org> -mrtg-2.16.4-r1.ebuild,
+  mrtg-2.17.4-r1.ebuild, -files/mrtg-2.16.4-disable-static.patch,
+  -files/mrtg-2.16.4-no-rpath.patch:
+  Stable for PPC64 (bug #509992).
 
   13 Aug 2014; Agostino Sarubbo <ago@gentoo.org> mrtg-2.17.4-r1.ebuild:
   Stable for ppc, wrt bug #509992

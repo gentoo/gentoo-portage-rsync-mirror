@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.73 2015/02/02 16:09:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.74 2015/05/05 09:03:43 jer Exp $
+
+  05 May 2015; Jeroen Roovers <jer@gentoo.org> pyzor-1.0.0.ebuild:
+  Mark ~ppc64 (bug #510626).
 
   02 Feb 2015; Jeroen Roovers <jer@gentoo.org> pyzor-1.0.0.ebuild:
   Marked ~hppa (bug #538510).

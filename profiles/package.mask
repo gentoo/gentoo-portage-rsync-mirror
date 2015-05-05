@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16517 2015/05/03 23:22:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16519 2015/05/05 09:17:59 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -262,11 +262,6 @@ dev-java/sun-j2me-bin
 =virtual/perl-threads-1.860.0-r4
 =virtual/perl-version-0.990.200-r1
 
-# Ben de Groot <yngwin@gentoo.org> (29 Mar 2015)
-# Merged with qtcurve-qt4 into x11-themes/qtcurve (with gtk useflag)
-# Removal in 30 days. See also bug #544406.
-x11-themes/gtk-engines-qtcurve
-
 # Michał Górny <mgorny@gentoo.org> (28 Mar 2015)
 # on behalf of gx86-multilib project <multilib@gentoo.org>
 # Mask emul-linux-x86 packages along with unported old versions
@@ -287,12 +282,6 @@ app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
 app-emulation/emul-linux-x86-jna
 <x11-drivers/ati-drivers-14
-
-# Ian Delaney <idella4@gentoo.org> (28 Mar 2015)
-# old package with no active maintainers
-# No evidence of support or use.
-# Masked for removal in 30 days.
-sci-geosciences/LatLongUTMconversion
 
 # Ian Delaney <idella4@gentoo.org> (24 Mar 2015)
 # the cffi requires setting ':=' which isn't reliable in a virtual
