@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r13.ebuild,v 1.4 2015/03/25 14:07:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ccp4-apps-6.1.3-r13.ebuild,v 1.5 2015/05/05 08:53:26 jlec Exp $
 
 EAPI=5
 
@@ -44,7 +44,7 @@ X11DEPS="
 	x11-libs/libxdl_view"
 
 TKDEPS="
-	>=dev-lang/tk-8.3
+	>=dev-lang/tk-8.3:0=
 	>=dev-tcltk/blt-2.4
 	dev-tcltk/iwidgets
 	dev-tcltk/itcl

@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/boxes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.41 2015/04/26 13:25:38 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/boxes/ChangeLog,v 1.42 2015/05/05 08:50:32 jlec Exp $
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> -boxes-1.1-r1.ebuild,
+  -boxes-1.1.1.ebuild, -files/1.1-Makefile.patch,
+  -files/boxes-1.1-Makefile.patch, -files/boxes-1.1.1-Makefile.patch:
+  Drop old
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> boxes-1.1.2-r1.ebuild:
   sparc stable wrt bug #546374

@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ball
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.16 2015/04/08 18:22:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ball/ChangeLog,v 1.17 2015/05/05 08:46:50 jlec Exp $
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/ball-1.4.2-underlinking.patch, ball-1.4.2.ebuild:
+  Fix linking problems, bug #547522
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> ball-1.4.2.ebuild:
   Drop old Python implementations

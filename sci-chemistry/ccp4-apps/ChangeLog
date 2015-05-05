@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/ccp4-apps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.46 2015/03/25 14:07:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ccp4-apps/ChangeLog,v 1.47 2015/05/05 08:53:26 jlec Exp $
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> -ccp4-apps-6.1.3-r11.ebuild,
+  -ccp4-apps-6.1.3-r12.ebuild, ccp4-apps-6.1.3-r13.ebuild:
+  Drop old
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> ccp4-apps-6.1.3-r13.ebuild:
   Stable for x86, wrt bug #542694

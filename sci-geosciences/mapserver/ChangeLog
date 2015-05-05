@@ -1,6 +1,12 @@
 # ChangeLog for sci-geosciences/mapserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.54 2015/02/04 19:58:49 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/mapserver/ChangeLog,v 1.55 2015/05/05 08:52:36 idella4 Exp $
+
+*mapserver-6.0.1-r3 (05 May 2015)
+
+  05 May 2015; Ian Delaney <idella4@gentoo.org> +mapserver-6.0.1-r3.ebuild,
+  metadata.xml:
+  revbump; conversion -> distutils-r1 wrt bug #544750
 
 *mapserver-6.0.1-r2 (04 Feb 2015)
 

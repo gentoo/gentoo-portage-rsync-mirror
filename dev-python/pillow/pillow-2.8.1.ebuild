@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.1 2015/04/03 19:39:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.2 2015/05/05 08:46:33 jlec Exp $
 
 EAPI=5
 
@@ -37,7 +37,9 @@ DEPEND="${RDEPEND}
 	doc? (
 		dev-python/sphinx
 		dev-python/sphinx-better-theme
-	)"
+	)
+	test? ( dev-python/nose[${PYTHON_USEDEP}] )
+	"
 RDEPEND+=" !dev-python/imaging"
 
 S="${WORKDIR}/${MY_P}"
