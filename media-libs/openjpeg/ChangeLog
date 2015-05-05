@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openjpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.118 2015/05/01 21:45:13 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openjpeg/ChangeLog,v 1.119 2015/05/05 02:40:05 vapier Exp $
+
+  05 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/openjpeg-2.0.0-build.patch:
+  Restore patch still used by the 2.0.0 ebuild #548586 by Toralf Förster.
 
 *openjpeg-2.0.0-r1 (01 May 2015)
 *openjpeg-2.1.0-r1 (01 May 2015)
