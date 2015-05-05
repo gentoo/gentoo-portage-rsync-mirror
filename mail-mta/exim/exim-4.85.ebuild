@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.85.ebuild,v 1.2 2015/03/21 21:18:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/exim-4.85.ebuild,v 1.3 2015/05/05 12:55:34 grobian Exp $
 
 EAPI="5"
 
@@ -464,7 +464,7 @@ src_install () {
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}/exim.logrotate" exim
 
-	newinitd "${FILESDIR}"/exim.rc8 exim
+	newinitd "${FILESDIR}"/exim.rc9 exim
 	newconfd "${FILESDIR}"/exim.confd exim
 
 	systemd_dounit "${FILESDIR}"/{exim.service,exim.socket,exim-submission.socket}

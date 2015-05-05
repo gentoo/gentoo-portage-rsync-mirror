@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9978 2015/05/05 09:17:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9979 2015/05/05 12:34:43 jlec Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> base/package.use.stable.mask:
+  Mask USE=qt5 for stable app-office/texmaker
 
   05 May 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
   Removing x11-themes/gtk-engines-qtcurve (bug #544406)
