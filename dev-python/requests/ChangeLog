@@ -1,6 +1,18 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.93 2015/04/29 09:18:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.95 2015/05/05 18:16:31 jlec Exp $
+
+*requests-2.7.0 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +requests-2.7.0.ebuild:
+  Version Bump
+
+*requests-2.6.1 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +requests-2.6.1.ebuild,
+  -requests-2.4.1.ebuild, -requests-2.4.3.ebuild, -requests-2.5.0-r1.ebuild,
+  -requests-2.5.1.ebuild, -requests-2.5.3.ebuild, metadata.xml:
+  Version Bump; drop old
 
   29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> requests-2.6.0.ebuild:
   Stable for sparc, wrt bug #543480

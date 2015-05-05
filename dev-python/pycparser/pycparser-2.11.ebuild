@@ -1,23 +1,25 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/pycparser-2.09.1-r1.ebuild,v 1.9 2015/04/08 08:05:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/pycparser-2.11.ebuild,v 1.1 2015/05/05 18:04:23 jlec Exp $
 
 EAPI="5"
-PYTHON_COMPAT=( python{2_7,3_3} pypy )
+
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy )
 
 inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="C parser and AST generator written in Python"
-HOMEPAGE="https://bitbucket.org/eliben/pycparser/"
-SRC_URI="https://www.bitbucket.org/eliben/${PN}/get/release_v${PV}.tar.bz2 -> ${P}.tar.bz2"
+HOMEPAGE="https://github.com/eliben/pycparser"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~x86 ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x64-solaris"
 IUSE="test"
 
 RDEPEND="dev-python/ply[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )"
 
 python_compile() {

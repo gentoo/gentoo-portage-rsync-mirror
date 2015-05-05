@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.34 2015/04/08 08:05:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.35 2015/05/05 18:04:23 jlec Exp $
+
+*pycparser-2.11 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +pycparser-2.11.ebuild,
+  -pycparser-2.09.1-r1.ebuild, metadata.xml:
+  Version Bump; drop old
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pycparser-2.09.1-r1.ebuild:
   Drop old Python implementations
