@@ -28,7 +28,6 @@
 		<flag name='graph'>Enable plugin to generate transaction graphs</flag>
 		<flag name='greenaddress_it'>Enable plugin to verify GreenAddress.it instant transactions</flag>
 		<flag name='gtk3'>Enable support for gtk+3</flag>
-		<flag name='pos'>Enable plugin for point-of-sale operation</flag>
 		<flag name='qrcode'>Enable QR code scanning with <pkg>media-gfx/zbar</pkg></flag>
 		<flag name='sync'>Enable plugin to sync wallet metadata across multiple Electrum clients</flag>
 		<flag name='trustedcoin_com'>Enable plugin to use two-factor service by TrustedCoin.com</flag>

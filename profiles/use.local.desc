@@ -5675,7 +5675,6 @@ net-misc/electrum:fiat - Enable plugin for looking up fiat values of bitcoin
 net-misc/electrum:graph - Enable plugin to generate transaction graphs
 net-misc/electrum:greenaddress_it - Enable plugin to verify GreenAddress.it instant transactions
 net-misc/electrum:gtk3 - Enable support for gtk+3
-net-misc/electrum:pos - Enable plugin for point-of-sale operation
 net-misc/electrum:qrcode - Enable QR code scanning with media-gfx/zbar
 net-misc/electrum:sync - Enable plugin to sync wallet metadata across multiple Electrum clients
 net-misc/electrum:trustedcoin_com - Enable plugin to use two-factor service by TrustedCoin.com
