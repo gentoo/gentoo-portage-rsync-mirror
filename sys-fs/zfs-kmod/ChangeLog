@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/zfs-kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.57 2015/04/27 13:54:20 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/ChangeLog,v 1.58 2015/05/05 13:53:13 perfinion Exp $
+
+  05 May 2015; Jason Zaman <perfinion@gentoo.org> zfs-kmod-0.6.4.ebuild:
+  drop PAX_RANDKSTACK check, its not needed
 
 *zfs-kmod-0.6.4 (27 Apr 2015)
 

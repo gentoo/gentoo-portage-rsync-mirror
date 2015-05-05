@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.44 2015/04/07 14:07:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.45 2015/05/05 13:38:47 jlec Exp $
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> texstudio-2.8.8.ebuild:
+  Handle non existing USE=qt4 in qtsingleapplication package
 
 *texstudio-2.9.4 (27 Mar 2015)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/pstreams
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pstreams/ChangeLog,v 1.4 2012/12/05 12:25:26 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/pstreams/ChangeLog,v 1.5 2015/05/05 13:55:14 jlec Exp $
+
+*pstreams-0.8.1 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +pstreams-0.8.1.ebuild,
+  metadata.xml:
+  Version Bump; bug #547860
 
   05 Dec 2012; Justin Lecher <jlec@gentoo.org> pstreams-0.7.0.ebuild:
   Install all docs correctly, #442982; bump to EAPI=5 and use doheader
@@ -19,4 +25,3 @@
   18 May 2010; Justin Lecher <jlec@gentoo.org> +pstreams-0.7.0.ebuild,
   +metadata.xml:
   Initial addition
-
