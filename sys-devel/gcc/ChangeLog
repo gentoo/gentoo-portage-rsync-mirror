@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1067 2015/05/04 03:02:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1068 2015/05/05 06:53:03 vapier Exp $
+
+  05 May 2015; Mike Frysinger <vapier@gentoo.org> gcc-2.95.3-r10.ebuild,
+  gcc-3.3.6-r1.ebuild, gcc-3.4.6-r2.ebuild, gcc-4.0.4.ebuild, gcc-4.1.2.ebuild,
+  gcc-4.2.4-r1.ebuild, gcc-4.3.6-r1.ebuild, gcc-4.4.7.ebuild, gcc-4.5.4.ebuild,
+  gcc-4.6.4.ebuild, gcc-4.7.0.ebuild, gcc-4.7.1.ebuild, gcc-4.7.2-r1.ebuild,
+  gcc-4.8.0.ebuild, gcc-4.8.1-r1.ebuild, gcc-4.8.2.ebuild:
+  Move old ebuilds to EAPI 5.
 
   04 May 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.8.4.ebuild:
   Mark arm stable #545124.

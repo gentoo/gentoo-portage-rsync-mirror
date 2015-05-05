@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/tar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.211 2015/04/20 16:49:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.212 2015/05/05 06:38:42 vapier Exp $
+
+  05 May 2015; Mike Frysinger <vapier@gentoo.org> +files/tar-1.28-xattr.patch,
+  tar-1.28-r1.ebuild:
+  Pull in upstream fix for building xattrs on Solaris systems #548024#4 by
+  iloveosxzfs.
 
 *tar-1.28-r1 (20 Apr 2015)
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-1.3.3.ebuild,v 1.6 2015/04/19 05:58:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-reader/pdf-reader-1.3.3.ebuild,v 1.7 2015/05/05 06:35:49 graaff Exp $
 
 EAPI=5
 
 GITHUB_USER=yob
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
@@ -17,7 +17,7 @@ RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.rdoc TODO"
 inherit ruby-fakegem
 
 DESCRIPTION="PDF parser conforming as much as possible to the PDF specification from Adobe"
-HOMEPAGE="http://github.com/yob/pdf-reader/"
+HOMEPAGE="https://github.com/yob/pdf-reader/"
 
 # We cannot use the gem distributions because they don't contain the
 # tests' data, we have to rely on the git tags.
@@ -32,7 +32,7 @@ IUSE=""
 ruby_add_rdepend "dev-ruby/afm
 	dev-ruby/ascii85
 	dev-ruby/hashery
-	dev-ruby/ttfunk
+	dev-ruby/ttfunk:*
 	dev-ruby/ruby-rc4"
 
 # rspec is loaded even during doc generation, so keep it around :(
