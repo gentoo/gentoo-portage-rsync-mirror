@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.20 2015/04/03 23:52:02 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/ChangeLog,v 1.21 2015/05/05 20:54:59 slyfox Exp $
+
+  05 May 2015; Sergei Trofimovich <slyfox@gentoo.org> hdbc-2.3.1.2.ebuild:
+  Rename USE=sqlite3 to USE=sqlite (bug #548650 by Pacho Ramos).
 
 *hdbc-2.4.0.1 (03 Apr 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-2.3.1.2.ebuild,v 1.1 2012/12/24 15:30:23 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc/hdbc-2.3.1.2.ebuild,v 1.2 2015/05/05 20:54:59 slyfox Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://hackage/packages/archive/${MY_PN}/${PV}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="2/${PV}"
 KEYWORDS="~amd64 ~x86"
-IUSE="mysql odbc postgres sqlite3 test"
+IUSE="mysql odbc postgres sqlite test"
 
 RDEPEND=">=dev-haskell/convertible-1.0.10.0:=[profile?]
 		dev-haskell/mtl:=[profile?]
@@ -38,7 +38,7 @@ DEPENDV="$(get_version_component_range 1-2)"
 PDEPEND="mysql? ( dev-haskell/hdbc-mysql )
 		odbc? ( =dev-haskell/hdbc-odbc-${DEPENDV}* )
 		postgres? ( =dev-haskell/hdbc-postgresql-${DEPENDV}* )
-		sqlite3? ( >=dev-haskell/hdbc-sqlite-${DEPENDV} )"
+		sqlite? ( >=dev-haskell/hdbc-sqlite-${DEPENDV} )"
 
 S="${WORKDIR}/${MY_P}"
 

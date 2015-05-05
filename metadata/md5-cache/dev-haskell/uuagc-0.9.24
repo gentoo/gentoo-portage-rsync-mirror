@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install postinst postrm setup test
+DEFINED_PHASES=compile install postinst postrm setup test unpack
 DEPEND=>=dev-haskell/cabal-1.2 >=dev-lang/ghc-6.10 dev-haskell/cabal >=dev-haskell/uulib-0.9.12 doc? ( dev-haskell/haddock ) >=dev-haskell/cabal-1.1.4
 DESCRIPTION=Attribute Grammar System of Universiteit Utrecht
 HOMEPAGE=http://www.cs.uu.nl/wiki/HUT/WebHome
@@ -9,4 +9,4 @@ RDEPEND=>=dev-lang/ghc-6.10 dev-haskell/cabal >=dev-haskell/uulib-0.9.12
 SLOT=0
 SRC_URI=mirror://hackage/packages/archive/uuagc/0.9.24/uuagc-0.9.24.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	ghc-package	48ae4e0fd75e1c8047c4b7f507d5debc	haskell-cabal	eee03ecca8dca7a927272dcea2ca53f4	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=8720c0261d41fba397f78e3006f7ed50
+_md5_=52dcdb9a32c0d34ea3b68109056b93aa

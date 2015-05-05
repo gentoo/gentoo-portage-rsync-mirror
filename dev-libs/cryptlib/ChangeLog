@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cryptlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.39 2015/04/08 17:51:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cryptlib/ChangeLog,v 1.40 2015/05/05 20:48:53 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -cryptlib-3.4.0.ebuild:
+  Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> cryptlib-3.4.0-r1.ebuild:
   Drop old Python implementations

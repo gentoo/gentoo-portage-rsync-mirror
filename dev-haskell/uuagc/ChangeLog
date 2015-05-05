@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/uuagc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.22 2013/06/18 21:33:02 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/uuagc/ChangeLog,v 1.23 2015/05/05 20:45:51 slyfox Exp $
+
+  05 May 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/uuagc-0.9.24-ghc-7.8.patch, uuagc-0.9.24.ebuild:
+  Fix build failure against modern ghc (bug #423949 by Diego Elio Pettenò and by
+  Toralf Förster)
 
   18 Jun 2013; Sergei Trofimovich <slyfox@gentoo.org>
   -files/uuagc-0.9.1-split-base.patch, -uuagc-0.9.1.ebuild, -uuagc-0.9.5.ebuild:

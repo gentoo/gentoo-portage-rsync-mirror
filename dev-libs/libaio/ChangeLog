@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libaio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.96 2015/05/01 19:01:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libaio/ChangeLog,v 1.97 2015/05/05 20:51:57 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -libaio-0.3.107.ebuild,
+  -libaio-0.3.109-r2.ebuild, -libaio-0.3.109-r3.ebuild,
+  -libaio-0.3.109-r4.ebuild, -libaio-0.3.109-r5.ebuild:
+  Remove old.
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> libaio-0.3.110.ebuild:
   Stable for PPC64 (bug #525980).

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.5.1-r2.ebuild,v 1.3 2015/04/09 09:05:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/unbound/unbound-1.5.1-r2.ebuild,v 1.4 2015/05/05 20:47:16 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -84,6 +84,7 @@ multilib_src_configure() {
 		$(multilib_native_use_with python pythonmodule) \
 		$(multilib_native_use_with python pyunbound) \
 		$(use_with threads pthreads) \
+		--disable-flto \
 		--disable-rpath \
 		--with-libevent="${EPREFIX}"/usr \
 		--with-pidfile="${EPREFIX}"/var/run/unbound.pid \
