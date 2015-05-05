@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/faxpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/faxpp/ChangeLog,v 1.4 2014/08/10 20:33:40 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/faxpp/ChangeLog,v 1.5 2015/05/05 19:19:50 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -faxpp-0.3.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> faxpp-0.4.ebuild:
   QA: drop trailing '.' from DESCRIPTION

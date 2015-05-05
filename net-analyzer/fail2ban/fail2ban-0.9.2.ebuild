@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.2.ebuild,v 1.2 2015/05/05 10:19:05 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.2.ebuild,v 1.3 2015/05/05 19:08:19 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+DISTUTILS_SINGLE_IMPL=1
 
 inherit distutils-r1 systemd vcs-snapshot
 
@@ -23,8 +24,10 @@ RDEPEND="
 	virtual/logger
 	net-firewall/iptables
 	selinux? ( sec-policy/selinux-fail2ban )
-	systemd? ( sys-apps/systemd[python] )
+	systemd? ( $(python_gen_cond_dep 'sys-apps/systemd[python,${PYTHON_USEDEP}]' 'python*' ) )
 "
+
+REQUIRED_USE="systemd? ( !python_single_target_pypy )"
 
 DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
 

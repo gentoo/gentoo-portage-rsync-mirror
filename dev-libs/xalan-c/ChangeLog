@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/xalan-c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.33 2015/03/21 11:46:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xalan-c/ChangeLog,v 1.34 2015/05/05 19:23:48 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -xalan-c-1.10.0.ebuild,
+  -xalan-c-1.11.0_pre705082.ebuild, -xalan-c-1.11.0_pre797991.ebuild:
+  Remove old.
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> xalan-c-1.10.0.ebuild,
   xalan-c-1.11.0_pre705082.ebuild:

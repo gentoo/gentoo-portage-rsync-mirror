@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-9999.ebuild,v 1.29 2015/05/05 19:21:04 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virt-manager/virt-manager-1.2.0.ebuild,v 1.1 2015/05/05 19:21:04 tamiko Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ RDEPEND="!app-emulation/virtinst
 	gtk? (
 		x11-libs/gtk+:3[introspection]
 		gnome-base/dconf
-		>=net-libs/gtk-vnc-0.3.8[gtk3,introspection]
+		>=net-libs/gtk-vnc-0.3.8[gtk3,introspection,python,${PYTHON_USEDEP}]
 		net-misc/spice-gtk[usbredir,gtk3,introspection,python,sasl?,${PYTHON_USEDEP}]
 		net-misc/x11-ssh-askpass
 		x11-libs/vte:2.90[introspection]

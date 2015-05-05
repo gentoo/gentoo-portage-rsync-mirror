@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/darts
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.31 2010/04/09 09:28:39 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.32 2015/05/05 19:19:11 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -darts-0.31.ebuild:
+  Remove old.
 
   09 Apr 2010; Markos Chandras <hwoarang@gentoo.org> darts-0.32.ebuild:
   Stable on amd64 wrt bug #302323
@@ -106,4 +109,3 @@
   ChangeLog,Manifest,files/digest-darts-0.1:
 
   Initial import. Ebuild submitted by MATSUU Takuto <matsuu@7501.net>
-
