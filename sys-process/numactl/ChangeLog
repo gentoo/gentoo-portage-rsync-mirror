@@ -1,6 +1,10 @@
 # ChangeLog for sys-process/numactl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.41 2015/04/03 07:22:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/numactl/ChangeLog,v 1.42 2015/05/05 04:14:36 zerochaos Exp $
+
+  05 May 2015; Rick Farina <zerochaos@gentoo.org>
+  +files/numactl-2.0.9-testsuite_path.patch, numactl-2.0.9.ebuild:
+  fix for bug #502586
 
   03 Apr 2015; Mike Frysinger <vapier@gentoo.org> numactl-2.0.10-r2.ebuild:
   Fix patch/autotools ordering #540856 by Arfrever Frehtes Taifersar Arahesis.
