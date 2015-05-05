@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.1.1.ebuild,v 1.3 2015/04/08 18:28:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/talloc/talloc-2.1.1.ebuild,v 1.4 2015/05/05 05:39:43 patrick Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ DESCRIPTION="Samba talloc library"
 HOMEPAGE="http://talloc.samba.org/"
 SRC_URI="http://samba.org/ftp/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-3"
+LICENSE="GPL-3 LGPL-3+ LGPL-2 BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~x64-macos ~sparc-solaris"
 IUSE="compat +python"
