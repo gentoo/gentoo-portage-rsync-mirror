@@ -6,5 +6,11 @@
   <flag name='idl'>
     Install idl files.
   </flag>
+  <flag name='libraries'>
+    Build extra libraries.
+  </flag>
+  <flag name='tools'>
+    Build extra tools.
+  </flag>
 </use>
 </pkgmetadata>

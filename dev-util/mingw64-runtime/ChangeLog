@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/mingw64-runtime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.19 2015/02/27 08:11:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/mingw64-runtime/ChangeLog,v 1.20 2015/05/05 11:39:40 alonbl Exp $
+
+*mingw64-runtime-4.0.1 (05 May 2015)
+
+  05 May 2015; Alon Bar-Lev <alonbl@gentoo.org>
+  +files/mingw64-runtime-4.0.1-build.patch,
+  +files/mingw64-runtime-4.0.1-winpthreads.patch, +mingw64-runtime-4.0.1.ebuild,
+  metadata.xml:
+  Version bump, bug#543954
 
   27 Feb 2015; Mike Frysinger <vapier@gentoo.org> mingw64-runtime-2.0.8.ebuild,
   mingw64-runtime-3.0.0.ebuild, mingw64-runtime-3.1.0.ebuild,
