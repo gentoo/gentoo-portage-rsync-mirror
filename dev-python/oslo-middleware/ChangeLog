@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/oslo-middleware
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-middleware/ChangeLog,v 1.4 2015/04/22 20:47:29 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-middleware/ChangeLog,v 1.5 2015/05/05 15:02:49 prometheanfire Exp $
+
+*oslo-middleware-1.2.0 (05 May 2015)
+
+  05 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +oslo-middleware-1.2.0.ebuild:
+  post-kilo release
 
 *oslo-middleware-1.1.0 (22 Apr 2015)
 

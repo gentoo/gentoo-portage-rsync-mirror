@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.3-r1.ebuild,v 1.1 2015/04/14 16:08:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/keystone/keystone-2014.2.3-r2.ebuild,v 1.1 2015/05/05 15:12:10 prometheanfire Exp $
 
 EAPI=5
 
@@ -132,6 +132,7 @@ RDEPEND="
 	<dev-python/posix_ipc-0.9.10[${PYTHON_USEDEP}]"
 
 PATCHES=(
+	"${FILESDIR}/CVE-2015-3646-2014.2.3.patch"
 )
 
 pkg_setup() {
