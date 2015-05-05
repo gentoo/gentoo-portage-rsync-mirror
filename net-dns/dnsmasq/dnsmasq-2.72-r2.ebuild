@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.72-r2.ebuild,v 1.2 2015/04/30 08:48:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.72-r2.ebuild,v 1.3 2015/05/05 15:32:16 vapier Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ CDEPEND="dbus? ( sys-apps/dbus )
 			dev-lang/lua:5.1
 		)
 	)
-	conntrack? ( !s390? ( net-libs/libnetfilter_conntrack ) )
+	conntrack? ( net-libs/libnetfilter_conntrack )
 	nls? (
 		sys-devel/gettext
 		net-dns/libidn
@@ -54,8 +54,7 @@ RDEPEND="${CDEPEND}
 "
 
 REQUIRED_USE="dhcp-tools? ( dhcp )
-	lua? ( script )
-	s390? ( !conntrack )"
+	lua? ( script )"
 
 use_have() {
 	local useflag no_only uword
