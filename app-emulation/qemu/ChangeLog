@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.323 2015/04/28 09:20:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.324 2015/05/05 07:40:19 vapier Exp $
+
+  05 May 2015; Mike Frysinger <vapier@gentoo.org> -files/qemu-9999-cflags.patch,
+  -files/qemu-9999-virtfs-proxy-helper-accept.patch, -files/qemu-kvm-1.4:
+  Drop files no longer referenced by ebuilds.
 
 *qemu-2.3.0 (28 Apr 2015)
 
