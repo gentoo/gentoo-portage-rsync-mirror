@@ -1,24 +1,24 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/jedi-0.8.0.ebuild,v 1.2 2015/04/08 08:05:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/jedi-0.9.0.ebuild,v 1.1 2015/05/05 17:43:21 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_3 )
-inherit distutils-r1
+PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
-MY_PV="${PV/_beta/b}-final0"
+inherit distutils-r1
 
 DESCRIPTION="Awesome autocompletion library for python"
 HOMEPAGE="https://github.com/davidhalter/jedi"
-SRC_URI="mirror://pypi/j/jedi/jedi-${MY_PV}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc test"
 
-DEPEND="app-arch/xz-utils
+DEPEND="
+	app-arch/xz-utils
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx )
 	test? (
@@ -26,17 +26,12 @@ DEPEND="app-arch/xz-utils
 		dev-python/tox[${PYTHON_USEDEP}]
 	)"
 
-S=${WORKDIR}/${PN}-${MY_PV}
-
 python_test() {
 	PYTHONPATH="${PYTHONPATH%:}${PYTHONPATH+:}${S}/test" py.test test || die "Tests failed under ${EPYTHON}"
 }
 
-src_compile() {
-	if use doc ; then
-		emake -C docs html
-	fi
-	distutils-r1_src_compile
+python_compile_all() {
+	use doc && emake -C docs html
 }
 
 python_install_all() {

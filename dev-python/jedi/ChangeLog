@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/jedi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/ChangeLog,v 1.17 2015/04/08 08:05:10 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/jedi/ChangeLog,v 1.18 2015/05/05 17:43:21 jlec Exp $
+
+*jedi-0.9.0 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +jedi-0.9.0.ebuild,
+  -jedi-0.5_beta5.ebuild, -jedi-0.6.0.ebuild, -jedi-0.7.0.ebuild,
+  -jedi-0.8.0.ebuild, metadata.xml:
+  Version Bump; drop old
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> jedi-0.5_beta5.ebuild,
   jedi-0.6.0.ebuild, jedi-0.7.0.ebuild, jedi-0.8.0.ebuild:
