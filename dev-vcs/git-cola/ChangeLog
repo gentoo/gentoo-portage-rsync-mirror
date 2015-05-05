@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.42 2015/04/26 16:25:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.43 2015/05/05 13:30:26 jlec Exp $
+
+*git-cola-2.1.2 (05 May 2015)
+
+  05 May 2015; Justin Lecher <jlec@gentoo.org> +git-cola-2.1.2.ebuild:
+  Version Bump
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> git-cola-2.0.7.ebuild:
   x86 stable wrt bug #518306
