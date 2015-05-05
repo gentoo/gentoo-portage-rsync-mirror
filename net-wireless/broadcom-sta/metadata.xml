@@ -5,5 +5,9 @@
 	<email>mattst88@gentoo.org</email>
 	<name>Matt Turner</name>
 </maintainer>
+<maintainer>
+	<email>mpagano@gentoo.org</email>
+	<name>Mike Pagano</name>
+</maintainer>
 </pkgmetadata>
 

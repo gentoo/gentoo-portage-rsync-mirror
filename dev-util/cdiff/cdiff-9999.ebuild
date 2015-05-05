@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-9999.ebuild,v 1.5 2015/04/08 17:54:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cdiff/cdiff-9999.ebuild,v 1.6 2015/05/05 17:10:15 jlec Exp $
 
 EAPI="5"
 
@@ -35,8 +35,6 @@ PATCHES=( "${FILESDIR}"/${PN}-0.9.2-disable-unimportant-failing-test.patch )
 DOCS=( CHANGES.rst README.rst )
 
 python_test() {
-	python_export_best
-
 	${PYTHON} tests/test_cdiff.py || die "Unit tests failed."
 
 	./tests/regression.sh || die "Regression tests failed."

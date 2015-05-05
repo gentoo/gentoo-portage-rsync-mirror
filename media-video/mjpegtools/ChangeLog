@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.230 2015/05/01 19:16:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.231 2015/05/05 17:02:27 billie Exp $
+
+  05 May 2015; Daniel Pielmeier <billie@gentoo.org>
+  -mjpegtools-2.1.0-r1.ebuild, mjpegtools-2.1.0-r2.ebuild:
+  Remove old. Specify slot dependency for virtual/jpeg
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> mjpegtools-2.1.0-r2.ebuild:
   Stable for PPC64 (bug #525770).

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.14 2015/05/01 19:16:58 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-2.1.0-r2.ebuild,v 1.15 2015/05/05 17:02:27 billie Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ppc ppc64 sparc x86 ~amd64-fbsd"
 IUSE="dv gtk cpu_flags_x86_mmx png quicktime sdl sdlgfx static-libs"
 REQUIRED_USE="sdlgfx? ( sdl )"
 
-RDEPEND=">=virtual/jpeg-0-r2[${MULTILIB_USEDEP}]
+RDEPEND="virtual/jpeg:0=[${MULTILIB_USEDEP}]
 	quicktime? ( >=media-libs/libquicktime-1.2.4-r1[${MULTILIB_USEDEP}] )
 	dv? ( >=media-libs/libdv-1.0.0-r3[${MULTILIB_USEDEP}] )
 	png? ( media-libs/libpng:0= )
