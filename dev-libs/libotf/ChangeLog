@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.65 2015/01/31 01:42:59 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.66 2015/05/05 19:38:44 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -libotf-0.9.8.ebuild:
+  Remove old.
 
   31 Jan 2015; Patrick Lauer <patrick@gentoo.org> libotf-0.9.8.ebuild:
   Remove redundant want_autoconf=latest

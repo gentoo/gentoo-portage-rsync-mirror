@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/ustr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.16 2014/12/02 12:48:28 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ustr/ChangeLog,v 1.17 2015/05/05 19:33:04 mrueg Exp $
+
+  05 May 2015; Manuel Rüger <mrueg@gentoo.org> -ustr-1.0.4-r1.ebuild,
+  -ustr-1.0.4-r2.ebuild, -ustr-1.0.4-r3.ebuild, -ustr-1.0.4-r4.ebuild:
+  Remove old.
 
   02 Dec 2014; Pacho Ramos <pacho@gentoo.org> ustr-1.0.4-r5.ebuild:
   amd64/x86 stable, bug #525988
