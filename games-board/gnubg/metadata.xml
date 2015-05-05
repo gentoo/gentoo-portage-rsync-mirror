@@ -2,8 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>games</herd>
-<maintainer>
-<email>mr_bones_@gentoo.org</email>
-<name>Michael Sterrett</name>
-</maintainer>
 </pkgmetadata>
