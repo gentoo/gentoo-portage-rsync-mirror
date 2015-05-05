@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpDocumentor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpDocumentor/ChangeLog,v 1.4 2014/10/10 14:18:14 grknight Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpDocumentor/ChangeLog,v 1.5 2015/05/05 00:11:36 grknight Exp $
+
+*phpDocumentor-2.8.2 (05 May 2015)
+
+  05 May 2015; Brian Evans <grknight@gentoo.org> +phpDocumentor-2.8.2.ebuild:
+  Version bump, use phar instead of tar archive
 
 *phpDocumentor-2.7.0 (10 Oct 2014)
 
