@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellm-countdown
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-countdown/ChangeLog,v 1.12 2009/06/25 17:44:39 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-countdown/ChangeLog,v 1.13 2015/05/06 20:56:54 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -gkrellm-countdown-0.1.1.ebuild:
+  Remove old.
 
   25 Jun 2009; Raúl Porcel <armin76@gentoo.org>
   gkrellm-countdown-0.1.2.ebuild:
@@ -47,4 +50,3 @@
   02 Jul 2005; Markus Nigbur <pyrania@gentoo.org>
   +gkrellm-countdown-0.1.1.ebuild:
   Initial import. Thanks to James Jones <jcjones@ufl.edu>. See bug #36848.
-
