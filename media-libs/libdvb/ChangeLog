@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.43 2015/01/31 01:50:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/ChangeLog,v 1.44 2015/05/06 12:20:37 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -libdvb-0.5.5.1-r2.ebuild:
+  Remove old.
 
   31 Jan 2015; Patrick Lauer <patrick@gentoo.org> libdvb-0.5.5.1-r3.ebuild:
   Remove redundant want_autoconf=latest
