@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/marble
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.270 2015/02/18 16:26:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/marble/ChangeLog,v 1.271 2015/05/06 13:12:10 kensington Exp $
+
+  06 May 2015; Michael Palimaka <kensington@gentoo.org> marble-4.14.3.ebuild:
+  Add missing dependency wrt bug #548722.
 
   18 Feb 2015; Michał Górny <mgorny@gentoo.org> -marble-4.12.5.ebuild:
   Remove KDE SC 4.12
