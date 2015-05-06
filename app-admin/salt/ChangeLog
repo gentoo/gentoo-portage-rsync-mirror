@@ -1,6 +1,15 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.61 2015/04/21 22:25:07 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.62 2015/05/06 22:27:59 chutzpah Exp $
+
+*salt-2015.5.0 (06 May 2015)
+
+  06 May 2015; Patrick McLean <chutzpah@gentoo.org> +files/api-initd-4,
+  +files/master-initd-4, +files/minion-initd-4,
+  +files/salt-2015.5.0-archive-test.patch, +files/syndic-initd-4,
+  +salt-2015.5.0.ebuild, metadata.xml:
+  Version bump. Add vim-syntax USE flag (bug #548362), retry when stopping
+  services (bug #544290).
 
 *salt-2014.7.5 (21 Apr 2015)
 
