@@ -1,6 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant3/Savant3-3.0.0.ebuild,v 1.3 2014/08/10 20:58:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/Savant3/Savant3-3.0.1.ebuild,v 1.1 2015/05/06 17:49:38 grknight Exp $
+
+EAPI=5
 
 inherit php-pear-lib-r1
 
@@ -8,7 +10,7 @@ KEYWORDS="~amd64 ~x86"
 
 DESCRIPTION="The simple PHP template alternative to Smarty"
 HOMEPAGE="http://phpsavant.com/yawiki/index.php?area=Savant3"
-SRC_URI="http://phpsavant.com/${P}.tgz"
+SRC_URI="http://phpsavant.com/get/${P}.tgz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 IUSE="minimal"
