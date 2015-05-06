@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.35 2015/05/05 18:04:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.36 2015/05/06 00:50:03 floppym Exp $
+
+*pycparser-2.12 (06 May 2015)
+
+  06 May 2015; Mike Gilbert <floppym@gentoo.org> +pycparser-2.12.ebuild,
+  -pycparser-2.11.ebuild:
+  Version bump, should fix bug 548718.
 
 *pycparser-2.11 (05 May 2015)
 
