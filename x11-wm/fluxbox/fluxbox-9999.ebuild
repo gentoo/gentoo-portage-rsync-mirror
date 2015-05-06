@@ -1,11 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.14 2015/01/26 12:31:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-9999.ebuild,v 1.15 2015/05/06 12:45:37 titanofold Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs git-2 prefix
 
-IUSE="nls xinerama bidi +truetype +imlib +slit +toolbar vim-syntax"
+IUSE="nls xinerama bidi +truetype +imlib +slit +systray +toolbar vim-syntax"
+
+REQUIRED_USE="systray? ( toolbar )"
 
 DESCRIPTION="Fluxbox is an X11 window manager featuring tabs and an iconbar"
 
@@ -64,13 +66,12 @@ src_prepare() {
 src_configure() {
 	use bidi && append-cppflags "$($(tc-getPKG_CONFIG) --cflags fribidi)"
 
-	econf ${myconf} \
-		$(use_enable bidi fribidi ) \
+	econf $(use_enable bidi fribidi ) \
 		$(use_enable imlib imlib2) \
 		$(use_enable nls) \
 		$(use_enable slit ) \
+		$(use_enable systray) \
 		$(use_enable toolbar ) \
-		$(use_enable toolbar systray ) \
 		$(use_enable truetype xft) \
 		$(use_enable xinerama) \
 		--sysconfdir="${EPREFIX}"/etc/X11/${PN} \
@@ -78,7 +79,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake
+	default
 
 	ebegin "Creating a menu file (may take a while)"
 	mkdir -p "${T}/home/.fluxbox" || die "mkdir home failed"

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.335 2015/05/06 11:05:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.336 2015/05/06 12:45:37 titanofold Exp $
+
+  06 May 2015; Aaron W. Swenson <titanofold@gentoo.org> fluxbox-9999.ebuild:
+  Fix bug 509014.
 
 *fluxbox-1.3.7-r1 (06 May 2015)
 
