@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/cffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.56 2015/05/05 18:13:35 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/ChangeLog,v 1.58 2015/05/06 08:28:14 ago Exp $
+
+  06 May 2015; Agostino Sarubbo <ago@gentoo.org> cffi-0.9.2.ebuild:
+  Stable for x86, wrt bug #548530
+
+  06 May 2015; Agostino Sarubbo <ago@gentoo.org> cffi-0.9.2.ebuild:
+  Stable for ia64, wrt bug #548530
 
   05 May 2015; Anthony G. Basile <blueness@gentoo.org> cffi-0.9.2.ebuild:
   Stable on amd64.  Bug #548530.
