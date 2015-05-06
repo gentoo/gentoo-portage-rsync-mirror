@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.144 2015/05/05 07:36:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.145 2015/05/06 16:44:01 zlogene Exp $
+
+  06 May 2015; Mikle Kolyada <zlogene@gentoo.org> pambase-20150213.ebuild:
+  amd64 stable wrt bug #547434
 
   05 May 2015; Jeroen Roovers <jer@gentoo.org> pambase-20150213.ebuild:
   Stable for HPPA (bug #547434).
