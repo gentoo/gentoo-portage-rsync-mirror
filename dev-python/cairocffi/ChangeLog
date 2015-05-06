@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cairocffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cairocffi/ChangeLog,v 1.9 2015/04/08 08:05:05 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cairocffi/ChangeLog,v 1.10 2015/05/06 03:22:24 idella4 Exp $
+
+*cairocffi-0.6-r1 (06 May 2015)
+
+  06 May 2015; Ian Delaney <idella4@gentoo.org> +cairocffi-0.6-r1.ebuild:
+  revbump; add another missed dep, wrt bug #546910
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> cairocffi-0.5.3-r1.ebuild,
   cairocffi-0.5.4.ebuild, cairocffi-0.6.ebuild:
