@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7c.ebuild,v 1.1 2015/02/13 20:35:13 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/loop-aes/loop-aes-3.7c.ebuild,v 1.2 2015/05/06 19:58:05 alonbl Exp $
 
 EAPI="5"
 
-inherit linux-mod
+inherit eutils linux-mod
 
 MY_P="${PN/aes/AES}-v${PV}"
 
@@ -48,6 +48,7 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch "${FILESDIR}/${P}-linux4.patch"
 	sed -e 's/make/$(MAKE)/g' -i Makefile || die "sed failed"
 }
 

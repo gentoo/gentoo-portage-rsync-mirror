@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1232 2015/05/06 01:58:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1233 2015/05/06 19:52:39 phajdan.jr Exp $
+
+*chromium-44.0.2391.0 (06 May 2015)
+
+  06 May 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-44.0.2376.0.ebuild, +chromium-44.0.2391.0.ebuild:
+  Dev channel bump. Use bundled icu. Remove broken widevine support (bug
+  #547630 by Austin M. Matherne). Remove old.
 
 *chromium-43.0.2357.45 (06 May 2015)
 
