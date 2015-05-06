@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
-<maintainer>
-	<email>pchrist@gentoo.org</email>
-	<name>Panagiotis Christopoulos</name>
-</maintainer>
-<maintainer>
-	<email>contact@sporkbox.us</email>
-	<name>Daniel Campbell</name>
-</maintainer>
-	<longdescription><![CDATA[
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>pchrist@gentoo.org</email>
+		<name>Panagiotis Christopoulos</name>
+	</maintainer>
+	<maintainer>
+		<email>dlcampbell@gmx.com</email>
+		<name>Daniel Campbell</name>
+		<description>Mantainer. Assign bugs to him</description>
+	</maintainer>
+	<longdescription>
 		Fluxbox is yet another windowmanager for X. Originally based upon the
 		Blackbox 0.61.1 code, Fluxbox has been extended to include a new tabbed
 		window handling mechanism, an improved configurable window title bar,
-		better KDE and GNOME integration, an integrated keygrabber and countless
-		additonal features.
-		]]></longdescription>
+		better KDE and GNOME integration, an integrated key grabber and
+		countless additional features.
+	</longdescription>
 	<use>
-		<flag name='slit'>Enables the fluxbox slit (or dock)</flag>
-		<flag name='toolbar'>Enables the fluxbox toolbar</flag>
-		<flag name='bidi'>Enable bidirectional language support with
-			<pkg>dev-libs/fribidi</pkg></flag>
+		<flag name='bidi'>
+			Enable bidirectional language support with
+			<pkg>dev-libs/fribidi</pkg>
+		</flag>
+		<flag name='slit'>Enables the Fluxbox slit (or dock)</flag>
+		<flag name='systray'>
+			Enables the system tray in the Fluxbox toolbar
+		</flag>
+		<flag name='toolbar'>Enables the Fluxbox toolbar</flag>
 	</use>
 </pkgmetadata>
