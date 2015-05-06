@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2357.2.ebuild,v 1.1 2015/04/09 07:11:22 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2357.45.ebuild,v 1.1 2015/05/06 01:58:28 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -33,10 +33,7 @@ RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
 	app-crypt/libsecret:=
-	cups? (
-		dev-libs/libgcrypt:0=
-		>=net-print/cups-1.3.11:=
-	)
+	cups? ( >=net-print/cups-1.3.11:= )
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
 	dev-libs/glib:=
@@ -470,6 +467,11 @@ src_configure() {
 		# Prevent linker from running out of address space, bug #471810 .
 		if use x86; then
 			filter-flags "-g*"
+		fi
+
+		# Prevent libvpx build failures. Bug 530248, 544702, 546984.
+		if [[ ${myarch} == amd64 || ${myarch} == x86 ]]; then
+			filter-flags -mno-mmx -mno-sse2 -mno-ssse3 -mno-sse4.1 -mno-avx2
 		fi
 	fi
 
