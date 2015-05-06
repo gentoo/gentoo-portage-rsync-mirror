@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-4.0.5.ebuild,v 1.2 2014/08/15 14:01:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/haml/haml-4.0.6-r1.ebuild,v 1.1 2015/05/06 15:12:21 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_TASK_TEST="test"
 RUBY_FAKEGEM_TASK_DOC="-Ilib doc"
@@ -29,9 +29,9 @@ ruby_add_rdepend "dev-ruby/tilt"
 
 ruby_add_bdepend "
 	test? (
-		dev-ruby/minitest:0
+		dev-ruby/minitest:5
 		dev-ruby/nokogiri
-		dev-ruby/rails:3.2
+		dev-ruby/rails:4.2
 	)
 	doc? (
 		dev-ruby/yard
@@ -40,10 +40,10 @@ ruby_add_bdepend "
 
 all_ruby_prepare() {
 	sed -i -e '/bundler/ s:^:#:' \
-		-e 's/gem "minitest"/gem "minitest", "~>4.0"/'\
-		-e '1igem "actionpack", "~>3.2"'\
-		-e '1igem "activesupport", "~>3.2"'\
-		-e '1igem "railties", "~>3.2"'\
+		-e 's/gem "minitest"/gem "minitest", "~>5.0"/'\
+		-e '1igem "actionpack", "~>4.2"'\
+		-e '1igem "activesupport", "~>4.2"'\
+		-e '1igem "railties", "~>4.2"'\
 		test/test_helper.rb || die
 	# Remove test that fails when RedCloth is available
 	sed -i -e "/should raise error when a Tilt filters dependencies are unavailable for extension/,+9 s/^/#/"\
