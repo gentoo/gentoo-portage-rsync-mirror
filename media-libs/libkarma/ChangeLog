@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libkarma
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.20 2012/08/18 12:29:53 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkarma/ChangeLog,v 1.21 2015/05/06 10:00:57 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/libkarma-0.1.0-destdir.patch, -libkarma-0.1.0-r1.ebuild:
+  Remove old.
 
   18 Aug 2012; Michael Weber <xmw@gentoo.org> libkarma-0.1.2.ebuild:
   ppc stable (bug 407701)

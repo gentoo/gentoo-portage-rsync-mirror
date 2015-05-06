@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/dssi
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.34 2013/03/02 21:42:29 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/dssi/ChangeLog,v 1.35 2015/05/06 09:55:35 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -dssi-1.0.0.ebuild,
+  -dssi-1.1.0.ebuild:
+  Remove old.
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> dssi-1.1.0.ebuild,
   dssi-1.1.1.ebuild:

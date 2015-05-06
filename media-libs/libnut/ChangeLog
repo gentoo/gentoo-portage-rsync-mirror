@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libnut
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.18 2013/07/28 19:10:38 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libnut/ChangeLog,v 1.19 2015/05/06 09:49:49 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -libnut-503.ebuild:
+  Remove old.
 
   28 Jul 2013; Alexis Ballier <aballier@gentoo.org> libnut-661.ebuild:
   keyword ~amd64-fbsd, bug #477750
@@ -66,4 +69,3 @@
   18 Mar 2007; Steve Dibb <beandog@gentoo.org> +metadata.xml,
   +libnut-282.ebuild:
   Initial import
-

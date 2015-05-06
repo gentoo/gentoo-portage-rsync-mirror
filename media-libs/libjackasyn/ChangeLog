@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libjackasyn
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.21 2014/08/10 21:08:55 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/ChangeLog,v 1.22 2015/05/06 10:00:10 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -libjackasyn-0.10.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libjackasyn-0.10.ebuild,
   libjackasyn-0.13.ebuild:

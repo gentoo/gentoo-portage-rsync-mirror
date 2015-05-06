@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/coin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.50 2014/08/10 21:08:18 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/coin/ChangeLog,v 1.51 2015/05/06 09:57:12 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -coin-3.1.0.ebuild,
+  -coin-3.1.3-r1.ebuild, -files/coin-3.1.0-wrap-msvc-wine-fix.patch:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> coin-3.1.0.ebuild,
   coin-3.1.3-r1.ebuild, coin-3.1.3-r2.ebuild:

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16519 2015/05/05 09:17:59 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16520 2015/05/06 09:32:44 jlec Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -282,11 +282,6 @@ app-emulation/emul-linux-x86-soundlibs
 app-emulation/emul-linux-x86-xlibs
 app-emulation/emul-linux-x86-jna
 <x11-drivers/ati-drivers-14
-
-# Ian Delaney <idella4@gentoo.org> (24 Mar 2015)
-# the cffi requires setting ':=' which isn't reliable in a virtual
-# Masked while a solution is found
-virtual/python-cffi
 
 # Brian Evans <grknight@gentoo.org> (22 Mar 2015)
 # PHP 5.3.x is vulnerable to several security bugs and has

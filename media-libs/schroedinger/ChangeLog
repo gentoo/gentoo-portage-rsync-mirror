@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/schroedinger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.72 2015/01/21 11:41:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/schroedinger/ChangeLog,v 1.73 2015/05/06 09:48:02 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org> -schroedinger-1.0.10-r1.ebuild,
+  -schroedinger-1.0.10.ebuild, -schroedinger-1.0.11.ebuild,
+  -schroedinger-1.0.8.ebuild:
+  Remove old.
 
   21 Jan 2015; Pacho Ramos <pacho@gentoo.org> schroedinger-1.0.11-r1.ebuild:
   Fix sandbox violations, #534582
