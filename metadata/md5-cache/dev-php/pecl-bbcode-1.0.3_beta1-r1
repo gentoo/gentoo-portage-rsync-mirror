@@ -10,5 +10,5 @@ RDEPEND=php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/
 REQUIRED_USE=|| ( php_targets_php5-4 php_targets_php5-5 php_targets_php5-6 )
 SLOT=0
 SRC_URI=http://pecl.php.net/get/bbcode-1.0.3b1.tgz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	b4d5827d04ab9f22f094e1ecab1df639	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	php-ext-pecl-r2	de1308bcf4fef59a8ee8793efc7c3051	php-ext-source-r2	b4d5827d04ab9f22f094e1ecab1df639	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=203dc7513e0ebfd2ed4c5291bfb94989

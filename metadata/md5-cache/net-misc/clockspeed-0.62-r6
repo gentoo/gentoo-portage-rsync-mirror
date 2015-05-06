@@ -10,5 +10,5 @@ RDEPEND=selinux? ( sec-policy/selinux-clockspeed ) net-dns/djbdns
 RESTRICT=mirror bindist test
 SLOT=0
 SRC_URI=http://cr.yp.to/clockspeed/clockspeed-0.62.tar.gz http://dev.gentoo.org/~pacho/maintainer-needed/leapsecs.dat.20081114
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=2f34f1e19f9b73f24f2e97b0782603c1

@@ -116,4 +116,31 @@ LDFLAGS=$(raw-ldflags)
 [[ ${LDFLAGS} == '-O1 --as-needed -z now' ]]
 ftend
 
+tbegin "test-flags-CC (valid flags)"
+out=$(test-flags-CC -O3)
+[[ $? -eq 0 && ${out} == "-O3" ]]
+ftend
+
+tbegin "test-flags-CC (invalid flags)"
+out=$(test-flags-CC -finvalid-flag)
+[[ $? -ne 0 && -z ${out} ]]
+ftend
+
+if type -P clang >/dev/null ; then
+tbegin "test-flags-CC (valid flags w/clang)"
+out=$(CC=clang test-flags-CC -O3)
+[[ $? -eq 0 && ${out} == "-O3" ]]
+ftend
+
+tbegin "test-flags-CC (invalid flags w/clang)"
+out=$(CC=clang test-flags-CC -finvalid-flag)
+[[ $? -ne 0 && -z ${out} ]]
+ftend
+
+tbegin "test-flags-CC (gcc-valid but clang-invalid flags)"
+out=$(CC=clang test-flags-CC -finline-limit=1200)
+[[ $? -ne 0 && -z ${out} ]]
+ftend
+fi
+
 texit

@@ -9,5 +9,5 @@ LICENSE=tcltk
 RDEPEND=!aqua? ( media-libs/fontconfig media-libs/freetype:2 x11-libs/libX11 x11-libs/libXt truetype? ( x11-libs/libXft ) xscreensaver? ( x11-libs/libXScrnSaver ) ) ~dev-lang/tcl-8.5.17:8.5= !=dev-lang/tk-8.5:0
 SLOT=8.5
 SRC_URI=mirror://sourceforge/tcl/tk8.5.17-src.tar.gz mirror://sourceforge/tcl/tcl8.5.17-src.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f	virtualx	73cfc129b4b9ba23aed1abb10c825d86
 _md5_=b6683eabac0dfeac58dbd9967b7764bc

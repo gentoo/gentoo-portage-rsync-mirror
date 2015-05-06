@@ -8,5 +8,5 @@ LICENSE=LGPL-2.1+
 RDEPEND=~lxqt-base/liblxqt-0.7.0 dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 x11-libs/libX11
 SLOT=0
 SRC_URI=http://downloads.lxqt.org/lxqt/0.7.0/lxqt-qtplugin-0.7.0.tar.xz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=8e9394da1ee16aadc584a80c72b01363

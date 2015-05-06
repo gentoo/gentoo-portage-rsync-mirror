@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lisp/asdf-2.33-r3 virtual/libiconv >=dev-libs/libsigsegv-2.4 >=dev-libs/ffcall-1.10 dbus? ( sys-apps/dbus ) fastcgi? ( dev-libs/fcgi ) gdbm? ( sys-libs/gdbm ) gtk? ( >=x11-libs/gtk+-2.10 >=gnome-base/libglade-2.6 ) pari? ( <sci-mathematics/pari-2.5.0 ) postgres? ( >=dev-db/postgresql-8.0 ) readline? ( >=sys-libs/readline-5.0 ) pcre? ( dev-libs/libpcre ) svm? ( sci-libs/libsvm ) zlib? ( sys-libs/zlib ) X? ( x11-libs/libXpm ) hyperspec? ( dev-lisp/hyperspec ) berkdb? ( sys-libs/db:4.8 )
 SLOT=2/2.49
 SRC_URI=mirror://sourceforge/clisp/clisp-2.49.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c263990f1b677b0f0be0a3299f179762	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=09cd42b48f01ac62bd747d35e0e4bcc5

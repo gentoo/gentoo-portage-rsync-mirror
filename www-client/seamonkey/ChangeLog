@@ -1,6 +1,13 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.517 2015/03/26 11:36:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.518 2015/05/06 07:31:15 polynomial-c Exp $
+
+*seamonkey-2.33.1-r1 (06 May 2015)
+
+  06 May 2015; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.33.1.ebuild,
+  +seamonkey-2.33.1-r1.ebuild:
+  Bump enigmail to latest available release (bug #548724). Committed straight
+  to stable.
 
   26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> seamonkey-2.33.1.ebuild:
   Stable for x86, wrt bug #544056
