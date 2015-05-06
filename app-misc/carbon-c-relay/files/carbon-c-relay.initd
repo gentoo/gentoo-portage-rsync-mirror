@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/files/carbon-c-relay.initd,v 1.1 2015/05/05 14:44:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/files/carbon-c-relay.initd,v 1.2 2015/05/06 19:30:43 grobian Exp $
 
 extra_commands="configtest"
 extra_started_commands="reload"
@@ -27,6 +27,8 @@ start_pre() {
 	if [ "${RC_CMD}" != "restart" ]; then
 		configtest || return 1
 	fi
+	touch /var/log/${SVCNAME}.log
+	chown ${user}:${group} /var/log/${SVCNAME}.log
 }
 
 stop_pre() {
@@ -42,7 +44,8 @@ stop_post() {
 start() {
 	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --start --background --make-pidfile --pidfile ${pidfile} \
-		--stdout /var/log/${SVCNAME}.log --stderr /dev/stdout \
+		--stdout /var/log/${SVCNAME}.log \
+		--stderr /var/log/${SVCNAME}.log \
 		--user ${user} --group ${group} \
 		--exec ${command} -- ${command_args}
 	eend $?

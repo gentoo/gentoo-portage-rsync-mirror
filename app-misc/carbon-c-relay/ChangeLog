@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/carbon-c-relay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/ChangeLog,v 1.4 2015/05/05 14:44:31 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/ChangeLog,v 1.5 2015/05/06 19:30:43 grobian Exp $
+
+  06 May 2015; Fabian Groffen <grobian@gentoo.org> files/carbon-c-relay.initd:
+  initd: fix logging
 
 *carbon-c-relay-0.39-r1 (05 May 2015)
 

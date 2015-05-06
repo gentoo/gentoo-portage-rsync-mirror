@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-cpanminus/App-cpanminus-1.702.700.ebuild,v 1.1 2015/03/13 19:48:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-cpanminus/App-cpanminus-1.703.300.ebuild,v 1.1 2015/05/06 19:27:10 zlogene Exp $
 
 EAPI=5
 MODULE_AUTHOR=MIYAGAWA
-MODULE_VERSION=1.7027
+MODULE_VERSION=1.7033
 inherit perl-module
 
 DESCRIPTION='Get, unpack, build and install modules from CPAN'
