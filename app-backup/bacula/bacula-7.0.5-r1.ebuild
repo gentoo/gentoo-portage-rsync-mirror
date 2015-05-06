@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.5-r1.ebuild,v 1.7 2015/04/19 07:03:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/bacula-7.0.5-r1.ebuild,v 1.8 2015/05/06 05:38:52 tomjbe Exp $
 
 EAPI="5"
 
@@ -16,14 +16,14 @@ SRC_URI="mirror://sourceforge/bacula/${MY_P}.tar.gz"
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
-IUSE="acl bacula-clientonly bacula-nodir bacula-nosd examples ipv6 logwatch mysql postgres qt4 readline +sqlite3 ssl static tcpd vim-syntax X"
+IUSE="acl bacula-clientonly bacula-nodir bacula-nosd examples ipv6 logwatch mysql postgres qt4 readline +sqlite ssl static tcpd vim-syntax X"
 
 DEPEND="
 	dev-libs/gmp
 	!bacula-clientonly? (
 		postgres? ( dev-db/postgresql[threads] )
 		mysql? ( virtual/mysql )
-		sqlite3? ( dev-db/sqlite:3 )
+		sqlite? ( dev-db/sqlite:3 )
 		!bacula-nodir? ( virtual/mta )
 	)
 	qt4? (
@@ -56,7 +56,7 @@ RDEPEND="${DEPEND}
 	)
 	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
 
-REQUIRED_USE="|| ( ^^ ( mysql postgres sqlite3 ) bacula-clientonly )
+REQUIRED_USE="|| ( ^^ ( mysql postgres sqlite ) bacula-clientonly )
 				static? ( bacula-clientonly )"
 
 S=${WORKDIR}/${MY_P}
@@ -65,7 +65,7 @@ pkg_setup() {
 	#XOR and !bacula-clientonly controlled by REQUIRED_USE
 	use mysql && export mydbtype="mysql"
 	use postgres && export mydbtype="postgresql"
-	use sqlite3 && export mydbtype="sqlite3"
+	use sqlite && export mydbtype="sqlite3"
 
 	# create the daemon group and user
 	if [ -z "$(egetent group bacula 2>/dev/null)" ]; then
@@ -345,7 +345,7 @@ src_install() {
 			bacula-dir)
 				case "${mydbtype}" in
 					sqlite3)
-						# sqlite3 databases don't have a daemon
+						# sqlite databases don't have a daemon
 						sed -i -e 's/need "%database%"/:/g' "${T}/${script}".initd || die
 						;;
 					*)
@@ -390,7 +390,7 @@ pkg_postinst() {
 		einfo
 	fi
 
-	if use sqlite3; then
+	if use sqlite; then
 		einfo
 		einfo "Be aware that Bacula does not officially support SQLite database anymore."
 		einfo "Best use it only for a client-only installation. See Bug #445540."
