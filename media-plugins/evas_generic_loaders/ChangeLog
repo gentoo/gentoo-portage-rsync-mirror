@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/evas_generic_loaders
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/ChangeLog,v 1.9 2014/12/27 19:41:13 tommy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/evas_generic_loaders/ChangeLog,v 1.10 2015/05/06 10:18:31 mrueg Exp $
+
+  06 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -evas_generic_loaders-1.7.4.ebuild, -evas_generic_loaders-1.7.9.ebuild,
+  -evas_generic_loaders-1.8.1.ebuild:
+  Remove old.
 
   27 Dec 2014; Thomas Sachau (Tommy[D]) <tommy@gentoo.org>
   evas_generic_loaders-1.12.0.ebuild:
