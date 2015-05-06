@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.2.ebuild,v 1.10 2015/04/26 17:27:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/umfpack-5.6.2.ebuild,v 1.11 2015/05/06 06:28:02 jlec Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=sci-libs/amd-1.3
 	sci-libs/suitesparseconfig
 	virtual/blas
-	cholmod? ( >=sci-libs/cholmod-2 )"
+	cholmod? ( >=sci-libs/cholmod-2[-minimal] )"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	doc? ( virtual/latex-base )"
