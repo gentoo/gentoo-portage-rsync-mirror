@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r2.ebuild,v 1.2 2015/01/26 02:49:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r3.ebuild,v 1.1 2015/05/06 21:48:06 pesa Exp $
 
 EAPI=5
 
@@ -50,7 +50,7 @@ src_unpack() {
 	qt4-build-multilib_src_unpack
 
 	# compat version
-	# http://blog.qt.digia.com/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
+	# http://blog.qt.io/blog/2010/06/22/qt-assistant-compat-version-available-as-extra-source-package/
 	if use compat; then
 		mv "${WORKDIR}"/qt-assistant-qassistantclient-library-compat-version-4.6.3 "${S}"/tools/assistant/compat || die
 		mv "${WORKDIR}"/QtAssistant "${S}"/include || die
@@ -58,7 +58,10 @@ src_unpack() {
 }
 
 src_prepare() {
-	use compat && PATCHES+=("${FILESDIR}/${PN}-4.8.6-fix-compat.patch")
+	use compat && PATCHES+=(
+		"${FILESDIR}/${PN}-4.8.6-compat-install.patch"
+		"${FILESDIR}/${PN}-4.8.6-compat-syncqt.patch"
+	)
 
 	qt4-build-multilib_src_prepare
 
@@ -75,11 +78,6 @@ multilib_src_configure() {
 		-no-nas-sound -no-cups -no-nis -fontconfig
 	)
 	qt4_multilib_src_configure
-
-	if use compat; then
-		# syncqt knows nothing about these headers (bug 529398)
-		cp -pr "${S}"/include/QtAssistant "${BUILD_DIR}"/include || die
-	fi
 }
 
 multilib_src_compile() {

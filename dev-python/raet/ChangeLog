@@ -1,10 +1,14 @@
 # ChangeLog for dev-python/raet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/raet/ChangeLog,v 1.1 2014/11/13 00:55:17 chutzpah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/raet/ChangeLog,v 1.2 2015/05/06 21:31:23 chutzpah Exp $
+
+*raet-0.6.1 (06 May 2015)
+
+  06 May 2015; Patrick McLean <chutzpah@gentoo.org> +raet-0.6.1.ebuild:
+  Version bump.
 
 *raet-0.3.8 (13 Nov 2014)
 
   13 Nov 2014; Patrick McLean <chutzpah@gentoo.org> +raet-0.3.8.ebuild,
   +metadata.xml:
   New package, Reliable Asynchronous Event Transport Protocol
-

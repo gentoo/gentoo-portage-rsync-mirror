@@ -1,6 +1,15 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.37 2015/03/08 14:01:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.38 2015/05/06 21:48:06 pesa Exp $
+
+*qthelp-4.8.6-r3 (06 May 2015)
+
+  06 May 2015; Davide Pesavento <pesa@gentoo.org>
+  +files/qthelp-4.8.6-compat-install.patch,
+  +files/qthelp-4.8.6-compat-syncqt.patch, +qthelp-4.8.6-r3.ebuild,
+  -files/qthelp-4.8.6-fix-compat.patch, -qthelp-4.8.6-r2.ebuild:
+  Properly fix building with USE=compat by teaching syncqt how to generate
+  QtAssistant forwarding headers. Finally solves bug 529398.
 
   08 Mar 2015; Davide Pesavento <pesa@gentoo.org> qthelp-5.4.1.ebuild:
   Remove all keywords from "live" branch.

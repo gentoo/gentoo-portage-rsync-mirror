@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.132 2015/03/20 21:28:59 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.133 2015/05/06 21:33:07 chewi Exp $
+
+*icedtea-7.2.5.5 (06 May 2015)
+*icedtea-6.1.13.7 (06 May 2015)
+
+  06 May 2015; James Le Cuirot <chewi@gentoo.org> +icedtea-6.1.13.7.ebuild,
+  +icedtea-7.2.5.5.ebuild, -files/icedtea-7-ecj_jar.patch,
+  -icedtea-6.1.13.6.ebuild, -icedtea-7.2.5.4.ebuild,
+  files/fontconfig.Gentoo.properties.src:
+  Version bump. Closes #531686 and #541270. Also fix Asian font issue wrt bug
+  #390663. Address security bug #524560 but older versions currently remain due
+  to other keywords.
 
   20 Mar 2015; James Le Cuirot <chewi@gentoo.org> -icedtea-6.1.12.7.ebuild,
   -icedtea-6.1.13.3.ebuild, -icedtea-6.1.13.4.ebuild,

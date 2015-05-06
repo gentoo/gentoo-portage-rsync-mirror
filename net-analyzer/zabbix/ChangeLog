@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/zabbix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.176 2015/02/02 19:29:17 mattm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zabbix/ChangeLog,v 1.177 2015/05/06 21:42:24 mattm Exp $
+
+*zabbix-2.4.5 (06 May 2015)
+*zabbix-2.2.9 (06 May 2015)
+
+  06 May 2015; Matthew Marlowe <mattm@gentoo.org> +zabbix-2.2.9.ebuild,
+  +zabbix-2.4.5.ebuild, -zabbix-2.0.12-r1.ebuild, -zabbix-2.0.13.ebuild,
+  -zabbix-2.2.7.ebuild, -zabbix-2.2.8.ebuild, -zabbix-2.4.1.ebuild,
+  -zabbix-2.4.3.ebuild, zabbix-2.0.14.ebuild, zabbix-2.2.5.ebuild:
+  Version Bump 2.2.9, 2.4.5 Removed Legacy Ebuilds Modified Postgresql/JDK
+  dependencies to reflect new slot designations and that all current ebuilds in
+  tree will meet version requirements.
 
 *zabbix-2.0.14 (02 Feb 2015)
 *zabbix-2.4.3 (02 Feb 2015)
