@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/most
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.48 2014/12/08 11:09:18 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.49 2015/05/06 06:51:09 jlec Exp $
+
+*most-5.0.0a-r1 (06 May 2015)
+
+  06 May 2015; Justin Lecher <jlec@gentoo.org> +most-5.0.0a-r1.ebuild,
+  metadata.xml:
+  Reduce parallel make to 1 due to problems with parallel make, bug #547820;
+  EAPI bump
 
   08 Dec 2014; Benda Xu <heroxbd@gentoo.org>
   +files/most-5.0.0a-donot-hardcode-path.patch,

@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/puppet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.218 2015/04/30 01:28:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/ChangeLog,v 1.220 2015/05/06 06:38:44 prometheanfire Exp $
+
+  06 May 2015; Matthew Thode <prometheanfire@gentoo.org> puppet-4.0.0-r2.ebuild:
+  now with signing
+
+  06 May 2015; Matthew Thode <prometheanfire@gentoo.org> puppet-4.0.0-r2.ebuild:
+  changing sqlite3 to sqlite for bug 548644
 
 *puppet-4.0.0-r2 (30 Apr 2015)
 

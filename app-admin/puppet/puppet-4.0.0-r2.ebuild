@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.0.0-r2.ebuild,v 1.1 2015/04/30 01:28:39 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.0.0-r2.ebuild,v 1.3 2015/05/06 06:38:44 prometheanfire Exp $
 
 EAPI="5"
 
@@ -10,14 +10,14 @@ RUBY_FAKEGEM_RECIPE_TEST="rspec"
 
 inherit elisp-common xemacs-elisp-common eutils user ruby-fakegem versionator
 
-DESCRIPTION="A system automation and configuration management software"
+DESCRIPTION="A system automation and configuration management software."
 HOMEPAGE="http://puppetlabs.com/"
 SRC_URI="http://downloads.puppetlabs.com/puppet/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~sparc ~x86"
-IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite3 vim-syntax xemacs"
+IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite vim-syntax xemacs"
 
 ruby_add_rdepend "
 	dev-ruby/hiera
@@ -29,7 +29,7 @@ ruby_add_rdepend "
 	doc? ( dev-ruby/rdoc )
 	ldap? ( dev-ruby/ruby-ldap )
 	shadow? ( dev-ruby/ruby-shadow )
-	sqlite3? ( dev-ruby/sqlite3 )
+	sqlite? ( dev-ruby/sqlite3 )
 	virtual/ruby-ssl"
 
 DEPEND="${DEPEND}
