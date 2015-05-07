@@ -1,10 +1,11 @@
 --- a/src/in_netlink.c
 +++ b/src/in_netlink.c
-@@ -23,6 +23,7 @@
-  * DEALINGS IN THE SOFTWARE.
-  */
+@@ -37,6 +37,8 @@
+ static struct element_group *grp;
+ static struct bmon_module netlink_ops;
  
 +#include <net/if.h>
- #include <bmon/bmon.h>
- #include <bmon/input.h>
- #include <bmon/element.h>
++
+ #include <netlink/netlink.h>
+ #include <netlink/cache.h>
+ #include <netlink/utils.h>
