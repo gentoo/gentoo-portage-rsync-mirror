@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.43 2015/03/15 18:03:52 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.44 2015/05/07 18:28:03 pacho Exp $
+
+*opendbx-1.4.5-r1 (07 May 2015)
+*opendbx-1.5.0-r1 (07 May 2015)
+*opendbx-1.4.6-r1 (07 May 2015)
+
+  07 May 2015; Pacho Ramos <pacho@gentoo.org> +opendbx-1.4.5-r1.ebuild,
+  +opendbx-1.4.6-r1.ebuild, +opendbx-1.5.0-r1.ebuild:
+  Drop sqlite2 support and rename sqlite3 USE to sqlite (#530176)
 
   15 Mar 2015; Ulrich Müller <ulm@gentoo.org> opendbx-1.4.5.ebuild,
   opendbx-1.4.6.ebuild, opendbx-1.5.0.ebuild, metadata.xml:

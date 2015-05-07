@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/xf86-video-r128
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.47 2014/04/19 17:47:30 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-r128/ChangeLog,v 1.48 2015/05/07 18:28:59 mattst88 Exp $
+
+*xf86-video-r128-6.10.0 (07 May 2015)
+
+  07 May 2015; Matt Turner <mattst88@gentoo.org> +xf86-video-r128-6.10.0.ebuild:
+  Version bump to 6.10.0, bug 548466.
 
   19 Apr 2014; Agostino Sarubbo <ago@gentoo.org> xf86-video-r128-6.9.2.ebuild:
   Stable for sparc, wrt bug #500368
