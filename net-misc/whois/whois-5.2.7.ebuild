@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.2.1.ebuild,v 1.1 2014/10/23 03:45:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/whois-5.2.7.ebuild,v 1.1 2015/05/07 08:08:06 polynomial-c Exp $
 
 EAPI=4
 inherit eutils toolchain-funcs
