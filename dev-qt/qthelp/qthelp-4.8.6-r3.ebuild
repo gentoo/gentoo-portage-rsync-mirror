@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r3.ebuild,v 1.1 2015/05/06 21:48:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.6-r3.ebuild,v 1.2 2015/05/07 01:13:18 pesa Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit qt4-build-multilib
 DESCRIPTION="The Help module for the Qt toolkit"
 SRC_URI+="
 	compat? (
-		ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz
+		http://download.qt.io/archive/qt/4.6/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz
 		http://dev.gentoo.org/~pesa/distfiles/qt-assistant-compat-headers-4.7.tar.gz
 	)"
 
@@ -54,6 +54,7 @@ src_unpack() {
 	if use compat; then
 		mv "${WORKDIR}"/qt-assistant-qassistantclient-library-compat-version-4.6.3 "${S}"/tools/assistant/compat || die
 		mv "${WORKDIR}"/QtAssistant "${S}"/include || die
+		find "${S}"/tools/assistant/compat -type f -execdir chmod a-x '{}' + || die
 	fi
 }
 

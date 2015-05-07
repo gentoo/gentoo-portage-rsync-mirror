@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r2.ebuild,v 1.10 2014/01/26 11:55:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/qthelp-4.8.5-r2.ebuild,v 1.11 2015/05/07 01:13:18 pesa Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils qt4-build
 DESCRIPTION="The Help module for the Qt toolkit"
 SRC_URI+="
 	compat? (
-		ftp://ftp.qt.nokia.com/qt/source/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz
+		http://download.qt.io/archive/qt/4.6/qt-assistant-qassistantclient-library-compat-src-4.6.3.tar.gz
 		http://dev.gentoo.org/~pesa/distfiles/qt-assistant-compat-headers-4.7.tar.gz
 	)"
 

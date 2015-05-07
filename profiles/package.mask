@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16520 2015/05/06 09:32:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16521 2015/05/07 01:06:26 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Mike Gilbert <floppym@gentoo.org> (06 May 2015)
+# Obsolete development snapshots.
+>=app-emulation/open-vm-tools-2013
 
 # Hans de Graaff <graaff@gentoo.org> (3 May 2015)
 # dev-ruby/fssm is deprecated by its author and nothing

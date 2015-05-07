@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.38 2015/05/06 21:48:06 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.39 2015/05/07 01:13:18 pesa Exp $
+
+  07 May 2015; Davide Pesavento <pesa@gentoo.org> qthelp-4.8.5-r2.ebuild,
+  qthelp-4.8.6-r3.ebuild:
+  Remove executable bit from compat headers. Update SRC_URI of compat source
+  package.
 
 *qthelp-4.8.6-r3 (06 May 2015)
 
