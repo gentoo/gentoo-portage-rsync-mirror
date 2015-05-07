@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.86 2015/03/03 08:51:41 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.87 2015/05/07 22:25:11 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/libsamplerate-0.1.3-pkg_prog_pkg_config.patch,
+  -files/libsamplerate-0.1.7-macro-quoting.patch,
+  -files/libsamplerate-0.1.7-tests.patch, -libsamplerate-0.1.7.ebuild,
+  -libsamplerate-0.1.8.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libsamplerate-0.1.8-r1.ebuild:
   add arm64 support, tested on A53 board

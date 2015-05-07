@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libofa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/ChangeLog,v 1.32 2014/09/15 08:21:35 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libofa/ChangeLog,v 1.33 2015/05/07 22:22:53 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -libofa-0.9.3.ebuild:
+  Remove old.
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libofa-0.9.3-r1.ebuild:
   Stable for sparc, wrt bug #512012

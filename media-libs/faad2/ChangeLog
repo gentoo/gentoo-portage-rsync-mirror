@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faad2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.153 2014/09/15 08:20:48 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.154 2015/05/07 22:30:23 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -faad2-2.7-r2.ebuild:
+  Remove old.
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> faad2-2.7-r3.ebuild:
   Stable for sparc, wrt bug #512012

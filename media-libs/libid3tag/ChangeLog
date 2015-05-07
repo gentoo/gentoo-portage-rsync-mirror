@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libid3tag
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.58 2014/09/15 08:21:23 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libid3tag/ChangeLog,v 1.59 2015/05/07 22:27:04 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -libid3tag-0.15.1b-r2.ebuild,
+  -libid3tag-0.15.1b-r3.ebuild:
+  Remove old.
 
   15 Sep 2014; Agostino Sarubbo <ago@gentoo.org> libid3tag-0.15.1b-r4.ebuild:
   Stable for sparc, wrt bug #512012

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.84 2015/03/03 08:42:56 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.85 2015/05/07 22:28:26 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -libmad-0.15.1b-r6.ebuild,
+  -libmad-0.15.1b-r7.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> libmad-0.15.1b-r8.ebuild:
   add arm64 support, tested on A53 board
