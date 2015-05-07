@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/qof
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.45 2015/05/05 19:34:23 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qof/ChangeLog,v 1.46 2015/05/07 19:06:54 pacho Exp $
+
+*qof-0.8.8-r1 (07 May 2015)
+
+  07 May 2015; Pacho Ramos <pacho@gentoo.org> +qof-0.8.8-r1.ebuild,
+  -qof-0.8.7.ebuild:
+  Drop sqlite2 support (#548670)
 
   05 May 2015; Manuel Rüger <mrueg@gentoo.org> -qof-0.8.1.ebuild:
   Remove old.
