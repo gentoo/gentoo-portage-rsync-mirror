@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.11.0.ebuild,v 1.1 2015/04/20 15:31:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/plplot-5.11.0-r1.ebuild,v 1.1 2015/05/07 09:14:47 jlec Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="
 	ada? ( virtual/gnat:* )
 	cairo? ( x11-libs/cairo:0=[svg?,X?] )
 	gd? ( media-libs/gd:2=[jpeg?,png?] )
-	java? ( >=virtual/jre-1.5 )
+	java? ( >=virtual/jre-1.5:* )
 	latex? (
 		app-text/ghostscript-gpl
 		virtual/latex-base
@@ -133,7 +133,8 @@ src_configure() {
 	# Not recomended by upstream, check next release
 
 	local mycmakeargs=(
-		-DDEFAULT_ALL_DEVICES=ON
+		-DPLD_plmeta=ON
+		-DPLD_cgm=ON
 		-DTEST_DYNDRIVERS=OFF
 		-DCMAKE_INSTALL_LIBDIR="${EPREFIX}/usr/$(get_libdir)"
 		-DENABLE_d=OFF
@@ -141,6 +142,7 @@ src_configure() {
 		-DDOX_DOC=OFF
 		-DBUILD_DOC=OFF
 		-DUSE_RPATH=OFF
+		-DPLD_wxpng=OFF
 		$(cmake-utils_use doc PREBUILT_DOC)
 		$(cmake-utils_use_build test)
 		$(cmake-utils_use_has python NUMPY)
@@ -184,6 +186,7 @@ src_configure() {
 		$(cmake-utils_use cairo PLD_svgcairo)
 		$(cmake-utils_use cairo PLD_wincairo)
 		$(cmake-utils_use cairo PLD_xcairo)
+		$(usex cairo "" "-DDEFAULT_NO_CAIRO_DEVICES=ON")
 		$(cmake-utils_use tk PLD_ntk)
 		$(cmake-utils_use tk PLD_tk)
 		$(cmake-utils_use tk PLD_tkwin)
@@ -195,7 +198,6 @@ src_configure() {
 		$(cmake-utils_use latex PLD_pstex)
 		$(cmake-utils_use truetype PLD_psttf)
 		$(cmake-utils_use svg PLD_svg)
-		$(cmake-utils_use wxwidgets PLD_wxpng)
 		$(cmake-utils_use wxwidgets PLD_wxwidgets)
 		$(cmake-utils_use X PLD_xwin)
 	)

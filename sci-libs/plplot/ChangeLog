@@ -1,6 +1,13 @@
 # ChangeLog for sci-libs/plplot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.63 2015/04/20 15:31:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/plplot/ChangeLog,v 1.64 2015/05/07 09:14:47 jlec Exp $
+
+*plplot-5.11.0-r1 (07 May 2015)
+
+  07 May 2015; Justin Lecher <jlec@gentoo.org> +plplot-5.11.0-r1.ebuild,
+  -plplot-5.11.0.ebuild, plplot-5.10.0-r1.ebuild:
+  Don't build all devices by default, bug #548816; don't build broken devices
+  after upstreams recommendation, bug #547254
 
 *plplot-5.11.0 (20 Apr 2015)
 
