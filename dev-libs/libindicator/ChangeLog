@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libindicator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.16 2014/03/15 14:03:58 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.17 2015/05/07 18:32:21 mgorny Exp $
+
+*libindicator-12.10.1-r301 (07 May 2015)
+*libindicator-12.10.1-r201 (07 May 2015)
+
+  07 May 2015; Michał Górny <mgorny@gentoo.org>
+  +libindicator-12.10.1-r201.ebuild, +libindicator-12.10.1-r301.ebuild:
+  Add multilib support, thanks to Karol Herbst. Part of
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/65.
 
 *libindicator-12.10.1-r200 (15 Mar 2014)
 *libindicator-12.10.1-r300 (15 Mar 2014)

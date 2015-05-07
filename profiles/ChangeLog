@@ -1,10 +1,20 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9982 2015/05/07 18:09:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9984 2015/05/07 18:34:56 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  07 May 2015; Pacho Ramos <pacho@gentoo.org>
+  targets/desktop/gnome/package.use:
+  Some more defaults needed by mutter for being able to 'emerge gnome'
+  (#547300)
+
+  07 May 2015; Pacho Ramos <pacho@gentoo.org>
+  targets/desktop/gnome/make.defaults:
+  Enable 'tracker' by default (#547302), drop 'socialweb' as it's going to be
+  removed
 
   07 May 2015; Michael Palimaka <kensington@gentoo.org>
   targets/desktop/plasma/package.use:
