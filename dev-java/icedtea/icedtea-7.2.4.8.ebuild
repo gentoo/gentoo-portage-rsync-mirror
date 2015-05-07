@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.8.ebuild,v 1.3 2014/11/02 08:28:40 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/icedtea-7.2.4.8.ebuild,v 1.4 2015/05/07 12:17:28 chewi Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 # *********************************************************
@@ -95,7 +95,7 @@ X_DEPEND="
 COMMON_DEP="
 	>=media-libs/giflib-4.1.6:=
 	>=media-libs/lcms-2.5
-	>=media-libs/libpng-1.2:=
+	>=media-libs/libpng-1.2:0=
 	>=sys-libs/zlib-1.2.3:=
 	virtual/jpeg:0=
 	javascript? ( dev-java/rhino:1.6 )
