@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.671 2015/05/03 16:43:10 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.672 2015/05/07 21:22:48 perfinion Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Jason Zaman <perfinion@gentoo.org> (08 May 2015)
+# java wrappers fail to build (bug #548858)
+=app-admin/setools-3.3.8-r7 java
 
 # Matthias Maier <tamiko@gentoo.org> (03 May 2015)
 # mask use flag until #546126 is resolved
