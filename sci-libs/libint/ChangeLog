@@ -1,6 +1,14 @@
 # ChangeLog for sci-libs/libint
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.16 2012/12/14 07:54:32 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/libint/ChangeLog,v 1.17 2015/05/07 07:10:49 jlec Exp $
+
+*libint-1.1.6 (07 May 2015)
+*libint-2.0.5 (07 May 2015)
+
+  07 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/libint-1.1.6-as-needed.patch, +libint-1.1.6.ebuild,
+  +libint-2.0.5.ebuild:
+  Version Bump bug #548674; thanks Viktor Yu. Kovalskii for the initial ebuilds
 
   14 Dec 2012; Justin Lecher <jlec@gentoo.org> -libint-1.1.2.ebuild,
   metadata.xml:
