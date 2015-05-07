@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.79 2015/05/07 08:31:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.80 2015/05/07 10:59:31 pesa Exp $
+
+  07 May 2015; Davide Pesavento <pesa@gentoo.org> -qtgui-4.8.6-r3.ebuild:
+  Remove useless and vulnerable revision.
 
 *qtgui-4.8.6-r4 (07 May 2015)
 

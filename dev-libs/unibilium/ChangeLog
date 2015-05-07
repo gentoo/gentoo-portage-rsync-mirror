@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/unibilium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/unibilium/ChangeLog,v 1.1 2015/02/26 05:54:55 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/unibilium/ChangeLog,v 1.2 2015/05/07 10:50:15 yngwin Exp $
+
+*unibilium-1.1.4 (07 May 2015)
+
+  07 May 2015; Ben de Groot <yngwin@gentoo.org> +unibilium-1.1.4.ebuild:
+  version bump
 
 *unibilium-1.1.2 (26 Feb 2015)
 
