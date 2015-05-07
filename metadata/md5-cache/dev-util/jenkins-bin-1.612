@@ -1,0 +1,12 @@
+DEFINED_PHASES=install setup
+DESCRIPTION=Extensible continuous integration server
+EAPI=5
+HOMEPAGE=http://jenkins-ci.org/
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=media-fonts/dejavu media-libs/freetype !dev-util/jenkins-bin:lts >=virtual/jre-1.7.0
+RESTRICT=mirror
+SLOT=0
+SRC_URI=http://mirrors.jenkins-ci.org/war/1.612/jenkins.war -> jenkins-bin-1.612.war
+_eclasses_=user	f54e098dd38ba1c0847a13e685b87747
+_md5_=5c7ebb3fb769caee5b7edbe1491b8e3d
