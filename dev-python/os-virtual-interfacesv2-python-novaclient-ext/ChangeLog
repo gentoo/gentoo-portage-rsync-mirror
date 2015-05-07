@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/os-virtual-interfacesv2-python-novaclient-ext
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/os-virtual-interfacesv2-python-novaclient-ext/ChangeLog,v 1.1 2014/05/12 03:12:50 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/os-virtual-interfacesv2-python-novaclient-ext/ChangeLog,v 1.2 2015/05/07 15:16:24 prometheanfire Exp $
+
+*os-virtual-interfacesv2-python-novaclient-ext-0.19 (07 May 2015)
+
+  07 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +os-virtual-interfacesv2-python-novaclient-ext-0.19.ebuild:
+  bup
 
 *os-virtual-interfacesv2-python-novaclient-ext-0.15 (12 May 2014)
 
