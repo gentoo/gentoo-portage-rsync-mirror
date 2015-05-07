@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1546 2015/05/07 15:51:30 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1547 2015/05/07 19:44:27 mpagano Exp $
+
+*gentoo-sources-4.0.2 (07 May 2015)
+
+  07 May 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-4.0.2.ebuild:
+  Linux patch 4.0.2. Fix for lz4 compression. Thanks to Christian Xia. See bug
+  #546422. BFQ patchset for 4.0, v7r7. Fix for incremental 4.0.2 patch.
 
   07 May 2015; Jack Morgan <jmorgan@gentoo.org> gentoo-sources-3.18.11.ebuild:
   sparc stable wrt #540866

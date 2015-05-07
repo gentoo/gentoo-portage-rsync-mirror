@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst postrm preinst prepare prerm
+DEPEND=app-crypt/trousers app-crypt/tpm-tools
+DESCRIPTION=A module that uses Intel(R) Trusted Execution Technology to perform a measured and verified boot
+EAPI=5
+HOMEPAGE=http://sourceforge.net/projects/tboot/
+IUSE=custom-cflags
+KEYWORDS=~amd64 ~x86 -*
+LICENSE=BSD
+RDEPEND=app-crypt/trousers app-crypt/tpm-tools sys-boot/grub:2
+RESTRICT=test
+SLOT=0
+SRC_URI=mirror://sourceforge/tboot/tboot-1.8.3.tar.gz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	mount-boot	02dd3bb4c5f025fef0fc3ade0f27c217	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_md5_=5091d6909b74a31db16ad1e546eeded7

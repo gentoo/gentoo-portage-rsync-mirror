@@ -1,6 +1,24 @@
 # ChangeLog for dev-libs/libappindicator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.14 2015/04/05 16:09:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.16 2015/05/07 19:49:14 mgorny Exp $
+
+*libappindicator-12.10.0-r200 (07 May 2015)
+*libappindicator-12.10.0-r300 (07 May 2015)
+
+  07 May 2015; Michał Górny <mgorny@gentoo.org>
+  +libappindicator-12.10.0-r200.ebuild, +libappindicator-12.10.0-r300.ebuild,
+  -libappindicator-12.10.0-r2.ebuild:
+  Add GTK+2 version. Fixes bug #462764.
+
+*libappindicator-12.10.0-r2 (07 May 2015)
+
+  07 May 2015; Michał Górny <mgorny@gentoo.org>
+  +files/libappindicator-12.10.0-disable-python.patch,
+  +libappindicator-12.10.0-r2.ebuild:
+  Add multilib support. Disable Python checks completely, avoiding implicit
+  build-time dep. Restore proper gtk-doc install location. Based on patch by
+  Karol Herbst. Part of https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/65.
 
 *libappindicator-12.10.0-r1 (05 Apr 2015)
 

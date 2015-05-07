@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.10.0_p2476743.ebuild,v 1.1 2015/05/07 01:04:16 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.10.0_p2476743.ebuild,v 1.2 2015/05/07 19:39:46 floppym Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	dev-libs/glib:2
 	dev-libs/libdnet
 	sys-apps/ethtool
-	sys-process/procps
+	>=sys-process/procps-3.3.2
 	pam? ( virtual/pam )
 	X? (
 		dev-cpp/gtkmm:2.4
@@ -69,10 +69,8 @@ src_prepare() {
 
 src_configure() {
 	# http://bugs.gentoo.org/402279
-	if has_version '>=sys-process/procps-3.3.2'; then
-		export CUSTOM_PROCPS_NAME=procps
-		export CUSTOM_PROCPS_LIBS="$($(tc-getPKG_CONFIG) --libs libprocps)"
-	fi
+	export CUSTOM_PROCPS_NAME=procps
+	export CUSTOM_PROCPS_LIBS="$($(tc-getPKG_CONFIG) --libs libprocps)"
 
 	local myeconfargs=(
 		--with-procps
