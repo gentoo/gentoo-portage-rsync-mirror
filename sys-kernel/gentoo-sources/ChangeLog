@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1545 2015/05/07 15:27:22 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1546 2015/05/07 15:51:30 jmorgan Exp $
+
+  07 May 2015; Jack Morgan <jmorgan@gentoo.org> gentoo-sources-3.18.11.ebuild:
+  sparc stable wrt #540866
 
 *gentoo-sources-3.19.7 (07 May 2015)
 

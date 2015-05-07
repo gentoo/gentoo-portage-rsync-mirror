@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.4.ebuild,v 1.4 2015/05/07 15:33:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.5.ebuild,v 1.1 2015/05/07 15:33:32 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="+eigen fftw grib gshhs hdf hdf5 imagemagick netcdf openmp
-	proj postscript	python static-libs udunits wxwidgets"
+	png proj postscript	python static-libs udunits wxwidgets"
 
 RDEPEND="
 	sci-libs/gsl:0=
@@ -55,16 +55,11 @@ DEPEND="${RDEPEND}
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 PATCHES=(
-	"${FILESDIR}"/0.9.2-antlr.patch
+	"${FILESDIR}"/0.9.5-antlr.patch
 	"${FILESDIR}"/0.9.2-include.patch
-	"${FILESDIR}"/0.9.2-proj4.patch
-	"${FILESDIR}"/0.9.2-semaphore.patch
-	"${FILESDIR}"/0.9.3-plwidth.patch
-	"${FILESDIR}"/0.9.4-gsl.patch
-	"${FILESDIR}"/0.9.4-python.patch
-	"${FILESDIR}"/0.9.4-reorder.patch
 	"${FILESDIR}"/0.9.4-plplot.patch
-	"${FILESDIR}"/0.9.4-python2.patch
+	#"${FILESDIR}"/0.9.5-testsuite.patch
+	"${FILESDIR}"/0.9.5-png.patch
 )
 
 pkg_setup() {
@@ -113,6 +108,7 @@ src_configure() {
 		$(cmake-utils_use hdf5)
 		$(cmake-utils_use netcdf)
 		$(cmake-utils_use openmp)
+		$(cmake-utils_use png PNGLIB)
 		$(cmake-utils_use proj LIBPROJ4)
 		$(cmake-utils_use postscript PSLIB)
 		$(cmake-utils_use udunits)

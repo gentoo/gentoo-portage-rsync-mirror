@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.47 2015/04/08 08:22:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.48 2015/05/07 15:33:32 jlec Exp $
+
+*gdl-0.9.5 (07 May 2015)
+
+  07 May 2015; Justin Lecher <jlec@gentoo.org> +files/0.9.4-plplot.patch,
+  +files/0.9.4-python2.patch, +files/0.9.5-antlr.patch, +files/0.9.5-png.patch,
+  +files/0.9.5-proj4.patch, +files/0.9.5-testsuite.patch, +gdl-0.9.5.ebuild,
+  gdl-0.9.4.ebuild, metadata.xml:
+  Version Bump; fix compatibility with latest plplot, bug #547380; fix python
+  support bug #530774
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> gdl-0.9.4.ebuild:
   Drop old Python implementations
