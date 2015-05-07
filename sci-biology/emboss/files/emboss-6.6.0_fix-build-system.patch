@@ -1,5 +1,60 @@
---- EMBOSS-6.6.0/ajax/acd/Makefile.am
-+++ EMBOSS-6.6.0/ajax/acd/Makefile.am
+ Makefile.am               |  9 +++---
+ ajax/Makefile.am          |  4 +--
+ ajax/acd/Makefile.am      |  8 +++--
+ ajax/ajaxdb/Makefile.am   |  6 ++--
+ ajax/core/Makefile.am     |  6 ++--
+ ajax/core/ajreg.h         |  7 ++--
+ ajax/ensembl/Makefile.am  |  6 ++--
+ ajax/graphics/Makefile.am |  8 +++--
+ configure.ac              | 82 ++++++++++++++++++++++++++---------------------
+ emboss/Makefile.am        | 13 +++++---
+ jemboss/lib/Makefile.am   |  2 +-
+ m4/idxdbs.m4              | 17 +++-------
+ nucleus/Makefile.am       |  8 +++--
+ 13 files changed, 100 insertions(+), 76 deletions(-)
+
+diff --git a/Makefile.am b/Makefile.am
+index 177dec5..18dd99a 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -12,8 +12,11 @@ LICENSE \
+ ONEWS \
+ PROBLEMS
+ 
+-SUBDIRS = \
+-plplot \
++SUBDIRS =
++if !ESYSTEMLIBS
++SUBDIRS += plplot
++endif
++SUBDIRS += \
+ ajax \
+ nucleus \
+ emboss \
+@@ -33,5 +36,3 @@ dist-hook:
+ 	tar cBf - doc | ( cd $(distdir); tar xBf - ; find doc -name CVS | xargs rm -rf; )
+ 	tar cBf - jemboss | ( cd $(distdir); tar xBf - ; find jemboss -name CVS | xargs rm -rf; find jemboss -name Makefile | xargs rm -rf; find jemboss -name .cvsignore | xargs rm -rf )
+ 
+-install-exec-hook:
+-	$(bindir)/embossupdate
+diff --git a/ajax/Makefile.am b/ajax/Makefile.am
+index f27472c..de34e17 100644
+--- a/ajax/Makefile.am
++++ b/ajax/Makefile.am
+@@ -1,7 +1,7 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-SUBDIRS  = pcre
++SUBDIRS  =
+ if !ESYSTEMLIBS
+-SUBDIRS += expat zlib
++SUBDIRS += pcre expat zlib
+ endif
+ SUBDIRS += core graphics ensembl ajaxdb acd
+diff --git a/ajax/acd/Makefile.am b/ajax/acd/Makefile.am
+index 9f0f700..3295a1d 100644
+--- a/ajax/acd/Makefile.am
++++ b/ajax/acd/Makefile.am
 @@ -3,16 +3,20 @@
  lib_LTLIBRARIES = libacd.la
  
@@ -23,8 +78,10 @@
  libacd_la_CPPFLAGS += $(JAVA_CPPFLAGS)
  
  libacd_la_LDFLAGS  = -version-info 6:5:0
---- EMBOSS-6.6.0/ajax/ajaxdb/Makefile.am
-+++ EMBOSS-6.6.0/ajax/ajaxdb/Makefile.am
+diff --git a/ajax/ajaxdb/Makefile.am b/ajax/ajaxdb/Makefile.am
+index c2b0c00..9de14fe 100644
+--- a/ajax/ajaxdb/Makefile.am
++++ b/ajax/ajaxdb/Makefile.am
 @@ -3,14 +3,16 @@
  lib_LTLIBRARIES = libajaxdb.la
  
@@ -44,31 +101,10 @@
  libajaxdb_la_CPPFLAGS += $(AXIS2C_CPPFLAGS)
  libajaxdb_la_CPPFLAGS += $(JAVA_CPPFLAGS)
  
---- EMBOSS-6.6.0/ajax/core/ajreg.h
-+++ EMBOSS-6.6.0/ajax/core/ajreg.h
-@@ -39,9 +39,8 @@
- #include "ajdefine.h"
- #include "ajstr.h"
- 
--#include "pcre_config.h"
--#include "pcre_internal.h"
--#include "pcreposix.h"
-+#include <pcre.h>
-+#include <pcreposix.h>
- 
- AJ_BEGIN_DECLS
- 
-@@ -84,7 +83,7 @@
- 
- typedef struct AjSRegexp
- {
--    real_pcre *pcre;
-+    struct real_pcre *pcre;
-     pcre_extra *extra;
-     int *ovector;
-     const char* orig;
---- EMBOSS-6.6.0/ajax/core/Makefile.am
-+++ EMBOSS-6.6.0/ajax/core/Makefile.am
+diff --git a/ajax/core/Makefile.am b/ajax/core/Makefile.am
+index 2906837..3189c34 100644
+--- a/ajax/core/Makefile.am
++++ b/ajax/core/Makefile.am
 @@ -3,13 +3,15 @@
  lib_LTLIBRARIES = libajax.la
  
@@ -87,8 +123,35 @@
  libajax_la_CPPFLAGS += $(JAVA_CPPFLAGS)
  libajax_la_CPPFLAGS += $(MYSQL_CPPFLAGS)
  libajax_la_CPPFLAGS += $(POSTGRESQL_CPPFLAGS)
---- EMBOSS-6.6.0/ajax/ensembl/Makefile.am
-+++ EMBOSS-6.6.0/ajax/ensembl/Makefile.am
+diff --git a/ajax/core/ajreg.h b/ajax/core/ajreg.h
+index 1623c82..5d928cf 100644
+--- a/ajax/core/ajreg.h
++++ b/ajax/core/ajreg.h
+@@ -39,9 +39,8 @@
+ #include "ajdefine.h"
+ #include "ajstr.h"
+ 
+-#include "pcre_config.h"
+-#include "pcre_internal.h"
+-#include "pcreposix.h"
++#include <pcre.h>
++#include <pcreposix.h>
+ 
+ AJ_BEGIN_DECLS
+ 
+@@ -84,7 +83,7 @@ AJ_BEGIN_DECLS
+ 
+ typedef struct AjSRegexp
+ {
+-    real_pcre *pcre;
++    struct real_pcre *pcre;
+     pcre_extra *extra;
+     int *ovector;
+     const char* orig;
+diff --git a/ajax/ensembl/Makefile.am b/ajax/ensembl/Makefile.am
+index 0d1250b..5484c02 100644
+--- a/ajax/ensembl/Makefile.am
++++ b/ajax/ensembl/Makefile.am
 @@ -3,13 +3,15 @@
  lib_LTLIBRARIES = libensembl.la
  
@@ -107,8 +170,10 @@
  libensembl_la_CPPFLAGS += $(JAVA_CPPFLAGS)
  
  libensembl_la_LDFLAGS  = -version-info 6:5:0
---- EMBOSS-6.6.0/ajax/graphics/Makefile.am
-+++ EMBOSS-6.6.0/ajax/graphics/Makefile.am
+diff --git a/ajax/graphics/Makefile.am b/ajax/graphics/Makefile.am
+index a4f202b..1114c2c 100644
+--- a/ajax/graphics/Makefile.am
++++ b/ajax/graphics/Makefile.am
 @@ -3,12 +3,16 @@
  lib_LTLIBRARIES = libajaxg.la
  
@@ -128,21 +193,11 @@
  libajaxg_la_CPPFLAGS += $(JAVA_CPPFLAGS)
  
  libajaxg_la_LDFLAGS  = -version-info 6:5:0
---- EMBOSS-6.6.0/ajax/Makefile.am
-+++ EMBOSS-6.6.0/ajax/Makefile.am
-@@ -1,7 +1,7 @@
- ## Process this file with automake to produce Makefile.in
- 
--SUBDIRS  = pcre
-+SUBDIRS  =
- if !ESYSTEMLIBS
--SUBDIRS += expat zlib
-+SUBDIRS += pcre expat zlib
- endif
- SUBDIRS += core graphics ensembl ajaxdb acd
---- EMBOSS-6.6.0/configure.ac
-+++ EMBOSS-6.6.0/configure.ac
-@@ -629,32 +629,6 @@
+diff --git a/configure.ac b/configure.ac
+index a7bd9c6..9ba3121 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -629,32 +629,6 @@ AS_CASE([${host_os}],
  
  
  
@@ -175,7 +230,7 @@
  dnl Define where the EMBOSS package is located
  AC_SUBST([AJAX_FIXED_ROOT])
  AJAX_FIXED_ROOT="\\\"`pwd`/emboss\\\""
-@@ -743,17 +717,7 @@
+@@ -743,17 +717,7 @@ AX_LIB_POSTGRESQL
  
  
  
@@ -193,24 +248,25 @@
  
  
  
-@@ -849,7 +813,51 @@
+@@ -849,7 +813,53 @@ AC_ARG_ENABLE([systemlibs],
  
  AM_CONDITIONAL([ESYSTEMLIBS], [test "x${enable_systemlibs}" = "xyes"])
  
--
 +AS_IF([test "x${enable_systemlibs}" = "xyes"],
 +[
 +dnl using system libraries
 +  PKG_CHECK_MODULES([PCRE], [libpcre])
 +  PKG_CHECK_MODULES([EXPAT], [expat])
 +  PKG_CHECK_MODULES([ZLIB], [zlib])
-+  PKG_CHECK_MODULES([PLPLOT], [plplotd])
++  PKG_CHECK_MODULES([PLPLOT], [plplotd],
++    [],[PKG_CHECK_MODULES([PLPLOT], [plplot])]
++    )
 +],
 +[
 +dnl using bundled libraries
 +  dnl PCRE library definitions - see the MAJOR and MINOR values
 +  dnl to see which version's configure.ac these lines come from
-+
+ 
 +  dnl Provide the current PCRE version information. Do not use numbers
 +  dnl with leading zeros for the minor version, as they end up in a C
 +  dnl macro, and may be treated as octal constants. Stick to single
@@ -246,30 +302,33 @@
  
  
  # Enable the purify tool: --enable-purify, sets CC and LIBTOOL
---- EMBOSS-6.6.0/emboss/Makefile.am
-+++ EMBOSS-6.6.0/emboss/Makefile.am
-@@ -28,15 +28,18 @@
+diff --git a/emboss/Makefile.am b/emboss/Makefile.am
+index 89ada78..f987d40 100644
+--- a/emboss/Makefile.am
++++ b/emboss/Makefile.am
+@@ -28,15 +28,18 @@ endif
  
  AM_CPPFLAGS  = -I$(top_srcdir)/ajax/acd
  AM_CPPFLAGS += -I$(top_srcdir)/ajax/ajaxdb
 +AM_CPPFLAGS += -I$(top_srcdir)/ajax/core
  AM_CPPFLAGS += -I$(top_srcdir)/ajax/ensembl
  AM_CPPFLAGS += -I$(top_srcdir)/ajax/graphics
--AM_CPPFLAGS += -I$(top_srcdir)/ajax/pcre
- if !ESYSTEMLIBS
-+AM_CPPFLAGS += -I$(top_srcdir)/ajax/pcre
++if !ESYSTEMLIBS
+ AM_CPPFLAGS += -I$(top_srcdir)/ajax/pcre
+-if !ESYSTEMLIBS
  AM_CPPFLAGS += -I$(top_srcdir)/ajax/expat
  AM_CPPFLAGS += -I$(top_srcdir)/ajax/zlib
-+AM_CPPFLAGS += -I$(top_srcdir)/plplot
+-endif
+-AM_CPPFLAGS += -I$(top_srcdir)/nucleus
+ AM_CPPFLAGS += -I$(top_srcdir)/plplot
 +else
 +AM_CFLAGS   += $(PLPLOT_CFLAGS)
- endif
- AM_CPPFLAGS += -I$(top_srcdir)/nucleus
--AM_CPPFLAGS += -I$(top_srcdir)/plplot
++endif
++AM_CPPFLAGS += -I$(top_srcdir)/nucleus
  AM_CPPFLAGS += $(AXIS2C_CPPFLAGS)
  AM_CPPFLAGS += $(JAVA_CPPFLAGS)
  
-@@ -49,9 +52,11 @@
+@@ -49,9 +52,11 @@ LDADD += ../ajax/core/libajax.la
  if !ESYSTEMLIBS
  LDADD += ../ajax/zlib/libezlib.la
  LDADD += ../ajax/expat/libeexpat.la
@@ -282,9 +341,11 @@
  LDADD += $(XLIB)
  
  #if PURIFY
---- EMBOSS-6.6.0/jemboss/lib/Makefile.am
-+++ EMBOSS-6.6.0/jemboss/lib/Makefile.am
-@@ -12,7 +12,7 @@
+diff --git a/jemboss/lib/Makefile.am b/jemboss/lib/Makefile.am
+index 5f7e21e..8b45ce2 100644
+--- a/jemboss/lib/Makefile.am
++++ b/jemboss/lib/Makefile.am
+@@ -12,7 +12,7 @@ mail.jar \
  jalviewApplet.jar \
  jemboss.jar
  
@@ -293,8 +354,10 @@
  if JAVA_BUILD
  	$(ANT) -f ../build.xml package -Demboss.data=../emboss/data -Dname=jemboss -Djar.dir=lib -Dnotformemboss=yes;
  endif
---- EMBOSS-6.6.0/m4/idxdbs.m4
-+++ EMBOSS-6.6.0/m4/idxdbs.m4
+diff --git a/m4/idxdbs.m4 b/m4/idxdbs.m4
+index 0ca7ea9..9b54f2a 100644
+--- a/m4/idxdbs.m4
++++ b/m4/idxdbs.m4
 @@ -1,17 +1,8 @@
  AC_DEFUN([CHECK_IDXDBS],
  [
@@ -317,30 +380,10 @@
 +	[],
 +	[AC_MSG_ERROR([cannot find pre-indexed edam, taxon + drcat databases])])
  ])
---- EMBOSS-6.6.0/Makefile.am
-+++ EMBOSS-6.6.0/Makefile.am
-@@ -12,8 +12,11 @@
- ONEWS \
- PROBLEMS
- 
--SUBDIRS = \
--plplot \
-+SUBDIRS =
-+if !ESYSTEMLIBS
-+SUBDIRS += plplot
-+endif
-+SUBDIRS += \
- ajax \
- nucleus \
- emboss \
-@@ -33,5 +36,3 @@
- 	tar cBf - doc | ( cd $(distdir); tar xBf - ; find doc -name CVS | xargs rm -rf; )
- 	tar cBf - jemboss | ( cd $(distdir); tar xBf - ; find jemboss -name CVS | xargs rm -rf; find jemboss -name Makefile | xargs rm -rf; find jemboss -name .cvsignore | xargs rm -rf )
- 
--install-exec-hook:
--	$(bindir)/embossupdate
---- EMBOSS-6.6.0/nucleus/Makefile.am
-+++ EMBOSS-6.6.0/nucleus/Makefile.am
+diff --git a/nucleus/Makefile.am b/nucleus/Makefile.am
+index 37b8543..5819c89 100644
+--- a/nucleus/Makefile.am
++++ b/nucleus/Makefile.am
 @@ -3,6 +3,7 @@
  lib_LTLIBRARIES = libnucleus.la
  
@@ -349,7 +392,7 @@
  
  if ISSHARED
  if ISAIXIA64
-@@ -10,11 +11,14 @@
+@@ -10,11 +11,14 @@ libnucleus_la_CFLAGS += -Wl,-G -lm
  endif
  endif
  

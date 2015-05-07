@@ -1,6 +1,11 @@
 # ChangeLog for sci-biology/emboss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.73 2015/03/28 18:03:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/ChangeLog,v 1.74 2015/05/07 10:17:54 jlec Exp $
+
+  07 May 2015; Justin Lecher <jlec@gentoo.org> emboss-6.6.0.ebuild,
+  files/emboss-6.6.0_fix-build-system.patch:
+  Correct Licenses, bug #548810; make build with newer plplot, bug #548806; add
+  missing dep, bug #544516
 
   28 Mar 2015; Justin Lecher <jlec@gentoo.org> -emboss-6.1.0-r1.ebuild,
   -emboss-6.3.1_p4.ebuild:

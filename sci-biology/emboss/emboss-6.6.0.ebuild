@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.6.0.ebuild,v 1.1 2015/03/28 17:03:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-6.6.0.ebuild,v 1.2 2015/05/07 10:17:54 jlec Exp $
 
 EAPI=5
 
@@ -12,12 +12,14 @@ SRC_URI="ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-${PV}.tar.gz"
 
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE+=" minimal"
+LICENSE+=" Apache-2.0 GPL-3+ CC-BY-3.0"
 
 RDEPEND+=" !sys-devel/cons"
 PDEPEND+="
 	!minimal? (
 		sci-biology/aaindex
 		sci-biology/cutg
+		sci-biology/primer3
 		sci-biology/prints
 		sci-biology/prosite
 		sci-biology/rebase
