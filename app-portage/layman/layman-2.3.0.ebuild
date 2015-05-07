@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.3.0.ebuild,v 1.6 2015/05/02 09:03:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/layman/layman-2.3.0.ebuild,v 1.7 2015/05/07 16:02:30 blueness Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc64 ~s390 ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~s390 ~x86"
 IUSE="bazaar cvs darcs +git gpg g-sorcery mercurial squashfs subversion sync-plugin-portage test"
 
 DEPEND="test? ( dev-vcs/subversion )
