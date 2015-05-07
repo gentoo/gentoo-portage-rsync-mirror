@@ -1,6 +1,9 @@
 # ChangeLog for media-video/episoder
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/episoder/ChangeLog,v 1.7 2008/08/06 23:19:47 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/episoder/ChangeLog,v 1.8 2015/05/07 22:41:31 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -episoder-0.2.1.ebuild:
+  Remove old.
 
 *episoder-0.4.7 (06 Aug 2008)
 

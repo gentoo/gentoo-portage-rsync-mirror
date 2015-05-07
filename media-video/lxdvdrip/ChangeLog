@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lxdvdrip
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.32 2014/03/17 21:55:28 beandog Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.33 2015/05/07 22:42:11 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -lxdvdrip-1.76.ebuild:
+  Remove old.
 
 *lxdvdrip-1.77 (17 Mar 2014)
 
@@ -160,4 +163,3 @@
   23 Jul 2004; Michael Imhof <tantive@gentoo.org> +metadata.xml,
   +lxdvdrip-1.10_pre2.ebuild:
   Initial import. Closes #47801.
-

@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmswallow
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.13 2015/04/19 09:45:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmswallow/ChangeLog,v 1.14 2015/05/07 22:50:11 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -wmswallow-0.6.1.ebuild:
+  Remove old.
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> wmswallow-0.6.1-r1.ebuild:
   Stable for x86, wrt bug #541774

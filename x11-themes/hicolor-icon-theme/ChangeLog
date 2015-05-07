@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/hicolor-icon-theme
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.78 2015/04/28 09:27:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/hicolor-icon-theme/ChangeLog,v 1.79 2015/05/07 23:00:36 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -hicolor-icon-theme-0.12.ebuild,
+  -hicolor-icon-theme-0.14.ebuild:
+  Remove old.
 
   28 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
   hicolor-icon-theme-0.15.ebuild:

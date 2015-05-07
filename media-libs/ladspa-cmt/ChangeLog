@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.62 2015/05/01 19:47:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.63 2015/05/07 22:32:33 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -ladspa-cmt-1.16-r1.ebuild,
+  -ladspa-cmt-1.16-r2.ebuild, -ladspa-cmt-1.16-r3.ebuild,
+  -ladspa-cmt-1.16.ebuild:
+  Remove old.
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> ladspa-cmt-1.16-r4.ebuild:
   Stable for PPC64 (bug #525878).

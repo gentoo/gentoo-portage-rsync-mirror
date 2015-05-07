@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/epplets
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.23 2012/11/08 03:18:53 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/epplets/ChangeLog,v 1.24 2015/05/07 22:55:53 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -epplets-0.10.ebuild,
+  -epplets-0.11.ebuild:
+  Remove old.
 
 *epplets-0.14 (08 Nov 2012)
 

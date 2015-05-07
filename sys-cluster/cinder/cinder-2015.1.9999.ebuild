@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2015.1.9999.ebuild,v 1.1 2015/04/30 20:29:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2015.1.9999.ebuild,v 1.2 2015/05/07 22:41:51 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -60,7 +60,7 @@ RDEPEND="
 	>=dev-python/lxml-2.3[${PYTHON_USEDEP}]
 	>=dev-python/netaddr-0.7.12[${PYTHON_USEDEP}]
 	>=dev-python/oslo-config-1.9.3[${PYTHON_USEDEP}]
-	>=dev-python/oslo-config-1.10.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-config-1.10.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-concurrency-1.8.0[${PYTHON_USEDEP}]
 	<dev-python/oslo-concurrency-1.9.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-context-0.2.0[${PYTHON_USEDEP}]
@@ -76,7 +76,7 @@ RDEPEND="
 	>=dev-python/oslo-rootwrap-1.6.0[${PYTHON_USEDEP}]
 	<dev-python/oslo-rootwrap-1.7.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-serialization-1.4.0[${PYTHON_USEDEP}]
-	>=dev-python/oslo-serialization-1.5.0[${PYTHON_USEDEP}]
+	<dev-python/oslo-serialization-1.5.0[${PYTHON_USEDEP}]
 	>=dev-python/oslo-utils-1.4.0[${PYTHON_USEDEP}]
 	<dev-python/oslo-utils-1.5.0[${PYTHON_USEDEP}]
 	>=dev-python/osprofiler-0.3.0[${PYTHON_USEDEP}]

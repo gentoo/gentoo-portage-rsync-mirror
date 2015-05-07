@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmmixer
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/ChangeLog,v 1.15 2012/08/21 09:08:25 voyageur Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmixer/ChangeLog,v 1.16 2015/05/07 22:52:17 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/wmmixer-1.5-respect_flags.patch,
+  -files/wmmixer-1.5-restore_pristine_code.patch, -wmmixer-1.5.ebuild:
+  Remove old.
 
 *wmmixer-1.7 (21 Aug 2012)
 
@@ -58,4 +63,3 @@
   26 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org> metadata.xml,
   wmmixer-2.0_beta4.ebuild:
   Inital commit. Closes bug #38932.
-

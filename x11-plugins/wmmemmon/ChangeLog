@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemmon
-# Copyright 2002-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.25 2014/08/10 20:07:59 slyfox Exp $
+# Copyright 2002-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.26 2015/05/07 22:53:15 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -wmmemmon-1.0.1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wmmemmon-1.0.1.ebuild,
   wmmemmon-1.0.2_pre2.ebuild:

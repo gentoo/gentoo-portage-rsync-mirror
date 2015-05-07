@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freealut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.47 2014/11/02 09:06:49 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freealut/ChangeLog,v 1.48 2015/05/07 22:31:19 mrueg Exp $
+
+  07 May 2015; Manuel Rüger <mrueg@gentoo.org> -freealut-1.1.0-r1.ebuild,
+  -freealut-1.1.0-r2.ebuild:
+  Remove old.
 
   02 Nov 2014; Agostino Sarubbo <ago@gentoo.org> freealut-1.1.0-r3.ebuild:
   Stable for alpha, wrt bug #525554
