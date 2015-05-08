@@ -1,15 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.3.ebuild,v 1.1 2015/05/07 17:40:19 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.13.0.ebuild,v 1.1 2015/05/08 00:29:05 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
 use test && PYTHON_REQ_USE="ipv6"
 
-inherit eutils user confutils autotools bash-completion-r1 python-single-r1 versionator pax-utils
+inherit eutils user autotools bash-completion-r1 python-single-r1 versionator
 
 MY_PV="${PV/_rc/~rc}"
-#MY_PV="${PV/_beta/~beta}"
+MY_PV="${MY_PV/_beta/~beta}"
 MY_P="${PN}-${MY_PV}"
 SERIES="$(get_version_component_range 1-2)"
 
@@ -17,33 +17,28 @@ if [[ ${PV} == "9999" ]] ; then
 	EGIT_REPO_URI="git://git.ganeti.org/ganeti.git"
 	inherit git-2
 	KEYWORDS=""
-	# you will need to pull in the haskell overlay for pandoc
 	GIT_DEPEND="app-text/pandoc
 		dev-python/docutils
-		dev-python/sphinx
+		dev-python/sphinx[${PYTHON_USEDEP}]
 		media-libs/gd[fontconfig,jpeg,png,truetype]
 		media-gfx/graphviz
 		media-fonts/urw-fonts"
 else
-	SRC_URI="http://downloads.ganeti.org/releases/${SERIES}/${P}.tar.gz"
+	SRC_URI="http://downloads.ganeti.org/releases/${SERIES}/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
 fi
 
 DESCRIPTION="Ganeti is a virtual server management software tool"
-HOMEPAGE="http://code.google.com/p/ganeti/"
+HOMEPAGE="http://www.ganeti.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="drbd haskell-daemons htools ipv6 kvm lxc monitoring multiple-users rbd syslog test xen"
-REQUIRED_USE="|| ( kvm xen lxc )"
+REQUIRED_USE="|| ( kvm xen lxc ) ${PYTHON_REQUIRED_USE}"
 
 USER_PREFIX="${GANETI_USER_PREFIX:-"gnt-"}"
 GROUP_PREFIX="${GANETI_GROUP_PREFIX:-"${USER_PREFIX}"}"
 
-# the haskell less-than atoms list are resolver hints, they aren't actual
-# direct dependencies, just hints to help the resolver fufill the dependency
-# on an older transformer.
-# these need to stay until 2.14.0
 DEPEND="
 	dev-libs/openssl:0
 	dev-python/paramiko[${PYTHON_USEDEP}]
@@ -65,8 +60,6 @@ DEPEND="
 	>=sys-apps/baselayout-2.0
 	>=dev-lang/ghc-7.6.0:0=
 	>=dev-haskell/json-0.9:0=
-	<dev-haskell/monad-control-1.0.0.0:0=
-	<dev-haskell/transformers-0.4.0:0=
 	dev-haskell/curl:0=
 	dev-haskell/network:0=
 	dev-haskell/parallel:3=
@@ -81,18 +74,16 @@ DEPEND="
 	dev-haskell/regex-pcre-builtin:0=
 	dev-haskell/zlib:0=
 	>=dev-haskell/lifted-base-0.2.3.3:0=
-	<dev-haskell/lens-3.10:0=
+	<dev-haskell/lens-4:0=
+	dev-haskell/psqueue:0=
 	dev-haskell/base64-bytestring:0=
-	<dev-haskell/mtl-2.2
+	<dev-haskell/semigroupoids-4.1:0=
+	<dev-haskell/mtl-2.2:0=
+	<dev-haskell/monad-control-1.0.0.0:0=
+	<dev-haskell/transformers-0.4.0:0=
 	<dev-haskell/contravariant-0.6
-	<dev-haskell/profunctors-4.3
-	<dev-haskell/distributive-0.4.4
-	<dev-haskell/comonad-4.2.2
-	<dev-haskell/transformers-compat-0.3
+	<dev-haskell/transformers-compat-0.4[three]
 	<dev-haskell/transformers-base-0.4.4
-	<dev-haskell/semigroupoids-4.0
-	<dev-haskell/semigroupoid-extras-4.0
-	<dev-haskell/groupoids-4.0
 	xen? ( >=app-emulation/xen-3.0 )
 	kvm? ( app-emulation/qemu )
 	lxc? ( app-emulation/lxc )
@@ -121,25 +112,28 @@ DEPEND+="sys-devel/m4
 PATCHES=(
 	"${FILESDIR}/${PN}-2.12-start-stop-daemon-args.patch"
 	"${FILESDIR}/${PN}-2.11-add-pgrep.patch"
-	"${FILESDIR}/${PN}-2.12.3-daemon-util.patch"
+	"${FILESDIR}/${PN}-2.13-daemon-util.patch"
 	"${FILESDIR}/${PN}-2.7-fix-tests.patch"
 	"${FILESDIR}/${PN}-2.9-disable-root-tests.patch"
-	"${FILESDIR}/${PN}-2.11-regex-builtin.patch"
 	"${FILESDIR}/${PN}-2.9-skip-cli-test.patch"
 	"${FILESDIR}/${PN}-2.10-rundir.patch"
 	"${FILESDIR}/${PN}-2.12-qemu-enable-kvm.patch"
 	"${FILESDIR}/${PN}-2.11-tests.patch"
 	"${FILESDIR}/${PN}-lockdir.patch"
-	"${FILESDIR}/${PN}-2.11-useradd.patch"
 	"${FILESDIR}/${PN}-2.11-dont-nest-libdir.patch"
 	"${FILESDIR}/${PN}-2.11-dont-print-man-help.patch"
 	"${FILESDIR}/${PN}-2.11-daemon-util-tests.patch"
-	"${FILESDIR}/${PN}-2.12-tests.patch"
+	"${FILESDIR}/${PN}-2.13-regex-pcre-builtin.patch"
+	"${FILESDIR}/${PN}-2.13-process_unittest.patch"
+	"${FILESDIR}/${PN}-2.13-disable-usersgroups-test.patch"
 )
 
 REQUIRED_USE="kvm? ( || ( amd64 x86 ) )"
 
 S="${WORKDIR}/${MY_P}"
+
+QA_WX_LOAD="usr/$(get_libdir)/${PN}/${SERIES}/usr/sbin/ganeti-*d
+	usr/$(get_libdir)/${PN}/${SERIES}/usr/bin/htools"
 
 pkg_setup () {
 	local user
@@ -164,7 +158,10 @@ src_prepare() {
 		printf '#!/bin/bash\ntrue\n' > "${testfile}"
 	done
 
-	[[ ${PV} == "9999" ]] && ./autogen.sh
+	# take the sledgehammer approach to bug #526270
+	grep -lr '/bin/sh' "${S}" | xargs -r -- sed -i 's:/bin/sh:/bin/bash:g'
+
+	[[ ${PV} =~ [9]{4,} ]] && ./autogen.sh
 	rm autotools/missing
 	eautoreconf
 }
@@ -188,7 +185,10 @@ src_configure () {
 		--with-ssh-initscript=/etc/init.d/sshd \
 		--with-export-dir=/var/lib/ganeti-storage/export \
 		--with-os-search-path=/usr/share/${PN}/os \
+		$(use_enable test haskell-tests) \
+		$(usex multiple-users "--with-default-user=" "" "gnt-daemons" "") \
 		$(usex multiple-users "--with-user-prefix=" "" "${USER_PREFIX}" "") \
+		$(usex multiple-users "--with-default-group=" "" "gnt-daemons" "") \
 		$(usex multiple-users "--with-group-prefix=" "" "${GROUP_PREFIX}" "") \
 		$(use_enable syslog) \
 		$(use_enable monitoring) \
@@ -210,7 +210,11 @@ src_install () {
 	# ganeti installs it's own docs in a generic location
 	rm -rf "${D}"/{usr/share/doc/${PN},run}
 
-	newbashcomp doc/examples/bash_completion ganeti
+	sed -i "s:/usr/$(get_libdir)/${PN}/tools/burnin:burnin:" doc/examples/bash_completion
+	newbashcomp doc/examples/bash_completion gnt-instance
+	bashcomp_alias gnt-instance burnin ganeti-{cleaner,confd} \
+		h{space,check,scan,info,ail,arep,roller,squeeze,bal} \
+		gnt-{os,job,filter,debug,storage,group,node,network,backup,cluster}
 
 	dodoc INSTALL UPGRADE NEWS README doc/*.rst
 	dohtml -r doc/html/* doc/css/*.css
