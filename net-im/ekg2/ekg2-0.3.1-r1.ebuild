@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.8 2015/04/08 18:03:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.9 2015/05/08 04:26:44 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -31,7 +31,7 @@ RDEPEND="
 	xosd? ( x11-libs/xosd )
 	zlib? ( sys-libs/zlib )
 
-	gadu? ( net-libs/libgadu
+	gadu? ( <net-libs/libgadu-1.12
 		gif? ( media-libs/giflib )
 		jpeg? ( virtual/jpeg ) )
 	ncurses? ( sys-libs/ncurses[unicode?]

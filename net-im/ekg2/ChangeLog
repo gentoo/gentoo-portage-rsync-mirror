@@ -1,6 +1,10 @@
 # ChangeLog for net-im/ekg2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.55 2015/04/08 18:03:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ChangeLog,v 1.56 2015/05/08 04:26:44 mgorny Exp $
+
+  08 May 2015; Michał Górny <mgorny@gentoo.org> ekg2-0.3.1-r1.ebuild,
+  ekg2-9999.ebuild:
+  Require libgadu < 1.12 due to bug #519978.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> ekg2-0.3.1-r1.ebuild,
   ekg2-9999.ebuild:
