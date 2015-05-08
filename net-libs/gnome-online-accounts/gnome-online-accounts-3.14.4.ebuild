@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.12.4.ebuild,v 1.3 2014/07/23 15:23:40 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/gnome-online-accounts-3.14.4.ebuild,v 1.1 2015/05/08 17:54:55 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,7 +13,7 @@ HOMEPAGE="https://wiki.gnome.org/Projects/GnomeOnlineAccounts"
 LICENSE="LGPL-2+"
 SLOT="0/1"
 IUSE="gnome +introspection kerberos" # telepathy"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 # pango used in goaeditablelabel
 # libsoup used in goaoauthprovider
@@ -45,7 +45,7 @@ DEPEND="${RDEPEND}
 	dev-libs/libxslt
 	>=dev-util/gtk-doc-am-1.3
 	>=dev-util/gdbus-codegen-2.30.0
-	>=dev-util/intltool-0.50
+	>=dev-util/intltool-0.50.1
 	sys-devel/gettext
 	virtual/pkgconfig
 "
@@ -66,9 +66,11 @@ src_configure() {
 		--enable-facebook \
 		--enable-flickr \
 		--enable-imap-smtp \
+		--enable-media-server \
 		--enable-owncloud \
 		--enable-pocket \
 		--enable-telepathy \
+		--enable-windows-live \
 		$(use_enable kerberos)
 		#$(use_enable telepathy)
 	# gudev & cheese from sub-configure is overriden

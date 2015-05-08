@@ -1,156 +1,7 @@
-diff -Naurp a/src/eap_peer/eap_methods.c b/src/eap_peer/eap_methods.c
---- a/src/eap_peer/eap_methods.c	2012-05-15 08:23:17.151386999 +0000
-+++ b/src/eap_peer/eap_methods.c	2012-05-15 08:23:57.403389760 +0000
-@@ -342,6 +342,120 @@ int eap_peer_method_register(struct eap_
- 
- 
- /**
-+ * eap_peer_register_methods - Register all known EAP peer methods
-+ *
-+ * This function is called at program start to register all compiled
-+ * in EAP peer methods.
-+ */
-+int eap_peer_register_methods(void)
-+{
-+	int ret = 0;
-+
-+#ifdef EAP_MD5
-+	if (ret == 0)
-+		ret = eap_peer_md5_register();
-+#endif /* EAP_MD5 */
-+
-+#ifdef EAP_TLS
-+	if (ret == 0)
-+		ret = eap_peer_tls_register();
-+#endif /* EAP_TLS */
-+
-+#ifdef EAP_MSCHAPv2
-+	if (ret == 0)
-+		ret = eap_peer_mschapv2_register();
-+#endif /* EAP_MSCHAPv2 */
-+
-+#ifdef EAP_PEAP
-+	if (ret == 0)
-+		ret = eap_peer_peap_register();
-+#endif /* EAP_PEAP */
-+
-+#ifdef EAP_TTLS
-+	if (ret == 0)
-+		ret = eap_peer_ttls_register();
-+#endif /* EAP_TTLS */
-+
-+#ifdef EAP_GTC
-+	if (ret == 0)
-+		ret = eap_peer_gtc_register();
-+#endif /* EAP_GTC */
-+
-+#ifdef EAP_OTP
-+	if (ret == 0)
-+		ret = eap_peer_otp_register();
-+#endif /* EAP_OTP */
-+
-+#ifdef EAP_SIM
-+	if (ret == 0)
-+		ret = eap_peer_sim_register();
-+#endif /* EAP_SIM */
-+
-+#ifdef EAP_LEAP
-+	if (ret == 0)
-+		ret = eap_peer_leap_register();
-+#endif /* EAP_LEAP */
-+
-+#ifdef EAP_PSK
-+	if (ret == 0)
-+		ret = eap_peer_psk_register();
-+#endif /* EAP_PSK */
-+
-+#ifdef EAP_AKA
-+	if (ret == 0)
-+		ret = eap_peer_aka_register();
-+#endif /* EAP_AKA */
-+
-+#ifdef EAP_AKA_PRIME
-+	if (ret == 0)
-+		ret = eap_peer_aka_prime_register();
-+#endif /* EAP_AKA_PRIME */
-+
-+#ifdef EAP_FAST
-+	if (ret == 0)
-+		ret = eap_peer_fast_register();
-+#endif /* EAP_FAST */
-+
-+#ifdef EAP_PAX
-+	if (ret == 0)
-+		ret = eap_peer_pax_register();
-+#endif /* EAP_PAX */
-+
-+#ifdef EAP_SAKE
-+	if (ret == 0)
-+		ret = eap_peer_sake_register();
-+#endif /* EAP_SAKE */
-+
-+#ifdef EAP_GPSK
-+	if (ret == 0)
-+		ret = eap_peer_gpsk_register();
-+#endif /* EAP_GPSK */
-+
-+#ifdef EAP_WSC
-+	if (ret == 0)
-+		ret = eap_peer_wsc_register();
-+#endif /* EAP_WSC */
-+
-+#ifdef EAP_IKEV2
-+	if (ret == 0)
-+		ret = eap_peer_ikev2_register();
-+#endif /* EAP_IKEV2 */
-+
-+#ifdef EAP_VENDOR_TEST
-+	if (ret == 0)
-+		ret = eap_peer_vendor_test_register();
-+#endif /* EAP_VENDOR_TEST */
-+
-+#ifdef EAP_TNC
-+	if (ret == 0)
-+		ret = eap_peer_tnc_register();
-+#endif /* EAP_TNC */
-+
-+	return ret;
-+}
-+
-+
-+/**
-  * eap_peer_unregister_methods - Unregister EAP peer methods
-  *
-  * This function is called at program termination to unregister all EAP peer
-diff -Naurp a/src/eap_peer/eap_methods.h b/src/eap_peer/eap_methods.h
---- a/src/eap_peer/eap_methods.h	2012-05-15 08:23:17.151386999 +0000
-+++ b/src/eap_peer/eap_methods.h	2012-05-15 08:23:57.404389735 +0000
-@@ -32,6 +32,7 @@ EapType eap_peer_get_type(const char *na
- const char * eap_get_name(int vendor, EapType type);
- size_t eap_get_names(char *buf, size_t buflen);
- char ** eap_get_names_as_string_array(size_t *num);
-+int eap_peer_register_methods(void);
- void eap_peer_unregister_methods(void);
- 
- #else /* IEEE8021X_EAPOL */
-diff -Naurp a/src/eap_peer/libeap0.pc b/src/eap_peer/libeap0.pc
---- a/src/eap_peer/libeap0.pc	1970-01-01 00:00:00.000000000 +0000
-+++ b/src/eap_peer/libeap0.pc	2012-05-15 08:23:57.404389735 +0000
-@@ -0,0 +1,10 @@
-+prefix=/usr
-+exec_prefix=/usr
-+libdir=${exec_prefix}/lib
-+includedir=${prefix}/include/eap_peer
-+
-+Name: libeap0
-+Description: EAP Peer Library API
-+Version: 0.7.2
-+Libs: -L${libdir} -leap
-+Cflags: -I${includedir}
-diff -Naurp a/src/eap_peer/Makefile b/src/eap_peer/Makefile
---- a/src/eap_peer/Makefile	2012-05-15 08:23:17.152386964 +0000
-+++ b/src/eap_peer/Makefile	2012-05-15 08:23:57.403389760 +0000
-@@ -1,11 +1,188 @@
+diff -ur a/wpa_supplicant-2.4/src/eap_peer/Makefile b/wpa_supplicant-2.4/src/eap_peer/Makefile
+--- a/wpa_supplicant-2.4/src/eap_peer/Makefile	2015-03-15 19:30:39.000000000 -0200
++++ b/wpa_supplicant-2.4/src/eap_peer/Makefile	2015-04-26 14:40:49.987453098 -0200
+@@ -1,11 +1,192 @@
 -all:
 -	@echo Nothing to be made.
 +LIBEAP_NAME = libeap
@@ -191,18 +42,22 @@ diff -Naurp a/src/eap_peer/Makefile b/src/eap_peer/Makefile
 +OBJS_both += ../utils/wpa_debug.o
 +OBJS_both += ../utils/base64.o
 +OBJS_both += ../utils/wpabuf.o
-+OBJS_both += ../crypto/md5.o
++OBJS_both += ../utils/eloop.o
 +ifneq ($(CONFIG_TLS), openssl)
++OBJS_both += ../crypto/md5.o
 +OBJS_both += ../crypto/sha1.o
 +endif
 +OBJS_both += ../crypto/sha1-tlsprf.o
 +OBJS_both += ../crypto/aes-encblock.o
++ifneq ($(CONFIG_TLS), openssl)
 +OBJS_both += ../crypto/aes-wrap.o
++endif
 +OBJS_both += ../crypto/aes-ctr.o
 +OBJS_both += ../crypto/aes-eax.o
 +OBJS_both += ../crypto/aes-omac1.o
 +OBJS_both += ../crypto/ms_funcs.o
 +OBJS_both += ../crypto/sha256.o
++OBJS_both += ../crypto/random.o
 +
 +
 +OBJS_both += ../eap_common/eap_peap_common.o
@@ -347,3 +202,141 @@ diff -Naurp a/src/eap_peer/Makefile b/src/eap_peer/Makefile
 -		install -d $(DESTDIR)$(LIBDIR)/wpa_supplicant && \
 -		cp *.so $(DESTDIR)$(LIBDIR)/wpa_supplicant \
 -	; fi
+diff -ur a/wpa_supplicant-2.4/src/eap_peer/eap_methods.c b/wpa_supplicant-2.4/src/eap_peer/eap_methods.c
+--- a/wpa_supplicant-2.4/src/eap_peer/eap_methods.c	2015-03-15 19:30:39.000000000 -0200
++++ b/wpa_supplicant-2.4/src/eap_peer/eap_methods.c	2015-04-26 14:39:58.247099942 -0200
+@@ -336,6 +336,120 @@
+ 
+ 
+ /**
++ * eap_peer_register_methods - Register all known EAP peer methods
++ *
++ * This function is called at program start to register all compiled
++ * in EAP peer methods.
++ */
++int eap_peer_register_methods(void)
++{
++	int ret = 0;
++
++#ifdef EAP_MD5
++	if (ret == 0)
++		ret = eap_peer_md5_register();
++#endif /* EAP_MD5 */
++
++#ifdef EAP_TLS
++	if (ret == 0)
++		ret = eap_peer_tls_register();
++#endif /* EAP_TLS */
++
++#ifdef EAP_MSCHAPv2
++	if (ret == 0)
++		ret = eap_peer_mschapv2_register();
++#endif /* EAP_MSCHAPv2 */
++
++#ifdef EAP_PEAP
++	if (ret == 0)
++		ret = eap_peer_peap_register();
++#endif /* EAP_PEAP */
++
++#ifdef EAP_TTLS
++	if (ret == 0)
++		ret = eap_peer_ttls_register();
++#endif /* EAP_TTLS */
++
++#ifdef EAP_GTC
++	if (ret == 0)
++		ret = eap_peer_gtc_register();
++#endif /* EAP_GTC */
++
++#ifdef EAP_OTP
++	if (ret == 0)
++		ret = eap_peer_otp_register();
++#endif /* EAP_OTP */
++
++#ifdef EAP_SIM
++	if (ret == 0)
++		ret = eap_peer_sim_register();
++#endif /* EAP_SIM */
++
++#ifdef EAP_LEAP
++	if (ret == 0)
++		ret = eap_peer_leap_register();
++#endif /* EAP_LEAP */
++
++#ifdef EAP_PSK
++	if (ret == 0)
++		ret = eap_peer_psk_register();
++#endif /* EAP_PSK */
++
++#ifdef EAP_AKA
++	if (ret == 0)
++		ret = eap_peer_aka_register();
++#endif /* EAP_AKA */
++
++#ifdef EAP_AKA_PRIME
++	if (ret == 0)
++		ret = eap_peer_aka_prime_register();
++#endif /* EAP_AKA_PRIME */
++
++#ifdef EAP_FAST
++	if (ret == 0)
++		ret = eap_peer_fast_register();
++#endif /* EAP_FAST */
++
++#ifdef EAP_PAX
++	if (ret == 0)
++		ret = eap_peer_pax_register();
++#endif /* EAP_PAX */
++
++#ifdef EAP_SAKE
++	if (ret == 0)
++		ret = eap_peer_sake_register();
++#endif /* EAP_SAKE */
++
++#ifdef EAP_GPSK
++	if (ret == 0)
++		ret = eap_peer_gpsk_register();
++#endif /* EAP_GPSK */
++
++#ifdef EAP_WSC
++	if (ret == 0)
++		ret = eap_peer_wsc_register();
++#endif /* EAP_WSC */
++
++#ifdef EAP_IKEV2
++	if (ret == 0)
++		ret = eap_peer_ikev2_register();
++#endif /* EAP_IKEV2 */
++
++#ifdef EAP_VENDOR_TEST
++	if (ret == 0)
++		ret = eap_peer_vendor_test_register();
++#endif /* EAP_VENDOR_TEST */
++
++#ifdef EAP_TNC
++	if (ret == 0)
++		ret = eap_peer_tnc_register();
++#endif /* EAP_TNC */
++
++	return ret;
++}
++
++
++/**
+  * eap_peer_unregister_methods - Unregister EAP peer methods
+  *
+  * This function is called at program termination to unregister all EAP peer
+Only in b/wpa_supplicant-2.4/src/eap_peer: eap_methods.c.orig
+diff -ur a/wpa_supplicant-2.4/src/eap_peer/eap_methods.h b/wpa_supplicant-2.4/src/eap_peer/eap_methods.h
+--- a/wpa_supplicant-2.4/src/eap_peer/eap_methods.h	2015-03-15 19:30:39.000000000 -0200
++++ b/wpa_supplicant-2.4/src/eap_peer/eap_methods.h	2015-04-26 14:39:58.248099929 -0200
+@@ -26,6 +26,7 @@
+ const char * eap_get_name(int vendor, EapType type);
+ size_t eap_get_names(char *buf, size_t buflen);
+ char ** eap_get_names_as_string_array(size_t *num);
++int eap_peer_register_methods(void);
+ void eap_peer_unregister_methods(void);
+ 
+ #else /* IEEE8021X_EAPOL */
+Only in b/wpa_supplicant-2.4/src/eap_peer: eap_methods.h.orig
+Only in b/wpa_supplicant-2.4/src/eap_peer: libeap0.pc

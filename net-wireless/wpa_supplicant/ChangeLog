@@ -1,6 +1,30 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.237 2015/04/28 08:06:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.238 2015/05/08 17:58:51 gurligebis Exp $
+
+*wpa_supplicant-2.4-r2 (08 May 2015)
+
+  08 May 2015; <gurligebis@gentoo.org> +wpa_supplicant-2.4-r2.ebuild,
+  -files/wpa_supplicant-2.0-dbus-path-fix.patch,
+  -files/wpa_supplicant-2.0-do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-2.0-fix-undefined-reference-to-random_get_bytes.patch,
+  -files/wpa_supplicant-2.0-generate-libeap-peer.patch,
+  -files/wpa_supplicant-2.2-dbus-path-fix.patch,
+  -files/wpa_supplicant-2.2-do-not-call-dbus-functions-with-NULL-path.patch,
+  -files/wpa_supplicant-2.2-fix-undefined-reference-to-random_get_bytes.patch,
+  -files/wpa_supplicant-2.2-generate-libeap-peer.patch,
+  -files/wpa_supplicant-2.4-fix-undefined-reference-to-random_get_bytes.patch,
+  files/wpa_supplicant-2.4-generate-libeap-peer.patch,
+  +files/2015-4/0001-EAP-pwd-peer-Fix-payload-length-validation-for-Commi.patch
+  ,
+  +files/2015-4/0002-EAP-pwd-server-Fix-payload-length-validation-for-Com.patch
+  ,
+  +files/2015-4/0003-EAP-pwd-peer-Fix-Total-Length-parsing-for-fragment-r.patch
+  ,
+  +files/2015-4/0004-EAP-pwd-server-Fix-Total-Length-parsing-for-fragment.patch
+  ,
+  +files/2015-4/0005-EAP-pwd-peer-Fix-asymmetric-fragmentation-behavior.patch:
+  Removing old files, and fixing bugs #547588, #544036, #548268, #548742
 
   28 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> -wpa_supplicant-2.0-r2.ebuild,
   -wpa_supplicant-2.2-r1.ebuild:
