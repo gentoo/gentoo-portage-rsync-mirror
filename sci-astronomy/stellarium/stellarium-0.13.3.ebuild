@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.13.3.ebuild,v 1.1 2015/05/04 13:32:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/stellarium/stellarium-0.13.3.ebuild,v 1.2 2015/05/08 15:22:41 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils eutils flag-o-matic gnome2-utils
@@ -59,10 +59,6 @@ src_prepare() {
 			-e "/GETTEXT_CREATE_TRANSLATIONS/a \ ${LINGUAS}" \
 			po/stellarium{,-skycultures}/CMakeLists.txt || die #403647
 	fi
-	sed -i \
-		-e '/^Actions/s/Safemode;//' \
-		-e '/^OnlyShowIn/d' \
-		data/stellarium.desktop || die
 	sed -i -e '/SimpleDrawLine/s: 0 : 1 :g' CMakeLists.txt || die
 	use debug || append-cppflags -DQT_NO_DEBUG #415769
 }
