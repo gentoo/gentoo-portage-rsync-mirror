@@ -21,14 +21,11 @@ RDEPEND=""
 # Tests require a connected mtp device
 RESTRICT="test"
 
-GO_PN="/usr/$(get_libdir)/go/src/github.com/hanwen/usb"
+GO_PN="/usr/lib/go/src/github.com/hanwen/usb"
 
 src_install() {
 	insinto "${GO_PN}"
-
-	for i in LICENSE *.go; do
-	  doins "${i}" || die "Install failed"
-	done
+	doins *.go LICENSE || die "Install failed"
 }
 
 src_test() {
