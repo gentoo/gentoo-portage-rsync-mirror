@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1-r2.ebuild,v 1.4 2015/05/08 10:01:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/apbs/apbs-1.4.1-r2.ebuild,v 1.5 2015/05/08 10:33:46 jlec Exp $
 
 EAPI=5
 
@@ -18,11 +18,12 @@ SRC_URI="https://github.com/Electrostatics/apbs-pdb2pqr/archive/${GITHUB_REV}.zi
 SLOT="0"
 LICENSE="BSD"
 KEYWORDS="~amd64 ~ppc x86 ~amd64-linux ~x86-linux"
-IUSE="debug doc examples fast +fetk mpi openmp python tools"
+IUSE="debug doc examples fast +fetk iapbs mpi openmp python tools"
 
 REQUIRED_USE="
+	iapbs? ( fetk )
 	mpi? ( !python )
-	python? ( tools fetk ${PYTHON_REQUIRED_USE} )"
+	python? ( tools fetk iapbs ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
 	dev-cpp/eigen:3
@@ -86,8 +87,7 @@ src_configure() {
 		$(cmake-utils_use_enable mpi MPI)
 		$(cmake-utils_use_enable python PYTHON)
 # ENABLE_TINKER: Enable TINKER support
-# ENABLE_iAPBS: Enable iAPBS
-		-DENABLE_iAPBS=OFF
+		$(cmake-utils_use_enable iapbs iAPBS)
 # MAX_MEMORY: Set the maximum memory (in MB) to be used for a job
 	)
 	cmake-utils_src_configure
