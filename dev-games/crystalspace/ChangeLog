@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/crystalspace
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.61 2014/11/21 09:58:26 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.62 2015/05/08 16:16:21 mr_bones_ Exp $
+
+  08 May 2015; Michael Sterrett <mr_bones_@gentoo.org> crystalspace-2.0.ebuild:
+  tidy
 
   21 Nov 2014; Mike Frysinger <vapier@gentoo.org> crystalspace-2.0.ebuild:
   Use makeopts_jobs instead of parsing MAKEOPTS by hand.

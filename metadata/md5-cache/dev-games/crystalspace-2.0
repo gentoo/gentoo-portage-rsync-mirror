@@ -10,4 +10,4 @@ RDEPEND=virtual/opengl media-libs/openal x11-libs/libXt x11-libs/libXxf86vm sys-
 SLOT=0
 SRC_URI=mirror://sourceforge/crystal/crystalspace-src-2.0.tar.bz2
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	4241a8d9ed765c83041b38ac128505cd	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f	wxwidgets	6d6eec2685256d35511e7b6d5461bec9
-_md5_=a9e203453adadff5cd9966659573367c
+_md5_=9b72e3543f7502ebaec92374f69b8fa5
