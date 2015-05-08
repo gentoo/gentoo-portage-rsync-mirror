@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/virtuoso-odbc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.39 2014/03/07 03:28:28 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-odbc/ChangeLog,v 1.40 2015/05/08 15:50:09 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> virtuoso-odbc-6.1.8.ebuild:
+  Stable for PPC64 (bug #548746).
 
 *virtuoso-odbc-6.1.8 (07 Mar 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/virtuoso-server
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.46 2014/03/07 03:28:22 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/virtuoso-server/ChangeLog,v 1.47 2015/05/08 15:50:16 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> virtuoso-server-6.1.8.ebuild:
+  Stable for PPC64 (bug #548746).
 
 *virtuoso-server-6.1.8 (07 Mar 2014)
 
