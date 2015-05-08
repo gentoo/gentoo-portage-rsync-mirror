@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.10-r2.ebuild,v 1.2 2015/05/08 01:06:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.9.10-r3.ebuild,v 1.1 2015/05/08 02:14:43 idella4 Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/LibVNC/libvncserver/archive/LibVNCServer-${PV}.tar.g
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="+24bpp gcrypt gnutls ipv6 +jpeg +png ssl static-libs test threads +zlib"
 
 DEPEND="
@@ -45,9 +45,11 @@ src_prepare() {
 }
 
 multilib_src_configure() {
+	# bug 548012: disable vaapi per upstream
 	ECONF_SOURCE=${S} \
 	econf \
 		--disable-silent-rules \
+		--without-libva \
 		$(use_enable static-libs static) \
 		$(use_with 24bpp) \
 		$(use_with gnutls) \
