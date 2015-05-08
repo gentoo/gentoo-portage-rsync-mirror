@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.196 2015/04/07 14:31:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.197 2015/05/08 14:31:42 jlec Exp $
+
+  08 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/rtorrent-0.9.4-tinfo.patch, metadata.xml, rtorrent-0.9.4-r1.ebuild:
+  Add fix for ncurses[tinfo], bug #522706
 
   11 Mar 2015; Manuel Rüger <mrueg@gentoo.org> rtorrent-0.9.3.ebuild:
   Fix unquoted variable.
