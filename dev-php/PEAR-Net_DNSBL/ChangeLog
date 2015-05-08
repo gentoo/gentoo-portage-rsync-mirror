@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Net_DNSBL
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.39 2015/05/08 08:31:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Net_DNSBL/ChangeLog,v 1.40 2015/05/08 12:41:23 grknight Exp $
+
+  08 May 2015; Brian Evans <grknight@gentoo.org> -PEAR-Net_DNSBL-1.3.6.ebuild:
+  Drop old
 
   08 May 2015; Agostino Sarubbo <ago@gentoo.org> PEAR-Net_DNSBL-1.3.7.ebuild:
   Stable for alpha/amd64/ia64/sparc/x86, wrt bug #548618
