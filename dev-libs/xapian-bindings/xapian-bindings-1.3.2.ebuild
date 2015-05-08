@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.3.2.ebuild,v 1.1 2015/04/20 23:05:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian-bindings/xapian-bindings-1.3.2.ebuild,v 1.2 2015/05/08 19:56:44 blueness Exp $
 
 EAPI="5"
 
@@ -52,7 +52,9 @@ src_prepare() {
 
 	if use python; then
 		sed \
-			-e 's:\(^pkgpylib_DATA = xapian/__init__.py\).*:\1:' \
+			-e 's|\(^pkgpylib_DATA = xapian/__init__.py\).*|\1|' \
+			-e '/\s\sxapian\/__init__.pyc/d' \
+			-e '/\s\sxapian\/__init__.pyo/d' \
 			-e 's|\(^xapian/__init__.py: modern/xapian.py\)|\1 xapian/_xapian$(PYTHON_SO)|' \
 			-i python/Makefile.in || die "sed failed"
 	fi
