@@ -1,6 +1,12 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1238 2015/05/07 22:28:23 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1239 2015/05/08 00:41:17 floppym Exp $
+
+*chromium-43.0.2357.52 (08 May 2015)
+
+  08 May 2015; Mike Gilbert <floppym@gentoo.org> +chromium-43.0.2357.52.ebuild,
+  -chromium-43.0.2357.18.ebuild:
+  Beta channel bump.
 
   07 May 2015; Mike Gilbert <floppym@gentoo.org> chromium-44.0.2391.0.ebuild:
   Use bundled libsecret headers to avoid buildtime dependency on libsecret. The

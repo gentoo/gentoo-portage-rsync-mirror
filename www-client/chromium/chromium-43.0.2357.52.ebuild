@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2357.18.ebuild,v 1.2 2015/04/20 02:05:02 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-43.0.2357.52.ebuild,v 1.1 2015/05/08 00:41:17 floppym Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -32,7 +32,6 @@ QA_PRESTRIPPED=".*\.nexe"
 RDEPEND=">=app-accessibility/speech-dispatcher-0.8:=
 	app-arch/bzip2:=
 	app-arch/snappy:=
-	app-crypt/libsecret:=
 	cups? ( >=net-print/cups-1.3.11:= )
 	>=dev-libs/elfutils-0.149
 	dev-libs/expat:=
@@ -191,7 +190,6 @@ src_prepare() {
 	# fi
 
 	epatch "${FILESDIR}/${PN}-system-jinja-r7.patch"
-	epatch "${FILESDIR}/${PN}-libsecret-r0.patch"
 	epatch "${FILESDIR}/${PN}-system-libvpx-r0.patch"
 
 	if use widevine; then
@@ -251,6 +249,7 @@ src_prepare() {
 		'third_party/libaddressinput' \
 		'third_party/libjingle' \
 		'third_party/libphonenumber' \
+		'third_party/libsecret' \
 		'third_party/libsrtp' \
 		'third_party/libudev' \
 		'third_party/libusb' \
