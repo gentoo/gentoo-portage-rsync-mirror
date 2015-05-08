@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.246 2015/05/02 13:14:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.247 2015/05/08 10:12:32 yngwin Exp $
+
+*ck-sources-4.0.2 (08 May 2015)
+*ck-sources-3.19.7 (08 May 2015)
+
+  08 May 2015; Ben de Groot <yngwin@gentoo.org> +ck-sources-3.19.7.ebuild,
+  +ck-sources-4.0.2.ebuild:
+  Version bumps for latest Linux patches and Gentoo patchset
 
 *ck-sources-4.0.1 (02 May 2015)
 

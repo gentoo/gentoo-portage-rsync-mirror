@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.7-r1.ebuild,v 1.1 2015/05/06 11:05:47 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-1.3.7-r1.ebuild,v 1.2 2015/05/08 10:09:25 titanofold Exp $
 
 EAPI=5
 inherit eutils flag-o-matic toolchain-funcs prefix
@@ -45,8 +45,6 @@ src_prepare() {
 	# files in menu [include] items. This patch will allow us to do clever
 	# things with style ebuilds.
 	epatch "${FILESDIR}"/gentoo_style_location-1.1.x.patch
-	# Fix the semantic issue of icon paths, bug #536370
-	epatch "${FILESDIR}"/1.3.5-generate_menu-printf-fix.patch
 
 	eprefixify util/fluxbox-generate_menu.in
 
