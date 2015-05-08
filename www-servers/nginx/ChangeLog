@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/nginx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.406 2015/04/16 07:48:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/nginx/ChangeLog,v 1.407 2015/05/08 16:43:23 mrueg Exp $
+
+  08 May 2015; Manuel Rüger <mrueg@gentoo.org> -nginx-1.7.10.ebuild,
+  -nginx-1.7.11.ebuild, -nginx-1.7.7.ebuild, -nginx-1.7.8.ebuild:
+  Remove old.
 
 *nginx-1.7.12 (16 Apr 2015)
 
