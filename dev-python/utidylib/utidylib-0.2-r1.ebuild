@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2-r1.ebuild,v 1.8 2012/03/01 23:40:55 ranger Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/utidylib/utidylib-0.2-r1.ebuild,v 1.9 2015/05/08 07:33:35 jlec Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -12,7 +12,7 @@ inherit distutils eutils
 MY_P="uTidylib-${PV}"
 
 DESCRIPTION="TidyLib Python wrapper"
-HOMEPAGE="http://utidylib.berlios.de/"
+HOMEPAGE="http://sourceforge.net/projects/utidylib/"
 SRC_URI="mirror://berlios/${PN}/${MY_P}.zip"
 
 LICENSE="MIT"
