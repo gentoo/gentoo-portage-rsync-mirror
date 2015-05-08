@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-tables2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tables2/ChangeLog,v 1.1 2015/04/08 14:17:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-tables2/ChangeLog,v 1.2 2015/05/08 13:50:06 jlec Exp $
+
+*django-tables2-0.16.0-r1 (08 May 2015)
+
+  08 May 2015; Justin Lecher <jlec@gentoo.org> +django-tables2-0.16.0-r1.ebuild,
+  +files/django-tables2-0.16.0-django-1.9-deprecation.patch:
+  Backport patch for deprecated functions
 
 *django-tables2-0.16.0 (08 Apr 2015)
 
