@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libupnp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.58 2015/04/28 09:46:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libupnp/ChangeLog,v 1.59 2015/05/08 19:14:11 gurligebis Exp $
+
+*libupnp-1.6.19 (08 May 2015)
+
+  08 May 2015; <gurligebis@gentoo.org> +libupnp-1.6.19.ebuild,
+  +files/libupnp-1.6.19-suse.patch:
+  Bumping to 1.6.19, fixing #545490
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libupnp-1.6.18-r1.ebuild:
   Stable for sparc, wrt bug #545206

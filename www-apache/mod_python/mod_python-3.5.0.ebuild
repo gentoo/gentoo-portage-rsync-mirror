@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.5.0.ebuild,v 1.6 2015/04/19 07:03:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/mod_python-3.5.0.ebuild,v 1.7 2015/05/08 19:29:50 pacho Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SLOT="0"
 
 APACHE2_MOD_CONF="16_${PN}"
 APACHE2_MOD_DEFINE="PYTHON"
-need_apache2_2
+need_apache2
 
 RDEPEND="${RDEPEND}"
 DEPEND="${DEPEND}
