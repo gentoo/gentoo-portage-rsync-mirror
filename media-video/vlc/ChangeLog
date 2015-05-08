@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.956 2015/05/02 06:28:37 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.957 2015/05/08 09:19:25 ago Exp $
+
+  08 May 2015; Agostino Sarubbo <ago@gentoo.org> -vlc-2.1.2.ebuild:
+  Drop 2.1.2 and on behalf of the alpha team, we are dropping the support on vlc
+  for alpha
 
   02 May 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.0.ebuild,
   vlc-2.2.1.ebuild:
