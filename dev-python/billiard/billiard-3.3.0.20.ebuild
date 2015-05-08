@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/billiard-3.3.0.17.ebuild,v 1.1 2014/05/02 07:01:53 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/billiard-3.3.0.20.ebuild,v 1.1 2015/05/08 08:08:45 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
 
 inherit distutils-r1 flag-o-matic
 
@@ -20,9 +20,10 @@ IUSE="doc test"
 RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( >=dev-python/unittest2-0.4.0[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}]
+		>=dev-python/nose-1.3.4[${PYTHON_USEDEP}]
 		dev-python/nose-cover3[${PYTHON_USEDEP}]
-		dev-python/mock[${PYTHON_USEDEP}] )"
+		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy pypy3 )
+	)"
 # The usual req'd for tests
 DISTUTILS_IN_SOURCE_BUILD=1
 

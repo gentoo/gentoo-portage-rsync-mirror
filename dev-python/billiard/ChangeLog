@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/billiard
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.29 2015/03/08 23:40:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/billiard/ChangeLog,v 1.30 2015/05/08 08:08:45 idella4 Exp $
+
+*billiard-3.3.0.20 (08 May 2015)
+
+  08 May 2015; Ian Delaney <idella4@gentoo.org> +billiard-3.3.0.20.ebuild,
+  -billiard-3.3.0.17.ebuild:
+  bump one remove one
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> billiard-3.3.0.19.ebuild:
   x86 stable, bug 540290

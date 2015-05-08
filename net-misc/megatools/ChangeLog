@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/megatools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/ChangeLog,v 1.6 2015/03/17 03:56:42 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/megatools/ChangeLog,v 1.7 2015/05/08 08:01:41 dlan Exp $
+
+*megatools-1.9.95 (08 May 2015)
+
+  08 May 2015; Yixun Lan <dlan@gentoo.org> +megatools-1.9.95.ebuild:
+  version bump
 
 *megatools-1.9.94 (17 Mar 2015)
 
