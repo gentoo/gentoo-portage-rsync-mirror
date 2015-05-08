@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/man
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.178 2014/11/02 09:47:12 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.179 2015/05/08 03:22:04 vapier Exp $
+
+*man-1.6g-r1 (08 May 2015)
+
+  08 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/man-1.6g-echo-escape.patch, +man-1.6g-r1.ebuild,
+  -files/man-1.5p-defmanpath-symlinks.patch, -files/man-1.5p-search-order.patch,
+  -files/man-1.6b-more-sections.patch, -files/man-1.6d-fbsd.patch,
+  -files/man-1.6f-compress.patch, -files/man-1.6f-xz.patch, -man-1.6f-r4.ebuild,
+  -man-1.6f-r5.ebuild:
+  Avoid escape sequences with `echo` #523874 by Alex Xu.
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> man-1.6g.ebuild:
   Remove sec-policy/selinux-* dependency from DEPEND but keep in RDEPEND (bug

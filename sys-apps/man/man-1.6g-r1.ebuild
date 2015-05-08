@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6f-r5.ebuild,v 1.4 2012/12/15 12:53:52 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.6g-r1.ebuild,v 1.1 2015/05/08 03:22:04 vapier Exp $
 
-EAPI="2"
+EAPI="4"
 
 inherit eutils toolchain-funcs user
 
@@ -12,14 +12,13 @@ SRC_URI="http://primates.ximian.com/~flucifredi/man/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~sparc-fbsd ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 IUSE="+lzma nls selinux"
 
-DEPEND="nls? ( sys-devel/gettext )
-		selinux? ( sec-policy/selinux-makewhatis )"
+DEPEND="nls? ( sys-devel/gettext )"
 RDEPEND="|| ( >=sys-apps/groff-1.19.2-r1 app-doc/heirloom-doctools )
 	!sys-apps/man-db
-	!app-arch/lzma
+	!<app-arch/lzma-4.63
 	lzma? ( app-arch/xz-utils )
 	selinux? ( sec-policy/selinux-makewhatis )"
 
@@ -31,19 +30,17 @@ pkg_setup() {
 src_prepare() {
 	epatch "${FILESDIR}"/man-1.6f-man2html-compression-2.patch
 	epatch "${FILESDIR}"/man-1.6-cross-compile.patch
-	epatch "${FILESDIR}"/man-1.5p-search-order.patch
 	epatch "${FILESDIR}"/man-1.6f-unicode.patch #146315
-	epatch "${FILESDIR}"/man-1.5p-defmanpath-symlinks.patch
-	epatch "${FILESDIR}"/man-1.6b-more-sections.patch
 	epatch "${FILESDIR}"/man-1.6c-cut-duplicate-manpaths.patch
 	epatch "${FILESDIR}"/man-1.5m2-apropos.patch
-	epatch "${FILESDIR}"/man-1.6d-fbsd.patch
+	epatch "${FILESDIR}"/man-1.6g-fbsd.patch #138123
 	epatch "${FILESDIR}"/man-1.6e-headers.patch
 	epatch "${FILESDIR}"/man-1.6f-so-search-2.patch
-	epatch "${FILESDIR}"/man-1.6f-compress.patch
+	epatch "${FILESDIR}"/man-1.6g-compress.patch #205147
 	epatch "${FILESDIR}"/man-1.6f-parallel-build.patch #207148 #258916
-	epatch "${FILESDIR}"/man-1.6f-xz.patch #302380
+	epatch "${FILESDIR}"/man-1.6g-xz.patch #302380
 	epatch "${FILESDIR}"/man-1.6f-makewhatis-compression-cleanup.patch #331979
+	epatch "${FILESDIR}"/man-1.6g-echo-escape.patch #523874
 	# make sure `less` handles escape sequences #287183
 	sed -i -e '/^DEFAULTLESSOPT=/s:"$:R":' configure
 }
