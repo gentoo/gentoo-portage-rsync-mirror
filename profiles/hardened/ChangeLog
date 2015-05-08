@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.82 2015/05/01 15:57:39 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.83 2015/05/08 12:31:15 blueness Exp $
+
+  08 May 2015; Anthony G. Basile <blueness@gentoo.org> +linux/arm/package.mask,
+  +linux/musl/arm/package.mask, linux/uclibc/arm/armv6j/parent,
+  linux/uclibc/arm/armv7a/parent, +linux/uclibc/arm/package.mask:
+  Mask gcc 4.8 and above pending the fix of bug #518598.
+  Restructure linux/uclibc/arm slightly.
 
   01 May 2015; Andrew Savchenko <bircoph@gentoo.org> linux/package.mask,
   linux/package.use.mask:
