@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.10.0_p2476743.ebuild,v 1.2 2015/05/07 19:39:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.10.0_p2476743.ebuild,v 1.3 2015/05/08 01:01:39 floppym Exp $
 
 EAPI=5
 
@@ -15,14 +15,22 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="X doc icu modules pam +pic xinerama"
+IUSE="X doc grabbitmqproxy icu modules pam +pic vgauth xinerama"
 
 COMMON_DEPEND="
 	dev-libs/glib:2
 	dev-libs/libdnet
 	sys-apps/ethtool
+	sys-fs/fuse
 	>=sys-process/procps-3.3.2
+	grabbitmqproxy? ( dev-libs/openssl:0 )
+	icu? ( dev-libs/icu:= )
 	pam? ( virtual/pam )
+	vgauth? (
+		dev-libs/openssl:0
+		dev-libs/xerces-c
+		dev-libs/xml-security-c
+	)
 	X? (
 		dev-cpp/gtkmm:2.4
 		x11-base/xorg-server
@@ -33,15 +41,8 @@ COMMON_DEPEND="
 		x11-libs/libX11
 		x11-libs/libXtst
 	)
-	sys-fs/fuse
-	icu? ( dev-libs/icu:= )
 	xinerama? ( x11-libs/libXinerama )
 "
-#	vgauth? (
-#		dev-libs/openssl:0
-#		dev-libs/xerces-c
-#		dev-libs/xml-security-c
-#	)
 
 DEPEND="${COMMON_DEPEND}
 	doc? ( app-doc/doxygen )
@@ -61,10 +62,8 @@ pkg_setup() {
 }
 
 src_prepare() {
-	# Do not filter out Werror
-	# Upstream Bug  http://sourceforge.net/tracker/?func=detail&aid=2959749&group_id=204462&atid=989708
-	# sed -i -e 's/CFLAGS=.*Werror/#&/g' configure || die "sed comment out Werror failed"
-	sed -i -e 's:\(TEST_PLUGIN_INSTALLDIR=\).*:\1\$libdir/open-vm-tools/plugins/tests:g' configure || die "sed test_plugin_installdir failed"
+	epatch "${FILESDIR}/9.10.0-vgauth.patch"
+	epatch_user
 }
 
 src_configure() {
@@ -73,22 +72,23 @@ src_configure() {
 	export CUSTOM_PROCPS_LIBS="$($(tc-getPKG_CONFIG) --libs libprocps)"
 
 	local myeconfargs=(
+		--disable-deploypkg
+		--disable-tests
+		# Broken build
+		--docdir=/usr/share/doc/${PF}
 		--with-procps
 		--with-dnet
 		--without-kernel-modules
 		$(use_enable doc docs)
-		--docdir=/usr/share/doc/${PF}
-		$(use_with X x)
-		$(use_with X gtk2)
-		$(use_with X gtkmm)
+		$(use_enable grabbitmqproxy)
+		$(use_enable vgauth)
+		$(use_enable xinerama multimon)
 		$(use_with icu)
 		$(use_with pam)
 		$(use_with pic)
-		$(use_enable xinerama multimon)
-		# Missing libmspack
-		--disable-deploypkg
-		# Broken build
-		--disable-vgauth
+		$(use_with X gtk2)
+		$(use_with X gtkmm)
+		$(use_with X x)
 	)
 
 	econf "${myeconfargs[@]}"

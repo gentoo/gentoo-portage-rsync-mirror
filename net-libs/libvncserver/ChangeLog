@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.99 2015/05/08 00:42:21 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.100 2015/05/08 01:06:22 idella4 Exp $
+
+  08 May 2015; Ian Delaney <idella4@gentoo.org> libvncserver-0.9.10-r2.ebuild:
+  Straight to stable on alpha, hppa, ia64, ppc, and ppc64, ditto
+  libvncserver-0.9.10-r1
 
 *libvncserver-0.9.10-r2 (08 May 2015)
 

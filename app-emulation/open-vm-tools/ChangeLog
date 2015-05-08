@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.86 2015/05/07 19:39:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.88 2015/05/08 01:06:06 floppym Exp $
+
+  08 May 2015; Mike Gilbert <floppym@gentoo.org> files/9.10.0-vgauth.patch:
+  Update patch.
+
+  08 May 2015; Mike Gilbert <floppym@gentoo.org> +files/9.10.0-vgauth.patch,
+  metadata.xml, open-vm-tools-9.10.0_p2476743.ebuild:
+  Add grabbitmqproxy and vgauth use flags.
 
   07 May 2015; Mike Gilbert <floppym@gentoo.org>
   open-vm-tools-9.10.0_p2476743.ebuild:
