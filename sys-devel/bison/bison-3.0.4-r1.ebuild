@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-3.0.4-r1.ebuild,v 1.2 2015/04/11 08:59:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-3.0.4-r1.ebuild,v 1.3 2015/05/08 08:33:38 vapier Exp $
 
 EAPI=5
 
-inherit flag-o-matic eutils autotools
+inherit flag-o-matic eutils
 
 DESCRIPTION="A general-purpose (yacc-compatible) parser generator"
 HOMEPAGE="http://www.gnu.org/software/bison/"
@@ -17,7 +17,6 @@ IUSE="examples nls static test"
 
 RDEPEND=">=sys-devel/m4-1.4.16"
 DEPEND="${RDEPEND}
-	>=sys-devel/automake-1.14
 	sys-devel/flex
 	examples? ( dev-lang/perl )
 	nls? ( sys-devel/gettext )
@@ -27,7 +26,7 @@ DOCS=( AUTHORS ChangeLog-2012 NEWS README THANKS TODO ) # ChangeLog-1998 PACKAGI
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-optional-perl.patch #538300
-	eautoreconf
+	touch doc/bison.1 #548778
 }
 
 src_configure() {

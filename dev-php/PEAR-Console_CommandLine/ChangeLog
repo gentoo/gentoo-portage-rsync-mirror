@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-Console_CommandLine
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_CommandLine/ChangeLog,v 1.5 2013/11/14 21:09:09 mabi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Console_CommandLine/ChangeLog,v 1.6 2015/05/08 08:33:47 ago Exp $
+
+  08 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  PEAR-Console_CommandLine-1.2.0.ebuild:
+  Stable for amd64/x86, wrt bug #548612
 
   14 Nov 2013; Matti Bickel <mabi@gentoo.org>
   PEAR-Console_CommandLine-1.2.0.ebuild:
