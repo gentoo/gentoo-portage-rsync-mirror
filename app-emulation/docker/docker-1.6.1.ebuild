@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.5.0.ebuild,v 1.4 2015/03/14 02:47:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.1.ebuild,v 1.1 2015/05/08 17:26:21 xarthisius Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ else
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="https://${GITHUB_URI}/archive/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 	S="${WORKDIR}/${MY_P}"
-	DOCKER_GITCOMMIT="a8a31ef"
+	DOCKER_GITCOMMIT="97cd073"
 	KEYWORDS="~amd64"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 fi
@@ -62,6 +62,7 @@ RDEPEND="
 	aufs? (
 		|| (
 			sys-fs/aufs3
+			sys-fs/aufs4
 			sys-kernel/aufs-sources
 		)
 	)
@@ -71,22 +72,26 @@ RESTRICT="installsources strip"
 
 # see "contrib/check-config.sh" from upstream's sources
 CONFIG_CHECK="
-	~NAMESPACES ~NET_NS ~PID_NS ~IPC_NS ~UTS_NS
-	~DEVPTS_MULTIPLE_INSTANCES
-	~CGROUPS ~CGROUP_CPUACCT ~CGROUP_DEVICE ~CGROUP_FREEZER CGROUP_SCHED CPUSETS
-	~MACVLAN ~VETH ~BRIDGE
-	~NF_NAT_IPV4 ~IP_NF_FILTER ~IP_NF_TARGET_MASQUERADE
-	~NETFILTER_XT_MATCH_ADDRTYPE ~NETFILTER_XT_MATCH_CONNTRACK
-	~NF_NAT ~NF_NAT_NEEDED
+	NAMESPACES NET_NS PID_NS IPC_NS UTS_NS
+	DEVPTS_MULTIPLE_INSTANCES
+	CGROUPS CGROUP_CPUACCT CGROUP_DEVICE CGROUP_FREEZER CGROUP_SCHED CPUSETS
+	MACVLAN VETH BRIDGE
+	NF_NAT_IPV4 IP_NF_FILTER IP_NF_TARGET_MASQUERADE
+	NETFILTER_XT_MATCH_ADDRTYPE NETFILTER_XT_MATCH_CONNTRACK
+	NF_NAT NF_NAT_NEEDED
 
-	~MEMCG_SWAP
+	POSIX_MQUEUE
+
+	~MEMCG_SWAP ~MEMCG_SWAP_ENABLED
 	~RESOURCE_COUNTERS
 	~CGROUP_PERF
+	~CFS_BANDWIDTH
 "
 
 ERROR_MEMCG_SWAP="CONFIG_MEMCG_SWAP: is required if you wish to limit swap usage of containers"
 ERROR_RESOURCE_COUNTERS="CONFIG_RESOURCE_COUNTERS: is optional for container statistics gathering"
 ERROR_CGROUP_PERF="CONFIG_CGROUP_PERF: is optional for container statistics gathering"
+ERROR_CFS_BANDWIDTH="CONFIG_CFS_BANDWIDTH: is optional for container statistics gathering"
 
 pkg_setup() {
 	if kernel_is lt 3 8; then
@@ -114,6 +119,7 @@ pkg_setup() {
 	if use aufs; then
 		CONFIG_CHECK+="
 			~AUFS_FS
+			~EXT4_FS_POSIX_ACL ~EXT4_FS_SECURITY
 		"
 		# TODO there must be a way to detect "sys-kernel/aufs-sources" so we don't warn "sys-fs/aufs3" users about this
 		# an even better solution would be to check if the current kernel sources include CONFIG_AUFS_FS as an option, but that sounds hairy and error-prone
@@ -128,7 +134,7 @@ pkg_setup() {
 
 	if use device-mapper; then
 		CONFIG_CHECK+="
-			~BLK_DEV_DM ~DM_THIN_PROVISIONING ~EXT4_FS
+			~BLK_DEV_DM ~DM_THIN_PROVISIONING ~EXT4_FS ~EXT4_FS_POSIX_ACL ~EXT4_FS_SECURITY
 		"
 	fi
 
@@ -163,7 +169,7 @@ src_compile() {
 		sed -i "s/EXTLDFLAGS_STATIC='/EXTLDFLAGS_STATIC='-fno-PIC /" hack/make.sh || die
 		grep -q -- '-fno-PIC' hack/make.sh || die 'hardened sed failed'
 
-		sed -i 's/LDFLAGS_STATIC_DOCKER="/LDFLAGS_STATIC_DOCKER="-extldflags -fno-PIC /' hack/make/dynbinary || die
+		sed -i "s/LDFLAGS_STATIC_DOCKER='/LDFLAGS_STATIC_DOCKER='-extldflags -fno-PIC /" hack/make/dynbinary || die
 		grep -q -- '-fno-PIC' hack/make/dynbinary || die 'hardened sed failed'
 	fi
 

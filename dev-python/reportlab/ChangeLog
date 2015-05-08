@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.130 2015/04/26 17:22:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.131 2015/05/08 17:11:42 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> reportlab-3.1.44-r1.ebuild:
+  Stable for PPC64 (bug #546810).
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> reportlab-3.1.44-r1.ebuild:
   ppc stable wrt bug #546810

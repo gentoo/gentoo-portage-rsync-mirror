@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/docker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.44 2015/05/04 12:05:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/ChangeLog,v 1.46 2015/05/08 17:27:58 xarthisius Exp $
+
+  08 May 2015; Kacper Kowalik <xarthisius@gentoo.org> -docker-1.5.0.ebuild:
+  drop old wrt #548884
+
+*docker-1.6.1 (08 May 2015)
+
+  08 May 2015; Kacper Kowalik <xarthisius@gentoo.org> +docker-1.6.1.ebuild,
+  -docker-1.6.0.ebuild:
+  Version bump, drop old wrt #548884
 
   04 May 2015; Justin Lecher <jlec@gentoo.org> docker-1.6.0.ebuild:
   Add missing dependency on aufs4, thanks jbergstroem for the report
