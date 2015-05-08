@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.4.ebuild,v 1.1 2015/03/21 13:19:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.4-r1.ebuild,v 1.1 2015/05/08 18:14:59 gurligebis Exp $
 
 EAPI="4"
 
@@ -28,6 +28,17 @@ RDEPEND="${DEPEND}"
 S="${S}/${PN}"
 
 src_prepare() {
+	cd ..
+
+	# bug (548744)
+	epatch "${FILESDIR}/2015-4/0001-EAP-pwd-peer-Fix-payload-length-validation-for-Commi.patch"
+	epatch "${FILESDIR}/2015-4/0002-EAP-pwd-server-Fix-payload-length-validation-for-Com.patch"
+	epatch "${FILESDIR}/2015-4/0003-EAP-pwd-peer-Fix-Total-Length-parsing-for-fragment-r.patch"
+	epatch "${FILESDIR}/2015-4/0004-EAP-pwd-server-Fix-Total-Length-parsing-for-fragment.patch"
+	epatch "${FILESDIR}/2015-4/0005-EAP-pwd-peer-Fix-asymmetric-fragmentation-behavior.patch"
+
+	cd "${PN}"
+
 	epatch "${FILESDIR}/${PN}-hlr_auc_gw-openssl.patch"
 
 	sed -i -e "s:/etc/hostapd:/etc/hostapd/hostapd:g" \

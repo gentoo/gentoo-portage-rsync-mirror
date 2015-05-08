@@ -1,6 +1,21 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.154 2015/03/21 13:19:27 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.155 2015/05/08 18:14:59 gurligebis Exp $
+
+*hostapd-2.4-r1 (08 May 2015)
+
+  08 May 2015; <gurligebis@gentoo.org> -hostapd-2.4.ebuild,
+  +hostapd-2.4-r1.ebuild,
+  +files/2015-4/0001-EAP-pwd-peer-Fix-payload-length-validation-for-Commi.patch
+  ,
+  +files/2015-4/0002-EAP-pwd-server-Fix-payload-length-validation-for-Com.patch
+  ,
+  +files/2015-4/0003-EAP-pwd-peer-Fix-Total-Length-parsing-for-fragment-r.patch
+  ,
+  +files/2015-4/0004-EAP-pwd-server-Fix-Total-Length-parsing-for-fragment.patch
+  ,
+  +files/2015-4/0005-EAP-pwd-peer-Fix-asymmetric-fragmentation-behavior.patch:
+  Removing old version and fixing #548744
 
 *hostapd-2.4 (21 Mar 2015)
 

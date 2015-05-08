@@ -1,6 +1,16 @@
 # ChangeLog for www-apache/mod_auth_kerb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.16 2014/12/17 10:58:17 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.17 2015/05/08 18:21:14 pacho Exp $
+
+*mod_auth_kerb-5.4-r2 (08 May 2015)
+
+  08 May 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/mod_auth_kerb-5.4-handle-continue.patch,
+  +files/mod_auth_kerb-5.4-longuser.patch,
+  +files/mod_auth_kerb-5.4-s4u2proxy-r2.patch, +mod_auth_kerb-5.4-r2.ebuild:
+  Apply more Fedora patches with fixes, update s4u2proxy patch to support
+  heimdal (#454816 by Spooky Ghost), tmpfiles.d needed (#470942 by Azamat H.
+  Hackimov)
 
   17 Dec 2014; Pacho Ramos <pacho@gentoo.org> -mod_auth_kerb-5.4.ebuild,
   mod_auth_kerb-5.4-r1.ebuild:

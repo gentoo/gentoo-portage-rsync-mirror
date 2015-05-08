@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.13.0.ebuild,v 1.1 2015/05/08 00:29:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.13.0-r1.ebuild,v 1.1 2015/05/08 18:26:59 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -96,6 +96,7 @@ DEPEND="
 RDEPEND="${DEPEND}
 	!app-emulation/ganeti-htools"
 DEPEND+="sys-devel/m4
+	app-text/pandoc
 	test? (
 		dev-python/mock
 		dev-python/pyyaml
