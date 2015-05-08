@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.3.0.ebuild,v 1.7 2014/09/29 10:05:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.3.0.ebuild,v 1.8 2015/05/08 05:25:55 pinkbyte Exp $
 
 EAPI=5
 PLOCALES="ar_SY bg ca cs da de el_GR en_US es et eu fi fr gl he_IL hr hu it ja
@@ -23,10 +23,8 @@ DEPEND="dev-qt/qtcore:4
 	dev-qt/qtgui:4"
 COMMON_USE="libass,png,X"
 RDEPEND="${DEPEND}
-	|| (
-		media-video/mplayer[bidi,${COMMON_USE}]
-		media-video/mplayer2[${COMMON_USE}]
-	)"
+	media-video/mplayer[bidi,${COMMON_USE}]
+"
 
 src_prepare() {
 	# Upstream Makefile sucks

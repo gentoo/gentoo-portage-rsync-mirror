@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ldns-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.34 2015/05/04 03:14:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ldns-utils/ChangeLog,v 1.35 2015/05/08 05:05:47 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> ldns-utils-1.6.17.ebuild:
+  Stable for PPC64 too.
 
   04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove myself as maintainer.

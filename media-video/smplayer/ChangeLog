@@ -1,6 +1,11 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.163 2015/03/22 06:18:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.164 2015/05/08 05:25:55 pinkbyte Exp $
+
+  08 May 2015; Sergey Popov <pinkbyte@gentoo.org> smplayer-14.3.0.ebuild,
+  smplayer-14.9.0-r1.ebuild:
+  Drop media-video/mplayer2 dependency, as that package was removed from
+  portage tree
 
 *smplayer-14.9.0.6690-r3 (22 Mar 2015)
 
