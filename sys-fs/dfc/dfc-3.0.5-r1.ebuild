@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/dfc-3.0.5.ebuild,v 1.1 2015/04/23 01:42:18 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dfc/dfc-3.0.5-r1.ebuild,v 1.1 2015/05/08 07:22:40 dlan Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -14,8 +14,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86"
 IUSE="nls"
 
-DEPEND="nls? ( virtual/libintl )"
-RDEPEND="${DEPEND}"
+DEPEND="nls? (
+	virtual/libintl
+	sys-devel/gettext
+)"
+RDEPEND="nls? ( virtual/libintl )"
 
 src_configure() {
 	mycmakeargs=(
