@@ -5384,7 +5384,6 @@ net-libs/libssh:ssh1 - Build with SSH1 support
 net-libs/libssh2:gcrypt - Use dev-libs/libgcrypt instead of dev-libs/openssl
 net-libs/libvncserver:24bpp - enable 24bpp support
 net-libs/libvncserver:gcrypt - enable support for gcrypt
-net-libs/libvncserver:no24bpp - disable 24bpp support
 net-libs/loudmouth:asyncns - Use libasyncns for asynchronous name resolution.
 net-libs/neon:libproxy - Add support for net-libs/libproxy
 net-libs/neon:pkcs11 - Add support for PKCS#11 using dev-libs/pakchois
