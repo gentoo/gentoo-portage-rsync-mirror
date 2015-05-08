@@ -1,6 +1,14 @@
 # ChangeLog for www-apache/mod_perl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.118 2014/11/27 23:45:31 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.119 2015/05/08 18:58:57 pacho Exp $
+
+*mod_perl-2.0.8-r1 (08 May 2015)
+
+  08 May 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/use-client_ip-client_add-instead-of-remote_ip-remote.patch,
+  +files/use-log.level-instead-of-loglevel.patch, +mod_perl-2.0.8-r1.ebuild,
+  -mod_perl-2.0.7-r1.ebuild:
+  Support apache 2.4 (#410453)
 
   27 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   mod_perl-2.0.7-r1.ebuild, mod_perl-2.0.8.ebuild:

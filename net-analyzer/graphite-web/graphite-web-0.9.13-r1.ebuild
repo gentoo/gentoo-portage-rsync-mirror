@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/graphite-web-0.9.13.ebuild,v 1.2 2015/03/11 02:33:52 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/graphite-web-0.9.13-r1.ebuild,v 1.1 2015/05/08 18:57:51 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -67,6 +67,9 @@ python_install() {
 	chmod 0755 "${ED}"/usr/bin/${PN}-manage || die
 	python_fix_shebang "${ED}"/usr/bin/${PN}-manage
 
+	# shortener image isn't included for some reason
+	cp "${FILESDIR}"/share.png "${ED}"/usr/share/${PN}/webapp/content/img/
+
 	insinto /etc/${PN}
 	newins webapp/graphite/local_settings.py.example local_settings.py
 	pushd "${D}"/$(python_get_sitedir)/graphite > /dev/null || die
@@ -91,5 +94,5 @@ pkg_postinst() {
 	einfo "You will need to ${PN} it with Apache (mod_wsgi) or nginx (uwsgi)."
 	einfo "Don't forget to edit local_settings.py in ${EPREFIX}/etc/${PN}"
 	einfo "See http://graphite.readthedocs.org/en/latest/config-local-settings.html"
-	einfo "Run emerge --config =${P} if this is a fresh install."
+	einfo "Run emerge --config =${PN}-${PVR} if this is a fresh install."
 }

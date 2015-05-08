@@ -1,17 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.7-r1.ebuild,v 1.4 2014/11/27 23:45:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8-r1.ebuild,v 1.1 2015/05/08 18:58:57 pacho Exp $
 
-EAPI=5
+EAPI="5"
 
-inherit apache-module perl-module eutils
+inherit depend.apache apache-module perl-module eutils
 
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 SRC_URI="mirror://apache/perl/${P}.tar.gz"
-HOMEPAGE="http://perl.apache.org/"
+HOMEPAGE="https://projects.apache.org/projects/mod_perl.html"
 
 LICENSE="GPL-2"
-KEYWORDS="~hppa"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="debug"
 SLOT="1"
 
@@ -20,12 +20,12 @@ SLOT="1"
 #
 # We need both, apache and perl but either apache without threads or perl with
 # ithreads, bug 373943
-DEPEND="<www-servers/apache-2.4
+DEPEND="
 	>=dev-perl/Apache-Test-1.360
 	>=virtual/perl-CGI-3.08
-	dev-lang/perl
+	dev-lang/perl[ithreads]
 	www-servers/apache
-	|| ( www-servers/apache[-threads] dev-lang/perl[ithreads] )"
+"
 RDEPEND="${DEPEND}"
 PDEPEND=">=dev-perl/Apache-Reload-0.11
 	>=dev-perl/Apache-SizeLimit-0.95"
@@ -81,6 +81,10 @@ src_prepare() {
 	rm -rf Apache-{Test,Reload,SizeLimit}/ lib/Bundle/
 	sed -i -e 's:^Apache-\(Reload\|SizeLimit\|Test\).*::' \
 		-e 's:^lib/Bundle/Apache2.pm::' MANIFEST || die
+
+	# 410453
+	epatch "${FILESDIR}/use-client_ip-client_add-instead-of-remote_ip-remote.patch"
+	epatch "${FILESDIR}/use-log.level-instead-of-loglevel.patch"
 }
 
 src_configure() {
@@ -97,6 +101,7 @@ src_configure() {
 		INSTALLDIRS=vendor \
 		MP_USE_DSO=1 \
 		MP_APXS=${APXS} \
+		MP_APR_CONFIG=/usr/bin/apr-1-config \
 		${myargs} || die
 }
 
@@ -119,7 +124,7 @@ src_test() {
 src_install() {
 	apache-module_src_install
 
-	emake DESTDIR="${D}" install
+	emake DESTDIR="${D}" install || die
 
 	# TODO: add some stuff from docs/ back?
 
@@ -130,7 +135,7 @@ src_install() {
 	perl_delete_packlist
 
 	insinto "${APACHE_MODULES_CONFDIR}"
-	doins "${FILESDIR}"/2.0.3/apache2-mod_perl-startup.pl
+	doins "${FILESDIR}"/2.0.3/apache2-mod_perl-startup.pl || die
 
 	# this is an attempt to get @INC in line with /usr/bin/perl.
 	# there is blib garbage in the mainstream one that can only be
