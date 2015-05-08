@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libssh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.126 2015/05/07 09:36:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libssh/ChangeLog,v 1.128 2015/05/08 04:52:50 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> libssh-0.6.5.ebuild:
+  Stable for PPC64 (bug #548564).
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> libssh-0.6.5.ebuild:
+  Stable for HPPA (bug #548564).
 
 *libssh-0.6.5 (07 May 2015)
 

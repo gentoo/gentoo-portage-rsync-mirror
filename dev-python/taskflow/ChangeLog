@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/taskflow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/taskflow/ChangeLog,v 1.5 2015/04/30 18:48:12 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/taskflow/ChangeLog,v 1.6 2015/05/08 04:36:01 prometheanfire Exp $
+
+*taskflow-0.10.0 (08 May 2015)
+
+  08 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +taskflow-0.10.0.ebuild:
+  bup
 
   30 Apr 2015; Matthew Thode <prometheanfire@gentoo.org> taskflow-0.7.1.ebuild:
   fixing prepare phase in 0.7.1

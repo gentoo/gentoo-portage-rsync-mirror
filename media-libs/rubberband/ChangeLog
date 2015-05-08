@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/rubberband
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.22 2015/05/03 08:28:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/rubberband/ChangeLog,v 1.23 2015/05/08 04:56:48 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> rubberband-1.8.1.ebuild:
+  Mark ~ppc64 (bug #548446).
 
   03 May 2015; Jeroen Roovers <jer@gentoo.org> rubberband-1.8.1.ebuild:
   Mark ~hppa (bug #548446).

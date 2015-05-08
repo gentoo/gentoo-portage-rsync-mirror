@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-30.0.1833.0.ebuild,v 1.1 2015/04/16 05:11:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/opera-developer/opera-developer-31.0.1857.0.ebuild,v 1.1 2015/05/08 04:35:19 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -16,9 +16,10 @@ LICENSE="OPERA-2014"
 SLOT="0"
 SRC_URI_BASE="http://get.geo.opera.com/pub/"
 SRC_URI="
-	x86? ( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_i386.deb" )
+	amd64?	( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_amd64.deb" )
+	x86?	( "${SRC_URI_BASE}${PN}/${PV}/linux/${PN}_${PV}_i386.deb" )
 "
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 
 RDEPEND="
 	dev-libs/expat

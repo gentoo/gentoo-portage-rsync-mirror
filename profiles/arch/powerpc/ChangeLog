@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.323 2015/04/28 03:00:03 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.324 2015/05/08 04:58:03 jer Exp $
+
+  08 May 2015; Jeroen Roovers <jer@gentoo.org> ppc64/package.use.mask:
+  Drop USE=rubberband mask for media-video/mpv (bug #548446).
 
   28 Apr 2015; Patrick Lauer <patrick@gentoo.org> use.mask:
   Mask ayatana useflag until dependencies catch up
