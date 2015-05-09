@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install preinst prepare setup test
-DEPEND=!<app-arch/rpm-4.2.1 cxx? ( >=dev-libs/icu-2.8 ) java? ( >=virtual/jdk-1.4 ) doc? ( app-doc/doxygen virtual/latex-base dev-texlive/texlive-fontsextra ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( =dev-lang/python-2* )
+DEPEND=!<app-arch/rpm-4.2.1 cxx? ( >=dev-libs/icu-2.8 ) java? ( >=virtual/jdk-1.4 ) doc? ( app-doc/doxygen virtual/latex-base dev-texlive/texlive-fontsextra ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 java? ( >=dev-java/java-config-2.2.0 ) python? ( =dev-lang/python-2* )
 DESCRIPTION=general-purpose cryptography library
 EAPI=4
 HOMEPAGE=http://sourceforge.net/projects/beecrypt/
 IUSE=java cxx python static-libs threads doc elibc_FreeBSD java
 KEYWORDS=alpha amd64 arm hppa ia64 ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=GPL-2 LGPL-2
-RDEPEND=!<app-arch/rpm-4.2.1 cxx? ( >=dev-libs/icu-2.8 ) java? ( >=virtual/jre-1.4 ) java? ( >=dev-java/java-config-2.1.9-r1 ) python? ( =dev-lang/python-2* )
+RDEPEND=!<app-arch/rpm-4.2.1 cxx? ( >=dev-libs/icu-2.8 ) java? ( >=virtual/jre-1.4 ) java? ( >=dev-java/java-config-2.2.0 ) python? ( =dev-lang/python-2* )
 REQUIRED_USE=cxx? ( threads )
 SLOT=0
 SRC_URI=mirror://sourceforge/beecrypt/beecrypt-4.2.1.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	4241a8d9ed765c83041b38ac128505cd	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f7dce580d4098b526be3fa17d4242820	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b435641996054497e16b5d6ccee57688

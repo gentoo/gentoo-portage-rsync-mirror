@@ -1,12 +1,12 @@
 DEFINED_PHASES=compile install preinst setup
-DEPEND=app-arch/unzip >=dev-java/java-config-2.1.9-r1
+DEPEND=app-arch/unzip >=dev-java/java-config-2.2.0
 DESCRIPTION=Java(TM) Look and Feel Graphics Repository
 HOMEPAGE=http://java.sun.com/developer/techDocs/hi/repository/
 IUSE=elibc_FreeBSD
 KEYWORDS=amd64 ppc x86
 LICENSE=sun-jlfgr
-RDEPEND=>=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1
+RDEPEND=>=virtual/jre-1.4 >=dev-java/java-config-2.2.0
 SLOT=0
 SRC_URI=mirror://gentoo/jlfgr-1_0.zip
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	4241a8d9ed765c83041b38ac128505cd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	f7dce580d4098b526be3fa17d4242820	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=31c3e0bb637a6a6cf441992eeb686384

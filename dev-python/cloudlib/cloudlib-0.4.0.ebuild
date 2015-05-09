@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cloudlib/cloudlib-0.4.0.ebuild,v 1.1 2015/05/09 20:22:23 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cloudlib/cloudlib-0.4.0.ebuild,v 1.2 2015/05/09 22:26:55 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_4 )
@@ -21,6 +21,5 @@ RDEPEND=">=dev-python/prettytable-0.7.0[${PYTHON_USEDEP}]
 		>=dev-python/requests-2.2.0[${PYTHON_USEDEP}]"
 
 python_prepare() {
-	sed -i "s/required.append\(\'argparse\'\)/pass/g" setup.py
-	distutils-r1_python_prepare_all
+	sed -i "s/required.append\(\'argparse\'\)/pass/g" setup.py || die
 }

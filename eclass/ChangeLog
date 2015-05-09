@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1609 2015/05/09 19:51:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1610 2015/05/09 22:20:44 chewi Exp $
+
+  09 May 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass,
+  java-virtuals-2.eclass, java-vm-2.eclass:
+  Bump everyone to java-config 2.2.
 
   09 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   graphite support was dropped from gcc-4.7

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile install postinst preinst prepare setup
-DEPEND=dev-java/bcprov:1.45 dev-java/commons-cli:1 dev-java/commons-codec:0 dev-java/commons-discovery:0 dev-java/commons-httpclient:3 dev-java/commons-logging:0 dev-java/jaxb:2 dev-java/jax-ws:2 dev-java/jsr173:0 dev-java/jdom:1.0 dev-java/log4j:0 dev-java/wsdl4j:0 dev-java/xalan:0 dev-java/xalan-serializer:0 dev-java/xerces:2 app-arch/unzip:0 >=dev-java/java-config-2.1.9-r1
+DEPEND=dev-java/bcprov:1.45 dev-java/commons-cli:1 dev-java/commons-codec:0 dev-java/commons-discovery:0 dev-java/commons-httpclient:3 dev-java/commons-logging:0 dev-java/jaxb:2 dev-java/jax-ws:2 dev-java/jsr173:0 dev-java/jdom:1.0 dev-java/log4j:0 dev-java/wsdl4j:0 dev-java/xalan:0 dev-java/xalan-serializer:0 dev-java/xerces:2 app-arch/unzip:0 >=dev-java/java-config-2.2.0
 DESCRIPTION=These command-line tools serve as the client interface to the Amazon EC2 web service
 EAPI=5
 HOMEPAGE=http://developer.amazonwebservices.com/connect/entry.jspa?externalID=351&categoryID=88
 IUSE=elibc_FreeBSD
 KEYWORDS=~amd64 ~x86
 LICENSE=Amazon
-RDEPEND=dev-java/bcprov:1.45 dev-java/commons-cli:1 dev-java/commons-codec:0 dev-java/commons-discovery:0 dev-java/commons-httpclient:3 dev-java/commons-logging:0 dev-java/jaxb:2 dev-java/jax-ws:2 dev-java/jsr173:0 dev-java/jdom:1.0 dev-java/log4j:0 dev-java/wsdl4j:0 dev-java/xalan:0 dev-java/xalan-serializer:0 dev-java/xerces:2 >=virtual/jre-1.4 >=dev-java/java-config-2.1.9-r1
+RDEPEND=dev-java/bcprov:1.45 dev-java/commons-cli:1 dev-java/commons-codec:0 dev-java/commons-discovery:0 dev-java/commons-httpclient:3 dev-java/commons-logging:0 dev-java/jaxb:2 dev-java/jax-ws:2 dev-java/jsr173:0 dev-java/jdom:1.0 dev-java/log4j:0 dev-java/wsdl4j:0 dev-java/xalan:0 dev-java/xalan-serializer:0 dev-java/xerces:2 >=virtual/jre-1.4 >=dev-java/java-config-2.2.0
 RESTRICT=mirror
 SLOT=0
 SRC_URI=http://s3.amazonaws.com/ec2-downloads/ec2-api-tools-1.6.7.2.zip
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	4241a8d9ed765c83041b38ac128505cd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	f7dce580d4098b526be3fa17d4242820	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=12735c8c26829372c24c92b58250ed95

@@ -1,13 +1,13 @@
 DEFINED_PHASES=compile install preinst prepare setup
-DEPEND=virtual/libusb:1 virtual/libudev virtual/jpeg:0 opengl? ( media-libs/freeglut ) java? ( >=virtual/jre-1.5 ) dev-lang/python doc? ( app-doc/doxygen ) java? ( >=virtual/jdk-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+DEPEND=virtual/libusb:1 virtual/libudev virtual/jpeg:0 opengl? ( media-libs/freeglut ) java? ( >=virtual/jre-1.5 ) dev-lang/python doc? ( app-doc/doxygen ) java? ( >=virtual/jdk-1.5 ) java? ( >=dev-java/java-config-2.2.0 )
 DESCRIPTION=OpenNI2 SDK
 EAPI=5
 HOMEPAGE=http://structure.io/openni
 IUSE=doc java neon opengl static-libs elibc_FreeBSD java
 KEYWORDS=~amd64 ~arm
 LICENSE=Apache-2.0
-RDEPEND=virtual/libusb:1 virtual/libudev virtual/jpeg:0 opengl? ( media-libs/freeglut ) java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.1.9-r1 )
+RDEPEND=virtual/libusb:1 virtual/libudev virtual/jpeg:0 opengl? ( media-libs/freeglut ) java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.2.0 )
 SLOT=0
 SRC_URI=https://github.com/occipital/OpenNI2/archive/2.2-beta2.tar.gz -> OpenNI2-2.2_beta2.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	4241a8d9ed765c83041b38ac128505cd	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f7dce580d4098b526be3fa17d4242820	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=8b4786af1a1b0b4ebb2007194475dff8
