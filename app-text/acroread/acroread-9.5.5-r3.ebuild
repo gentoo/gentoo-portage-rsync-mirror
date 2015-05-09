@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5.ebuild,v 1.7 2014/06/18 19:03:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r3.ebuild,v 1.1 2015/05/09 12:32:16 pacho Exp $
 
 EAPI=5
 
@@ -11,51 +11,55 @@ SRC_URI="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PV}/enu/AdbeRdr
 HOMEPAGE="http://www.adobe.com/products/reader/"
 
 LICENSE="Adobe"
-KEYWORDS="-* amd64 x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
 SLOT="0"
-IUSE="cups html ldap nsplugin"
+IUSE="html ldap nsplugin"
 # asian fonts from separate package:
 IUSE+=" linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 
 RESTRICT="strip mirror"
 
-DEPEND="dev-util/bsdiff"
-RDEPEND="media-libs/fontconfig
-	cups? ( net-print/cups )
-	x86? (
-		=dev-libs/openssl-0.9.8*
-		x11-libs/gtk+:2
-		net-dns/libidn
-		|| ( x11-libs/pangox-compat <x11-libs/pango-1.31[X] )
-		ldap? ( net-nds/openldap )
-		html? (
-			|| (
-				www-client/firefox
-				www-client/firefox-bin
-				www-client/seamonkey
-			)
-		)
+DEPEND=""
+RDEPEND="|| ( (
+	dev-libs/atk[abi_x86_32(-)]
+	dev-libs/glib:2[abi_x86_32(-)]
+	dev-libs/libxml2[abi_x86_32(-)]
+	dev-libs/openssl:0.9.8[abi_x86_32(-)]
+	media-libs/fontconfig[abi_x86_32(-)]
+	virtual/glu[abi_x86_32(-)]
+	>=net-dns/libidn-1.28[abi_x86_32(-)]
+	sys-libs/zlib[abi_x86_32(-)]
+	x11-libs/gdk-pixbuf:2[abi_x86_32(-)]
+	>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/pango[abi_x86_32(-)]
+	|| (
+		>=x11-libs/pangox-compat-0.0.2[abi_x86_32(-)]
+		<x11-libs/pango-1.31[X]
 	)
-	amd64? (
+	) (
+		app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+		app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
+		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	) )
+	nsplugin? ( || (
+		x11-libs/libXt[abi_x86_32(-)]
+		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
+	) )
+	ldap? ( || (
+		>=net-nds/openldap-2.4.38-r1[abi_x86_32(-)]
+		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+	) )
+	x86? ( html? (
 		|| (
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-			(
-				>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
-				|| (
-					>=x11-libs/pangox-compat-0.0.2[abi_x86_32(-)]
-					<x11-libs/pango-1.31[X,abi_x86_32(-)]
-				)
-			)
+			www-client/firefox-bin
+			www-client/firefox
+			www-client/seamonkey-bin
+			www-client/seamonkey
 		)
-		|| (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			(
-				=dev-libs/openssl-0.9.8*[abi_x86_32(-)]
-				>=net-dns/libidn-1.28[abi_x86_32(-)]
-				ldap? ( >=net-nds/openldap-2.4.38-r1[abi_x86_32(-)] )
-			)
-		)
-	)
+	) )
 	linguas_zh_CN? ( media-fonts/acroread-asianfonts[linguas_zh_CN] )
 	linguas_ja? ( media-fonts/acroread-asianfonts[linguas_ja] )
 	linguas_zh_TW? ( media-fonts/acroread-asianfonts[linguas_zh_TW] )
@@ -123,21 +127,15 @@ src_prepare() {
 
 	# fix erroneous Exec entry in .desktop
 	sed -i \
-		-e 's/^Exec=acroread[[:space:]]*$/Exec=acroread %U/' \
+		-e 's/^Exec=acroread[[:space:]]*$/Exec=acroread %F/' \
+		-e 's/^Categories=Application;Office;Viewer;X-Red-Hat-Base;/Categories=Office;Viewer;/' \
+		-e 's/^Caption=/X-Caption=/' \
 		"${S}"/Adobe/Reader9/Resource/Support/AdobeReader.desktop \
 		||die "sed .desktop fix failed"
 
 	# fix braindead error in nppdf.so (bug 412051)
-	base64 -d > "${WORKDIR}/nppdf.so.patch" << ENDOFFILE
-QlNESUZGNDBIAAAAAAAAAC8AAAAAAAAAYL0CAAAAAABCWmg5MUFZJlNZFBL6EAAAFvBh+DwgDAgQ
-QAAAEABAIAAgACICaGjJtQoaaYAFPzpGDIjiUXSFYEuGy1ix8XckU4UJAUEvoQBCWmg5MUFZJlNZ
-jrYrlQABYGAAwAAIAAAIIAAwzAUppgKbECni7kinChIR1sVyoEJaaDkxQVkmU1kzGPRGAAAAEYAA
-AIYFAwAgACIHqbUIYAdBF8XckU4UJAzGPRGA
-ENDOFFILE
-	einfo "Patching nppdf.so"
-	mv Adobe/Reader9/Browser/intellinux/nppdf.so Adobe/Reader9/Browser/intellinux/nppdf.so.orig || die
-	bspatch Adobe/Reader9/Browser/intellinux/nppdf.so.orig Adobe/Reader9/Browser/intellinux/nppdf.so "${WORKDIR}/nppdf.so.patch" || die
-	rm Adobe/Reader9/Browser/intellinux/nppdf.so.orig || die
+	sed -i 's#C:\\nppdf32Log\\debuglog\.txt#/dev/null\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00#g' \
+		Adobe/Reader9/Browser/intellinux/nppdf.so || die
 }
 
 src_install() {
@@ -165,19 +163,20 @@ src_install() {
 	doman Adobe/Reader9/Resource/Shell/acroread.1.gz
 
 	if use nsplugin; then
-		exeinto /opt/netscape/plugins
-		doexe Adobe/Reader9/Browser/intellinux/nppdf.so
-		inst_plugin /opt/netscape/plugins/nppdf.so
+		inst_plugin /opt/Adobe/Reader9/Browser/intellinux/nppdf.so
+	else
+		rm -v "${ED}"/opt/Adobe/Reader9/Browser/intellinux/nppdf.so
 	fi
 
 	dodir /opt/bin
 	dosym /opt/${LAUNCHER} /opt/bin/${LAUNCHER/*bin\/}
 
+	# NOTE -- this is likely old and broken and should be removed...
 	# We need to set a MOZILLA_COMP_PATH for seamonkey and firefox since
 	# they don't install a configuration file for libgtkembedmoz.so
 	# detection in /etc/gre.d/ like xulrunner did.
 	if use x86 && use html; then
-		for lib in /opt/seamonkey /usr/lib/seamonkey /usr/lib/mozilla-firefox; do
+		for lib in /opt/{seamonkey,firefox} /usr/lib/{seamonkey,firefox,mozilla-firefox}; do
 			if [[ -f ${lib}/libgtkembedmoz.so ]] ; then
 				echo "MOZILLA_COMP_PATH=${lib}" >> "${ED}"${INSTALLDIR}/Adobe/Reader9/Reader/GlobalPrefs/mozilla_config
 				elog "Adobe Reader depends on libgtkembedmoz.so, which I've found on"
@@ -200,12 +199,17 @@ pkg_postinst () {
 		echo
 	fi
 
-	if use amd64 && use nsplugin && ! has_version www-plugins/nspluginwrapper; then
-		echo
-		elog "If you're running a 64bit browser you may also want to install"
-		elog "\"www-plugins/nspluginwrapper\" to be able to use the Adobe Reader"
-		elog "browser plugin."
-		echo
+	if use amd64; then
+		if use nsplugin && ! has_version www-plugins/nspluginwrapper; then
+			echo
+			elog "If you're running a 64bit browser you may also want to install"
+			elog "\"www-plugins/nspluginwrapper\" to be able to use the Adobe Reader"
+			elog "browser plugin."
+		fi
+		elog ""
+		elog "If you find that Adobe Reader doesn't match your desktop's theme, you"
+		elog "may want to re-emerge the relevant gtk theme package with"
+		elog "USE=\"abi_x86_32\" enabled."
 	fi
 
 	gnome2_icon_cache_update
