@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.10 2015/04/22 20:23:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.11 2015/05/09 18:19:31 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -208,12 +208,16 @@ qt4-build-multilib_src_prepare() {
 		QMakeVar set QMAKE_LFLAGS_DEBUG\n' \
 		configure || die "sed QMAKE_*FLAGS_{RELEASE,DEBUG} failed"
 
-	# Respect CC, CXX, LINK and *FLAGS in config.tests
+	# Drop -nocache from qmake invocation in all configure tests, to ensure that the
+	# correct toolchain and build flags are picked up from config.tests/.qmake.cache
 	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
-		sed -i -e "/bin\/qmake/ s: \"\$SRCDIR/: \
-			'QMAKE_CC=$(tc-getCC)'    'QMAKE_CXX=$(tc-getCXX)'      'QMAKE_LINK=$(tc-getCXX)' \
-			'QMAKE_CFLAGS+=${CFLAGS}' 'QMAKE_CXXFLAGS+=${CXXFLAGS}' 'QMAKE_LFLAGS+=${LDFLAGS}'&:" \
-		|| die "sed config.tests failed"
+		sed -i -e '/bin\/qmake/s/ -nocache//' || die "sed -nocache failed"
+
+	# compile.test needs additional patching so that it doesn't create another cache file
+	# inside the test subdir, which would incorrectly override config.tests/.qmake.cache
+	sed -i -e '/echo.*QT_BUILD_TREE.*\.qmake\.cache/d' \
+		-e '/bin\/qmake/s/ "$SRCDIR/ "QT_BUILD_TREE=$OUTDIR"&/' \
+		config.tests/unix/compile.test || die "sed compile.test failed"
 
 	# Delete references to the obsolete /usr/X11R6 directory
 	# On prefix, this also prevents looking at non-prefix stuff
@@ -338,6 +342,18 @@ qt4_multilib_src_configure() {
 		# architecture/platform (mkspec)
 		-arch ${arch}
 		-platform $(qt4_get_mkspec)
+
+		# instruction set support
+		$(is-flagq -mno-mmx	&& echo -no-mmx)
+		$(is-flagq -mno-3dnow	&& echo -no-3dnow)
+		$(is-flagq -mno-sse	&& echo -no-sse)
+		$(is-flagq -mno-sse2	&& echo -no-sse2)
+		$(is-flagq -mno-sse3	&& echo -no-sse3)
+		$(is-flagq -mno-ssse3	&& echo -no-ssse3)
+		$(is-flagq -mno-sse4.1	&& echo -no-sse4.1)
+		$(is-flagq -mno-sse4.2	&& echo -no-sse4.2)
+		$(is-flagq -mno-avx	&& echo -no-avx)
+		$(is-flagq -mfpu=*	&& ! is-flagq -mfpu=*neon* && echo -no-neon)
 
 		# prefer system libraries
 		-system-zlib

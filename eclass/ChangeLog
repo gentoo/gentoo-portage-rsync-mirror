@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1606 2015/05/09 15:33:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1607 2015/05/09 18:19:31 pesa Exp $
+
+  09 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Update from qt overlay: overhaul toolchain and *FLAGS handling for proper
+  multilib support during the configure phase. Fixes bug #545106.
 
   09 May 2015; Manuel Rüger <mrueg@gentoo.org> kde5.eclass:
   Sync with overlay.
