@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9986 2015/05/08 07:49:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9987 2015/05/09 10:12:05 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> desc/linguas.desc:
+  Add doi and syc locales
 
   08 May 2015; Ulrich Müller <ulm@gentoo.org> license_groups:
   Fix typo in name of Nokia-Qt-LGPL-Exception-1.1 license.

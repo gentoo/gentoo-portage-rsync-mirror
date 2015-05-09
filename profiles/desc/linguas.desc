@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.85 2015/01/31 13:04:04 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.86 2015/05/09 10:12:05 yngwin Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -50,6 +50,7 @@ de - German locale
 de_DE - German locale for Germany
 de_FR - German locale for France
 dgo - Dogri locale for India
+doi - Dogri locale
 dz - Dzongkha locale
 ee - Ewe locale
 el - Greek locale
@@ -233,6 +234,7 @@ sv - Swedish locale
 sv_SE - Swedish locale for Sweden
 sw - Swahili locale
 sw_TZ - Swahili locale for Tanzania
+syc - Syriac locale
 ta - Tamil locale
 ta_IN - Tamil locale
 ta_LK - Tamil locale for Sri Lanka
