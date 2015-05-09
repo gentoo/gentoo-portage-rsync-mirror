@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.83 2015/05/08 12:31:15 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.84 2015/05/09 22:40:55 blueness Exp $
+
+  09 May 2015; Anthony G. Basile <blueness@gentoo.org> linux/arm/package.mask:
+  Mask >=sys-libs/glibc-2.20 because it requires >=sys-devel/gcc-4.8, pending
+  the fix of bug #518598.
 
   08 May 2015; Anthony G. Basile <blueness@gentoo.org> +linux/arm/package.mask,
   +linux/musl/arm/package.mask, linux/uclibc/arm/armv6j/parent,
