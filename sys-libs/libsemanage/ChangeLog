@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libsemanage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.91 2015/04/23 13:14:18 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/ChangeLog,v 1.92 2015/05/09 17:46:46 perfinion Exp $
+
+  09 May 2015; Jason Zaman <perfinion@gentoo.org> -libsemanage-2.4.ebuild:
+  drop broken
 
 *libsemanage-2.4-r1 (23 Apr 2015)
 
