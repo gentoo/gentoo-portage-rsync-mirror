@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.5.ebuild,v 1.2 2015/05/01 05:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.5.ebuild,v 1.4 2015/05/09 11:53:50 yngwin Exp $
 
 EAPI=5
-
 inherit cmake-utils eutils gnome2-utils fdo-mime multilib readme.gentoo
 
 DESCRIPTION="Flexible Contect-aware Input Tool with eXtension support"
@@ -12,7 +11,7 @@ SRC_URI="http://download.fcitx-im.org/fcitx/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~hppa ~ppc ppc64 ~x86"
 IUSE="+X +autostart +cairo +dbus debug +enchant gtk gtk3 icu introspection lua
 nls opencc +pango qt4 static-libs +table test +xml"
 
@@ -42,7 +41,8 @@ RDEPEND="
 	)
 	icu? ( dev-libs/icu:= )
 	introspection? ( dev-libs/gobject-introspection )
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:= )
+	nls? ( sys-devel/gettext )
 	opencc? ( app-i18n/opencc )
 	qt4? (
 		dev-qt/qtdbus:4
@@ -55,8 +55,7 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}
 	virtual/libintl
-	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog README THANKS TODO
 	doc/pinyin.txt doc/cjkvinput.txt doc/API.txt doc/Develop_Readme )

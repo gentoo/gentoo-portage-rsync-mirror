@@ -1,21 +1,21 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.7-r1.ebuild,v 1.4 2013/10/01 21:06:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/fcitx-4.2.8.6.ebuild,v 1.2 2015/05/09 11:53:50 yngwin Exp $
 
 EAPI=5
-
 inherit cmake-utils eutils gnome2-utils fdo-mime multilib readme.gentoo
 
 DESCRIPTION="Flexible Contect-aware Input Tool with eXtension support"
 HOMEPAGE="http://fcitx-im.org/"
-SRC_URI="http://fcitx.googlecode.com/files/${P}_dict.tar.xz
-	http://dev.gentoo.org/~yngwin/distfiles/${P}-fixed-pngs.tgz" #465658
+SRC_URI="http://download.fcitx-im.org/fcitx/${P}_dict.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 IUSE="+X +autostart +cairo +dbus debug +enchant gtk gtk3 icu introspection lua
 nls opencc +pango qt4 static-libs +table test +xml"
+
+REQUIRED_USE="cairo? ( X ) gtk? ( X ) gtk3? ( X ) qt4? ( X )"
 
 RDEPEND="
 	X? (
@@ -41,7 +41,8 @@ RDEPEND="
 	)
 	icu? ( dev-libs/icu:= )
 	introspection? ( dev-libs/gobject-introspection )
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:= )
+	nls? ( sys-devel/gettext )
 	opencc? ( app-i18n/opencc )
 	qt4? (
 		dev-qt/qtdbus:4
@@ -54,8 +55,7 @@ RDEPEND="
 	)"
 DEPEND="${RDEPEND}
 	virtual/libintl
-	virtual/pkgconfig
-	nls? ( sys-devel/gettext )"
+	virtual/pkgconfig"
 
 DOCS=( AUTHORS ChangeLog README THANKS TODO
 	doc/pinyin.txt doc/cjkvinput.txt doc/API.txt doc/Develop_Readme )
@@ -64,18 +64,16 @@ HTML_DOCS=( doc/wb_fh.htm )
 src_prepare() {
 	use autostart && DOC_CONTENTS="You have enabled the autostart USE flag,
 	which will let fcitx start automatically on XDG compatible desktop
-	environments, such as Gnome, KDE, LXDE, Razor-qt and Xfce. If you use
+	environments, such as Gnome, KDE, LXDE, LXQt and Xfce. If you use
 	~/.xinitrc to configure your desktop, make sure to include the fcitx
 	command to start it."
-
-	cp -a ../skin . || die 'copying fixed pngs failed' #465658
-	epatch "${FILESDIR}/${P}-gcc46-compatible.patch"
 	epatch_user
 }
 
 src_configure() {
 	local mycmakeargs="
 		-DLIB_INSTALL_DIR=/usr/$(get_libdir)
+		-DSYSCONFDIR=/etc/
 		$(cmake-utils_use_enable X X11)
 		$(cmake-utils_use_enable autostart XDGAUTOSTART)
 		$(cmake-utils_use_enable cairo CAIRO)

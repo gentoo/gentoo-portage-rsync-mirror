@@ -1,6 +1,20 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.73 2015/05/01 05:25:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.76 2015/05/09 11:53:50 yngwin Exp $
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> fcitx-4.2.8.5.ebuild,
+  fcitx-4.2.8.6.ebuild:
+  Move gettext to RDEPEND, as reported by dlan
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> -fcitx-4.2.7-r1.ebuild,
+  -fcitx-4.2.8.1.ebuild, -fcitx-4.2.8.3.ebuild:
+  remove old
+
+*fcitx-4.2.8.6 (09 May 2015)
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> +fcitx-4.2.8.6.ebuild,
+  fcitx-4.2.8.5.ebuild:
+  Version bump. Mark 4.2.8.5 stable on amd64 (bug #540844)
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> fcitx-4.2.8.5.ebuild:
   Stable for PPC64 (bug #540844).
