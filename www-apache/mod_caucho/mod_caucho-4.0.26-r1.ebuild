@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.13.ebuild,v 1.5 2014/08/10 20:15:01 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_caucho/mod_caucho-4.0.26-r1.ebuild,v 1.1 2015/05/09 08:16:46 pacho Exp $
 
-EAPI="2"
-
+EAPI=5
 inherit eutils apache-module autotools
 
 DESCRIPTION="mod_caucho connects Resin and Apache2"
@@ -13,12 +12,12 @@ SRC_URI="http://www.caucho.com/download/resin-${PV}-src.zip
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
-DEPEND="${DEPEND}
-	app-arch/unzip"
-RDEPEND=""
+DEPEND="app-arch/unzip
+	~virtual/jre-1.6.0"
+RDEPEND="~virtual/jre-1.6.0"
 
 S="${WORKDIR}/resin-${PV}"
 
@@ -27,9 +26,15 @@ APACHE2_MOD_CONF="88_${PN}"
 APACHE2_MOD_DEFINE="CAUCHO"
 APACHE2_MOD_FILE="${S}/modules/c/src/apache2/.libs/${PN}.so"
 
-need_apache2_2
+need_apache2_4
 
 src_prepare() {
+	# Apache 2.4
+	sed -i \
+		-e 's/remote_ip/client_ip/g' \
+		-e 's/remote_addr/client_addr/g' \
+		modules/c/src/apache2/mod_caucho.c || die
+
 	for i in "${WORKDIR}"/${PV}/mod_caucho-*; do
 		epatch "${i}"
 	done
@@ -40,9 +45,9 @@ src_prepare() {
 }
 
 src_configure() {
-	econf --with-apxs=${APXS} || die "econf failed"
+	econf --with-apxs=${APXS} --with-java-home=/usr
 }
 
 src_compile() {
-	emake -C "${S}/modules/c/src/apache2/" || die "emake failed"
+	emake -C "${S}/modules/c/src/apache2/"
 }

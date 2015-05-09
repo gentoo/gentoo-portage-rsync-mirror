@@ -1,6 +1,11 @@
 # ChangeLog for www-apache/mod_evasive
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_evasive/ChangeLog,v 1.6 2013/01/22 16:16:40 vostorga Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_evasive/ChangeLog,v 1.7 2015/05/09 08:25:30 pacho Exp $
+
+*mod_evasive-1.10.1-r1 (09 May 2015)
+
+  09 May 2015; Pacho Ramos <pacho@gentoo.org> +mod_evasive-1.10.1-r1.ebuild:
+  support apache 2.4 (#532822)
 
   22 Jan 2013; Víctor Ostorga <vostorga@gentoo.org> mod_evasive-1.10.1.ebuild:
   Updating Homepage

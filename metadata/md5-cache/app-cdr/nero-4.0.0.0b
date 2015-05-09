@@ -10,5 +10,5 @@ RDEPEND=x11-libs/gtk+:2 x11-libs/libX11 x11-libs/libXinerama x11-libs/pango[X]
 RESTRICT=strip mirror test
 SLOT=0
 SRC_URI=x86? ( mirror://nero/nerolinux-4.0.0.0b-x86.rpm ) amd64? ( mirror://nero/nerolinux-4.0.0.0b-x86_64.rpm )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	linux-info	2b8c53f6065bdee2d757472215a3088f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	linux-info	25e9476cdec14dfb0af32f4c83c3f297	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	rpm	b94b54b44f14d6bee3e966c8f5c86fba	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=55ee03823ce5876250f2db066656b324

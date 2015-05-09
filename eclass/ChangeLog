@@ -1,6 +1,20 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1602 2015/05/04 20:02:26 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1603 2015/05/09 08:01:28 ulm Exp $
+
+  09 May 2015; Ulrich Müller <ulm@gentoo.org>
+  -tests/autotools:eaclocal_amflags.sh, +tests/autotools_eaclocal_amflags.sh,
+  -tests/eutils:eshopts.sh, +tests/eutils_eshopts.sh, -tests/eutils:estack.sh,
+  +tests/eutils_estack.sh, -tests/eutils:evar.sh, +tests/eutils_evar.sh,
+  -tests/eutils:path_exists.sh, +tests/eutils_path_exists.sh,
+  -tests/git-r3:GIT_DIR.sh, +tests/git-r3_GIT_DIR.sh,
+  -tests/git-r3:subrepos.sh, +tests/git-r3_subrepos.sh,
+  -tests/linux-info:get_running_version.sh,
+  +tests/linux-info_get_running_version.sh,
+  -tests/multiprocessing:makeopts_jobs.sh,
+  +tests/multiprocessing_makeopts_jobs.sh,
+  -tests/versionator:version_compare.sh, +tests/versionator_version_compare.sh:
+  Avoid problematic colon char in filenames, bug 548750.
 
   04 May 2015; <grknight@gentoo.org> php-ext-source-r2.eclass:
   Fix documentation of 3 variables in php-ext-source-r2 eclass

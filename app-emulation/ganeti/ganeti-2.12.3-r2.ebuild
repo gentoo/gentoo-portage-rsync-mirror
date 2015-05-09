@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.3-r1.ebuild,v 1.1 2015/05/08 00:29:05 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/ganeti/ganeti-2.12.3-r2.ebuild,v 1.1 2015/05/09 08:05:41 chutzpah Exp $
 
 EAPI=5
 PYTHON_COMPAT=(python2_7)
@@ -62,7 +62,7 @@ DEPEND="
 	sys-apps/iproute2
 	sys-fs/lvm2
 	>=sys-apps/baselayout-2.0
-	>=dev-lang/ghc-7.6.0:0=
+	=dev-lang/ghc-7.6*:0=
 	>=dev-haskell/json-0.9:0=
 	<dev-haskell/monad-control-1.0.0.0:0=
 	<dev-haskell/transformers-0.4.0:0=

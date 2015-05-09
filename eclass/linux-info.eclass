@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.104 2014/06/28 07:54:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.105 2015/05/09 08:03:40 ulm Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -599,7 +599,7 @@ get_running_version() {
 		return $?
 	else
 		# This handles a variety of weird kernel versions.  Make sure to update
-		# tests/linux-info:get_running_version.sh if you want to change this.
+		# tests/linux-info_get_running_version.sh if you want to change this.
 		local kv_full=${KV_FULL//[-+_]*}
 		KV_MAJOR=$(get_version_component_range 1 ${kv_full})
 		KV_MINOR=$(get_version_component_range 2 ${kv_full})
