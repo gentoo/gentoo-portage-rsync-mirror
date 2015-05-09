@@ -1,8 +1,3 @@
- Makefile | 12 ++++++------
- 1 file changed, 6 insertions(+), 6 deletions(-)
-
-diff --git a/Makefile b/Makefile
-index f672e41..7dc6a6e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -8,11 +8,11 @@ CONFIG_FILE=$(DESTDIR)/etc/multitail.conf
