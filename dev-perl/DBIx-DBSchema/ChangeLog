@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/DBIx-DBSchema
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.55 2015/04/05 22:53:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-DBSchema/ChangeLog,v 1.56 2015/05/09 19:16:03 dilfridge Exp $
+
+*DBIx-DBSchema-0.450.0 (09 May 2015)
+
+  09 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +DBIx-DBSchema-0.450.0.ebuild:
+  Version bump
 
 *DBIx-DBSchema-0.440.0 (05 Apr 2015)
 
