@@ -1,6 +1,16 @@
 # ChangeLog for www-apache/mod_auth_pgsql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.12 2014/12/28 16:59:35 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_pgsql/ChangeLog,v 1.13 2015/05/09 07:43:14 pacho Exp $
+
+*mod_auth_pgsql-2.0.3-r2 (09 May 2015)
+
+  09 May 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/mod_auth_pgsql-2.0.3-apache-2.4.patch,
+  +files/mod_auth_pgsql-2.0.3-documentation.patch,
+  +files/mod_auth_pgsql-2.0.3-encoding.patch,
+  +files/mod_auth_pgsql-2.0.3-fixdoublefree.patch,
+  +mod_auth_pgsql-2.0.3-r2.ebuild:
+  Apply some Debian patches also adding apache 2.4 support (#532798)
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   mod_auth_pgsql-2.0.3-r1.ebuild:

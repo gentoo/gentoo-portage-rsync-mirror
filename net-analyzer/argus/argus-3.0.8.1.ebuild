@@ -1,18 +1,17 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.6.1.ebuild,v 1.5 2013/01/03 00:43:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/argus-3.0.8.1.ebuild,v 1.1 2015/05/09 07:41:20 jer Exp $
 
-EAPI="4"
-
+EAPI=5
 inherit autotools eutils user
 
 DESCRIPTION="network Audit Record Generation and Utilization System"
 HOMEPAGE="http://www.qosient.com/argus/"
-SRC_URI="http://qosient.com/argus/dev/${P}.tar.gz"
+SRC_URI="http://qosient.com/argus/src/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="debug sasl tcpd"
 
 RDEPEND="
@@ -40,8 +39,9 @@ src_prepare() {
 		-e 's:\(#ARGUS_CHROOT_DIR=\).*:\1/var/lib/argus:' \
 			-i support/Config/argus.conf || die
 	epatch \
-		"${FILESDIR}"/${PN}-3.0.4-disable-tcp-wrappers-automagic.patch \
-		"${FILESDIR}"/${PN}-3.0.5-Makefile.patch
+		"${FILESDIR}"/${PN}-3.0.8.1-disable-tcp-wrappers-automagic.patch \
+		"${FILESDIR}"/${PN}-3.0.5-Makefile.patch \
+		"${FILESDIR}"/${PN}-3.0.7.3-DLT_IPNET.patch
 	eautoreconf
 }
 
@@ -55,7 +55,8 @@ src_compile() {
 }
 
 src_install () {
-	doman man/man5/* man/man8/*
+	doman man/man5/*.5 man/man8/*.8
+
 	dosbin bin/argus{,bug}
 
 	dodoc ChangeLog CREDITS README
@@ -64,7 +65,7 @@ src_install () {
 	doins support/Config/argus.conf
 
 	newinitd "${FILESDIR}/argus.initd" argus
-	dodir /var/lib/argus
+	keepdir /var/lib/argus
 }
 
 pkg_preinst() {
@@ -74,5 +75,5 @@ pkg_preinst() {
 
 pkg_postinst() {
 	elog "Note, if you modify ARGUS_DAEMON value in argus.conf it's quite"
-	elog "possible that init script will fail to work."
+	elog "possible that the init script will fail to work."
 }

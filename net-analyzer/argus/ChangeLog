@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/argus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.67 2015/01/26 10:13:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.68 2015/05/09 07:41:20 jer Exp $
+
+*argus-3.0.8.1 (09 May 2015)
+
+  09 May 2015; Jeroen Roovers <jer@gentoo.org> -argus-3.0.6.1.ebuild,
+  +argus-3.0.8.1.ebuild,
+  +files/argus-3.0.8.1-disable-tcp-wrappers-automagic.patch:
+  Version bump.
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> argus-3.0.8.ebuild:
   Stable for x86, wrt bug #535520
