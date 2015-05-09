@@ -20,6 +20,7 @@ IUSE="alsa pulseaudio"
 REQUIRED_USE="|| ( alsa pulseaudio )"
 
 RDEPEND="
+	dev-libs/quazip:0/0[qt5]
 	dev-qt/qtcore:5
 	dev-qt/qtgui:5[accessibility]
 	dev-qt/qtnetwork:5
@@ -53,6 +54,9 @@ src_prepare() {
 	if ! use pulseaudio ; then
 		rm soundbackends/libpulseaudio* || die
 	fi
+
+	# Remove quazip
+	rm libquazip.so.1 || die
 
 	# Rename the tsclient to its shorter version, required by the teamspeak3 script we install.
 	mv ts3client_linux_* ts3client || die "Couldn't rename ts3client to its shorter version."
