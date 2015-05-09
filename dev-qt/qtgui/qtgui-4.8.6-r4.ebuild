@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.6-r4.ebuild,v 1.1 2015/05/07 08:31:30 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/qtgui-4.8.6-r4.ebuild,v 1.2 2015/05/09 20:14:21 pesa Exp $
 
 EAPI=5
 
@@ -150,7 +150,6 @@ multilib_src_configure() {
 		-no-sql-mysql -no-sql-psql -no-sql-ibase -no-sql-sqlite -no-sql-sqlite2 -no-sql-odbc
 		-sm -xshape -xsync -xcursor -xfixes -xrandr -xrender -mitshm -xinput -xkb
 		-fontconfig -no-svg -no-webkit -no-phonon -no-opengl
-		$([[ ${CHOST} == *86*-apple-darwin* ]] && echo -no-ssse3) # bug 367045
 	)
 	qt4_multilib_src_configure
 }

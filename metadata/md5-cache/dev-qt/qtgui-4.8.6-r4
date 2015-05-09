@@ -12,4 +12,4 @@ REQUIRED_USE=gtkstyle? ( glib )
 SLOT=4
 SRC_URI=http://download.qt.io/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tar.gz http://dev.gentoo.org/~pesa/patches/qtgui-systemtrayicon-plugin-system.patch
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	qt4-build-multilib	ccd12f2f2f559b7869438e2e94bdd1f2	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=ef64013b2605413daa8b66575cba6dd6
+_md5_=42e6f4af0f1cefb8249b4b84517c0614
