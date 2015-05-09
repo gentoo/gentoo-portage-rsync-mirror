@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/xf86-video-siliconmotion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-siliconmotion/ChangeLog,v 1.68 2015/02/19 08:52:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-siliconmotion/ChangeLog,v 1.70 2015/05/09 17:14:36 mattst88 Exp $
+
+  09 May 2015; Matt Turner <mattst88@gentoo.org>
+  -files/xf86-video-siliconmotion-1.7.7-mibstore_h.patch,
+  -xf86-video-siliconmotion-1.7.7-r1.ebuild,
+  -xf86-video-siliconmotion-1.7.7.ebuild:
+  Drop old.
+
+*xf86-video-siliconmotion-1.7.8 (09 May 2015)
+
+  09 May 2015; Matt Turner <mattst88@gentoo.org>
+  +xf86-video-siliconmotion-1.7.8.ebuild:
+  Version bump to 1.7.8, straight to stable.
 
   19 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   xf86-video-siliconmotion-1.7.7-r1.ebuild:
