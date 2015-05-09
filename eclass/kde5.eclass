@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.7 2015/05/09 10:22:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.8 2015/05/09 15:33:21 mrueg Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -322,10 +322,10 @@ _get_release_date() {
 	case ${CATEGORY} in
 		kde-frameworks)
 			case ${PV} in
-				5.10) echo "20150507" ;;
-				5.11) echo "20150611" ;;
-				5.12) echo "20150709" ;;
-				5.13) echo "20150806" ;;
+				5.10.0) echo "20150507" ;;
+				5.11.0) echo "20150611" ;;
+				5.12.0) echo "20150709" ;;
+				5.13.0) echo "20150806" ;;
 				*) echo "none" ;;
 			esac
 			;;
@@ -339,7 +339,7 @@ _get_release_date() {
 				*) echo "none" ;;
 			esac
 			;;
-		kde-applications)
+		kde-apps)
 			case ${PV} in
 				15.04.1) echo "20150512" ;;
 				15.04.2) echo "20150602" ;;
@@ -359,7 +359,7 @@ _check_fetch_restriction() {
 		KDE_RELEASE_DATE=$(_get_release_date)
 	fi
 	if [[ ${KDE_RELEASE_DATE} != "none" ]]; then
-		if [[ $(date +"%Y%m%d") <  ${KDE_RELEASE_DATE} ]]; then
+		if [[ $(date -u +"%Y%m%d") <  ${KDE_RELEASE_DATE} ]]; then
 			RESTRICT+=" fetch"
 		fi
 	fi
