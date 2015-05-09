@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Digest-CRC
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.24 2014/08/23 21:52:13 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-CRC/ChangeLog,v 1.25 2015/05/09 19:49:18 dilfridge Exp $
+
+*Digest-CRC-0.210.0 (09 May 2015)
+
+  09 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Digest-CRC-0.210.0.ebuild:
+  Version bump
 
 *Digest-CRC-0.180.0-r1 (23 Aug 2014)
 

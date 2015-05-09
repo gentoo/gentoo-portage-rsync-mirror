@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.11 2015/05/09 18:19:31 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.13 2015/05/09 19:51:00 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -187,12 +187,6 @@ qt4-build-multilib_src_prepare() {
 		append-flags -mminimal-toc
 	fi
 
-	# Bug 417105
-	# graphite on gcc 4.7 causes miscompilations
-	if [[ $(gcc-version) == "4.7" ]]; then
-		filter-flags -fgraphite-identity
-	fi
-
 	# Read also AR from the environment
 	sed -i -e 's/^SYSTEM_VARIABLES="/&AR /' \
 		configure || die "sed SYSTEM_VARIABLES failed"
@@ -354,6 +348,9 @@ qt4_multilib_src_configure() {
 		$(is-flagq -mno-sse4.2	&& echo -no-sse4.2)
 		$(is-flagq -mno-avx	&& echo -no-avx)
 		$(is-flagq -mfpu=*	&& ! is-flagq -mfpu=*neon* && echo -no-neon)
+
+		# bug 367045
+		$([[ ${CHOST} == *86*-apple-darwin* ]] && echo -no-ssse3)
 
 		# prefer system libraries
 		-system-zlib
