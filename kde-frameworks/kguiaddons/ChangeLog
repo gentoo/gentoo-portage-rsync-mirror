@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/kguiaddons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kguiaddons/ChangeLog,v 1.12 2015/04/15 04:45:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kguiaddons/ChangeLog,v 1.13 2015/05/09 10:36:07 mrueg Exp $
+
+*kguiaddons-5.10.0 (09 May 2015)
+
+  09 May 2015; Manuel Rüger <mrueg@gentoo.org> +kguiaddons-5.10.0.ebuild:
+  Version bump.
 
   15 Apr 2015; Yixun Lan <dlan@gentoo.org> kguiaddons-5.8.0.ebuild,
   kguiaddons-5.9.0.ebuild:

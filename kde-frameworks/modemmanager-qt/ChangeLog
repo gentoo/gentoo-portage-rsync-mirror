@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/modemmanager-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/modemmanager-qt/ChangeLog,v 1.1 2015/04/11 17:09:47 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/modemmanager-qt/ChangeLog,v 1.2 2015/05/09 10:36:07 mrueg Exp $
+
+*modemmanager-qt-5.10.0 (09 May 2015)
+
+  09 May 2015; Manuel Rüger <mrueg@gentoo.org> +modemmanager-qt-5.10.0.ebuild:
+  Version bump.
 
 *modemmanager-qt-5.9.0 (11 Apr 2015)
 

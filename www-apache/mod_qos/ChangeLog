@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_qos
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_qos/ChangeLog,v 1.4 2015/05/08 18:35:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_qos/ChangeLog,v 1.5 2015/05/09 10:41:33 patrick Exp $
+
+  09 May 2015; Patrick Lauer <patrick@gentoo.org> mod_qos-11.12.ebuild:
+  Whitespace
 
 *mod_qos-11.12 (08 May 2015)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/kimageformats
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kimageformats/ChangeLog,v 1.11 2015/04/11 17:09:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kimageformats/ChangeLog,v 1.12 2015/05/09 10:36:05 mrueg Exp $
+
+*kimageformats-5.10.0 (09 May 2015)
+
+  09 May 2015; Manuel Rüger <mrueg@gentoo.org> +kimageformats-5.10.0.ebuild:
+  Version bump.
 
 *kimageformats-5.9.0 (11 Apr 2015)
 
