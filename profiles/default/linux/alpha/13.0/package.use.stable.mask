@@ -1,10 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/13.0/package.use.stable.mask,v 1.4 2014/11/20 10:30:55 klausman Exp $
-
-# Tom Wijsman <TomWij@gentoo.org (16 Mar 2014)
-# Mask unstable USE flags on media-video/vlc, see security bug #499806.
-media-video/vlc chromaprint gnutls opus rdp
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/alpha/13.0/package.use.stable.mask,v 1.5 2015/05/09 06:26:10 idella4 Exp $
 
 # Pacho Ramos <pacho@gentoo.org> (27 Jan 2014)
 # Mask until we are able to stabilize thunderbird, bug #488766
