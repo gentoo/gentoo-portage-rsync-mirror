@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4.ebuild,v 1.2 2015/03/04 16:05:39 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4.ebuild,v 1.3 2015/05/09 14:02:47 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -144,16 +144,4 @@ src_install() {
 pkg_postinst() {
 	# The selinux_gentoo init script is no longer needed with recent OpenRC
 	elog "The selinux_gentoo init script will be removed in future versions since it is not needed with OpenRC 0.13."
-
-	# Migrate the SELinux semanage configuration store if not done already
-	local selinuxtype=$(awk -F'=' '/SELINUXTYPE=/ {print $2}' /etc/selinux/config);
-	if [ -n "${selinuxtype}" ] && [ ! -d /var/lib/selinux/${mcs}/active ] ; then
-		ewarn "Since the 2.4 SELinux userspace, the policy module store is moved"
-		ewarn "from /etc/selinux to /var/lib/selinux. In order to continue with"
-		ewarn "the 2.4 userspace, please migrate the necessary files by executing"
-		ewarn "/usr/libexec/selinux/semanage_migrate_store. Warnings about 'else'"
-		ewarn "blocks can be safely ignored."
-		ewarn "For more information, please see"
-		ewarn "- https://github.com/SELinuxProject/selinux/wiki/Policy-Store-Migration"
-	fi
 }

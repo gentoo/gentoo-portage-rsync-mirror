@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opusfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.13 2015/04/26 16:17:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.14 2015/05/09 14:14:41 yngwin Exp $
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> opusfile-0.6.ebuild:
+  Mark stable for amd64, bug #535474
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> opusfile-0.6.ebuild:
   x86 stable wrt bug #535474

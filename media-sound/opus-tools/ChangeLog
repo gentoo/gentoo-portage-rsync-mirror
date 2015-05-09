@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/opus-tools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.11 2014/06/16 05:29:48 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opus-tools/ChangeLog,v 1.12 2015/05/09 14:18:46 yngwin Exp $
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> opus-tools-0.1.9.ebuild:
+  Mark stable on amd64. Remove superfluous whitespace.
 
 *opus-tools-0.1.9 (16 Jun 2014)
 

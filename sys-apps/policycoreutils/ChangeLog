@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/policycoreutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.151 2015/04/18 21:49:41 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/ChangeLog,v 1.152 2015/05/09 14:02:47 perfinion Exp $
+
+  09 May 2015; Jason Zaman <perfinion@gentoo.org> policycoreutils-2.4.ebuild:
+  ewarn has been moved to libsemanage
 
   18 Apr 2015; Jason Zaman <perfinion@gentoo.org>
   -policycoreutils-2.3-r2.ebuild, -policycoreutils-2.4_rc6-r1.ebuild,
