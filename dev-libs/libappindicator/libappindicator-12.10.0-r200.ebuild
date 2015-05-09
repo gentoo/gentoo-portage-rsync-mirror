@@ -21,7 +21,7 @@ RDEPEND="
 	>=dev-libs/dbus-glib-0.98[${MULTILIB_USEDEP}]
 	>=dev-libs/glib-2.26:2[${MULTILIB_USEDEP}]
 	>=dev-libs/libdbusmenu-0.6.2[gtk3,${MULTILIB_USEDEP}]
-	>=dev-libs/libindicator-12.10.0:3[${MULTILIB_USEDEP}]
+	>=dev-libs/libindicator-12.10.0:0[${MULTILIB_USEDEP}]
 	x11-libs/gtk+:2[${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-1 )
 "
