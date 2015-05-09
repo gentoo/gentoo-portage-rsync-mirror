@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/checkrestart
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/checkrestart/ChangeLog,v 1.7 2015/04/08 11:24:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/checkrestart/ChangeLog,v 1.8 2015/05/09 13:43:18 jer Exp $
+
+  09 May 2015; Jeroen Roovers <jer@gentoo.org> metadata.xml:
+  Reassign to maintainer-needed.
 
   08 Apr 2015; Justin Lecher <jlec@gentoo.org> -checkrestart-0.47-r2.ebuild,
   metadata.xml:
