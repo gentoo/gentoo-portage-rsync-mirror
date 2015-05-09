@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/semantik
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.18 2015/05/03 16:05:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/semantik/ChangeLog,v 1.19 2015/05/09 18:46:08 kensington Exp $
+
+*semantik-0.9.4-r1 (09 May 2015)
+
+  09 May 2015; Michael Palimaka <kensington@gentoo.org>
+  +semantik-0.9.4-r1.ebuild:
+  Remove old symlink and injected LDFLAGS wrt bug #548870.
 
 *semantik-0.9.4 (03 May 2015)
 
