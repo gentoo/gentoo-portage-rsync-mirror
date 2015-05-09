@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r4.ebuild,v 1.6 2014/11/11 11:10:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubypants/rubypants-0.2.0-r4.ebuild,v 1.7 2015/05/09 05:59:28 graaff Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ IUSE=""
 all_ruby_prepare() {
 	# the metadata format is ancient, and has quite a bit of trouble,
 	# remove it and let it use a generated one.
-	rm ../metadata || die
+	rm -f ../metadata || die
 }
 
 each_ruby_install() {

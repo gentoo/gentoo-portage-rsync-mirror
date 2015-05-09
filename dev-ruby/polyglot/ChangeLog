@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/polyglot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.32 2015/04/11 15:02:01 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/polyglot/ChangeLog,v 1.34 2015/05/09 05:58:23 graaff Exp $
+
+  09 May 2015; Hans de Graaff <graaff@gentoo.org> polyglot-0.3.5.ebuild:
+  Use rm -f to avoid issues like bug 540182.
+
+  09 May 2015; Hans de Graaff <graaff@gentoo.org> -polyglot-0.3.4.ebuild:
+  Cleanup.
 
   11 Apr 2015; Hans de Graaff <graaff@gentoo.org> polyglot-0.3.5.ebuild:
   Add ruby22.

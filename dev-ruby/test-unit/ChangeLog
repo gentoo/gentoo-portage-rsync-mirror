@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/test-unit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.117 2015/04/27 08:57:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/ChangeLog,v 1.118 2015/05/09 06:00:21 graaff Exp $
+
+  09 May 2015; Hans de Graaff <graaff@gentoo.org> test-unit-3.0.9-r1.ebuild:
+  Use rm -f to avoid issues like bug 540182.
 
   27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> test-unit-1.2.3-r1.ebuild:
   Stable for ppc64, wrt bug #546484

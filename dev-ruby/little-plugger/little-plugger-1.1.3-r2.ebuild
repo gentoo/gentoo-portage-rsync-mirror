@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/little-plugger-1.1.3-r2.ebuild,v 1.4 2015/03/22 16:23:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/little-plugger/little-plugger-1.1.3-r2.ebuild,v 1.5 2015/05/09 05:56:39 graaff Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ KEYWORDS="~amd64 ~x86"
 
 all_ruby_prepare() {
 	# Remove default metadata because it confused jruby.
-	rm ../metadata || die
+	rm -f ../metadata || die
 
 	epatch "${FILESDIR}"/${P}-ruby20-spec.patch
 }

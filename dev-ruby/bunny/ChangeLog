@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/bunny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bunny/ChangeLog,v 1.39 2015/03/27 06:10:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bunny/ChangeLog,v 1.40 2015/05/09 05:39:33 graaff Exp $
+
+*bunny-1.7.0 (09 May 2015)
+
+  09 May 2015; Hans de Graaff <graaff@gentoo.org> +bunny-1.7.0.ebuild:
+  Version bump.
 
   27 Mar 2015; Hans de Graaff <graaff@gentoo.org> bunny-1.6.3.ebuild:
   Add ruby22.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/loquacious
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.24 2015/03/22 16:31:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/loquacious/ChangeLog,v 1.25 2015/05/09 05:57:04 graaff Exp $
+
+  09 May 2015; Hans de Graaff <graaff@gentoo.org> loquacious-1.9.1-r2.ebuild:
+  Use rm -f to avoid issues like bug 540182.
 
   22 Mar 2015; Hans de Graaff <graaff@gentoo.org> loquacious-1.9.1-r2.ebuild:
   Add ruby22.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-3.0.9-r1.ebuild,v 1.2 2015/02/15 09:51:19 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/test-unit/test-unit-3.0.9-r1.ebuild,v 1.3 2015/05/09 06:00:21 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -35,7 +35,7 @@ each_ruby_prepare() {
 		*ruby19)
 			# Remove metadata to avoid registering the unsupported
 			# power_assert dependency.
-			rm ../metadata || die
+			rm -f ../metadata || die
 			;;
 	esac
 }

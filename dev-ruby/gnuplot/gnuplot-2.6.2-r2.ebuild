@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/gnuplot-2.6.2-r2.ebuild,v 1.3 2015/03/20 14:33:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gnuplot/gnuplot-2.6.2-r2.ebuild,v 1.4 2015/05/09 05:56:07 graaff Exp $
 
 EAPI=5
 # ruby22 -> not compatible since Config is removed
@@ -25,7 +25,7 @@ RDEPEND+=" sci-visualization/gnuplot"
 
 all_ruby_prepare() {
 	# Existing metadata causes a crash in jruby, so use our own.
-	rm ../metadata || die "Unable to remove metadata."
+	rm -f ../metadata || die "Unable to remove metadata."
 }
 
 each_ruby_test() {

@@ -1,6 +1,11 @@
 # ChangeLog for games-board/goatee-gtk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/goatee-gtk/ChangeLog,v 1.4 2014/11/25 23:09:15 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/goatee-gtk/ChangeLog,v 1.5 2015/05/09 05:33:21 mr_bones_ Exp $
+
+*goatee-gtk-0.3.0 (09 May 2015)
+
+  09 May 2015; Michael Sterrett <mr_bones_@gentoo.org> +goatee-gtk-0.3.0.ebuild:
+  version bump (bug #544152)
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
