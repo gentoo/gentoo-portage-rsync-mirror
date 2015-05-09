@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.8.ebuild,v 1.3 2015/05/01 05:31:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-configtool/fcitx-configtool-0.4.8.ebuild,v 1.4 2015/05/09 13:21:40 yngwin Exp $
 
 EAPI=5
-
 inherit cmake-utils
 
 DESCRIPTION="A GTK+ GUI configuration tool for fcitx"
@@ -12,14 +11,14 @@ SRC_URI="http://download.fcitx-im.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ppc64 ~x86"
 IUSE="gtk +gtk3"
 REQUIRED_USE="|| ( gtk gtk3 )"
 
 RDEPEND=">=app-i18n/fcitx-4.2.8
 	dev-libs/glib:2
 	gtk? ( x11-libs/gtk+:2 )
-	gtk3? ( x11-libs/gtk+:3	)"
+	gtk3? ( x11-libs/gtk+:3 )"
 DEPEND="${RDEPEND}
 	app-text/iso-codes
 	dev-libs/libunique:1
