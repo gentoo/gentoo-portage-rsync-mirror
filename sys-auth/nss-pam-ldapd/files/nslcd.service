@@ -1,21 +1,14 @@
---- nss-pam-ldapd-0.9.5.ebuild
-+++ nss-pam-ldapd-0.9.5.ebuild
-@@ -5,7 +5,7 @@
- EAPI=5
- 
- PYTHON_COMPAT=(python2_7)
--inherit eutils prefix user python-r1 multilib multilib-minimal
-+inherit eutils prefix user python-r1 multilib multilib-minimal systemd
- 
- DESCRIPTION="NSS module for name lookups using LDAP"
- HOMEPAGE="http://arthurdejong.org/nss-pam-ldapd/"
-@@ -94,6 +94,9 @@
- 			python_foreach_impl python_newscript utils/${script}.py ${script}.ldap
- 		done
- 	fi
-+
-+	systemd_newtmpfilesd "${FILESDIR}"/nslcd-tmpfiles.conf nslcd.conf
-+	systemd_dounit "${FILESDIR}"/nslcd.service
- }
- 
- multilib_src_test() {
+[Unit]
+Description=NSS and PAM LDAP client daemon
+After=network-online.target
+Wants=network-online.target nss-lookup.target syslog.service
+Before=nss-user-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/var/run/nslcd/nslcd.pid
+ExecStart=/usr/sbin/nslcd
+
+[Install]
+WantedBy=multi-user.target
+RequiredBy=nss-user-lookup.target
