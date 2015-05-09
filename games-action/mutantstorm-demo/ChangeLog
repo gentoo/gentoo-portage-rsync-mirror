@@ -1,6 +1,10 @@
 # ChangeLog for games-action/mutantstorm-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.17 2014/10/13 10:16:43 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/mutantstorm-demo/ChangeLog,v 1.18 2015/05/09 05:28:42 mr_bones_ Exp $
+
+  09 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  mutantstorm-demo-1.33.ebuild:
+  mark stable
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> mutantstorm-demo-1.33.ebuild:
   Support multilib providers for deps.
