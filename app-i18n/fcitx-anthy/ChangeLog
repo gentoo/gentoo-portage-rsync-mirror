@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/fcitx-anthy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-anthy/ChangeLog,v 1.9 2015/05/01 05:26:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx-anthy/ChangeLog,v 1.10 2015/05/09 12:27:25 yngwin Exp $
+
+  09 May 2015; Ben de Groot <yngwin@gentoo.org> -fcitx-anthy-0.2.0.ebuild,
+  fcitx-anthy-0.2.1.ebuild:
+  Mark 0.2.1 stable on amd64 (bug #540844). Remove old.
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> fcitx-anthy-0.2.1.ebuild:
   Stable for PPC64 (bug #540844).
