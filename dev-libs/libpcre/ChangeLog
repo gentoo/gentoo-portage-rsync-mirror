@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.249 2015/05/01 12:25:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.250 2015/05/10 08:25:15 polynomial-c Exp $
+
+*libpcre-8.37-r1 (10 May 2015)
+
+  10 May 2015; Lars Wendler <polynomial-c@gentoo.org> +libpcre-8.37-r1.ebuild:
+  Revbump to fix pkgconfig file (bug #548270).
 
   01 May 2015; Mikle Kolyada <zlogene@gentoo.org> libpcre-8.36.ebuild:
   amd64 stable wrt bug #548234
