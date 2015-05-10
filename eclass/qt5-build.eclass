@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.16 2015/04/19 18:22:15 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.17 2015/05/10 14:27:29 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -389,6 +389,7 @@ qt_use_disable_mod() {
 # Prepares the environment for building Qt.
 qt5_prepare_env() {
 	# setup installation directories
+	# note: keep paths in sync with qmake-utils.eclass
 	QT5_PREFIX=${EPREFIX}/usr
 	QT5_HEADERDIR=${QT5_PREFIX}/include/qt5
 	QT5_LIBDIR=${QT5_PREFIX}/$(get_libdir)

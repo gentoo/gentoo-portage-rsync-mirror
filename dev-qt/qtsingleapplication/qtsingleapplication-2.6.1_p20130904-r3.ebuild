@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r2.ebuild,v 1.5 2015/03/02 09:04:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsingleapplication/qtsingleapplication-2.6.1_p20130904-r3.ebuild,v 1.1 2015/05/10 14:16:36 pesa Exp $
 
 EAPI=5
 
@@ -86,8 +86,8 @@ src_install() {
 			use X && doins src/{QtSingleApplication,${PN}.h}
 
 			insinto /usr/share/qt4/mkspecs/features
-			doins "${FILESDIR}"/${PN}.prf
-			dosym ${PN}.prf /usr/share/qt4/mkspecs/features/qtsinglecoreapplication.prf
+			doins "${FILESDIR}"/qtsinglecoreapplication.prf
+			use X && doins "${FILESDIR}"/${PN}.prf
 		fi
 
 		if [[ ${MULTIBUILD_VARIANT} == qt5 ]]; then
@@ -96,8 +96,8 @@ src_install() {
 			use X && doins src/{QtSingleApplication,${PN}.h}
 
 			insinto /usr/$(get_libdir)/qt5/mkspecs/features
-			newins "${FILESDIR}"/${PN}5.prf ${PN}.prf
-			dosym ${PN}.prf /usr/$(get_libdir)/qt5/mkspecs/features/qtsinglecoreapplication.prf
+			doins "${FILESDIR}"/qtsinglecoreapplication.prf
+			use X && doins "${FILESDIR}"/${PN}.prf
 		fi
 
 		dolib.so lib/*
