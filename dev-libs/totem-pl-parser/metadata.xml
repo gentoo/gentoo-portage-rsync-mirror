@@ -5,7 +5,7 @@
 <use>
 	<flag name='archive'>Enables support for accessing media files in archives
 		transparently via <pkg>app-arch/libarchive</pkg></flag>
-	<flag name="quvi">Use <pkg>media-libs/quvi</pkg> for parsing video
+	<flag name="quvi">Use <pkg>media-libs/libquvi</pkg> for parsing video
 		links</flag>
 </use>
 </pkgmetadata>

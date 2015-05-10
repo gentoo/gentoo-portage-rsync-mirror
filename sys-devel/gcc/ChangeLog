@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1072 2015/05/08 12:12:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1073 2015/05/10 18:34:59 jmorgan Exp $
+
+  10 May 2015; Jack Morgan <jmorgan@gentoo.org> gcc-4.7.4.ebuild:
+  sparc stable wrt bug #548802
 
   08 May 2015; Agostino Sarubbo <ago@gentoo.org> gcc-4.7.4.ebuild:
   Stable for amd64, wrt bug #548802

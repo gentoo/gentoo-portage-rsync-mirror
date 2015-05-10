@@ -2017,7 +2017,7 @@ dev-libs/starpu:opencl - Enable OpenCL support
 dev-libs/tinyxml:stl - Compile with TIXML_USE_STL support
 dev-libs/tntnet:server - Enable tntnet server daemon
 dev-libs/totem-pl-parser:archive - Enables support for accessing media files in archives transparently via app-arch/libarchive
-dev-libs/totem-pl-parser:quvi - Use media-libs/quvi for parsing video links
+dev-libs/totem-pl-parser:quvi - Use media-libs/libquvi for parsing video links
 dev-libs/ucommon:socks - Build with socks proxy support
 dev-libs/weston:colord - Allow setting color managment
 dev-libs/weston:drm - Enable drm compositor support

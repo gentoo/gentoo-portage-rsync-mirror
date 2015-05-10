@@ -1,6 +1,9 @@
 # ChangeLog for app-text/diction
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.47 2015/02/27 11:04:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diction/ChangeLog,v 1.48 2015/05/10 18:33:03 jer Exp $
+
+  10 May 2015; Jeroen Roovers <jer@gentoo.org> -diction-1.11.ebuild:
+  Old.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> diction-1.13.ebuild:
   Stable for sparc, wrt bug #534900

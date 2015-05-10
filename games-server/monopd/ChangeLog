@@ -1,6 +1,9 @@
 # ChangeLog for games-server/monopd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.29 2015/04/26 16:23:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/monopd/ChangeLog,v 1.30 2015/05/10 18:52:41 nimiux Exp $
+
+  10 May 2015; Chema Alonso <nimiux@gentoo.org> monopd-0.9.8.ebuild:
+  Stable for amd64 wrt bug #547530
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> monopd-0.9.8.ebuild:
   x86 stable wrt bug #547530
