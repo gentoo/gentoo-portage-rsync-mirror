@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.8 2014/03/04 20:31:55 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/gentoo-artwork-0.4.2-r1.ebuild,v 1.9 2015/05/09 23:21:34 hwoarang Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ SRC_URI="pixmaps? (
 			lilo? ( mirror://gentoo/gentoo-artwork-0.4.tar.bz2 )
 		)
 	)"
-HOMEPAGE="http://www.gentoo.org/index-graphics.html"
+HOMEPAGE="https://wiki.gentoo.org/wiki/Project:Artwork"
 
 KEYWORDS="alpha amd64 ~mips ppc ppc64 sparc x86 ~x86-fbsd"
 LICENSE="GPL-2"

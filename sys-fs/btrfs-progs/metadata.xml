@@ -11,6 +11,5 @@
   </maintainer>
   <use>
     <flag name='convert'>Build ext2 conversion utility (btrfs-convert)</flag>
-    <flag name='debug-utils'>Build additional utils for debugging</flag>
   </use>
 </pkgmetadata>
