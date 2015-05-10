@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1610 2015/05/09 22:20:44 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1611 2015/05/10 01:06:49 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Delete obsolete code that is now causing problems on freebsd (bug 493310).
 
   09 May 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass,
   java-virtuals-2.eclass, java-vm-2.eclass:

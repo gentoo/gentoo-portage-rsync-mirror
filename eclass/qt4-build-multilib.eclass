@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.13 2015/05/09 19:51:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.14 2015/05/10 01:06:49 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -373,10 +373,6 @@ qt4_multilib_src_configure() {
 		# mostly to be seen as a core dump with the message:
 		# "QPixmap: Must construct a QApplication before a QPaintDevice"
 		$([[ ${CHOST} != *-solaris* ]] && echo -reduce-relocations)
-
-		# this one is needed for all systems with a separate -liconv, apart from
-		# Darwin, for which the sources already cater for -liconv
-		$(use !elibc_glibc && [[ ${CHOST} != *-darwin* ]] && echo -liconv)
 	)
 
 	if use_if_iuse aqua; then
