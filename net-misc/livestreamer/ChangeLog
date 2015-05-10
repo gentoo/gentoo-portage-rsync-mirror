@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/livestreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.18 2015/05/09 02:25:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/livestreamer/ChangeLog,v 1.19 2015/05/10 02:43:06 idella4 Exp $
+
+*livestreamer-1.12.2 (10 May 2015)
+
+  10 May 2015; Ian Delaney <idella4@gentoo.org> +livestreamer-1.12.2.ebuild,
+  livestreamer-1.12.1.ebuild, metadata.xml:
+  bump; add name of maintainer to metadata.xml, fixes bug #548996
 
 *livestreamer-1.12.1 (09 May 2015)
 
