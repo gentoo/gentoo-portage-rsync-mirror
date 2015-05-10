@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.8-r7.ebuild,v 1.5 2015/04/18 22:02:57 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-3.3.8-r7.ebuild,v 1.6 2015/05/10 09:06:14 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_4 )
@@ -14,17 +14,16 @@ SRC_URI="http://oss.tresys.com/projects/setools/chrome/site/dists/${P}/${P}.tar.
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="X debug java python"
 
 COMMONDEPEND=">=sys-libs/libsepol-2.4
 	>=sys-libs/libselinux-2.4
 	>=dev-db/sqlite-3.2:3
 	dev-libs/libxml2:2
-	java? ( >=virtual/jre-1.4 )
 	python? ( ${PYTHON_DEPS} )
 	X? (
-		>=dev-lang/tk-8.4.9
+		>=dev-lang/tk-8.4.9:0=
 		>=gnome-base/libglade-2.0
 		>=x11-libs/gtk+-2.8:2
 	)"
@@ -34,10 +33,12 @@ DEPEND="${COMMONDEPEND}
 	sys-devel/bison
 	sys-devel/flex
 	virtual/pkgconfig
-	java? ( dev-lang/swig )
+	java? ( dev-lang/swig
+	        virtual/jdk:= )
 	python? ( dev-lang/swig )"
 
 RDEPEND="${COMMONDEPEND}
+	java? ( >=virtual/jre-1.4:= )
 	X? ( >=dev-tcltk/bwidget-1.8 )"
 
 RESTRICT="test"

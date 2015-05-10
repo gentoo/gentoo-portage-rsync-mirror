@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4-r1.ebuild,v 1.1 2015/04/23 13:14:18 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsemanage/libsemanage-2.4-r1.ebuild,v 1.2 2015/05/10 09:02:13 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -18,7 +18,7 @@ SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/rel
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="python"
 
 RDEPEND=">=sys-libs/libsepol-${SEPOL_VER}[${MULTILIB_USEDEP}]

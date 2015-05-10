@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.50 2015/04/18 22:01:04 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.51 2015/05/10 09:02:56 perfinion Exp $
+
+  10 May 2015; Jason Zaman <perfinion@gentoo.org> sepolgen-1.2.2.ebuild:
+  stabilize selinux 2.4 userland
 
   18 Apr 2015; Jason Zaman <perfinion@gentoo.org> -sepolgen-1.2.1.ebuild,
   -sepolgen-1.2.2_rc6.ebuild, -sepolgen-1.2.2_rc7.ebuild:

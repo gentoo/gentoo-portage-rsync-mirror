@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16522 2015/05/08 15:24:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16523 2015/05/10 09:19:09 bman Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -160,11 +160,6 @@ sci-libs/libecwj2
 # Breaks pretty much all consumers, like samba
 # Mask until it's more usable
 >=net-libs/gnutls-3.4.0
-
-# Aaron Bauman <bman@gentoo.org> (6 Apr 2015)
-# Superseded by net-misc/gns3-gui and net-misc/gns3-server.
-# Removal in 30 days.
-net-misc/gns3
 
 # Maciej Mrozowski <reavertm@gentoo.org> (06 Apr 2015)
 # Does not link against latest ncurses and no interest to fix it.

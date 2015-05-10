@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.4.ebuild,v 1.3 2015/04/08 18:28:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/libselinux-2.4.ebuild,v 1.4 2015/05/10 09:01:52 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -18,7 +18,7 @@ SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/rel
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE="python ruby static-libs ruby_targets_ruby19 ruby_targets_ruby20"
 

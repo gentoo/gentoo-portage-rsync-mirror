@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/setools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.100 2015/04/18 22:02:57 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.101 2015/05/10 09:06:14 perfinion Exp $
+
+  10 May 2015; Jason Zaman <perfinion@gentoo.org> setools-3.3.8-r7.ebuild:
+  stabilize selinux 2.4 userland
 
   18 Apr 2015; Jason Zaman <perfinion@gentoo.org> setools-3.3.8-r7.ebuild:
   Cleanup deps
