@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/restkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.25 2015/04/08 08:04:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/ChangeLog,v 1.26 2015/05/10 07:27:19 jlec Exp $
+
+  10 May 2015; Justin Lecher <jlec@gentoo.org>
+  -files/restkit-exclude-tests.patch, -restkit-4.2.1-r1.ebuild, metadata.xml:
+  Clean old
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> restkit-4.2.1-r1.ebuild:
   Drop old Python implementations

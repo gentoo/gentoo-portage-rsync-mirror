@@ -1,6 +1,15 @@
 # ChangeLog for sci-geosciences/viking
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.31 2015/04/13 17:42:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/ChangeLog,v 1.33 2015/05/10 07:08:55 graaff Exp $
+
+*viking-1.6-r2 (10 May 2015)
+
+  10 May 2015; Hans de Graaff <graaff@gentoo.org> +viking-1.6-r2.ebuild:
+  Use sqlite USE flag instead of sqlite3, fixing bug 548660.
+
+  10 May 2015; Hans de Graaff <graaff@gentoo.org> -viking-1.5.1.ebuild,
+  -viking-1.6.ebuild:
+  Cleanup.
 
 *viking-1.6-r1 (13 Apr 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p551-r1.ebuild,v 1.9 2015/04/29 09:18:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.9.3_p551-r1.ebuild,v 1.10 2015/05/10 07:03:52 graaff Exp $
 
 EAPI=4
 
@@ -43,7 +43,7 @@ IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl xemacs ncur
 RDEPEND="
 	berkdb? ( sys-libs/db )
 	gdbm? ( sys-libs/gdbm )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 	socks5? ( >=net-proxy/dante-1.1.13 )
 	ncurses? ( sys-libs/ncurses )
 	readline?  ( sys-libs/readline )

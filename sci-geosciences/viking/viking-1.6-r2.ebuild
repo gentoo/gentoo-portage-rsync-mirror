@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.6.ebuild,v 1.1 2015/04/06 07:10:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.6-r2.ebuild,v 1.1 2015/05/10 07:08:55 graaff Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="GPS data editor and analyzer"
 HOMEPAGE="http://viking.sourceforge.net/"
-IUSE="doc +exif gps +magic mapnik nls sqlite3"
+IUSE="doc +exif libexif gps +magic mapnik nls sqlite"
 SRC_URI="
 	mirror://sourceforge/${PN}/${P}.tar.bz2
 	doc? ( mirror://sourceforge/${PN}/${PN}.pdf )"
@@ -26,10 +26,10 @@ COMMONDEPEND="
 	x11-libs/gdk-pixbuf:2
 	x11-libs/gtk+:2
 	gps? ( >=sci-geosciences/gpsd-2.96 )
-	exif? ( media-libs/libexif )
+	exif? ( libexif? ( media-libs/libexif ) !libexif? ( media-libs/gexiv2 ) )
 	magic? ( sys-apps/file )
 	mapnik? ( sci-geosciences/mapnik )
-	sqlite3? ( dev-db/sqlite:3 )
+	sqlite? ( dev-db/sqlite:3 )
 "
 RDEPEND="${COMMONDEPEND}
 	sci-geosciences/gpsbabel
@@ -58,6 +58,7 @@ src_configure() {
 		--enable-geocaches \
 		--disable-dem24k \
 		$(use_enable exif geotag) \
+		$(use_with libexif ) \
 		$(use_enable gps realtime-gps-tracking) \
 		$(use_enable magic) \
 		$(use_enable mapnik) \

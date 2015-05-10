@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tmux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.116 2015/01/05 08:41:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux/ChangeLog,v 1.117 2015/05/10 07:09:00 jlec Exp $
+
+*tmux-2.0 (10 May 2015)
+
+  10 May 2015; Justin Lecher <jlec@gentoo.org> +files/tmux-2.0-flags.patch,
+  +tmux-2.0.ebuild, -files/tmux-1.7-terminfo.patch, tmux-9999.ebuild:
+  Version Bump, bug #548944
 
   05 Jan 2015; Yixun Lan <dlan@gentoo.org> tmux-1.9a.ebuild:
   revert to arm64 testing keyword

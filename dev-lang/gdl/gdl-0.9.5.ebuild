@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.5.ebuild,v 1.1 2015/05/07 15:33:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/gdl-0.9.5.ebuild,v 1.2 2015/05/10 07:24:42 jlec Exp $
 
 EAPI=5
 
@@ -57,8 +57,7 @@ REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 PATCHES=(
 	"${FILESDIR}"/0.9.5-antlr.patch
 	"${FILESDIR}"/0.9.2-include.patch
-	"${FILESDIR}"/0.9.4-plplot.patch
-	#"${FILESDIR}"/0.9.5-testsuite.patch
+	"${FILESDIR}"/0.9.5-plplot.patch
 	"${FILESDIR}"/0.9.5-png.patch
 )
 

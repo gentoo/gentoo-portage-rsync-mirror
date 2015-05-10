@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.48 2015/05/07 15:33:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gdl/ChangeLog,v 1.49 2015/05/10 07:24:42 jlec Exp $
+
+  10 May 2015; Justin Lecher <jlec@gentoo.org> +files/0.9.5-plplot.patch,
+  -files/0.9.5-testsuite.patch, gdl-0.9.5.ebuild:
+  Add fedora patch for compatibility to plplot-5.11, bug #548902
 
 *gdl-0.9.5 (07 May 2015)
 

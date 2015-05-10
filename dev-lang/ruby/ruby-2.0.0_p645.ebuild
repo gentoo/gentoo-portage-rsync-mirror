@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p645.ebuild,v 1.9 2015/04/29 09:18:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-2.0.0_p645.ebuild,v 1.10 2015/05/10 07:03:52 graaff Exp $
 
 EAPI=5
 
@@ -37,12 +37,12 @@ KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-
 IUSE="berkdb debug doc examples gdbm ipv6 +rdoc rubytests socks5 ssl xemacs ncurses +readline cpu_flags_x86_sse2"
 
 RDEPEND="
-	berkdb? ( sys-libs/db )
+	berkdb? ( sys-libs/db:* )
 	gdbm? ( sys-libs/gdbm )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0 )
 	socks5? ( >=net-proxy/dante-1.1.13 )
 	ncurses? ( sys-libs/ncurses )
-	readline?  ( sys-libs/readline )
+	readline?  ( sys-libs/readline:0 )
 	dev-libs/libyaml
 	virtual/libffi
 	sys-libs/zlib
