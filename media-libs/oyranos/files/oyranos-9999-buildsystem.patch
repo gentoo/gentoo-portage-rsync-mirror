@@ -1,5 +1,92 @@
---- oyranos-0.9.5/src/CMakeLists.txt
-+++ oyranos-0.9.5/src/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -48,7 +48,7 @@
+ FIND_PROGRAM(CMAKE_AR_TMP NAMES ar)
+ 
+ # detect top level projects
+-FIND_PACKAGE( Yajl )
++FIND_PACKAGE( Yajl REQUIRED )
+ IF( HAVE_YAJL )
+   INCLUDE_DIRECTORIES( ${YAJL_INCLUDE_DIRS} )
+   LINK_DIRECTORIES( ${YAJL_LIBRARY_DIRS} )
+@@ -58,73 +58,16 @@
+   IF( NOT HAVE_YAJL_VERSION_H )
+     INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/yajl/ )
+   ENDIF( NOT HAVE_YAJL_VERSION_H )
+-ELSE( HAVE_YAJL )
+-  IF(CMAKE_VERSION VERSION_GREATER 2.8.0)
+-    #include(ExternalProject)
+-    #ExternalProject_Add( yajl
+-    #SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/yajl
+-    #CONFIGURE_COMMAND cmake ${CMAKE_CURRENT_SOURCE_DIR}/yajl
+-    #BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/yajl
+-    #BUILD_COMMAND ${MAKE}
+-    # skip installation
+-    #INSTALL_COMMAND echo )
+-    ADD_SUBDIRECTORY( yajl )
+-    INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/yajl )
+-    LINK_DIRECTORIES( ${CMAKE_CURRENT_BINARY_DIR}/yajl )
+-    SET( YAJL_LIBRARIES yajl-static )
+-  ENDIF()
+-  
+ ENDIF( HAVE_YAJL )
+ 
+-FIND_PACKAGE( Elektra )
++FIND_PACKAGE( Elektra REQUIRED )
++SET( HAVE_ELEKTRA 1 )
+ IF(HAVE_ELEKTRA)
+   SET( ELEKTRA_SPEC "Requires: elektra
+ BuildRequires: elektra-devel" )
+   INCLUDE_DIRECTORIES( ${ELEKTRA_INCLUDE_DIRS} )
+   LINK_DIRECTORIES( ${ELEKTRA_LIBRARY_DIRS} )
+   STRING(REPLACE ";" " " ELEKTRA_PC_LDFLAGS "${ELEKTRA_STATIC_LDFLAGS}")
+-ELSE(HAVE_ELEKTRA)
+-  SET( ELEKTRA_VERSION elektra-0.7.1 )
+-  MESSAGE( "-- Using internal Elektra: ${ELEKTRA_VERSION}" )
+-  INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/${ELEKTRA_VERSION}/src/include
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/include )
+-  SET( ELEKTRA_LIBRARIES_STATIC
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdb.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdbhandle.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-key.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyset.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-trie.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdbhighlevel.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdbcapability.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyhelpers.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keymeta.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyname.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keytest.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyvalue.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-serialize.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-split.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-exported_symbols.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libloader/libloader_static_a-kdbLibLoader.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libhelper/libhelper_static_a-internal.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libhelper/libhelper_static_a-helper.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/backends/filesys/libelektra_filesys_a-filesys.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektratools/libelektratools_a-kdbtools.o
+-       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektratools/libelektratools_a-stream.o
+-     )
+-  SET( ELEKTRA_LIBRARIES 
+-       ${LIBXML2_LIBRARIES}
+-     )
+-  IF(CMAKE_VERSION VERSION_GREATER 2.8.0)
+-    include(ExternalProject)
+-    ExternalProject_Add( ${ELEKTRA_VERSION}
+-    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${ELEKTRA_VERSION}
+-    # GCC flags (-fPIC) will fail on Windows, without we get relocation R_X86_64_32 errors
+-    CONFIGURE_COMMAND CFLAGS=-fPIC ${CMAKE_CURRENT_SOURCE_DIR}/${ELEKTRA_VERSION}/configure --enable-static --enable-shared=false
+-    BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/${ELEKTRA_VERSION}
+-    BUILD_COMMAND ${MAKE}
+-    # skip installation
+-    INSTALL_COMMAND echo )
+-  ENDIF()
+ ENDIF(HAVE_ELEKTRA)
+ 
+ #now add all directories
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
 @@ -100,7 +100,9 @@
  INCLUDE_DIRECTORIES( ${XCM_INCLUDE_DIRS} )
  LINK_DIRECTORIES( ${XCM_LIBRARY_DIRS} )
@@ -74,88 +161,23 @@
  IF(HAVE_EXIV2)
    INCLUDE_DIRECTORIES( ${EXIV2_INCLUDE_DIRS} )
    LINK_DIRECTORIES( ${EXIV2_LIBRARY_DIRS} )
---- oyranos-0.9.5/CMakeLists.txt
-+++ oyranos-0.9.5/CMakeLists.txt
-@@ -41,7 +41,7 @@
+--- a/doc/CMakeLists.txt
++++ b/doc/CMakeLists.txt
+@@ -33,7 +33,9 @@
+ INSTALL( FILES ${MAN1_PAGES} DESTINATION share/man/man1 )
+ INSTALL( FILES ${MAN3_PAGES} DESTINATION share/man/man3 )
  
+-FIND_PACKAGE( Doxygen )
++IF(WANT_HTML)
++	FIND_PACKAGE( Doxygen REQUIRED )
++ENDIF(WANT_HTML)
+ IF( DOXYGEN_FOUND )
  
- # detect top level projects
--FIND_PACKAGE( Yajl )
-+FIND_PACKAGE( Yajl REQUIRED )
- IF( HAVE_YAJL )
-   INCLUDE_DIRECTORIES( ${YAJL_INCLUDE_DIRS} )
-   LINK_DIRECTORIES( ${YAJL_LIBRARY_DIRS} )
-@@ -51,71 +51,15 @@
-   IF( NOT HAVE_YAJL_VERSION_H )
-     INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/yajl/ )
-   ENDIF( NOT HAVE_YAJL_VERSION_H )
--ELSE( HAVE_YAJL )
--  IF(CMAKE_VERSION VERSION_GREATER 2.8.0)
--    include(ExternalProject)
--    ExternalProject_Add( yajl
--    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/yajl
--    CONFIGURE_COMMAND cmake ${CMAKE_CURRENT_SOURCE_DIR}/yajl
--    BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/yajl
--    BUILD_COMMAND ${MAKE}
--    # skip installation
--    INSTALL_COMMAND echo )
--    INCLUDE_DIRECTORIES( ${CMAKE_CURRENT_SOURCE_DIR}/yajl )
--    LINK_DIRECTORIES( ${CMAKE_CURRENT_BINARY_DIR}/yajl )
--    SET( YAJL_LIBRARIES yajl-static )
--  ENDIF()
--  
- ENDIF( HAVE_YAJL )
+   ADD_CUSTOM_COMMAND( OUTPUT html
+@@ -43,5 +45,5 @@
+   ADD_CUSTOM_TARGET( docu ALL
+                      DEPENDS html )
  
--FIND_PACKAGE( Elektra )
-+FIND_PACKAGE( Elektra REQUIRED )
-+SET( HAVE_ELEKTRA 1 )
- IF(HAVE_ELEKTRA)
-   SET( ELEKTRA_SPEC "Requires: elektra 0.7
- BuildRequires: elektra-devel" )
-   INCLUDE_DIRECTORIES( ${ELEKTRA_INCLUDE_DIRS} )
-   LINK_DIRECTORIES( ${ELEKTRA_LIBRARY_DIRS} )
--ELSE(HAVE_ELEKTRA)
--  SET( ELEKTRA_VERSION elektra-0.7.1 )
--  MESSAGE( "-- Using internal Elektra: ${ELEKTRA_VERSION}" )
--  INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/${ELEKTRA_VERSION}/src/include
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/include )
--  SET( ELEKTRA_LIBRARIES_STATIC
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdb.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdbhandle.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-key.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyset.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-trie.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdbhighlevel.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-kdbcapability.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyhelpers.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keymeta.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyname.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keytest.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-keyvalue.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-serialize.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-split.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektra/libelektra_a-exported_symbols.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libloader/libloader_static_a-kdbLibLoader.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libhelper/libhelper_static_a-internal.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libhelper/libhelper_static_a-helper.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/backends/filesys/libelektra_filesys_a-filesys.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektratools/libelektratools_a-kdbtools.o
--       ${CMAKE_BINARY_DIR}/${ELEKTRA_VERSION}/src/libelektratools/libelektratools_a-stream.o
--     )
--  SET( ELEKTRA_LIBRARIES 
--       ${LIBXML2_LIBRARIES}
--     )
--  IF(CMAKE_VERSION VERSION_GREATER 2.8.0)
--    include(ExternalProject)
--    ExternalProject_Add( ${ELEKTRA_VERSION}
--    SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/${ELEKTRA_VERSION}
--    # GCC flags (-fPIC) will fail on Windows, without we get relocation R_X86_64_32 errors
--    CONFIGURE_COMMAND CFLAGS=-fPIC ${CMAKE_CURRENT_SOURCE_DIR}/${ELEKTRA_VERSION}/configure --enable-static --enable-shared=false
--    BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/${ELEKTRA_VERSION}
--    BUILD_COMMAND ${MAKE}
--    # skip installation
--    INSTALL_COMMAND echo )
--  ENDIF()
- ENDIF(HAVE_ELEKTRA)
- 
- #now add all directories
+-  INSTALL( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION share/doc/${PACKAGE_NAME} )
++  INSTALL( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/html DESTINATION share/doc/${PACKAGE_NAME}-${OYRANOS_VERSION} )
+ ENDIF()
