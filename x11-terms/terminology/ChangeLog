@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/terminology
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/ChangeLog,v 1.14 2015/04/26 16:41:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/terminology/ChangeLog,v 1.15 2015/05/10 18:18:30 nimiux Exp $
+
+  10 May 2015; Chema Alonso <nimiux@gentoo.org> terminology-0.7.0.ebuild:
+  Stable for amd64 wrt bug #538726
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> terminology-0.7.0.ebuild:
   x86 stable wrt bug #538726

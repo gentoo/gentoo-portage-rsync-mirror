@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Email-Simple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.78 2015/01/08 19:30:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Simple/ChangeLog,v 1.79 2015/05/10 18:23:42 dilfridge Exp $
+
+*Email-Simple-2.206 (10 May 2015)
+
+  10 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Email-Simple-2.202.ebuild, +Email-Simple-2.206.ebuild:
+  Version bump; remove old
 
   08 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Email-Simple-2.203.ebuild:
   Mark stable

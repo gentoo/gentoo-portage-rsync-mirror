@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.241 2015/04/18 11:08:47 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.242 2015/05/10 18:19:16 jer Exp $
 
 # Markos Chandras <hwoarang@gentoo.org> (18 Apr 2015)
 # samba-4 not keyworded on ppc/ppc64
@@ -126,13 +126,6 @@ net-misc/modemmanager mbim
 # Missing keywords, bug #495254
 >=dev-libs/totem-pl-parser-3.10 quvi
 >=media-video/totem-3.10 flash
-
-# Chí-Thanh Christopher Nguyễn (04 Feb 2014)
-# depends on opencl enabled mesa
-<=media-gfx/imagemagick-6.8.6.8 opencl
-<=app-crypt/johntheripper-1.7.9-r6 opencl
-<=media-libs/opencv-2.4.5 opencl
-<=sci-libs/gdal-1.10-r1 opencl
 
 # Pacho Ramos <pacho@gentoo.org> (11 Jan 2013)
 sys-kernel/dracut -dracut_modules_systemd
