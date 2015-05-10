@@ -1,12 +1,12 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.1.9.ebuild,v 1.8 2013/06/22 18:18:02 scarabeus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.2.0.ebuild,v 1.1 2015/05/10 11:57:21 pacho Exp $
 
 EAPI=5
 
 inherit eutils
 
-VERSION="717" # every bump, new version
+VERSION="1911" # every bump, new version
 
 RESTRICT="strip"
 
@@ -17,24 +17,30 @@ SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE=""
+KEYWORDS="~amd64 ~x86"
+IUSE="libav"
 
-RDEPEND="virtual/ffmpeg"
+RDEPEND="
+	libav? ( media-video/libav )
+	!libav? ( media-video/ffmpeg:0 )
+"
 DEPEND="${RDEPEND}
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	sed -i \
 		-e "s:usr/local:usr:" \
 		-e "s:-o vdr2jpeg:\$(LDFLAGS) -o vdr2jpeg:" \
 		Makefile || die
-	epatch "${FILESDIR}/${P}-ffmpeg.patch" \
-		"${FILESDIR}/${P}-ffmpeg1.patch" \
-		"${FILESDIR}/${P}-libav9.patch"
 }
 
 src_install() {
-	dobin vdr2jpeg
+	if use libav; then
+		emake DESTDIR="${D}" install FFMPEG_BIN=/usr/bin/avconv
+	else
+		emake DESTDIR="${D}" install FFMPEG_BIN=/usr/bin/ffmpeg
+	fi
+
 	dodoc README LIESMICH
 }

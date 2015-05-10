@@ -24,7 +24,7 @@ index 036a29e..10a1649 100644
  ssl/version.h:
  	@echo "#define AXTLS_VERSION    \"(no version)\"" > ssl/version.h
  
-+$(LIBDIR) :
++$(LIBDIR) : $(PREFIX)
 +	@mkdir -p $(LIBDIR)
 +
  $(PREFIX) :
