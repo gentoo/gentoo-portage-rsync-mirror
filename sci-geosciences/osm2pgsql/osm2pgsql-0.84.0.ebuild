@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-0.84.0.ebuild,v 1.4 2015/04/18 12:30:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/osm2pgsql/osm2pgsql-0.84.0.ebuild,v 1.5 2015/05/10 21:53:28 titanofold Exp $
 
 EAPI=5
 
@@ -17,12 +17,12 @@ IUSE="+lua +pbf"
 
 DEPEND="
 	app-arch/bzip2
-	dev-db/postgresql
+	dev-db/postgresql:=
 	dev-libs/libxml2:2
 	sci-libs/geos
 	sci-libs/proj
 	sys-libs/zlib
-	lua? ( dev-lang/lua )
+	lua? ( dev-lang/lua:= )
 	pbf? ( dev-libs/protobuf-c )
 "
 RDEPEND="${DEPEND}"
