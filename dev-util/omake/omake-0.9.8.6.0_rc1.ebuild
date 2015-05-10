@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.6.0_rc1.ebuild,v 1.4 2013/08/19 14:08:27 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/omake-0.9.8.6.0_rc1.ebuild,v 1.5 2015/05/10 05:34:50 jer Exp $
 
 EAPI=5
 
@@ -33,7 +33,9 @@ use_boolean() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-warnerror.patch"
+	epatch \
+		"${FILESDIR}/${P}-cflags.patch" \
+		"${FILESDIR}/${P}-warnerror.patch"
 }
 
 src_configure() {

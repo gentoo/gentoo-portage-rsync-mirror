@@ -1,7 +1,5 @@
-Index: omake-0.9.8.6/lib/build/OCaml.om
-===================================================================
---- omake-0.9.8.6.orig/lib/build/OCaml.om
-+++ omake-0.9.8.6/lib/build/OCaml.om
+--- a/lib/build/OCaml.om
++++ b/lib/build/OCaml.om
 @@ -176,7 +176,7 @@ public.PREFIXED_OCAMLPACKS =\
  #
  declare OCAMLDEPFLAGS

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libnatspec
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.23 2015/05/08 12:12:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libnatspec/ChangeLog,v 1.24 2015/05/10 05:35:56 jer Exp $
+
+  10 May 2015; Jeroen Roovers <jer@gentoo.org> libnatspec-0.2.6-r1.ebuild:
+  Stable for PPC64 (bug #548686).
 
   08 May 2015; Agostino Sarubbo <ago@gentoo.org> libnatspec-0.2.6-r1.ebuild:
   Stable for amd64, wrt bug #548686

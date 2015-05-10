@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/omake
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.26 2013/08/19 14:08:27 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/omake/ChangeLog,v 1.27 2015/05/10 05:34:50 jer Exp $
+
+  10 May 2015; Jeroen Roovers <jer@gentoo.org> omake-0.9.8.6.0_rc1.ebuild,
+  +files/omake-0.9.8.6.0_rc1-cflags.patch,
+  files/omake-0.9.8.6.0_rc1-warnerror.patch:
+  Fix CFLAGS.
 
   19 Aug 2013; Alexis Ballier <aballier@gentoo.org> omake-0.9.8.6.0_rc1.ebuild:
   eapi5 and add := dep on ocaml
