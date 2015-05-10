@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r1.ebuild,v 1.5 2015/03/02 09:04:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r2.ebuild,v 1.1 2015/05/10 13:54:55 pesa Exp $
 
 EAPI=5
 
@@ -76,7 +76,7 @@ src_install() {
 			doins src/QtLockedFile src/${PN}.h
 
 			insinto /usr/$(get_libdir)/qt5/mkspecs/features
-			newins "${FILESDIR}"/${PN}5.prf ${PN}.prf
+			doins "${FILESDIR}"/${PN}.prf
 		fi
 
 		dolib.so lib/*

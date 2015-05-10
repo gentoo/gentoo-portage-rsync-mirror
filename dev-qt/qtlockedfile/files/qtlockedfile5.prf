@@ -1,3 +1,0 @@
-INCLUDEPATH *= $$[QT_INSTALL_HEADERS]/QtSolutions
-DEPENDPATH  *= $$[QT_INSTALL_HEADERS]/QtSolutions
-LIBS *= -lQt5Solutions_LockedFile-2.4
