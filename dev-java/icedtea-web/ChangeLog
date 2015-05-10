@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.50 2015/04/26 08:10:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.51 2015/05/10 20:47:50 chewi Exp $
+
+  10 May 2015; James Le Cuirot <chewi@gentoo.org>
+  -files/0001-Fix-parallel-install.-BGO-440906.patch,
+  -files/0002-Respect-LDFLAGS.patch,
+  -files/icedtea-web-1.3.2-openjdk-build-25.patch, -icedtea-web-1.3.2-r7.ebuild,
+  -icedtea-web-1.3.2.ebuild, -icedtea-web-1.4.2-r1.ebuild,
+  -icedtea-web-1.4.2.ebuild:
+  Remove old versions. Unfortunately this means dropping some keywords but the
+  non-0 SLOTs have not mergeable for some time due to blockers.
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> icedtea-web-1.5.1-r1.ebuild:
   amd64/x86 stable, bug #546902

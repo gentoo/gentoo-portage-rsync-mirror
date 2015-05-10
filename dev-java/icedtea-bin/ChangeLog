@@ -1,6 +1,17 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.78 2015/04/26 08:10:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.79 2015/05/10 20:45:35 chewi Exp $
+
+*icedtea-bin-6.1.13.7 (10 May 2015)
+*icedtea-bin-7.2.5.5 (10 May 2015)
+
+  10 May 2015; James Le Cuirot <chewi@gentoo.org> +icedtea-bin-6.1.13.7.ebuild,
+  +icedtea-bin-7.2.5.5.ebuild, files/fontconfig.Gentoo.properties.src:
+  Version bump wrt #524560, #537940, #546702, #546914 and probably more.
+  Unfortunately determining accurate dependency versions is largely guesswork.
+  Depend on gsettings-desktop-schemas for proxy support wrt #431972. Fix RPATHs
+  to avoid the problem mentioned in #543658. Also fix Asian fonts for older
+  versions wrt #390663.
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> icedtea-bin-7.2.5.3.ebuild:
   amd64/x86 stable, bug #546902

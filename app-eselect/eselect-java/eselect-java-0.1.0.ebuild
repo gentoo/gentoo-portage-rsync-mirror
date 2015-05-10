@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-java/eselect-java-0.1.0.ebuild,v 1.2 2015/05/04 07:00:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-eselect/eselect-java/eselect-java-0.1.0.ebuild,v 1.3 2015/05/10 20:55:27 chewi Exp $
 
 EAPI=5
 
@@ -18,5 +18,3 @@ RDEPEND="
 	!app-eselect/eselect-maven
 	!<dev-java/java-config-2.2
 	app-admin/eselect"
-# https://bugs.gentoo.org/show_bug.cgi?id=315229
-PDEPEND=">=virtual/jre-1.5"
