@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.16.2.ebuild,v 1.4 2014/12/31 13:42:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.16.2.ebuild,v 1.5 2015/05/10 13:09:27 pesa Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="debug phonon"
 RDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsingleapplication[X]
+	dev-qt/qtsingleapplication[X,qt4(+)]
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4
 	dev-db/sqlite:3

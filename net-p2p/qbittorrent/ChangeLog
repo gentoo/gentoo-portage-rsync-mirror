@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.247 2015/05/05 10:57:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.248 2015/05/10 13:12:13 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> qbittorrent-3.1.12.ebuild,
+  qbittorrent-3.1.9.2-r1.ebuild, qbittorrent-9999.ebuild:
+  Add missing usedep for qtsingleapplication.
 
   05 May 2015; Davide Pesavento <pesa@gentoo.org> -qbittorrent-3.0.11-r2.ebuild:
   Remove old.

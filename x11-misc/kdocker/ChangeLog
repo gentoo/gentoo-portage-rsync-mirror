@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/kdocker
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/ChangeLog,v 1.13 2014/10/24 16:22:52 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/ChangeLog,v 1.14 2015/05/10 13:15:11 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> kdocker-4.8-r2.ebuild:
+  Add missing usedep for qtsingleapplication.
 
   24 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -kdocker-4.8.ebuild:
   Cleanup old.

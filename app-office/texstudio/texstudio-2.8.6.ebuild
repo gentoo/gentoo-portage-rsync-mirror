@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.8.6.ebuild,v 1.5 2015/03/02 09:04:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/texstudio-2.8.6.ebuild,v 1.6 2015/05/10 13:03:23 pesa Exp $
 
 EAPI=5
 
@@ -22,11 +22,11 @@ COMMON_DEPEND="
 	x11-libs/libX11
 	x11-libs/libXext
 	dev-qt/designer:4
-	dev-qt/qtlockedfile[qt4]
+	dev-qt/qtlockedfile[qt4(+)]
 	>=dev-qt/qtgui-4.8.5:4
 	>=dev-qt/qtcore-4.6.1:4
 	>=dev-qt/qtscript-4.6.1:4
-	dev-qt/qtsingleapplication
+	dev-qt/qtsingleapplication[qt4(+)]
 	>=dev-qt/qtsvg-4.6.1:4
 	>=dev-qt/qttest-4.6.1:4
 	video? ( media-libs/phonon[qt4] )"

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/kdocker-4.8-r2.ebuild,v 1.5 2014/10/24 15:28:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/kdocker/kdocker-4.8-r2.ebuild,v 1.6 2015/05/10 13:15:11 pesa Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE=""
 DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsingleapplication[X]
+	dev-qt/qtsingleapplication[qt4(+),X]
 	x11-libs/libX11
 	x11-libs/libXmu
 	x11-libs/libXpm

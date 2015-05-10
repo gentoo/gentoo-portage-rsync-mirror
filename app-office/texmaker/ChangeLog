@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.151 2015/04/20 20:20:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/ChangeLog,v 1.152 2015/05/10 13:01:04 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> texmaker-4.3.ebuild:
+  Add missing usedep for qtsingleapplication.
 
   20 Apr 2015; Justin Lecher <jlec@gentoo.org> -texmaker-4.0.1.ebuild,
   -texmaker-4.1.1.ebuild, -texmaker-4.1.ebuild, -texmaker-4.2.ebuild:

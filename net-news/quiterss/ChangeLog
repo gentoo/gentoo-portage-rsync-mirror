@@ -1,6 +1,10 @@
 # ChangeLog for net-news/quiterss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.56 2015/04/21 16:34:29 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/ChangeLog,v 1.57 2015/05/10 13:09:27 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> quiterss-0.16.2.ebuild,
+  quiterss-0.17.6.ebuild:
+  Add missing usedep for qtsingleapplication.
 
 *quiterss-0.17.7 (21 Apr 2015)
 

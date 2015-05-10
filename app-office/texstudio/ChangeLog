@@ -1,6 +1,10 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.45 2015/05/05 13:38:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.46 2015/05/10 13:03:23 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> texstudio-2.8.4.ebuild,
+  texstudio-2.8.6.ebuild:
+  Add missing usedep for qtsingleapplication.
 
   05 May 2015; Justin Lecher <jlec@gentoo.org> texstudio-2.8.8.ebuild:
   Handle non existing USE=qt4 in qtsingleapplication package

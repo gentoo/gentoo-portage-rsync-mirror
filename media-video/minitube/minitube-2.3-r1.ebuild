@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.3-r1.ebuild,v 1.2 2014/12/31 13:31:12 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/minitube/minitube-2.3-r1.ebuild,v 1.3 2015/05/10 13:05:17 pesa Exp $
 
 EAPI=5
 PLOCALES="ar ca ca_ES da de_DE el en es es_AR es_ES fi fi_FI fr he_IL hr hu
@@ -22,6 +22,7 @@ IUSE="debug download gstreamer kde"
 DEPEND=">=dev-qt/qtgui-4.8:4[accessibility]
 	>=dev-qt/qtdbus-4.8:4
 	>=dev-qt/qtsql-4.8:4
+	dev-qt/qtsingleapplication[qt4(+),X]
 	kde? ( || ( media-libs/phonon[gstreamer?,qt4] >=dev-qt/qtphonon-4.8:4 ) )
 	!kde? ( || ( >=dev-qt/qtphonon-4.8:4 media-libs/phonon[gstreamer?,qt4] ) )
 	gstreamer? (
@@ -31,7 +32,6 @@ DEPEND=">=dev-qt/qtgui-4.8:4[accessibility]
 		media-plugins/gst-plugins-faad:0.10
 		media-plugins/gst-plugins-theora
 	)
-	dev-qt/qtsingleapplication[X]
 "
 RDEPEND="${DEPEND}"
 

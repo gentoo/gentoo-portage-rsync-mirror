@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.3.ebuild,v 1.5 2015/04/19 09:48:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmaker/texmaker-4.3.ebuild,v 1.6 2015/05/10 13:01:04 pesa Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ COMMON_DEPEND="
 	dev-qt/qtgui:4
 	dev-qt/qtcore:4
 	dev-qt/qtscript:4
-	dev-qt/qtsingleapplication[X]
+	dev-qt/qtsingleapplication[X,qt4(+)]
 	dev-qt/qtwebkit:4
 "
 RDEPEND="${COMMON_DEPEND}

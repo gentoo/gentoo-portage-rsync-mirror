@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.23 2015/04/19 09:27:25 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.24 2015/05/10 13:12:13 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -27,7 +27,7 @@ REQUIRED_USE="^^ ( qt4 qt5 )
 
 CDEPEND="
 	dev-libs/boost:=
-	>=dev-qt/qtsingleapplication-2.6.1_p20130904-r1[X?,qt4?,qt5?]
+	>=dev-qt/qtsingleapplication-2.6.1_p20130904-r1[qt4?,qt5?,X?]
 	>=net-libs/rb_libtorrent-1.0.0
 	sys-libs/zlib
 	qt4? ( dev-qt/qtcore:4

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.17.6.ebuild,v 1.1 2015/03/26 12:48:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/quiterss/quiterss-0.17.6.ebuild,v 1.2 2015/05/10 13:09:27 pesa Exp $
 
 EAPI=5
 PLOCALES="ar bg cs de el_GR es fa fi fr gl hi hu it ja ko lt nl pl pt_BR pt_PT ro_RO ru sk sr sv tg_TJ tr uk vi zh_CN zh_TW"
@@ -28,7 +28,7 @@ IUSE="debug phonon"
 RDEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsingleapplication[X,qt4]
+	dev-qt/qtsingleapplication[X,qt4(+)]
 	dev-qt/qtsql:4[sqlite]
 	dev-qt/qtwebkit:4
 	phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) )
