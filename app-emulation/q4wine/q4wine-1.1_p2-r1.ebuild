@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.1_p2-r1.ebuild,v 1.3 2014/06/23 10:02:57 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/q4wine/q4wine-1.1_p2-r1.ebuild,v 1.4 2015/05/10 12:41:55 pesa Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ IUSE="+dbus debug +icoutils +wineappdb"
 DEPEND="
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
-	dev-qt/qtsingleapplication[X]
+	dev-qt/qtsingleapplication[qt4(+),X]
 	dev-qt/qtsql:4[sqlite]
 	dbus? ( dev-qt/qtdbus:4 )
 "

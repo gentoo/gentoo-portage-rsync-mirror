@@ -1,6 +1,11 @@
 # ChangeLog for net-im/vacuum
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.21 2015/03/02 18:29:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/ChangeLog,v 1.22 2015/05/10 12:36:47 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> vacuum-1.2.4.ebuild,
+  vacuum-9999.ebuild:
+  Add missing usedep on qtlockedfile. Add slot to openssl dep to silence
+  repoman.
 
   02 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -vacuum-1.2.2.ebuild,
   -vacuum-1.2.3.ebuild:

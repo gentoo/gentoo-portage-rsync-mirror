@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/focuswriter
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.24 2014/10/30 11:19:14 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/focuswriter/ChangeLog,v 1.25 2015/05/10 12:39:38 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> focuswriter-1.5.3.ebuild:
+  Add missing usedep for qtsingleapplication.
 
   30 Oct 2014; Michael Palimaka <kensington@gentoo.org>
   -focuswriter-1.4.2.ebuild, -focuswriter-1.4.4.ebuild,

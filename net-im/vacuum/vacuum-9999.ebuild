@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.12 2014/08/05 18:34:13 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/vacuum/vacuum-9999.ebuild,v 1.13 2015/05/10 12:36:47 pesa Exp $
 
 EAPI="5"
 LANGS="de pl ru uk"
@@ -45,7 +45,7 @@ REQUIRED_USE="
 RDEPEND="
 	>=dev-qt/qtcore-4.8:4[ssl]
 	>=dev-qt/qtgui-4.8:4
-	dev-qt/qtlockedfile
+	dev-qt/qtlockedfile[qt4(+)]
 	>=dev-libs/openssl-1.0.0
 	adiummessagestyle? ( >=dev-qt/qtwebkit-4.8:4 )
 	filemessagearchive? ( >=dev-qt/qtsql-4.8:4[sqlite] )
