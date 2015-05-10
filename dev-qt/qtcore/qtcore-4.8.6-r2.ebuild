@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.6-r2.ebuild,v 1.1 2015/05/07 08:49:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.6-r2.ebuild,v 1.2 2015/05/10 00:48:20 pesa Exp $
 
 EAPI=5
 
@@ -19,6 +19,7 @@ IUSE="+glib iconv icu qt3support ssl"
 DEPEND="
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	glib? ( dev-libs/glib:2[${MULTILIB_USEDEP}] )
+	iconv? ( >=virtual/libiconv-0-r2[${MULTILIB_USEDEP}] )
 	icu? ( dev-libs/icu:=[${MULTILIB_USEDEP}] )
 	ssl? ( >=dev-libs/openssl-1.0.1h-r2:0[${MULTILIB_USEDEP}] )
 "

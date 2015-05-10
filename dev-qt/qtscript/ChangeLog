@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtscript
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/ChangeLog,v 1.28 2015/04/15 04:36:21 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/ChangeLog,v 1.29 2015/05/10 00:53:08 pesa Exp $
+
+*qtscript-4.8.6-r2 (10 May 2015)
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> +qtscript-4.8.6-r2.ebuild,
+  -qtscript-4.8.6-r1.ebuild:
+  Drop useless iconv USE flag.
 
   15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtscript-4.8.6-r1.ebuild:
   keyword arm64, tested on cortex-a53 hardware

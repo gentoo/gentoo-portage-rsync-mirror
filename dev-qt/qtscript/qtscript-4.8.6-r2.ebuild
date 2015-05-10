@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/qtscript-4.8.6-r1.ebuild,v 1.2 2015/04/15 04:36:21 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/qtscript-4.8.6-r2.ebuild,v 1.1 2015/05/10 00:53:08 pesa Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ else
 	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 fi
 
-IUSE="iconv +jit"
+IUSE="+jit"
 
 DEPEND="
 	~dev-qt/qtcore-${PV}[aqua=,debug=,${MULTILIB_USEDEP}]
@@ -28,7 +28,6 @@ QCONFIG_DEFINE="QT_SCRIPT"
 
 multilib_src_configure() {
 	local myconf=(
-		$(qt_use iconv)
 		$(qt_use jit javascript-jit)
 		-no-xkb -no-fontconfig -no-xrender -no-xrandr -no-xfixes -no-xcursor -no-xinerama
 		-no-xshape -no-sm -no-opengl -no-nas-sound -no-dbus -no-cups -no-nis -no-gif
