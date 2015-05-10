@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.11.1.ebuild,v 1.1 2015/05/10 04:30:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.11.1.ebuild,v 1.2 2015/05/10 04:39:22 mr_bones_ Exp $
 
 # google-breakpad
 # TODO: fribidi, libvorbis static
@@ -44,7 +44,7 @@ RDEPEND="
 		net-libs/libircclient
 		>=net-libs/miniupnpc-1.8
 		net-misc/curl
-		virtual/jpeg
+		virtual/jpeg:0
 		)
 	videos? ( media-video/vlc )"
 DEPEND="${RDEPEND}
@@ -61,7 +61,7 @@ DEPEND="${RDEPEND}
 		net-libs/libircclient[static-libs]
 		net-libs/miniupnpc[static-libs]
 		net-misc/curl[static-libs]
-		virtual/jpeg[static-libs]
+		virtual/jpeg:0[static-libs]
 	)"
 
 src_prepare() {

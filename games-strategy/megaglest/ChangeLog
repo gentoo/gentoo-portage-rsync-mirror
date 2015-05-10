@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.27 2015/05/10 04:30:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.29 2015/05/10 04:39:22 mr_bones_ Exp $
+
+  10 May 2015; Michael Sterrett <mr_bones_@gentoo.org> megaglest-3.11.1.ebuild:
+  add slot on virtual/jpeg dep
+
+  10 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/megaglest-3.11.1-cmake.patch:
+  clean unused patch
 
 *megaglest-3.11.1 (10 May 2015)
 
