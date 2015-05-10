@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r2.ebuild,v 1.1 2015/05/10 13:54:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/qtlockedfile-2.4.1_p20130904-r2.ebuild,v 1.2 2015/05/10 15:48:12 pesa Exp $
 
 EAPI=5
 
-inherit multibuild multilib qmake-utils
+inherit multibuild qmake-utils
 
 MY_P=qt-solutions-${PV#*_p}
 
@@ -63,23 +63,16 @@ src_install() {
 	use doc && dodoc -r doc/html
 
 	myinstall() {
-		if [[ ${MULTIBUILD_VARIANT} == qt4 ]]; then
-			insinto /usr/include/qt4/QtSolutions
-			doins src/QtLockedFile src/${PN}.h
-
-			insinto /usr/share/qt4/mkspecs/features
-			doins "${FILESDIR}"/${PN}.prf
-		fi
-
-		if [[ ${MULTIBUILD_VARIANT} == qt5 ]]; then
-			insinto /usr/include/qt5/QtSolutions
-			doins src/QtLockedFile src/${PN}.h
-
-			insinto /usr/$(get_libdir)/qt5/mkspecs/features
-			doins "${FILESDIR}"/${PN}.prf
-		fi
-
+		# libraries
 		dolib.so lib/*
+
+		# headers
+		insinto "$(${MULTIBUILD_VARIANT}_get_headerdir)"/QtSolutions
+		doins src/QtLockedFile src/${PN}.h
+
+		# .prf files
+		insinto "$(${MULTIBUILD_VARIANT}_get_mkspecsdir)"/features
+		doins "${FILESDIR}"/${PN}.prf
 	}
 
 	multibuild_foreach_variant run_in_build_dir myinstall

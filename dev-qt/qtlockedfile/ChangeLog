@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtlockedfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.16 2015/05/10 13:54:55 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtlockedfile/ChangeLog,v 1.17 2015/05/10 15:48:12 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org>
+  qtlockedfile-2.4.1_p20130904-r2.ebuild:
+  Use qmake-utils helper functions.
 
 *qtlockedfile-2.4.1_p20130904-r2 (10 May 2015)
 

@@ -1,14 +1,14 @@
 DEFINED_PHASES=compile configure install prepare setup
-DEPEND=qt4? ( dev-qt/qtcore:4 X? ( dev-qt/qtgui:4 ) ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 X? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ) dev-qt/qtlockedfile[qt4?,qt5?]
+DEPEND=dev-qt/qtlockedfile[qt4?,qt5?] qt4? ( dev-qt/qtcore:4 X? ( dev-qt/qtgui:4 ) ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 X? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) )
 DESCRIPTION=Qt library to start applications only once per user
 EAPI=5
 HOMEPAGE=http://doc.qt.digia.com/solutions/4/qtsingleapplication/index.html
 IUSE=doc +qt4 qt5 X
 KEYWORDS=~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux
 LICENSE=|| ( LGPL-2.1 GPL-3 )
-RDEPEND=qt4? ( dev-qt/qtcore:4 X? ( dev-qt/qtgui:4 ) ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 X? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) ) dev-qt/qtlockedfile[qt4?,qt5?]
+RDEPEND=dev-qt/qtlockedfile[qt4?,qt5?] qt4? ( dev-qt/qtcore:4 X? ( dev-qt/qtgui:4 ) ) qt5? ( dev-qt/qtcore:5 dev-qt/qtnetwork:5 X? ( dev-qt/qtgui:5 dev-qt/qtwidgets:5 ) )
 REQUIRED_USE=|| ( qt4 qt5 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pesa/distfiles/qt-solutions-20130904.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	qmake-utils	b9c5231d68391b53f154f7643e94605c	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=e04177ce41d599a3e55b673dff4cb6ff
+_md5_=a713c9665394a0e7838e0426d68b718c
