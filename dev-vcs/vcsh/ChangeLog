@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/vcsh
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/vcsh/ChangeLog,v 1.11 2014/11/11 23:38:35 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/vcsh/ChangeLog,v 1.12 2015/05/10 10:21:40 tamiko Exp $
+
+*vcsh-1.20150502 (10 May 2015)
+
+  10 May 2015; Matthias Maier <tamiko@gentoo.org> +vcsh-1.20150502.ebuild:
+  version bump; bug #548794; thanks to Austin M. Matherne
 
 *vcsh-1.20141026 (11 Nov 2014)
 
