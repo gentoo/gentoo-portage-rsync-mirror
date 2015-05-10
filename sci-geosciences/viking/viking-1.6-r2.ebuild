@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.6-r2.ebuild,v 1.1 2015/05/10 07:08:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/viking/viking-1.6-r2.ebuild,v 1.2 2015/05/10 09:32:05 graaff Exp $
 
 EAPI=5
 
@@ -63,7 +63,7 @@ src_configure() {
 		$(use_enable magic) \
 		$(use_enable mapnik) \
 		$(use_enable nls) \
-		$(use_enable sqlite3 mbtiles )
+		$(use_enable sqlite mbtiles )
 }
 
 src_install() {

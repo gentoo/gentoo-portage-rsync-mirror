@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9987 2015/05/09 10:12:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9988 2015/05/10 09:31:20 bman Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 May 2015; Aaron Bauman <bman@gentoo.org> profiles/package.mask:
+  Remove net-misc/gns3 mask following tree removal
 
   09 May 2015; Ben de Groot <yngwin@gentoo.org> desc/linguas.desc:
   Add doi and syc locales

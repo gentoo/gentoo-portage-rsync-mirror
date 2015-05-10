@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.1.0.ebuild,v 1.2 2015/05/10 09:15:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.1.0.ebuild,v 1.3 2015/05/10 09:35:34 jer Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/tornadoweb/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.g
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~hppa ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~amd64 ~hppa ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="curl doc examples test"
 
 CDEPEND="
