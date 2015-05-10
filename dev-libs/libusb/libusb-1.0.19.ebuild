@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-1.0.19.ebuild,v 1.6 2015/01/15 11:21:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-1.0.19.ebuild,v 1.7 2015/05/10 01:31:23 floppym Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs multilib-minimal
 
 DESCRIPTION="Userspace access to USB devices"
-HOMEPAGE="http://libusb.sourceforge.net/"
+HOMEPAGE="http://libusb.info/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.172 2015/01/15 11:21:32 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.173 2015/05/10 01:31:23 floppym Exp $
+
+  10 May 2015; Mike Gilbert <floppym@gentoo.org> libusb-1.0.18.ebuild,
+  libusb-1.0.19.ebuild:
+  Update HOMEPAGE.
 
   15 Jan 2015; Raúl Porcel <armin76@gentoo.org> libusb-1.0.19.ebuild:
   arm64/ia64/m68k/s390/sparc stable wrt #528834
