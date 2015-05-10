@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/megaglest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.26 2015/01/28 21:59:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/ChangeLog,v 1.27 2015/05/10 04:30:53 mr_bones_ Exp $
+
+*megaglest-3.11.1 (10 May 2015)
+
+  10 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/megaglest-3.11.1-cmake.patch,
+  +files/megaglest-3.11.1-static-build.patch, +megaglest-3.11.1.ebuild:
+  version bump
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> megaglest-3.9.1-r1.ebuild:
   Switch to CPU_FLAGS_X86.
