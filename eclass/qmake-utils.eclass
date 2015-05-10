@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.6 2015/02/26 01:52:15 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.7 2015/05/10 14:47:55 pesa Exp $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -28,11 +28,39 @@ qt4_get_bindir() {
 	fi
 }
 
+# @FUNCTION: qt4_get_headerdir
+# @DESCRIPTION:
+# Echoes the directory where Qt4 headers are installed.
+qt4_get_headerdir() {
+	echo ${EPREFIX}/usr/include/qt4
+}
+
+# @FUNCTION: qt4_get_mkspecsdir
+# @DESCRIPTION:
+# Echoes the directory where Qt4 mkspecs are installed.
+qt4_get_mkspecsdir() {
+	echo ${EPREFIX}/usr/share/qt4/mkspecs
+}
+
 # @FUNCTION: qt5_get_bindir
 # @DESCRIPTION:
 # Echoes the directory where Qt5 binaries are installed.
 qt5_get_bindir() {
 	echo ${EPREFIX}/usr/$(get_libdir)/qt5/bin
+}
+
+# @FUNCTION: qt5_get_headerdir
+# @DESCRIPTION:
+# Echoes the directory where Qt5 headers are installed.
+qt5_get_headerdir() {
+	echo ${EPREFIX}/usr/include/qt5
+}
+
+# @FUNCTION: qt5_get_mkspecsdir
+# @DESCRIPTION:
+# Echoes the directory where Qt5 mkspecs are installed.
+qt5_get_mkspecsdir() {
+	echo ${EPREFIX}/usr/$(get_libdir)/qt5/mkspecs
 }
 
 # @FUNCTION: qmake-utils_find_pro_file

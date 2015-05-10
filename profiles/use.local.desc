@@ -594,6 +594,7 @@ app-emulation/open-vm-tools:grabbitmqproxy - Enable grabbitmqproxy
 app-emulation/open-vm-tools:pic - Force shared libraries to be built as PIC
 app-emulation/open-vm-tools:vgauth - Enable vgauth
 app-emulation/open-vm-tools-kmod:vmhgfs - Build the vmhgfs module for file sharing support with the host
+app-emulation/open-vm-tools-kmod:vmxnet - Build the vmxnet module (older virtual NIC)
 app-emulation/playonlinux:winbind - Enables support for the winbind auth daemon
 app-emulation/q4wine:gnome - Use the gksu sudo GUI for managing the devices
 app-emulation/q4wine:icoutils - Enable icoutils support

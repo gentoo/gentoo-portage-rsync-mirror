@@ -14,5 +14,6 @@
 	</longdescription>
 	<use>
 		<flag name="vmhgfs">Build the vmhgfs module for file sharing support with the host</flag>
+		<flag name="vmxnet">Build the vmxnet module (older virtual NIC)</flag>
 	</use>
 </pkgmetadata>

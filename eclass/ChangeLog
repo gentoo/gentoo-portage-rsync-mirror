@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1611 2015/05/10 01:06:49 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1612 2015/05/10 14:47:55 pesa Exp $
+
+  10 May 2015; Davide Pesavento <pesa@gentoo.org> qmake-utils.eclass:
+  Add qt{4,5}_get_{header,mkspecs}dir helper functions, bug 525830.
 
   10 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Delete obsolete code that is now causing problems on freebsd (bug 493310).
