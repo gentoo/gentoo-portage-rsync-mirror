@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-4.00.ebuild,v 1.1 2015/05/07 13:59:23 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-4.00.ebuild,v 1.2 2015/05/10 16:32:21 vapier Exp $
 
 EAPI=4
 
@@ -21,8 +21,10 @@ IUSE_LINGUAS=" da de fr it ja nl pl ro ru zh_CN"
 IUSE="nls ${IUSE_LINGUAS// / linguas_}"
 RESTRICT="binchecks"
 
+# Block packages that used to install colliding man pages #341953 #548900
 RDEPEND="virtual/man
-	!<dev-libs/libaio-0.3.109-r2" #341953
+	!<sys-apps/attr-2.4.47-r2
+	!<dev-libs/libaio-0.3.109-r2"
 PDEPEND="nls? (
 	linguas_da? ( app-i18n/man-pages-da )
 	linguas_de? ( app-i18n/man-pages-de )
