@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/http-parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.13 2015/03/28 21:55:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.14 2015/05/11 16:40:31 mgorny Exp $
+
+*http-parser-2.5.0 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> +http-parser-2.5.0.ebuild:
+  Version bump. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/109
+  by jbergstroem.
 
 *http-parser-2.4.2 (28 Mar 2015)
 

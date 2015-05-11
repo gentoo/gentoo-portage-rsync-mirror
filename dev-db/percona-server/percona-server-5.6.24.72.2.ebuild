@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/percona-server-5.6.22.71.0.ebuild,v 1.1 2015/01/14 01:55:07 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/percona-server/percona-server-5.6.24.72.2.ebuild,v 1.1 2015/05/11 16:50:38 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20150113-1853Z"
@@ -74,6 +74,9 @@ multilib_src_test() {
 		# main.mysqld--help-notwin, binlog.binlog_mysqlbinlog_filter
 		# perfschema.binlog_edge_mix, perfschema.binlog_edge_stmt
 		# funcs_1.is_columns_mysql funcs_1.is_tables_mysql funcs_1.is_triggers
+		# engines/funcs.db_alter_character_set engines/funcs.db_alter_character_set_collate
+		# engines/funcs.db_alter_collate_ascii engines/funcs.db_alter_collate_utf8
+		# engines/funcs.db_create_character_set engines/funcs.db_create_character_set_collate
 		# fails due to USE=-latin1 / utf8 default
 		#
 		# main.mysql_client_test:
@@ -94,6 +97,9 @@ multilib_src_test() {
 			perfschema.binlog_edge_mix perfschema.binlog_edge_stmt \
 			funcs_1.is_columns_mysql funcs_1.is_tables_mysql funcs_1.is_triggers \
 			main.variables main.myisam main.merge_recover \
+			engines/funcs.db_alter_character_set engines/funcs.db_alter_character_set_collate \
+			engines/funcs.db_alter_collate_ascii engines/funcs.db_alter_collate_utf8 \
+			engines/funcs.db_create_character_set engines/funcs.db_create_character_set_collate \
 			main.percona_bug1289599 main.mysqlhotcopy_archive main.mysqlhotcopy_myisam ; do
 				mysql-multilib_disable_test  "$t" "False positives in Gentoo"
 		done

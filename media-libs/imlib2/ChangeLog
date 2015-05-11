@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.139 2015/01/29 17:33:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.140 2015/05/11 16:31:48 vapier Exp $
+
+*imlib2-1.4.7 (11 May 2015)
+
+  11 May 2015; Mike Frysinger <vapier@gentoo.org> +imlib2-1.4.7.ebuild:
+  Version bump #538948 by Andrew John Hughes.
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> imlib2-1.4.5-r1.ebuild,
   imlib2-1.4.6-r1.ebuild, imlib2-1.4.6-r2.ebuild, imlib2-9999.ebuild:
