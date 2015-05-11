@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Exporter-Tiny
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.9 2015/04/12 13:16:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exporter-Tiny/ChangeLog,v 1.10 2015/05/11 05:15:59 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> Exporter-Tiny-0.42.0.ebuild:
+  Mark ~ppc64 (bug #543632).
 
   12 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> Exporter-Tiny-0.42.0.ebuild:
   Add ~alpha keyword wrt bug #543632

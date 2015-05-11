@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/mechanize
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.50 2015/05/03 06:50:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mechanize/ChangeLog,v 1.51 2015/05/11 05:03:05 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> mechanize-2.7.3.ebuild,
+  mechanize-2.7.3-r1.ebuild:
+  Mark ~ppc64 (bug #522056).
 
   03 May 2015; Hans de Graaff <graaff@gentoo.org> mechanize-2.7.3-r1.ebuild:
   Add ruby22.
