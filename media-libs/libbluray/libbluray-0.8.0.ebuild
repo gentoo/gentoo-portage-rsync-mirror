@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.8.0.ebuild,v 1.1 2015/05/11 06:59:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/libbluray-0.8.0.ebuild,v 1.2 2015/05/11 09:22:06 aballier Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ src_prepare() {
 		export JDK_HOME="$(java-config -g JAVA_HOME)"
 
 		# don't install a duplicate jar file
-		sed -i '/^jar_DATA/d' src/Makefile.am || die
+		sed -i '/^jar_DATA/d' Makefile.am || die
 
 		java-pkg-opt-2_src_prepare
 	fi
@@ -84,7 +84,7 @@ multilib_src_install() {
 	fi
 
 	if multilib_is_native_abi && use java; then
-		java-pkg_dojar "${BUILD_DIR}"/src/.libs/${PN}-j2se-${PV}.jar
+		java-pkg_dojar "${BUILD_DIR}"/.libs/${PN}-j2se-${PV}.jar
 		doenvd "${FILESDIR}"/90${PN}
 	fi
 }
