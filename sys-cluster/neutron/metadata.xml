@@ -12,7 +12,7 @@
 	and configure virtual networks. These networks connect "interfaces" from
 	other OpenStack services (e.g., vNICs from Nova VMs). The Neutron API
 	supports extensions to provide advanced network capabilities
-	(e.g., QoS, ACLs, network monitoring, etc)
+	(e.g., QoS, ACLs, network monitoring, etc).
   </longdescription>
   <use>
     <flag name="dhcp">Installs the initscripts for the neutron dhcp service</flag>

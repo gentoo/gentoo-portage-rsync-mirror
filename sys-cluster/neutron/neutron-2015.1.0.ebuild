@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.0.ebuild,v 1.3 2015/05/06 15:24:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.0.ebuild,v 1.4 2015/05/11 22:38:41 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,8 +9,7 @@ inherit distutils-r1 linux-info user
 
 DESCRIPTION="A virtual network service for Openstack"
 HOMEPAGE="https://launchpad.net/neutron"
-EGIT_REPO_URI="https://github.com/openstack/neutron.git"
-EGIT_BRANCH="stable/kilo"
+SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
