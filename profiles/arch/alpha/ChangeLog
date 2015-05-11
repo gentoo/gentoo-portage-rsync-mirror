@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.220 2015/03/17 01:36:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.221 2015/05/11 01:49:39 pesa Exp $
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Extend Qt4-multilib mask to cover 4.8.7 as well.
 
   17 Mar 2015; Mike Frysinger <vapier@gentoo.org> package.use.force,
   package.use.mask:

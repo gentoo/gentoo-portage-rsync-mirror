@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86-fbsd profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.50 2015/02/01 13:40:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86-fbsd/ChangeLog,v 1.51 2015/05/11 01:51:48 pesa Exp $
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Extend Qt4-multilib mask to cover 4.8.7 as well.
 
   01 Feb 2015; Michał Górny <mgorny@gentoo.org> make.defaults:
   Unhide CPU_FLAGS_X86 on {amd64,x86}-fbsd profiles, bug #538322 by Yuta SATOH.

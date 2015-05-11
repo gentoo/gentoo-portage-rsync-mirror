@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.242 2015/05/10 18:19:16 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.243 2015/05/11 01:37:50 pesa Exp $
 
 # Markos Chandras <hwoarang@gentoo.org> (18 Apr 2015)
 # samba-4 not keyworded on ppc/ppc64
@@ -220,11 +220,6 @@ x11-themes/gtk-engines-qtcurve mozilla
 # Anthony G. Basile <blueness@gentoo.org> (21 Aug 2012)
 # Does not work on ppc/ppc64
 net-misc/tor tor-hardening
-
-# Johannes Huber <johu@gentoo.org> (9 Jul 2012)
-# dev-qt/qtopenvg not keyworded correctly.
-# ppc/ppc64 team please validate.
-=dev-qt/qtdemo-4.8* openvg
 
 # Michael Weber <xmw@gentoo.org> (3 Jun 2012)
 # pymol got stabled (bug 366229) but USE=apbs deps aren't keyworded

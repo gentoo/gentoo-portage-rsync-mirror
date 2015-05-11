@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/hppa profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.246 2015/04/26 07:40:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/hppa/ChangeLog,v 1.247 2015/05/11 01:56:05 vapier Exp $
+
+  11 May 2015; Mike Frysinger <vapier@gentoo.org> use.mask:
+  Drop USE=sanitize mask since it is already handled in base/.
 
   26 Apr 2015; Jeroen Roovers <jer@gentoo.org> package.use.mask:
   Mask USE=garbd for dev-db/mariadb (bug #544378).

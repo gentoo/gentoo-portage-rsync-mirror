@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.227 2015/03/17 01:39:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.228 2015/05/11 01:50:55 pesa Exp $
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Extend Qt4-multilib mask to cover 4.8.7 as well.
 
   17 Mar 2015; Mike Frysinger <vapier@gentoo.org> package.use.force,
   package.use.mask, use.mask:
