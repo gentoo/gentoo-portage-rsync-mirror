@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>contact@sporkbox.us</email>
+		<email>zlg@gentoo.org</email>
 		<name>Daniel Campbell</name>
 	</maintainer>
 	<upstream>
@@ -14,6 +13,9 @@
 		<doc lang="en">https://github.com/IgnorantGuru/spacefm/wiki/</doc>
 		<bugs-to>https://github.com/IgnorantGuru/spacefm/issues</bugs-to>
 	</upstream>
+	<use>
+		<flag name="video-thumbnails">Support video thumbnails with ffmpegthumbnailer</flag>
+	</use>
 	<longdescription lang="en">
 		SpaceFM is a file manager with built-in VFS, optional udisks-based device 
 		manager, customizable menu system, and bash integration. SpaceFM is a fork 
