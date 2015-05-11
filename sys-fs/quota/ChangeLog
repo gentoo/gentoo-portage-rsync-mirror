@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/quota
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.76 2015/04/28 09:52:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/ChangeLog,v 1.77 2015/05/11 19:20:49 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> quota-4.02.ebuild:
+  arm stable wrt bug #545586
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> quota-4.02.ebuild:
   Stable for sparc, wrt bug #545586

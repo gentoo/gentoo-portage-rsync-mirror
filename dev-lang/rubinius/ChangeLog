@@ -1,6 +1,18 @@
 # ChangeLog for dev-lang/rubinius
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.19 2014/11/18 21:50:02 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/ChangeLog,v 1.22 2015/05/11 19:19:04 graaff Exp $
+
+  11 May 2015; Hans de Graaff <graaff@gentoo.org> rubinius-2.5.3.ebuild:
+  Fix rbx symlink for new file location.
+
+  11 May 2015; Hans de Graaff <graaff@gentoo.org> -rubinius-2.2.9.ebuild,
+  -rubinius-2.3.0.ebuild:
+  Remove old versions with issues.
+
+*rubinius-2.5.3 (11 May 2015)
+
+  11 May 2015; Hans de Graaff <graaff@gentoo.org> +rubinius-2.5.3.ebuild:
+  Version bump.
 
   18 Nov 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/rubinius-2.2.7-emake-v.patch:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-2.2.9.ebuild,v 1.1 2014/06/12 06:17:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rubinius/rubinius-2.5.3.ebuild,v 1.2 2015/05/11 19:19:04 graaff Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib versionator
@@ -16,9 +16,9 @@ IUSE="+llvm"
 
 RDEPEND="
 	llvm? ( >=sys-devel/llvm-3.2 )
-	dev-libs/openssl
+	dev-libs/openssl:0
 	sys-libs/ncurses
-	sys-libs/readline
+	sys-libs/readline:0
 	dev-libs/libyaml
 	virtual/libffi
 	sys-libs/zlib
@@ -45,18 +45,23 @@ src_prepare() {
 }
 
 src_configure() {
+	conf=""
+	if ! use llvm ; then
+		conf+="--disable-llvm "
+	fi
+
 	#Rubinius uses a non-autoconf ./configure script which balks at econf
-	INSTALL="${EPREFIX}/usr/bin/install -c" ./configure --skip-prebuilt \
+	INSTALL="${EPREFIX}/usr/bin/install -c" ./configure \
 		--prefix /usr/$(get_libdir) \
 		--mandir /usr/share/man \
 		--without-rpath \
 		--with-vendor-zlib \
-		$(use_enable llvm) \
+		${conf} \
 		|| die "Configure failed"
 }
 
 src_compile() {
-	rake build || die "Compilation failed"
+	RBXOPT="-Xsystem.log=/dev/null" rake build || die "Compilation failed"
 }
 
 src_test() {
@@ -71,11 +76,11 @@ src_install() {
 	local minor_version=$(get_version_component_range 1-2)
 	local librbx="usr/$(get_libdir)/rubinius"
 
-	DESTDIR="${D}" rake install || die "Installation failed"
+	RBXOPT="-Xsystem.log=/dev/null" DESTDIR="${D}" rake install || die "Installation failed"
 
-	dosym /${librbx}/${minor_version}/bin/rbx /usr/bin/rbx || die "Couldn't make rbx symlink"
+	dosym /${librbx}/bin/rbx /usr/bin/rbx || die "Couldn't make rbx symlink"
 
 	insinto /${librbx}/${minor_version}/site
 	doins "${FILESDIR}/auto_gem.rb" || die "Couldn't install rbx auto_gem.rb"
-	RBX_RUNTIME="${S}/runtime" RBX_LIB="${S}/lib" bin/rbx compile "${D}/${librbx}/${minor_version}/site/auto_gem.rb" || die "Couldn't bytecompile auto_gem.rb"
+	RBXOPT="-Xsystem.log=/dev/null" RBX_RUNTIME="${S}/runtime" RBX_LIB="${S}/lib" bin/rbx compile "${D}/${librbx}/${minor_version}/site/auto_gem.rb" || die "Couldn't bytecompile auto_gem.rb"
 }
