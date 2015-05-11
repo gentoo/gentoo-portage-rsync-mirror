@@ -17,7 +17,7 @@ IUSE="debug"
 RDEPEND=">=dev-libs/glib-2.30:=
 	>=x11-libs/gtk+-2.24:2=
 	>=x11-libs/gtk+-3.14:3=
-	>=xfce-base/libxfce4ui-4.11.1:=
+	>=xfce-base/libxfce4ui-4.11.1:=[gtk3(+)]
 	>=xfce-base/libxfce4util-4.11:="
 DEPEND="${RDEPEND}
 	dev-util/intltool

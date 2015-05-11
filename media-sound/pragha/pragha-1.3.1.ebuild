@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.1.ebuild,v 1.1 2014/08/20 12:08:58 ssuominen Exp $
 
@@ -23,7 +23,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.4:3
 	>=media-libs/taglib-1.7.0
 	>=x11-libs/gtk+-3.4:3
 	x11-libs/libX11
-	>=xfce-base/libxfce4ui-4.11
+	>=xfce-base/libxfce4ui-4.11[gtk3(+)]
 	glyr? ( >=media-libs/glyr-1.0.1 )
 	grilo? ( >=media-libs/grilo-0.2.10 )
 	keybinder? ( >=dev-libs/keybinder-0.2.0:3 )
