@@ -71,7 +71,7 @@ src_prepare() {
 
 	# debug builds. change install path, remove optimisations and override buildtype
 	if use debug; then
-		sed -i -e "s|out/Release/|out/Debug/|g" tools/install.py
+		sed -i -e "s|out/Release/|out/Debug/|g" tools/install.py || die
 		BUILDTYPE=Debug
 	fi
 }
@@ -113,7 +113,7 @@ src_install() {
 	emake install DESTDIR="${ED}"
 	use npm && dodoc -r "${LIBDIR}"/node_modules/npm/html
 	rm -rf "${LIBDIR}"/node_modules/npm/{doc,html} || die
-	find "${LIBDIR}"/node_modules -type f -name "LICENSE" -delete
+	find "${LIBDIR}"/node_modules -type f -name "LICENSE" -delete || die
 
 	pax-mark -m "${ED}"/usr/bin/iojs
 }
