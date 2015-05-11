@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.257 2015/05/01 12:22:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.258 2015/05/11 19:34:05 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> iproute2-3.19.0.ebuild:
+  sparc stable wrt bug #543662
 
   01 May 2015; Mikle Kolyada <zlogene@gentoo.org> iproute2-3.19.0.ebuild:
   alpha stable wrt bug #543662

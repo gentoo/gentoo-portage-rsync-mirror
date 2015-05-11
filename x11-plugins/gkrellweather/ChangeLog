@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellweather
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.41 2015/04/21 18:41:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.42 2015/05/11 19:38:51 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> gkrellweather-2.0.8.ebuild:
+  sparc stable wrt bug #543924
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gkrellweather-2.0.8.ebuild:
   ppc stable wrt bug #543924

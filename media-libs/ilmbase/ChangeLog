@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ilmbase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.45 2015/04/19 06:59:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ilmbase/ChangeLog,v 1.46 2015/05/11 19:48:45 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> ilmbase-2.1.0.ebuild:
+  sparc stable wrt bug #526046
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> ilmbase-2.1.0.ebuild:
   x86 stable wrt bug #526046

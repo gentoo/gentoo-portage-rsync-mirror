@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.58 2015/04/26 20:09:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpc/ChangeLog,v 1.59 2015/05/11 19:36:46 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> mpc-1.0.2-r1.ebuild:
+  sparc stable wrt bug #531742
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> mpc-1.0.2-r1.ebuild:
   ia64 stable wrt bug #531742

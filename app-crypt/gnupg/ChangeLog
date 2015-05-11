@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.601 2015/04/26 12:51:31 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.602 2015/05/11 19:39:45 k_f Exp $
+
+  11 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> -gnupg-1.4.18.ebuild:
+  Remove vulnerable version c.f bug #541568
 
   26 Apr 2015; Anthony G. Basile <blueness@gentoo.org> gnupg-2.1.3-r3.ebuild:
   Keyword ~arm and ~mips.  Bug #546478.
