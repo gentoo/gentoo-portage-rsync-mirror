@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/io
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.17 2014/12/28 15:25:15 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/ChangeLog,v 1.18 2015/05/11 20:42:13 pacho Exp $
+
+  11 May 2015; Pacho Ramos <pacho@gentoo.org> io-2011.09.12-r2.ebuild:
+  Rename sqlite3 to sqlite (#548652) and jabber to xmpp
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org>
   io-2011.09.12-r2.ebuild:

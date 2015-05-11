@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r2.ebuild,v 1.5 2014/12/28 15:25:15 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/io/io-2011.09.12-r2.ebuild,v 1.6 2015/05/11 20:42:13 pacho Exp $
 
 EAPI=4
 
@@ -14,16 +14,16 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="cgi clutter dbi doc editline google gui http image jabber libffi libxml2
+IUSE="cgi clutter dbi doc editline google gui http image libffi libxml2
 	lzo md5sum ncurses ogg opengl postgres pcre python readline sha1 sndfile sockets
-	sqlite3 syslog theora threads truetype twitter vorbis zlib"
+	sqlite syslog theora threads truetype twitter vorbis xmpp zlib"
 DEPEND="clutter? ( media-libs/clutter )
 		dbi? ( dev-db/libdbi )
 		editline? ( dev-libs/libedit )
 		image? ( virtual/jpeg
 			media-libs/tiff
 			media-libs/libpng )
-		jabber? ( net-libs/loudmouth )
+		xmpp? ( net-libs/loudmouth )
 		libffi? ( virtual/libffi )
 		libxml2? ( dev-libs/libxml2 )
 		lzo? ( dev-libs/lzo )
@@ -34,7 +34,7 @@ DEPEND="clutter? ( media-libs/clutter )
 		postgres? ( dev-db/postgresql[server] )
 		readline? ( sys-libs/readline )
 		sndfile? ( media-libs/libsndfile )
-		sqlite3? ( >=dev-db/sqlite-3.0.0 )
+		sqlite? ( >=dev-db/sqlite-3.0.0 )
 		theora? ( media-libs/libtheora )
 		truetype? ( media-libs/freetype )
 		vorbis? ( media-libs/libvorbis )
@@ -60,7 +60,7 @@ src_configure() {
 		$(cmake-utils_use_enable gui FLUX)
 		$(cmake-utils_use_enable google GOOGLESEARCH)
 		$(cmake-utils_use_enable http HTTPCLIENT)
-		$(cmake-utils_use_enable jabber LOUDMOUTH)
+		$(cmake-utils_use_enable xmpp LOUDMOUTH)
 		$(cmake-utils_use_enable image IMAGE)
 		$(cmake-utils_use_enable libxml2 LIBXML2)
 		$(cmake-utils_use_enable lzo LZO)
@@ -75,7 +75,7 @@ src_configure() {
 		$(cmake-utils_use_enable sndfile LIBSNDFILE)
 		$(cmake-utils_use_enable sha1 SHA1)
 		$(cmake-utils_use_enable sockets SOCKET)
-		$(cmake-utils_use_enable sqlite3 SQLITE3)
+		$(cmake-utils_use_enable sqlite SQLITE3)
 		$(cmake-utils_use_enable syslog SYSLOG)
 		$(cmake-utils_use_enable theora THEORA)
 		$(cmake-utils_use_enable threads THREADS)

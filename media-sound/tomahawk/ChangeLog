@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/tomahawk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.45 2015/02/22 18:41:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/ChangeLog,v 1.46 2015/05/11 20:57:48 pacho Exp $
+
+  11 May 2015; Pacho Ramos <pacho@gentoo.org> tomahawk-0.8.2.ebuild,
+  tomahawk-9999.ebuild:
+  Rename jabber to xmpp USE (#216300)
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> tomahawk-0.8.2.ebuild,
   tomahawk-9999.ebuild:

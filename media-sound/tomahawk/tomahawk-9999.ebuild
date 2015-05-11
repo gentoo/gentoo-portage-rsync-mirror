@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.31 2015/02/22 18:41:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.32 2015/05/11 20:57:48 pacho Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ HOMEPAGE="http://tomahawk-player.org/"
 
 LICENSE="GPL-3 BSD"
 SLOT="0"
-IUSE="debug +hatchet jabber kde qt5 telepathy"
+IUSE="debug +hatchet kde qt5 telepathy xmpp"
 
 REQUIRED_USE="telepathy? ( kde )"
 
@@ -34,7 +34,7 @@ DEPEND="
 	>=net-libs/gnutls-3.2
 	x11-libs/libX11
 	hatchet? ( dev-cpp/websocketpp )
-	jabber? ( net-libs/jreen )
+	xmpp? ( net-libs/jreen )
 	!qt5? (
 		app-crypt/qca:2[qt4]
 		>=dev-libs/libattica-0.4.0
@@ -77,7 +77,7 @@ src_configure() {
 	local mycmakeargs=(
 		-DWITH_CRASHREPORTER=OFF
 		$(cmake-utils_use_build hatchet)
-		$(cmake-utils_use_with jabber Jreen)
+		$(cmake-utils_use_with xmpp Jreen)
 		$(cmake-utils_use_with kde KDE4)
 		$(cmake-utils_use_build !qt5 WITH_QT4)
 		$(cmake-utils_use_with telepathy TelepathyQt)
