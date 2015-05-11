@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libkface
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.53 2015/02/21 10:32:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkface/ChangeLog,v 1.54 2015/05/11 13:55:05 kensington Exp $
+
+*libkface-4.7.0-r1 (11 May 2015)
+
+  11 May 2015; Michael Palimaka <kensington@gentoo.org>
+  +files/libkface-4.7.0-histogram.patch, +libkface-4.7.0-r1.ebuild,
+  -libkface-4.7.0.ebuild:
+  Backport patch from upstream to solve performance issue wrt bug #549146.
 
 *libkface-4.7.0 (21 Feb 2015)
 
