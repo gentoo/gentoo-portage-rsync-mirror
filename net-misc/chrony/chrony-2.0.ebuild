@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-2.0.ebuild,v 1.1 2015/05/04 05:31:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/chrony-2.0.ebuild,v 1.2 2015/05/11 04:36:03 jer Exp $
 
 EAPI=5
 inherit eutils systemd toolchain-funcs
@@ -83,7 +83,7 @@ src_configure() {
 
 	# print the ./configure call to aid in future debugging
 	einfo ${CHRONY_CONFIGURE}
-	sh ${CHRONY_CONFIGURE} || die
+	bash ${CHRONY_CONFIGURE} || die
 }
 
 src_compile() {

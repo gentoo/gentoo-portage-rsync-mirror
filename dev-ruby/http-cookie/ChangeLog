@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/http-cookie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-cookie/ChangeLog,v 1.9 2015/04/05 06:41:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-cookie/ChangeLog,v 1.10 2015/05/11 04:54:34 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> http-cookie-1.0.2-r1.ebuild:
+  Mark ~ppc64 (bug #545592).
 
   05 Apr 2015; Hans de Graaff <graaff@gentoo.org> http-cookie-1.0.2-r1.ebuild:
   Add ruby22.

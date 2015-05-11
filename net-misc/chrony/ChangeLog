@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.161 2015/05/04 05:31:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.162 2015/05/11 04:36:03 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> chrony-2.0.ebuild:
+  configure needs bash (bug #548736 by Anthony Parsons).
 
 *chrony-2.0 (04 May 2015)
 

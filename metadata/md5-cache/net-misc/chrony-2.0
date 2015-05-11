@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://download.tuxfamily.org/chrony/chrony-2.0.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=9165eaf16cd2248ba74c020924806167
+_md5_=979ae8b4ecedc12a7ea47439c3ca80bc
