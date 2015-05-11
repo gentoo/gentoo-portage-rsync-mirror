@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/go-fuse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.9 2015/02/24 23:43:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.10 2015/05/11 16:21:27 mgorny Exp $
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> go-fuse-9999.ebuild:
+  Fix installation location as needed for sys-fs/go-mtpfs, bug #541274. Part of
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/105 by likewhoa.
 
 *go-fuse-0_p20140812-r1 (24 Feb 2015)
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.150 2015/04/01 07:53:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.151 2015/05/11 16:02:58 hanno Exp $
+
+  11 May 2015; <hanno@gentoo.org> -mailman-2.1.18_p1.ebuild,
+  -mailman-2.1.19.ebuild, -files/50_mailman.conf-r1,
+  -files/mailman-2.1.13-ldflags.patch:
+  Cleanup due to security bump.
 
   01 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mailman-2.1.20.ebuild:
   Stable for amd64/ppc/x86, wrt bug #545070
