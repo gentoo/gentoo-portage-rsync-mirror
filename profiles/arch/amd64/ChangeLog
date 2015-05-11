@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.318 2015/04/27 08:09:28 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.319 2015/05/11 17:07:47 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> package.use.stable.mask:
+  Drop media-video/ffmpeg[x265] and media-video/mpv[libav] stable masks, as
+  both dependencies are stable on amd64
 
   27 Apr 2015; Hans de Graaff <graaff@gentoo.org> use.mask:
   Mask rbx RUBY_TARGET now that dev-lang/rubinius-1.x is masked.

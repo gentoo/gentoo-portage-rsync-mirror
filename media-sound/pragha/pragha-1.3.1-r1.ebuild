@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.1.ebuild,v 1.1 2014/08/20 12:08:58 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/pragha/pragha-1.3.1-r1.ebuild,v 1.1 2015/05/11 17:11:31 mgorny Exp $
 
 EAPI=5
 inherit xfconf # autotools
@@ -14,26 +14,25 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="debug +glyr grilo +keybinder lastfm libnotify mtp +peas +playlist rygel soup +udev"
 
-COMMON_DEPEND=">=dev-db/sqlite-3.4:3
-	>=dev-libs/glib-2.32
-	>=dev-libs/libcdio-0.90
-	>=dev-libs/libcdio-paranoia-0.90
-	media-libs/gst-plugins-base:1.0
-	>=media-libs/libcddb-1.3.0
-	>=media-libs/taglib-1.7.0
-	>=x11-libs/gtk+-3.4:3
-	x11-libs/libX11
-	>=xfce-base/libxfce4ui-4.11
-	glyr? ( >=media-libs/glyr-1.0.1 )
-	grilo? ( >=media-libs/grilo-0.2.10 )
-	keybinder? ( >=dev-libs/keybinder-0.2.0:3 )
-	lastfm? ( >=media-libs/libclastfm-0.5 )
-	libnotify? ( >=x11-libs/libnotify-0.7 )
-	mtp? ( >=media-libs/libmtp-1.1.0 )
-	peas? ( >=dev-libs/libpeas-1.0.0[gtk] )
-	playlist? ( >=dev-libs/totem-pl-parser-2.26 )
-	rygel? ( >=net-misc/rygel-0.20 )
-	soup? ( >=net-libs/libsoup-2.38 )
+COMMON_DEPEND=">=dev-db/sqlite-3.4:3=
+	>=dev-libs/glib-2.32:=
+	>=dev-libs/libcdio-0.90:=
+	>=dev-libs/libcdio-paranoia-0.90:=
+	media-libs/gst-plugins-base:1.0=
+	>=media-libs/libcddb-1.3.0:=
+	>=media-libs/taglib-1.7.0:=
+	>=x11-libs/gtk+-3.4:3=
+	>=xfce-base/libxfce4ui-4.11:=[gtk3(+)]
+	glyr? ( >=media-libs/glyr-1.0.1:= )
+	grilo? ( >=media-libs/grilo-0.2.10:= )
+	keybinder? ( >=dev-libs/keybinder-0.2.0:3= )
+	lastfm? ( >=media-libs/libclastfm-0.5:= )
+	libnotify? ( >=x11-libs/libnotify-0.7:= )
+	mtp? ( >=media-libs/libmtp-1.1.0:= )
+	peas? ( >=dev-libs/libpeas-1.0.0:=[gtk] )
+	playlist? ( >=dev-libs/totem-pl-parser-2.26:= )
+	rygel? ( >=net-misc/rygel-0.20:= )
+	soup? ( >=net-libs/libsoup-2.38:= )
 	udev? ( virtual/libgudev:= )"
 RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-meta:1.0"

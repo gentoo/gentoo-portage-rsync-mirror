@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.133 2015/04/19 06:45:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.stable.mask,v 1.134 2015/05/11 17:07:47 zlogene Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,14 +17,6 @@
 #
 
 #--- END OF EXAMPLES ---
-
-# Mikle Kolyada <zlogene@gentoo.org> (16 Apr 2015)
-# Newer libav is not stable (bug #525148, bug #541664)
->=media-video/mpv-0.7.3 libav
-
-# Mikle Kolyada <zlogene@gentoo.org> (11 Apr 2015)
-# media-libs/x265 is not stable (bug #538798)
-media-video/ffmpeg x265
 
 # Yixun Lan <dlan@gentoo.org> (02 Apr 2015)
 # sys-fs/zfs is not stable.

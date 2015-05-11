@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.6.1.ebuild,v 1.1 2014/03/31 17:49:40 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/parole-0.6.1.ebuild,v 1.2 2015/05/11 17:18:31 mgorny Exp $
 
 EAPI=5
 inherit xfconf
@@ -21,7 +21,7 @@ COMMON_DEPEND=">=dev-libs/dbus-glib-0.100
 	sys-apps/dbus
 	>=x11-libs/gtk+-3.2:3
 	x11-libs/libX11
-	>=xfce-base/libxfce4ui-4.11
+	>=xfce-base/libxfce4ui-4.11[gtk3(+)]
 	>=xfce-base/libxfce4util-4.11
 	>=xfce-base/xfconf-4.10
 	libnotify? ( >=x11-libs/libnotify-0.7 )

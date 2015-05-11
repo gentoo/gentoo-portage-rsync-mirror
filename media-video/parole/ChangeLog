@@ -1,6 +1,12 @@
 # ChangeLog for media-video/parole
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.52 2015/03/09 18:46:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/parole/ChangeLog,v 1.53 2015/05/11 17:18:31 mgorny Exp $
+
+*parole-0.8.0-r1 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> +parole-0.8.0-r1.ebuild,
+  -parole-0.8.0.ebuild, parole-0.6.1.ebuild, parole-0.7.0.ebuild:
+  Future-update dep on libxfce4ui to [gtk3(+)].
 
 *parole-0.8.0 (09 Mar 2015)
 
