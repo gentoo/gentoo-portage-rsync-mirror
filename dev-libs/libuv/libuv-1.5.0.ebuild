@@ -15,10 +15,8 @@ SLOT="0/1"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="static-libs"
 
-DEPEND="
-	sys-devel/libtool
-	virtual/pkgconfig
-"
+DEPEND="sys-devel/libtool
+	virtual/pkgconfig[${MULTILIB_USEDEP}]"
 
 src_prepare() {
 	echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
