@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/xlwt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.29 2015/04/08 08:05:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.30 2015/05/11 06:39:31 idella4 Exp $
+
+*xlwt-1.0.0 (11 May 2015)
+
+  11 May 2015; Ian Delaney <idella4@gentoo.org> +files/docbuild.patch,
+  +xlwt-1.0.0.ebuild:
+  bump; drop keywords arm ppc ppc64 to cater to new dep pkginfo, add py3
+  support, doc build and test phase
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> xlwt-0.7.5.ebuild:
   Drop old Python implementations
