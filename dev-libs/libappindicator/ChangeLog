@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libappindicator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.16 2015/05/07 19:49:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libappindicator/ChangeLog,v 1.17 2015/05/11 14:05:57 mgorny Exp $
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org>
+  libappindicator-12.10.0-r200.ebuild:
+  Fix dependencies for the GTK+2 version, bug #549064.
 
 *libappindicator-12.10.0-r200 (07 May 2015)
 *libappindicator-12.10.0-r300 (07 May 2015)
