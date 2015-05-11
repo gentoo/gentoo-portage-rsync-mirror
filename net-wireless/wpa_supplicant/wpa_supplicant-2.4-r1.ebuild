@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4-r1.ebuild,v 1.2 2015/04/27 18:29:34 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4-r1.ebuild,v 1.3 2015/05/11 14:53:41 gurligebis Exp $
 
 EAPI=5
 
@@ -115,7 +115,7 @@ src_prepare() {
 	# bug (374089)
 	#epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
 
-	epatch "${FILESDIR}"/wpa_supplicant-2.4-cve-2015-1863.patch
+	epatch "${FILESDIR}/2015-1/0001-P2P-Validate-SSID-element-length-before-copying-it-C.patch"
 }
 
 src_configure() {

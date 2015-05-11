@@ -1,6 +1,6 @@
-diff -ur a/wpa_supplicant-2.4/src/eap_peer/Makefile b/wpa_supplicant-2.4/src/eap_peer/Makefile
---- a/wpa_supplicant-2.4/src/eap_peer/Makefile	2015-03-15 19:30:39.000000000 -0200
-+++ b/wpa_supplicant-2.4/src/eap_peer/Makefile	2015-04-26 14:40:49.987453098 -0200
+diff -Naurp a/src/eap_peer/Makefile b/src/eap_peer/Makefile
+--- a/src/eap_peer/Makefile	2012-05-15 08:23:17.152386964 +0000
++++ b/src/eap_peer/Makefile	2012-05-15 08:23:57.403389760 +0000
 @@ -1,11 +1,192 @@
 -all:
 -	@echo Nothing to be made.
@@ -202,9 +202,9 @@ diff -ur a/wpa_supplicant-2.4/src/eap_peer/Makefile b/wpa_supplicant-2.4/src/eap
 -		install -d $(DESTDIR)$(LIBDIR)/wpa_supplicant && \
 -		cp *.so $(DESTDIR)$(LIBDIR)/wpa_supplicant \
 -	; fi
-diff -ur a/wpa_supplicant-2.4/src/eap_peer/eap_methods.c b/wpa_supplicant-2.4/src/eap_peer/eap_methods.c
---- a/wpa_supplicant-2.4/src/eap_peer/eap_methods.c	2015-03-15 19:30:39.000000000 -0200
-+++ b/wpa_supplicant-2.4/src/eap_peer/eap_methods.c	2015-04-26 14:39:58.247099942 -0200
+diff -Naurp a/src/eap_peer/eap_methods.c b/src/eap_peer/eap_methods.c
+--- a/src/eap_peer/eap_methods.c	2012-05-15 08:23:17.151386999 +0000
++++ b/src/eap_peer/eap_methods.c	2012-05-15 08:23:57.403389760 +0000
 @@ -336,6 +336,120 @@
  
  
@@ -326,10 +326,9 @@ diff -ur a/wpa_supplicant-2.4/src/eap_peer/eap_methods.c b/wpa_supplicant-2.4/sr
   * eap_peer_unregister_methods - Unregister EAP peer methods
   *
   * This function is called at program termination to unregister all EAP peer
-Only in b/wpa_supplicant-2.4/src/eap_peer: eap_methods.c.orig
-diff -ur a/wpa_supplicant-2.4/src/eap_peer/eap_methods.h b/wpa_supplicant-2.4/src/eap_peer/eap_methods.h
---- a/wpa_supplicant-2.4/src/eap_peer/eap_methods.h	2015-03-15 19:30:39.000000000 -0200
-+++ b/wpa_supplicant-2.4/src/eap_peer/eap_methods.h	2015-04-26 14:39:58.248099929 -0200
+diff -Naurp a/src/eap_peer/eap_methods.h b/src/eap_peer/eap_methods.h
+--- a/src/eap_peer/eap_methods.h	2012-05-15 08:23:17.151386999 +0000
++++ b/src/eap_peer/eap_methods.h	2012-05-15 08:23:57.404389735 +0000
 @@ -26,6 +26,7 @@
  const char * eap_get_name(int vendor, EapType type);
  size_t eap_get_names(char *buf, size_t buflen);
@@ -338,5 +337,17 @@ diff -ur a/wpa_supplicant-2.4/src/eap_peer/eap_methods.h b/wpa_supplicant-2.4/sr
  void eap_peer_unregister_methods(void);
  
  #else /* IEEE8021X_EAPOL */
-Only in b/wpa_supplicant-2.4/src/eap_peer: eap_methods.h.orig
-Only in b/wpa_supplicant-2.4/src/eap_peer: libeap0.pc
+diff -Naurp a/src/eap_peer/libeap0.pc b/src/eap_peer/libeap0.pc
+--- a/src/eap_peer/libeap0.pc	1970-01-01 00:00:00.000000000 +0000
++++ b/src/eap_peer/libeap0.pc	2012-05-15 08:23:57.404389735 +0000
+@@ -0,0 +1,10 @@
++prefix=/usr
++exec_prefix=/usr
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include/eap_peer
++
++Name: libeap0
++Description: EAP Peer Library API
++Version: 0.7.2
++Libs: -L${libdir} -leap
++Cflags: -I${includedir}

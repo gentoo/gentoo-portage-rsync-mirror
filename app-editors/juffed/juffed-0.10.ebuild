@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.8 2015/04/01 18:26:45 nativemad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/juffed-0.10.ebuild,v 1.9 2015/05/11 14:58:52 pesa Exp $
 
 EAPI=5
 
@@ -15,25 +15,31 @@ SLOT="0"
 KEYWORDS="amd64 ~ppc ~ppc64 x86"
 IUSE="debug"
 
-RDEPEND="app-i18n/enca
+RDEPEND="
+	app-i18n/enca
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4
 	dev-qt/qtsingleapplication[qt4(+),X]
-	x11-libs/qscintilla:="
+	x11-libs/qscintilla:=
+"
 DEPEND="${RDEPEND}"
 
 DOCS=( ChangeLog README )
 
-src_prepare() {
-	sed "/set(CMAKE_CXX_FLAGS/d" -i CMakeLists.txt || die
+PATCHES=(
+	# bug 540554
+	"${FILESDIR}/0.10-link-libjuff-against-libenca.patch"
+)
 
+src_prepare() {
 	cmake-utils_src_prepare
+
+	sed -i -e '/set(CMAKE_CXX_FLAGS/d' CMakeLists.txt || die
 }
 
 src_configure() {
 	local mycmakeargs=(
 		-DUSE_SYSTEM_QTSINGLEAPPLICATION=ON
 	)
-
 	cmake-utils_src_configure
 }

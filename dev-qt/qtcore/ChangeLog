@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.72 2015/05/10 00:48:20 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.73 2015/05/11 14:59:35 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtcore-4.8.6-r2.ebuild:
+  amd64 stable wrt bug #530238
 
   10 May 2015; Davide Pesavento <pesa@gentoo.org> qtcore-4.8.6-r2.ebuild:
   Add missing dependency on virtual/libiconv.

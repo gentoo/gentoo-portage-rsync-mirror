@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtscript
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/ChangeLog,v 1.29 2015/05/10 00:53:08 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtscript/ChangeLog,v 1.30 2015/05/11 14:59:35 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtscript-4.8.6-r2.ebuild:
+  amd64 stable wrt bug #530238
 
 *qtscript-4.8.6-r2 (10 May 2015)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/juffed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.35 2015/04/26 15:44:28 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/juffed/ChangeLog,v 1.36 2015/05/11 14:58:52 pesa Exp $
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org>
+  +files/0.10-link-libjuff-against-libenca.patch, juffed-0.10.ebuild:
+  Fix linking against libenca, bug 540554.
 
   26 Apr 2015; Michael Palimaka <kensington@gentoo.org> -juffed-0.8.1.ebuild:
   Remove old.

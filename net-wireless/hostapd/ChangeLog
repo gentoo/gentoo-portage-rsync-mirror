@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.155 2015/05/08 18:14:59 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.156 2015/05/11 14:47:56 gurligebis Exp $
+
+*hostapd-2.4-r2 (11 May 2015)
+
+  11 May 2015; <gurligebis@gentoo.org> -hostapd-2.4-r1.ebuild,
+  +hostapd-2.4-r2.ebuild,
+  +files/2015-2/0001-WPS-Fix-HTTP-chunked-transfer-encoding-parser.patch,
+  +files/2015-3/0001-AP-WMM-Fix-integer-underflow-in-WMM-Action-frame-par.patch
+  :
+  Adding more security patches from bug #548744
 
 *hostapd-2.4-r1 (08 May 2015)
 

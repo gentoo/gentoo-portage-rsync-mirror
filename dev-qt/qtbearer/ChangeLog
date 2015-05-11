@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtbearer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.18 2015/04/15 03:40:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/ChangeLog,v 1.19 2015/05/11 14:59:35 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtbearer-4.8.6-r1.ebuild:
+  amd64 stable wrt bug #530238
 
   15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtbearer-4.8.6-r1.ebuild:
   keyword arm64, tested on cortex-a53 hardware

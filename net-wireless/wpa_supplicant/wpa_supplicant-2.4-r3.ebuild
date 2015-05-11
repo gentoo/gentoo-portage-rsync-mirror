@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4-r2.ebuild,v 1.1 2015/05/08 17:58:51 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/wpa_supplicant-2.4-r3.ebuild,v 1.1 2015/05/11 14:53:41 gurligebis Exp $
 
 EAPI=5
 
@@ -107,6 +107,9 @@ src_prepare() {
 	fi
 
 	# bug (548742)
+	epatch "${FILESDIR}/2015-1/0001-P2P-Validate-SSID-element-length-before-copying-it-C.patch"
+	epatch "${FILESDIR}/2015-2/0001-WPS-Fix-HTTP-chunked-transfer-encoding-parser.patch"
+	epatch "${FILESDIR}/2015-3/0001-AP-WMM-Fix-integer-underflow-in-WMM-Action-frame-par.patch"
 	epatch "${FILESDIR}/2015-4/0001-EAP-pwd-peer-Fix-payload-length-validation-for-Commi.patch"
 	epatch "${FILESDIR}/2015-4/0002-EAP-pwd-server-Fix-payload-length-validation-for-Com.patch"
 	epatch "${FILESDIR}/2015-4/0003-EAP-pwd-peer-Fix-Total-Length-parsing-for-fragment-r.patch"
@@ -120,8 +123,6 @@ src_prepare() {
 	# SO WOULD BE NICE TO JUST DROP IT, IF IT IS NOT NEEDED.
 	# bug (374089)
 	#epatch "${FILESDIR}/${P}-dbus-WPAIE-fix.patch"
-
-	epatch "${FILESDIR}"/wpa_supplicant-2.4-cve-2015-1863.patch
 }
 
 src_configure() {

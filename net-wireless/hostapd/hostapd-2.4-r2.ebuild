@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.4-r1.ebuild,v 1.1 2015/05/08 18:14:59 gurligebis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/hostapd-2.4-r2.ebuild,v 1.1 2015/05/11 14:47:56 gurligebis Exp $
 
 EAPI="4"
 
@@ -31,6 +31,8 @@ src_prepare() {
 	cd ..
 
 	# bug (548744)
+	epatch "${FILESDIR}/2015-2/0001-WPS-Fix-HTTP-chunked-transfer-encoding-parser.patch"
+	epatch "${FILESDIR}/2015-3/0001-AP-WMM-Fix-integer-underflow-in-WMM-Action-frame-par.patch"
 	epatch "${FILESDIR}/2015-4/0001-EAP-pwd-peer-Fix-payload-length-validation-for-Commi.patch"
 	epatch "${FILESDIR}/2015-4/0002-EAP-pwd-server-Fix-payload-length-validation-for-Com.patch"
 	epatch "${FILESDIR}/2015-4/0003-EAP-pwd-peer-Fix-Total-Length-parsing-for-fragment-r.patch"

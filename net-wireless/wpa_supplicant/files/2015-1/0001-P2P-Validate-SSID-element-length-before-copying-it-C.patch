@@ -1,7 +1,8 @@
 From 9ed4eee345f85e3025c33c6e20aa25696e341ccd Mon Sep 17 00:00:00 2001
 From: Jouni Malinen <jouni@qca.qualcomm.com>
-Date: Tue, 07 Apr 2015 08:32:11 +0000
-Subject: P2P: Validate SSID element length before copying it (CVE-2015-1863)
+Date: Tue, 7 Apr 2015 11:32:11 +0300
+Subject: [PATCH] P2P: Validate SSID element length before copying it
+ (CVE-2015-1863)
 
 This fixes a possible memcpy overflow for P2P dev->oper_ssid in
 p2p_add_device(). The length provided by the peer device (0..255 bytes)
@@ -21,6 +22,9 @@ hardware research group of Alibaba security team for discovering it.
 
 Signed-off-by: Jouni Malinen <jouni@qca.qualcomm.com>
 ---
+ src/p2p/p2p.c | 1 +
+ 1 file changed, 1 insertion(+)
+
 diff --git a/src/p2p/p2p.c b/src/p2p/p2p.c
 index f584fae..a45fe73 100644
 --- a/src/p2p/p2p.c
@@ -33,5 +37,6 @@ index f584fae..a45fe73 100644
  	    (msg.ssid[1] != P2P_WILDCARD_SSID_LEN ||
  	     os_memcmp(msg.ssid + 2, P2P_WILDCARD_SSID, P2P_WILDCARD_SSID_LEN)
  	     != 0)) {
---
-cgit v0.9.2
+-- 
+1.9.1
+

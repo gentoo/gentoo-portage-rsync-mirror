@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.81 2015/05/09 20:14:21 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.82 2015/05/11 14:59:36 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtgui-4.8.6-r4.ebuild:
+  amd64 stable wrt bug #530238
 
   09 May 2015; Davide Pesavento <pesa@gentoo.org> qtgui-4.8.6-r4.ebuild:
   Move workaround for bug 367045 to the eclass.

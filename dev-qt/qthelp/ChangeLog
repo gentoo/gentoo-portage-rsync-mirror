@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qthelp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.39 2015/05/07 01:13:18 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qthelp/ChangeLog,v 1.40 2015/05/11 14:59:36 zlogene Exp $
+
+  11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qthelp-4.8.6-r3.ebuild:
+  amd64 stable wrt bug #530238
 
   07 May 2015; Davide Pesavento <pesa@gentoo.org> qthelp-4.8.5-r2.ebuild,
   qthelp-4.8.6-r3.ebuild:

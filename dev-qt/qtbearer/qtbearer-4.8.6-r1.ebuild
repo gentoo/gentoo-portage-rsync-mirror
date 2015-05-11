@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/qtbearer-4.8.6-r1.ebuild,v 1.2 2015/04/15 03:40:03 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtbearer/qtbearer-4.8.6-r1.ebuild,v 1.3 2015/05/11 14:59:35 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="The network bearer plugins for the Qt toolkit"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 fi
 
 IUSE="connman networkmanager"

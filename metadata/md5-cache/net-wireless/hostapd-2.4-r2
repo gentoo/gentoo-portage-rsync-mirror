@@ -10,4 +10,4 @@ RDEPEND=ssl? ( dev-libs/openssl[-bindist] ) kernel_linux? ( dev-libs/libnl:3 crd
 SLOT=0
 SRC_URI=http://hostap.epitest.fi/releases/hostapd-2.4.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=044b713253aca83ebc4ba539412214e7
+_md5_=dda8744b5508cccee3d1d94022497e51

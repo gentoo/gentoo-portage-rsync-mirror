@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/qtopengl-4.8.6-r1.ebuild,v 1.2 2015/04/15 04:28:47 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/qtopengl-4.8.6-r1.ebuild,v 1.3 2015/05/11 14:59:35 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ DESCRIPTION="The OpenGL module for the Qt toolkit"
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
 	KEYWORDS=""
 else
-	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 fi
 
 IUSE="egl qt3support"
