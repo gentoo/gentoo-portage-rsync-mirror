@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1431 2015/05/04 09:44:54 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1432 2015/05/11 15:14:03 mpagano Exp $
+
+*git-sources-4.1_rc3 (11 May 2015)
+
+  11 May 2015; Mike Pagano <mpagano@gentoo.org> +git-sources-4.1_rc3.ebuild:
+  Version bump
 
   04 May 2015; Mike Pagano <mpagano@gentoo.org> git-sources-4.1_rc2.ebuild:
   Remove misleading DEBLOB support variable.

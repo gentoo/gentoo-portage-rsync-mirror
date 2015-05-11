@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/avogadro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.50 2015/04/08 18:22:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/avogadro/ChangeLog,v 1.51 2015/05/11 15:13:50 jlec Exp $
+
+  11 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/avogadro-1.1.0-xlibs.patch, avogadro-1.1.0.ebuild:
+  Add patch to fix underlinking, thanks Tom Daff preparing the patch, bug
+  #547400
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> avogadro-1.0.3-r2.ebuild,
   avogadro-1.1.0.ebuild:

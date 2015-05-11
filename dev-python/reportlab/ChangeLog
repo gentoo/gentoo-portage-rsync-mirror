@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.131 2015/05/08 17:11:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.132 2015/05/11 15:16:37 jlec Exp $
+
+  11 May 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  reportlab-3.1.44-r1.ebuild:
+  Add missing test dep, bug #548924
 
   08 May 2015; Jeroen Roovers <jer@gentoo.org> reportlab-3.1.44-r1.ebuild:
   Stable for PPC64 (bug #546810).
