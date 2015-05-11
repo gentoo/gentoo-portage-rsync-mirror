@@ -19,6 +19,7 @@ COMMON_DEPEND="virtual/libusb
 		virtual/udev"
 DEPEND="${COMMON_DEPEND}
 	dev-libs/go-fuse
+	dev-libs/go-usb
 	dev-lang/go
 	media-libs/libmtp"
 
