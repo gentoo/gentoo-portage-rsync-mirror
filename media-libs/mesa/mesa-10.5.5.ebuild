@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.4.ebuild,v 1.9 2015/04/08 17:59:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.5.5.ebuild,v 1.1 2015/05/11 21:42:31 mattst88 Exp $
 
 EAPI=5
 
@@ -13,31 +13,23 @@ fi
 
 PYTHON_COMPAT=( python2_7 )
 
-inherit base autotools multilib multilib-minimal flag-o-matic \
-	python-any-r1 toolchain-funcs pax-utils ${GIT_ECLASS}
+inherit autotools multilib-minimal python-any-r1 pax-utils ${GIT_ECLASS}
 
 OPENGL_DIR="xorg-x11"
 
-MY_PN="${PN/m/M}"
-MY_P="${MY_PN}-${PV/_/-}"
-MY_SRC_P="${MY_PN}Lib-${PV/_/-}"
-
+MY_P="${P/_/-}"
 FOLDER="${PV/_rc*/}"
 
 DESCRIPTION="OpenGL-like graphic library for Linux"
 HOMEPAGE="http://mesa3d.sourceforge.net/"
 
-#SRC_PATCHES="mirror://gentoo/${P}-gentoo-patches-01.tar.bz2"
-if [[ $PV = 9999* ]]; then
-	SRC_URI="${SRC_PATCHES}"
+if [[ $PV == 9999* ]]; then
+	SRC_URI=""
 else
-	SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/${FOLDER}/${MY_SRC_P}.tar.bz2
-		${SRC_PATCHES}"
+	SRC_URI="ftp://ftp.freedesktop.org/pub/mesa/${FOLDER}/${MY_P}.tar.xz"
 fi
 
-# The code is MIT/X11.
-# GLES[2]/gl[2]{,ext,platform}.h are SGI-B-2.0
-LICENSE="MIT SGI-B-2.0"
+LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~arm-linux ~ia64-linux ~x86-linux ~sparc-solaris ~x64-solaris ~x86-solaris"
 RESTRICT="!bindist? ( bindist )"
@@ -51,29 +43,22 @@ done
 
 IUSE="${IUSE_VIDEO_CARDS}
 	bindist +classic d3d9 debug +dri3 +egl +gallium +gbm gles1 gles2 +llvm
-	+nptl opencl osmesa pax_kernel openmax pic r600-llvm-compiler selinux
-	+udev vaapi vdpau wayland xvmc xa kernel_FreeBSD"
+	+nptl opencl osmesa pax_kernel openmax pic selinux +udev vaapi vdpau
+	wayland xvmc xa kernel_FreeBSD"
 
 REQUIRED_USE="
 	d3d9?   ( dri3 gallium )
 	llvm?   ( gallium )
-	opencl? (
-		gallium
-		llvm
-		video_cards_r600? ( r600-llvm-compiler )
-		video_cards_radeon? ( r600-llvm-compiler )
-		video_cards_radeonsi? ( r600-llvm-compiler )
-	)
+	opencl? ( gallium llvm )
 	openmax? ( gallium )
 	gles1?  ( egl )
 	gles2?  ( egl )
-	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeonsi video_cards_radeon ) )
 	vaapi? ( gallium )
 	vdpau? ( gallium )
 	wayland? ( egl gbm )
 	xa?  ( gallium )
 	video_cards_freedreno?  ( gallium )
-	video_cards_intel?  ( || ( classic gallium ) )
+	video_cards_intel?  ( classic )
 	video_cards_i915?   ( || ( classic gallium ) )
 	video_cards_i965?   ( classic )
 	video_cards_ilo?    ( gallium )
@@ -88,7 +73,7 @@ REQUIRED_USE="
 	${PYTHON_REQUIRED_USE}
 "
 
-LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.56"
+LIBDRM_DEPSTRING=">=x11-libs/libdrm-2.4.57"
 # keep correct libdrm and dri2proto dep
 # keep blocks in rdepend for binpkg
 RDEPEND="
@@ -108,12 +93,9 @@ RDEPEND="
 	>=x11-libs/libXext-1.3.2:=[${MULTILIB_USEDEP}]
 	>=x11-libs/libXxf86vm-1.1.3:=[${MULTILIB_USEDEP}]
 	>=x11-libs/libxcb-1.9.3:=[${MULTILIB_USEDEP}]
+	x11-libs/libXfixes:=[${MULTILIB_USEDEP}]
 	llvm? (
 		video_cards_radeonsi? ( || (
-			>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
-			>=dev-libs/libelf-0.8.13-r2:=[${MULTILIB_USEDEP}]
-			) )
-		video_cards_r600? ( || (
 			>=dev-libs/elfutils-0.155-r1:=[${MULTILIB_USEDEP}]
 			>=dev-libs/libelf-0.8.13-r2:=[${MULTILIB_USEDEP}]
 			) )
@@ -124,7 +106,6 @@ RDEPEND="
 				) )
 		)
 		>=sys-devel/llvm-3.4.2:=[${MULTILIB_USEDEP}]
-		<sys-devel/llvm-3.6
 	)
 	opencl? (
 				app-eselect/eselect-opencl
@@ -154,9 +135,7 @@ for card in ${RADEON_CARDS}; do
 done
 
 DEPEND="${RDEPEND}
-	${PYTHON_DEPS}
 	llvm? (
-		r600-llvm-compiler? ( sys-devel/llvm[video_cards_radeon] )
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
@@ -164,8 +143,6 @@ DEPEND="${RDEPEND}
 				>=sys-devel/clang-3.4.2:=[${MULTILIB_USEDEP}]
 				>=sys-devel/gcc-4.6
 	)
-	sys-devel/bison
-	sys-devel/flex
 	sys-devel/gettext
 	virtual/pkgconfig
 	>=x11-proto/dri2proto-2.8-r1:=[${MULTILIB_USEDEP}]
@@ -178,6 +155,12 @@ DEPEND="${RDEPEND}
 	>=x11-proto/xf86driproto-2.1.1-r1:=[${MULTILIB_USEDEP}]
 	>=x11-proto/xf86vidmodeproto-2.3.1-r1:=[${MULTILIB_USEDEP}]
 "
+[[ ${PV} == "9999" ]] && DEPEND+="
+	sys-devel/bison
+	sys-devel/flex
+	${PYTHON_DEPS}
+	$(python_gen_any_dep ">=dev-python/mako-0.7.3[\${PYTHON_USEDEP}]")
+"
 
 S="${WORKDIR}/${MY_P}"
 EGIT_CHECKOUT_DIR=${S}
@@ -187,12 +170,7 @@ EGIT_CHECKOUT_DIR=${S}
 QA_EXECSTACK="usr/lib*/libGL.so*"
 QA_WX_LOAD="usr/lib*/libGL.so*"
 
-# Think about: ggi, fbcon, no-X configs
-
 pkg_setup() {
-	# workaround toc-issue wrt #386545
-	use ppc64 && append-flags -mminimal-toc
-
 	# warning message for bug 459306
 	if use llvm && has_version sys-devel/llvm[!debug=]; then
 		ewarn "Mismatch between debug USE flags in media-libs/mesa and sys-devel/llvm"
@@ -202,42 +180,21 @@ pkg_setup() {
 	python-any-r1_pkg_setup
 }
 
-src_unpack() {
-	default
-	[[ $PV = 9999* ]] && git-r3_src_unpack
-}
-
 src_prepare() {
-	# apply patches
-	if [[ ${PV} != 9999* && -n ${SRC_PATCHES} ]]; then
-		EPATCH_FORCE="yes" \
-		EPATCH_SOURCE="${WORKDIR}/patches" \
-		EPATCH_SUFFIX="patch" \
-		epatch
-	fi
-
 	# fix for hardened pax_kernel, bug 240956
 	[[ ${PV} != 9999* ]] && epatch "${FILESDIR}"/glx_ro_text_segm.patch
 
-	# Solaris needs some recent POSIX stuff in our case
-	if [[ ${CHOST} == *-solaris* ]] ; then
-		sed -i -e "s/-DSVR4/-D_POSIX_C_SOURCE=200112L/" configure.ac || die
-	fi
-
-	base_src_prepare
-
 	eautoreconf
-	multilib_copy_sources
 }
 
 multilib_src_configure() {
 	local myconf
 
 	if use classic; then
-	# Configurable DRI drivers
+		# Configurable DRI drivers
 		driver_enable swrast
 
-	# Intel code
+		# Intel code
 		driver_enable video_cards_i915 i915
 		driver_enable video_cards_i965 i965
 		if ! use video_cards_i915 && \
@@ -266,7 +223,6 @@ multilib_src_configure() {
 			$(use_enable d3d9 nine)
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openmax omx)
-			$(use_enable r600-llvm-compiler)
 			$(use_enable vaapi va)
 			$(use_enable vdpau)
 			$(use_enable xa)
@@ -315,11 +271,13 @@ multilib_src_configure() {
 	# build fails with BSD indent, bug #428112
 	use userland_GNU || export INDENT=cat
 
+	ECONF_SOURCE="${S}" \
 	econf \
 		--enable-dri \
 		--enable-glx \
 		--enable-shared-glapi \
 		$(use_enable !bindist texture-float) \
+		$(use_enable d3d9 nine) \
 		$(use_enable debug) \
 		$(use_enable dri3) \
 		$(use_enable egl) \
@@ -446,15 +404,7 @@ pkg_postinst() {
 		elog "enabled. Please see patents.txt for an explanation."
 	fi
 
-	local using_radeon r_flag
-	for r_flag in ${RADEON_CARDS}; do
-		if use video_cards_${r_flag}; then
-			using_radeon=1
-			break
-		fi
-	done
-
-	if [[ ${using_radeon} = 1 ]] && ! has_version media-libs/libtxc_dxtn; then
+	if ! has_version media-libs/libtxc_dxtn; then
 		elog "Note that in order to have full S3TC support, it is necessary to install"
 		elog "media-libs/libtxc_dxtn as well. This may be necessary to get nice"
 		elog "textures in some apps, and some others even require this to run."

@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/mesa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.638 2015/04/28 00:45:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/ChangeLog,v 1.640 2015/05/11 21:44:05 mattst88 Exp $
+
+  11 May 2015; Matt Turner <mattst88@gentoo.org> -mesa-10.4.4.ebuild,
+  -mesa-10.5.1.ebuild, -mesa-10.5.2.ebuild:
+  Drop old.
+
+*mesa-10.5.5 (11 May 2015)
+
+  11 May 2015; Matt Turner <mattst88@gentoo.org> +mesa-10.5.5.ebuild:
+  Version bump to 10.5.5.
 
 *mesa-10.4.6 (28 Apr 2015)
 
