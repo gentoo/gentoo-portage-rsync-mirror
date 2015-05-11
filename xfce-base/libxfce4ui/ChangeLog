@@ -1,6 +1,13 @@
 # ChangeLog for xfce-base/libxfce4ui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.56 2015/03/15 18:44:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/ChangeLog,v 1.57 2015/05/11 17:55:22 mgorny Exp $
+
+*libxfce4ui-4.12.1-r1 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> +libxfce4ui-4.12.1-r1.ebuild,
+  metadata.xml:
+  Add gtk3 USE flag. Bug #547270, PR https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/112. Big thanks to Karl Lindén and brakarov.
 
 *libxfce4ui-4.12.1 (15 Mar 2015)
 

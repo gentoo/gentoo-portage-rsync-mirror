@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-2.3.2.ebuild,v 1.1 2014/03/16 08:17:36 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/xfce4-indicator-plugin-2.3.2.ebuild,v 1.2 2015/05/11 17:51:40 mgorny Exp $
 
 EAPI=5
 inherit xfconf
@@ -17,7 +17,7 @@ IUSE="debug"
 RDEPEND=">=dev-libs/libindicator-12.10.1:3
 	>=x11-libs/gtk+-3.6:3
 	x11-libs/libX11
-	>=xfce-base/libxfce4ui-4.11
+	>=xfce-base/libxfce4ui-4.11[gtk3(+)]
 	>=xfce-base/libxfce4util-4.11
 	>=xfce-base/xfce4-panel-4.11
 	>=xfce-base/xfconf-4.10"

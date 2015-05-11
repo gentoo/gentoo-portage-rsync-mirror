@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.285 2015/04/14 12:36:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.286 2015/05/11 18:00:13 pesa Exp $
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org> -PyQt4-4.11.2.ebuild,
+  PyQt4-4.11.3.ebuild:
+  Enable tracing with USE=debug; enable configure verbose output to get useful
+  build logs in bug reports; stop passing deprecated --no-timestamp option; use
+  qt4_get_bindir().
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> PyQt4-4.11.1.ebuild:
   Stable for ia64, wrt bug #523322

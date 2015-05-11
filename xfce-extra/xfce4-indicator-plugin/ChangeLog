@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-indicator-plugin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.22 2015/04/12 19:10:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-indicator-plugin/ChangeLog,v 1.23 2015/05/11 17:51:40 mgorny Exp $
+
+*xfce4-indicator-plugin-2.3.3-r1 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-indicator-plugin-2.3.3-r1.ebuild, -xfce4-indicator-plugin-2.3.3.ebuild,
+  xfce4-indicator-plugin-2.3.2.ebuild:
+  Future-add libxfce4ui[gtk3(+)] dep.
 
 *xfce4-indicator-plugin-2.3.3 (12 Apr 2015)
 

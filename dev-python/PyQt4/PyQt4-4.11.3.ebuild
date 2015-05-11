@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.3.ebuild,v 1.2 2015/01/09 01:27:25 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.3.ebuild,v 1.3 2015/05/11 18:00:13 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -36,7 +36,7 @@ QT_PV="4.8.5:4"
 
 RDEPEND="
 	${PYTHON_DEPS}
-	>=dev-python/sip-4.16.4:=[${PYTHON_USEDEP}]
+	>=dev-python/sip-4.16.6:=[${PYTHON_USEDEP}]
 	>=dev-qt/qtcore-${QT_PV}
 	X? ( >=dev-qt/qtgui-${QT_PV} )
 	dbus? (
@@ -82,20 +82,16 @@ pyqt_use_enable() {
 }
 
 src_configure() {
-	local qmake_path=${EPREFIX}/usr/$(get_libdir)/qt4/bin/qmake
-	[[ ! -x ${qmake_path} ]] && qmake_path=${EPREFIX}/usr/bin/qmake
-
 	configuration() {
 		local myconf=(
 			"${PYTHON}"
 			"${S}"/configure-ng.py
+			$(use debug && echo --debug --trace)
+			--verbose
 			--confirm-license
-			--qmake="${qmake_path}"
+			--qmake="$(qt4_get_bindir)"/qmake
 			--destdir="$(python_get_sitedir)"
-			--assume-shared
-			--no-timestamp
 			--qsci-api
-			$(use debug && echo --debug)
 			--enable=QtCore
 			--enable=QtNetwork
 			--enable=QtXml

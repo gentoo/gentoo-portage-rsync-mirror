@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.4.1.ebuild,v 1.1 2015/03/02 03:19:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/PyQt5-5.4.1.ebuild,v 1.2 2015/05/11 17:40:26 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -90,13 +90,12 @@ src_configure() {
 		local myconf=(
 			"${PYTHON}"
 			"${S}"/configure.py
+			$(use debug && echo --debug --trace)
+			--verbose
 			--confirm-license
-			--qmake="${EPREFIX}/usr/$(get_libdir)/qt5/bin/qmake"
+			--qmake="$(qt5_get_bindir)"/qmake
 			--destdir="$(python_get_sitedir)"
-			--assume-shared
-			--no-timestamp
 			--qsci-api
-			$(use debug && echo --debug)
 			--enable=QtCore
 			--enable=QtXml
 			$(pyqt_use_enable dbus QtDBus)

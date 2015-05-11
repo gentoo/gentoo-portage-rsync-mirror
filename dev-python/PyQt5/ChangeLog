@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/PyQt5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/ChangeLog,v 1.8 2015/03/02 03:19:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt5/ChangeLog,v 1.9 2015/05/11 17:40:26 pesa Exp $
+
+  11 May 2015; Davide Pesavento <pesa@gentoo.org> PyQt5-5.4.1.ebuild:
+  Enable tracing with USE=debug; enable configure.py verbose output to get
+  useful build logs in bug reports; stop passing deprecated --no-timestamp
+  option; use qt5_get_bindir().
 
 *PyQt5-5.4.1 (02 Mar 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-pulseaudio-plugin/xfce4-pulseaudio-plugin-0.2.2.ebuild,v 1.3 2015/04/06 15:32:31 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-pulseaudio-plugin/xfce4-pulseaudio-plugin-0.2.2-r1.ebuild,v 1.1 2015/05/11 17:52:34 mgorny Exp $
 
 EAPI=5
 inherit xfconf
@@ -17,7 +17,7 @@ IUSE="debug keybinder"
 RDEPEND=">=dev-libs/glib-2.24.0:=
 	media-sound/pulseaudio:=
 	>=x11-libs/gtk+-3.6.0:3=
-	>=xfce-base/libxfce4ui-4.11.0:=
+	>=xfce-base/libxfce4ui-4.11.0:=[gtk3(+)]
 	>=xfce-base/libxfce4util-4.9.0:=
 	>=xfce-base/xfce4-panel-4.11.0:=
 	>=xfce-base/xfconf-4.6.0:=

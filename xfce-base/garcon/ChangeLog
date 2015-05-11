@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/garcon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.72 2015/04/22 15:05:47 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/ChangeLog,v 1.73 2015/05/11 17:37:20 mgorny Exp $
+
+*garcon-0.5.0-r1 (11 May 2015)
+
+  11 May 2015; Michał Górny <mgorny@gentoo.org> +garcon-0.5.0-r1.ebuild,
+  -garcon-0.5.0.ebuild:
+  Future-update dep on libxfce4ui to [gtk3(+)].
 
   22 Apr 2015; Denis Dupeyron <calchan@gentoo.org> -garcon-0.3.0.ebuild,
   -garcon-0.4.0.ebuild:

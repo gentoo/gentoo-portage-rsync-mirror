@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/garcon-0.5.0.ebuild,v 1.1 2015/04/05 12:57:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/garcon/garcon-0.5.0-r1.ebuild,v 1.1 2015/05/11 17:37:20 mgorny Exp $
 
 EAPI=5
 inherit xfconf
@@ -17,7 +17,7 @@ IUSE="debug"
 RDEPEND=">=dev-libs/glib-2.30:=
 	>=x11-libs/gtk+-2.24:2=
 	>=x11-libs/gtk+-3.14:3=
-	>=xfce-base/libxfce4ui-4.11.1:=
+	>=xfce-base/libxfce4ui-4.11.1:=[gtk3(+)]
 	>=xfce-base/libxfce4util-4.11:="
 DEPEND="${RDEPEND}
 	dev-util/intltool
