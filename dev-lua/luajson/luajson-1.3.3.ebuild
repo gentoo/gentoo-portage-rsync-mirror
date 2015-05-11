@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luajson/luajson-1.3.3.ebuild,v 1.1 2014/04/21 07:54:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luajson/luajson-1.3.3.ebuild,v 1.2 2015/05/11 04:23:19 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="https://github.com/harningt/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~mips ~x86"
+KEYWORDS="~amd64 ~arm ~hppa ~mips ppc64 ~x86"
 IUSE="test"
 
 RDEPEND="|| ( >=dev-lang/lua-5.1 dev-lang/luajit:2 )

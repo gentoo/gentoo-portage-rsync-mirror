@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/quvi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.55 2014/02/23 16:31:32 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quvi/ChangeLog,v 1.56 2015/05/11 04:26:25 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> quvi-0.9.5.ebuild:
+  Stable for PPC64 (bug #526016).
 
   23 Feb 2014; Pacho Ramos <pacho@gentoo.org> quvi-0.9.5.ebuild:
   amd64/x86 stable, bug #501720

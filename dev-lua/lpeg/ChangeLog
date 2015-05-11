@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/lpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/ChangeLog,v 1.10 2015/03/08 16:57:50 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lpeg/ChangeLog,v 1.11 2015/05/11 04:23:00 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> lpeg-0.12.2.ebuild:
+  Stable for PPC64 (bug #526016).
 
 *lpeg-0.12.2 (08 Mar 2015)
 

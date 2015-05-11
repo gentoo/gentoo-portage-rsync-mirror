@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/LuaBitOp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.14 2014/12/16 13:19:17 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/ChangeLog,v 1.15 2015/05/11 04:20:32 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> LuaBitOp-1.0.2-r1.ebuild:
+  Stable for PPC64 (bug #526016).
 
   16 Dec 2014; Pacho Ramos <pacho@gentoo.org> LuaBitOp-1.0.2-r1.ebuild:
   amd64/x86 stable, bug #525990

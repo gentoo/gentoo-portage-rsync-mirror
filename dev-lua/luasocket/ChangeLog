@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/luasocket
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.24 2014/12/24 10:45:42 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasocket/ChangeLog,v 1.25 2015/05/11 04:24:15 jer Exp $
+
+  11 May 2015; Jeroen Roovers <jer@gentoo.org> luasocket-3.0_rc1-r3.ebuild:
+  Stable for PPC64 (bug #526016).
 
   24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -luasocket-3.0_rc1-r2.ebuild:
   Remove old.

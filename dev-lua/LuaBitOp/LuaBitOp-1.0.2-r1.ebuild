@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.2-r1.ebuild,v 1.3 2014/12/16 13:19:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/LuaBitOp/LuaBitOp-1.0.2-r1.ebuild,v 1.4 2015/05/11 04:20:32 jer Exp $
 
 EAPI="5"
 inherit toolchain-funcs multilib-minimal
@@ -11,7 +11,7 @@ SRC_URI="http://bitop.luajit.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ~mips x86"
+KEYWORDS="amd64 ~arm ~hppa ~mips ppc64 x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/lua-5.1.5-r2[${MULTILIB_USEDEP}]"
