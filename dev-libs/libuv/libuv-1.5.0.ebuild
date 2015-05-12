@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils autotools multilib-minimal
+inherit autotools-utils eutils multilib multilib-minimal
 
 DESCRIPTION="Cross-platform asychronous I/O"
 HOMEPAGE="https://github.com/libuv/libuv"
@@ -22,16 +22,15 @@ src_prepare() {
 	echo "m4_define([UV_EXTRA_AUTOMAKE_FLAGS], [serial-tests])" \
 		> m4/libuv-extra-automake-flags.m4 || die
 
-	sed -i \
-		-e '/CC_CHECK_CFLAGS_APPEND(\[-g\])/d' \
-		configure.ac || die "fixing CFLAGS failed!"
-
 	eautoreconf
 }
 
 multilib_src_configure() {
-	ECONF_SOURCE="${S}" econf \
+	local myeconfargs=(
+		cc_cv_cflags__g=no
 		$(use_enable static-libs static)
+	)
+	autotools-utils_src_configure
 }
 
 multilib_src_test() {
