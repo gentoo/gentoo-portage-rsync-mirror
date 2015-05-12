@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.216 2015/04/08 17:54:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.217 2015/05/12 22:46:42 eva Exp $
+
+*gtk-doc-1.22 (12 May 2015)
+
+  12 May 2015; Gilles Dartiguelongue <eva@gentoo.org> -gtk-doc-1.20.ebuild,
+  +gtk-doc-1.22.ebuild:
+  Version bump. Clean up old revision.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> gtk-doc-1.20.ebuild,
   gtk-doc-1.21.ebuild:
