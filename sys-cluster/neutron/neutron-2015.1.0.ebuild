@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.0.ebuild,v 1.4 2015/05/11 22:38:41 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.0.ebuild,v 1.5 2015/05/12 04:49:33 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -211,6 +211,7 @@ python_install() {
 	doins "etc/rootwrap.conf"
 	doins -r "etc/neutron/rootwrap.d"
 
+	insopts -m 0644
 	insinto "/usr/lib64/python2.7/site-packages/neutron/db/migration/alembic_migrations/"
 	doins -r "neutron/db/migration/alembic_migrations/versions"
 

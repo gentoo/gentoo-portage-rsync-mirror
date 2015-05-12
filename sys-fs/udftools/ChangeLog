@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udftools
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.32 2013/02/18 22:42:11 zmedico Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.33 2015/05/12 05:00:24 vapier Exp $
+
+  12 May 2015; Mike Frysinger <vapier@gentoo.org> udftools-1.0.0b-r9.ebuild:
+  Force older C standard to fix building w/gcc-5 #548324 by Martin Väth.
 
   18 Feb 2013; Zac Medico <zmedico@gentoo.org> udftools-1.0.0b-r9.ebuild:
   Add ~arm-linux keyword.

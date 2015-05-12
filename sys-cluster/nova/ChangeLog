@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.90 2015/05/07 23:35:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.91 2015/05/12 04:47:09 prometheanfire Exp $
+
+  12 May 2015; Matthew Thode <prometheanfire@gentoo.org> nova-2015.1.0.ebuild,
+  nova-2015.1.9999.ebuild:
+  fixing db upgrade perms
 
   07 May 2015; Matthew Thode <prometheanfire@gentoo.org> nova-2015.1.0.ebuild,
   nova-2015.1.9999.ebuild:
