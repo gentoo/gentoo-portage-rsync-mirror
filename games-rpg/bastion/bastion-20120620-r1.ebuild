@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.6 2014/05/15 16:57:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bastion/bastion-20120620-r1.ebuild,v 1.7 2015/05/12 19:20:46 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils gnome2-utils check-reqs unpacker games
 
 TIMESTAMP=${PV:0:4}-${PV:4:2}-${PV:6:2}
@@ -14,7 +13,7 @@ SRC_URI="Bastion-HIB-${TIMESTAMP}.sh"
 LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="-* amd64 x86"
-IUSE="bundled-libs"
+IUSE=""
 RESTRICT="bindist fetch splitdebug"
 
 MYGAMEDIR=${GAMES_PREFIX_OPT}/${PN}
@@ -25,21 +24,16 @@ QA_PREBUILT="${MYGAMEDIR#/}/Bastion.bin*
 # mono shit: vague dependencies
 RDEPEND="
 	virtual/opengl
-		media-libs/freealut
-		media-libs/openal
-		media-libs/sdl-gfx
-		media-libs/sdl-image
-		media-libs/sdl-mixer
-		media-libs/sdl-net
-		media-libs/sdl-ttf
-		media-libs/smpeg
-		x11-libs/libX11
-		x11-libs/libXft
-		!bundled-libs? (
-			dev-lang/mono
-			media-libs/fmod:1
-			media-libs/libsdl[X,sound,video,opengl,joystick]
-		)"
+	media-libs/freealut
+	media-libs/openal
+	media-libs/sdl-gfx
+	media-libs/sdl-image
+	media-libs/sdl-mixer
+	media-libs/sdl-net
+	media-libs/sdl-ttf
+	media-libs/smpeg
+	x11-libs/libX11
+	x11-libs/libXft"
 
 CHECKREQS_DISK_BUILD="2400M"
 
@@ -61,15 +55,6 @@ src_unpack() {
 	cd ${P} || die
 
 	unpack ./../instarchive_{all,linux_${myarch}}.tar.lzma
-}
-
-src_prepare() {
-	if ! use bundled-libs ; then
-		einfo "Removing bundles libs..."
-		rm -v $(get_libdir)/libmono-2.0.so* \
-			$(get_libdir)/libfmodex.so* \
-			$(get_libdir)/libSDL-1.2.so*|| die
-	fi
 }
 
 src_install() {

@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/mercurial
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.184 2015/04/29 09:18:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/mercurial/ChangeLog,v 1.185 2015/05/12 19:06:51 polynomial-c Exp $
+
+  12 May 2015; Lars Wendler <polynomial-c@gentoo.org> -mercurial-3.2.3.ebuild:
+  Removed vulnerable version.
 
   29 Apr 2015; Agostino Sarubbo <ago@gentoo.org> mercurial-3.3.2.ebuild:
   Stable for sparc, wrt bug #544332
