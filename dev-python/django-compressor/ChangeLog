@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django-compressor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/ChangeLog,v 1.12 2015/04/09 23:01:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-compressor/ChangeLog,v 1.13 2015/05/12 09:13:31 jlec Exp $
+
+*django-compressor-1.5 (12 May 2015)
+
+  12 May 2015; Justin Lecher <jlec@gentoo.org> +django-compressor-1.5.ebuild,
+  metadata.xml:
+  Verion Bump
 
   09 Apr 2015; Ian Delaney <idella4@gentoo.org> django-compressor-1.4.ebuild,
   metadata.xml:
