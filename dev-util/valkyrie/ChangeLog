@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valkyrie
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.17 2013/03/03 11:33:01 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valkyrie/ChangeLog,v 1.18 2015/05/12 08:40:25 ago Exp $
+
+  12 May 2015; Agostino Sarubbo <ago@gentoo.org> valkyrie-2.0.0.ebuild:
+  Stable for amd64, wrt bug #548420
 
   03 Mar 2013; Kacper Kowalik <xarthisius@gentoo.org>
   +files/valkyrie-2.0.0-gcc47.patch, valkyrie-2.0.0.ebuild:

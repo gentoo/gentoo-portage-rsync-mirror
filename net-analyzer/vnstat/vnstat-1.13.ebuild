@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.13.ebuild,v 1.2 2015/05/02 09:26:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/vnstat/vnstat-1.13.ebuild,v 1.3 2015/05/12 08:41:32 ago Exp $
 
 EAPI=5
 inherit toolchain-funcs user
@@ -11,7 +11,7 @@ SRC_URI="http://humdi.net/vnstat/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm hppa ~ppc ppc64 ~sparc ~x86"
+KEYWORDS="amd64 ~arm hppa ~ppc ppc64 ~sparc ~x86"
 IUSE="gd selinux test"
 
 COMMON_DEPEND="

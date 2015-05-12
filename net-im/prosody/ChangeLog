@@ -1,6 +1,9 @@
 # ChangeLog for net-im/prosody
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.53 2015/03/31 18:14:07 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/ChangeLog,v 1.54 2015/05/12 08:40:18 ago Exp $
+
+  12 May 2015; Agostino Sarubbo <ago@gentoo.org> prosody-0.9.8.ebuild:
+  Stable for amd64, wrt bug #548256
 
   31 Mar 2015; Tobias Klausmann <klausman@gentoo.org> prosody-0.9.8.ebuild:
   Apparently, only openssl:0 contains the required command line tools

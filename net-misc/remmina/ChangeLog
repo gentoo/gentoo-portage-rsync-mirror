@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/remmina
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.63 2015/04/16 11:06:11 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/remmina/ChangeLog,v 1.64 2015/05/12 08:41:14 ago Exp $
+
+  12 May 2015; Agostino Sarubbo <ago@gentoo.org> remmina-1.2.0_rc3.ebuild:
+  Stable for amd64, wrt bug #548430
 
 *remmina-1.2.0_rc3 (16 Apr 2015)
 *remmina-1.1.2 (16 Apr 2015)
