@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.5.14.ebuild,v 1.9 2015/01/26 07:10:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/nvidia-cuda-toolkit-6.5.14.ebuild,v 1.10 2015/05/12 11:06:19 jlec Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_unpack() {
 src_prepare() {
 	local cuda_supported_gcc
 
-	cuda_supported_gcc="4.8"
+	cuda_supported_gcc="4.7 4.8"
 
 	sed \
 		-e "s:CUDA_SUPPORTED_GCC:${cuda_supported_gcc}:g" \
