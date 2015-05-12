@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/openmpi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.132 2015/05/10 22:33:19 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/ChangeLog,v 1.134 2015/05/12 15:10:28 jsbronder Exp $
+
+  12 May 2015; Justin Bronder <jsbronder@gentoo.org> -openmpi-1.6.5.ebuild,
+  -openmpi-1.7.5.ebuild, -openmpi-1.8.3.ebuild, -openmpi-1.8.4.ebuild,
+  -openmpi-1.8.4-r1.ebuild, -openmpi-1.8.4-r2.ebuild:
+  cleanup
+
+*openmpi-1.8.4-r4 (12 May 2015)
+
+  12 May 2015; Justin Bronder <jsbronder@gentoo.org> -openmpi-1.8.4-r3.ebuild,
+  +openmpi-1.8.4-r4.ebuild:
+  Revert multilib addition. This is not to be done until multilib and empi from
+  the science overlay can coexist. See #541738
 
 *openmpi-1.8.4-r3 (10 May 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1613 2015/05/10 15:24:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1614 2015/05/12 15:15:31 voyageur Exp $
+
+  12 May 2015; Bernard Cafarelli <voyageur@gentoo.org> webapp.eclass:
+  Drop elog in webapp_serverowned, discussed with blueness in bug #542024
 
   10 May 2015; Davide Pesavento <pesa@gentoo.org> qmake-utils.eclass:
   Don't prepend EPREFIX for {header,mkspecs}dir since these are mostly used

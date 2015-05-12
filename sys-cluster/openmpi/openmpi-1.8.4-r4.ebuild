@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.4.ebuild,v 1.1 2015/02/04 05:10:12 jsbronder Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmpi/openmpi-1.8.4-r4.ebuild,v 1.1 2015/05/12 15:05:50 jsbronder Exp $
 
 EAPI=5
 
 FORTRAN_NEEDED=fortran
 
-inherit cuda eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator
+inherit autotools cuda eutils flag-o-matic fortran-2 multilib toolchain-funcs versionator
 
 MY_P=${P/-mpi}
 S=${WORKDIR}/${MY_P}
@@ -34,8 +34,8 @@ HOMEPAGE="http://www.open-mpi.org"
 SRC_URI="http://www.open-mpi.org/software/ompi/v$(get_version_component_range 1-2)/downloads/${MY_P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
-IUSE="cma cuda +cxx elibc_FreeBSD fortran heterogeneous ipv6 mpi-threads romio threads vt
+KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux"
+IUSE="cma cuda +cxx elibc_FreeBSD fortran heterogeneous ipv6 mpi-threads numa romio threads vt
 	${IUSE_OPENMPI_FABRICS} ${IUSE_OPENMPI_RM} ${IUSE_OPENMPI_OFED_FEATURES}"
 
 REQUIRED_USE="openmpi_rm_slurm? ( !openmpi_rm_pbs )
@@ -59,7 +59,8 @@ RDEPEND="
 	!sys-cluster/mpich2
 	!sys-cluster/mpiexec
 	dev-libs/libevent
-	>=sys-apps/hwloc-1.9.1
+	dev-libs/libltdl:0
+	>=sys-apps/hwloc-1.9.1[numa?]
 	sys-libs/zlib
 	cuda? ( dev-util/nvidia-cuda-toolkit )
 	elibc_FreeBSD? ( dev-libs/libexecinfo )
@@ -98,6 +99,11 @@ src_prepare() {
 		echo 'oob_tcp_listen_mode = listen_thread' \
 			>> opal/etc/openmpi-mca-params.conf
 	fi
+
+	# https://github.com/open-mpi/ompi/issues/163
+	epatch "${FILESDIR}"/openmpi-ltdl.patch
+
+	AT_M4DIR=config eautoreconf
 }
 
 src_configure() {
@@ -106,6 +112,7 @@ src_configure() {
 		--enable-pretty-print-stacktrace
 		--enable-orterun-prefix-by-default
 		--with-hwloc="${EPREFIX}/usr"
+		--with-libltdl=external
 		)
 
 	if use mpi-threads; then

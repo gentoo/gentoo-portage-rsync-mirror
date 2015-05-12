@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-text/poppler[utils] dev-php/PEAR-Date virtual/httpd-php >=app-admin/webapp-config-1.50.15
 SLOT=2.1.7-r1
 SRC_URI=mirror://sourceforge/dotproject/dotproject-2.1.7.tar.gz
-_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	webapp	25b9b1696f5e698711f47d45c3d45e3e
+_eclasses_=depend.php	df169a364e191b840b695604097e3c21	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	phpconfutils	e108303831029e5b8a9d24b991b1d62a	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	webapp	6621f8b5df9f14800054a5953065efeb
 _md5_=76eec3e48da218d79425650e29f7483d

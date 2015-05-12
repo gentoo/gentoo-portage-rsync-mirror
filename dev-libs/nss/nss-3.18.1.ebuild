@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.18.1.ebuild,v 1.1 2015/04/23 07:29:48 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.18.1.ebuild,v 1.2 2015/05/12 15:09:36 polynomial-c Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
 
-NSPR_VER="4.10.6-r1"
+NSPR_VER="4.10.8"
 RTM_NAME="NSS_${PV//./_}_RTM"
 # Rev of https://git.fedorahosted.org/cgit/nss-pem.git
 PEM_GIT_REV="015ae754dd9f6fbcd7e52030ec9732eb27fc06a8"
