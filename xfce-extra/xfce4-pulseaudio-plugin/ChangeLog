@@ -1,6 +1,12 @@
 # ChangeLog for xfce-extra/xfce4-pulseaudio-plugin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-pulseaudio-plugin/ChangeLog,v 1.4 2015/05/11 17:52:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-pulseaudio-plugin/ChangeLog,v 1.5 2015/05/12 04:02:30 mgorny Exp $
+
+*xfce4-pulseaudio-plugin-0.2.3 (12 May 2015)
+
+  12 May 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-pulseaudio-plugin-0.2.3.ebuild:
+  Version bump, with libnotify support.
 
 *xfce4-pulseaudio-plugin-0.2.2-r1 (11 May 2015)
 
