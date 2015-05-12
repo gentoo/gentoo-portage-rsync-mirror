@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.238 2015/03/31 20:24:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.239 2015/05/12 19:56:33 mr_bones_ Exp $
+
+*libsdl-1.2.15-r9 (12 May 2015)
+
+  12 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/libsdl-1.2.15-SDL_EnableUNICODE.patch, +libsdl-1.2.15-r9.ebuild:
+  add backported patch from upstream report by Rafał Mużyło via bug #499180 to
+  fix input in some conditions
 
   31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml:
   clean unused ps3 use flag
