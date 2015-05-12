@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8-r1.ebuild,v 1.1 2015/05/08 18:58:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8-r1.ebuild,v 1.2 2015/05/12 17:22:31 pacho Exp $
 
 EAPI="5"
 
@@ -38,7 +38,7 @@ SRC_TEST="do"
 
 DOCFILES="Changes INSTALL README STATUS"
 
-need_apache2
+need_apache2_4
 
 src_prepare() {
 	perl-module_src_prepare

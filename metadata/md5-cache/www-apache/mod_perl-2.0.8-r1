@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare setup test unpack
-DEPEND=>=dev-perl/Apache-Test-1.360 >=virtual/perl-CGI-3.08 dev-lang/perl[ithreads] www-servers/apache =www-servers/apache-2* dev-lang/perl:=[-build(-)]
+DEPEND=>=dev-perl/Apache-Test-1.360 >=virtual/perl-CGI-3.08 dev-lang/perl[ithreads] www-servers/apache =www-servers/apache-2.4* dev-lang/perl:=[-build(-)]
 DESCRIPTION=An embedded Perl interpreter for Apache2
 EAPI=5
 HOMEPAGE=https://projects.apache.org/projects/mod_perl.html
@@ -7,8 +7,8 @@ IUSE=debug
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 PDEPEND=>=dev-perl/Apache-Reload-0.11 >=dev-perl/Apache-SizeLimit-0.95
-RDEPEND=>=dev-perl/Apache-Test-1.360 >=virtual/perl-CGI-3.08 dev-lang/perl[ithreads] www-servers/apache =www-servers/apache-2* dev-lang/perl:=[-build(-)]
+RDEPEND=>=dev-perl/Apache-Test-1.360 >=virtual/perl-CGI-3.08 dev-lang/perl[ithreads] www-servers/apache =www-servers/apache-2.4* dev-lang/perl:=[-build(-)]
 SLOT=1
 SRC_URI=mirror://apache/perl/mod_perl-2.0.8.tar.gz
 _eclasses_=apache-module	5c4c90da2d68c2dc8391666824f1293c	depend.apache	1a38534d3f755d1ab1d92ce120bd7dbd	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	7a1c6bac46bba968758a2f7666af645b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=ade0446d3bbb7bd535847b603b4bb6f7
+_md5_=f53b3778e502bc7e1d74d1c76e6d5a65

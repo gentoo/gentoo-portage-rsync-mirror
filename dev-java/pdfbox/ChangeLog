@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/pdfbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.30 2015/02/22 12:01:04 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/pdfbox/ChangeLog,v 1.31 2015/05/12 17:03:34 monsieurp Exp $
+
+  12 May 2015; Patrice Clement <monsieurp@gentoo.org>
+  files/pdfbox-1.8.8-build.xml.patch, pdfbox-1.8.8.ebuild:
+  Add RESTRICT=test back and turn off tests. Correct wrong slots. Fix bug
+  549110.
 
   22 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org> pdfbox-1.8.8.ebuild:
   fixed installation of jar file (bug #540998)

@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.5 2015/05/12 16:43:07 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.6 2015/05/12 17:27:40 zerochaos Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
-inherit eutils fcaps flag-o-matic python-single-r1 toolchain-funcs user
+inherit eutils fcaps flag-o-matic python-single-r1 readme.gentoo toolchain-funcs user
 
 MY_P=${P/_beta/BETA}
 
@@ -18,6 +18,7 @@ if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://svn.nmap.org/nmap"
 	SRC_URI="http://dev.gentoo.org/~jer/nmap-logo-64.png"
 	KEYWORDS=""
+	#FORCE_PRINT_ELOG="true"
 else
 	SRC_URI="
 		http://nmap.org/dist/${MY_P}.tar.bz2
@@ -59,6 +60,13 @@ DEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
+
+DOC_CONTENTS="To run nmap as normal user you have to add yourself to the \
+nmap group AND pass --privileged on the command line. This security \
+measure ensures that only trusted users are allowed to run nmap. \
+To avoid passing --privileged every time, add \
+'export NMAP_PRIVILEGED=\"\"' to your user environment (eg ~/.bashrc)."
+
 
 pkg_setup() {
 	if use ndiff || use zenmap; then
@@ -153,6 +161,8 @@ src_install() {
 		doicon "${DISTDIR}/nmap-logo-64.png"
 		python_optimize
 	fi
+
+	readme.gentoo_create_doc
 }
 
 pkg_postinst() {
@@ -163,10 +173,16 @@ pkg_postinst() {
 		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
 		"${EROOT}"/usr/bin/nmap
 
-	ewarn "NOTE: To run nmap as normal user you have to add yourself to the"
-	ewarn "nmap group AND pass --privileged on the command line. This security"
-	ewarn "measure ensures that only trusted users are allowed to run nmap."
-	ewarn "To avoid passing --privileged every time, add"
-	ewarn "'export NMAP_PRIVILEGED=\"\"' to your user environment (eg ~/.bashrc)."
+	if [[ ${PV} == "9999" ]] ; then
+		einfo "To run nmap as normal user you have to add yourself to the nmap group"
+		einfo "AND pass --privileged on the command line. This security measure"
+		einfo "ensures that only trusted users are allowed to run nmap. To avoid"
+		einfo "passing --privileged every time, add 'export NMAP_PRIVILEGED=\"\"' to"
+		einfo "your user environment (eg ~/.bashrc)."
+	else
+		if [[ ${REPLACING_VERSIONS} < 6.48 ]]; then
+			FORCE_PRINT_ELOG="true"
+		fi
+		readme.gentoo_print_elog
+	fi
 }
-
