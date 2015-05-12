@@ -1,12 +1,12 @@
 #!/sbin/runscript
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mms-agent/files/mms-monitoring-agent.initd,v 1.1 2015/03/17 13:42:16 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mms-agent/files/mms-monitoring-agent.initd,v 1.2 2015/05/12 09:47:50 ultrabug Exp $
 
 logfile=/var/log/mongodb/mms-monitoring-agent.log
 run_dir=${run_dir:-/run/mongodb}
 
-command="/usr/bin/python2 mongodb-mms-monitoring-agent &>${logfile}"
+command="./mongodb-mms-monitoring-agent &>${logfile}"
 command_background="true"
 
 pidfile=${run_dir}/${SVCNAME}.pid

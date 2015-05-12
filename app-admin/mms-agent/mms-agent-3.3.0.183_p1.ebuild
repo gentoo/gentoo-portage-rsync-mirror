@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mms-agent/mms-agent-3.2.0.177_p1.ebuild,v 1.1 2015/04/15 16:33:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mms-agent/mms-agent-3.3.0.183_p1.ebuild,v 1.1 2015/05/12 09:47:50 ultrabug Exp $
 
 EAPI=5
 
@@ -49,6 +49,7 @@ src_install() {
 
 		insinto ${MY_D}
 		doins mongodb-mms-monitoring-agent
+		fperms +x "${MY_D}"/mongodb-mms-monitoring-agent
 
 		insinto /etc
 		doins monitoring-agent.config
