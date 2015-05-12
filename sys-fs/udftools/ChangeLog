@@ -1,6 +1,22 @@
 # ChangeLog for sys-fs/udftools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.33 2015/05/12 05:00:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udftools/ChangeLog,v 1.35 2015/05/12 05:05:19 vapier Exp $
+
+*udftools-1.0.0b-r10 (12 May 2015)
+
+  12 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/udftools-1.0.0b3-extsize.patch,
+  +files/udftools-1.0.0b3-man-missing-options.patch,
+  +files/udftools-1.0.0b3-mkudffs-bigendian.patch,
+  +files/udftools-1.0.0b3-staticanal.patch,
+  +files/udftools-1.0.0b3-warningfixes.patch,
+  +files/udftools-1.0.0b3-warningfixes2.patch,
+  +files/udftools-1.0.0b3-wrudf_help.patch, +udftools-1.0.0b-r10.ebuild:
+  Update to latest EAPI and import a bunch of Fedora patches.
+
+  12 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/udftools-1.0.0b-limits_h.patch:
+  Pull in stdlib.h for system prototype.
 
   12 May 2015; Mike Frysinger <vapier@gentoo.org> udftools-1.0.0b-r9.ebuild:
   Force older C standard to fix building w/gcc-5 #548324 by Martin Väth.

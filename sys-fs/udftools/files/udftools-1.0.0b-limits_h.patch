@@ -12,11 +12,12 @@ http://bugs.gentoo.org/335511
  #include "cdrwtool.h"
 --- pktsetup/pktsetup.c
 +++ pktsetup/pktsetup.c
-@@ -26,6 +26,7 @@
+@@ -26,6 +26,8 @@
  #include <bits/types.h>
  #include <sys/types.h>
  
 +#include <limits.h> /* INT_MAX */
++#include <stdlib.h> /* system */
  #include <linux/cdrom.h>
  
  /*

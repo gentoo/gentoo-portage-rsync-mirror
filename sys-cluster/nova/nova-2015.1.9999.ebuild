@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.5 2015/05/12 04:47:09 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.6 2015/05/12 05:06:11 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,9 +15,10 @@ EGIT_BRANCH="stable/kilo"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+compute +kvm +network +novncproxy openvswitch sqlite mysql postgres xen"
+IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen"
 REQUIRED_USE="|| ( mysql postgres sqlite )
-			  compute? ( || ( kvm xen ) )"
+				compute-only? ( compute !novncproxy !rabbitmq )
+			  compute? ( ^^ ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.8[${PYTHON_USEDEP}]
@@ -104,7 +105,7 @@ RDEPEND="
 	novncproxy? ( www-apps/novnc )
 	sys-apps/iproute2
 	openvswitch? ( net-misc/openvswitch )
-	net-misc/rabbitmq-server
+	rabbitmq? ( net-misc/rabbitmq-server )
 	sys-fs/sysfsutils
 	sys-fs/multipath-tools
 	net-misc/bridge-utils
@@ -164,7 +165,7 @@ python_install() {
 	doins "etc/nova/rootwrap.d/compute.filters"
 	doins "etc/nova/rootwrap.d/network.filters"
 	#copy migration conf file (not coppied on install via setup.py script)
-	insopts -m 644
+	insopts -m 0644
 	insinto /usr/$(get_libdir)/python2.7/site-packages/nova/db/sqlalchemy/migrate_repo/
 	doins "nova/db/sqlalchemy/migrate_repo/migrate.cfg"
 	#copy the CA cert dir (not coppied on install via setup.py script)

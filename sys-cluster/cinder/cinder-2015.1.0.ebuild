@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2015.1.0.ebuild,v 1.3 2015/05/10 00:01:50 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2015.1.0.ebuild,v 1.4 2015/05/12 05:25:33 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -143,9 +143,12 @@ pkg_setup() {
 	enewuser cinder -1 -1 /var/lib/cinder cinder
 }
 
-#python_compile_all() { leave for next attempt
-#	use doc && emake -C doc html
-#}
+python_compile() {
+		distutils-r1_python_compile
+		mv cinder/test.py cinder/test.py.bak || die
+		./tools/config/generate_sample.sh -b ./ -p cinder -o etc/cinder || die
+		mv cinder/test.py.bak cinder/test.py || die
+}
 
 python_test() {
 	# Let's track progress of this # https://bugs.launchpad.net/swift/+bug/1249727
