@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.336 2015/05/12 16:27:59 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.337 2015/05/12 16:43:07 zerochaos Exp $
+
+  12 May 2015; Rick Farina <zerochaos@gentoo.org> nmap-9999.ebuild:
+  improve postinst message for fcaps
 
   12 May 2015; Rick Farina <zerochaos@gentoo.org> nmap-9999.ebuild:
   add fcaps, bug #492794

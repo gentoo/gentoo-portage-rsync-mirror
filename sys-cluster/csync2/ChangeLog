@@ -1,6 +1,12 @@
 # ChangeLog for sys-cluster/csync2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.38 2014/08/10 20:20:29 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/ChangeLog,v 1.39 2015/05/12 16:41:49 ultrabug Exp $
+
+*csync2-2.0 (12 May 2015)
+
+  12 May 2015; Ultrabug <ultrabug@gentoo.org> csync2-1.34-r2.ebuild,
+  +csync2-2.0.ebuild:
+  EAPI bump, version bump fix #548672
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> csync2-1.34-r2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

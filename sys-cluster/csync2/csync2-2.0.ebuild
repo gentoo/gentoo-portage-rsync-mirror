@@ -1,22 +1,23 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-1.34-r2.ebuild,v 1.6 2015/05/12 16:41:49 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/csync2/csync2-2.0.ebuild,v 1.1 2015/05/12 16:41:49 ultrabug Exp $
 
 EAPI=5
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Cluster synchronization tool"
 HOMEPAGE="http://oss.linbit.com/csync2/"
 SRC_URI="http://oss.linbit.com/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
-IUSE="ssl xinetd"
+IUSE="mysql sqlite ssl xinetd"
 
 RDEPEND=">=net-libs/librsync-0.9.5
-	=dev-db/sqlite-2.8*
+	mysql? ( virtual/mysql )
+	sqlite? ( >=dev-db/sqlite-3.0 )
 	ssl? ( >=net-libs/gnutls-2.7.3 )
 	xinetd? ( sys-apps/xinetd )"
 DEPEND="${RDEPEND}
@@ -24,17 +25,12 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 
-src_prepare() {
-	if use ssl; then
-		epatch "${FILESDIR}"/${P}-gnutls.patch #274213
-		eautoreconf
-	fi
-}
-
 src_configure() {
 	econf \
+		--docdir=/usr/share/doc/${P} \
 		--localstatedir=/var \
 		--sysconfdir=/etc/csync2 \
+		$(use_enable sqlite sqlite3) \
 		$(use_enable ssl gnutls)
 }
 
@@ -49,8 +45,6 @@ src_install() {
 	keepdir /var/lib/csync2
 
 	newinitd "${FILESDIR}"/${PN}.initd ${PN}
-
-	dodoc AUTHORS ChangeLog INSTALL NEWS README TODO csync2_locheck.sh
 }
 
 pkg_postinst() {

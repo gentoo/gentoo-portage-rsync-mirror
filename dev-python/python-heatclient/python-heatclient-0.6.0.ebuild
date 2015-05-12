@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-0.6.0.ebuild,v 1.1 2015/05/12 06:14:22 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-heatclient/python-heatclient-0.6.0.ebuild,v 1.2 2015/05/12 16:34:04 prometheanfire Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
 inherit distutils-r1
 
@@ -25,7 +25,7 @@ DEPEND="
 	${CDEPEND}
 	test? (
 		>=dev-python/hacking-0.8.0[${PYTHON_USEDEP}]
-		<dev-python/hacking-0.9[${PYTHON_USEDEP}]
+		<dev-python/hacking-0.10[${PYTHON_USEDEP}]
 		>=dev-python/coverage-3.6[${PYTHON_USEDEP}]
 		>=dev-python/fixtures-0.3.14[${PYTHON_USEDEP}]
 		>=dev-python/requests-mock-0.6.0[${PYTHON_USEDEP}]

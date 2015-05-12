@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.4 2015/05/12 16:27:59 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.5 2015/05/12 16:43:07 zerochaos Exp $
 
 EAPI=5
 
@@ -163,8 +163,10 @@ pkg_postinst() {
 		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
 		"${EROOT}"/usr/bin/nmap
 
-	ewarn "NOTE: To run nmap  as normal user you have to add yourself to the"
-	ewarn "nmap group. This security measure ensures that only trusted users"
-	ewarn "are allowed to run nmap"
+	ewarn "NOTE: To run nmap as normal user you have to add yourself to the"
+	ewarn "nmap group AND pass --privileged on the command line. This security"
+	ewarn "measure ensures that only trusted users are allowed to run nmap."
+	ewarn "To avoid passing --privileged every time, add"
+	ewarn "'export NMAP_PRIVILEGED=\"\"' to your user environment (eg ~/.bashrc)."
 }
 
