@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/commandergenius
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/ChangeLog,v 1.16 2015/02/09 05:12:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/commandergenius/ChangeLog,v 1.17 2015/05/12 07:56:27 ago Exp $
+
+  12 May 2015; Agostino Sarubbo <ago@gentoo.org> commandergenius-1.8.0.0.ebuild:
+  Stable for amd64, wrt bug #548956
 
   09 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -commandergenius-1.7.4.0.ebuild, -files/commandergenius-1.7.4.0-build.patch,

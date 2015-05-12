@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.226 2015/04/23 11:51:48 tommy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.227 2015/05/12 07:54:21 polynomial-c Exp $
+
+  12 May 2015; Lars Wendler <polynomial-c@gentoo.org> subversion-1.8.13.ebuild:
+  Fixed configure run with USE="-ruby".
 
 *subversion-1.7.20 (23 Apr 2015)
 

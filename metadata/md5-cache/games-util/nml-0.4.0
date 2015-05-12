@@ -4,11 +4,11 @@ DESCRIPTION=Compiler of NML files into grf/nfo files
 EAPI=5
 HOMEPAGE=http://dev.openttdcoop.org/projects/nml
 IUSE=python_targets_python3_3 python_targets_python3_4
-KEYWORDS=~amd64 ~arm ~ppc ~x86
+KEYWORDS=amd64 ~arm ~ppc ~x86
 LICENSE=GPL-2
 RDEPEND=dev-python/pillow[zlib,python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] dev-python/ply[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)] python_targets_python3_3? ( >=dev-lang/python-3.3.2-r2:3.3 ) python_targets_python3_4? ( dev-lang/python:3.4 ) >=dev-lang/python-exec-2:=[python_targets_python3_3(-)?,python_targets_python3_4(-)?,-python_single_target_python3_3(-),-python_single_target_python3_4(-)]
 REQUIRED_USE=|| ( python_targets_python3_3 python_targets_python3_4 )
 SLOT=0
 SRC_URI=http://bundles.openttdcoop.org/nml/releases/0.4.0/nml-0.4.0.r5527-3b43d37dec19.tar.gz -> nml-0.4.0.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	mercurial	2fbda5894dda6392b71334ee9a92de0b	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	6d3a3cb5705b9fff1aeb7cfa4e3336fe	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=34493a00921c7d3a9b4ff54c7fe4a339
+_md5_=5c7cfc64536778af717a4ae8c7130fab

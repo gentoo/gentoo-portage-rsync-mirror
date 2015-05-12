@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellweather
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.42 2015/05/11 19:38:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/ChangeLog,v 1.43 2015/05/12 07:49:45 jlec Exp $
+
+  12 May 2015; Justin Lecher <jlec@gentoo.org>
+  -files/gkrellweather-2.0.7-Move-GrabWeather.patch,
+  -files/gkrellweather-2.0.7-Respect-LDFLAGS.patch, -gkrellweather-2.0.7.ebuild:
+  Drop old
 
   11 May 2015; Mikle Kolyada <zlogene@gentoo.org> gkrellweather-2.0.8.ebuild:
   sparc stable wrt bug #543924
