@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.1.ebuild,v 1.1 2015/03/17 09:32:55 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.1 2015/05/12 03:54:05 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -59,7 +59,17 @@ python_test() {
 	# test_https_connection_read_timeout is found to hang and
 	# test_verified is found to fail  under py2.7 and pypy.
 	# upstream by their own admission describe the tests as flakey
-	nosetests -v || die "Tests fail with ${EPYTHON}"
+
+	# __init__.py uses a local import requiring move to BUILD_DIR and copy of tests
+	pushd "${BUILD_DIR}"/lib > /dev/null
+	cp -ar "${S}"/test .
+	# tests under with_dummyserver mssing a required file
+	rm -rf test/with_dummyserver/ || die
+	rm -f test/contrib/test_pyopenssl.py
+	nosetests -v  ./test/ || die "Tests fail with ${EPYTHON}"
+
+	rm -rf ./test/
+	popd > /dev/null || die
 }
 
 python_install_all() {
