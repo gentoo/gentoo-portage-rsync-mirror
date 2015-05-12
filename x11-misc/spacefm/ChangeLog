@@ -1,8 +1,9 @@
 # ChangeLog for x11-misc/spacefm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.68 2015/05/11 10:22:28 zlg Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/ChangeLog,v 1.69 2015/05/12 12:31:24 zlg Exp $
 
-  11 May 2015; <daniel@gentoo.org> spacefm-9999.ebuild, metadata.xml:
+  11 May 2015; Daniel Campbell <zlg@gentoo.org> spacefm-9999.ebuild,
+  metadata.xml:
   Add video-thumbnail USE flag, fix maintainer data
 
   11 Mar 2015; Yixun Lan <dlan@gentoo.org> -spacefm-0.8.7.ebuild:
