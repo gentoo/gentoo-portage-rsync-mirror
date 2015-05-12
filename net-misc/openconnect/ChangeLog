@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.44 2015/04/27 19:01:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.45 2015/05/12 01:11:06 floppym Exp $
+
+*openconnect-7.06-r1 (12 May 2015)
+
+  12 May 2015; Mike Gilbert <floppym@gentoo.org> +files/openconnect.init.in-r4,
+  +openconnect-7.06-r1.ebuild, -files/openconnect.init.in-r1:
+  Revamp init script. Should resolve bug 547970.
 
   27 Apr 2015; Mike Gilbert <floppym@gentoo.org> -openconnect-5.01.ebuild,
   -openconnect-5.02.ebuild, -openconnect-5.03.ebuild,
