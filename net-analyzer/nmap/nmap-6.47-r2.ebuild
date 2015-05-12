@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r2.ebuild,v 1.1 2015/01/26 12:08:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r2.ebuild,v 1.2 2015/05/12 16:06:37 zerochaos Exp $
 
 EAPI=5
 
@@ -43,7 +43,7 @@ RDEPEND="
 	ndiff? ( ${PYTHON_DEPS} )
 	nls? ( virtual/libintl )
 	nmap-update? ( dev-libs/apr dev-vcs/subversion )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0= )
 "
 DEPEND="
 	${RDEPEND}

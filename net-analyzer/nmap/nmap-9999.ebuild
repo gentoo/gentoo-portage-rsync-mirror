@@ -1,32 +1,40 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.2 2015/01/26 12:08:35 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.4 2015/05/12 16:27:59 zerochaos Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
-inherit eutils flag-o-matic python-single-r1 subversion toolchain-funcs
+inherit eutils fcaps flag-o-matic python-single-r1 toolchain-funcs user
 
 MY_P=${P/_beta/BETA}
 
 DESCRIPTION="A utility for network exploration or security auditing"
 HOMEPAGE="http://nmap.org/"
-ESVN_REPO_URI="https://svn.nmap.org/nmap"
-SRC_URI="
-	http://dev.gentoo.org/~jer/nmap-logo-64.png
-"
+
+if [[ ${PV} == "9999" ]] ; then
+	inherit subversion
+	ESVN_REPO_URI="https://svn.nmap.org/nmap"
+	SRC_URI="http://dev.gentoo.org/~jer/nmap-logo-64.png"
+	KEYWORDS=""
+else
+	SRC_URI="
+		http://nmap.org/dist/${MY_P}.tar.bz2
+		http://dev.gentoo.org/~jer/nmap-logo-64.png
+		"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
 
-IUSE="ipv6 +lua system-lua ncat ndiff nls nmap-update nping ssl zenmap"
+IUSE="ipv6 +nse system-lua ncat ndiff nls nmap-update nping ssl zenmap"
 NMAP_LINGUAS=( de fr hr it ja pl pt_BR ru zh )
 IUSE+=" ${NMAP_LINGUAS[@]/#/linguas_}"
 
 REQUIRED_USE="
-	system-lua? ( lua )
+	system-lua? ( nse )
 	ndiff? ( ${PYTHON_REQUIRED_USE} )
 	zenmap? ( ${PYTHON_REQUIRED_USE} )
 "
@@ -43,7 +51,7 @@ RDEPEND="
 	ndiff? ( ${PYTHON_DEPS} )
 	nls? ( virtual/libintl )
 	nmap-update? ( dev-libs/apr dev-vcs/subversion )
-	ssl? ( dev-libs/openssl )
+	ssl? ( dev-libs/openssl:0= )
 "
 DEPEND="
 	${RDEPEND}
@@ -67,7 +75,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-6.25-liblua-ar.patch \
 		"${FILESDIR}"/${PN}-6.46-uninstaller.patch \
 		"${FILESDIR}"/${PN}-6.47-no-libnl.patch \
-		"${FILESDIR}"/${PN}-6.47-no-FORTIFY_SOURCE.patch
+		"${FILESDIR}"/${PN}-9999-no-FORTIFY_SOURCE.patch
 
 	if use nls; then
 		local lingua=''
@@ -106,7 +114,7 @@ src_configure() {
 		$(use_enable ipv6) \
 		$(use_enable nls) \
 		$(use_with zenmap) \
-		$(usex lua --with-liblua=$(usex system-lua /usr included '' '') --without-liblua) \
+		$(usex nse --with-liblua=$(usex system-lua /usr included '' '') --without-liblua) \
 		$(use_with ncat) \
 		$(use_with ndiff) \
 		$(use_with nmap-update) \
@@ -146,3 +154,17 @@ src_install() {
 		python_optimize
 	fi
 }
+
+pkg_postinst() {
+	# Add group for users allowed to run nmap.
+	enewgroup nmap
+
+	fcaps -o 0 -g nmap -m 4755 -M 0755 \
+		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
+		"${EROOT}"/usr/bin/nmap
+
+	ewarn "NOTE: To run nmap  as normal user you have to add yourself to the"
+	ewarn "nmap group. This security measure ensures that only trusted users"
+	ewarn "are allowed to run nmap"
+}
+
