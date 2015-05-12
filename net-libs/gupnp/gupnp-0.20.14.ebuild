@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.12-r1.ebuild,v 1.9 2015/04/08 18:04:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gupnp/gupnp-0.20.14.ebuild,v 1.1 2015/05/12 22:12:42 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
-VALA_MIN_API_VERSION="0.14"
 VALA_USE_DEPEND="vapigen"
 # FIXME: Claims to works with python3 but appears to be wishful thinking
 PYTHON_COMPAT=( python2_7 )
@@ -17,17 +16,18 @@ HOMEPAGE="https://wiki.gnome.org/Projects/GUPnP"
 
 LICENSE="LGPL-2"
 SLOT="0/4"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="connman +introspection kernel_linux networkmanager"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	?? ( connman networkmanager )"
 
+# prefix: uuid dependency can be adapted to non-linux platforms
 RDEPEND="
 	${PYTHON_DEPS}
 	>=net-libs/gssdp-0.14.7:0=[introspection?,${MULTILIB_USEDEP}]
-	>=net-libs/libsoup-2.44.2:2.4[introspection?,${MULTILIB_USEDEP}]
-	>=dev-libs/glib-2.34.3:2[${MULTILIB_USEDEP}]
+	>=net-libs/libsoup-2.48.0:2.4[introspection?,${MULTILIB_USEDEP}]
+	>=dev-libs/glib-2.40:2[${MULTILIB_USEDEP}]
 	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
 	|| (
 		>=sys-apps/util-linux-2.24.1-r3[${MULTILIB_USEDEP}]
@@ -56,13 +56,8 @@ multilib_src_configure() {
 	use connman && backend=connman
 	use networkmanager && backend=network-manager
 
-	# fake connman.pc to avoid pulling it in unnecessarily (only dbus
-	# interface is used) and fix multilib. [fixed in vcs]
-	# https://bugzilla.gnome.org/show_bug.cgi?id=731457
-
 	ECONF_SOURCE=${S} \
 	gnome2_src_configure \
-		CONNMAN_CFLAGS=' ' CONNMAN_LIBS=' ' \
 		$(multilib_native_use_enable introspection) \
 		--disable-static \
 		--with-context-manager=${backend}
