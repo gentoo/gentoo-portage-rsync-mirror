@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/print-manager-4.14.3.ebuild,v 1.6 2015/02/17 11:06:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/print-manager/print-manager-4.14.3.ebuild,v 1.7 2015/05/12 18:45:57 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,8 @@ RDEPEND="${DEPEND}
 	!kde-base/printer-applet:4
 	!kde-base/system-config-printer-kde:4
 	!kde-misc/print-manager
-	gtk? ( app-admin/system-config-printer-gnome )
+	gtk? ( || ( app-admin/system-config-printer-gnome
+			app-admin/system-config-printer ) )
 "
 
 pkg_postinst(){
@@ -26,7 +27,7 @@ pkg_postinst(){
 		ewarn "By switching off \"gtk\" USE flag, you have chosen to do without"
 		ewarn "an important, though optional, runtime dependency:"
 		ewarn
-		ewarn "app-admin/system-config-printer-gnome"
+		ewarn "app-admin/system-config-printer"
 		ewarn
 		ewarn "${PN} will work nevertheless, but is going to be less comfortable"
 		ewarn "and will show the following error status during runtime:"

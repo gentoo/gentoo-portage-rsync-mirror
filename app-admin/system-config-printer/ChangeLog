@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/system-config-printer
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/ChangeLog,v 1.9 2015/05/12 18:41:22 pacho Exp $
+
+*system-config-printer-1.4.8 (12 May 2015)
+
+  12 May 2015; Pacho Ramos <pacho@gentoo.org> +metadata.xml,
+  +system-config-printer-1.4.8.ebuild:
+  Version bump, merge splitted common and gnome packages (#508344)
