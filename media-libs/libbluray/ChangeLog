@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libbluray
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.75 2015/05/11 09:22:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libbluray/ChangeLog,v 1.76 2015/05/12 06:46:42 aballier Exp $
+
+  12 May 2015; Alexis Ballier <aballier@gentoo.org> libbluray-0.8.0.ebuild:
+  fix install with use=utils, bug #549202
 
   11 May 2015; Alexis Ballier <aballier@gentoo.org> libbluray-0.8.0.ebuild:
   fix build with java useflag, bug #549160

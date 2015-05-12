@@ -10,4 +10,4 @@ RDEPEND=xml? ( >=dev-libs/libxml2-2.9.1-r4[abi_x86_32(-)?,abi_x86_64(-)?,abi_x86
 SLOT=0
 SRC_URI=http://ftp.videolan.org/pub/videolan/libbluray/0.8.0/libbluray-0.8.0.tar.bz2
 _eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f7dce580d4098b526be3fa17d4242820	libtool	52d0e17251d04645ffaa61bfdd858944	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multilib-build	0983c7893df461213a05f791cc7dea6d	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=3cba533c49b712544d6190613e8c4d78
+_md5_=1f1e4f6c74fb78ec5895aa008614b15e
