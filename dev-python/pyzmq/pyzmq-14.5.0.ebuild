@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.5.0.ebuild,v 1.3 2015/02/17 12:04:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzmq/pyzmq-14.5.0.ebuild,v 1.4 2015/05/12 14:55:14 idella4 Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ PY2_USEDEP=$(python_gen_usedep python2_7)
 RDEPEND="
 	>=net-libs/zeromq-4.0.5:=
 	dev-python/py[${PYTHON_USEDEP}]
-	dev-python/cffi[${PYTHON_USEDEP}]
+	dev-python/cffi:=[${PYTHON_USEDEP}]
 	green? ( dev-python/gevent[${PY2_USEDEP}] )"
 DEPEND="${RDEPEND}
 	test? (
@@ -33,6 +33,12 @@ DEPEND="${RDEPEND}
 		dev-python/sphinx[${PYTHON_USEDEP}]
 		dev-python/numpydoc[${PYTHON_USEDEP}]
 	)"
+
+python_prepare_all() {
+	# Prevent un-needed download during build
+	sed -e "/'sphinx.ext.intersphinx',/d" -i docs/source/conf.py || die
+	distutils-r1_python_prepare_all
+}
 
 python_configure_all() {
 	tc-export CC
