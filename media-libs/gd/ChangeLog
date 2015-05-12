@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/gd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.109 2015/04/09 05:37:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.110 2015/05/12 07:16:38 vapier Exp $
+
+  12 May 2015; Mike Frysinger <vapier@gentoo.org> gd-2.0.35-r4.ebuild,
+  gd-2.1.1-r1.ebuild:
+  Depend on jpeg/libpng subslots to get autorebuilds.
 
 *gd-2.1.1-r1 (09 Apr 2015)
 

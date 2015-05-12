@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/xcursorgen-1.0.6.ebuild,v 1.10 2015/03/14 13:59:53 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/xcursorgen/xcursorgen-1.0.6.ebuild,v 1.11 2015/05/12 07:13:04 vapier Exp $
 
 EAPI=5
 inherit xorg-2
@@ -12,5 +12,5 @@ IUSE=""
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXcursor
-	media-libs/libpng:0"
+	media-libs/libpng:0="
 DEPEND="${RDEPEND}"

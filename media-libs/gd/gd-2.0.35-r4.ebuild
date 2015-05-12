@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.16 2015/03/21 20:49:05 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.35-r4.ebuild,v 1.17 2015/05/12 07:16:38 vapier Exp $
 
 EAPI="5"
 
@@ -19,8 +19,8 @@ IUSE="fontconfig jpeg png static-libs truetype xpm zlib"
 REQUIRED_USE="prefix? ( fontconfig )"
 
 RDEPEND="fontconfig? ( >=media-libs/fontconfig-2.10.92[${MULTILIB_USEDEP}] )
-	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
-	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0=[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.6.10:0=[${MULTILIB_USEDEP}] )
 	truetype? ( >=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}] )
 	xpm? ( >=x11-libs/libXpm-3.5.10-r1[${MULTILIB_USEDEP}] >=x11-libs/libXt-1.1.4[${MULTILIB_USEDEP}] )
 	zlib? ( >=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}] )"
