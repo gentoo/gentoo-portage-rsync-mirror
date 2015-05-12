@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.1 2015/05/12 03:54:05 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.2 2015/05/12 05:47:04 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -60,16 +60,13 @@ python_test() {
 	# test_verified is found to fail  under py2.7 and pypy.
 	# upstream by their own admission describe the tests as flakey
 
-	# __init__.py uses a local import requiring move to BUILD_DIR and copy of tests
-	pushd "${BUILD_DIR}"/lib > /dev/null
-	cp -ar "${S}"/test .
-	# tests under with_dummyserver mssing a required file
-	rm -rf test/with_dummyserver/ || die
-	rm -f test/contrib/test_pyopenssl.py
-	nosetests -v  ./test/ || die "Tests fail with ${EPYTHON}"
+	# __init__.py uses a local import requiring use of PYTHONPATH=blank to offset
+	# Currently requires disabling FEATURES=network-sandbox (in make.conf)
+	# Failures currently occur under py2.7 with this disabled. After joint testing
+	# it's planned for this to have further investigation. 
+	# Further adjustments to this phase to come
 
-	rm -rf ./test/
-	popd > /dev/null || die
+	PYTHONPATH= nosetests -v  ./test/ || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {

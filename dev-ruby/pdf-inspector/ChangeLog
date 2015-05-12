@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-inspector
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.17 2014/11/02 18:41:56 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.18 2015/05/12 05:40:39 graaff Exp $
+
+  12 May 2015; Hans de Graaff <graaff@gentoo.org> pdf-inspector-1.2.0.ebuild:
+  Add ruby22.
 
 *pdf-inspector-1.2.0 (02 Nov 2014)
 
