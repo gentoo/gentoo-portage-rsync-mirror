@@ -1,10 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/diffpdf/diffpdf-1.9.2.ebuild,v 1.3 2013/03/17 16:00:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/diffpdf/diffpdf-2.1.3.ebuild,v 1.1 2015/05/12 21:46:18 reavertm Exp $
 
 EAPI=5
 
-inherit qt4-r2 eutils
+inherit qt4-r2 eutils qmake-utils
 
 DESCRIPTION="Program that textually or visually compares two PDF files"
 HOMEPAGE="http://www.qtrac.eu/diffpdf.html"
@@ -16,16 +16,16 @@ SLOT="0"
 IUSE=""
 
 DEPEND="
-	>=app-text/poppler-0.12.3:=[qt4]
-	>=dev-qt/qtcore-4.5:4
-	>=dev-qt/qtgui-4.5:4
+	app-text/poppler:=[qt4]
+	>=dev-qt/qtcore-4.6:4
+	>=dev-qt/qtgui-4.6:4
 "
 RDEPEND="${DEPEND}"
 
 DOCS="README"
 
 src_configure() {
-	lrelease diffpdf.pro || die 'Generating translations failed'
+	$(qt4_get_bindir)/lrelease diffpdf.pro || die 'Generating translations failed'
 	qt4-r2_src_configure
 }
 
