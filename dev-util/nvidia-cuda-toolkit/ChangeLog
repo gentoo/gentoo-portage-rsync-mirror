@@ -2,6 +2,17 @@
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/dev-util/nvidia-cuda-toolkit/ChangeLog,v 1.102 2015/02/19 07:22:26 jlec Exp $
 
+  12 May 2015; Marius Brehler <marbre@linux.sungazer.de>
+  nvidia-cuda-toolkit-6.5.14.ebuild, nvidia-cuda-toolkit-6.5.19-r1.ebuild,
+  nvidia-cuda-toolkit-6.5.19.ebuild:
+  Add gcc-4.7 support
+
+*nvidia-cuda-toolkit-7.0.28 (12 May 2015)
+
+  12 May 2015; Marius Brehler <marbre@linux.sungazer.de>
+  +nvidia-cuda-toolkit-7.0.28.ebuild:
+  Version bump
+
 *nvidia-cuda-toolkit-6.5.19-r1 (19 Feb 2015)
 
   19 Feb 2015; Justin Lecher <jlec@gentoo.org>
