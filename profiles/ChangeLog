@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9989 2015/05/10 14:33:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9990 2015/05/12 14:15:37 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 May 2015; Michael Palimaka <kensington@gentoo.org>
+  targets/desktop/plasma/package.use:
+  Avoid net-libs/libkpeople blockers with KF5.
 
   10 May 2015; Mike Gilbert <floppym@gentoo.org> package.mask:
   Also mask open-vm-tools-kmod snapshots.

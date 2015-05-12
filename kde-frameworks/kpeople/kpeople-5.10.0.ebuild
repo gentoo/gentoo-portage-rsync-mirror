@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpeople/kpeople-5.10.0.ebuild,v 1.1 2015/05/09 10:36:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpeople/kpeople-5.10.0.ebuild,v 1.2 2015/05/12 14:10:51 kensington Exp $
 
 EAPI=5
 
@@ -28,4 +28,5 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!net-libs/kpeople:5
+	!net-libs/libkpeople[-minimal(-)]
 "
