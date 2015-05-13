@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.22.ebuild,v 1.4 2015/05/13 12:18:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.23.ebuild,v 1.1 2015/05/13 12:18:53 jlec Exp $
 
 EAPI=5
 
@@ -40,13 +40,14 @@ python_test() {
 	distutils_install_for_testing
 	cd tests || die
 	VIRTUALX_COMMAND="${EPYTHON}" \
-		VEUSZ_RESOURCE_DIR="${TEST_DIR}/lib/veusz" \
+		VEUSZ_RESOURCE_DIR="${S}" \
 		virtualmake runselftest.py
 }
 
 python_install() {
 	distutils-r1_python_install
 	# symlink the license, bug #341653
+	rm "${D}/$(python_get_sitedir)"/${PN}/{COPYING,AUTHORS,ChangeLog} || die
 	ln -s "${PORTDIR}"/licenses/${LICENSE} \
 		"${D}/$(python_get_sitedir)"/${PN}/COPYING || die
 }
