@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/openpyxl-2.1.0.ebuild,v 1.2 2015/02/16 15:48:41 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/openpyxl-2.1.0.ebuild,v 1.3 2015/05/13 12:50:14 jlec Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python2_7 python3_{3,4} )
 inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="Pure python reader and writer of Excel OpenXML files"
-HOMEPAGE="http://bitbucket.org/ericgazoni/openpyxl-328/wiki/Home"
+HOMEPAGE="http://openpyxl.readthedocs.org"
 SRC_URI="https://bitbucket.org/ericgazoni/openpyxl-328/get/${PV}.tar.bz2 -> ${P}.tar.bz2"
 
 LICENSE="MIT"

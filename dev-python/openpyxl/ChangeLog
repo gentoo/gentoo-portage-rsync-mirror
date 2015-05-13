@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/openpyxl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/ChangeLog,v 1.13 2015/04/07 14:16:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/ChangeLog,v 1.14 2015/05/13 12:50:14 jlec Exp $
+
+*openpyxl-2.2.2 (13 May 2015)
+*openpyxl-9999 (13 May 2015)
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org> +openpyxl-2.2.2.ebuild,
+  +openpyxl-9999.ebuild, -openpyxl-1.7.0.ebuild, -openpyxl-1.9.0.ebuild,
+  -openpyxl-2.0.2.ebuild, openpyxl-2.1.0.ebuild:
+  Version Bump; drop old
 
   16 Feb 2015; Pacho Ramos <pacho@gentoo.org> openpyxl-2.1.0.ebuild:
   amd64/x86 stable, bug #530324

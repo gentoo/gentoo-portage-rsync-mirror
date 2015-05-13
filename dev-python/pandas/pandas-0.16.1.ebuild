@@ -1,21 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.12 2015/05/13 12:50:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.16.1.ebuild,v 1.1 2015/05/13 12:50:55 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} )
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils flag-o-matic git-r3 virtualx
+inherit distutils-r1 eutils flag-o-matic virtualx
 
 DESCRIPTION="Powerful data structures for data analysis and statistics"
 HOMEPAGE="http://pandas.pydata.org/"
-SRC_URI=""
-EGIT_REPO_URI="https://github.com/pydata/pandas.git"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc excel html test R"
 
 EXTRA_DEPEND="
@@ -33,6 +33,7 @@ CDEPEND="
 	>=dev-python/python-dateutil-2.0[${PYTHON_USEDEP}]
 	!~dev-python/openpyxl-1.9.0[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}
+	>=dev-python/cython-0.19.1[${PYTHON_USEDEP}]
 	doc? (
 		dev-python/beautifulsoup:4[${PYTHON_USEDEP}]
 		dev-python/ipython[${PYTHON_USEDEP}]
@@ -79,7 +80,7 @@ RDEPEND="${CDEPEND}
 	)
 	R? ( dev-python/rpy[${PYTHON_USEDEP}] )"
 
-_PATCHES=(
+PATCHES=(
 	"${FILESDIR}"/${P}-zoneinfo.patch
 )
 

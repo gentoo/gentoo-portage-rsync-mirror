@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/g3data
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.15 2015/05/13 09:37:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/g3data/ChangeLog,v 1.16 2015/05/13 12:34:55 jlec Exp $
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org> -g3data-1.5.3.ebuild,
+  g3data-1.5.4.ebuild:
+  Drop old; obsoletes bug #538534; fix HOMEPAGE, bug #523562
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> g3data-1.5.4.ebuild:
   Stable for x86, wrt bug #549152
