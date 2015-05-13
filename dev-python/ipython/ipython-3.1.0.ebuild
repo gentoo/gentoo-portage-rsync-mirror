@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.1.0.ebuild,v 1.1 2015/04/04 18:12:08 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.1.0.ebuild,v 1.2 2015/05/13 15:16:36 jlec Exp $
 
 EAPI=5
 
@@ -53,8 +53,9 @@ RDEPEND="${CDEPEND}
 	)
 	qt4? (
 		|| (
-			dev-python/PyQt4[${PYTHON_USEDEP}]
-			dev-python/pyside[${PYTHON_USEDEP}]
+			dev-python/PyQt4[${PYTHON_USEDEP},svg]
+			dev-python/PyQt5[${PYTHON_USEDEP},svg]
+			dev-python/pyside[${PYTHON_USEDEP},svg]
 		)
 		dev-python/pygments[${PYTHON_USEDEP}]
 		>=dev-python/pyzmq-13[${PYTHON_USEDEP}] )"

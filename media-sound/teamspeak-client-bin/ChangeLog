@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/teamspeak-client-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.39 2015/03/21 18:41:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak-client-bin/ChangeLog,v 1.40 2015/05/13 15:09:35 mgorny Exp $
+
+*teamspeak-client-bin-3.0.16-r1 (13 May 2015)
+
+  13 May 2015; Michał Górny <mgorny@gentoo.org>
+  +teamspeak-client-bin-3.0.16-r1.ebuild, -teamspeak-client-bin-3.0.16.ebuild:
+  Unbundle libquazip, bug #548048. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/116 by karolherbst.
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org>
   teamspeak-client-bin-3.0.13.1.ebuild, teamspeak-client-bin-3.0.16.ebuild:

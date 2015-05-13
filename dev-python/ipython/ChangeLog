@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.169 2015/04/07 14:15:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ChangeLog,v 1.170 2015/05/13 15:16:36 jlec Exp $
+
+  13 May 2015; Justin Lecher <jlec@gentoo.org> ipython-3.1.0.ebuild:
+  Add missing USE dep and PyQt5 support, bug #548440
 
 *ipython-3.1.0 (04 Apr 2015)
 

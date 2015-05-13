@@ -1,6 +1,15 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.602 2015/05/11 19:39:45 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.603 2015/05/13 15:16:48 k_f Exp $
+
+*gnupg-2.1.4 (13 May 2015)
+
+  13 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.1.4.ebuild,
+  -files/gnupg-2.1.1-misc-cve.patch,
+  -files/gnupg-2.1.3-dirmngr-Fix-segfault-in-ldap-engine.patch,
+  -files/gnupg-2.1.3-dirmngr-no-ldap.patch,
+  -files/gnupg-2.1.3-gpg-fix-null-segv.patch, -gnupg-2.1.3-r3.ebuild:
+  New upstream version 2.1.4, cleanup old files
 
   11 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> -gnupg-1.4.18.ebuild:
   Remove vulnerable version c.f bug #541568

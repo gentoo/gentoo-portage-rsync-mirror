@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/isl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.32 2015/04/13 08:58:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/isl/ChangeLog,v 1.33 2015/05/13 15:12:05 mgorny Exp $
+
+  13 May 2015; Michał Górny <mgorny@gentoo.org>
+  files/isl-0.07-gdb-autoload-dir.patch:
+  Fix Prefix, https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/110 by
+  alyst.
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> isl-0.12.2.ebuild:
   Stable for alpha, wrt bug #545124
