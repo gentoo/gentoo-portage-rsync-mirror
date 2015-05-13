@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/slf4j-api
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.22 2014/04/25 06:01:13 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.23 2015/05/13 14:18:58 monsieurp Exp $
+
+  13 May 2015; Patrice Clement <monsieurp@gentoo.org> slf4j-api-1.7.7.ebuild:
+  Correct wrong slot.
 
 *slf4j-api-1.7.7 (25 Apr 2014)
 
