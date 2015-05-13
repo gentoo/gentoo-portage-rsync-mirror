@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.102 2015/05/08 02:31:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.103 2015/05/13 05:59:42 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> libvncserver-0.9.10-r1.ebuild:
+  sparc stable wrt bug #523590
 
   08 May 2015; Ian Delaney <idella4@gentoo.org> libvncserver-0.9.10-r3.ebuild,
   metadata.xml:

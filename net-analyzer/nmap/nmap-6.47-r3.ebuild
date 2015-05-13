@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.10 2015/05/13 05:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r3.ebuild,v 1.2 2015/05/13 05:51:15 jer Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 IUSE="ipv6 +nse system-lua ncat ndiff nls nmap-update nping ssl zenmap"
-NMAP_LINGUAS=( de fr hr it ja pl pt_BR ru zh )
+NMAP_LINGUAS=( de fr hr it ja pl pt_BR ru )
 IUSE+=" ${NMAP_LINGUAS[@]/#/linguas_}"
 
 REQUIRED_USE="
@@ -82,8 +82,7 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-6.01-make.patch \
 		"${FILESDIR}"/${PN}-6.25-liblua-ar.patch \
 		"${FILESDIR}"/${PN}-6.46-uninstaller.patch \
-		"${FILESDIR}"/${PN}-6.47-no-libnl.patch \
-		"${FILESDIR}"/${PN}-no-FORTIFY_SOURCE.patch
+		"${FILESDIR}"/${PN}-6.47-no-libnl.patch
 
 	if use nls; then
 		local lingua=''

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.87 2015/05/11 19:42:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.88 2015/05/13 05:45:32 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> patch-2.7.5.ebuild:
+  ia64 stable wrt bug #548120
 
   11 May 2015; Mikle Kolyada <zlogene@gentoo.org> patch-2.7.5.ebuild:
   sparc stable wrt bug #548120
