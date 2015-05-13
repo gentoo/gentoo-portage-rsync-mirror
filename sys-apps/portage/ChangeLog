@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/portage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1445 2015/05/11 19:15:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.1446 2015/05/13 21:06:42 dolsen Exp $
+
+*portage-2.2.19 (13 May 2015)
+
+  13 May 2015; Brian Dolbec <dolsen@gentoo.org> -portage-2.2.15.ebuild,
+  -portage-2.2.17.ebuild, +portage-2.2.19.ebuild:
+  Bump, remove old ~ versions. Fixes bugs 542732, 501866, 543818, 545252,
+  545270, 544624, 525376, 546010, 546176, 547086, 546512, 547414, 
+  542796, 547532, 547086, 547390, 325009, 547736, 428098, 547778, 548438,
+  532784, 548516, 548556, 548710, 547732, 488836, 256376, 549072, 
+  549322.
 
   11 May 2015; Mikle Kolyada <zlogene@gentoo.org> portage-2.2.18.ebuild:
   ia64 stable wrt bug #541116

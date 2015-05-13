@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.6.ebuild,v 1.5 2013/08/03 04:58:50 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.6.ebuild,v 1.6 2015/05/13 21:08:11 pacho Exp $
 
 inherit gnatbuild
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNAT Ada Compiler - gcc version"
 HOMEPAGE="http://gcc.gnu.org/"
 LICENSE="GMGPL"
 
-IUSE=""
+IUSE="doc lto" # doc and lto from gnatbuild.eclass
 
 # SLOT is set in gnatbuild.eclass, depends only on PV (basically SLOT=GCCBRANCH)
 # so the URI's are static.
@@ -19,7 +19,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2
 	ppc?   ( http://dev.gentoo.org/~george/src/gnatboot-4.1-ppc.tar.bz2 )"
 #	sparc? ( mirror://gentoo/gnatboot-${BOOT_SLOT}-sparc.tar.bz2 )
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ppc x86"
 
 # starting with 4.3.0 gnat needs these libs
 RDEPEND=">=dev-libs/mpfr-2.3.1

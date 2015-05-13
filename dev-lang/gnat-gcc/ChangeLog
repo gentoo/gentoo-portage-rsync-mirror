@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/gnat-gcc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.67 2014/08/05 11:42:10 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.69 2015/05/13 21:09:04 pacho Exp $
+
+  13 May 2015; Pacho Ramos <pacho@gentoo.org> -gnat-gcc-4.4.3.ebuild,
+  -gnat-gcc-4.4.5.ebuild:
+  Drop old
+
+  13 May 2015; Pacho Ramos <pacho@gentoo.org> gnat-gcc-4.3.6.ebuild,
+  gnat-gcc-4.4.7.ebuild, gnat-gcc-4.5.4.ebuild, gnat-gcc-4.6.4.ebuild:
+  Add doc and lto USEs as they are used from eclass for this version (#515408)
 
   05 Aug 2014; Raúl Porcel <armin76@gentoo.org> gnat-gcc-4.3.5.ebuild,
   gnat-gcc-4.4.3.ebuild, gnat-gcc-4.4.5.ebuild, gnat-gcc-4.4.7.ebuild,
