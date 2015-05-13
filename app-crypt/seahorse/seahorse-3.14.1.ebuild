@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.14.1.ebuild,v 1.3 2015/03/15 13:14:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-3.14.1.ebuild,v 1.4 2015/05/13 16:54:49 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -26,6 +26,7 @@ COMMON_DEPEND="
 	net-misc/openssh
 	>=app-crypt/gpgme-1
 	>=app-crypt/gnupg-1.4
+	<app-crypt/gnupg-2.1
 
 	ldap? ( net-nds/openldap:= )
 	zeroconf? ( >=net-dns/avahi-0.6:= )

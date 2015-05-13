@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.191 2015/03/15 13:14:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.192 2015/05/13 16:54:49 pacho Exp $
+
+  13 May 2015; Pacho Ramos <pacho@gentoo.org> -seahorse-3.12.2.ebuild,
+  -seahorse-3.14.0.ebuild, seahorse-3.14.1.ebuild:
+  Not compatible with gnupg-2.1 (#547456), drop old
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> seahorse-3.14.1.ebuild:
   x86 stable, bug 534012

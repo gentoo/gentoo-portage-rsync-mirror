@@ -1,6 +1,11 @@
 # ChangeLog for games-simulation/openttd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.159 2015/05/13 09:29:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/openttd/ChangeLog,v 1.160 2015/05/13 16:33:13 mr_bones_ Exp $
+
+  13 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/openttd-1.4.4-cflags.patch, -files/openttd-1.4.4-freetype.patch,
+  -openttd-1.4.4.ebuild:
+  old
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> openttd-1.5.0.ebuild:
   Stable for x86, wrt bug #548882

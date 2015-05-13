@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.11.1.ebuild,v 1.2 2015/05/10 04:39:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/megaglest/megaglest-3.11.1.ebuild,v 1.3 2015/05/13 16:57:34 mr_bones_ Exp $
 
 # google-breakpad
 # TODO: fribidi, libvorbis static
@@ -70,7 +70,8 @@ src_prepare() {
 		need-wxwidgets unicode
 	fi
 
-	epatch "${FILESDIR}"/${P}-static-build.patch
+	epatch "${FILESDIR}"/${P}-static-build.patch \
+		"${FILESDIR}"/${P}-cmake.patch
 }
 
 src_configure() {
