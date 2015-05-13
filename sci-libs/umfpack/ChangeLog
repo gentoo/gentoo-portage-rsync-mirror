@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/umfpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.58 2015/05/06 06:28:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/umfpack/ChangeLog,v 1.59 2015/05/13 07:01:52 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> umfpack-5.6.2.ebuild:
+  ppc64 stable wrt bug #534650
 
   06 May 2015; Justin Lecher <jlec@gentoo.org> umfpack-5.6.2.ebuild:
   Require full cholmod library functionality for USE=cholmod, bug #547526

@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-oembed
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-oembed/ChangeLog,v 1.1 2015/05/13 07:09:48 graaff Exp $
+
+*ruby-oembed-0.8.14 (13 May 2015)
+
+  13 May 2015; Hans de Graaff <graaff@gentoo.org> +ruby-oembed-0.8.14.ebuild,
+  +metadata.xml:
+  Initial import. Ebuild migrated from graaff overlay.
+
