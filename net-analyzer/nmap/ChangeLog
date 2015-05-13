@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.338 2015/05/12 17:27:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.339 2015/05/12 23:42:09 patrick Exp $
+
+  12 May 2015; Patrick Lauer <patrick@gentoo.org> nmap-9999.ebuild:
+  Whitespace
 
   12 May 2015; Rick Farina <zerochaos@gentoo.org> nmap-9999.ebuild:
   use readme.gentoo with some minor custom to support 9999 better

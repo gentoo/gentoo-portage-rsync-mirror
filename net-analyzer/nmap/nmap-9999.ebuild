@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.6 2015/05/12 17:27:40 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.7 2015/05/12 23:42:09 patrick Exp $
 
 EAPI=5
 
@@ -66,7 +66,6 @@ nmap group AND pass --privileged on the command line. This security \
 measure ensures that only trusted users are allowed to run nmap. \
 To avoid passing --privileged every time, add \
 'export NMAP_PRIVILEGED=\"\"' to your user environment (eg ~/.bashrc)."
-
 
 pkg_setup() {
 	if use ndiff || use zenmap; then
