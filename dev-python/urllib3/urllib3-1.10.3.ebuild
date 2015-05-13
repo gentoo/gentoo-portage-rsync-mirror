@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.3 2015/05/13 00:44:18 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.4 2015/05/13 02:04:46 floppym Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -55,15 +55,21 @@ python_compile_all() {
 }
 
 python_test() {
-	# upstream by their own admission describe the tests as flakey
-
 	# __init__.py uses a local import requiring use of PYTHONPATH=blank to offset
-	# Currently requires disabling FEATURES=network-sandbox (in make.conf)
-	# Failures currently occur under py2.7 with this disabled. After joint testing
+	# Failures currently occur under py2.7. After joint testing
 	# it's planned for this to have further investigation.
 	# https://github.com/shazow/urllib3/issues/621
 
-	PYTHONPATH= nosetests -v  ./test/ || die "Tests fail with ${EPYTHON}"
+	# These tests fail with network-sandbox enable due to an arbitrary "tarpit"
+	# address (10.255.255.1) being non-routable.
+	local exclude=(
+		-e test_enhanced_timeout
+		-e test_https_timeout
+		-e test_https_proxy_pool_timeout
+		-e test_https_proxy_timeout
+	)
+
+	PYTHONPATH= nosetests "${exclude[@]}" test || die "Tests fail with ${EPYTHON}"
 }
 
 python_install_all() {
