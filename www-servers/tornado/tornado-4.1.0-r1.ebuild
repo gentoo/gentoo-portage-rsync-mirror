@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.1.0-r1.ebuild,v 1.1 2015/05/13 16:39:43 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.1.0-r1.ebuild,v 1.2 2015/05/13 17:03:26 idella4 Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 pypy )
 
 inherit distutils-r1 vcs-snapshot
 
@@ -18,7 +18,7 @@ KEYWORDS="~amd64 ~hppa ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
 CDEPEND="
-	dev-python/pycurl[${PYTHON_USEDEP}]
+	$(python_gen_cond_dep 'dev-python/pycurl[${PYTHON_USEDEP}]' python2_7)
 	dev-python/certifi[${PYTHON_USEDEP}]
 	$(python_gen_cond_dep 'dev-python/asyncio[${PYTHON_USEDEP}]' 'python3_3')
 	$(python_gen_cond_dep 'dev-python/backports-ssl-match-hostname[${PYTHON_USEDEP}]' python2_7 pypy)

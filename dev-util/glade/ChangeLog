@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/glade
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.227 2015/04/08 17:54:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/ChangeLog,v 1.228 2015/05/13 17:11:25 pacho Exp $
+
+  13 May 2015; Pacho Ramos <pacho@gentoo.org>
+  -files/glade-3.12.1-doc-version.patch, -files/glade-3.16.1-underlinking.patch,
+  -glade-3.16.1.ebuild, -glade-3.18.2.ebuild, -glade-3.8.4.ebuild,
+  glade-3.8.5.ebuild, metadata.xml:
+  Doesn't use scrollkeeper if not passing --enable-scrollkeeper, drop old
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> glade-3.8.4.ebuild,
   glade-3.8.5.ebuild:
