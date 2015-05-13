@@ -1,11 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.39 2015/05/05 12:34:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.40 2015/05/13 20:54:09 pacho Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
 
-# Justin Lecher <jlec@gentoo.org> (05 Mai 2015)
+# Pacho Ramos <pacho@gentoo.org> (13 May 2015)
+# texinfo-5 cannot be stabilized yet
+=dev-lang/gnat-gcc-4.6* doc
+
+# Justin Lecher <jlec@gentoo.org> (05 May 2015)
 # no stable qt5
 app-office/texmaker qt5
 
