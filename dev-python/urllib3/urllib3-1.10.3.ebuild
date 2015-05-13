@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.2 2015/05/12 05:47:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.3 2015/05/13 00:44:18 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -55,16 +55,13 @@ python_compile_all() {
 }
 
 python_test() {
-	# https://github.com/shazow/urllib3/issues/527
-	# test_https_connection_read_timeout is found to hang and
-	# test_verified is found to fail  under py2.7 and pypy.
 	# upstream by their own admission describe the tests as flakey
 
 	# __init__.py uses a local import requiring use of PYTHONPATH=blank to offset
 	# Currently requires disabling FEATURES=network-sandbox (in make.conf)
 	# Failures currently occur under py2.7 with this disabled. After joint testing
-	# it's planned for this to have further investigation. 
-	# Further adjustments to this phase to come
+	# it's planned for this to have further investigation.
+	# https://github.com/shazow/urllib3/issues/621
 
 	PYTHONPATH= nosetests -v  ./test/ || die "Tests fail with ${EPYTHON}"
 }

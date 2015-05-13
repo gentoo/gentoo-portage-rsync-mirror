@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.37 2015/05/12 05:47:04 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.38 2015/05/13 00:44:18 idella4 Exp $
+
+  13 May 2015; Ian Delaney <idella4@gentoo.org> urllib3-1.10.3.ebuild:
+  update notation of bugs filed upstream
 
   12 May 2015; Ian Delaney <idella4@gentoo.org> urllib3-1.10.3.ebuild:
   re-write of test phase after further testing and probing of the testsuite,
