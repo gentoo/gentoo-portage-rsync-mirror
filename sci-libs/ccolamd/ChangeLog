@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/ccolamd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.39 2015/04/19 09:51:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ccolamd/ChangeLog,v 1.41 2015/05/13 06:59:23 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> ccolamd-2.8.0.ebuild:
+  ppc64 stable wrt bug #534642
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> ccolamd-2.8.0.ebuild:
+  sparc stable wrt bug #534642
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> ccolamd-2.8.0.ebuild:
   x86 stable wrt bug #534642

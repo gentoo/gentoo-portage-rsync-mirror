@@ -1,6 +1,12 @@
 # ChangeLog for sci-libs/colamd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.41 2015/04/19 09:49:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/colamd/ChangeLog,v 1.43 2015/05/13 06:57:53 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> colamd-2.8.0.ebuild:
+  ppc64 stable wrt bug #534636
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> colamd-2.8.0.ebuild:
+  sparc stable wrt bug #534636
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> colamd-2.8.0.ebuild:
   x86 stable wrt bug #534636

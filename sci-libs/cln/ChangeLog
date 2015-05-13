@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cln
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.72 2015/04/28 09:51:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cln/ChangeLog,v 1.73 2015/05/13 06:56:48 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> cln-1.3.3.ebuild:
+  ppc64 stable wrt bug #545420
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cln-1.3.3.ebuild:
   Stable for sparc, wrt bug #545420

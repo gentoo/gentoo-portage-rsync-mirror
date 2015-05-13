@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snortsam
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.43 2015/05/13 06:00:24 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsam/ChangeLog,v 1.44 2015/05/13 06:59:43 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> snortsam-2.70.ebuild:
+  ppc64 stable wrt bug #517324
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> snortsam-2.70.ebuild:
   sparc stable wrt bug #517324

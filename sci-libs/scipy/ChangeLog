@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/scipy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.128 2015/04/21 19:02:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/scipy/ChangeLog,v 1.129 2015/05/13 06:56:26 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> scipy-0.15.1.ebuild:
+  ppc64 stable wrt bug #545936
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> scipy-0.15.1.ebuild:
   ppc stable wrt bug #545936

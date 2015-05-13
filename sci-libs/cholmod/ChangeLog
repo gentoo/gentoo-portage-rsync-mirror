@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/cholmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.48 2015/04/21 17:47:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cholmod/ChangeLog,v 1.49 2015/05/13 06:37:01 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> cholmod-2.1.2.ebuild:
+  sparc stable wrt bug #534648
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> cholmod-2.1.2.ebuild:
   x86 stable wrt bug #534648

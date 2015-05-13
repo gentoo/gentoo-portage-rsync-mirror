@@ -1,6 +1,9 @@
 # ChangeLog for net-proxy/squid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.527 2015/05/13 05:43:11 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/squid/ChangeLog,v 1.528 2015/05/13 06:48:12 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> squid-3.5.4.ebuild:
+  ppc stable wrt bug #548228
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> squid-3.5.4.ebuild:
   ia64 stable wrt bug #548228

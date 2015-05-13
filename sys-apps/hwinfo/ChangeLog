@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hwinfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.38 2015/04/27 00:00:45 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hwinfo/ChangeLog,v 1.39 2015/05/13 06:46:46 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> hwinfo-21.4.ebuild:
+  ppc stable wrt bug #546932
 
   27 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -hwinfo-18.1.ebuild,
   -hwinfo-18.5.ebuild:

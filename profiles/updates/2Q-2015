@@ -11,3 +11,4 @@ move dev-perl/Cgi-Simple dev-perl/CGI-Simple
 move net-mail/git-mailz dev-vcs/git-mailz
 move dev-perl/extutils-depends dev-perl/ExtUtils-Depends
 move dev-perl/class-returnvalue dev-perl/Class-ReturnValue
+slotmove =dev-ruby/vcr-2.9.3 0 2

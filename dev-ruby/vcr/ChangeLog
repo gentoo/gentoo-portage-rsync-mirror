@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/vcr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vcr/ChangeLog,v 1.1 2015/01/25 09:39:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/vcr/ChangeLog,v 1.3 2015/05/13 06:55:02 graaff Exp $
+
+*vcr-1.11.3 (13 May 2015)
+
+  13 May 2015; Hans de Graaff <graaff@gentoo.org> +vcr-1.11.3.ebuild:
+  Also add vcr 1.x version, dependency for ruby-oembed.
+
+  13 May 2015; Hans de Graaff <graaff@gentoo.org> vcr-2.9.3.ebuild:
+  Move into SLOT 2 so we can also add vcr 1.x versions.
 
 *vcr-2.9.3 (25 Jan 2015)
 

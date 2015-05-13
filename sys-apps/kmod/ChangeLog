@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.195 2015/04/26 20:03:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.196 2015/05/13 06:36:35 jmorgan Exp $
+
+  13 May 2015; Jack Morgan <jmorgan@gentoo.org> kmod-19.ebuild:
+  sparc stable wrt bug #530424
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> kmod-20.ebuild:
   ia64 stable wrt bug #547502
