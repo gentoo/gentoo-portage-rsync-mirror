@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/spy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spy/ChangeLog,v 1.1 2015/01/24 22:36:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/spy/ChangeLog,v 1.2 2015/05/13 04:52:01 graaff Exp $
+
+*spy-0.4.2 (13 May 2015)
+
+  13 May 2015; Hans de Graaff <graaff@gentoo.org> +spy-0.4.2.ebuild:
+  Version bump.
 
 *spy-0.4.1 (24 Jan 2015)
 
