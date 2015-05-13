@@ -1,6 +1,14 @@
 # ChangeLog for games-emulation/mednafen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.56 2015/04/27 06:49:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mednafen/ChangeLog,v 1.57 2015/05/13 01:11:13 mr_bones_ Exp $
+
+*mednafen-0.9.38.4 (13 May 2015)
+
+  13 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/mednafen-0.9.38.4-automake-1.13.patch,
+  +files/mednafen-0.9.38.4-cflags.patch, +files/mednafen-0.9.38.4-zlib.patch,
+  +mednafen-0.9.38.4.ebuild:
+  version bump
 
   27 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> mednafen-0.9.38.1.ebuild,
   metadata.xml:
