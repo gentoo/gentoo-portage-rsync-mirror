@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.9.ebuild,v 1.1 2015/05/13 14:49:02 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.9.ebuild,v 1.2 2015/05/13 17:37:06 ulm Exp $
 
 EAPI=5
 
@@ -41,14 +41,14 @@ just_headers() {
 }
 
 musl_endian() {
-    # XXX: this wont work for bi-endian, but we dont have any
-    touch "${T}"/endian.s
-    $(tc-getAS ${CTARGET}) "${T}"/endian.s -o "${T}"/endian.o
-    case $(file "${T}"/endian.o) in
-        *" MSB "*) echo "";;
-        *" LSB "*) echo "el";;
-        *)         echo "nfc";; # We shouldn't be here
-    esac
+	# XXX: this wont work for bi-endian, but we dont have any
+	touch "${T}"/endian.s
+	$(tc-getAS ${CTARGET}) "${T}"/endian.s -o "${T}"/endian.o
+	case $(file "${T}"/endian.o) in
+		*" MSB "*) echo "";;
+		*" LSB "*) echo "el";;
+		*)         echo "nfc";; # We shouldn't be here
+	esac
 }
 
 pkg_setup() {
@@ -95,7 +95,7 @@ src_install() {
 	dosym ${sysroot}/lib/${ldso} ${sysroot}/usr/bin/ldd
 
 	if [[ ${CATEGORY} != cross-* ]] ; then
-		local target=$(tc-arch) arch 
+		local target=$(tc-arch) arch
 		local endian=$(musl_endian)
 		case ${target} in
 			amd64) arch="x86_64";;
