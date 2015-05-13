@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-3.1.1.ebuild,v 1.3 2015/05/12 08:41:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glfw/glfw-3.1.1.ebuild,v 1.4 2015/05/13 09:29:03 ago Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="ZLIB"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="egl examples"
 
 RDEPEND="x11-libs/libXrandr

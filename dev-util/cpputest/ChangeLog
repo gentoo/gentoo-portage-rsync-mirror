@@ -1,10 +1,12 @@
 # ChangeLog for dev-util/cpputest
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cpputest/ChangeLog,v 1.1 2014/11/29 01:14:55 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cpputest/ChangeLog,v 1.2 2015/05/13 09:23:26 ago Exp $
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> cpputest-3.6.ebuild:
+  Stable for amd64, wrt bug #545256
 
 *cpputest-3.6 (29 Nov 2014)
 
   29 Nov 2014; Tim Harder <radhermit@gentoo.org> +cpputest-3.6.ebuild,
   +metadata.xml:
   Initial import (fixes bug #376123).
-

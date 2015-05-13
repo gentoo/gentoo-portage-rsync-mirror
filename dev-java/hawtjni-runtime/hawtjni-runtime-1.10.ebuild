@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hawtjni-runtime/hawtjni-runtime-1.10.ebuild,v 1.2 2015/04/26 16:00:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hawtjni-runtime/hawtjni-runtime-1.10.ebuild,v 1.3 2015/05/13 09:23:37 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/fusesource/hawtjni/archive/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
