@@ -1,6 +1,9 @@
 # ChangeLog for app-office/odeskteam
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.15 2014/12/31 12:48:11 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/odeskteam/ChangeLog,v 1.16 2015/05/13 07:56:44 ago Exp $
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> odeskteam-3.12.9.ebuild:
+  Stable for amd64, wrt bug #547670
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> odeskteam-3.12.9.ebuild:
   Enforce USE dependency for media-libs/phonon.
