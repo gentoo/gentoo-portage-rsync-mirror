@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.8.ebuild,v 1.6 2015/05/12 08:40:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/prosody/prosody-0.9.8.ebuild,v 1.7 2015/05/13 09:33:21 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://prosody.im/tmp/${MY_PV}/${MY_P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~x86"
+KEYWORDS="amd64 ~arm x86"
 IUSE="ipv6 libevent mysql postgres sqlite ssl zlib jit"
 
 DEPEND="net-im/jabber-base

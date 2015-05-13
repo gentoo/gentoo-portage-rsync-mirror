@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/plasma-nm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/ChangeLog,v 1.20 2015/05/13 07:56:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/plasma-nm/ChangeLog,v 1.21 2015/05/13 09:33:03 ago Exp $
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> plasma-nm-0.9.3.5.ebuild:
+  Stable for x86, wrt bug #549240
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> plasma-nm-0.9.3.5.ebuild:
   Stable for amd64, wrt bug #549240

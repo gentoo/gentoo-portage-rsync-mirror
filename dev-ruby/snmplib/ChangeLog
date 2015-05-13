@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/snmplib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.54 2015/05/13 07:55:28 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/snmplib/ChangeLog,v 1.55 2015/05/13 09:37:38 ago Exp $
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> snmplib-1.2.0.ebuild:
+  Stable for x86, wrt bug #548054
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> snmplib-1.2.0.ebuild:
   Stable for amd64, wrt bug #548054
