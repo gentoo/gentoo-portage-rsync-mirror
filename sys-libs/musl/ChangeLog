@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.54 2015/05/13 12:51:20 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.55 2015/05/13 14:49:02 blueness Exp $
+
+*musl-1.1.9 (13 May 2015)
+
+  13 May 2015; Anthony G. Basile <blueness@gentoo.org> +files/ldconfig.in,
+  +musl-1.1.9.ebuild, musl-9999.ebuild:
+  Version bump.  Addresses bug #544128.
 
   13 May 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.8-r2.ebuild:
   Stable for amd64, arm, ppc and x86.
