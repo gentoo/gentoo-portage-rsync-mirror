@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.3-r1.ebuild,v 1.6 2012/08/21 10:11:52 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ftdi_eeprom-0.3-r1.ebuild,v 1.7 2015/05/13 10:37:04 vapier Exp $
 
 EAPI=4
 inherit eutils
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND="dev-embedded/libftdi
+RDEPEND="<dev-embedded/libftdi-1
 	dev-libs/confuse"
 DEPEND="${RDEPEND}"
 

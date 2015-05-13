@@ -1,6 +1,14 @@
 # ChangeLog for dev-embedded/ftdi_eeprom
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.13 2012/09/08 00:38:07 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.15 2015/05/13 10:42:51 vapier Exp $
+
+*ftdi_eeprom-1.0 (13 May 2015)
+
+  13 May 2015; Mike Frysinger <vapier@gentoo.org> +ftdi_eeprom-1.0.ebuild:
+  Add ebuild to transition to new libftdi[tools] #410679 by Ole Henrik Jahren.
+
+  13 May 2015; Mike Frysinger <vapier@gentoo.org> ftdi_eeprom-0.3-r1.ebuild:
+  Force older libftdi #465962 by Patrick Lauer.
 
   08 Sep 2012; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove redundant metadata.
