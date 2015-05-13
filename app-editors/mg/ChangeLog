@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.107 2015/04/26 16:57:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mg/ChangeLog,v 1.108 2015/05/13 08:44:28 ago Exp $
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> mg-20150323.ebuild:
+  Stable for amd64, wrt bug #547604
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> mg-20150323.ebuild:
   ppc stable wrt bug #547604
