@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.342 2015/05/12 00:42:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.343 2015/05/13 22:24:00 williamh Exp $
+
+*openrc-0.16.1 (13 May 2015)
+
+  13 May 2015; William Hubbs <williamh@gentoo.org> +openrc-0.16.1.ebuild:
+  version bump to move the default s6 service directory to /var/svc.d
 
 *openrc-0.16 (12 May 2015)
 
