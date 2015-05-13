@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/pcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.14 2015/03/09 09:29:02 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.15 2015/05/13 03:08:22 patrick Exp $
+
+*pcc-9999 (13 May 2015)
+
+  13 May 2015; Patrick Lauer <patrick@gentoo.org> +pcc-9999.ebuild:
+  Add live ebuild #549204
 
   09 Mar 2015; Patrick Lauer <patrick@gentoo.org> pcc-1.1.0-r1.ebuild:
   Fix ebuild paths
