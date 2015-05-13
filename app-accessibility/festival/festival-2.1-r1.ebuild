@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1-r1.ebuild,v 1.9 2015/04/26 22:10:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival/festival-2.1-r1.ebuild,v 1.10 2015/05/13 11:21:03 zlogene Exp $
 
 EAPI="2"
 inherit eutils multilib toolchain-funcs user
@@ -24,7 +24,7 @@ SRC_URI="${SITE}/${MY_P}.tar.gz
 
 LICENSE="FESTIVAL HPND BSD rc regexp-UofT free-noncomm"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ~ppc64 sparc x86 ~x86-fbsd"
 IUSE=""
 
 DEPEND="~app-accessibility/speech-tools-2.1
