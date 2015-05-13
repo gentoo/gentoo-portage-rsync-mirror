@@ -110,7 +110,7 @@ src_compile() {
 
 src_install() {
 	local LIBDIR="${ED}/usr/$(get_libdir)"
-	emake install DESTDIR="${ED}"
+	emake install DESTDIR="${ED}" PREFIX=/usr
 	use npm && dodoc -r "${LIBDIR}"/node_modules/npm/html
 	rm -rf "${LIBDIR}"/node_modules/npm/{doc,html} || die
 	find "${LIBDIR}"/node_modules -type f -name "LICENSE" -delete || die
