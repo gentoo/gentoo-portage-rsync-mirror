@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-runner
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.95 2015/04/14 12:51:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-runner/ChangeLog,v 1.96 2015/05/13 08:05:49 patrick Exp $
+
+*twisted-runner-15.1.0 (13 May 2015)
+
+  13 May 2015; Patrick Lauer <patrick@gentoo.org> +twisted-runner-15.1.0.ebuild:
+  Bump
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> twisted-runner-13.2.0.ebuild:
   Stable for ia64, wrt bug #540290

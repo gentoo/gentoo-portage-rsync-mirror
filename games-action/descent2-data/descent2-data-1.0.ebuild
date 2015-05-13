@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.10 2015/03/31 02:49:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent2-data/descent2-data-1.0.ebuild,v 1.11 2015/05/13 08:03:39 ago Exp $
 
 EAPI=5
 inherit eutils cdrom games
@@ -18,7 +18,7 @@ SRC_URI=""
 # See readme.txt
 LICENSE="${PN}"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="videos"
 
 # d2x-0.2.5-r2 may include the CD data itself.

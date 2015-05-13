@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/mongo-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mongo-tools/ChangeLog,v 1.4 2015/04/10 07:40:15 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mongo-tools/ChangeLog,v 1.5 2015/05/13 08:24:58 ultrabug Exp $
+
+*mongo-tools-3.0.3 (13 May 2015)
+
+  13 May 2015; Ultrabug <ultrabug@gentoo.org> -mongo-tools-3.0.2.ebuild,
+  +mongo-tools-3.0.3.ebuild:
+  version bump, drop old
 
   10 Apr 2015; Ultrabug <ultrabug@gentoo.org> mongo-tools-3.0.2.ebuild:
   remove useless sed thx to @hydra

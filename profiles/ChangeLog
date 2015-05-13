@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9991 2015/05/13 06:49:47 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9992 2015/05/13 08:15:45 idella4 Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 May 2015; Ian Delaney <idella4@gentoo.org> package.mask:
+  dev-python/gevent-zeromq masked for removal in 30 days
 
   13 May 2015; Hans de Graaff <graaff@gentoo.org> updates/2Q-2015:
   Move dev-ruby/vcr-2.9.3 into SLOT 2.

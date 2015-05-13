@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16524 2015/05/10 14:33:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16525 2015/05/13 08:15:45 idella4 Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ian Delaney <idella4@gentoo.org> (13 May 2015)
+# package unused, no revdeps, obsolete.
+# masked for removal in 30 days
+dev-python/gevent-zeromq
 
 # Mike Gilbert <floppym@gentoo.org> (06 May 2015)
 # Obsolete development snapshots.

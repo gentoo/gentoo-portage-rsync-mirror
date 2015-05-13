@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-names
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.109 2015/04/14 12:51:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-names/ChangeLog,v 1.110 2015/05/13 08:03:53 patrick Exp $
+
+*twisted-names-15.1.0 (13 May 2015)
+
+  13 May 2015; Patrick Lauer <patrick@gentoo.org> +twisted-names-15.1.0.ebuild:
+  Bump
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> twisted-names-13.2.0.ebuild:
   Stable for ia64, wrt bug #540290

@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/tm-align
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/ChangeLog,v 1.13 2015/05/13 06:57:34 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/tm-align/ChangeLog,v 1.14 2015/05/13 08:02:29 ago Exp $
+
+  13 May 2015; Agostino Sarubbo <ago@gentoo.org> tm-align-20140601.ebuild:
+  Stable for amd64, wrt bug #549332
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> tm-align-20130511.ebuild:
   ppc64 stable wrt bug #544934

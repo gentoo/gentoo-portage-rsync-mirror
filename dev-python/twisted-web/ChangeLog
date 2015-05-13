@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.122 2015/04/14 12:51:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.123 2015/05/13 08:06:33 patrick Exp $
+
+*twisted-web-15.1.0 (13 May 2015)
+
+  13 May 2015; Patrick Lauer <patrick@gentoo.org> +twisted-web-15.1.0.ebuild:
+  Bump
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> twisted-web-13.2.0.ebuild:
   Stable for ia64, wrt bug #540290
