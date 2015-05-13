@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.7 2015/05/12 23:42:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.8 2015/05/13 05:12:10 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit eutils fcaps flag-o-matic python-single-r1 readme.gentoo toolchain-funcs
 
 MY_P=${P/_beta/BETA}
 
-DESCRIPTION="A utility for network exploration or security auditing"
+DESCRIPTION="A utility for network discovery and security auditing"
 HOMEPAGE="http://nmap.org/"
 
 if [[ ${PV} == "9999" ]] ; then

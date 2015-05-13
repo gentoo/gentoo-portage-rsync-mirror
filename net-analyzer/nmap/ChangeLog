@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.339 2015/05/12 23:42:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.340 2015/05/13 05:12:10 jer Exp $
+
+  13 May 2015; Jeroen Roovers <jer@gentoo.org> nmap-6.47-r1.ebuild,
+  nmap-6.47-r2.ebuild, nmap-9999.ebuild:
+  Fix DESCRIPTION.
 
   12 May 2015; Patrick Lauer <patrick@gentoo.org> nmap-9999.ebuild:
   Whitespace

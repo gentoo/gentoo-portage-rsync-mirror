@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r2.ebuild,v 1.2 2015/05/12 16:06:37 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r2.ebuild,v 1.3 2015/05/13 05:12:10 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit eutils flag-o-matic python-single-r1 toolchain-funcs
 
 MY_P=${P/_beta/BETA}
 
-DESCRIPTION="A utility for network exploration or security auditing"
+DESCRIPTION="A utility for network discovery and security auditing"
 HOMEPAGE="http://nmap.org/"
 SRC_URI="
 	http://nmap.org/dist/${MY_P}.tar.bz2

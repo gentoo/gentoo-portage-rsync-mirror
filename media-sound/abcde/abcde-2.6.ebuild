@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.6.ebuild,v 1.1 2014/11/02 04:13:15 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.6.ebuild,v 1.2 2015/05/13 05:30:08 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://abcde.einval.com/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 # Enable MP3 related flags by default
 IUSE="aac cdparanoia cdr flac +id3tag +lame musepack musicbrainz normalize opus replaygain speex vorbis"
 
