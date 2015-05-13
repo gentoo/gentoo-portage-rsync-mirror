@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7_beta2-r1.ebuild,v 1.1 2014/07/25 17:55:38 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7.0.ebuild,v 1.1 2015/05/13 06:03:51 patrick Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc examples source"
@@ -22,24 +22,27 @@ REQUIRED_USE="test? ( readline )"
 
 COMMON_DEP="
 	dev-java/antlr:3
+	dev-java/netty-transport:0
 	dev-java/asm:4
 	dev-java/commons-compress:0
 	dev-java/guava:13
 	>=dev-java/java-config-2.1.11-r3
 	dev-java/jffi:1.2
 	dev-java/jline:0
+	dev-java/jline:2
 	dev-java/icu4j:52
 	dev-java/jnr-constants:0
-	dev-java/jnr-posix:2.1
+	dev-java/jnr-posix:3.0
+	dev-java/jnr-netdb:1.0
 	dev-java/stringtemplate:0
 	dev-java/xerces:2
 	java-virtuals/script-api:0
 	java-virtuals/servlet-api:2.5
 	readline? ( >=dev-java/libreadline-java-0.8.0:0 )"
 RDEPEND="${COMMON_DEP}
-	>=virtual/jre-1.5"
+	>=virtual/jre-1.7"
 DEPEND="${COMMON_DEP}
-	>=virtual/jdk-1.5
+	>=virtual/jdk-1.7
 	app-arch/unzip
 	test? (
 		dev-java/junit:4
@@ -51,8 +54,9 @@ S=${WORKDIR}
 RESTRICT="test"
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
-EANT_GENTOO_CLASSPATH="asm-4,commons-compress,guava-13,jffi-1.2,jline,jnr-constants"
-EANT_GENTOO_CLASSPATH+=",script-api,servlet-api-2.5,stringtemplate,xerces-2,icu4j-52"
+EANT_GENTOO_CLASSPATH="asm-4,commons-compress,guava-13,jffi-1.2,jline-2,jnr-constants"
+EANT_GENTOO_CLASSPATH+=",script-api,servlet-api-2.5,stringtemplate,xerces-2"
+EANT_GENTOO_CLASSPATH+=",icu4j-52,netty-transport,jnr-posix-3.0"
 JAVA_ANT_CLASSPATH_TAGS+=" java"
 
 EANT_BUILD_TARGET="developer-build"
@@ -68,7 +72,7 @@ PATCHES=(
 	"${FILESDIR}"/${PN}-2.5.2-respect_PYTHONPATH.patch
 	"${FILESDIR}"/${PN}-2.7_beta1-ant.patch
 	"${FILESDIR}"/${PN}-2.7_beta1-dont-always-recompile-classes.patch
-	"${FILESDIR}"/${P}-maxrepeat-import.patch
+	"${FILESDIR}"/${PN}-2.7_beta2-maxrepeat-import.patch
 )
 
 java_prepare() {
