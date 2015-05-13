@@ -1,6 +1,11 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.172 2015/04/12 08:45:29 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.173 2015/05/13 13:55:30 williamh Exp $
+
+  13 May 2015; William Hubbs <williamh@gentoo.org> -brltty-5.0-r3.ebuild,
+  -files/brltty-5.0-fix-ldflags.patch, -files/brltty-5.0-respect-AR.patch,
+  -files/brltty-5.0-udev.patch:
+  remove old
 
   12 Apr 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due to bug #353756
