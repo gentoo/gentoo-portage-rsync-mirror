@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1557 2015/05/14 13:20:32 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1558 2015/05/14 22:31:46 mpagano Exp $
+
+  14 May 2015; Mike Pagano <mpagano@gentoo.org> gentoo-sources-3.14.41.ebuild,
+  gentoo-sources-3.14.42.ebuild, gentoo-sources-4.0.0.ebuild,
+  gentoo-sources-4.0.1.ebuild, gentoo-sources-4.0.2.ebuild,
+  gentoo-sources-4.0.3.ebuild:
+  Start to renable deblob support. Thanks to icarious for driving this and for
+  jxself for the upstream help.
 
 *gentoo-sources-4.0.3 (14 May 2015)
 

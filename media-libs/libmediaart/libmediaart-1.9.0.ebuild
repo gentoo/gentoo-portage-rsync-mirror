@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-1.9.0.ebuild,v 1.1 2015/05/14 22:24:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmediaart/libmediaart-1.9.0.ebuild,v 1.2 2015/05/14 22:48:34 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -38,7 +38,7 @@ src_prepare() {
 	# Fix QT automagic selection, bug #523122
 	epatch "${FILESDIR}"/${PN}-0.7.0-qt5.patch
 
-    # Make doc parallel installable
+	# Make doc parallel installable
 	cd "${S}"/docs/reference/${PN}
 	sed -e "s/\(DOC_MODULE.*=\).*/\1${PN}-${SLOT}/" \
 		-e "s/\(DOC_MAIN_SGML_FILE.*=\).*/\1${PN}-docs-${SLOT}.sgml/" \

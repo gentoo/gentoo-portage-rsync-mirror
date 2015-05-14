@@ -1,6 +1,10 @@
 # ChangeLog for games-simulation/flightgear-data
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear-data/ChangeLog,v 1.15 2015/04/19 10:16:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear-data/ChangeLog,v 1.16 2015/05/14 22:40:25 reavertm Exp $
+
+  14 May 2015; Maciej Mrozowski <reavertm@gentoo.org>
+  -flightgear-data-3.0.0.ebuild, -flightgear-data-3.2.0.ebuild:
+  Remove old
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> flightgear-data-3.4.0.ebuild:
   Stable for x86, wrt bug #544714
