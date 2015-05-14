@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/sawfish
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.136 2014/08/01 11:39:33 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.137 2015/05/14 07:44:38 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> sawfish-1.9.1-r2.ebuild:
+  remove old pango dep
 
   01 Aug 2014; Ulrich Müller <ulm@gentoo.org> -sawfish-1.9.1.ebuild,
   -sawfish-1.9.1-r1.ebuild:

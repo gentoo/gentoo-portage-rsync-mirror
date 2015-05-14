@@ -1,26 +1,24 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/wm2-4-r1.ebuild,v 1.4 2014/08/09 12:05:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/wm2-4-r1.ebuild,v 1.5 2015/05/14 07:48:10 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils toolchain-funcs
 
 DESCRIPTION="Small, unconfigurable window manager"
 HOMEPAGE="http://www.all-day-breakfast.com/wm2/"
 SRC_URI="http://www.all-day-breakfast.com/wm2/${P}.tar.gz"
 
-RDEPEND="x11-libs/libXmu"
-DEPEND="${RDEPEND}
-	x11-proto/xextproto"
-
 SLOT="0"
 LICENSE="freedist"
 KEYWORDS="amd64 ppc x86"
 IUSE=""
 
-src_unpack() {
-	unpack ${A}
+RDEPEND="x11-libs/libXmu"
+DEPEND="${RDEPEND}
+	x11-proto/xextproto"
 
-	cd "${S}"
+src_prepare() {
 	epatch "${FILESDIR}/${P}-gentoo.patch"
 	sed -e "s/CFLAGS/CXXFLAGS/" \
 		-e "s/\$(CCC) -o/\$(CCC) \$(LDFLAGS) -o/" \
@@ -34,15 +32,17 @@ src_unpack() {
 }
 
 src_compile() {
-	emake CXXFLAGS="${CXXFLAGS}" CCC="$(tc-getCXX)" \
-		LDFLAGS="${LDFLAGS}" || die
+	emake \
+		CXXFLAGS="${CXXFLAGS}" \
+		CCC="$(tc-getCXX)" \
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	dobin wm2 || die
+	dobin wm2
 	insinto /etc
-	doins wm2.conf || die
-	dodoc README || die
+	doins wm2.conf
+	dodoc README
 }
 
 pkg_postinst() {

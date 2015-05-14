@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/upx-ucl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.28 2014/06/09 07:35:44 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.29 2015/05/14 07:31:32 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -upx-ucl-3.09.ebuild:
+  old
 
 *upx-ucl-3.91 (09 Jun 2014)
 

@@ -1,20 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.13 2015/05/14 07:51:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.5.ebuild,v 1.1 2015/05/14 07:51:39 jer Exp $
 
 EAPI=5
-inherit autotools eutils fcaps git-r3 multilib qmake-utils qt4-r2 user
+inherit autotools eutils fcaps multilib qmake-utils qt4-r2 user
 
 DESCRIPTION="A network protocol analyzer formerly known as ethereal"
 HOMEPAGE="http://www.wireshark.org/"
-EGIT_REPO_URI="https://code.wireshark.org/review/wireshark"
+SRC_URI="${HOMEPAGE}download/src/all-versions/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0/${PV}"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="
 	adns +caps crypt doc doc-pdf geoip +gtk3 ipv6 kerberos lua +netlink +pcap
-	portaudio +qt4 qt5 sbc selinux smi cpu_flags_x86_sse4_2 ssl zlib
+	portaudio +qt4 qt5 sbc selinux smi ssl zlib
 "
 REQUIRED_USE="
 	ssl? ( crypt )
@@ -89,17 +89,13 @@ pkg_setup() {
 	enewgroup wireshark
 }
 
-src_unpack() {
-	git-r3_src_unpack
-}
-
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
-		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch \
-		"${FILESDIR}"/${PN}-99999999-pkgconfig.patch
+		"${FILESDIR}"/${PN}-1.99.0-qt5.patch \
+		"${FILESDIR}"/${PN}-1.99.1-sbc.patch
 
 	epatch_user
 
@@ -136,14 +132,6 @@ src_configure() {
 	use doc || export ac_cv_prog_HAVE_DOXYGEN=false
 	use doc-pdf || export ac_cv_prog_HAVE_FOP=false
 
-	if use qt4; then
-		myconf+=" --with-qt=4"
-	elif use qt5; then
-		myconf+=" --with-qt=5"
-	else
-		myconf+=" --with-qt=no"
-	fi
-
 	# dumpcap requires libcap
 	# --disable-profile-build bugs #215806, #292991, #479602
 	econf \
@@ -158,6 +146,8 @@ src_configure() {
 		$(use_with pcap dumpcap-group wireshark) \
 		$(use_with pcap) \
 		$(use_with portaudio) \
+		$(use_with qt4) \
+		$(use_with qt5) \
 		$(usex qt4 MOC=$(qt4_get_bindir)/moc '') \
 		$(usex qt4 UIC=$(qt4_get_bindir)/uic '') \
 		$(usex qt5 MOC=$(qt5_get_bindir)/moc '') \
@@ -167,7 +157,6 @@ src_configure() {
 		$(use_with ssl gnutls) \
 		$(use_with zlib) \
 		$(usex netlink --with-libnl=3 --without-libnl) \
-		$(usex cpu_flags_x86_sse4_2 --enable-sse4_2 '') \
 		--disable-profile-build \
 		--disable-usr-local \
 		--disable-warnings-as-errors \

@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/wm2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.16 2014/08/24 09:37:16 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/wm2/ChangeLog,v 1.17 2015/05/14 07:48:10 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> wm2-4-r1.ebuild:
+  EAPI=5
 
   24 Aug 2014; Michael Palimaka <kensington@gentoo.org> -wm2-4.ebuild:
   Remove old.
