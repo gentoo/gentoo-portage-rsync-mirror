@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.10 2015/05/13 05:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.11 2015/05/14 08:45:02 jer Exp $
 
 EAPI=5
 
 DISABLE_AUTOFORMATTING=true
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
-inherit eutils fcaps flag-o-matic python-single-r1 readme.gentoo toolchain-funcs user
+inherit eutils flag-o-matic python-single-r1 toolchain-funcs user
 
 MY_P=${P/_beta/BETA}
 
@@ -60,13 +60,6 @@ DEPEND="
 "
 
 S="${WORKDIR}/${MY_P}"
-
-DOC_CONTENTS="
-To run nmap as unprivileged user you:
- - add yourself to the nmap group
- - pass --privileged on the command line or set the NMAP_PRIVILEGED variable in
-   your environment.
-"
 
 pkg_setup() {
 	if use ndiff || use zenmap; then
@@ -161,17 +154,4 @@ src_install() {
 		doicon "${DISTDIR}/nmap-logo-64.png"
 		python_optimize
 	fi
-
-	readme.gentoo_create_doc
-}
-
-pkg_postinst() {
-	# Add group for users allowed to run nmap.
-	enewgroup nmap
-
-	fcaps -o 0 -g nmap -m 4755 -M 0755 \
-		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
-		"${EROOT}"/usr/bin/nmap
-
-	readme.gentoo_print_elog
 }

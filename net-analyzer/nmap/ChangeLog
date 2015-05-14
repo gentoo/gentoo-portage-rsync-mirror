@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nmap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.342 2015/05/13 05:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/ChangeLog,v 1.343 2015/05/14 08:45:02 jer Exp $
+
+  14 May 2015; Jeroen Roovers <jer@gentoo.org> nmap-6.47-r3.ebuild,
+  nmap-9999.ebuild:
+  Revert fcaps changes.
 
   13 May 2015; Jeroen Roovers <jer@gentoo.org> nmap-6.47-r3.ebuild,
   nmap-9999.ebuild:

@@ -1,34 +1,25 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r3.ebuild,v 1.2 2015/05/13 05:51:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r3.ebuild,v 1.3 2015/05/14 08:45:02 jer Exp $
 
 EAPI=5
 
-DISABLE_AUTOFORMATTING=true
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
-inherit eutils fcaps flag-o-matic python-single-r1 readme.gentoo toolchain-funcs user
+inherit eutils flag-o-matic python-single-r1 toolchain-funcs
 
 MY_P=${P/_beta/BETA}
 
 DESCRIPTION="A utility for network discovery and security auditing"
 HOMEPAGE="http://nmap.org/"
-
-if [[ ${PV} == "9999" ]] ; then
-	inherit subversion
-	ESVN_REPO_URI="https://svn.nmap.org/nmap"
-	SRC_URI="http://dev.gentoo.org/~jer/nmap-logo-64.png"
-	#FORCE_PRINT_ELOG="true"
-else
-	SRC_URI="
-		http://nmap.org/dist/${MY_P}.tar.bz2
-		http://dev.gentoo.org/~jer/nmap-logo-64.png
-		"
-	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
-fi
+SRC_URI="
+	http://nmap.org/dist/${MY_P}.tar.bz2
+	http://dev.gentoo.org/~jer/nmap-logo-64.png
+"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
 IUSE="ipv6 +nse system-lua ncat ndiff nls nmap-update nping ssl zenmap"
 NMAP_LINGUAS=( de fr hr it ja pl pt_BR ru )
@@ -61,17 +52,15 @@ DEPEND="
 
 S="${WORKDIR}/${MY_P}"
 
-DOC_CONTENTS="
-To run nmap as unprivileged user you:
- - add yourself to the nmap group
- - pass --privileged on the command line or set the NMAP_PRIVILEGED variable in
-   your environment.
-"
-
 pkg_setup() {
 	if use ndiff || use zenmap; then
 		python-single-r1_pkg_setup
 	fi
+}
+
+src_unpack() {
+	# prevent unpacking the logo
+	unpack ${MY_P}.tar.bz2
 }
 
 src_prepare() {
@@ -82,7 +71,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-6.01-make.patch \
 		"${FILESDIR}"/${PN}-6.25-liblua-ar.patch \
 		"${FILESDIR}"/${PN}-6.46-uninstaller.patch \
-		"${FILESDIR}"/${PN}-6.47-no-libnl.patch
+		"${FILESDIR}"/${PN}-6.47-no-libnl.patch \
+		"${FILESDIR}"/${PN}-6.47-no-FORTIFY_SOURCE.patch
 
 	if use nls; then
 		local lingua=''
@@ -160,17 +150,4 @@ src_install() {
 		doicon "${DISTDIR}/nmap-logo-64.png"
 		python_optimize
 	fi
-
-	readme.gentoo_create_doc
-}
-
-pkg_postinst() {
-	# Add group for users allowed to run nmap.
-	enewgroup nmap
-
-	fcaps -o 0 -g nmap -m 4755 -M 0755 \
-		cap_net_raw,cap_net_admin,cap_net_bind_service+eip \
-		"${EROOT}"/usr/bin/nmap
-
-	readme.gentoo_print_elog
 }
