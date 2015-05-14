@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/vanilla-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1380 2015/05/13 13:28:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/ChangeLog,v 1.1381 2015/05/14 22:27:52 mpagano Exp $
+
+  14 May 2015; Mike Pagano <mpagano@gentoo.org> vanilla-sources-3.2.69.ebuild,
+  vanilla-sources-3.4.107.ebuild, vanilla-sources-3.10.78.ebuild,
+  vanilla-sources-3.14.42.ebuild, vanilla-sources-3.18.13.ebuild,
+  vanilla-sources-3.19.8.ebuild, vanilla-sources-4.0.3.ebuild:
+  Renable deblob support. Let's see how this goes. Thanks to icarious for
+  driving this and for jxself for the upstream help.
 
 *vanilla-sources-4.0.3 (13 May 2015)
 *vanilla-sources-3.14.42 (13 May 2015)

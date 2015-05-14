@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.12.ebuild,v 1.3 2014/07/23 15:20:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/grilo-plugins/grilo-plugins-0.2.12.ebuild,v 1.4 2015/05/14 22:25:54 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no" # --enable-debug only changes CFLAGS
@@ -19,7 +19,7 @@ IUSE="daap +dvd flickr freebox gnome-online-accounts lua pocket tracker upnp-av 
 RDEPEND="
 	>=dev-libs/glib-2.34:2
 	>=media-libs/grilo-0.2.10:${SLOT}[network,playlist]
-	>=media-libs/libmediaart-0.1
+	>=media-libs/libmediaart-0.1:1.0
 
 	dev-libs/gmime:2.6
 	dev-libs/json-glib
