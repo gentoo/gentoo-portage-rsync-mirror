@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.59 2015/04/18 11:08:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.60 2015/05/14 06:45:35 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -ptlib-2.10.11.ebuild:
+  old
 
   18 Apr 2015; Ulrich Müller <ulm@gentoo.org> +ptlib-2.10.11.ebuild:
   Restore deleted ebuild from attic. Version >=2.12.0 is in package.mask,
