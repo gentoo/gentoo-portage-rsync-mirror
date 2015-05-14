@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.327 2015/05/13 23:30:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.328 2015/05/14 02:19:40 vapier Exp $
+
+  14 May 2015; Mike Frysinger <vapier@gentoo.org> qemu-9999.ebuild:
+  Drop kvm warning as it has been ~1 year now since the changes landed.
 
   13 May 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   qemu-9999.ebuild:

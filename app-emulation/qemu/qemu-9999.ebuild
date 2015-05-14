@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.98 2015/05/13 23:30:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.99 2015/05/14 02:19:40 vapier Exp $
 
 EAPI=5
 
@@ -566,21 +566,6 @@ src_install() {
 pkg_postinst() {
 	if qemu_support_kvm; then
 		readme.gentoo_print_elog
-		ewarn "Migration from qemu-kvm instances and loading qemu-kvm created"
-		ewarn "save states has been removed starting with the 1.6.2 release"
-		ewarn
-		ewarn "It is recommended that you migrate any VMs that may be running"
-		ewarn "on qemu-kvm to a host with a newer qemu and regenerate"
-		ewarn "any saved states with a newer qemu."
-		ewarn
-		ewarn "qemu-kvm was the primary qemu provider in Gentoo through 1.2.x"
-
-		if use x86 || use amd64; then
-			ewarn
-			ewarn "The /usr/bin/kvm and /usr/bin/qemu-kvm wrappers are no longer"
-			ewarn "installed.  In order to use kvm acceleration, pass the flag"
-			ewarn "-enable-kvm when running your system target."
-		fi
 	fi
 
 	if [[ -n ${softmmu_targets} ]] && use kernel_linux; then
@@ -599,7 +584,7 @@ pkg_info() {
 	echo "  $(best_version app-emulation/spice-protocol)"
 	echo "  $(best_version sys-firmware/ipxe)"
 	echo "  $(best_version sys-firmware/seabios)"
-	if has_version sys-firmware/seabios[binary]; then
+	if has_version 'sys-firmware/seabios[binary]'; then
 		echo "    USE=binary"
 	else
 		echo "    USE=''"
