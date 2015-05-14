@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gkrellm-themes
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.17 2010/05/22 11:01:06 tove Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gkrellm-themes/ChangeLog,v 1.18 2015/05/14 16:29:05 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  gkrellm-themes-0.1.ebuild:
+  EAPI=5
 
   22 May 2010; Torsten Veller <tove@gentoo.org> metadata.xml:
   Remove humpback from metadata.xml (#34793)
@@ -59,4 +63,3 @@
   08 May 2004; Gustavo Felisberto <humpback@gentoo.org>;
   gkrellm-themes-0.1.ebuild:
   Initial import. Thanks to Douglas Russel and Paulo Sacramento in bug 20377
-
