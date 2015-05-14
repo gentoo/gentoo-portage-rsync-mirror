@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.6 2015/05/12 05:06:11 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.7 2015/05/14 04:21:44 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -131,6 +131,10 @@ pkg_setup() {
 	fi
 	enewgroup nova
 	enewuser nova -1 -1 /var/lib/nova nova
+}
+
+python_repare() {
+	distutils-r1_python_prepare
 	sed -i 's/python/python2\.7/g' tools/config/generate_sample.sh || die
 }
 
