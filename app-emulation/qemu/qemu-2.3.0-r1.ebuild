@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.3.0-r1.ebuild,v 1.1 2015/05/13 18:56:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-2.3.0-r1.ebuild,v 1.2 2015/05/13 23:11:02 vapier Exp $
 
 EAPI=5
 
@@ -19,8 +19,7 @@ if [[ ${PV} = *9999* ]]; then
 else
 	SRC_URI="http://wiki.qemu-project.org/download/${P}.tar.bz2
 	${BACKPORTS:+
-		http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}
-		http://git.qemu.org/?p=qemu.git;a=patch;h=e907746266721f305d67bc0718795fedee2e824c -> qemu-2.3.0-CVE-2015-3456.patch"
+		http://dev.gentoo.org/~cardoe/distfiles/${P}-${BACKPORTS}.tar.xz}"
 	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 fi
 
@@ -258,11 +257,10 @@ src_prepare() {
 	use nls || rm -f po/*.po
 
 	epatch "${FILESDIR}"/qemu-1.7.0-cflags.patch
+	epatch "${FILESDIR}"/${P}-CVE-2015-3456.patch #549404
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" EPATCH_SOURCE="${S}/patches" \
 			epatch
-
-	epatch "${DISTDIR}"/qemu-2.3.0-CVE-2015-3456.patch
 
 	# Fix ld and objcopy being called directly
 	tc-export AR LD OBJCOPY

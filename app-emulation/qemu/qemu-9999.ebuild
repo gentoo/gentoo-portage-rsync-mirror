@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.97 2015/04/28 09:20:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.98 2015/05/13 23:30:55 vapier Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ IUSE="accessibility +aio alsa bluetooth +caps +curl debug +fdt glusterfs \
 gtk gtk2 infiniband iscsi +jpeg \
 kernel_linux kernel_FreeBSD lzo ncurses nfs nls numa opengl +pin-upstream-blobs
 +png pulseaudio python \
-rbd sasl +seccomp sdl selinux smartcard snappy spice ssh static static-softmmu \
+rbd sasl +seccomp sdl sdl2 selinux smartcard snappy spice ssh static static-softmmu
 static-user systemtap tci test +threads tls usb usbredir +uuid vde +vhost-net \
 virtfs +vnc xattr xen xfs"
 
@@ -55,6 +55,7 @@ REQUIRED_USE="|| ( ${use_softmmu_targets} ${use_user_targets} )
 	qemu_softmmu_targets_microblaze? ( fdt )
 	qemu_softmmu_targets_ppc? ( fdt )
 	qemu_softmmu_targets_ppc64? ( fdt )
+	sdl2? ( sdl )
 	static? ( static-softmmu static-user )
 	static-softmmu? ( !alsa !pulseaudio !bluetooth !opengl !gtk !gtk2 )
 	virtfs? ( xattr )"
@@ -83,7 +84,10 @@ SOFTMMU_LIB_DEPEND="${COMMON_LIB_DEPEND}
 	png? ( media-libs/libpng:0=[static-libs(+)] )
 	rbd? ( sys-cluster/ceph[static-libs(+)] )
 	sasl? ( dev-libs/cyrus-sasl[static-libs(+)] )
-	sdl? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
+	sdl? (
+		!sdl2? ( >=media-libs/libsdl-1.2.11[static-libs(+)] )
+		sdl2? ( media-libs/libsdl2[static-libs(+)] )
+	)
 	seccomp? ( >=sys-libs/libseccomp-2.1.0[static-libs(+)] )
 	snappy? ( app-arch/snappy[static-libs(+)] )
 	spice? ( >=app-emulation/spice-0.12.0[static-libs(+)] )
@@ -123,7 +127,10 @@ CDEPEND="
 	opengl? ( virtual/opengl )
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( ${PYTHON_DEPS} )
-	sdl? ( media-libs/libsdl[X] )
+	sdl? (
+		!sdl2? ( media-libs/libsdl[X] )
+		sdl2? ( media-libs/libsdl2[X] )
+	)
 	smartcard? ( dev-libs/nss !app-emulation/libcacard )
 	spice? ( >=app-emulation/spice-protocol-0.12.3 )
 	systemtap? ( dev-util/systemtap )
@@ -377,6 +384,7 @@ qemu_src_configure() {
 			--audio-drv-list="${audio_opts}"
 		)
 		use gtk && conf_opts+=( --with-gtkabi=$(usex gtk2 2.0 3.0) )
+		use sdl && conf_opts+=( --with-sdlabi=$(usex sdl2 2.0 1.2) )
 		;;
 	esac
 
