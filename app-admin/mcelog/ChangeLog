@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/mcelog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.42 2015/04/25 14:28:18 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mcelog/ChangeLog,v 1.43 2015/05/14 00:00:04 hasufell Exp $
+
+*mcelog-117 (13 May 2015)
+
+  13 May 2015; Julian Ospald <hasufell@gentoo.org> +mcelog-117.ebuild:
+  version bump by Ben Kohler
 
 *mcelog-109 (25 Apr 2015)
 
