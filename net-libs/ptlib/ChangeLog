@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.60 2015/05/14 06:45:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.61 2015/05/14 10:34:47 ulm Exp $
+
+  14 May 2015; Ulrich Müller <ulm@gentoo.org> +ptlib-2.10.11.ebuild:
+  [QA] Restore deleted ebuild from attic. Version >=2.12.0 is in package.mask,
+  therefore 2.10.11 was the latest visible version. Also ptlib-2.10.10 fails
+  with bison-3, bug 485842.
 
   14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -ptlib-2.10.11.ebuild:
   old
