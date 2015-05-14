@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtdemo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.15 2015/05/11 14:59:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.16 2015/05/14 14:29:06 pesa Exp $
+
+  14 May 2015; Davide Pesavento <pesa@gentoo.org> qtdemo-4.8.6-r1.ebuild:
+  Workaround bug #549406: disable phonon on non-native ABIs until media-
+  libs/phonon becomes multilib.
 
   11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qtdemo-4.8.6-r1.ebuild:
   amd64 stable wrt bug #530238
