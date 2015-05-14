@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/ipkg-utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.19 2014/12/26 18:13:08 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ipkg-utils/ChangeLog,v 1.20 2015/05/14 07:26:02 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -ipkg-utils-1.7.050831-r1.ebuild:
+  old
 
 *ipkg-utils-1.7.050831-r2 (26 Dec 2014)
 

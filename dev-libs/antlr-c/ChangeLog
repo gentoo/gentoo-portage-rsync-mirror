@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/antlr-c
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/ChangeLog,v 1.6 2013/09/01 12:49:31 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/ChangeLog,v 1.7 2015/05/14 07:21:33 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -antlr-c-3.3_pre20110403.ebuild, -antlr-c-3.4.ebuild,
+  -files/antlr-c-3.1.4-doxygen.patch:
+  old
 
   01 Sep 2013; Agostino Sarubbo <ago@gentoo.org> antlr-c-3.5.ebuild:
   Add ~ppc, wrt bug #483246

@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.88 2015/03/06 10:34:52 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.89 2015/05/14 07:19:25 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -beecrypt-4.2.1-r1.ebuild, -beecrypt-4.2.1-r2.ebuild:
+  old
 
 *beecrypt-4.2.1-r3 (06 Mar 2015)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/ec2-ami-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.19 2015/03/22 21:01:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ec2-ami-tools/ChangeLog,v 1.20 2015/05/14 07:23:00 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -ec2-ami-tools-1.4.0.5-r3.ebuild:
+  old
 
 *ec2-ami-tools-1.5.6 (22 Mar 2015)
 

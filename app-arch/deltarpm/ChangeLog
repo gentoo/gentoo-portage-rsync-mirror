@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/deltarpm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.10 2014/12/25 00:13:21 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/deltarpm/ChangeLog,v 1.11 2015/05/14 07:25:12 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -deltarpm-3.6_pre20110223.ebuild:
+  old
 
 *deltarpm-3.6_pre20110223-r1 (25 Dec 2014)
 

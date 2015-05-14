@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cdk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.90 2015/02/03 18:26:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.91 2015/05/14 07:15:58 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -cdk-5.0.20140118.ebuild,
+  -files/cdk-5.0.20110517-makefile.patch, -files/cdk-5.0.20120323-ldflags.patch:
+  old
 
   03 Feb 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself as maintainer.

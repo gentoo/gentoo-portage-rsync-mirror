@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcgroup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.22 2015/01/26 10:06:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcgroup/ChangeLog,v 1.23 2015/05/14 07:03:32 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -libcgroup-0.38-r1.ebuild, -libcgroup-0.39_rc1-r1.ebuild:
+  old
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> libcgroup-0.41.ebuild:
   Stable for x86, wrt bug #535110

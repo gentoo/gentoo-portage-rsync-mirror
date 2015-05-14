@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/lzma
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.18 2012/11/19 12:50:45 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzma/ChangeLog,v 1.19 2015/05/14 07:27:21 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -lzma-4.63.ebuild,
+  -lzma-4.65.ebuild:
+  old
 
   19 Nov 2012; Jeroen Roovers <jer@gentoo.org> lzma-4.63.ebuild,
   lzma-4.65.ebuild, lzma-9.20.ebuild:
@@ -69,4 +73,3 @@
   27 Aug 2005; Radoslaw Stachowiak <radek@gentoo.org> +metadata.xml,
   +lzma-4.27.ebuild:
   intial version closed
-
