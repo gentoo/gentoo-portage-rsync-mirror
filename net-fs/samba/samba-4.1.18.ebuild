@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.18.ebuild,v 1.1 2015/05/14 00:15:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.1.18.ebuild,v 1.2 2015/05/14 12:36:22 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -37,7 +37,7 @@ CDEPEND="${PYTHON_DEPS}
 	>=sys-libs/ntdb-1.0[python,${PYTHON_USEDEP}]
 	>=sys-libs/ldb-1.1.17
 	>=sys-libs/tdb-1.2.12[python,${PYTHON_USEDEP}]
-	>=sys-libs/talloc-2.0.8[python,${PYTHON_USEDEP}]
+	>=sys-libs/talloc-2.1.2[python,${PYTHON_USEDEP}]
 	>=sys-libs/tevent-0.9.18
 	sys-libs/zlib
 	virtual/pam
