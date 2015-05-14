@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.6.ebuild,v 1.6 2015/05/13 21:08:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/gnat-gcc-4.3.6.ebuild,v 1.7 2015/05/14 18:38:14 pacho Exp $
 
 inherit gnatbuild
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/gcc-${PV}/gcc-core-${PV}.tar.bz2
 	ppc?   ( http://dev.gentoo.org/~george/src/gnatboot-4.1-ppc.tar.bz2 )"
 #	sparc? ( mirror://gentoo/gnatboot-${BOOT_SLOT}-sparc.tar.bz2 )
 
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 # starting with 4.3.0 gnat needs these libs
 RDEPEND=">=dev-libs/mpfr-2.3.1

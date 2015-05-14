@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/shadowgrounds-bin-0_beta12-r1.ebuild,v 1.2 2014/06/25 13:46:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/shadowgrounds-bin-0_beta12-r1.ebuild,v 1.3 2015/05/14 18:51:22 mr_bones_ Exp $
 
 EAPI=5
 
@@ -21,11 +21,18 @@ RDEPEND=">=sys-libs/glibc-2.4
 	>=sys-devel/gcc-4.3.0
 	!amd64? (
 		gnome-base/libglade
+		sys-libs/zlib
 	)
 	amd64? (
 		|| (
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-			>=gnome-base/libglade-2.6.4-r1[abi_x86_32(-)]
+			(
+				app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
+				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
+			)
+			(
+				>=gnome-base/libglade-2.6.4-r1[abi_x86_32(-)]
+				sys-libs/zlib[abi_x86_32(-)]
+			)
 		)
 	)"
 
@@ -43,7 +50,7 @@ pkg_nofetch() {
 src_unpack() {
 	# manually run unzip as the initial seek causes it to exit(1)
 	unpack_zip ${A}
-	rm lib*/lib{gcc_s,m,rt,selinux}.so.?
+	rm lib*/lib{gcc_s,m,rt,selinux,z}.so.?
 }
 
 src_install() {

@@ -1,6 +1,10 @@
 # ChangeLog for games-action/shadowgrounds-bin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.6 2014/08/29 17:20:34 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/ChangeLog,v 1.7 2015/05/14 18:51:22 mr_bones_ Exp $
+
+  14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  shadowgrounds-bin-0_beta12-r1.ebuild:
+  use system zlib with patch from Robert Cernansky (bug #549074)
 
   29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
   -shadowgrounds-bin-0_beta12.ebuild:

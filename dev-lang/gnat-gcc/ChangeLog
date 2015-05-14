@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gnat-gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.69 2015/05/13 21:09:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnat-gcc/ChangeLog,v 1.70 2015/05/14 18:38:14 pacho Exp $
+
+  14 May 2015; Pacho Ramos <pacho@gentoo.org> gnat-gcc-4.3.6.ebuild,
+  gnat-gcc-4.4.7.ebuild, gnat-gcc-4.5.4.ebuild, gnat-gcc-4.6.4.ebuild:
+  Reverse previous stabilization done by error
 
   13 May 2015; Pacho Ramos <pacho@gentoo.org> -gnat-gcc-4.4.3.ebuild,
   -gnat-gcc-4.4.5.ebuild:
