@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16526 2015/05/13 09:21:05 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16527 2015/05/14 11:49:56 blueness Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Anthony G. Basile <blueness@gentoo.org> (14 May 2015)
+# No longer required by any packages in the tree.
+# Masked for removal in 30 days.
+sys-apps/getent
 
 # Patrice Clement <monsieurp@gentoo.org) (13 May 2015)
 # Unused package, homepage dead, no revdeps. 

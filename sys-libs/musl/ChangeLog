@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.56 2015/05/13 17:37:06 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.58 2015/05/14 11:43:28 blueness Exp $
+
+  14 May 2015; Anthony G. Basile <blueness@gentoo.org> -musl-1.1.7.ebuild,
+  -musl-1.1.8.ebuild:
+  Drop older stable versions that depended on sys-apps/getent.
+
+  14 May 2015; Anthony G. Basile <blueness@gentoo.org> musl-1.1.9.ebuild:
+  Drop ~mips since its broken.
 
   13 May 2015; Ulrich Müller <ulm@gentoo.org> musl-1.1.9.ebuild,
   musl-9999.ebuild:

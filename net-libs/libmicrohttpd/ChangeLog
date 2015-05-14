@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libmicrohttpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.93 2015/05/14 11:10:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/ChangeLog,v 1.94 2015/05/14 11:55:27 blueness Exp $
+
+  14 May 2015; Anthony G. Basile <blueness@gentoo.org> ChangeLog:
+  Fix gpg signature.
 
 *libmicrohttpd-0.9.42 (14 May 2015)
 
