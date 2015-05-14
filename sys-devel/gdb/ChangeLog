@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.296 2015/05/04 08:19:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.297 2015/05/14 02:32:24 vapier Exp $
+
+*gdb-7.9.1 (14 May 2015)
+
+  14 May 2015; Mike Frysinger <vapier@gentoo.org> +gdb-7.9.1.ebuild:
+  Version bump.
 
   04 May 2015; Mike Frysinger <vapier@gentoo.org> gdb-7.5.1.ebuild,
   gdb-7.5.ebuild, gdb-7.6.1.ebuild, gdb-7.6.2.ebuild, gdb-7.6.ebuild,
