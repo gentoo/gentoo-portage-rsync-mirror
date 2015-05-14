@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.2-r2.ebuild,v 1.1 2015/05/11 03:46:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.2-r3.ebuild,v 1.1 2015/05/14 03:42:37 mgorny Exp $
 
 EAPI=5
 
@@ -56,7 +56,7 @@ src_prepare() {
 
 	# debug builds. change install path, remove optimisations and override buildtype
 	if use debug; then
-		sed -i -e "s|out/Release/|out/Debug/|g" tools/install.py
+		sed -i -e "s|out/Release/|out/Debug/|g" tools/install.py || die
 		BUILDTYPE=Debug
 	fi
 }
@@ -96,7 +96,7 @@ src_compile() {
 
 src_install() {
 	local LIBDIR="${ED}/usr/$(get_libdir)"
-	emake install DESTDIR="${ED}"
+	emake install DESTDIR="${ED}" PREFIX=/usr
 	use npm && dodoc -r "${LIBDIR}"/node_modules/npm/html
 	rm -rf "${LIBDIR}"/node_modules/npm/{doc,html} || die
 	find "${LIBDIR}"/node_modules -type f -name "LICENSE" -delete

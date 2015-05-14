@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.143 2015/05/11 03:46:33 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.144 2015/05/14 03:42:37 mgorny Exp $
+
+*nodejs-0.12.2-r3 (14 May 2015)
+
+  14 May 2015; Michał Górny <mgorny@gentoo.org> +nodejs-0.12.2-r3.ebuild,
+  -nodejs-0.12.2-r2.ebuild:
+  Fix Prefix install, bug #541656. https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/118 by jbergstroem.
 
 *nodejs-0.10.38 (11 May 2015)
 *nodejs-0.12.2-r2 (11 May 2015)
