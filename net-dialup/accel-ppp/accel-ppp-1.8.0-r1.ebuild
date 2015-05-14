@@ -1,20 +1,18 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.7.9999.ebuild,v 1.7 2014/12/28 16:13:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/accel-ppp-1.8.0-r1.ebuild,v 1.1 2015/05/14 10:23:24 pinkbyte Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://accel-ppp.git.sourceforge.net/gitroot/accel-ppp/accel-ppp"
-EGIT_BRANCH="1.7"
-inherit cmake-utils git-r3 linux-info multilib
+inherit cmake-utils linux-info multilib
 
 DESCRIPTION="High performance PPTP, PPPoE and L2TP server"
 HOMEPAGE="http://accel-ppp.sourceforge.net/"
-SRC_URI=""
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="debug doc postgres radius shaper snmp valgrind"
 
 RDEPEND="postgres? ( dev-db/postgresql )
@@ -23,6 +21,7 @@ RDEPEND="postgres? ( dev-db/postgresql )
 	dev-libs/openssl:0"
 DEPEND="${RDEPEND}
 	valgrind? ( dev-util/valgrind )"
+PDEPEND="net-dialup/ppp-scripts"
 
 DOCS=( README )
 CONFIG_CHECK="~L2TP ~PPPOE ~PPTP"
@@ -32,19 +31,17 @@ src_prepare() {
 		-e "/echo/d" \
 		-e "s: RENAME accel-ppp.conf.dist::" accel-pppd/CMakeLists.txt || die 'sed on accel-pppd/CMakeLists.txt failed'
 
-	# TBF shaper is obsolete by upstream, so it's disabled
-	sed -i -e '/IF (SHAPER)/s/SHAPER/SHAPER_TBF/' \
-		accel-pppd/extra/CMakeLists.txt || die 'sed on accel-pppd/extra/CMakeLists.txt failed'
-
 	epatch_user
 }
 
 src_configure() {
 	local libdir="$(get_libdir)"
 	# There must be also dev-libs/tomcrypt (TOMCRYPT) as crypto alternative to OpenSSL
+	# IPoE driver does not build properly :-(
 	local mycmakeargs=(
 		-DLIB_PATH_SUFFIX="${libdir#lib}"
-		-DBUILD_DRIVER=FALSE
+		-DBUILD_PPTP_DRIVER=FALSE
+		-DBUILD_IPOE_DRIVER=FALSE
 		-DCRYPTO=OPENSSL
 		$(cmake-utils_use debug MEMDEBUG)
 		$(cmake-utils_use postgres LOG_PGSQL)

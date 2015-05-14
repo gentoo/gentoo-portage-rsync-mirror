@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/accel-ppp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.10 2014/12/28 16:13:25 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/accel-ppp/ChangeLog,v 1.11 2015/05/14 10:23:24 pinkbyte Exp $
+
+*accel-ppp-1.8.0-r1 (14 May 2015)
+
+  14 May 2015; Sergey Popov <pinkbyte@gentoo.org> -accel-ppp-1.7.3.ebuild,
+  -accel-ppp-1.7.4.ebuild, -accel-ppp-1.7.9999.ebuild, -accel-ppp-1.8.0.ebuild,
+  +accel-ppp-1.8.0-r1.ebuild,
+  -files/accel-ppp-remove_obsolete_tbf_shaper.patch:
+  Revision bump: add dependency on net-dialup/ppp-scripts to improve
+  pppd_compat integration. Drop old versions
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> accel-ppp-1.7.3.ebuild,
   accel-ppp-1.7.4.ebuild, accel-ppp-1.7.9999.ebuild, accel-ppp-1.8.0.ebuild:

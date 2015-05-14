@@ -1,6 +1,17 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.302 2015/03/03 09:20:10 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.304 2015/05/14 10:21:15 pinkbyte Exp $
+
+  14 May 2015; Sergey Popov <pinkbyte@gentoo.org> ppp-2.4.6-r3.ebuild,
+  ppp-2.4.7.ebuild, ppp-2.4.7-r1.ebuild:
+  Explicitly set SLOT on dev-libs/openssl dependency
+
+*ppp-2.4.7-r1 (14 May 2015)
+
+  14 May 2015; Sergey Popov <pinkbyte@gentoo.org> ppp-2.4.7.ebuild,
+  +ppp-2.4.7-r1.ebuild:
+  Revision bump: split ppp scripts into separate package -
+  net-dialup/ppp-scripts. Adjust dependencies
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> ppp-2.4.7.ebuild:
   add arm64 support, tested on A53 board

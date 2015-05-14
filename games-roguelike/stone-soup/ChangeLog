@@ -1,6 +1,13 @@
 # ChangeLog for games-roguelike/stone-soup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.42 2014/10/27 19:59:02 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/stone-soup/ChangeLog,v 1.43 2015/05/14 10:28:09 hasufell Exp $
+
+*stone-soup-0.16.1 (14 May 2015)
+
+  14 May 2015; Julian Ospald <hasufell@gentoo.org> +stone-soup-0.16.1.ebuild,
+  +files/stone-soup-0.16.1-Use-pkg-config-for-linking-to-ncurses.patch,
+  +files/stone-soup-0.16.1-respect-flags-and-compiler.patch:
+  version bump
 
 *stone-soup-0.15.2 (27 Oct 2014)
 
