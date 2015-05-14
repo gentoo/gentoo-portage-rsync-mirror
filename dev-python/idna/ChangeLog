@@ -1,0 +1,8 @@
+# ChangeLog for dev-python/idna
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/idna/ChangeLog,v 1.1 2015/05/14 17:55:35 jlec Exp $
+
+*idna-1.1 (14 May 2015)
+
+  14 May 2015; Justin Lecher <jlec@gentoo.org> +idna-1.1.ebuild, +metadata.xml:
+  New addition; ebuild written by me
