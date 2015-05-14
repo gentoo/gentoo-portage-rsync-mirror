@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.2.ebuild,v 1.1 2015/05/13 20:38:27 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.2-r1.ebuild,v 1.1 2015/05/14 08:12:20 k_f Exp $
 
 EAPI=5
 
@@ -65,7 +65,8 @@ src_configure() {
 		$(use_enable qt4 pinentry-qt4) \
 		$(use qt4 && use_enable clipboard pinentry-qt4-clipboard) \
 		$(use_with caps libcap) \
-		$(use_enable gnome-keyring libsecret)
+		$(use_enable gnome-keyring libsecret) \
+		$(use_enable gnome-keyring pinentry-gnome3) \
 		MOC="$(qt4_get_bindir)"/moc
 }
 

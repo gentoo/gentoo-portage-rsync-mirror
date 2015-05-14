@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/pinentry
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.171 2015/05/13 20:38:27 k_f Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/ChangeLog,v 1.172 2015/05/14 08:12:20 k_f Exp $
+
+*pinentry-0.9.2-r1 (14 May 2015)
+
+  14 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> +pinentry-0.9.2-r1.ebuild,
+  -pinentry-0.9.2.ebuild:
+  Enable the GNOME3 pinentry if gnome-keyring USE flag is set
 
 *pinentry-0.9.2 (13 May 2015)
 

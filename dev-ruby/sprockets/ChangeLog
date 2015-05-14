@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/sprockets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.32 2015/04/11 05:28:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets/ChangeLog,v 1.33 2015/05/14 08:17:39 graaff Exp $
+
+*sprockets-3.1.0 (14 May 2015)
+
+  14 May 2015; Hans de Graaff <graaff@gentoo.org> sprockets-2.12.3.ebuild,
+  +sprockets-3.1.0.ebuild:
+  Version bump. Add missing uglifier test dependency.
 
   11 Apr 2015; Hans de Graaff <graaff@gentoo.org> -sprockets-2.1.4.ebuild:
   Remove masked ruby19-only packages.
