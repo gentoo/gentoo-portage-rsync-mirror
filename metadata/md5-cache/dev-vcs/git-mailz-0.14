@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=Send a collection of patches as emails
+EAPI=5
+HOMEPAGE=https://github.com/roman-neuhauser/git-mailz/
+KEYWORDS=~x86 ~amd64
+LICENSE=MIT
+RDEPEND=virtual/mta dev-vcs/git app-shells/zsh
+SLOT=0
+SRC_URI=http://codex.sigpipe.cz/git-mailz/git-mailz-0.14.tar.gz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_md5_=f4126aaa4d4f122fc327d48f425b620b
