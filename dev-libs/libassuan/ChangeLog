@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libassuan
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.124 2014/12/17 01:07:27 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libassuan/ChangeLog,v 1.125 2015/05/14 15:09:53 k_f Exp $
+
+*libassuan-2.2.1 (14 May 2015)
+
+  14 May 2015; Kristian Fiskerstrand <k_f@gentoo.org> +libassuan-2.2.1.ebuild:
+  Version bump
 
 *libassuan-2.2.0 (17 Dec 2014)
 
