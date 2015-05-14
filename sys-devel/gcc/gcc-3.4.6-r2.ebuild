@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.41 2015/05/05 06:53:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.6-r2.ebuild,v 1.42 2015/05/14 16:47:01 vapier Exp $
 
 EAPI="5"
 
@@ -30,7 +30,7 @@ src_prepare() {
 	# Anything useful and objc will require libffi. Seriously. Lets just force
 	# libffi to install with USE="objc", even though it normally only installs
 	# if you attempt to build gcj.
-	if ! use build && use objc && ! use gcj ; then
+	if use objc && ! use gcj ; then
 		epatch "${FILESDIR}"/3.4.3/libffi-without-libgcj.patch
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
