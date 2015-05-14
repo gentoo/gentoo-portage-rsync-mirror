@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/passenger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.112 2015/04/19 10:16:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/passenger/ChangeLog,v 1.113 2015/05/14 05:42:55 graaff Exp $
+
+  14 May 2015; Hans de Graaff <graaff@gentoo.org> -passenger-4.0.41.ebuild,
+  -passenger-4.0.56.ebuild:
+  Cleanup.
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> passenger-4.0.53.ebuild:
   Stable for x86, wrt bug #533896
