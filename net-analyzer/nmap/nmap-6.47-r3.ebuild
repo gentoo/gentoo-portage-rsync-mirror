@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r3.ebuild,v 1.3 2015/05/14 08:45:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-6.47-r3.ebuild,v 1.4 2015/05/14 09:43:06 jer Exp $
 
 EAPI=5
 
@@ -72,7 +72,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-6.25-liblua-ar.patch \
 		"${FILESDIR}"/${PN}-6.46-uninstaller.patch \
 		"${FILESDIR}"/${PN}-6.47-no-libnl.patch \
-		"${FILESDIR}"/${PN}-6.47-no-FORTIFY_SOURCE.patch
+		"${FILESDIR}"/${PN}-6.47-no-FORTIFY_SOURCE.patch \
+		"${FILESDIR}"/${PN}-6.47-ncat-lua.patch
 
 	if use nls; then
 		local lingua=''
