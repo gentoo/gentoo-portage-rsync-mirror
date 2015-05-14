@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/dahdi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.70 2015/03/02 09:42:58 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dahdi/ChangeLog,v 1.71 2015/05/14 13:21:16 chainsaw Exp $
+
+*dahdi-2.10.1-r1 (14 May 2015)
+
+  14 May 2015; Tony Vroon <chainsaw@gentoo.org> +dahdi-2.10.1-r1.ebuild:
+  Two upstream patches as scavenged by Erich Seifert & Oliver Jaksch restore
+  compatibility with kernel 4.0 and higher. Closes bug #546530.
 
 *dahdi-2.10.1 (02 Mar 2015)
 

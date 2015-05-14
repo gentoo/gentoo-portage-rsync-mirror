@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/bird
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.30 2014/10/13 12:44:36 chainsaw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bird/ChangeLog,v 1.31 2015/05/14 13:01:52 chainsaw Exp $
+
+*bird-1.5.0 (14 May 2015)
+
+  14 May 2015; Tony Vroon <chainsaw@gentoo.org> +bird-1.5.0.ebuild:
+  Version bump, as requested by Moyaze Shivji in the LINX technology team. This
+  addresses a BGP bug where TX was postponed unreasonably long and hold timers
+  could expire.
 
 *bird-1.4.5 (13 Oct 2014)
 
