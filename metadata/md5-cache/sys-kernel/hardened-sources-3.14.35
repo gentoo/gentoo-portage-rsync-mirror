@@ -10,6 +10,6 @@ PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=>=sys-devel/gcc-4.5 !build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
 SLOT=3.14.35
-SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.14.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.14.N/deblob-3.14 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.14.N/deblob-check -> deblob-check-3.14 ) http://dev.gentoo.org/~blueness/hardened-sources/hardened-patches/hardened-patches-3.14.35-1.extras.tar.bz2 mirror://gentoo/genpatches-3.14-39.base.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	d38b702cdd3e6429d33d00f4a4f660cb	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.14.tar.xz deblob? ( http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.14-gnu/deblob-3.14 http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.14-gnu/deblob-check -> deblob-check-3.14 ) http://dev.gentoo.org/~blueness/hardened-sources/hardened-patches/hardened-patches-3.14.35-1.extras.tar.bz2 mirror://gentoo/genpatches-3.14-39.base.tar.xz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	c301713d773578dc856a813c0901896f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=e0688d65817b697f0483603833ef2eeb

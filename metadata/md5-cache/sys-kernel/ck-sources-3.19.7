@@ -2,7 +2,7 @@ DEFINED_PHASES=compile install postinst postrm preinst prepare setup test unpack
 DEPEND=!build? ( sys-apps/sed >=sys-devel/binutils-2.11.90.0.31 ) deblob? ( || ( >=dev-lang/python-2.7.5-r2:2.7 ) )
 DESCRIPTION=Full Linux 3.19 kernel sources with Con Kolivas' high performance patchset and Gentoo's genpatches
 EAPI=5
-HOMEPAGE=http://www.kernel.org/ http://www.gentoo.org/ http://dev.gentoo.org/~mpagano/genpatches/ http://users.on.net/~ckolivas/kernel/ http://www.fsfla.org/svnwiki/selibre/linux-libre/
+HOMEPAGE=http://www.kernel.org/ http://www.gentoo.org/ http://dev.gentoo.org/~mpagano/genpatches/ http://users.on.net/~ckolivas/kernel/ http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags
 IUSE=bfsonly symlink build deblob
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2 !deblob? ( freedist )
@@ -10,6 +10,6 @@ PDEPEND=!build? ( virtual/dev-manager )
 RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/bc )
 RESTRICT=binchecks strip
 SLOT=3.19.7
-SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.19.tar.xz deblob? ( http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.19.N/deblob-3.19 http://www.fsfla.org/svnwiki/selibre/linux-libre//download/releases/LATEST-3.19.N/deblob-check -> deblob-check-3.19 ) mirror://gentoo/genpatches-3.19-8.base.tar.xz mirror://gentoo/genpatches-3.19-8.extras.tar.xz mirror://gentoo/genpatches-3.19-8.experimental.tar.xz !bfsonly? ( http://ck.kolivas.org/patches/3.0/3.19/3.19-ck1/patch-3.19-ck1.xz ) bfsonly? ( http://ck.kolivas.org/patches/3.0/3.19/3.19-ck1/patches/3.19-sched-bfs-461.patch )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	d38b702cdd3e6429d33d00f4a4f660cb	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.19.tar.xz deblob? ( http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.19-gnu/deblob-3.19 http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.19-gnu/deblob-check -> deblob-check-3.19 ) mirror://gentoo/genpatches-3.19-8.base.tar.xz mirror://gentoo/genpatches-3.19-8.extras.tar.xz mirror://gentoo/genpatches-3.19-8.experimental.tar.xz !bfsonly? ( http://ck.kolivas.org/patches/3.0/3.19/3.19-ck1/patch-3.19-ck1.xz ) bfsonly? ( http://ck.kolivas.org/patches/3.0/3.19/3.19-ck1/patches/3.19-sched-bfs-461.patch )
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	c301713d773578dc856a813c0901896f	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=1199f29ae0eb83dc5443b93ed9b40297
