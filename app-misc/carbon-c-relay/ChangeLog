@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/carbon-c-relay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/ChangeLog,v 1.5 2015/05/06 19:30:43 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/ChangeLog,v 1.6 2015/05/14 13:50:14 grobian Exp $
+
+*carbon-c-relay-0.40 (14 May 2015)
+
+  14 May 2015; Fabian Groffen <grobian@gentoo.org> +carbon-c-relay-0.40.ebuild,
+  -carbon-c-relay-0.39.ebuild:
+  Version bump, fix for udp listener stopping, performance fixes for aggregator,
+  rewrites can now upper/lowercase, fixes for linking with Clang, with OpenMP
+  defaults workers to number of available cpus
 
   06 May 2015; Fabian Groffen <grobian@gentoo.org> files/carbon-c-relay.initd:
   initd: fix logging
