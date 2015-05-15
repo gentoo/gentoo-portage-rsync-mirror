@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.331 2015/05/13 06:47:17 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git/ChangeLog,v 1.332 2015/05/15 18:41:51 zlogene Exp $
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> git-2.3.6.ebuild:
+  arm stable wrt bug #548350
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> git-2.3.6.ebuild:
   ppc stable wrt bug #548350

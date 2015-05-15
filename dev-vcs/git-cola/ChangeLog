@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.43 2015/05/05 13:30:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.44 2015/05/15 18:48:43 zlogene Exp $
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> git-cola-2.0.7.ebuild:
+  amd64 stable wrt bug #518306
 
 *git-cola-2.1.2 (05 May 2015)
 
