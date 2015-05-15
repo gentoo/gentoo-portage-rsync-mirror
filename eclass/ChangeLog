@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1615 2015/05/14 19:26:29 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1616 2015/05/15 16:13:42 kensington Exp $
+
+  15 May 2015; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass:
+  Sync with KDE overlay - update SRC_URI.
 
   14 May 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Add back the deblob script functionality to the eclass.

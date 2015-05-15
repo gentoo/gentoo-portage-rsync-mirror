@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.151 2015/04/28 14:14:29 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.152 2015/05/15 16:13:42 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -440,14 +440,20 @@ _calculate_src_uri() {
 					# Part of 14.12.3 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/14.12.3/src/${_kmname_pv}.tar.xz" ;;
 				4.11.18)
-					# Part of 15.04.0 actually, sigh. Not stable for next release!
+					# Part of 15.04.1 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/15.04.0/src/${_kmname_pv}.tar.xz" ;;
+				4.11.19)
+					# Part of 15.04.0 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/applications/15.04.1/src/${_kmname_pv}.tar.xz" ;;
 				4.14.6)
 					# Part of 14.12.3 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/14.12.3/src/${_kmname_pv}.tar.xz" ;;
 				4.14.7)
 					# Part of 15.04.0 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/15.04.0/src/${_kmname_pv}.tar.xz" ;;
+				4.14.8)
+					# Part of 15.04.1 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/applications/15.04.1/src/${_kmname_pv}.tar.xz" ;;
 				??.?.[6-9]? | ??.??.[4-9]?)
 					# Unstable KDE Applications releases
 					SRC_URI="mirror://kde/unstable/applications/${PV}/src/${_kmname}-${PV}.tar.xz" ;;
