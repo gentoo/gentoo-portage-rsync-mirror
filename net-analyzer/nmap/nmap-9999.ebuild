@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.12 2015/05/14 09:43:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-9999.ebuild,v 1.13 2015/05/15 04:36:08 jer Exp $
 
 EAPI=5
 
-DISABLE_AUTOFORMATTING=true
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="sqlite,xml"
 inherit eutils flag-o-matic python-single-r1 toolchain-funcs user
