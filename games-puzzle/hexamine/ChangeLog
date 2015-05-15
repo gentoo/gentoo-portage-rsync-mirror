@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/hexamine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexamine/ChangeLog,v 1.6 2015/03/24 17:25:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/hexamine/ChangeLog,v 1.7 2015/05/15 19:25:25 mr_bones_ Exp $
+
+  15 May 2015; Michael Sterrett <mr_bones_@gentoo.org> hexamine-0.2.1.ebuild:
+  use EPYTHON in wrapper (bug #549568)
 
   24 Mar 2015; Agostino Sarubbo <ago@gentoo.org> hexamine-0.2.1.ebuild:
   Stable for amd64, wrt bug #543222
