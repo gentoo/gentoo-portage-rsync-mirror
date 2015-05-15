@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14-r1.ebuild,v 1.5 2015/05/15 10:31:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14-r1.ebuild,v 1.6 2015/05/15 12:02:20 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ SRC_URI="http://download.gna.org/soya/${MY_P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 IUSE="doc examples"
 
 DEPEND="=dev-games/ode-0.11.1

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.10.1.ebuild,v 1.6 2015/05/15 11:55:43 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.10.1.ebuild,v 1.7 2015/05/15 12:11:12 idella4 Exp $
 
 EAPI="5"
 
@@ -54,6 +54,12 @@ pkg_setup() {
 src_prepare() {
 	if amalgamation; then
 		epatch "${FILESDIR}/${PN}-3.8.1-autoconf-dlopen_check.patch"
+
+		# http://www.sqlite.org/cgi/src/info/85bfa9a67f997084
+		sed \
+			-e "s/^sqlite3_SOURCES = shell.c sqlite3.h$/sqlite3_SOURCES = shell.c sqlite3.c sqlite3.h/" \
+			-e "s/^sqlite3_LDADD = sqlite3.\$(OBJEXT) @READLINE_LIBS@$/sqlite3_LDADD = @READLINE_LIBS@\nsqlite3_CFLAGS = \$(AM_CFLAGS)/" \
+			-i Makefile.am
 	else
 		epatch "${FILESDIR}/${PN}-3.8.1-src-dlopen_check.patch"
 		epatch "${FILESDIR}/${PN}-3.8.1-tests-icu-52.patch"
@@ -138,6 +144,7 @@ src_configure() {
 		append-cppflags -DSQLITE_OMIT_WAL
 	fi
 
+	# Use pread(), pread64(), pwrite(), pwrite64() functions for better performance if they are available.
 	if $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -Werror=implicit-function-declaration -x c - -o "${T}/pread_pwrite_test" <<< $'#include <unistd.h>\nint main()\n{\n  pread(0, NULL, 0, 0);\n  pwrite(0, NULL, 0, 0);\n  return 0;\n}' &> /dev/null; then
 		append-cppflags -DUSE_PREAD
 	fi

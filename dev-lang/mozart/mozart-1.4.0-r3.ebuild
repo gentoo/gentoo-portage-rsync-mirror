@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0-r3.ebuild,v 1.1 2015/03/25 12:27:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart/mozart-1.4.0-r3.ebuild,v 1.2 2015/05/15 12:03:51 pacho Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="Mozart"
-KEYWORDS="-amd64 ~ppc -ppc64 ~x86"
+KEYWORDS="-amd64 ppc -ppc64 ~x86"
 IUSE="doc emacs examples gdbm static tcl threads tk"
 
 RDEPEND="

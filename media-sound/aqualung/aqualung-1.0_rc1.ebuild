@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-1.0_rc1.ebuild,v 1.3 2015/05/13 08:44:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aqualung/aqualung-1.0_rc1.ebuild,v 1.4 2015/05/15 12:10:43 billie Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND="sys-libs/zlib
 	ifp? ( media-libs/libifp )
 	cdda? ( dev-libs/libcdio-paranoia )
 	cddb? ( media-libs/libcddb )
-	lua? ( dev-lang/lua )"
+	lua? ( dev-lang/lua:0= )"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext

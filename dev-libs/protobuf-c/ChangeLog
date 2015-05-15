@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/protobuf-c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.20 2015/05/04 03:19:29 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/protobuf-c/ChangeLog,v 1.21 2015/05/15 12:28:30 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> protobuf-c-1.0.2-r1.ebuild,
+  protobuf-c-1.1.1.ebuild:
+  ppc* love
 
   04 May 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Remove myself as maintainer.

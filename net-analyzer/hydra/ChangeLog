@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/hydra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.94 2015/05/13 09:34:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hydra/ChangeLog,v 1.95 2015/05/15 12:13:44 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> hydra-8.1.ebuild:
+  ppc stable wrt bug #548390
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> hydra-8.1.ebuild:
   Stable for x86, wrt bug #548390

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/http-parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.14 2015/05/11 16:40:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/http-parser/ChangeLog,v 1.15 2015/05/15 12:01:40 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> http-parser-2.3.ebuild:
+  ppc stable wrt bug #517336
 
 *http-parser-2.5.0 (11 May 2015)
 
