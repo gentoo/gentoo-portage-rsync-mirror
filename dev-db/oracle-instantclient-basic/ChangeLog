@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/oracle-instantclient-basic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.60 2015/04/19 13:28:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/oracle-instantclient-basic/ChangeLog,v 1.61 2015/05/15 08:49:56 zlogene Exp $
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org>
+  oracle-instantclient-basic-11.2.0.4.ebuild:
+  x86 stable wrt bug #524924
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org>
   oracle-instantclient-basic-11.2.0.4.ebuild:
