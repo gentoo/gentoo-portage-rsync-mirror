@@ -4898,7 +4898,9 @@ net-dns/dnsmasq:tftp - Enables built in TFTP server for netbooting.
 net-dns/hash-slinger:ipsec - Enable support for IPSECKEY records (ipseckey)
 net-dns/hash-slinger:openpgp - Enable support for OPENPGPKEY records (openpgpkey)
 net-dns/hash-slinger:ssh - Enable support for SSHFP records (sshfp)
-net-dns/knot:fastparser - Enables fast DNS zone parser.
+net-dns/knot:dnstap - Include support for the dnstap binary log format (http://dnstap.info/).
+net-dns/knot:fastparser - Use a zone file parser that is faster, but requires more memory and CPU time to compile.
+net-dns/knot:lmdb - Use the LMDB database to store timers for slave zones on disk, making the timers persist across server restarts.
 net-dns/ldns-utils:dane - Enable DNS-based Authentication of Named Entities (DANE) support
 net-dns/ldns-utils:ecdsa - Enable ECDSA support
 net-dns/ldns-utils:gost - Enable GOST support

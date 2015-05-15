@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.10.ebuild,v 1.1 2015/01/12 22:12:09 idl0r Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-proxy/haproxy/haproxy-1.5.12.ebuild,v 1.1 2015/05/15 09:34:25 idl0r Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ IUSE="+crypt examples +pcre pcre-jit ssl tools vim-syntax +zlib"
 DEPEND="pcre? ( dev-libs/libpcre
 				pcre-jit? ( dev-libs/libpcre[jit] )
 				)
-	ssl? ( dev-libs/openssl[zlib?] )
+	ssl? ( dev-libs/openssl:0[zlib?] )
 	zlib? ( sys-libs/zlib )"
 RDEPEND="${DEPEND}"
 

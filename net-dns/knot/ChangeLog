@@ -1,6 +1,17 @@
 # ChangeLog for net-dns/knot
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.30 2014/09/15 15:48:37 scarabeus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/knot/ChangeLog,v 1.31 2015/05/15 09:52:40 dlan Exp $
+
+*knot-2.0.0_beta (15 May 2015)
+*knot-1.6.3 (15 May 2015)
+
+  15 May 2015; Yixun Lan <dlan@gentoo.org> +knot-1.6.3.ebuild,
+  +knot-2.0.0_beta.ebuild, -knot-9999.ebuild,
+  +files/1.6.3-dont-create-extra-directories.patch,
+  +files/2.0.0_beta-dont-create-extra-directories.patch,
+  +files/2.0.0_beta-spell-enable-vars-correctly.patch, metadata.xml:
+  version bump, bug 531448, 549104, thanks Karl-Johan Karlsson and Ondřej
+  Surý
 
 *knot-1.5.3 (15 Sep 2014)
 
