@@ -15,7 +15,8 @@ if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
 		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz"
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
+		zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )"
 fi
 
 RDEPEND="dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
@@ -50,7 +51,8 @@ PATCHES+=( "${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2014-8613.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2015-1414.patch"
 	"${FILESDIR}/${PN}-10.1-cve-2015-2923.patch"
-	"${FILESDIR}/${PN}-10.1-en-1501-vt.patch" )
+	"${FILESDIR}/${PN}-10.1-en-1501-vt.patch"
+	"${FILESDIR}/${PN}-10.1-en-1505-ufs.patch" )
 
 pkg_setup() {
 	# Force set CC=clang. when using gcc, aesni fails to build.
@@ -121,6 +123,10 @@ src_install() {
 
 	insinto "/usr/src/sys"
 	doins -r "${S}/"*
+	if use zfs ; then
+		insinto "/usr/src/cddl"
+		doins -r "${WORKDIR}/cddl/"*
+	fi
 }
 
 pkg_preinst() {
