@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc-jaybird
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.34 2011/01/23 21:19:20 xarthisius Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc-jaybird/ChangeLog,v 1.35 2015/05/15 21:05:39 monsieurp Exp $
+
+*jdbc-jaybird-2.2.7 (15 May 2015)
+
+  15 May 2015; Patrice Clement <monsieurp@gentoo.org>
+  +jdbc-jaybird-2.2.7.ebuild:
+  Version bump courtesy of William L. Thomson Jr. <wlt@obsidian-studios.com>.
+  Fix bug 547938.
 
   23 Jan 2011; Kacper Kowalik <xarthisius@gentoo.org>
   jdbc-jaybird-2.1.6.ebuild:
@@ -176,4 +183,3 @@
   19 Sep 2006; William L. Thomson Jr. <wltjr@gentoo.org> ChangeLog:
   ChangeLog Initial ebuilds for Jaybird JDBC driver for Firebird SQL databases
   which will replace the existing jdbc(2-3)-firebird ebuilds.
-

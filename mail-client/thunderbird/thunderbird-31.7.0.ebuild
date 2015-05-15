@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.5.0.ebuild,v 1.4 2015/03/31 07:59:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.7.0.ebuild,v 1.1 2015/05/15 21:24:57 axs Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -24,7 +24,7 @@ fi
 MOZ_P="${PN}-${MOZ_PV}"
 
 # Enigmail version
-EMVER="1.7.2"
+EMVER="1.8.1"
 # Upstream ftp release URI that's used by mozlinguas.eclass
 # We don't use the http mirror because it deletes old tarballs.
 MOZ_FTP_URI="ftp://ftp.mozilla.org/pub/${PN}/releases/"
@@ -36,7 +36,7 @@ inherit flag-o-matic toolchain-funcs mozconfig-v5.31 makeedit multilib autotools
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.com/en-US/thunderbird/"
 
-KEYWORDS="~alpha amd64 ~arm ~ppc ppc64 x86 ~x86-fbsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="bindist crypt hardened ldap +lightning +minimal mozdom selinux"
