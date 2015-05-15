@@ -1,6 +1,15 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.270 2015/04/12 08:47:11 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.272 2015/05/15 09:25:04 vapier Exp $
+
+  15 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/sane-backends-1.0.24-cross-compile.patch:
+  document the patch
+
+  15 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/sane-backends-1.0.24-cross-compile.patch,
+  sane-backends-1.0.24-r5.ebuild:
+  Fix from Chromium OS for cross-compiling.
 
   12 Apr 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due to bug #353756

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r5.ebuild,v 1.11 2014/12/04 08:39:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/sane-backends-1.0.24-r5.ebuild,v 1.12 2015/05/15 09:23:57 vapier Exp $
 
 EAPI="5"
 
@@ -183,7 +183,8 @@ src_prepare() {
 		"${FILESDIR}"/${P}-automagic_systemd.patch \
 		"${FILESDIR}"/${P}-systemd_pkgconfig.patch \
 		"${FILESDIR}"/${P}-kodakaio_avahi.patch \
-		"${FILESDIR}"/${P}-saned_pidfile_location.patch
+		"${FILESDIR}"/${P}-saned_pidfile_location.patch \
+		"${FILESDIR}"/${P}-cross-compile.patch
 	# Fix for "make check".
 	sed -i -e 's/sane-backends 1.0.24git/sane-backends 1.0.24/' testsuite/tools/data/html*
 	AT_NOELIBTOOLIZE=yes eautoreconf

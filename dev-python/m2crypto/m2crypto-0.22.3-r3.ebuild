@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r3.ebuild,v 1.2 2015/04/08 08:05:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r3.ebuild,v 1.3 2015/05/15 09:03:31 vapier Exp $
 
 EAPI=5
 
@@ -34,6 +34,8 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 RESTRICT=test
 
 python_prepare_all() {
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
+
 	# use pre-swigged sources
 	sed -i -e '/sources/s:\.i:_wrap.c:' setup.py || die
 
