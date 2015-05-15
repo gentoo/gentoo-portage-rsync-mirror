@@ -112,7 +112,7 @@ index 0c4961d..6c20b02 100644
          rng = date_range('5/8/2012 1:45', periods=10, freq='5T',
                           tz='dateutil/US/Eastern')
 diff --git a/pandas/tslib.pyx b/pandas/tslib.pyx
-index 40dbbd7..4feeaec 100644
+index 40dbbd7..de507c2 100644
 --- a/pandas/tslib.pyx
 +++ b/pandas/tslib.pyx
 @@ -41,7 +41,11 @@ from datetime import time as datetime_time
@@ -122,9 +122,9 @@ index 40dbbd7..4feeaec 100644
 -from dateutil.zoneinfo import gettz as _dateutil_gettz
 +from pandas.compat import is_platform_windows
 +if is_platform_windows():
-+    from dateutil.tz import gettz as _dateutil_gettz
-+else:
 +    from dateutil.zoneinfo import gettz as _dateutil_gettz
++else:
++    from dateutil.tz import gettz as _dateutil_gettz
  
  from pytz.tzinfo import BaseTzInfo as _pytz_BaseTzInfo
  from pandas.compat import parse_date, string_types, PY3, iteritems

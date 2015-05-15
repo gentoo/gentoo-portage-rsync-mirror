@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcprov
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.60 2014/03/02 14:45:06 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcprov/ChangeLog,v 1.61 2015/05/15 11:21:17 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> bcprov-1.50.ebuild:
+  ppc stable wrt bug #485564
 
 *bcprov-1.49-r3 (02 Mar 2014)
 

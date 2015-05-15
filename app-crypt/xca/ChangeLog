@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/xca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.49 2015/05/13 09:27:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/xca/ChangeLog,v 1.51 2015/05/15 11:29:04 alonbl Exp $
+
+  15 May 2015; Alon Bar-Lev <alonbl@gentoo.org>
+  -files/xca-0.9.0-qt_detection.patch, -files/xca-0.9.0-underlinking.patch,
+  -files/xca-0.9.1-ldflags.patch, -files/xca-0.9.3-desktop.patch,
+  -files/xca-0.9.3-openssl.patch, -xca-0.9.3-r1.ebuild, -xca-0.9.3-r2.ebuild,
+  -xca-1.0.0.ebuild, xca-1.1.0.ebuild:
+  Cleanup
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> xca-1.1.0.ebuild:
+  ppc stable wrt bug #547882
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> xca-1.1.0.ebuild:
   Stable for x86, wrt bug #547882

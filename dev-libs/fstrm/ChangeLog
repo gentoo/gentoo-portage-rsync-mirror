@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/fstrm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fstrm/ChangeLog,v 1.5 2015/04/09 09:05:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fstrm/ChangeLog,v 1.6 2015/05/15 11:28:29 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> fstrm-0.2.0-r1.ebuild:
+  keyword and stable on ppc and ppc64 (#531068)
 
   09 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fstrm-0.2.0-r1.ebuild:
   Stable for x86, wrt bug #532000

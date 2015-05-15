@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci</herd>
-<longdescription lang="en">
+  <herd>sci</herd>
+  <longdescription lang="en">
   dlib is a C++ library for developing portable applications dealing with
   networking, threads, graphical interfaces, data structures, linear
   algebra, machine learning, XML and text parsing, numerical

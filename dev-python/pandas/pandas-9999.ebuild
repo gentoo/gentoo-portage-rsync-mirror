@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.12 2015/05/13 12:50:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-9999.ebuild,v 1.13 2015/05/15 11:30:51 jlec Exp $
 
 EAPI=5
 
@@ -79,7 +79,7 @@ RDEPEND="${CDEPEND}
 	)
 	R? ( dev-python/rpy[${PYTHON_USEDEP}] )"
 
-_PATCHES=(
+PATCHES=(
 	"${FILESDIR}"/${P}-zoneinfo.patch
 )
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/patch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.88 2015/05/13 05:45:32 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/ChangeLog,v 1.89 2015/05/15 11:07:32 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> patch-2.7.5.ebuild:
+  ppc stable wrt bug #548120
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> patch-2.7.5.ebuild:
   ia64 stable wrt bug #548120

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dtc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.23 2015/05/06 05:57:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.24 2015/05/15 11:18:57 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> dtc-1.4.1.ebuild:
+  ppc stable wrt bug #535644
 
 *dtc-1.4.1-r1 (06 May 2015)
 

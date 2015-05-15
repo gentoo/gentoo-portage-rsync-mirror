@@ -1,11 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.16.1.ebuild,v 1.1 2015/05/13 12:50:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/pandas-0.16.1-r1.ebuild,v 1.1 2015/05/15 11:30:51 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} )
-PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 eutils flag-o-matic virtualx
 

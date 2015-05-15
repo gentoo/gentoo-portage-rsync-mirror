@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.76 2015/05/09 11:53:50 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.77 2015/05/15 11:18:24 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> fcitx-4.2.8.5.ebuild:
+  ppc stable wrt bug #540844
 
   09 May 2015; Ben de Groot <yngwin@gentoo.org> fcitx-4.2.8.5.ebuild,
   fcitx-4.2.8.6.ebuild:
