@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.21.5.ebuild,v 1.1 2015/01/31 08:30:41 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgit2/libgit2-0.21.5.ebuild,v 1.2 2015/05/15 06:40:33 pacho Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0/21"
-KEYWORDS="~amd64 ~x86 ~ppc-macos"
+KEYWORDS="amd64 x86 ~ppc-macos"
 IUSE="examples ssh test threads trace"
 
 RDEPEND="

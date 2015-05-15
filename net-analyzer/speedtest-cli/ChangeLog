@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/speedtest-cli
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/speedtest-cli/ChangeLog,v 1.7 2015/04/08 18:01:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/speedtest-cli/ChangeLog,v 1.8 2015/05/15 07:00:35 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> speedtest-cli-0.2.5.ebuild:
+  amd64 stable, bug #530994
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> speedtest-cli-0.2.4.ebuild,
   speedtest-cli-0.2.5.ebuild:
