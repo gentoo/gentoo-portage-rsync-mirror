@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/mosflm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.26 2015/05/15 10:58:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/mosflm/ChangeLog,v 1.27 2015/05/15 11:32:10 jlec Exp $
+
+  15 May 2015; Justin Lecher <jlec@gentoo.org> -mosflm-7.0.6-r2.ebuild,
+  -mosflm-7.0.7-r2.ebuild:
+  Drop old
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> mosflm-7.0.9.ebuild:
   ppc stable wrt bug #548692

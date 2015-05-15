@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.211 2015/05/13 09:27:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.212 2015/05/15 11:57:43 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> gkrellm-2.3.5-r3.ebuild:
+  ppc stable wrt bug #548690
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> gkrellm-2.3.5-r3.ebuild:
   Stable for x86, wrt bug #548690

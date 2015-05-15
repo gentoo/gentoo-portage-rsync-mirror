@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.565 2015/05/15 10:50:00 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.566 2015/05/15 11:55:43 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> sqlite-3.8.10.1.ebuild:
+  ppc stable wrt bug #549258
 
   15 May 2015; Ian Delaney <idella4@gentoo.org> sqlite-3.8.10.1.ebuild:
   Use pread(), pread64(), pwrite() and pwrite64() (bug #549080). Update
