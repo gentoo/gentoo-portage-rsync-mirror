@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.8.14-r1.ebuild,v 1.1 2014/05/26 12:36:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.8.14-r2.ebuild,v 1.1 2015/05/15 18:12:17 prometheanfire Exp $
 
 EAPI=5
 
-inherit multilib user
+inherit multilib-minimal user
 
 DESCRIPTION="NSS module for name lookups using LDAP"
 HOMEPAGE="http://arthurdejong.org/nss-pam-ldapd/"
@@ -29,7 +29,7 @@ pkg_setup() {
 	enewuser nslcd -1 -1 -1 nslcd
 }
 
-src_configure() {
+multilib_src_configure() {
 	# nss libraries always go in /lib on Gentoo
 	myconf="
 		--enable-warnings
@@ -50,10 +50,10 @@ src_configure() {
 		myconf+=" --with-nss-flavour=glibc"
 	fi
 
-	econf ${myconf}
+	ECONF_SOURCE="${S}" econf ${myconf}
 }
 
-src_install() {
+multilib_src_install() {
 	default
 
 	# for socket and pid file (not needed bug 452992)
@@ -64,7 +64,7 @@ src_install() {
 
 	# make an example copy
 	insinto /usr/share/nss-pam-ldapd
-	doins nslcd.conf
+	doins "${WORKDIR}/${P}/nslcd.conf"
 
 	fperms o-r /etc/nslcd.conf
 }

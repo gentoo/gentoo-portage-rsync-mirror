@@ -7009,6 +7009,7 @@ sys-cluster/neutron:openvswitch - Installs the initscripts for the neutron openv
 sys-cluster/neutron:server - Installs the initscripts for the neutron server service
 sys-cluster/nova:compute - Installs the initscripts for the nova volume service
 sys-cluster/nova:compute-only - only install stuff needed for a compute host
+sys-cluster/nova:iscsi - Installs iscsi helper udev scripts
 sys-cluster/nova:kvm - qemu-kvm hypervisor support
 sys-cluster/nova:network - Installs the initscripts for the nova network service
 sys-cluster/nova:novncproxy - Installs the initscripts for the nova novncproxy service

@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.8 2015/05/15 07:30:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.9 2015/05/15 18:25:04 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
 
-inherit distutils-r1 eutils git-2 linux-info multilib user
+inherit distutils-r1 eutils git-2 linux-info multilib udev user
 
 DESCRIPTION="A cloud computing fabric controller (main part of an IaaS system) written in Python"
 HOMEPAGE="https://launchpad.net/nova"
@@ -15,7 +15,7 @@ EGIT_BRANCH="stable/kilo"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen"
+IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen iscsi"
 REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
 						compute-only? ( compute !novncproxy !rabbitmq !mysql !postgres !sqlite )
 						compute? ( ^^ ( kvm xen ) )"
@@ -185,4 +185,12 @@ python_install() {
 	insinto /etc/sudoers.d/
 	insopts -m 0600 -o root -g root
 	doins "${FILESDIR}/nova-sudoers"
+
+	if use iscsi ; then
+		# Install udev rules for handle iscsi disk with right links under /dev
+		udev_newrules "${FILESDIR}/openstack-scsi-disk.rules" 60-openstack-scsi-disk.rules
+
+		insinto /etc/nova/
+		doins "${FILESDIR}/scsi-openscsi-link.sh"
+	fi
 }

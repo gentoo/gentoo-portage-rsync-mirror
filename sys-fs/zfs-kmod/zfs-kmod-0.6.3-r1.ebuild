@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3-r1.ebuild,v 1.1 2014/12/01 07:02:33 ryao Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs-kmod/zfs-kmod-0.6.3-r1.ebuild,v 1.2 2015/05/15 18:27:48 blueness Exp $
 
 EAPI="4"
 
@@ -18,7 +18,7 @@ else
 	SRC_URI="https://github.com/zfsonlinux/zfs/archive/zfs-${PV}.tar.gz
 		http://dev.gentoo.org/~ryao/dist/zfs-${PV}-patches-${PR}.tar.xz"
 	S="${WORKDIR}/zfs-zfs-${PV}"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 fi
 
 DESCRIPTION="Linux ZFS kernel module for sys-fs/zfs"

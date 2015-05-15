@@ -1,6 +1,11 @@
 # ChangeLog for dev-tex/feynmf
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.43 2014/03/25 13:00:47 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/feynmf/ChangeLog,v 1.44 2015/05/15 18:22:22 ulm Exp $
+
+*feynmf-1.08-r4 (15 May 2015)
+
+  15 May 2015; Ulrich Müller <ulm@gentoo.org> +feynmf-1.08-r4.ebuild:
+  Create symlinks for texdoc.
 
   25 Mar 2014; Ulrich Müller <ulm@gentoo.org> feynmf-1.08-r3.ebuild:
   Update to EAPI 5. Specify LICENSE more precisely.

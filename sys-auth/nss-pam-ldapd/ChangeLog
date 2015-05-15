@@ -1,6 +1,14 @@
 # ChangeLog for sys-auth/nss-pam-ldapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.22 2015/05/09 00:06:24 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/ChangeLog,v 1.23 2015/05/15 18:12:17 prometheanfire Exp $
+
+*nss-pam-ldapd-0.8.14-r2 (15 May 2015)
+
+  15 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +nss-pam-ldapd-0.8.14-r2.ebuild, -nss-pam-ldapd-0.8.13.ebuild,
+  -nss-pam-ldapd-0.8.14-r1.ebuild, -nss-pam-ldapd-0.8.14.ebuild,
+  nss-pam-ldapd-0.9.5-r1.ebuild:
+  multilib for nss-pam-ldapd
 
   09 May 2015; Zac Medico <zmedico@gentoo.org> files/nslcd.service:
   Fix systemd service unit content.

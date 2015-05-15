@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.1-r4.ebuild,v 1.2 2014/07/30 19:21:10 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/zfs/zfs-0.6.1-r4.ebuild,v 1.3 2015/05/15 18:29:56 blueness Exp $
 
 EAPI="4"
 
@@ -16,7 +16,7 @@ else
 	MY_PV=$(replace_version_separator 3 '-')
 	SRC_URI="https://github.com/zfsonlinux/${PN}/archive/${PN}-${MY_PV}.tar.gz"
 	S="${WORKDIR}/${PN}-${PN}-${MY_PV}"
-	KEYWORDS="~amd64"
+	KEYWORDS="~amd64 ~arm ~ppc ~ppc64"
 fi
 
 inherit bash-completion-r1 flag-o-matic toolchain-funcs autotools-utils udev systemd

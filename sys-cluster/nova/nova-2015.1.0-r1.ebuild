@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.0-r1.ebuild,v 1.3 2015/05/15 07:30:26 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.0-r1.ebuild,v 1.4 2015/05/15 18:25:04 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen"
+IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen iscsi"
 REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
 						compute-only? ( compute !novncproxy !rabbitmq !mysql !postgres !sqlite )
 						compute? ( ^^ ( kvm xen ) )"
@@ -184,4 +184,12 @@ python_install() {
 	insinto /etc/sudoers.d/
 	insopts -m 0600 -o root -g root
 	doins "${FILESDIR}/nova-sudoers"
+
+	if use iscsi ; then
+		# Install udev rules for handle iscsi disk with right links under /dev
+		udev_newrules "${FILESDIR}/openstack-scsi-disk.rules" 60-openstack-scsi-disk.rules
+
+		insinto /etc/nova/
+		doins "${FILESDIR}/scsi-openscsi-link.sh"
+	fi
 }

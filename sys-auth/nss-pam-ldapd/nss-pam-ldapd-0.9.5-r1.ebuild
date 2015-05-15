@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.5-r1.ebuild,v 1.1 2015/04/07 01:04:53 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.5-r1.ebuild,v 1.2 2015/05/15 18:12:17 prometheanfire Exp $
 
 EAPI=5
 
@@ -82,7 +82,7 @@ multilib_src_install_all() {
 	newinitd "${FILESDIR}"/nslcd-init-r1 nslcd
 
 	insinto /usr/share/nss-pam-ldapd
-	doins nslcd.conf
+	doins "${WORKDIR}/${P}/nslcd.conf"
 
 	fperms o-r /etc/nslcd.conf
 
