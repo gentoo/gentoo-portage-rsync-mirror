@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/userspace-rcu
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/userspace-rcu/ChangeLog,v 1.18 2014/11/12 14:39:23 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/userspace-rcu/ChangeLog,v 1.19 2015/05/15 13:11:31 blueness Exp $
+
+  15 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  userspace-rcu-0.7.12.ebuild, userspace-rcu-0.7.13.ebuild,
+  userspace-rcu-0.8.4.ebuild, userspace-rcu-0.8.5.ebuild,
+  userspace-rcu-0.8.6.ebuild:
+  Keyword ~arm, ~ppc and ~ppc64.  Bug #549516.
 
 *userspace-rcu-0.8.6 (12 Nov 2014)
 

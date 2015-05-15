@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/babeltrace
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/babeltrace/ChangeLog,v 1.4 2014/11/21 14:52:10 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/babeltrace/ChangeLog,v 1.5 2015/05/15 13:03:19 blueness Exp $
+
+  15 May 2015; Anthony G. Basile <blueness@gentoo.org> babeltrace-1.2.3.ebuild,
+  babeltrace-1.2.4.ebuild:
+  Keyword ~arm ~ppc ~ppc64.  Bug #549516.
 
 *babeltrace-1.2.4 (21 Nov 2014)
 
@@ -24,4 +28,3 @@
   04 Mar 2014; Yixun Lan <dlan@gentoo.org> +babeltrace-1.2.0.ebuild,
   +metadata.xml:
   initial version added, 1.2.0
-
