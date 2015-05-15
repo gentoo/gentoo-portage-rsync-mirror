@@ -1,26 +1,27 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.9.0.ebuild,v 1.6 2015/01/28 22:57:44 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.12.0.ebuild,v 1.1 2015/05/15 17:01:48 kensington Exp $
 
 EAPI=5
 
-KDE_LINGUAS="bg bs ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hu ia
-it ja ko lt mr ms nb nds nl pl pt pt_BR ro ru sk sv tr ug uk zh_CN zh_TW"
+KDE_LINGUAS="ast bg bs ca ca@valencia cs da de el en_GB eo es et fi fr ga gl hu
+ia it ja ko lt mr ms nb nds nl pl pt pt_BR ro ru sk sv tr ug uk zh_CN zh_TW"
 KDE_HANDBOOK="optional"
 inherit kde4-base
 
-DESCRIPTION="personal finances manager for KDE4, aiming at being simple and intuitive"
+DESCRIPTION="Personal finances manager for KDE4, aiming at being simple and intuitive"
 HOMEPAGE="http://www.skrooge.org/"
 SRC_URI="mirror://kde/stable/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="4"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="
+	$(add_kdebase_dep kactivities)
 	$(add_kdebase_dep kdepimlibs)
-	app-crypt/qca:2[qt4(+)]
+	app-crypt/qca:2[qt4]
 	dev-db/sqlite:3
 	dev-libs/grantlee:0
 	>=dev-libs/libofx-0.9.1

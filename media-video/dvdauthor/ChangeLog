@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.55 2015/04/26 17:06:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.56 2015/05/15 17:20:56 zlogene Exp $
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> dvdauthor-0.7.1.ebuild:
+  amd64 stable wrt bug #493620
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> dvdauthor-0.7.1.ebuild:
   ppc stable wrt bug #493620
@@ -206,4 +209,3 @@
 
   10 Mar 2003; <rac@gentoo.org> dvdauthor-0.5.0.ebuild:
   Initial ebuild.  DVD authoring tools.
-
