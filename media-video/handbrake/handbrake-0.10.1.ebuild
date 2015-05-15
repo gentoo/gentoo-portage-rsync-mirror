@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.10.0.ebuild,v 1.4 2015/04/08 18:16:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/handbrake/handbrake-0.10.1.ebuild,v 1.1 2015/05/15 16:58:16 thev00d00 Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ HOMEPAGE="http://handbrake.fr/"
 LICENSE="GPL-2"
 
 SLOT="0"
-IUSE="+fdk gstreamer gtk libav-aac"
+IUSE="+fdk gstreamer gtk libav libav-aac"
 
 REQUIRED_USE="^^ ( fdk libav-aac )"
 
@@ -40,8 +40,9 @@ RDEPEND="
 	media-libs/libvpx
 	media-libs/x264:=
 	media-sound/lame
-	|| ( >=media-video/libav-10.1 >=media-video/ffmpeg-2.3:0 )
 	sys-libs/zlib
+	libav? ( >=media-video/libav-10.1:0= )
+	!libav? ( >=media-video/ffmpeg-2.3:0= )
 	gstreamer? (
 		media-libs/gstreamer:1.0
 		media-libs/gst-plugins-base:1.0
