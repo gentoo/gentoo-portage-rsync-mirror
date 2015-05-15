@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2-r1.ebuild,v 1.7 2015/02/18 19:43:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/love-0.7.2-r1.ebuild,v 1.8 2015/05/15 10:39:18 pacho Exp $
 
 EAPI=5
-inherit games
+inherit eutils games
 
 DESCRIPTION="A framework for 2D games in Lua"
 HOMEPAGE="http://love2d.org/"
@@ -29,6 +29,10 @@ DEPEND="${RDEPEND}
 	media-libs/tiff"
 
 S=${WORKDIR}/${PN}-HEAD
+
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-0.8.0-freetype2.patch
+}
 
 src_install() {
 	DOCS="readme.txt changes.txt" \

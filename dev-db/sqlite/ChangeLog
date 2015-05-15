@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.563 2015/05/13 07:55:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.565 2015/05/15 10:50:00 idella4 Exp $
+
+  15 May 2015; Ian Delaney <idella4@gentoo.org> sqlite-3.8.10.1.ebuild:
+  Use pread(), pread64(), pwrite() and pwrite64() (bug #549080). Update
+  dependencies, CPPFLAGS, configure options. Patch by Arfrever.
+
+  15 May 2015; Justin Lecher <jlec@gentoo.org> metadata.xml,
+  sqlite-3.8.10.1.ebuild:
+  Add REQUIERED_USE for tools -> tcl, bug #549308
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> sqlite-3.8.10.1.ebuild:
   Stable for amd64, wrt bug #549258

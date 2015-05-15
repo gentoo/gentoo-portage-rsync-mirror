@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14-r1.ebuild,v 1.4 2015/04/08 08:05:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/soya-0.14-r1.ebuild,v 1.5 2015/05/15 10:31:31 pacho Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -29,7 +29,7 @@ DEPEND="=dev-games/ode-0.11.1
 	media-fonts/freefonts
 	>=media-libs/cal3d-0.10
 	media-libs/freeglut
-	>=media-libs/freetype-2.1.5
+	>=media-libs/freetype-2.5
 	>=media-libs/glew-1.3.3
 	>=media-libs/libsdl-1.2.8[opengl]
 	media-libs/openal
@@ -41,6 +41,7 @@ S="${WORKDIR}/${MY_P}"
 PATCHES=(
 	"${FILESDIR}/${P}-glu.patch"
 	"${FILESDIR}/${PN}-pillow.patch"
+	"${FILESDIR}/${P}-freetype-2.5.patch"
 )
 
 python_compile() {

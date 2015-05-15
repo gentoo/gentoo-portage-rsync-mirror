@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/love
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.20 2015/02/18 19:43:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/love/ChangeLog,v 1.21 2015/05/15 10:39:18 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> love-0.7.2-r1.ebuild:
+  Fix build with stable freetype-2.5 (#504940)
 
   18 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> love-0.7.2-r1.ebuild,
   love-0.8.0.ebuild:

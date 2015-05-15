@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.240 2015/05/12 08:40:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.241 2015/05/15 10:44:01 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> wpa_supplicant-2.4-r3.ebuild:
+  ppc stable wrt bug #548742
 
   12 May 2015; Agostino Sarubbo <ago@gentoo.org> wpa_supplicant-2.4-r3.ebuild:
   Stable for amd64, wrt bug #548742

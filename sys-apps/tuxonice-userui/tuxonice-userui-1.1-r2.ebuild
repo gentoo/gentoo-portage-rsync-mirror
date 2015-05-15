@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.6 2014/12/30 17:48:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tuxonice-userui/tuxonice-userui-1.1-r2.ebuild,v 1.7 2015/05/15 10:45:03 pacho Exp $
 
 EAPI="5"
 
@@ -31,6 +31,7 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
 	local d=${WORKDIR}/debian/patches
 	EPATCH_SOURCE=${d} epatch $(<"${d}"/series)
+	epatch "${FILESDIR}"/${P}-freetype-2.5.patch
 	sed -i -e 's/make/$(MAKE)/' Makefile || die
 	sed -i -e 's/ -O3//' Makefile fbsplash/Makefile usplash/Makefile || die
 }

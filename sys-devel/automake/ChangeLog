@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.218 2015/01/07 21:26:13 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.219 2015/05/15 10:59:15 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> automake-1.14.1.ebuild:
+  ppc stable wrt bug #547876
 
 *automake-1.15 (07 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.108 2015/04/09 17:18:48 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.109 2015/05/15 10:53:38 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> antlr-2.7.7-r5.ebuild:
+  ppc stable wrt bug #529558
 
   09 Apr 2015; Patrice Clement <monsieurp@gentoo.org> antlr-4.4.ebuild:
   Package sources from top-level. Fix bug 545916.

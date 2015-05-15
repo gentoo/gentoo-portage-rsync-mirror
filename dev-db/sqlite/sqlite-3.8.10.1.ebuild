@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.10.1.ebuild,v 1.3 2015/05/13 07:55:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.8.10.1.ebuild,v 1.5 2015/05/15 10:50:00 idella4 Exp $
 
 EAPI="5"
 
-inherit autotools eutils flag-o-matic multilib multilib-minimal versionator
+inherit autotools eutils flag-o-matic multilib multilib-minimal toolchain-funcs versionator
 
 SRC_PV="$(printf "%u%02u%02u%02u" $(get_version_components))"
 DOC_PV="${SRC_PV}"
@@ -36,7 +36,8 @@ DEPEND="${RDEPEND}
 	test? (
 		app-arch/unzip
 		dev-lang/tcl:0[${MULTILIB_USEDEP}]
-	)"
+	)
+	tools? ( dev-lang/tcl:0 )"
 
 amalgamation() {
 	! use tcl && ! use test && ! use tools
@@ -67,10 +68,18 @@ src_prepare() {
 	# At least ppc-aix, x86-interix and *-solaris need newer libtool.
 	# use prefix && eautoreconf
 
+	if use icu; then
+		if amalgamation; then
+			sed -e "s/LIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
+		else
+			sed -e "s/TLIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
+		fi
+	fi
+
 	multilib_copy_sources
 }
 
-multilib_src_configure() {
+src_configure() {
 	# `configure` from amalgamation tarball does not add -DSQLITE_DEBUG or -DNDEBUG flag.
 	if amalgamation; then
 		if use debug; then
@@ -114,34 +123,34 @@ multilib_src_configure() {
 	append-cppflags -DSQLITE_SOUNDEX
 
 	if use icu; then
+		# Support ICU extension.
+		# http://sqlite.org/compile.html#enable_icu
 		append-cppflags -DSQLITE_ENABLE_ICU
-		if amalgamation; then
-			sed -e "s/LIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
-		else
-			sed -e "s/TLIBS = @LIBS@/& -licui18n -licuuc/" -i Makefile.in || die "sed failed"
-		fi
 	fi
 
-	# Enable secure_delete pragma.
-	# http://sqlite.org/pragma.html#pragma_secure_delete
 	if use secure-delete; then
+		# Enable secure_delete pragma by default.
+		# http://sqlite.org/pragma.html#pragma_secure_delete
 		append-cppflags -DSQLITE_SECURE_DELETE
-	fi
-
-	# Starting from 3.6.23, SQLite has locking strategies that are specific to
-	# OSX. By default they are enabled, and use semantics that only make sense
-	# on OSX. However, they require gethostuuid() function for that, which is
-	# only available on OSX starting from 10.6 (Snow Leopard). For earlier
-	# versions of OSX we have to disable all this nifty locking options, as
-	# suggested by upstream.
-	if [[ "${CHOST}" == *-darwin[56789] ]]; then
-		append-cppflags -DSQLITE_ENABLE_LOCKING_STYLE="0"
 	fi
 
 	if [[ "${CHOST}" == *-mint* ]]; then
 		append-cppflags -DSQLITE_OMIT_WAL
 	fi
 
+	if $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -Werror=implicit-function-declaration -x c - -o "${T}/pread_pwrite_test" <<< $'#include <unistd.h>\nint main()\n{\n  pread(0, NULL, 0, 0);\n  pwrite(0, NULL, 0, 0);\n  return 0;\n}' &> /dev/null; then
+		append-cppflags -DUSE_PREAD
+	fi
+	if $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -Werror=implicit-function-declaration -x c - -o "${T}/pread64_pwrite64_test" <<< $'#include <unistd.h>\nint main()\n{\n  pread64(0, NULL, 0, 0);\n  pwrite64(0, NULL, 0, 0);\n  return 0;\n}' &> /dev/null; then
+		append-cppflags -DUSE_PREAD64
+	elif $(tc-getCC) ${CPPFLAGS} ${CFLAGS} ${LDFLAGS} -D_LARGEFILE64_SOURCE -Werror=implicit-function-declaration -x c - -o "${T}/pread64_pwrite64_test" <<< $'#include <unistd.h>\nint main()\n{\n  pread64(0, NULL, 0, 0);\n  pwrite64(0, NULL, 0, 0);\n  return 0;\n}' &> /dev/null; then
+		append-cppflags -DUSE_PREAD64 -D_LARGEFILE64_SOURCE
+	fi
+
+	multilib-minimal_src_configure
+}
+
+multilib_src_configure() {
 	# `configure` from amalgamation tarball does not support
 	# --with-readline-inc and --(enable|disable)-tcl options.
 	econf \
@@ -151,7 +160,7 @@ multilib_src_configure() {
 		$(use_enable static-libs static) \
 		$(amalgamation || echo --with-readline-inc="-I${EPREFIX}/usr/include/readline") \
 		$(amalgamation || use_enable debug) \
-		$(amalgamation || echo --enable-tcl)
+		$(amalgamation || if use tcl || use test; then echo --enable-tcl; else echo --disable-tcl; fi)
 }
 
 multilib_src_compile() {
