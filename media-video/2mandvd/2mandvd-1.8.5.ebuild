@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.8.5.ebuild,v 1.2 2015/05/10 11:47:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/2mandvd/2mandvd-1.8.5.ebuild,v 1.3 2015/05/15 07:29:59 pacho Exp $
 
 EAPI=5
 LANGS="cs de en it ru"
@@ -15,7 +15,7 @@ SRC_URI="http://download.tuxfamily.org/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="debug libav"
 
 DEPEND="libav? ( media-video/libav:= )

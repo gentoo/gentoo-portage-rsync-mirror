@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.7 2015/05/14 04:21:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.8 2015/05/15 07:30:26 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,9 +16,9 @@ LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
 IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen"
-REQUIRED_USE="|| ( mysql postgres sqlite )
-				compute-only? ( compute !novncproxy !rabbitmq )
-			  compute? ( ^^ ( kvm xen ) )"
+REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
+						compute-only? ( compute !novncproxy !rabbitmq !mysql !postgres !sqlite )
+						compute? ( ^^ ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		>=dev-python/pbr-0.8[${PYTHON_USEDEP}]
@@ -27,6 +27,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 
 # barbicanclient is in here for doc generation
 RDEPEND="
+	compute-only? (
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
 	sqlite? (
 		>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
 		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
@@ -133,7 +137,7 @@ pkg_setup() {
 	enewuser nova -1 -1 /var/lib/nova nova
 }
 
-python_repare() {
+python_prepare() {
 	distutils-r1_python_prepare
 	sed -i 's/python/python2\.7/g' tools/config/generate_sample.sh || die
 }
@@ -146,9 +150,11 @@ python_compile() {
 python_install() {
 	distutils-r1_python_install
 
-	for svc in api cert compute conductor consoleauth network scheduler spicehtml5proxy xvpvncproxy; do
-		newinitd "${FILESDIR}/nova.initd" "nova-${svc}"
-	done
+	if use !compute-only; then
+		for svc in api cert conductor consoleauth network scheduler spicehtml5proxy xvpvncproxy; do
+			newinitd "${FILESDIR}/nova.initd" "nova-${svc}"
+		done
+	fi
 	use compute && newinitd "${FILESDIR}/nova.initd" "nova-compute"
 	use novncproxy && newinitd "${FILESDIR}/nova.initd" "nova-novncproxy"
 
