@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-6.02.05-r2.ebuild,v 1.3 2015/04/15 08:48:36 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/root/root-6.02.05-r2.ebuild,v 1.4 2015/05/15 20:23:37 bircoph Exp $
 
 EAPI=5
 
@@ -212,7 +212,7 @@ src_prepare() {
 	# This can be done only at install stage, when files are placed
 	# as appropriate. Premature modification of makepch.sh will
 	# broke build process, however.
-	cp "etc/dictpch/makepch.sh" "etc/dictpch/makepch-gentoo.sh" || die
+	#cp "etc/dictpch/makepch.sh" "etc/dictpch/makepch-gentoo.sh" || die
 
 	epatch \
 		"${FILESDIR}"/${PN}-5.28.00b-glibc212.patch \
@@ -226,8 +226,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-6.00.01-llvm.patch \
 		"${FILESDIR}"/${PN}-6.00.01-nobyte-compile.patch \
 		"${FILESDIR}"/${PN}-6.00.01-prop-flags.patch \
-		"${FILESDIR}"/${PN}-6.02.05-dictpch.patch \
 		"${FILESDIR}"/${PN}-6.02.05-xrootd4.patch
+		#"${FILESDIR}"/${PN}-6.02.05-dictpch.patch \
 
 	# make sure we use system libs and headers
 	rm montecarlo/eg/inc/cfortran.h README/cfortran.doc || die
@@ -423,14 +423,14 @@ cleanup_install() {
 	use examples || rm -r ${DOC_DIR#/}/examples || die
 
 	# clean hardcoded sandbox paths
-	rm etc/root/dictpch/allCppflags.txt.tmp || die
-	sed -i "s|${S}/||" etc/root/cling/llvm/Config/llvm-config.h || die
+	#rm etc/root/dictpch/allCppflags.txt.tmp || die
+	#sed -i "s|${S}/||" etc/root/cling/llvm/Config/llvm-config.h || die
 	# regenerate pch for Gentoo headers layout
-	rm "etc/root/allDict.cxx.pch" || die
-	sed -i 's|etc/dictpch|etc/root/dictpch|' etc/root/dictpch/allLinkDefs.h || die
-	sed -i 's|etc/cling|etc/root/cling|' etc/root/dictpch/allHeaders.h || die
-	sed -i "s|ROOTDIR_TEMPLATE|${ED}|" etc/root/dictpch/makepch-gentoo.sh || die
-	etc/root/dictpch/makepch-gentoo.sh etc/root/allDict.cxx.pch || die "PCH generation failed"
+	#rm "etc/root/allDict.cxx.pch" || die
+	#sed -i 's|etc/dictpch|etc/root/dictpch|' etc/root/dictpch/allLinkDefs.h || die
+	#sed -i 's|etc/cling|etc/root/cling|' etc/root/dictpch/allHeaders.h || die
+	#sed -i "s|ROOTDIR_TEMPLATE|${ED}|" etc/root/dictpch/makepch-gentoo.sh || die
+	#etc/root/dictpch/makepch-gentoo.sh etc/root/allDict.cxx.pch || die "PCH generation failed"
 }
 
 src_install() {
