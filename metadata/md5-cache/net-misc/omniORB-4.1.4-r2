@@ -4,10 +4,10 @@ DESCRIPTION=A robust, high-performance CORBA 2 ORB
 EAPI=5
 HOMEPAGE=http://omniorb.sourceforge.net/
 IUSE=doc ssl static-libs python_targets_python2_7
-KEYWORDS=amd64 ~ppc ~ppc64 ~sparc x86
+KEYWORDS=amd64 ppc ~ppc64 ~sparc x86
 LICENSE=LGPL-2 GPL-2
 RDEPEND=ssl? ( >=dev-libs/openssl-0.9.6b:0= )
 SLOT=0
 SRC_URI=mirror://sourceforge/omniorb/omniORB-4.1.4.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=f689d057995ee85d829a83d625d24578
+_md5_=6b5cea2850ce3e3b21f26fa15b1ed693

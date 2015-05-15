@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qt3support
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt3support/ChangeLog,v 1.17 2015/05/11 14:59:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qt3support/ChangeLog,v 1.18 2015/05/15 12:56:10 zlogene Exp $
+
+  15 May 2015; Mikle Kolyada <zlogene@gentoo.org> qt3support-4.8.6-r1.ebuild:
+  x86 stable wrt bug #530238
 
   11 May 2015; Mikle Kolyada <zlogene@gentoo.org> qt3support-4.8.6-r1.ebuild:
   amd64 stable wrt bug #530238

@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/ptlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.61 2015/05/14 10:34:47 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/ptlib/ChangeLog,v 1.62 2015/05/15 12:41:49 pacho Exp $
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> ptlib-2.10.11.ebuild:
+  ppc stable wrt bug #549480
 
   14 May 2015; Ulrich Müller <ulm@gentoo.org> +ptlib-2.10.11.ebuild:
   [QA] Restore deleted ebuild from attic. Version >=2.12.0 is in package.mask,
