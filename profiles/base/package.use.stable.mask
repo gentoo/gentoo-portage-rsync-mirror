@@ -1,9 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.40 2015/05/13 20:54:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.stable.mask,v 1.41 2015/05/15 07:31:57 pacho Exp $
 
 # This file requires eapi 5 or later. New entries go on top.
 # Please use the same syntax as in package.use.mask
+
+# Pacho Ramos <pacho@gentoo.org> (15 May 2015)
+# Version compatible with current ffmpeg is not ready to be stabilized
+# bug #539212
+app-emulation/vice ffmpeg
 
 # Pacho Ramos <pacho@gentoo.org> (13 May 2015)
 # texinfo-5 cannot be stabilized yet

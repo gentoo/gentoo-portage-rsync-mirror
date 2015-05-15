@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/neutron
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.62 2015/05/12 04:49:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/ChangeLog,v 1.63 2015/05/15 07:38:13 prometheanfire Exp $
+
+  15 May 2015; Matthew Thode <prometheanfire@gentoo.org> metadata.xml,
+  neutron-2015.1.0.ebuild, neutron-2015.1.9999.ebuild:
+  adding compute-only flag
 
   12 May 2015; Matthew Thode <prometheanfire@gentoo.org>
   neutron-2015.1.0.ebuild, neutron-2015.1.9999.ebuild:

@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9996 2015/05/14 11:49:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9997 2015/05/15 07:31:57 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 May 2015; Pacho Ramos <pacho@gentoo.org> base/package.use.stable.mask:
+  package.use.stable.mask ffmpeg for vice
 
   14 May 2015; Anthony G. Basile <blueness@gentoo.org> package.mask:
   No longer required by any packages in the tree. Maksed for removal in 30

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.0.ebuild,v 1.5 2015/05/12 04:49:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/neutron/neutron-2015.1.0.ebuild,v 1.6 2015/05/15 07:38:13 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,8 +14,10 @@ SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
-REQUIRED_USE="|| ( mysql postgres sqlite )"
+IUSE="compute-only dhcp doc l3 metadata openvswitch linuxbridge server test sqlite mysql postgres"
+REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
+						compute-only? ( !mysql !postgres !sqlite !dhcp !l3 !metadata !server
+						|| ( openvswitch linuxbridge ) )"
 
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
@@ -68,6 +70,10 @@ RDEPEND="
 	<dev-python/python-neutronclient-3.5.0[${PYTHON_USEDEP}]
 	>=dev-python/retrying-1.2.3[${PYTHON_USEDEP}]
 	!~dev-python/retrying-1.3.0[${PYTHON_USEDEP}]
+	compute-only? (
+		>=dev-python/sqlalchemy-0.9.7[${PYTHON_USEDEP}]
+		<=dev-python/sqlalchemy-0.9.99[${PYTHON_USEDEP}]
+	)
 	sqlite? (
 		>=dev-python/sqlalchemy-0.9.7[sqlite,${PYTHON_USEDEP}]
 		<=dev-python/sqlalchemy-0.9.99[sqlite,${PYTHON_USEDEP}]
