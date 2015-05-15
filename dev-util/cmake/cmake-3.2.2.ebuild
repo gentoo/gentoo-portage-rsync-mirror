@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.2.2.ebuild,v 1.1 2015/05/08 14:37:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/cmake-3.2.2.ebuild,v 1.2 2015/05/15 00:50:07 floppym Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ RDEPEND="
 		dev-qt/qtgui:5
 		dev-qt/qtwidgets:5
 	)
-	!internal-jsoncpp? ( >=dev-libs/jsoncpp-0.6.0_rc2 )
+	!internal-jsoncpp? ( >=dev-libs/jsoncpp-0.6.0_rc2:0= )
 "
 DEPEND="${RDEPEND}
 	doc? ( dev-python/sphinx )

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.305 2015/05/08 14:37:50 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.306 2015/05/15 00:50:07 floppym Exp $
+
+  15 May 2015; Mike Gilbert <floppym@gentoo.org> cmake-3.2.1.ebuild,
+  cmake-3.2.2.ebuild:
+  Add slot-operator dep on jsoncpp.
 
 *cmake-3.2.2 (08 May 2015)
 
