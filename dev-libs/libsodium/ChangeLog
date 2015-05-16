@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libsodium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.28 2015/04/07 14:11:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsodium/ChangeLog,v 1.29 2015/05/16 16:00:20 mrueg Exp $
+
+*libsodium-1.0.3 (16 May 2015)
+
+  16 May 2015; Manuel Rüger <mrueg@gentoo.org> +libsodium-1.0.3.ebuild:
+  Version bump.
 
   28 Feb 2015; Markus Meier <maekke@gentoo.org> libsodium-1.0.2.ebuild:
   arm stable, bug #539750
