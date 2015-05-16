@@ -1,6 +1,20 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.560 2015/04/23 02:42:37 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.561 2015/05/16 02:40:56 jmbsvicetto Exp $
+
+*phpmyadmin-4.3.13.1 (16 May 2015)
+*phpmyadmin-4.4.6.1 (16 May 2015)
+*phpmyadmin-4.2.13.3 (16 May 2015)
+*phpmyadmin-4.0.10.10 (16 May 2015)
+
+  16 May 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +phpmyadmin-4.0.10.10.ebuild, +phpmyadmin-4.2.13.3.ebuild,
+  +phpmyadmin-4.3.13.1.ebuild, +phpmyadmin-4.4.6.1.ebuild,
+  -phpmyadmin-4.0.10.9.ebuild, -phpmyadmin-4.1.14.8.ebuild,
+  -phpmyadmin-4.2.13.2.ebuild, -phpmyadmin-4.4.3.ebuild:
+  Bump phpmyadmin to releases 4.0.10.10, 4.2.13.3, 4.3.13.1 and 4.4.6.1. This
+  bump addresses PMASA-2015-{2,3} and fixes bug 549540. Drop old versions and
+  4.1 series.
 
 *phpmyadmin-4.4.3 (23 Apr 2015)
 
