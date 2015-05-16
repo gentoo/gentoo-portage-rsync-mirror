@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/bzr-fastimport
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.10 2015/04/08 17:53:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/ChangeLog,v 1.11 2015/05/16 06:05:45 tetromino Exp $
+
+  16 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  bzr-fastimport-0.13.0.ebuild:
+  distutils_pkg_postinst() is now gone (bug #549554, thanks to Toralf
+  Förster).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> bzr-fastimport-0.13.0.ebuild:
   Drop old Python implementations

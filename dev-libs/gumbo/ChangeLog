@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/gumbo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gumbo/ChangeLog,v 1.4 2015/05/15 06:07:30 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gumbo/ChangeLog,v 1.5 2015/05/16 06:29:31 graaff Exp $
+
+*gumbo-0.10.1 (16 May 2015)
+
+  16 May 2015; Hans de Graaff <graaff@gentoo.org> +gumbo-0.10.1.ebuild:
+  Version bump.
 
 *gumbo-0.9.4 (15 May 2015)
 

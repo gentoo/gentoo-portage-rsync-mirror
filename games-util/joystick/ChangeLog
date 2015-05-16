@@ -1,6 +1,13 @@
 # ChangeLog for games-util/joystick
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.31 2015/04/02 20:49:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/joystick/ChangeLog,v 1.32 2015/05/16 06:04:45 mr_bones_ Exp $
+
+*joystick-1.4.8-r1 (16 May 2015)
+
+  16 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/joystick-1.4.8-udev.patch, +joystick-1.4.8-r1.ebuild:
+  look in both places for old and new udev package locations of udevadm (bug
+  #543200)
 
   02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/joystick-1.4.4-build.patch, -joystick-1.4.4.ebuild:

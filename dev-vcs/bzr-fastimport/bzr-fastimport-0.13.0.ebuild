@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/bzr-fastimport-0.13.0.ebuild,v 1.6 2015/04/08 17:53:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-fastimport/bzr-fastimport-0.13.0.ebuild,v 1.7 2015/05/16 06:05:45 tetromino Exp $
 
 EAPI="5"
 
@@ -24,7 +24,6 @@ DEPEND=""
 DOCS=( NEWS README.txt doc/notes.txt )
 
 pkg_postinst() {
-	distutils_pkg_postinst
 	elog "These commands need additional dependencies:"
 	elog
 	elog "bzr fast-export-from-darcs:  dev-vcs/darcs"
