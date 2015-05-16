@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.7-r1.ebuild,v 1.3 2015/03/21 21:46:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser/ser-0.9.7-r1.ebuild,v 1.4 2015/05/16 11:04:51 pacho Exp $
 
 EAPI=5
 
@@ -26,13 +26,13 @@ SRC_URI="
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~ppc ~sparc x86"
-IUSE="ipv6 mysql radius postgres jabber ldap ssl"
+IUSE="ipv6 mysql radius postgres xmpp ldap ssl"
 
 RDEPEND="
 	mysql? ( virtual/mysql )
 	radius? ( >=net-dialup/radiusclient-ng-0.5.0 )
 	postgres? ( dev-db/postgresql:=[server] )
-	jabber? ( dev-libs/expat )
+	xmpp? ( dev-libs/expat )
 	ldap? (
 		net-nds/openldap
 		ssl? ( dev-libs/openssl:0= )
@@ -67,7 +67,7 @@ src_prepare() {
 		epatch "${FILESDIR}/${P}-radius.diff"
 	fi
 
-	use jabber && \
+	use xmpp && \
 		modules="${modules} jabber"
 
 	use postgres && \

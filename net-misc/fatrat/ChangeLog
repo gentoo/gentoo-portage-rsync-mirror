@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/fatrat
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.5 2014/12/10 17:35:37 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fatrat/ChangeLog,v 1.6 2015/05/16 11:04:10 pacho Exp $
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org> fatrat-1.2.0_beta2.ebuild:
+  Rename jabber to xmpp USE (#216300)
 
   10 Dec 2014; Lars Wendler <polynomial-c@gentoo.org>
   fatrat-1.2.0_beta2.ebuild:

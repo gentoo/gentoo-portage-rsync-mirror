@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-13.3.2.ebuild,v 1.1 2015/04/13 12:34:35 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-13.3.2.ebuild,v 1.2 2015/05/16 11:03:25 pacho Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user systemd
@@ -20,9 +20,9 @@ IUSE_VOICEMAIL_STORAGE="
 	voicemail_storage_odbc
 	voicemail_storage_imap
 "
-IUSE="${IUSE_VOICEMAIL_STORAGE} alsa bluetooth calendar +caps cluster curl dahdi debug doc freetds gtalk http iconv ilbc jabber ldap libedit lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
+IUSE="${IUSE_VOICEMAIL_STORAGE} alsa bluetooth calendar +caps cluster curl dahdi debug doc freetds gtalk http iconv ilbc xmpp ldap libedit lua mysql newt +samples odbc osplookup oss portaudio postgres radius selinux snmp span speex srtp static syslog vorbis"
 IUSE_EXPAND="VOICEMAIL_STORAGE"
-REQUIRED_USE="gtalk? ( jabber )
+REQUIRED_USE="gtalk? ( xmpp )
 	^^ ( ${IUSE_VOICEMAIL_STORAGE/+/} )
 	voicemail_storage_odbc? ( odbc )
 "
@@ -52,7 +52,7 @@ CDEPEND="dev-db/sqlite:3
 	http? ( dev-libs/gmime:2.6 )
 	iconv? ( virtual/libiconv )
 	ilbc? ( dev-libs/ilbc-rfc3951 )
-	jabber? ( dev-libs/iksemel )
+	xmpp? ( dev-libs/iksemel )
 	ldap? ( net-nds/openldap )
 	libedit? ( dev-libs/libedit )
 	lua? ( dev-lang/lua:* )
@@ -176,7 +176,7 @@ src_configure() {
 	use_select gtalk		chan_motif
 	use_select http			res_http_post
 	use_select iconv		func_iconv
-	use_select jabber		res_xmpp
+	use_select xmpp			res_xmpp
 	use_select ilbc                 codec_ilbc format_ilbc
 	use_select ldap			res_config_ldap
 	use_select lua			pbx_lua

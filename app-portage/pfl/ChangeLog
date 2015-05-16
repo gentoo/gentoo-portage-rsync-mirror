@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.74 2015/04/08 07:30:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.75 2015/05/16 11:21:16 pacho Exp $
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org> pfl-2.4-r4.ebuild:
+  ppc stable wrt bug #549562
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pfl-2.4-r3.ebuild,
   pfl-2.4-r4.ebuild:

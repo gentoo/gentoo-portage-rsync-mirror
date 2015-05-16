@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.85 2015/05/16 10:21:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.86 2015/05/16 11:28:33 pacho Exp $
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org> qtgui-4.8.6-r4.ebuild:
+  ppc stable wrt bug #530238
 
   16 May 2015; Jeroen Roovers <jer@gentoo.org> qtgui-5.4.1-r1.ebuild:
   Mark ~ppc64 too.
