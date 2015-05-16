@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/audit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.105 2015/03/21 13:19:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/audit/ChangeLog,v 1.106 2015/05/16 05:56:03 robbat2 Exp $
+
+*audit-2.2.2-r3 (16 May 2015)
+*audit-2.4.1-r1 (16 May 2015)
+
+  16 May 2015; Robin H. Johnson <robbat2@gentoo.org> +audit-2.2.2-r3.ebuild,
+  +audit-2.4.1-r1.ebuild:
+  Bug 448470: adjust preserved libs.
 
 *audit-2.4.1 (21 Mar 2015)
 

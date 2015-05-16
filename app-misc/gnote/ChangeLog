@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.52 2015/03/15 13:15:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.54 2015/05/16 05:48:42 tetromino Exp $
+
+  16 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnote-3.14.1.ebuild:
+  actually drop old.
+
+  16 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org> gnote-3.14.2.ebuild:
+  Fix build with gcc-5.1 (requires new boost.m4), drop old.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnote-3.14.2.ebuild:
   x86 stable, bug 534012

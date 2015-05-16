@@ -1,14 +1,19 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.14.2.ebuild,v 1.3 2015/03/15 13:15:13 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/gnote-3.14.2.ebuild,v 1.4 2015/05/16 05:46:34 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2 readme.gentoo
+inherit autotools gnome2 readme.gentoo
 
 DESCRIPTION="Desktop note-taking application"
 HOMEPAGE="https://wiki.gnome.org/Apps/Gnote"
+
+BOOST_M4_COMMIT=32553aaf4d5090da19aa0ec33b936982c685009f
+SRC_URI="${SRC_URI}
+	https://github.com/tsuna/boost.m4/archive/${BOOST_M4_COMMIT}.zip -> boost.m4-${BOOST_M4_COMMIT}.zip"
+# Use sys-devel/boost-m4 when it's bumped, bug #549618
 
 LICENSE="GPL-3+ FDL-1.1"
 SLOT="0"
@@ -40,6 +45,10 @@ DEPEND="${DEPEND}
 "
 
 src_prepare() {
+	# Use newer boost.m4 to allow build with gcc-5.1; fixed upsteam in 3.16
+	cp "../boost.m4-${BOOST_M4_COMMIT}/build-aux/boost.m4" m4/ || die
+	eautoreconf
+
 	# Do not alter CFLAGS
 	sed 's/-DDEBUG -g/-DDEBUG/' -i configure.ac configure || die
 	gnome2_src_prepare
