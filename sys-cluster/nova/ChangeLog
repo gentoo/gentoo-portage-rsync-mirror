@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.95 2015/05/15 18:25:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.96 2015/05/16 21:51:48 prometheanfire Exp $
+
+  16 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +files/scsi-openscsi-link.sh, nova-2015.1.0-r1.ebuild,
+  nova-2015.1.9999.ebuild:
+  allowing novncproxy on compute-only hosts
 
   15 May 2015; Matthew Thode <prometheanfire@gentoo.org> metadata.xml,
   nova-2015.1.0-r1.ebuild, nova-2015.1.9999.ebuild:

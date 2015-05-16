@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.0-r1.ebuild,v 1.4 2015/05/15 18:25:04 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.0-r1.ebuild,v 1.5 2015/05/16 21:51:48 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen iscsi"
 REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
-						compute-only? ( compute !novncproxy !rabbitmq !mysql !postgres !sqlite )
+						compute-only? ( compute !rabbitmq !mysql !postgres !sqlite )
 						compute? ( ^^ ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
