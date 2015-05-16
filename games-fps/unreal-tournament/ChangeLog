@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/unreal-tournament
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.24 2014/10/15 11:47:05 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/ChangeLog,v 1.25 2015/05/16 07:09:50 mr_bones_ Exp $
+
+  16 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  unreal-tournament-451.ebuild:
+  update SRC_URI (bug #547796)
 
   15 Oct 2014; Pacho Ramos <pacho@gentoo.org> unreal-tournament-451.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.

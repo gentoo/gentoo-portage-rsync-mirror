@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.31 2014/10/15 11:47:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.32 2015/05/16 07:09:50 mr_bones_ Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils unpacker cdrom games
 
 DESCRIPTION="Futuristic FPS"
 HOMEPAGE="http://www.unrealtournament.com/ http://utpg.org/"
-SRC_URI="ftp://ftp.lokigames.com/pub/patches/ut/ut-install-436.run
+SRC_URI="http://www.ibiblio.org/osg/Downloads/Linux/Installers/ut-install-436.run
 	http://utpg.org/patches/UTPGPatch${PV}.tar.bz2"
 
 LICENSE="all-rights-reserved"

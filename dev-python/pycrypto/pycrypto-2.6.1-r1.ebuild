@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.6.1-r1.ebuild,v 1.2 2014/12/11 09:28:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/pycrypto-2.6.1-r1.ebuild,v 1.3 2015/05/16 07:19:17 vapier Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 		)"
 
 python_prepare_all() {
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
 	# Fix Crypto.PublicKey.RSA._RSAobj.exportKey(format="OpenSSH") with Python 3
 	# https://github.com/dlitz/pycrypto/commit/ab25c6fe95ee92fac3187dcd90e0560ccacb084a
 	sed \

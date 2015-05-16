@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pycrypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.161 2015/04/08 08:05:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.162 2015/05/16 07:19:17 vapier Exp $
+
+  16 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/pycrypto-2.6.1-cross-compile.patch, pycrypto-2.6.1-r1.ebuild:
+  Fix from Chromium OS for cross-compiling.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pycrypto-2.6.1.ebuild:
   Drop old Python implementations
