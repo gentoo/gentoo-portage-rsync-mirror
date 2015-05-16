@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyopenssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.135 2015/04/08 08:05:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopenssl/ChangeLog,v 1.136 2015/05/16 14:54:40 idella4 Exp $
+
+*pyopenssl-0.15.1 (16 May 2015)
+
+  16 May 2015; Ian Delaney <idella4@gentoo.org> +pyopenssl-0.15.1.ebuild:
+  bump; update dep cryptography, re-intro fixed tests
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyopenssl-0.13.1-r1.ebuild,
   pyopenssl-0.13.1.ebuild:
