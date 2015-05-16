@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.5.ebuild,v 1.6 2015/05/15 16:03:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.5.ebuild,v 1.7 2015/05/16 09:23:34 vapier Exp $
 
 EAPI=5
 inherit autotools eutils fcaps multilib qmake-utils qt4-r2 user
@@ -95,7 +95,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
 		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
 		"${FILESDIR}"/${PN}-1.99.0-qt5.patch \
-		"${FILESDIR}"/${PN}-1.99.1-sbc.patch
+		"${FILESDIR}"/${PN}-1.99.1-sbc.patch \
+		"${FILESDIR}"/${PN}-1.12.5-cross-compile.patch
 
 	epatch_user
 
