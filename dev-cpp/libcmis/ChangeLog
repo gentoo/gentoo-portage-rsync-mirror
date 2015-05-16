@@ -1,6 +1,12 @@
 # ChangeLog for dev-cpp/libcmis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.36 2015/04/11 21:29:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libcmis/ChangeLog,v 1.37 2015/05/16 21:13:10 dilfridge Exp $
+
+*libcmis-0.5.0-r1 (16 May 2015)
+
+  16 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +libcmis-0.5.0-r1.ebuild:
+  Add gcc-5 compatibility patch, bug 546738
 
   11 Apr 2015; Andreas K. Huettel <dilfridge@gentoo.org> -libcmis-0.4.1.ebuild:
   Remove old
