@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.115 2015/03/15 13:32:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.116 2015/05/16 12:16:25 pacho Exp $
+
+*vinagre-3.14.3-r1 (16 May 2015)
+
+  16 May 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/vinagre-3.14.3-freerdp2.patch, +vinagre-3.14.3-r1.ebuild,
+  -vinagre-3.12.2.ebuild:
+  Fix building with latest freerdp (#548708 by Chris Mayo and Nick Andrade),
+  IPV6 kernel support is needed (#518574 by Lubos Kolouch), drop old.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> vinagre-3.14.3.ebuild:
   x86 stable, bug 534012

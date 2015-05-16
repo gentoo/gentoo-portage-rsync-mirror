@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/ceph
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.72 2015/04/20 03:01:01 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ceph/ChangeLog,v 1.73 2015/05/16 12:20:13 blueness Exp $
+
+  16 May 2015; Anthony G. Basile <blueness@gentoo.org> ceph-0.93.ebuild,
+  ceph-9999.ebuild:
+  Keyword ~arm, ~ppc and ~ppc64.  Bug #549516.
 
   20 Apr 2015; Yixun Lan <dlan@gentoo.org> -ceph-0.67.9-r1.ebuild,
   -ceph-0.67.10-r1.ebuild, -ceph-0.80.5-r1.ebuild, -ceph-0.80.7-r1.ebuild,
