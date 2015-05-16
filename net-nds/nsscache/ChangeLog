@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/nsscache
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/ChangeLog,v 1.13 2014/01/25 18:23:05 idl0r Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/nsscache/ChangeLog,v 1.14 2015/05/16 08:01:55 floppym Exp $
+
+  16 May 2015; Mike Gilbert <floppym@gentoo.org> nsscache-0.21.14.ebuild,
+  nsscache-0.23.ebuild:
+  Make python[berkdb] optional.
 
 *nsscache-0.23 (25 Jan 2014)
 
@@ -62,4 +66,3 @@
   18 Mar 2009; Alec Warner <antarus@gentoo.org>
   +files/nsscache.conf.default, +nsscache-0.8.3.ebuild:
   iniital import of nsscache
-

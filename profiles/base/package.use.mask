@@ -1,9 +1,15 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.674 2015/05/16 07:20:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.675 2015/05/16 08:08:00 floppym Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Mike Gilbert <floppym@gentoo.org> (16 May 2015)
+# dev-lang/python[berkdb] fails with recent multilib sys-libs/db (bug 519584).
+dev-lang/python berkdb
+net-nds/nsscache nssdb
+www-apps/venus test
 
 # Jason Zaman <perfinion@gentoo.org> (08 May 2015)
 # java wrappers fail to build (bug #548858)

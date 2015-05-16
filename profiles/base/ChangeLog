@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.796 2015/05/16 07:20:14 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.797 2015/05/16 08:08:00 floppym Exp $
+
+  16 May 2015; Mike Gilbert <floppym@gentoo.org> package.use.mask:
+  Reinstate dev-lang/python[berkdb] mask.
 
   16 May 2015; Mike Gilbert <floppym@gentoo.org> package.use.mask:
   Revert dev-lang/python[berkdb] mask since it breaks dev-nds/nsscache.
