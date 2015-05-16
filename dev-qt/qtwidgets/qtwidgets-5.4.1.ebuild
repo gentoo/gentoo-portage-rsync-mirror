@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/qtwidgets-5.4.1.ebuild,v 1.4 2015/04/19 18:52:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/qtwidgets-5.4.1.ebuild,v 1.5 2015/05/16 10:26:06 jer Exp $
 
 EAPI=5
 
@@ -11,9 +11,9 @@ inherit qt5-build
 DESCRIPTION="Set of UI elements for creating classic desktop-style user interfaces for the Qt5 framework"
 
 if [[ ${QT5_BUILD_TYPE} == live ]]; then
-	KEYWORDS=""
+	KEYWORDS="~ppc64"
 else
-	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~x86"
+	KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc64 ~x86"
 fi
 
 # keep IUSE defaults in sync with qtgui

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtxml/ChangeLog,v 1.13 2015/04/15 04:42:04 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtxml/ChangeLog,v 1.14 2015/05/16 10:20:36 jer Exp $
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qtxml-5.4.1.ebuild:
+  Mark ~ppc64 too.
 
   15 Apr 2015; Yixun Lan <dlan@gentoo.org> qtxml-5.4.1.ebuild:
   keyword arm64, tested on cortex-a53 hardware

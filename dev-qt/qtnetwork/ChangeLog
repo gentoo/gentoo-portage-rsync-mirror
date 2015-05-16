@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtnetwork
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.16 2015/04/28 12:29:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtnetwork/ChangeLog,v 1.17 2015/05/16 10:20:07 jer Exp $
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qtnetwork-5.4.1.ebuild:
+  Mark ~ppc64 too.
 
   28 Apr 2015; Michael Palimaka <kensington@gentoo.org> metadata.xml:
   Fix bindist USE flag description by Arfrever.

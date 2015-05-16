@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qttest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.28 2015/05/15 12:56:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttest/ChangeLog,v 1.30 2015/05/16 10:22:15 jer Exp $
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qttest-5.4.1.ebuild:
+  Mark ~ppc64 too.
+
+  16 May 2015; Jeroen Roovers <jer@gentoo.org> qttest-4.8.6-r1.ebuild:
+  Stable for HPPA PPC64 (bug #530238).
 
   15 May 2015; Mikle Kolyada <zlogene@gentoo.org> qttest-4.8.6-r1.ebuild:
   x86 stable wrt bug #530238

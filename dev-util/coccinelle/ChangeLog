@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/coccinelle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.38 2015/04/08 17:54:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/coccinelle/ChangeLog,v 1.39 2015/05/16 10:12:56 aballier Exp $
+
+*coccinelle-1.0.0 (16 May 2015)
+
+  16 May 2015; Alexis Ballier <aballier@gentoo.org> +coccinelle-1.0.0.ebuild:
+  version bump, unbundle dev-ml/menhir and dev-ml/parmap
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> coccinelle-1.0.0_rc17.ebuild,
   coccinelle-1.0.0_rc18.ebuild, coccinelle-1.0.0_rc19.ebuild:

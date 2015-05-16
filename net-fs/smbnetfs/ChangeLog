@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/smbnetfs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.9 2015/01/11 18:25:28 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/smbnetfs/ChangeLog,v 1.10 2015/05/16 10:22:38 slyfox Exp $
+
+*smbnetfs-0.6.0-r1 (16 May 2015)
+
+  16 May 2015; Sergei Trofimovich <slyfox@gentoo.org> +smbnetfs-0.6.0-r1.ebuild:
+  Fix USE depends to allow latest samba-4 (bug #549350 and fix by barthess).
 
 *smbnetfs-0.6.0 (11 Jan 2015)
 
