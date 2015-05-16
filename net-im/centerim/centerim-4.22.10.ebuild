@@ -1,12 +1,12 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.10.ebuild,v 1.10 2014/08/05 18:34:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centerim/centerim-4.22.10.ebuild,v 1.11 2015/05/16 10:43:07 pacho Exp $
 
 EAPI="2"
 
 inherit eutils
 
-PROTOCOL_IUSE="+aim gadu +icq +irc +jabber lj +msn rss +yahoo"
+PROTOCOL_IUSE="+aim gadu +icq +irc +xmpp lj +msn rss +yahoo"
 IUSE="${PROTOCOL_IUSE} bidi nls ssl crypt jpeg otr"
 
 DESCRIPTION="CenterIM is a ncurses ICQ/Yahoo!/AIM/IRC/MSN/Jabber/GaduGadu/RSS/LiveJournal Client"
@@ -28,7 +28,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	bidi? ( dev-libs/fribidi )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	jpeg? ( virtual/jpeg )
-	jabber? (
+	xmpp? (
 		otr? ( <net-libs/libotr-4 )
 		crypt? ( >=app-crypt/gpgme-1.0.2 )
 	)
@@ -61,7 +61,7 @@ pkg_setup() {
 		die "Please activate at least one protocol USE flag!"
 	fi
 
-	if use otr && ! use jabber
+	if use otr && ! use xmpp
 	then
 		ewarn
 		ewarn "Support for OTR is only supported with Jabber!"
@@ -96,7 +96,7 @@ src_configure() {
 		$(use_enable gadu gg) \
 		$(use_enable icq) \
 		$(use_enable irc) \
-		$(use_enable jabber) \
+		$(use_enable xmpp jabber) \
 		$(use_enable lj) \
 		$(use_enable msn) \
 		$(use_enable nls locales-fix) \

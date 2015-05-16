@@ -4,7 +4,7 @@ DESCRIPTION=WebKit rendering library for the Qt5 framework
 EAPI=5
 HOMEPAGE=https://www.qt.io/
 IUSE=gstreamer gstreamer010 multimedia opengl printsupport qml udev webp test debug test
-KEYWORDS=~amd64 ~arm ~arm64 ~x86
+KEYWORDS=~amd64 ~arm ~arm64 ~ppc64 ~x86
 LICENSE=|| ( LGPL-2.1 LGPL-3 )
 RDEPEND=dev-db/sqlite:3 dev-libs/icu:= dev-libs/libxml2:2 dev-libs/libxslt >=dev-qt/qtcore-5.4.1:5[debug=,icu] >=dev-qt/qtgui-5.4.1:5[debug=] >=dev-qt/qtnetwork-5.4.1:5[debug=] >=dev-qt/qtsql-5.4.1:5[debug=] >=dev-qt/qtwidgets-5.4.1:5[debug=] media-libs/fontconfig:1.0 media-libs/libpng:0= sys-libs/zlib virtual/jpeg:0 virtual/opengl x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXrender gstreamer? ( dev-libs/glib:2 media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 ) gstreamer010? ( dev-libs/glib:2 media-libs/gstreamer:0.10 media-libs/gst-plugins-base:0.10 ) multimedia? ( >=dev-qt/qtmultimedia-5.4.1:5[debug=,widgets] ) opengl? ( >=dev-qt/qtopengl-5.4.1:5[debug=] ) printsupport? ( >=dev-qt/qtprintsupport-5.4.1:5[debug=] ) qml? ( >=dev-qt/qtdeclarative-5.4.1:5[debug=] ) udev? ( virtual/udev ) webp? ( media-libs/libwebp:0= ) dev-qt/qtchooser
 REQUIRED_USE=?? ( gstreamer gstreamer010 multimedia )
@@ -12,4 +12,4 @@ RESTRICT=mirror test
 SLOT=5
 SRC_URI=http://download.qt.io/official_releases/qt/5.4/5.4.1/submodules/qtwebkit-opensource-src-5.4.1.tar.xz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	qt5-build	098db482696a651b016d3385d07b080f	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	virtualx	73cfc129b4b9ba23aed1abb10c825d86
-_md5_=22b3e73c806abf20c394e60d638819c3
+_md5_=d311e5e7b7f38d6f3ff8691bd3ba8d24

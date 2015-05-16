@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.7.1.ebuild,v 1.7 2015/03/25 16:14:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/climm/climm-0.7.1.ebuild,v 1.8 2015/05/16 10:44:14 pacho Exp $
 
 EAPI="4"
 
@@ -11,15 +11,15 @@ SRC_URI="http://www.climm.org/source/${P}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="jabber gnutls otr tcl ssl"
+IUSE="xmpp gnutls otr tcl ssl"
 
-# In case user don't need jabber there is a choice gnutls/openssl. Since jabber
+# In case user don't need xmpp there is a choice gnutls/openssl. Since xmpp
 # requires gnutls then without explicit request to use gnutls (USE=gnutls)
 # for ssl we fall back on gnutls instead of openssl.
-REQUIRED_USE="jabber? ( ssl gnutls )"
+REQUIRED_USE="xmpp? ( ssl gnutls )"
 
 RDEPEND="
-	jabber? (
+	xmpp? (
 		|| (
 			>=dev-libs/iksemel-1.4[ssl]
 			>=dev-libs/iksemel-1.3[gnutls]
@@ -52,7 +52,7 @@ src_configure() {
 	fi
 
 	econf \
-		$(use_enable jabber xmpp) \
+		$(use_enable xmpp) \
 		$(use_enable otr) \
 		$(use_enable tcl) \
 		${myconf}

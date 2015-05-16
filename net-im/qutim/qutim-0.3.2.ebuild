@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.7 2015/02/22 18:41:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/qutim-0.3.2.ebuild,v 1.8 2015/05/16 11:00:28 pacho Exp $
 
 EAPI=5
 
@@ -19,14 +19,14 @@ KEYWORDS="~amd64 ~x86"
 # general USE
 IUSE="doc +sound tools"
 # protocol uses
-IUSE="$IUSE telepathy irc jabber jingle mrim oscar purple vkontakte"
+IUSE="$IUSE telepathy irc xmpp jingle mrim oscar purple vkontakte"
 # plugins
 IUSE="$IUSE antiboss aspell ayatana awn crypt dbus debug -espionage histman hunspell
 	kde mobility otr plugman phonon purple qml sdl +ssl +xscreensaver webkit"
 
 REQUIRED_USE="
 	oscar? ( ssl )
-	jingle? ( jabber )
+	jingle? ( xmpp )
 	qml? ( webkit )
 "
 
@@ -41,7 +41,7 @@ CDEPEND="
 	>=dev-qt/qtdeclarative-${QT_PV}
 
 	telepathy? ( >=net-libs/telepathy-qt-0.3 )
-	jabber? (
+	xmpp? (
 		app-crypt/qca:2[qt4(+)]
 		>=net-libs/jreen-1.2.0
 	)
@@ -88,7 +88,7 @@ DEPEND="${CDEPEND}
 	kde? ( dev-util/automoc )
 "
 RDEPEND="${CDEPEND}
-	jabber? ( app-crypt/qca:2[gpg] )
+	xmpp? ( app-crypt/qca:2[gpg] )
 	oscar? ( app-crypt/qca:2[openssl] )
 	|| ( kde-apps/oxygen-icons kde-base/oxygen-icons )
 "
@@ -132,7 +132,7 @@ src_configure() {
 		# protocols
 		$(cmake-utils_use telepathy ASTRAL )
 		$(cmake-utils_use irc              )
-		$(cmake-utils_use jabber           )
+		$(cmake-utils_use xmpp JABBER      )
 		$(cmake-utils_use mrim             )
 		$(cmake-utils_use oscar            )
 		$(cmake-utils_use purple QUETZAL   )

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.13 2014/12/28 16:10:24 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.4.16-r2.ebuild,v 1.14 2015/05/16 10:36:02 pacho Exp $
 
 EAPI=4
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/nagiosplug/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm arm64 hppa ppc ppc64 sparc x86"
-IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping nagios-ssh nagios-game ups ipv6 radius +suid jabber gnutls sudo smart"
+IUSE="+ssl samba mysql postgres ldap snmp nagios-dns nagios-ntp nagios-ping nagios-ssh nagios-game ups ipv6 radius +suid xmpp gnutls sudo smart"
 
 DEPEND="ldap? ( >=net-nds/openldap-2.0.25 )
 	mysql? ( virtual/mysql )
@@ -42,7 +42,7 @@ RDEPEND="${DEPEND}
 	nagios-ssh? ( >=net-misc/openssh-3.5_p1 )
 	ups? ( >=sys-power/nut-1.4 )
 	nagios-game? ( >=games-util/qstat-2.6 )
-	jabber? ( >=dev-perl/Net-Jabber-2.0 )
+	xmpp? ( >=dev-perl/Net-Jabber-2.0 )
 	sudo? ( >=app-admin/sudo-1.8.5 )
 	smart? ( sys-apps/smartmontools )"
 
@@ -110,7 +110,7 @@ EOF
 	# flag has been removed.
 	rm -r tarballs aix \
 		check_compaq_insight.pl *.c *README* \
-		$(usex !jabber nagios_sendim.pl) \
+		$(usex !xmpp nagios_sendim.pl) \
 		$(usex !smart check_smart.pl)
 
 	# fix perl interpreter
