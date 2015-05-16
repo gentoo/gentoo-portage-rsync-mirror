@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.540 2015/05/15 10:56:42 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.541 2015/05/16 08:52:41 vapier Exp $
+
+  16 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/gnutls-2.12.23-cross-compile.patch, gnutls-2.12.23-r6.ebuild:
+  Fix from Chromium OS for cross-compiling.
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> gnutls-3.3.15.ebuild:
   ppc stable wrt bug #548636

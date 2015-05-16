@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r6.ebuild,v 1.13 2015/04/03 17:21:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-2.12.23-r6.ebuild,v 1.14 2015/05/16 08:52:41 vapier Exp $
 
 EAPI=5
 
@@ -64,6 +64,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-CVE-2014-3467.patch
 	epatch "${FILESDIR}"/${P}-CVE-2014-3468.patch
 	epatch "${FILESDIR}"/${P}-CVE-2014-3469.patch
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
 
 	# support user patches
 	epatch_user

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/moneta
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/ChangeLog,v 1.9 2014/12/29 12:45:10 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/moneta/ChangeLog,v 1.10 2015/05/16 08:42:28 graaff Exp $
+
+  16 May 2015; Hans de Graaff <graaff@gentoo.org> -moneta-0.6.0-r1.ebuild:
+  Cleanup.
 
 *moneta-0.7.20 (29 Dec 2014)
 
