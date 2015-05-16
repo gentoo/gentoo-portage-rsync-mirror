@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.43 2015/05/15 06:42:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.44 2015/05/16 14:15:53 blueness Exp $
+
+  16 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  cryptography-0.5.4.ebuild, cryptography-0.6.1.ebuild,
+  cryptography-0.7.1-r1.ebuild, cryptography-0.7.2.ebuild,
+  cryptography-0.8.1.ebuild, cryptography-0.8.2.ebuild, cryptography-0.8.ebuild,
+  cryptography-0.9.ebuild:
+  Keyword ~ppc.  Bug #533430.
 
 *cryptography-0.9 (15 May 2015)
 
