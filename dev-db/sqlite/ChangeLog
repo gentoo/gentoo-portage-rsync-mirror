@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/sqlite
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.567 2015/05/15 12:11:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/ChangeLog,v 1.568 2015/05/15 23:55:33 jmorgan Exp $
+
+  15 May 2015; Jack Morgan <jmorgan@gentoo.org> sqlite-3.8.10.1.ebuild:
+  ia64 stable wrt bug #549258
 
   15 May 2015; Ian Delaney <idella4@gentoo.org> sqlite-3.8.10.1.ebuild:
   Fix parallel building with USE="-tcl -test -tools" (bug #549412).
