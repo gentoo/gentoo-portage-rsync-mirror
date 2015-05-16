@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.499 2015/03/08 04:32:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.500 2015/05/16 06:37:06 robbat2 Exp $
+
+  16 May 2015; Robin H. Johnson <robbat2@gentoo.org> -openldap-2.4.35-r1.ebuild:
+  Bug #488322 cleanup.
 
   08 Mar 2015; Robin H. Johnson <robbat2@gentoo.org>
   -files/openldap-2.4.30-contrib-samba4.patch:

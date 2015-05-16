@@ -1,6 +1,10 @@
 # ChangeLog for dev-vcs/git-cola
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.44 2015/05/15 18:48:43 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/git-cola/ChangeLog,v 1.45 2015/05/16 06:58:41 jlec Exp $
+
+  16 May 2015; Justin Lecher <jlec@gentoo.org> -git-cola-1.8.2.ebuild,
+  -git-cola-1.9.4.ebuild, -git-cola-2.1.0.ebuild, -git-cola-2.1.1.ebuild:
+  Drop old, obsoletes bug #519514
 
   15 May 2015; Mikle Kolyada <zlogene@gentoo.org> git-cola-2.0.7.ebuild:
   amd64 stable wrt bug #518306
