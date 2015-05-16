@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-4.8.1.ebuild,v 1.3 2015/04/26 17:17:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/proxychains/proxychains-4.8.1.ebuild,v 1.4 2015/05/16 19:28:25 radhermit Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="https://github.com/rofl0r/${MY_PN}/archive/v${PV}.tar.gz -> ${MY_P}.tar
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc ~sparc x86"
 
 S=${WORKDIR}/${MY_P}
 
