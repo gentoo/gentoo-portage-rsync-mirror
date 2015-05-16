@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.148 2015/04/08 08:05:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycairo/ChangeLog,v 1.149 2015/05/16 07:45:44 vapier Exp $
+
+  16 May 2015; Mike Frysinger <vapier@gentoo.org> pycairo-1.10.0-r4.ebuild:
+  Fix from Chromium OS for cross-compiling.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pycairo-1.10.0-r4.ebuild:
   Drop old Python implementations

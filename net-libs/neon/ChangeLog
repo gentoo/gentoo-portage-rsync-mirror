@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/neon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.93 2014/12/06 16:41:07 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/neon/ChangeLog,v 1.94 2015/05/16 07:56:57 vapier Exp $
+
+  16 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/neon-0.30.1-xml2-config.patch, neon-0.30.1.ebuild:
+  Fix from Chromium OS for cross-compiling.
 
   06 Dec 2014; Agostino Sarubbo <ago@gentoo.org> neon-0.30.1.ebuild:
   Stable for ia64, wrt bug #529718

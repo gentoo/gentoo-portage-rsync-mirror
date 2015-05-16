@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.4.4.ebuild,v 1.1 2015/05/13 08:59:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/lxml-3.4.4.ebuild,v 1.2 2015/05/16 07:42:09 vapier Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 python3_{3,4} )
 
-inherit distutils-r1 flag-o-matic
+inherit distutils-r1 flag-o-matic toolchain-funcs
 
 DESCRIPTION="A Pythonic binding for the libxml2 and libxslt libraries"
 HOMEPAGE="http://lxml.de/ http://pypi.python.org/pypi/lxml/"
@@ -34,6 +34,8 @@ DEPEND="${RDEPEND}
 DISTUTILS_IN_SOURCE_BUILD=1
 
 python_prepare_all() {
+	epatch "${FILESDIR}"/${P}-cross-compile.patch
+
 	# avoid replacing PYTHONPATH in tests.
 	sed -i '/sys\.path/d' test.py || die
 
@@ -48,6 +50,7 @@ python_compile() {
 		local CFLAGS=${CFLAGS}
 		append-cflags -fno-strict-aliasing
 	fi
+	tc-export PKG_CONFIG
 	distutils-r1_python_compile
 }
 
