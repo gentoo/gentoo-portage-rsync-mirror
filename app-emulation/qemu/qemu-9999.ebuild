@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.99 2015/05/14 02:19:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-9999.ebuild,v 1.100 2015/05/16 04:40:40 vapier Exp $
 
 EAPI=5
 
@@ -124,7 +124,10 @@ CDEPEND="
 		x11-libs/vte:2.90
 	)
 	iscsi? ( net-libs/libiscsi )
-	opengl? ( virtual/opengl )
+	opengl? (
+		virtual/opengl
+		media-libs/mesa[gles2]
+	)
 	pulseaudio? ( media-sound/pulseaudio )
 	python? ( ${PYTHON_DEPS} )
 	sdl? (
