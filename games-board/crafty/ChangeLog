@@ -1,6 +1,11 @@
 # ChangeLog for games-board/crafty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.63 2014/12/31 17:11:28 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.64 2015/05/16 00:05:10 mr_bones_ Exp $
+
+  16 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/crafty-24.1-numcpus.patch, crafty-24.1.ebuild:
+  Add patch from Thomas Jürges to compile with numcpus=1 or USE=no-opts (bug
+  #542848)
 
   31 Dec 2014; Michael Sterrett <mr_bones_@gentoo.org> -crafty-23.4.ebuild,
   -files/crafty-23.4-64bits.patch:

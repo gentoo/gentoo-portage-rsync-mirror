@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-24.1.ebuild,v 1.4 2014/12/31 16:16:30 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/crafty-24.1.ebuild,v 1.5 2015/05/16 00:05:10 mr_bones_ Exp $
 
 EAPI=5
 inherit flag-o-matic toolchain-funcs eutils games
@@ -25,9 +25,11 @@ src_prepare() {
 	sed -i \
 		-e '/-o crafty/s/CC/CXX/' \
 		-e 's:CXFLAGS:CXXFLAGS:g' \
+		-e 's:-j ::g' \
 		Makefile || die
 	sed -i \
 		-e "s:\"crafty.hlp\":\"${GAMES_DATADIR}/${PN}/crafty.hlp\":" option.c || die
+	epatch "${FILESDIR}"/${P}-numcpus.patch
 }
 
 src_compile() {
