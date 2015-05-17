@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.25-r1.ebuild,v 1.5 2015/05/17 10:13:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.24.28.ebuild,v 1.1 2015/05/17 10:13:32 pacho Exp $
 
 EAPI="5"
-GCONF_DEBUG="no"
+GCONF_DEBUG="yes"
+GNOME2_LA_PUNT="yes"
 
 inherit autotools eutils flag-o-matic gnome2 multilib virtualx readme.gentoo multilib-minimal
 
@@ -12,12 +13,12 @@ HOMEPAGE="http://www.gtk.org/"
 
 LICENSE="LGPL-2+"
 SLOT="2"
-IUSE="aqua cups debug examples +introspection test vim-syntax xinerama"
+IUSE="aqua cups examples +introspection test vim-syntax xinerama"
 REQUIRED_USE="
 	xinerama? ( !aqua )
 "
 
-KEYWORDS=" arm"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
 COMMON_DEPEND="
@@ -30,7 +31,7 @@ COMMON_DEPEND="
 	x11-misc/shared-mime-info
 
 	cups? ( >=net-print/cups-1.7.1-r2:=[${MULTILIB_USEDEP}] )
-	introspection? ( >=dev-libs/gobject-introspection-0.9.3 )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.3:= )
 	!aqua? (
 		>=x11-libs/cairo-1.12.14-r4:=[X]
 		>=x11-libs/gdk-pixbuf-2.30.7:2[X]
@@ -76,7 +77,11 @@ RDEPEND="${COMMON_DEPEND}
 		!app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
 	)
 "
-PDEPEND="vim-syntax? ( app-vim/gtk-syntax )"
+# librsvg for svg icons (PDEPEND to avoid circular dep), bug #547710
+PDEPEND="
+	gnome-base/librsvg[${MULTILIB_USEDEP}]
+	vim-syntax? ( app-vim/gtk-syntax )
+"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="To make the gtk2 file chooser use 'current directory' mode by default,
@@ -103,21 +108,18 @@ set_gtk2_confdir() {
 }
 
 src_prepare() {
-	# Fix building due to moved definition, upstream bug #704766
-	epatch "${FILESDIR}"/${PN}-2.24.20-darwin-quartz-pasteboard.patch
-
-	# Fix tests running when building out of sources, bug #510596
+	# Fix tests running when building out of sources, bug #510596, upstream bug #730319
 	epatch "${FILESDIR}"/${PN}-2.24.24-out-of-source.patch
 
-	# marshalers code was pre-generated with glib-2.31, upstream bug #671763
+	# marshalers code was pre-generated with glib-2.31, upstream bug #662109
 	rm -v gdk/gdkmarshalers.c gtk/gtkmarshal.c gtk/gtkmarshalers.c \
 		perf/marshalers.c || die
 
-	# Stop trying to build unmaintained docs, bug #349754
+	# Stop trying to build unmaintained docs, bug #349754, upstream bug #623150
 	strip_builddir SUBDIRS tutorial docs/Makefile.{am,in}
 	strip_builddir SUBDIRS faq docs/Makefile.{am,in}
 
-	# -O3 and company cause random crashes in applications. Bug #133469
+	# -O3 and company cause random crashes in applications, bug #133469
 	replace-flags -O3 -O2
 	strip-flags
 
@@ -139,11 +141,6 @@ src_prepare() {
 			|| die "failed to disable recentmanager test (2)"
 		sed 's:\({ "GtkFileChooserButton".*},\):/*\1*/:g' -i gtk/tests/object.c \
 			|| die "failed to disable recentmanager test (3)"
-
-		# Skip tests known to fail
-		# https://bugzilla.gnome.org/show_bug.cgi?id=646609
-		sed -e '/g_test_add_func.*test_text_access/s:^://:' \
-			-i "${S}/gtk/tests/testing.c" || die
 
 		# https://bugzilla.gnome.org/show_bug.cgi?id=617473
 		sed -i -e 's:pltcheck.sh:$(NULL):g' \
@@ -173,12 +170,10 @@ src_prepare() {
 multilib_src_configure() {
 	[[ ${ABI} == ppc64 ]] && append-flags -mminimal-toc
 
-	# Passing --disable-debug is not recommended for production use
 	ECONF_SOURCE=${S} \
 	gnome2_src_configure \
 		$(usex aqua --with-gdktarget=quartz --with-gdktarget=x11) \
 		$(usex aqua "" --with-xinput) \
-		$(usex debug --enable-debug=yes "") \
 		$(use_enable cups cups auto) \
 		$(multilib_native_use_enable introspection) \
 		$(use_enable xinerama) \
@@ -202,18 +197,24 @@ multilib_src_test() {
 multilib_src_install() {
 	gnome2_src_install
 
-	# add -framework Carbon to the .pc files
-	if use aqua ; then
-		for i in gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc; do
-			sed -e "s:Libs\: :Libs\: -framework Carbon :" \
-				-i "${ED%/}"/usr/$(get_libdir)/pkgconfig/$i || die "sed failed"
-		done
-	fi
+	# add -framework Carbon to the .pc files, bug #????
+	# FIXME: Is this still needed? Any reference to try to upstream it?
+#	if use aqua ; then
+#		for i in gtk+-2.0.pc gtk+-quartz-2.0.pc gtk+-unix-print-2.0.pc; do
+#			sed -e "s:Libs\: :Libs\: -framework Carbon :" \
+#				-i "${ED%/}"/usr/$(get_libdir)/pkgconfig/$i || die "sed failed"
+#		done
+#	fi
 }
 
 multilib_src_install_all() {
 	# see bug #133241
+	# Also set more default variables in sync with gtk3 and other distributions
 	echo 'gtk-fallback-icon-theme = "gnome"' > "${T}/gtkrc"
+	echo 'gtk-theme-name = "Adwaita"' >> "${T}/gtkrc"
+	echo 'gtk-icon-theme-name = "gnome"' >> "${T}/gtkrc"
+	echo 'gtk-cursor-theme-name = "Adwaita"' >> "${T}/gtkrc"
+
 	insinto /usr/share/gtk-2.0
 	doins "${T}"/gtkrc
 

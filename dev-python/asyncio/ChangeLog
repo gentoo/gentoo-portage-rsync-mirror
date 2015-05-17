@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/asyncio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asyncio/ChangeLog,v 1.4 2015/05/10 09:34:55 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asyncio/ChangeLog,v 1.5 2015/05/17 10:17:09 pacho Exp $
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> asyncio-3.4.2.ebuild:
+  ppc keyword, bug #548938
 
   10 May 2015; Jeroen Roovers <jer@gentoo.org> asyncio-3.4.2.ebuild:
   Mark ~ppc64 (bug #548938).

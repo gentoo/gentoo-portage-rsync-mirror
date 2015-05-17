@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.10.ebuild,v 1.2 2015/04/25 18:40:54 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.13.ebuild,v 1.1 2015/05/17 10:13:32 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -94,7 +94,8 @@ RDEPEND="${COMMON_DEPEND}
 	)
 "
 # librsvg for svg icons (PDEPEND to avoid circular dep), bug #547710
-PDEPEND="gnome-base/librsvg[${MULTILIB_USEDEP}]
+PDEPEND="
+	gnome-base/librsvg[${MULTILIB_USEDEP}]
 	vim-syntax? ( app-vim/gtk-syntax )
 "
 
@@ -185,12 +186,13 @@ multilib_src_install() {
 	gnome2_src_install
 
 	# add -framework Carbon to the .pc files, bug #????
-	if use aqua ; then
-		for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do
-			sed -e "s:Libs\: :Libs\: -framework Carbon :" \
-				-i "${ED%/}"/usr/$(get_libdir)/pkgconfig/$i || die "sed failed"
-		done
-	fi
+	# FIXME: Is this still needed?
+#	if use aqua ; then
+#		for i in gtk+-3.0.pc gtk+-quartz-3.0.pc gtk+-unix-print-3.0.pc; do
+#			sed -e "s:Libs\: :Libs\: -framework Carbon :" \
+#				-i "${ED%/}"/usr/$(get_libdir)/pkgconfig/$i || die "sed failed"
+#		done
+#	fi
 }
 
 multilib_src_install_all() {

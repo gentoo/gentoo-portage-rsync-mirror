@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libfm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.108 2015/04/02 20:03:59 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libfm/ChangeLog,v 1.109 2015/05/17 10:20:35 hwoarang Exp $
+
+  17 May 2015; Markos Chandras <hwoarang@gentoo.org> libfm-9999.ebuild:
+  Update live ebuild. Move it to git-r3 and sync it with the regular ebuilds
 
   02 Apr 2015; Markus Meier <maekke@gentoo.org> libfm-1.2.3.ebuild:
   arm stable, bug #542042
