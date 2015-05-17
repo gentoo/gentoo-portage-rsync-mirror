@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.86 2015/05/09 10:12:05 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/desc/linguas.desc,v 1.87 2015/05/17 09:35:15 hwoarang Exp $
 
 # This file contains descriptions of LINGUAS USE_EXPAND flags.
 
@@ -257,6 +257,7 @@ tr_TR - Turkish locale for Turkey
 ts - Tsonga locale
 tt - Tatar locale
 tt@iqtelif - Tatar (iqtelif) locale
+tt_RU - Tatar language locale for Russia
 ug - Uighur locale
 uk - Ukrainian locale
 uk_UA - Ukrainian locale for Ukraine

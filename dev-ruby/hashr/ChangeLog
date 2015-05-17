@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/hashr
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashr/ChangeLog,v 1.1 2014/06/14 12:03:34 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/hashr/ChangeLog,v 1.2 2015/05/17 09:45:07 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> hashr-0.0.22.ebuild:
+  Silence repoman warnings.
 
 *hashr-0.0.22 (14 Jun 2014)
 
