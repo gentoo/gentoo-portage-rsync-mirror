@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/prawn-table
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/ChangeLog,v 1.10 2014/12/07 14:02:09 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/prawn-table/ChangeLog,v 1.11 2015/05/17 12:10:45 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> prawn-table-0.2.1.ebuild:
+  Silence repoman warnings.
 
   07 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -prawn-table-0.2.0.ebuild:
   Cleanup old.
