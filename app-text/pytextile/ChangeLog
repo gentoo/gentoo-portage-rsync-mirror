@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.43 2015/02/16 04:39:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.44 2015/05/17 07:52:30 jer Exp $
+
+  17 May 2015; Jeroen Roovers <jer@gentoo.org> pytextile-2.2.1.ebuild,
+  pytextile-2.2.2.ebuild:
+  Mark ~ppc64 (bug #527396).
 
 *pytextile-2.2.2 (16 Feb 2015)
 

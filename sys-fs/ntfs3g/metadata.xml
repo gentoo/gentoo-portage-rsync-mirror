@@ -21,8 +21,7 @@ file ownership, access right.
 		<flag name='external-fuse'>Use external FUSE library instead of internal
 		one. Must be disabled for unprivileged mounting to work.</flag>
 		<flag name='ntfsdecrypt'>Build and install the ntfsdecrypt application.</flag>
-		<flag name='ntfsprogs'>Include internal version of ntfsprogs. This will
-		block sys-fs/ntfsprogs.</flag>
+		<flag name='ntfsprogs'>Include internal version of ntfsprogs.</flag>
 	</use>
 	<upstream>
 		<remote-id type="cpe">cpe:/a:ntfs-3g:ntfs-3g</remote-id>

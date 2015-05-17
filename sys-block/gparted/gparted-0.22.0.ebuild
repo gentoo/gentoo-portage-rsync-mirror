@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.20.0.ebuild,v 1.4 2015/02/27 01:40:40 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.22.0.ebuild,v 1.1 2015/05/17 07:52:26 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2+ FDL-1.2+"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~ppc x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="btrfs dmraid f2fs fat hfs jfs kde mdadm ntfs policykit reiserfs reiser4 xfs"
 
 # FIXME: add gpart support
@@ -53,7 +53,6 @@ RDEPEND="${COMMON_DEPEND}
 DEPEND="${COMMON_DEPEND}
 	app-text/docbook-xml-dtd:4.1.2
 	app-text/gnome-doc-utils
-	app-text/rarian
 	dev-util/intltool
 	virtual/pkgconfig
 "

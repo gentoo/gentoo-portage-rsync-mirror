@@ -6913,7 +6913,7 @@ sys-block/gparted:fat - Include FAT16/FAT32 support (sys-fs/dosfstools)
 sys-block/gparted:hfs - Include HFS support (sys-fs/hfsutils)
 sys-block/gparted:jfs - Include JFS support (sys-fs/jfsutils)
 sys-block/gparted:mdadm - Support for Linux software RAID.
-sys-block/gparted:ntfs - Include NTFS support (sys-fs/ntfsprogs)
+sys-block/gparted:ntfs - Include NTFS support (sys-fs/ntfs3g[ntfsprogs])
 sys-block/gparted:reiser4 - Include ReiserFS4 support (sys-fs/reiser4progs)
 sys-block/gparted:reiserfs - Include ReiserFS support (sys-fs/reiserfsprogs)
 sys-block/gparted:xfs - Include XFS support (sys-fs/xfsprogs, sys-fs/xfsdump)
@@ -7199,7 +7199,7 @@ sys-fs/lvm2:thin - Support for thin volumes
 sys-fs/mtpfs:mad - Enable handling of MP3's metadata
 sys-fs/ntfs3g:external-fuse - Use external FUSE library instead of internal one. Must be disabled for unprivileged mounting to work.
 sys-fs/ntfs3g:ntfsdecrypt - Build and install the ntfsdecrypt application.
-sys-fs/ntfs3g:ntfsprogs - Include internal version of ntfsprogs. This will block sys-fs/ntfsprogs.
+sys-fs/ntfs3g:ntfsprogs - Include internal version of ntfsprogs.
 sys-fs/ocfs2-tools:external - Enable external locking
 sys-fs/owfs:ftpd - Enable building the OWFS FTP server (owftpd)
 sys-fs/owfs:fuse - Enable building the FUSE-based OWFS client (owfs)

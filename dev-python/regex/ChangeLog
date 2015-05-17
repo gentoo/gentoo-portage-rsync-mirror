@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/regex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/regex/ChangeLog,v 1.1 2014/10/29 15:41:07 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/regex/ChangeLog,v 1.2 2015/05/17 07:51:21 jer Exp $
+
+  17 May 2015; Jeroen Roovers <jer@gentoo.org> regex-2014.10.09.ebuild:
+  Mark ~ppc64 (bug #527396).
 
 *regex-2014.10.09 (29 Oct 2014)
 
