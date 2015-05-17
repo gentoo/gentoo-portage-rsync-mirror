@@ -1,6 +1,14 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.52 2015/05/17 04:33:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.54 2015/05/17 05:05:04 vapier Exp $
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild,
+  yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:
+  Add e2fsprogs[static-libs] dep to older versions since they use it too.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> files/yaboot-stubfuncs.patch,
+  yaboot-1.3.17-r2.ebuild:
+  Add pread/pwrite stubs that newer ext2 libs use #527974 by Agostino Sarubbo.
 
   17 May 2015; Mike Frysinger <vapier@gentoo.org>
   files/yaboot-1.3.17-nopiessp-gcc4.patch, files/yaboot-nopiessp-gcc4.patch:

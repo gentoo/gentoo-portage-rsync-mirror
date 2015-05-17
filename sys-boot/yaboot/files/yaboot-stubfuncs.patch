@@ -1,3 +1,5 @@
+Stub out some functions that are not provided (and unneeded)
+
 --- lib/malloc.c
 +++ lib/malloc.c
 @@ -64,6 +64,15 @@ void *malloc (unsigned int size)
@@ -16,37 +18,70 @@
  /* Do not fall back to the malloc above as posix_memalign is needed by
   * external libraries not yaboot */
  int posix_memalign(void **memptr, size_t alignment, size_t size)
---- lib/nonstd.c	2012-06-20 09:38:54.000000000 -0400
-+++ lib/nonstd.c	2012-06-20 09:38:57.000000000 -0400
-@@ -65,3 +65,178 @@
+--- lib/nonstd.c
++++ lib/nonstd.c
+@@ -65,3 +65,203 @@
  {
  	return NULL;
  }
 +
-+// I tried to use prom functions for these...
++int lseek(int fd, int offset, int whence) {
++	// XXX: This whence addition seems wrong ..
++	return prom_lseek((void *)fd, whence + offset);
++}
++
++int lseek64(int fd, int64_t offset, int whence) {
++	return lseek(fd, offset, whence);
++}
++
 +int open(const char *pathname, int flags) {
 +	return (int) prom_open((char *)pathname);
 +}
 +
 +int open64(const char *pathname, int flags) {
-+	return (int) prom_open((char *)pathname);
++	return open(pathname, flags);
 +}
 +
-+int __open64_2 (__const char *__path, int __oflag) {
-+	return (int) prom_open((char *)__path);
++// Internal glibc fortify calls.
++int __open64_2(const char *path, int flags) {
++	return open64(path, flags);
 +}
 +
 +int read(int fd, void *buf, size_t count) {
 +	return prom_read((void *)fd, buf, count);
 +}
 +
-+int write(int fd, void *buf, size_t count) {
-+	return prom_write((void *)fd, buf, count);
++int write(int fd, const void *buf, size_t count) {
++	return prom_write((void *)fd, (void *)buf, count);
 +}
 +
 +int close(int fd) {
 +	prom_close((void *)fd);
 +	return 0;
++}
++
++int pread(int fd, void *buf, size_t count, int32_t offset) {
++	int curr = lseek(fd, 0, 0 /*SEEK_CUR*/);
++	lseek(fd, offset, 0 /*SEEK_SET*/);
++	int ret = read(fd, buf, count);
++	lseek(fd, curr, 0 /*SEEK_SET*/);
++	return ret;
++}
++
++int pread64(int fd, void *buf, int64_t count, int64_t offset) {
++	return pread(fd, buf, count, offset);
++}
++
++int pwrite(int fd, const void *buf, size_t count, int32_t offset) {
++	int curr = lseek(fd, 0, 0 /*SEEK_CUR*/);
++	lseek(fd, offset, 0 /*SEEK_SET*/);
++	int ret = write(fd, buf, count);
++	lseek(fd, curr, 0 /*SEEK_SET*/);
++	return ret;
++}
++
++int pwrite64(int fd, const void *buf, int64_t count, int64_t offset) {
++	return pwrite(fd, buf, count, offset);
 +}
 +
 +// No fsync, just assume we've sync'd
@@ -157,14 +192,6 @@
 +
 +int * __errno_location(void) {
 +	return 0;
-+}
-+
-+int lseek(int fd, int offset, int whence) {
-+	return prom_lseek ((void *)fd, whence + offset);
-+}
-+
-+int lseek64(int fd, int offset, int whence) {
-+	return prom_lseek ((void *)fd, whence + offset);
 +}
 +
 +size_t fwrite(const void *ptr, size_t size, size_t nmemb, void *stream) {

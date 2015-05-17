@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/pambase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.149 2015/05/15 12:27:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/pambase/ChangeLog,v 1.150 2015/05/17 05:23:58 vapier Exp $
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> pambase-20150213.ebuild:
+  Mark alpha/arm64/ia64/m68k/ppc64/s390/sh stable #547434.
 
   15 May 2015; Mikle Kolyada <zlogene@gentoo.org> pambase-20150213.ebuild:
   sparc stable wrt bug #547434
