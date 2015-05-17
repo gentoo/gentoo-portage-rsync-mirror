@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/weechat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.158 2015/05/16 19:19:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/ChangeLog,v 1.159 2015/05/17 00:21:10 patrick Exp $
+
+  17 May 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   16 May 2015; Tim Harder <radhermit@gentoo.org> -weechat-0.4.3-r1.ebuild,
   -weechat-1.0.1.ebuild, -weechat-1.1.ebuild, weechat-9999.ebuild,
