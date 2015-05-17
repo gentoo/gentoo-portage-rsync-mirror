@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/hacking-0.10.1.ebuild,v 1.5 2015/05/17 09:28:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/hacking/hacking-0.10.1.ebuild,v 1.6 2015/05/17 20:50:28 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -50,7 +50,8 @@ python_prepare_all() {
 	sed -e 's:intersphinx_mapping:#&:' \
 		-e 's:oslosphinx:oslo.sphinx:' \
 		-i doc/source/conf.py || die
-
+	# relax deps
+	rm requirements.txt
 	distutils-r1_python_prepare_all
 }
 

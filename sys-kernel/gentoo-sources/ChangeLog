@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1560 2015/05/17 19:41:26 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.1561 2015/05/17 20:50:01 mpagano Exp $
+
+*gentoo-sources-4.0.4 (17 May 2015)
+
+  17 May 2015; Mike Pagano <mpagano@gentoo.org> +gentoo-sources-4.0.4.ebuild:
+  Linxu patch 4.0.4
 
 *gentoo-sources-3.10.79 (17 May 2015)
 
