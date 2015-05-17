@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-1.0.2.ebuild,v 1.1 2015/05/17 07:35:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/networkmanager-openswan-1.0.2.ebuild,v 1.2 2015/05/17 11:25:06 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -24,6 +24,7 @@ RDEPEND="
 	|| ( net-misc/openswan net-misc/libreswan )
 	gtk? (
 		app-crypt/libsecret
+		>=gnome-extra/nm-applet-0.9.10
 		>=x11-libs/gtk+-3.4:3
 	)
 "

@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/networkmanager-openswan
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.31 2015/05/17 07:35:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openswan/ChangeLog,v 1.32 2015/05/17 11:25:06 pacho Exp $
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org>
+  networkmanager-openswan-1.0.2.ebuild:
+  Add missing depend, bug #549706
 
 *networkmanager-openswan-1.0.2 (17 May 2015)
 

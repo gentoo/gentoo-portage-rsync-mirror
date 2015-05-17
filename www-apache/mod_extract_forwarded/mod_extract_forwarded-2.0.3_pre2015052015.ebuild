@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_extract_forwarded/mod_extract_forwarded-2.0.3_pre2015052015.ebuild,v 1.1 2015/05/09 08:37:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_extract_forwarded/mod_extract_forwarded-2.0.3_pre2015052015.ebuild,v 1.2 2015/05/17 11:05:03 pacho Exp $
 
 EAPI=5
 inherit apache-module
@@ -21,7 +21,7 @@ RDEPEND="mod_proxy? ( www-servers/apache[apache2_modules_proxy_connect] )"
 APACHE2_MOD_CONF="98_${PN}"
 APACHE2_MOD_DEFINE="EXTRACT_FORWARDED"
 
-need_apache2
+need_apache2_4
 
 src_prepare() {
 	if ! use mod_proxy; then

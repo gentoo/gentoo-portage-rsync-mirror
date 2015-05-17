@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1616 2015/05/15 16:13:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1617 2015/05/17 11:10:22 ulm Exp $
+
+  17 May 2015; Ulrich Müller <ulm@gentoo.org> latex-package.eclass:
+  Prevent compression of symlink targets in docdir in EAPIs where this is
+  possible, bug 549584.
 
   15 May 2015; Michael Palimaka <kensington@gentoo.org> kde4-base.eclass:
   Sync with KDE overlay - update SRC_URI.
