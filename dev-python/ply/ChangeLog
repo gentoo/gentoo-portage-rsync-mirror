@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/ply
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.46 2015/05/11 04:32:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ply/ChangeLog,v 1.47 2015/05/17 16:28:47 floppym Exp $
+
+*ply-3.6-r1 (17 May 2015)
+
+  17 May 2015; Mike Gilbert <floppym@gentoo.org> +files/3.6-lextab-None.patch,
+  +files/3.6-picklefile-IOError.patch, +ply-3.6-r1.ebuild, -ply-3.6.ebuild:
+  Resolve chromium build issues, bug 549328.
 
 *ply-3.6 (11 May 2015)
 

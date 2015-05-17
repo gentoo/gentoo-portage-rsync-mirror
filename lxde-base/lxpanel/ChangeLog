@@ -1,6 +1,11 @@
 # ChangeLog for lxde-base/lxpanel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.64 2015/03/03 08:06:53 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxde-base/lxpanel/ChangeLog,v 1.65 2015/05/17 16:25:46 hwoarang Exp $
+
+*lxpanel-0.8.1 (17 May 2015)
+
+  17 May 2015; Markos Chandras <hwoarang@gentoo.org> +lxpanel-0.8.1.ebuild:
+  Version bump thanks to jospezial. Bug #524654
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> lxpanel-0.7.0-r1.ebuild:
   add arm64 support, tested on A53 board
