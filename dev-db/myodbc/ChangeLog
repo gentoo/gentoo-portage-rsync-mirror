@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/myodbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.43 2015/04/19 07:02:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/myodbc/ChangeLog,v 1.44 2015/05/17 21:24:37 grknight Exp $
+
+  17 May 2015; Brian Evans <grknight@gentoo.org> -files/5.2.7-cxxlinkage.patch,
+  -files/myodbc-5.1.6-qt4-includedir.patch, -myodbc-5.1.6.ebuild,
+  -myodbc-5.2.7.ebuild:
+  Drop old; 5.1 series no longer builds with current libmysqlclient from servers
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> myodbc-5.2.7-r1.ebuild:
   x86 stable wrt bug #525298

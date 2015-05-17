@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/virtualbox-modules
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.160 2015/03/17 07:59:31 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-modules/ChangeLog,v 1.161 2015/05/17 21:18:21 polynomial-c Exp $
+
+*virtualbox-modules-4.3.28 (17 May 2015)
+
+  17 May 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -virtualbox-modules-4.3.24.ebuild, +virtualbox-modules-4.3.28.ebuild:
+  Version bump (bug #549466). Removed old.
 
 *virtualbox-modules-4.3.26 (17 Mar 2015)
 
