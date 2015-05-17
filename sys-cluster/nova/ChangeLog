@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.96 2015/05/16 21:51:48 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.97 2015/05/16 23:58:10 prometheanfire Exp $
+
+  16 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +files/openstack-scsi-disk.rules:
+  adding missing udev rules file
 
   16 May 2015; Matthew Thode <prometheanfire@gentoo.org>
   +files/scsi-openscsi-link.sh, nova-2015.1.0-r1.ebuild,
