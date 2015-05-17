@@ -1,5 +1,7 @@
---- usr/sbin/ofpath.bak	2012-05-09 12:24:51.709911981 -0400
-+++ usr/sbin/ofpath	2012-05-09 12:32:19.661560544 -0400
+Fix the devspec path on newer kernels
+
+--- usr/sbin/ofpath
++++ usr/sbin/ofpath
 @@ -85,11 +85,20 @@
  [ "$DEBUG" = 1 ] && echo "Devpath is: $DEVPATH"
  
@@ -16,7 +18,7 @@
 +	### /dev/sd* on kernel <3.3
 +	CONTROLLER_PATH=$(cat ${DEVPATH}/../../../devspec);
 +elif [ -e "${DEVPATH}/../../../../devspec" ]; then
-+	### /dev/sd* on kernel 3.3+	
++	### /dev/sd* on kernel 3.3+
 +	CONTROLLER_PATH=$(cat ${DEVPATH}/../../../../devspec);
 +else
 +	### None of the above...

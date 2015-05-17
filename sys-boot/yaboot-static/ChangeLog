@@ -1,6 +1,32 @@
 # ChangeLog for sys-boot/yaboot-static
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.29 2012/06/20 13:56:16 josejx Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot-static/ChangeLog,v 1.34 2015/05/17 03:59:27 vapier Exp $
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/new-ofpath-devspec.patch, yaboot-static-1.3.14-r1.ebuild,
+  yaboot-static-1.3.16-r1.ebuild, yaboot-static-1.3.17-r1.ebuild:
+  Update to EAPI=5.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org>
+  yaboot-static-1.3.14-r1.ebuild, yaboot-static-1.3.16-r1.ebuild,
+  yaboot-static-1.3.17-r1.ebuild:
+  Add QA_PRESTRIPPED to quiet install warnings.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org>
+  yaboot-static-1.3.14-r1.ebuild, yaboot-static-1.3.16-r1.ebuild,
+  yaboot-static-1.3.17-r1.ebuild:
+  Move yaboot blocker to RDEPEND -- you can build these at the same time, just
+  not install them both.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org>
+  yaboot-static-1.3.14-r1.ebuild, yaboot-static-1.3.16-r1.ebuild,
+  yaboot-static-1.3.17-r1.ebuild:
+  Allow install on ppc systems too for testing purposes.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> -yaboot-static-1.3.17.ebuild,
+  yaboot-static-1.3.14-r1.ebuild, yaboot-static-1.3.16-r1.ebuild,
+  yaboot-static-1.3.17-r1.ebuild:
+  Update HOMEPAGE #472078 by Jonas Stein.
 
   20 Jun 2012; Joseph Jezak <josejx@gentoo.org> yaboot-static-1.3.17-r1.ebuild:
   Marked ppc64 stable to match ppc keywording.
@@ -122,4 +148,3 @@
   Initial bout of insanity
 
 *yaboot-static-1.0 (22 Mar 2004)
-
