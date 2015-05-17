@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_auth_kerb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.18 2015/05/14 06:42:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_auth_kerb/ChangeLog,v 1.19 2015/05/17 10:55:22 pacho Exp $
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/mod_auth_kerb-5.4-s4u2proxy-r3.patch, mod_auth_kerb-5.4-r2.ebuild:
+  Try to commit the patch properly
 
   14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -mod_auth_kerb-5.4-r1.ebuild:
