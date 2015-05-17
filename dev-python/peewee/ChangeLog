@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/peewee
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/ChangeLog,v 1.28 2015/04/22 06:59:59 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/peewee/ChangeLog,v 1.29 2015/05/17 11:38:56 idella4 Exp $
+
+*peewee-2.6.0 (17 May 2015)
+
+  17 May 2015; Ian Delaney <idella4@gentoo.org> +peewee-2.6.0.ebuild,
+  -peewee-2.4.6.ebuild, -peewee-2.4.7.ebuild, -peewee-2.5.0.ebuild,
+  peewee-2.5.1.ebuild:
+  bump; rm deps found to be un-needed in testsuite of -2.5.1, add missed dep for
+  doc build, rm old
 
 *peewee-2.5.1 (22 Apr 2015)
 
