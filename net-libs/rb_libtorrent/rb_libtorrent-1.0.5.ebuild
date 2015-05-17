@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.3.ebuild,v 1.5 2015/04/12 17:21:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.5.ebuild,v 1.1 2015/05/17 09:18:45 hwoarang Exp $
 
 EAPI=5
 

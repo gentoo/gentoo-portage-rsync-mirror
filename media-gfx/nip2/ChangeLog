@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/nip2
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.47 2013/02/16 12:42:15 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nip2/ChangeLog,v 1.48 2015/05/17 09:13:20 pacho Exp $
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> -nip2-7.26.3.ebuild:
+  drop old
 
   16 Feb 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due bug #96436

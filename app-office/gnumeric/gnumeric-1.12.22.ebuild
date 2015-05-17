@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.18.ebuild,v 1.3 2014/12/19 13:34:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.12.22.ebuild,v 1.1 2015/05/17 09:08:24 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnumeric.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 
 IUSE="+introspection libgda perl python"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
@@ -30,8 +30,8 @@ RDEPEND="
 	app-arch/bzip2
 	sys-libs/zlib
 	>=dev-libs/glib-2.38.0:2
-	>=gnome-extra/libgsf-1.14.24:=
-	>=x11-libs/goffice-0.10.14:0.10
+	>=gnome-extra/libgsf-1.14.33:=
+	>=x11-libs/goffice-0.10.22:0.10
 	>=dev-libs/libxml2-2.4.12:2
 	>=x11-libs/pango-1.24.0:=
 

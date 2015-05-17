@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.291 2015/05/15 18:32:29 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.292 2015/05/17 09:22:59 jer Exp $
+
+  17 May 2015; Jeroen Roovers <jer@gentoo.org> rrdtool-1.5.3-r1.ebuild:
+  Mark ~hppa (bug #549516).
 
   15 May 2015; Anthony G. Basile <blueness@gentoo.org> rrdtool-1.5.3-r1.ebuild:
   Keyword ~arm, ~ppc and ~ppc64.  Bug #549516.

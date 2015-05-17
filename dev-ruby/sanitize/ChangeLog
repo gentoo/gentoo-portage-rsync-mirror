@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sanitize
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sanitize/ChangeLog,v 1.5 2015/03/25 20:24:05 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sanitize/ChangeLog,v 1.6 2015/05/17 09:13:50 graaff Exp $
+
+*sanitize-4.0.0 (17 May 2015)
+
+  17 May 2015; Hans de Graaff <graaff@gentoo.org> +sanitize-4.0.0.ebuild:
+  Version bump. Drop x86 keyword due to new dependencies, bug 549692.
 
   25 Mar 2015; Hans de Graaff <graaff@gentoo.org> sanitize-2.1.0.ebuild:
   Add ruby22.
