@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-logging/jboss-logging-3.1.4.ebuild,v 1.1 2014/05/10 12:34:44 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-logging/jboss-logging-3.1.4.ebuild,v 1.2 2015/05/17 21:37:12 monsieurp Exp $
 
 EAPI="5"
 
@@ -17,13 +17,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="dev-java/jboss-logmanager:0
-	<dev-java/slf4j-api-1.7.7:0
+	>=dev-java/slf4j-api-1.7.7
 	dev-java/log4j:0"
 
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.6
 		${COMMON_DEPEND}"
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 		${COMMON_DEPEND}"
 
 S="${WORKDIR}/${P}.GA/"
@@ -32,12 +32,21 @@ EANT_GENTOO_CLASSPATH="jboss-logmanager,slf4j-api,log4j"
 JAVA_ANT_REWRITE_CLASSPATH="true"
 
 java_prepare() {
-	cp "${FILESDIR}"/${PN}-3.1.3-r1-build.xml build.xml || die
+	cp "${FILESDIR}"/${P}-build.xml build.xml || die
+
+	# https://github.com/qos-ch/slf4j/blob/master/slf4j-api/src/main/java/org/slf4j/MDC.java#L226
+	# MDC returns a Map<String, String>
+	# https://github.com/jboss-logging/jboss-logging/blob/master/src/main/java/org/jboss/logging/Slf4jLoggerProvider.java#L57
+	# Yet, for some reason, the JBoss folks have decided that it should return a Map<String, Object> :|
+	# This patch mends this mistake.
+	epatch "${FILESDIR}"/"${P}"-MDC.patch
 }
 
 src_install() {
-	java-pkg_newjar target/${PN}-3.1.3.GA.jar
+	java-pkg_newjar target/${PN}-3.1.4.GA.jar
 
-	use doc && java-pkg_dojavadoc target/site/apidocs
+	if use doc; then
+		java-pkg_dojavadoc target/site/apidocs
+	fi
 	use source && java-pkg_dosrc src/main/java/org
 }
