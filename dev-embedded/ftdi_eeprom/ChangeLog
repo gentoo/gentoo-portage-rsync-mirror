@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/ftdi_eeprom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.15 2015/05/13 10:42:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/ftdi_eeprom/ChangeLog,v 1.16 2015/05/17 13:43:38 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -ftdi_eeprom-0.2.ebuild:
+  Remove old.
 
 *ftdi_eeprom-1.0 (13 May 2015)
 

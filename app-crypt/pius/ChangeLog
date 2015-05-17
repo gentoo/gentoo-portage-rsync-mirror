@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pius
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.6 2014/10/11 21:02:18 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.7 2015/05/17 13:50:51 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -pius-2.0.8.ebuild:
+  Remove old.
 
 *pius-2.0.11 (11 Oct 2014)
 

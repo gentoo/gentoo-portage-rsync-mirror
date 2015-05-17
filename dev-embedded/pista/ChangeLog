@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/pista
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/ChangeLog,v 1.7 2012/10/29 08:53:08 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pista/ChangeLog,v 1.8 2015/05/17 13:41:36 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -pista-0.62b.ebuild:
+  Remove old.
 
   29 Oct 2012; Agostino Sarubbo <ago@gentoo.org> pista-0.70.ebuild:
   Add ~amd64, wrt bug #440064
