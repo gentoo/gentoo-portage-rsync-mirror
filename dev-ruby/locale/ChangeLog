@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/locale
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.79 2015/04/11 09:00:21 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/locale/ChangeLog,v 1.80 2015/05/17 07:07:09 graaff Exp $
+
+*locale-2.1.1 (17 May 2015)
+
+  17 May 2015; Hans de Graaff <graaff@gentoo.org> +locale-2.1.1.ebuild:
+  Version bump.
 
   11 Apr 2015; Hans de Graaff <graaff@gentoo.org> locale-2.1.0-r2.ebuild:
   Add ruby22.
