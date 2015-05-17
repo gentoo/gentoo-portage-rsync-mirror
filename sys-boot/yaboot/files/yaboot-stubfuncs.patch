@@ -20,7 +20,7 @@ Stub out some functions that are not provided (and unneeded)
  int posix_memalign(void **memptr, size_t alignment, size_t size)
 --- lib/nonstd.c
 +++ lib/nonstd.c
-@@ -65,3 +65,203 @@
+@@ -65,3 +65,208 @@
  {
  	return NULL;
  }
@@ -86,6 +86,11 @@ Stub out some functions that are not provided (and unneeded)
 +
 +// No fsync, just assume we've sync'd
 +int fsync(int fd) {
++	return 0;
++}
++
++// ext2 libs only use this to turn off caches currently
++int fcntl(int fd, int cmd, ...) {
 +	return 0;
 +}
 +

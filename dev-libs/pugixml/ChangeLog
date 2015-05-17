@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/pugixml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.23 2015/04/19 09:50:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pugixml/ChangeLog,v 1.25 2015/05/17 06:42:44 radhermit Exp $
+
+  17 May 2015; Tim Harder <radhermit@gentoo.org> -pugixml-1.2.ebuild,
+  -pugixml-1.4.ebuild, -files/pugixml-1.2-cmake.patch:
+  Remove old.
+
+*pugixml-1.6 (17 May 2015)
+
+  17 May 2015; Tim Harder <radhermit@gentoo.org> +pugixml-1.6.ebuild:
+  Version bump.
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pugixml-1.5.ebuild:
   Stable for x86, wrt bug #535124
