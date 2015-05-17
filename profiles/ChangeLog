@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.9999 2015/05/15 12:12:54 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10000 2015/05/17 02:22:39 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  17 May 2015; Ben de Groot <yngwin@gentoo.org>
+  +arch/powerpc/ppc32/package.mask, arch/powerpc/ppc32/use.mask:
+  Fix Qt5 mask for ppc
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> arch/powerpc/use.stable.mask:
   Update use.stable.mask
