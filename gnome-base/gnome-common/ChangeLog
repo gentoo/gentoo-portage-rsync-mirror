@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gnome-common
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.154 2015/05/15 11:16:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-common/ChangeLog,v 1.155 2015/05/17 20:06:46 pacho Exp $
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> gnome-common-3.14.0-r1.ebuild:
+  ppc64 stable wrt bug #549288
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> gnome-common-3.14.0-r1.ebuild:
   ppc stable wrt bug #549288

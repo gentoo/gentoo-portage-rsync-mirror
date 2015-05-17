@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcpkix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.7 2015/05/15 11:21:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcpkix/ChangeLog,v 1.8 2015/05/17 20:09:15 pacho Exp $
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> bcpkix-1.50.ebuild:
+  ppc64 stable wrt bug #485566
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> bcpkix-1.50.ebuild:
   ppc stable wrt bug #485566

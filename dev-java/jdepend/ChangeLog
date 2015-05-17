@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/jdepend
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.59 2015/04/21 18:39:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdepend/ChangeLog,v 1.61 2015/05/17 20:23:16 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -jdepend-2.9-r4.ebuild:
+  Remove old.
+
+  17 May 2015; Pacho Ramos <pacho@gentoo.org> jdepend-2.9-r5.ebuild:
+  ppc64 stable wrt bug #535078
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> jdepend-2.9-r5.ebuild:
   ppc stable wrt bug #535078

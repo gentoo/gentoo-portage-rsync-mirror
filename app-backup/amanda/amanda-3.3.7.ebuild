@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.7.ebuild,v 1.1 2015/04/03 23:59:06 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/amanda/amanda-3.3.7.ebuild,v 1.2 2015/05/17 20:11:51 pacho Exp $
 
 EAPI=5
 inherit autotools eutils perl-module user systemd
@@ -13,7 +13,7 @@ LICENSE="HPND BSD BSD-2 GPL-2+ GPL-3+"
 SLOT="0"
 IUSE="curl gnuplot ipv6 kerberos minimal nls readline s3 samba systemd xfs"
 
-KEYWORDS="~amd64 ~ppc ~ppc64 ~sparc ~x86"
+KEYWORDS="~amd64 ~ppc ppc64 ~sparc ~x86"
 RDEPEND="sys-libs/readline
 	virtual/awk
 	app-arch/tar

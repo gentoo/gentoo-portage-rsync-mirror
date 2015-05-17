@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.2.0-r2.ebuild,v 1.2 2015/05/15 10:42:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.2.0-r2.ebuild,v 1.3 2015/05/17 20:01:57 pacho Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www-itg.lbl.gov/~hoschek/colt/"
 LICENSE="colt"
 IUSE=""
 SLOT="0"
-KEYWORDS="~amd64 ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ppc ppc64 ~x86"
 
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/concurrent-util-1.3.4:0"
