@@ -1,6 +1,19 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.70 2015/05/17 10:17:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.72 2015/05/17 17:21:01 alunduil Exp $
+
+*tornado-4.2.0_beta1 (17 May 2015)
+
+  17 May 2015; Alex Brandt <alunduil@gentoo.org> +tornado-4.2.0_beta1.ebuild,
+  files/drop-intersphinx.patch, metadata.xml:
+  add version 4.2.0_beta1
+
+  17 May 2015; Alex Brandt <alunduil@gentoo.org>
+  +files/4.1.0-drop-intersphinx.patch, tornado-4.1.0-r1.ebuild,
+  tornado-4.1.0.ebuild:
+  version intersphinx patch file  This patch changes for tornado-4.2 and
+  requires that the current file be accessible under a different name to keep
+  moving forward.
 
   17 May 2015; Pacho Ramos <pacho@gentoo.org> tornado-4.1.0-r1.ebuild:
   ppc keyword, bug #548938

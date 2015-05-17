@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
+  <maintainer>
+	<email>alunduil@genoo.org></email>
+	<name>Alex Brandt</name>
+  </maintainer>
 </pkgmetadata>

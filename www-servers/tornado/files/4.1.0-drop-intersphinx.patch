@@ -1,34 +1,34 @@
 diff --git a/docs/Makefile b/docs/Makefile
-index 7001b80..ab2ffdd 100644
+index a491685..ba4888f 100644
 --- a/docs/Makefile
 +++ b/docs/Makefile
-@@ -3,7 +3,7 @@ all: sphinx
+@@ -1,7 +1,7 @@
+ .PHONY: all
+ all: sphinx
  
- # No -W for doctests because that disallows tests with empty output.
- SPHINX_DOCTEST_OPTS=-n -d build/doctress .
 -SPHINXOPTS=-n -W -d build/doctrees .
 +SPHINXOPTS=-n -d build/doctrees .
  
  .PHONY: sphinx
  sphinx:
 diff --git a/docs/conf.py b/docs/conf.py
-index 368e4e8..85a276d 100644
+index d9b4761..4c11038 100644
 --- a/docs/conf.py
 +++ b/docs/conf.py
-@@ -16,7 +16,6 @@ extensions = [
+@@ -15,7 +15,6 @@ extensions = [
+     "sphinx.ext.autodoc",
      "sphinx.ext.coverage",
-     "sphinx.ext.doctest",
      "sphinx.ext.extlinks",
 -    "sphinx.ext.intersphinx",
      "sphinx.ext.viewcode",
      ]
  
-@@ -91,10 +90,6 @@ extlinks = {
+@@ -94,10 +93,6 @@ extlinks = {
          'tornado-%s.tar.g' % version),
      }
  
 -intersphinx_mapping = {
--    'python': ('https://docs.python.org/3.4/', None),
+-    'python': ('http://python.readthedocs.org/en/latest/', None),
 -    }
 -
  on_rtd = os.environ.get('READTHEDOCS', None) == 'True'

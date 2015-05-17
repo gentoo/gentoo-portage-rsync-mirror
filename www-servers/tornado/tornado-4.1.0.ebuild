@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.1.0.ebuild,v 1.3 2015/05/10 09:35:34 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/tornado-4.1.0.ebuild,v 1.4 2015/05/17 17:15:49 alunduil Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="${CDEPEND}"
 
 python_prepare_all() {
 	local PATCHES=(
-		"${FILESDIR}"/drop-intersphinx.patch
+		"${FILESDIR}"/${PV}-drop-intersphinx.patch
 	)
 
 	distutils-r1_python_prepare_all
