@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/pyamg-2.1.0.ebuild,v 1.2 2015/04/08 08:05:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyamg/pyamg-2.1.0.ebuild,v 1.3 2015/05/17 15:33:40 mrueg Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}"
 
 python_test() {
 	distutils_install_for_testing
-	cd ${T} # need to be away source directory
+	cd "${T}" || die # need to be away source directory
 	${EPYTHON} -c "
 import pyamg, sys
 r = pyamg.test(verbose=3)

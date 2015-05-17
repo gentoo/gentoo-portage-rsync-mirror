@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager-openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.36 2015/05/17 07:32:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-openconnect/ChangeLog,v 1.38 2015/05/17 15:55:31 ago Exp $
+
+  17 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  networkmanager-openconnect-1.0.2.ebuild:
+  Stable for x86, wrt bug #545980
+
+  17 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  networkmanager-openconnect-1.0.2.ebuild:
+  Stable for amd64, wrt bug #545980
 
 *networkmanager-openconnect-1.0.2 (17 May 2015)
 

@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/networkmanager-pptp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.47 2015/05/17 07:42:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-pptp/ChangeLog,v 1.49 2015/05/17 15:55:41 ago Exp $
+
+  17 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  networkmanager-pptp-1.0.2.ebuild:
+  Stable for x86, wrt bug #545980
+
+  17 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  networkmanager-pptp-1.0.2.ebuild:
+  Stable for amd64, wrt bug #545980
 
 *networkmanager-pptp-1.0.2 (17 May 2015)
 
