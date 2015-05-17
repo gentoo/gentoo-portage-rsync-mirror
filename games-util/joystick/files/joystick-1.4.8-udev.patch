@@ -9,7 +9,7 @@ diff -ru linuxconsoletools-1.4.8.orig/utils/jscal-restore.in linuxconsoletools-1
 -    echo Restoring joystick configuration requires udev! >&2
 +for f in /sbin/udevadm /bin/udevadm ;
 +do
-+    [ -x $f ] && UDEV=$f
++    [ -x $f ] && UDEVADM=$f
 +done
 +
 +if [ -z "$UDEVADM" ] ; then
@@ -22,7 +22,7 @@ diff -ru linuxconsoletools-1.4.8.orig/utils/jscal-restore.in linuxconsoletools-1
  IFS=$'\x0A'
  
 -for ATTRIBUTE in $( /sbin/udevadm info -a -n $1 | @@PREFIX@@/share/joystick/ident ); do
-+for ATTRIBUTE in $( ${UDEVADM} -a -n $1 | @@PREFIX@@/share/joystick/ident ); do
++for ATTRIBUTE in $( ${UDEVADM} info -a -n $1 | @@PREFIX@@/share/joystick/ident ); do
      ID=$( echo "$ATTRIBUTE" | cut -f 1 -d = )
      VALUE=$( echo "$ATTRIBUTE" | cut -f 2 -d \" )
      case $ID in
@@ -35,7 +35,7 @@ diff -ru linuxconsoletools-1.4.8.orig/utils/jscal-store.in linuxconsoletools-1.4
  fi
 +for f in /sbin/udevadm /bin/udevadm ;
 +do
-+    [ -x $f ] && UDEV=$f
++    [ -x $f ] && UDEVADM=$f
 +done
  
 -if [ ! -x /sbin/udevadm ]; then
