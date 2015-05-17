@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/iojs-2.0.1.ebuild,v 1.1 2015/05/13 15:16:48 mgorny Exp $
+# $Header: $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="icu? ( dev-libs/icu )
 	${PYTHON_DEPS}
 	!bundled-libs? (
 		>=net-libs/http-parser-2.5
-		>=dev-libs/libuv-1.4.2
+		>=dev-libs/libuv-1.5.0
 		>=dev-libs/openssl-1.0.2a[-bindist]
 	)"
 DEPEND="${RDEPEND}
