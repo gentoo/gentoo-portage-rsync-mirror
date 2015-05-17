@@ -1,6 +1,13 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1241 2015/05/14 04:40:28 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1242 2015/05/17 17:39:44 floppym Exp $
+
+*chromium-43.0.2357.65 (17 May 2015)
+
+  17 May 2015; Mike Gilbert <floppym@gentoo.org> +chromium-43.0.2357.65.ebuild,
+  -chromium-43.0.2357.45.ebuild, chromium-43.0.2357.52.ebuild,
+  chromium-44.0.2398.0.ebuild:
+  Beta channel bump. Unpin dev-python/ply.
 
   14 May 2015; Mike Gilbert <floppym@gentoo.org> chromium-43.0.2357.52.ebuild,
   chromium-44.0.2398.0.ebuild:
