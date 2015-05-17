@@ -1,6 +1,10 @@
 # ChangeLog for sys-boot/yaboot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.51 2015/05/17 04:27:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.52 2015/05/17 04:33:12 vapier Exp $
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/yaboot-1.3.17-nopiessp-gcc4.patch, files/yaboot-nopiessp-gcc4.patch:
+  Add stub func for newer ssp builds #527974 by Agostino Sarubbo.
 
   17 May 2015; Mike Frysinger <vapier@gentoo.org> -files/yaboot-nopiessp.patch,
   yaboot-1.3.14-r2.ebuild, yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:

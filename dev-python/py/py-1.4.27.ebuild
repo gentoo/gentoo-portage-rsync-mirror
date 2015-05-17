@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.27.ebuild,v 1.1 2015/05/15 09:17:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py/py-1.4.27.ebuild,v 1.2 2015/05/17 04:41:03 idella4 Exp $
 
 EAPI="5"
 
@@ -33,6 +33,8 @@ python_compile_all() {
 }
 
 python_test() {
+	# 1 failure, test_comments, under both pypy only.
+	# Also appears the home repo has no issue tracker.
 	py.test || die "testing failed with ${EPYTHON}"
 }
 
