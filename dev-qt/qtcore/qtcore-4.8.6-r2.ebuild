@@ -1,19 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.6-r2.ebuild,v 1.6 2015/05/16 11:27:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/qtcore-4.8.6-r2.ebuild,v 1.7 2015/05/17 01:49:50 patrick Exp $
 
 EAPI=5
 
 inherit qt4-build-multilib
 
 DESCRIPTION="Cross-platform application development framework"
-
-if [[ ${QT4_BUILD_TYPE} == live ]]; then
-	KEYWORDS="hppa ppc ppc64"
-else
-	KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
-fi
-
+KEYWORDS="~alpha amd64 ~arm ~arm64 hppa ~ia64 ~mips ppc ppc64 ~sparc x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE="+glib iconv icu qt3support ssl"
 
 DEPEND="
