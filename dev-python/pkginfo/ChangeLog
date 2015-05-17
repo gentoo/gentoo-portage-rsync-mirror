@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pkginfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.11 2015/05/11 06:13:56 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkginfo/ChangeLog,v 1.12 2015/05/17 14:48:00 jer Exp $
+
+  17 May 2015; Jeroen Roovers <jer@gentoo.org> pkginfo-1.2.1.ebuild:
+  Mark ~ppc64 (bug #549148).
 
 *pkginfo-1.2.1 (11 May 2015)
 

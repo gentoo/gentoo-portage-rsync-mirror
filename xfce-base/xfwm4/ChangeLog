@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.232 2015/03/15 21:43:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.233 2015/05/17 14:46:29 mgorny Exp $
+
+*xfwm4-4.12.3 (17 May 2015)
+
+  17 May 2015; Michał Górny <mgorny@gentoo.org> +xfwm4-4.12.3.ebuild:
+  Version bump with bugfixes. Add slot operators. Fix dependencies.
 
 *xfwm4-4.12.2 (15 Mar 2015)
 
