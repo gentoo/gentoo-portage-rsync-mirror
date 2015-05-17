@@ -1,41 +1,45 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.2 2012/06/20 13:54:25 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.17-r2.ebuild,v 1.8 2015/05/17 04:27:34 vapier Exp $
 
-EAPI=2
+EAPI="5"
 
 inherit eutils toolchain-funcs
 
 DESCRIPTION="PPC Bootloader"
-SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
 HOMEPAGE="http://yaboot.ozlabs.org"
-SLOT="0"
+SRC_URI="http://yaboot.ozlabs.org/releases/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="-* ppc -ppc64"
 IUSE="ibm"
 
 DEPEND="sys-apps/powerpc-utils
-		sys-fs/e2fsprogs[static-libs]"
-RDEPEND="!ibm? ( sys-fs/hfsutils
-				 sys-fs/hfsplusutils
-				 sys-fs/mac-fdisk )"
+	sys-fs/e2fsprogs[static-libs]"
+RDEPEND="!sys-boot/yaboot-static
+	!ibm? (
+		sys-fs/hfsutils
+		sys-fs/hfsplusutils
+		sys-fs/mac-fdisk
+	)"
 
 src_unpack() {
-	unpack ${A}
+	default
 	cd "${S}"
 	cp "${FILESDIR}/new-ofpath" "${S}/ybin/ofpath"
 }
 
 src_prepare() {
+	# No need to hardcode this path -- the compiler already knows to use it.
+	sed -i \
+		-e 's:-I/usr/include::' \
+		Makefile || die
+
 	# dual boot patch
 	epatch "${FILESDIR}/yabootconfig-1.3.13.patch"
 	epatch "${FILESDIR}/chrpfix.patch"
-	if [[ "$(gcc-major-version)" -eq "3" ]]; then
-		epatch "${FILESDIR}/${PN}-nopiessp.patch"
-	fi
-	if [[ "$(gcc-major-version)" -eq "4" ]]; then
-		epatch "${FILESDIR}/${P}-nopiessp-gcc4.patch"
-	fi
+	epatch "${FILESDIR}/${P}-nopiessp-gcc4.patch"
 
 	# Error only on real errors, for prom printing format compile failure
 	sed -i "s:-Werror:-Wno-error:g" Makefile
@@ -48,14 +52,12 @@ src_prepare() {
 }
 
 src_compile() {
-	export -n CFLAGS
-	export -n CXXFLAGS
-	[ -n "$(tc-getCC)" ] || CC="gcc"
-	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" || die
+	unset CFLAGS CXXFLAGS CPPFLAGS LDFLAGS
+	emake PREFIX=/usr MANDIR=share/man CC="$(tc-getCC)" LD="$(tc-getLD)"
 }
 
 src_install() {
-	sed -i -e 's/\/local//' etc/yaboot.conf
-	make ROOT="${D}" PREFIX=/usr MANDIR=share/man install || die
-	mv "${D}/etc/yaboot.conf" "${D}/etc/yaboot.conf.sample"
+	sed -i -e 's/\/local//' etc/yaboot.conf || die
+	emake ROOT="${D}" PREFIX=/usr MANDIR=share/man install
+	mv "${ED}"/etc/yaboot.conf{,.sample} || die
 }

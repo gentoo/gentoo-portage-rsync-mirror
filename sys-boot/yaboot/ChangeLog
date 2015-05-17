@@ -1,6 +1,35 @@
 # ChangeLog for sys-boot/yaboot
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.44 2012/06/20 13:54:25 josejx Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/ChangeLog,v 1.51 2015/05/17 04:27:34 vapier Exp $
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> -files/yaboot-nopiessp.patch,
+  yaboot-1.3.14-r2.ebuild, yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:
+  Drop support for ssp found in gcc-3 and older #527974.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild,
+  yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:
+  Update to EAPI=5.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild:
+  Use `sed -i` like we do in newer versions.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild,
+  yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:
+  Block yaboot-static at runtime since it is now keyworded for ppc.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild,
+  yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:
+  Drop hardcoded -I/usr/include which breaks cross-compiles and is not needed
+  for native builds.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> yaboot-1.3.14-r2.ebuild,
+  yaboot-1.3.16.ebuild, yaboot-1.3.17-r2.ebuild:
+  Remove legacy CC setup -- always use tc-getCC.  Also make sure we respect LD.
+
+  17 May 2015; Mike Frysinger <vapier@gentoo.org> -yaboot-1.3.17-r1.ebuild,
+  -yaboot-1.3.17.ebuild, yaboot-1.3.14-r2.ebuild, yaboot-1.3.16.ebuild,
+  yaboot-1.3.17-r2.ebuild:
+  Switch `export -n` to `unset`, and also clear CPPFLAGS & LDFLAGS.
 
   20 Jun 2012; Joseph Jezak <josejx@gentoo.org> yaboot-1.3.17-r2.ebuild,
   files/yaboot-stubfuncs.patch:
