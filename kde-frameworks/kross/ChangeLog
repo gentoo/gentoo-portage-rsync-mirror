@@ -1,6 +1,9 @@
 # ChangeLog for kde-frameworks/kross
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kross/ChangeLog,v 1.12 2015/05/09 10:36:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kross/ChangeLog,v 1.13 2015/05/17 13:14:53 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -kross-5.8.0.ebuild:
+  Remove old.
 
 *kross-5.10.0 (09 May 2015)
 

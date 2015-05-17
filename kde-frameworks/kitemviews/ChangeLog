@@ -1,6 +1,9 @@
 # ChangeLog for kde-frameworks/kitemviews
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kitemviews/ChangeLog,v 1.12 2015/05/09 10:36:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kitemviews/ChangeLog,v 1.13 2015/05/17 13:14:52 mrueg Exp $
+
+  17 May 2015; Manuel Rüger <mrueg@gentoo.org> -kitemviews-5.8.0.ebuild:
+  Remove old.
 
 *kitemviews-5.10.0 (09 May 2015)
 
