@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/bcrypt-1.1.0.ebuild,v 1.5 2015/04/08 08:05:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bcrypt/bcrypt-1.1.0.ebuild,v 1.6 2015/05/18 05:40:01 jer Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="
 
 SLOT="0"
 LICENSE="Apache-2.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="~amd64 ~ppc64 ~x86"
 IUSE="test"
 
 DEPEND="

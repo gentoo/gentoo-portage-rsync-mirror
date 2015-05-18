@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Algorithm-C3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-C3/ChangeLog,v 1.9 2014/10/19 16:28:56 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Algorithm-C3/ChangeLog,v 1.10 2015/05/18 05:33:01 jer Exp $
+
+  18 May 2015; Jeroen Roovers <jer@gentoo.org> Algorithm-C3-0.90.0.ebuild:
+  Mark ~ppc64 (bug #548282).
 
   19 Oct 2014; Mikle Kolyada <zlogene@gentoo.org> -Algorithm-C3-0.80.0.ebuild:
   Drop old
