@@ -103,9 +103,9 @@ src_install() {
 
 	# set up a symlink structure that npm expects..
 	mkdir -p "${ED}/usr/include/node/deps/{v8,uv}" || die
-	dosym . /usr/include/node/src || die
+	dosym . /usr/include/node/src
 	for var in deps/v8/include deps/uv/include; do
-		dosym ../.. "/usr/include/node/${var}" || die
+		dosym ../.. "/usr/include/node/${var}"
 	done
 
 
@@ -113,7 +113,6 @@ src_install() {
 }
 
 src_test() {
-	out/${BUILDTYPE}/cctest || die
 	declare -xl TESTTYPE="${BUILDTYPE}"
 	"${PYTHON}" tools/test.py --mode=${TESTTYPE} -J message simple || die
 }
