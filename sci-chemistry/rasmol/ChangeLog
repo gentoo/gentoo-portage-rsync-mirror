@@ -1,6 +1,11 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.44 2015/03/29 09:36:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.45 2015/05/18 07:01:19 jlec Exp $
+
+*rasmol-2.7.5.2-r2 (18 May 2015)
+
+  18 May 2015; Justin Lecher <jlec@gentoo.org> +rasmol-2.7.5.2-r2.ebuild:
+  Drop -traditional from CPPFLAGS, bug #547318; enhance preprocessor definitions
 
   29 Mar 2015; Justin Lecher <jlec@gentoo.org> -files/ldflags.patch,
   -files/rasmol.sh.debian, -rasmol-2.7.5.2.ebuild:
