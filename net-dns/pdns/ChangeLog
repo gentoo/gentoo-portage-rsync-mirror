@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.104 2015/02/14 16:51:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.105 2015/05/18 18:40:16 swegener Exp $
+
+*pdns-3.4.4 (18 May 2015)
+*pdns-3.3.2 (18 May 2015)
+
+  18 May 2015; Sven Wegener <swegener@gentoo.org> +pdns-3.3.2.ebuild,
+  +pdns-3.4.4.ebuild:
+  Version bump, security bug #547550. Also fixes bug #527014 and #541916.
 
 *pdns-3.4.2 (14 Feb 2015)
 
