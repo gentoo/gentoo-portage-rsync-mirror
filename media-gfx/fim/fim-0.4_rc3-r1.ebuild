@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_rc1-r1.ebuild,v 1.2 2015/03/04 15:15:31 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fim/fim-0.4_rc3-r1.ebuild,v 1.1 2015/05/18 19:18:16 dilfridge Exp $
 
 EAPI=5
 
-inherit autotools eutils
+inherit eutils
 
 DESCRIPTION="Fbi-IMproved is a framebuffer image viewer based on Fbi and inspired from Vim"
 HOMEPAGE="http://savannah.nongnu.org/projects/fbi-improved"
@@ -24,7 +24,7 @@ RDEPEND="media-fonts/terminus-font
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	imagemagick? ( || ( media-gfx/graphicsmagick[imagemagick] media-gfx/imagemagick ) )
 	jpeg? ( virtual/jpeg:0 )
-	pdf? ( <app-text/poppler-0.31 )
+	pdf? ( >=app-text/poppler-0.31 )
 	png? ( media-libs/libpng:0 )
 	postscript? ( app-text/libspectre )
 	readline? ( sys-libs/readline:0 )
@@ -39,13 +39,7 @@ DEPEND="${RDEPEND}
 S=${WORKDIR}/${P/_rc/-rc}
 
 src_prepare() {
-	epatch \
-		"${FILESDIR}"/${P}-nosvn.patch \
-		"${FILESDIR}"/${P}-giflib-4.2.patch
-	if use graphicsmagick ; then
-		epatch "${FILESDIR}"/${PN}-0.4_pre-graphicsmagick.patch
-	fi
-	eautoreconf
+	epatch "${FILESDIR}/${P}-poppler031.patch"
 }
 
 src_configure() {

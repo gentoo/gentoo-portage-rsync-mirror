@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.4.ebuild,v 1.1 2015/05/18 18:40:16 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/pdns-3.4.4.ebuild,v 1.2 2015/05/18 19:14:14 swegener Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ RDEPEND="!static? (
 		odbc? ( dev-db/unixODBC )
 		opendbx? ( dev-db/opendbx )
 		geoip? ( >=dev-cpp/yaml-cpp-0.5.1 dev-libs/geoip )
-		tinydns? ( dev-db/cdb )
+		tinydns? ( >=dev-db/tinycdb-0.77 )
 	)"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -53,7 +53,7 @@ DEPEND="${RDEPEND}
 		odbc? ( dev-db/unixODBC[static-libs(+)] )
 		opendbx? ( dev-db/opendbx[static-libs(+)] )
 		geoip? ( >=dev-cpp/yaml-cpp-0.5.1 dev-libs/geoip[static-libs(+)] )
-		tinydns? ( dev-db/cdb )
+		tinydns? ( >=dev-db/tinycdb-0.77 )
 	)
 	doc? ( app-doc/doxygen )"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/tntnet
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.30 2014/08/10 20:39:48 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/tntnet/ChangeLog,v 1.31 2015/05/18 19:07:33 zzam Exp $
+
+  18 May 2015; Matthias Schwarzott <zzam@gentoo.org> metadata.xml:
+  Remove myself from maintainers.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tntnet-1.6.3.ebuild:
   QA: drop trailing '.' from DESCRIPTION

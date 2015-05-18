@@ -11,12 +11,6 @@
 </maintainer>
 
 <maintainer>
-  <email>zzam@gentoo.org</email>
-  <name>Matthias Schwarzott</name>
-  <description>Proxying maintainer</description>
-</maintainer>
-
-<maintainer>
   <email>vdr@gentoo.org</email>
   <name>Gentoo VDR Project</name>
 </maintainer>
