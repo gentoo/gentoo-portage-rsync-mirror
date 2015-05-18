@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.4-r1.ebuild,v 1.2 2015/04/18 07:42:09 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.10.4-r1.ebuild,v 1.3 2015/05/18 21:15:40 monsieurp Exp $
 
 EAPI="5"
 
@@ -99,7 +99,7 @@ DEPEND="${COMMON_DEP}
 RDEPEND="${COMMON_DEP}
 	>=virtual/jre-1.6
 	app-eselect/eselect-scala
-	!dev-java/scala-bin:0"
+	!dev-lang/scala-bin:0"
 
 PDEPEND="emacs? ( app-emacs/scala-mode:0 )"
 

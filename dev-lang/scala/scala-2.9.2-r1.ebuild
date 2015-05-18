@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.2-r1.ebuild,v 1.1 2015/04/17 14:39:37 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/scala-2.9.2-r1.ebuild,v 1.2 2015/05/18 21:15:40 monsieurp Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="doc examples source"
@@ -35,7 +35,7 @@ DEPEND="virtual/jdk:1.6
 	app-arch/xz-utils"
 RDEPEND=">=virtual/jre-1.6
 	app-eselect/eselect-scala
-	!dev-java/scala-bin"
+	!dev-lang/scala-bin"
 
 PDEPEND="emacs? ( app-emacs/scala-mode )"
 

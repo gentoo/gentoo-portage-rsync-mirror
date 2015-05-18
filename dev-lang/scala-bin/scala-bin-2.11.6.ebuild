@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-2.11.6.ebuild,v 1.2 2015/03/24 09:33:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala-bin/scala-bin-2.11.6.ebuild,v 1.1 2015/05/18 21:07:03 monsieurp Exp $
 
 EAPI=5
 

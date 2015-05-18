@@ -1,6 +1,10 @@
-# ChangeLog for dev-java/scala-bin
+# ChangeLog for dev-lang/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.25 2015/05/18 20:50:50 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala-bin/ChangeLog,v 1.2 2015/05/18 21:11:24 monsieurp Exp $
+
+  18 May 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.4.ebuild:
+  Package move from dev-java/scala-bin to dev-lang/scala-bin (mark moved ebuilds
+  stable).
 
   18 May 2015; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
   Add myself as main maintainter.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/scala-bin-2.11.5.ebuild,v 1.4 2015/03/24 09:33:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala-bin/scala-bin-2.11.4.ebuild,v 1.2 2015/05/18 21:11:24 monsieurp Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://downloads.typesafe.com/scala/${PV}/scala-${PV}.tgz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="amd64 x86"
 IUSE="doc"
 
 DEPEND=""
