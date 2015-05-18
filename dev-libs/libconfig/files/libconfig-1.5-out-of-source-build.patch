@@ -1,0 +1,13 @@
+diff --git tests/Makefile.am tests/Makefile.am
+index cd64cc1..5ced29a 100644
+--- tests/Makefile.am
++++ tests/Makefile.am
+@@ -3,7 +3,7 @@ noinst_PROGRAMS = libconfig_tests
+ 
+ libconfig_tests_SOURCES = tests.c
+ 
+-libconfig_tests_CPPFLAGS = -I$(top_srcdir)/tinytest -I../lib
++libconfig_tests_CPPFLAGS = -I$(top_srcdir)/tinytest -I$(top_srcdir)/lib
+ 
+ libconfig_tests_LDADD = -L$(top_builddir)/tinytest -ltinytest \
+ 	-L$(top_builddir)/lib/.libs -lconfig
