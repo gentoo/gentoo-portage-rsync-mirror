@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/mariadb-galera-10.0.16.ebuild,v 1.1 2015/02/06 14:07:36 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb-galera/mariadb-galera-10.0.19.ebuild,v 1.1 2015/05/18 20:07:51 grknight Exp $
 
 EAPI="5"
 MY_EXTRAS_VER="20141215-0144Z"
@@ -24,7 +24,7 @@ RDEPEND="${RDEPEND}"
 # and create your own mysql-extras tarball, looking at 000_index.txt
 
 # Official test instructions:
-# USE='-cluster embedded extraengine perl ssl static-libs community' \
+# USE='embedded extraengine perl ssl static-libs community' \
 # FEATURES='test userpriv -usersandbox' \
 # ebuild mariadb-galera-X.X.XX.ebuild \
 # digest clean package
@@ -60,6 +60,7 @@ multilib_src_test() {
 
 		# Ensure that parallel runs don't die
 		export MTR_BUILD_THREAD="$((${RANDOM} % 100))"
+		# Enable parallel testing, auto will try to detect number of cores
 		# You may set this by hand.
 		# The default maximum is 8 unless MTR_MAX_PARALLEL is increased
 		export MTR_PARALLEL="${MTR_PARALLEL:-auto}"
@@ -72,11 +73,11 @@ multilib_src_test() {
 		#
 		# main.information_schema, binlog.binlog_statement_insert_delayed,
 		# main.mysqld--help, funcs_1.is_triggers, funcs_1.is_tables_mysql,
-		# funcs_1.is_columns_mysql
+		# funcs_1.is_columns_mysql, main.bootstrap
 		# fails due to USE=-latin1 / utf8 default
 		#
 		# main.mysql_client_test, main.mysql_client_test_nonblock
-		# mina.mysql_client_test_comp:
+		# main.mysql_client_test_comp:
 		# segfaults at random under Portage only, suspect resource limits.
 		#
 		# wsrep.variables:
@@ -87,21 +88,11 @@ multilib_src_test() {
 		#
 
 		for t in main.mysql_client_test main.mysql_client_test_nonblock \
-			main.mysql_client_test_comp \
+			main.mysql_client_test_comp main.bootstrap \
 			binlog.binlog_statement_insert_delayed main.information_schema \
 			main.mysqld--help wsrep.variables wsrep.foreign_key \
 			funcs_1.is_triggers funcs_1.is_tables_mysql funcs_1.is_columns_mysql ; do
 				mysql-multilib_disable_test  "$t" "False positives in Gentoo"
-		done
-
-		for t in rpl.rpl_heartbeat_ssl rpl.rpl_ssl rpl.rpl_ssl1 main.ssl_cipher \
-			main.ssl_8k_key main.openssl_6975 main.openssl_1 main.ssl main.ssl_compress \
-			main.ssl_connect; do
-			mysql-multilib_disable_test "$t" "Disabled due to expired certificate"
-		done
-
-		for t in wsrep.binlog_format wsrep.pool_of_threads wsrep.mdev_6832 ; do
-			mysql-multilib_disable_test "$t" "Skipped for MDEV-7544"
 		done
 
 		# Run mysql tests

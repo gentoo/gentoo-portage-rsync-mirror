@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/vdrsymbols-ttf
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/ChangeLog,v 1.9 2011/10/22 16:07:43 hd_brummy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/vdrsymbols-ttf/ChangeLog,v 1.10 2015/05/18 20:26:09 mrueg Exp $
+
+  18 May 2015; Manuel Rüger <mrueg@gentoo.org> -vdrsymbols-ttf-20080905.ebuild:
+  Remove old.
 
   22 Oct 2011; Joerg Bornkessel <hd_brummy@gentoo.org>
   vdrsymbols-ttf-20100612.ebuild:
@@ -44,4 +47,3 @@
   13 Apr 2008; Matthias Schwarzott <zzam@gentoo.org> +metadata.xml,
   +vdrsymbols-ttf-20080411.ebuild:
   Moved here from skinenigmang-fonts as project got renamed. Version bumped.
-

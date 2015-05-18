@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/wqy-zenhei
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/ChangeLog,v 1.14 2015/04/28 10:07:38 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/wqy-zenhei/ChangeLog,v 1.15 2015/05/18 20:25:13 mrueg Exp $
+
+  18 May 2015; Manuel Rüger <mrueg@gentoo.org> -wqy-zenhei-0.8.38-r1.ebuild,
+  -wqy-zenhei-0.9.45.ebuild:
+  Remove old.
 
   28 Apr 2015; Ben de Groot <yngwin@gentoo.org> wqy-zenhei-0.9.46.ebuild:
   stable

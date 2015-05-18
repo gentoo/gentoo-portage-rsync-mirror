@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unfonts
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.25 2009/12/24 11:56:12 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unfonts/ChangeLog,v 1.26 2015/05/18 20:28:59 mrueg Exp $
+
+  18 May 2015; Manuel Rüger <mrueg@gentoo.org> -unfonts-1.0.2_pre080608.ebuild:
+  Remove old.
 
   24 Dec 2009; Pacho Ramos <pacho@gentoo.org>
   unfonts-1.0.2_pre080608-r1.ebuild:
@@ -103,4 +106,3 @@
   +unfonts-0.0.20040526.ebuild:
   Initial import. Ebuild submitted by Jung Tae-young <master@mytears.org>,
   closing bug #55827
-
