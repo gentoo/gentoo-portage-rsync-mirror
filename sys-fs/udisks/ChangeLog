@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.183 2015/04/30 05:50:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.184 2015/05/18 02:21:32 leio Exp $
+
+  18 May 2015; Mart Raudsepp <leio@gentoo.org> udisks-2.1.4.ebuild:
+  Fix glib version requirement
 
   30 Apr 2015; Jeroen Roovers <jer@gentoo.org> udisks-2.1.4.ebuild:
   Stable for PPC64 (bug #545856).
