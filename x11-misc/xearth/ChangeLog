@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xearth
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.25 2012/03/18 19:57:14 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/ChangeLog,v 1.26 2015/05/18 21:40:19 mrueg Exp $
+
+  18 May 2015; Manuel Rüger <mrueg@gentoo.org> -xearth-1.1.ebuild:
+  Remove old.
 
   18 Mar 2012; Raúl Porcel <armin76@gentoo.org> xearth-1.1.ebuild,
   xearth-1.1-r1.ebuild:
@@ -87,4 +90,3 @@
   12 Aug 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
 
   Initial ebuild in portage.  Thanks to Bret Towe for the ebuild.
-

@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xmountains
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.22 2012/11/17 10:23:59 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.23 2015/05/18 21:39:11 mrueg Exp $
+
+  18 May 2015; Manuel Rüger <mrueg@gentoo.org> -xmountains-2.7.ebuild,
+  -xmountains-2.8.ebuild:
+  Remove old.
 
   17 Nov 2012; Ulrich Müller <ulm@gentoo.org> xmountains-2.7.ebuild,
   xmountains-2.8.ebuild, xmountains-2.9.ebuild:
@@ -83,4 +87,3 @@
   12 Apr 2004; Markus Nigbur <pyrania@gentoo.org> metadata.xml,
   xmountains-2.6.ebuild:
   Initial import. Closing bug #42707.
-
