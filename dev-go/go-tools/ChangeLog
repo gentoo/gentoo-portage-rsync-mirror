@@ -1,0 +1,9 @@
+# ChangeLog for dev-go/go-tools
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/ChangeLog,v 1.1 2015/05/18 07:58:45 zmedico Exp $
+
+*go-tools-9999 (18 May 2015)
+
+  18 May 2015; Zac Medico <zmedico@gentoo.org> +go-tools-9999.ebuild,
+  +metadata.xml:
+  Add go-tools.
