@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.11 2015/04/12 14:51:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.9999.ebuild,v 1.12 2015/05/18 16:56:51 jlec Exp $
 
 EAPI=5
 
@@ -20,8 +20,8 @@ SLOT="0"
 KEYWORDS=""
 IUSE="cairo debug examples hunspell +minimal +pdf scripts templates tk"
 
-# a=$(ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'); echo ${a}
-IUSE_LINGUAS=" af ar bg br ca cs_CZ cy da_DK de de_1901 de_CH el en_AU en_GB en_US eo es_ES et eu fi fr gl hu id it ja ko lt_LT nb_NO nl pl_PL pt pt_BR ru sa sk_SK sl sq sr sv th_TH tr uk zh_CN zh_TW"
+# a=$((ls resources/translations/po/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'; ls resources/loremipsum/*xml | sed -e 's:\.: :g' -e 's:loremipsum\/: :g'| awk '{print $2}'; ls resources/dicts/hyph*dic | sed -e 's:\.: :g' -e 's:hyph_: :g' | awk '{print $2}'; ls resources/dicts/README_*txt | sed -e 's:_hyph::g' -e 's:\.: :g' -e 's:README_: :g' | awk '{print $2}') | sort | uniq); echo $a
+IUSE_LINGUAS=" af ar bg br ca ca_ES cs cs_CZ cy cy_GB da da_DK de de_1901 de_CH de_DE el en en_AU en_EN en_GB en_US eo es es_ES et eu fi fi_FI fr gl he hr hu hu_HU ia id id_ID is is_IS it ja ko ku la lt lt_LT nb_NO nl nn_NO pl pl_PL pt pt_BR pt_PT ro ro_RO ru ru_RU_0 sa sk sk_SK sl sl_SI sq sr sv sv_SE th_TH tr uk uk_UA zh_CN zh_TW"
 IUSE+=" ${IUSE_LINGUAS// / linguas_}"
 
 REQUIRED_USE="
@@ -86,9 +86,16 @@ src_configure() {
 	local lang langs
 	for lang in ${IUSE_LINGUAS}; do
 		if use linguas_${lang}; then
-			langs+=",${lang}"
+			# From the CMakeLists.txt
+			# "#Bit of a hack, preprocess all the filenames to generate our language string, needed for -DWANT_GUI_LANG=en_GB,de_DE , etc"
+			langs+=";${lang}"
 		else
+			# Don't install localized documentation
 			sed -e "/${lang}/d" -i scribus/doc/CMakeLists.txt || die
+			safe_delete file ./resources/dicts/README_${lang}.txt
+			safe_delete file ./resources/dicts/README_hyph_${lang}.txt
+			safe_delete file ./resources/dicts/hyph_${lang}.dic
+			safe_delete file ./resources/loremipsum/${lang}.xml
 		fi
 	done
 
@@ -115,11 +122,10 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 
-	local lang file
+	local lang
 	for lang in ${IUSE_LINGUAS}; do
-		file="${ED}"/usr/share/scribus/translations/scribus.${lang}.qm
-		if ! use linguas_${lang} && [[ -f "${file}" ]]; then
-			rm "${file}" || die
+		if ! use linguas_${lang}; then
+			safe_delete dir "${ED}"/usr/share/man/${lang}
 		fi
 	done
 
@@ -152,4 +158,21 @@ pkg_postinst() {
 pkg_postrm() {
 	fdo-mime_desktop_database_update
 	fdo-mime_mime_database_update
+}
+
+safe_delete () {
+	case $1 in
+		dir)
+			if [[ -d "${2}" ]]; then
+				rm -r "${2}" || die
+			fi
+			;;
+		file)
+			if [[ -f "${2}" ]]; then
+				rm "${2}" || die
+			fi
+			;;
+		*)
+			die "Wrong usage"
+	esac
 }

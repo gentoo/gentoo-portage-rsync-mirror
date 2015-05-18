@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.42.ebuild,v 1.1 2015/05/14 11:10:34 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libmicrohttpd/libmicrohttpd-0.9.42.ebuild,v 1.2 2015/05/18 16:32:52 vapier Exp $
 
 EAPI="5"
 
@@ -10,10 +10,10 @@ DESCRIPTION="A small C library that makes it easy to run an HTTP server as part 
 HOMEPAGE="http://www.gnu.org/software/libmicrohttpd/"
 SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz"
 
-IUSE="epoll messages ssl static-libs test"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
 LICENSE="LGPL-2.1"
 SLOT="0"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86"
+IUSE="epoll messages ssl static-libs test"
 
 RDEPEND="ssl? (
 		dev-libs/libgcrypt:0
@@ -33,6 +33,7 @@ src_configure() {
 	econf \
 		--enable-bauth \
 		--enable-dauth \
+		--disable-examples \
 		--disable-spdy \
 		$(use_enable epoll) \
 		$(use_enable test curl) \
@@ -46,5 +47,5 @@ src_configure() {
 src_install() {
 	default
 
-	use static-libs || find "${ED}" -name '*.la' -exec rm -f {} +
+	use static-libs || find "${ED}" -name '*.la' -delete
 }

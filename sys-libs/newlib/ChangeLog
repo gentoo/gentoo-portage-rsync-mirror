@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/newlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.30 2015/05/18 16:26:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/newlib/ChangeLog,v 1.31 2015/05/18 16:40:17 vapier Exp $
+
+  18 May 2015; Mike Frysinger <vapier@gentoo.org> newlib-2.2.0.ebuild:
+  Add a blocker against older SLOTs to help with upgrades #497344 by Alex
+  Orange.
 
   18 May 2015; Mike Frysinger <vapier@gentoo.org> newlib-2.2.0.ebuild:
   Stabilize for all.
