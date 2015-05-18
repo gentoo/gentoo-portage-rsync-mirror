@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/pcmanfm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.110 2015/05/17 17:31:01 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/ChangeLog,v 1.111 2015/05/18 08:24:56 hwoarang Exp $
+
+  18 May 2015; Markos Chandras <hwoarang@gentoo.org> pcmanfm-1.2.3.ebuild,
+  pcmanfm-9999.ebuild:
+  Fix erroneous vim lowercase typos
 
   17 May 2015; Markos Chandras <hwoarang@gentoo.org> pcmanfm-1.2.3.ebuild,
   pcmanfm-9999.ebuild:

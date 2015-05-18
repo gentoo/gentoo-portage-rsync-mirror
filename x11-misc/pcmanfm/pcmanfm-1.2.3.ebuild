@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-1.2.3.ebuild,v 1.9 2015/05/17 17:30:09 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pcmanfm/pcmanfm-1.2.3.ebuild,v 1.10 2015/05/18 08:24:56 hwoarang Exp $
 
 EAPI="5"
 PLOCALES="ar be bg bn ca cs da de el en_GB es et eu fa fi fo fr gl he hr hu id
@@ -43,7 +43,7 @@ DOC_CONTENTS="PCmanFM can optionally support the menu://applications/
 	location. You should install lxde-base/lxmenu-data for that functionality."
 
 src_prepare() {
-	export linguas="${linguas:-${plocale_backup}}"
+	export LINGUAS="${LINGUAS:-${PLOCALE_BACKUP}}"
 	l10n_get_locales > ${S}/po/LINGUAS
 	epatch_user
 }
