@@ -9,4 +9,4 @@ RDEPEND=>=media-libs/fontconfig-2.6.0 >=media-libs/freetype-2.3.9 sys-libs/zlib 
 RESTRICT=test
 SLOT=0/9999
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=4fd4285caa52c3dced4a7ffda9604076
+_md5_=53c0add84b6f1035e242cb7c71504ff1
