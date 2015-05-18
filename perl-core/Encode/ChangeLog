@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Encode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.60 2014/11/08 15:13:21 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Encode/ChangeLog,v 1.61 2015/05/18 16:27:58 dilfridge Exp $
+
+*Encode-2.730.0 (18 May 2015)
+
+  18 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org> +Encode-2.730.0.ebuild:
+  Version bump, needed by www-apps/rt
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Encode-2.470.0-r1.ebuild:
