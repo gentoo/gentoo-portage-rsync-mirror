@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.327 2015/05/16 19:57:41 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.328 2015/05/18 06:30:12 jlec Exp $
+
+  18 May 2015; Justin Lecher <jlec@gentoo.org> package.use.mask:
+  Mask dev-python/matplotlib[qt5] due to missing keywords at PyQt5, #549774
 
   16 May 2015; Jeroen Roovers <jer@gentoo.org> package.mask, use.mask:
   Unmask dev-qt/*-5 for PPC64.
