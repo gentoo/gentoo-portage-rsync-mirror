@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/nodejs-0.12.2-r3.ebuild,v 1.1 2015/05/14 03:42:37 mgorny Exp $
+# $Header: $
 
 EAPI=5
 
@@ -99,7 +99,7 @@ src_install() {
 	emake install DESTDIR="${ED}" PREFIX=/usr
 	use npm && dodoc -r "${LIBDIR}"/node_modules/npm/html
 	rm -rf "${LIBDIR}"/node_modules/npm/{doc,html} || die
-	find "${LIBDIR}"/node_modules -type f -name "LICENSE" -delete
+	find "${LIBDIR}"/node_modules -type f -name "LICENSE*" -or -name "LICENCE*" -delete
 
 	pax-mark -m "${ED}"/usr/bin/node
 }
