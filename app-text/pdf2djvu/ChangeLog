@@ -1,6 +1,10 @@
 # ChangeLog for app-text/pdf2djvu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.23 2015/04/08 07:30:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdf2djvu/ChangeLog,v 1.24 2015/05/18 14:21:45 patrick Exp $
+
+  18 May 2015; Patrick Lauer <patrick@gentoo.org> -pdf2djvu-0.7.16.ebuild,
+  -pdf2djvu-0.7.17.ebuild:
+  Remove old with unsatisfied dependencies
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pdf2djvu-0.7.17.ebuild,
   pdf2djvu-0.7.19.ebuild:
