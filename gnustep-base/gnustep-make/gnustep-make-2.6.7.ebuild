@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.5.ebuild,v 1.1 2013/09/26 11:57:23 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/gnustep-make-2.6.7.ebuild,v 1.1 2015/05/18 14:45:37 voyageur Exp $
 
 EAPI=5
 inherit gnustep-base eutils prefix toolchain-funcs
@@ -18,7 +18,7 @@ DEPEND="${GNUSTEP_CORE_DEPEND}
 	>=sys-devel/make-3.75
 	libobjc2? ( gnustep-base/libobjc2
 		>=sys-devel/clang-2.9 )
-	!libobjc2? ( >=sys-devel/gcc-3.3[objc]
+	!libobjc2? ( >=sys-devel/gcc-3.3:=[objc]
 		!!gnustep-base/libobjc2 )"
 RDEPEND="${DEPEND}"
 
@@ -68,14 +68,14 @@ pkg_setup() {
 src_prepare() {
 	# Multilib-strict
 	sed -e "s#/lib#/$(get_libdir)#" -i FilesystemLayouts/fhs-system || die "sed failed"
-	epatch "${FILESDIR}"/${PN}-2.0.1-destdir.patch
-	cp "${FILESDIR}"/gnustep-4.{csh,sh} "${T}"/
-	eprefixify "${T}"/gnustep-4.{csh,sh}
+	cp "${FILESDIR}"/gnustep-5.{csh,sh} "${T}"/
+	eprefixify "${T}"/gnustep-5.{csh,sh}
 }
 
 src_configure() {
 	#--enable-objc-nonfragile-abi: only working in clang for now
 	econf \
+		INSTALL="${EPREFIX}"/usr/bin/install \
 		--with-layout=fhs-system \
 		--with-config-file="${EPREFIX}"/etc/GNUstep/GNUstep.conf \
 		--with-objc-lib-flag=-l:${libobjc_version} \
@@ -90,7 +90,7 @@ src_compile() {
 		# If a gnustep-1 environment is set
 		unset GNUSTEP_MAKEFILES
 		pushd Documentation &> /dev/null
-		emake all install
+		emake -j1 all install
 		popd &> /dev/null
 	fi
 }
@@ -115,8 +115,8 @@ src_install() {
 	dodoc FAQ README RELEASENOTES
 
 	exeinto /etc/profile.d
-	doexe "${T}"/gnustep-4.sh
-	doexe "${T}"/gnustep-4.csh
+	doexe "${T}"/gnustep-?.sh
+	doexe "${T}"/gnustep-?.csh
 }
 
 pkg_postinst() {

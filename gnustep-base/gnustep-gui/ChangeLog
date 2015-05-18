@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-base/gnustep-gui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.106 2015/04/21 19:12:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.107 2015/05/18 14:57:02 voyageur Exp $
+
+*gnustep-gui-0.24.1 (18 May 2015)
+
+  18 May 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +gnustep-gui-0.24.1.ebuild:
+  Version bump, add icu USE-flag in sync with gnustep-base
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> gnustep-gui-0.24.0.ebuild:
   ppc stable wrt bug #508626

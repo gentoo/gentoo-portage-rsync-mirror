@@ -1,6 +1,12 @@
 # ChangeLog for media-radio/wspr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.15 2015/04/08 18:14:38 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/wspr/ChangeLog,v 1.16 2015/05/18 14:32:00 tomjbe Exp $
+
+*wspr-3.01-r1 (18 May 2015)
+
+  18 May 2015; Thomas Beierlein <tomjbe@gentoo.org> wspr-3.01.ebuild,
+  +wspr-3.01-r1.ebuild, +files/wspr-3.01-numpy.patch:
+  Adapt to >=numpy-1.9.0 (bug #544504). Thanks Teun.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> wspr-2.00-r2.ebuild,
   wspr-3.01.ebuild:

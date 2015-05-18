@@ -1,6 +1,15 @@
 # ChangeLog for gnustep-base/gnustep-make
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.120 2014/06/06 12:44:31 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-make/ChangeLog,v 1.121 2015/05/18 14:45:37 voyageur Exp $
+
+*gnustep-make-2.6.7 (18 May 2015)
+
+  18 May 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  -gnustep-make-2.6.2-r2.ebuild, -gnustep-make-2.6.3.ebuild,
+  -gnustep-make-2.6.4.ebuild, -gnustep-make-2.6.5.ebuild,
+  gnustep-make-2.6.6.ebuild, +gnustep-make-2.6.7.ebuild:
+  Version bump, force install path thanks Nick Bowler <nbowler@draconx.ca> in
+  bug #532196. Drop some versions
 
 *gnustep-make-2.6.6 (29 Jan 2014)
 
