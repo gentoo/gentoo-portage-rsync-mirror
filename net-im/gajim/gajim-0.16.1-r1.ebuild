@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.15.4.ebuild,v 1.15 2015/04/08 18:03:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gajim/gajim-0.16.1-r1.ebuild,v 1.1 2015/05/18 06:42:06 jlec Exp $
 
 EAPI=5
 
@@ -11,15 +11,18 @@ AUTOTOOLS_AUTORECONF=true
 
 inherit autotools-utils python-r1 versionator
 
+MY_PV=${PV/_/-}
+MY_P="${PN}-${MY_PV}"
+
 DESCRIPTION="Jabber client written in PyGTK"
 HOMEPAGE="http://www.gajim.org/"
 SRC_URI="
-	http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${P}.tar.bz2"
+	http://www.gajim.org/downloads/$(get_version_component_range 1-2)/${MY_P}.tar.bz2"
 #	test? ( http://dev.gentoo.org/~jlec/distfiles/${PN}-tests-${PV}.tar.xz )"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm ia64 ppc ppc64 sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="avahi crypt dbus gnome gnome-keyring kde idle jingle libnotify networkmanager nls spell +srv test X xhtml"
 
 REQUIRED_USE="
@@ -38,7 +41,8 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/gettext-0.17-r1"
 RDEPEND="${COMMON_DEPEND}
 	dev-python/pyasn1[${PYTHON_USEDEP}]
-	dev-python/pyopenssl[${PYTHON_USEDEP}]
+	>=dev-python/pyopenssl-0.14[${PYTHON_USEDEP}]
+	>=dev-python/python-nbxmpp-0.5.2[${PYTHON_USEDEP}]
 	crypt? (
 		app-crypt/gnupg
 		dev-python/pycrypto[${PYTHON_USEDEP}]
@@ -47,17 +51,15 @@ RDEPEND="${COMMON_DEPEND}
 		dev-python/dbus-python[${PYTHON_USEDEP}]
 		dev-libs/dbus-glib
 		libnotify? ( dev-python/notify-python[${PYTHON_USEDEP}] )
-		avahi? ( net-dns/avahi[dbus,gtk,python] )
+		avahi? ( net-dns/avahi[dbus,gtk,python,${PYTHON_USEDEP}] )
 		)
 	gnome? (
-		dev-python/libgnome-python
-		dev-python/egg-python
+		dev-python/libgnome-python[${PYTHON_USEDEP}]
+		dev-python/egg-python[${PYTHON_USEDEP}]
 		)
-	gnome-keyring? (
-		dev-python/gnome-keyring-python
-		)
+	gnome-keyring? ( dev-python/gnome-keyring-python[${PYTHON_USEDEP}] )
 	idle? ( x11-libs/libXScrnSaver )
-	jingle? ( net-libs/farstream:0.1[python] )
+	jingle? ( net-libs/farstream:0.1[python,${PYTHON_USEDEP}] )
 	kde? ( kde-base/kwalletmanager )
 	networkmanager? (
 			dev-python/dbus-python[${PYTHON_USEDEP}]
@@ -66,20 +68,22 @@ RDEPEND="${COMMON_DEPEND}
 	spell? ( app-text/gtkspell:2 )
 	srv? (
 		|| (
-			dev-python/libasyncns-python
-			net-dns/bind-tools )
+			dev-python/libasyncns-python[${PYTHON_USEDEP}]
+			net-dns/bind-tools
+			)
 		)
-	xhtml? ( dev-python/docutils )"
+	xhtml? ( dev-python/docutils[${PYTHON_USEDEP}] )"
 
 RESTRICT="test"
 
+S="${WORKDIR}"/${MY_P}
+
 PATCHES=(
-	"${FILESDIR}"/${PN}-0.15.3-roster.patch
+	"${FILESDIR}"/${PN}-0.16-desktop.patch
+	"${FILESDIR}"/${P}-gnupg-2.1-backport.patch
 	)
 
 src_prepare() {
-	echo "src/command_system/mapping.py" >> po/POTFILES.in
-	echo '#!/bin/sh' > config/py-compile
 	autotools-utils_src_prepare
 	python_copy_sources
 }
@@ -115,10 +119,10 @@ src_test() {
 src_install() {
 	installation() {
 		run_in_build_dir autotools-utils_src_install
-		python_optimize "${ED}"/$(python_get_sitedir)
+		python_optimize
 	}
 	python_foreach_impl installation
 
-	rm "${D}/usr/share/doc/${PF}/README.html" || die
+	rm "${ED}/usr/share/doc/${PF}/README.html" || die
 	dohtml README.html
 }
