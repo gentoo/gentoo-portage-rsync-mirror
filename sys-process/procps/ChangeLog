@@ -1,6 +1,16 @@
 # ChangeLog for sys-process/procps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.137 2015/03/02 09:32:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/procps/ChangeLog,v 1.139 2015/05/18 04:25:36 vapier Exp $
+
+  18 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/procps-3.3.10-tests-no-tty.patch, procps-3.3.10-r1.ebuild:
+  Add fix from upstream when running tests w/out a tty on stdin #461302 by Roman
+  Žilka.
+
+  18 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/procps-3.3.10-pmap-unreadable.patch, procps-3.3.10-r1.ebuild:
+  Fix pmap test when running under restrictive kernel/user settings #404389 by
+  Markus Oehme.
 
   02 Mar 2015; Agostino Sarubbo <ago@gentoo.org> procps-3.3.9.ebuild:
   Stable for ppc, wrt bug #510316
