@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.115 2015/04/25 16:38:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.116 2015/05/18 17:18:59 vapier Exp $
+
+  18 May 2015; Mike Frysinger <vapier@gentoo.org> crossdev-20141030.ebuild:
+  Stabilize for all.
 
   25 Apr 2015; Mike Gilbert <floppym@gentoo.org> crossdev-20100814.ebuild,
   crossdev-20101011.ebuild, crossdev-20110310.ebuild, crossdev-20110705.ebuild,
