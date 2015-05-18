@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Expect
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.24 2014/08/22 21:27:23 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Expect/ChangeLog,v 1.25 2015/05/18 20:55:50 dilfridge Exp $
+
+*Expect-1.320.0 (18 May 2015)
+
+  18 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Expect-1.320.0.ebuild:
+  Version bump
 
 *Expect-1.210.0-r1 (22 Aug 2014)
 
