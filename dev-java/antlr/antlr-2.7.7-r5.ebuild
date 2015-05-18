@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r5.ebuild,v 1.13 2015/05/17 20:02:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.7-r5.ebuild,v 1.14 2015/05/18 13:15:33 ago Exp $
 
 EAPI="5"
 
@@ -18,7 +18,7 @@ SRC_URI="http://www.antlr2.org/download/${P}.tar.gz"
 
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ppc ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
 IUSE="doc debug examples mono +cxx +java python script source static-libs"
 
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"

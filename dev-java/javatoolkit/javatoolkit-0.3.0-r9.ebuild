@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r9.ebuild,v 1.6 2015/05/17 20:03:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatoolkit/javatoolkit-0.3.0-r9.ebuild,v 1.7 2015/05/18 13:15:52 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
+KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE=""
 
 python_prepare_all() {
