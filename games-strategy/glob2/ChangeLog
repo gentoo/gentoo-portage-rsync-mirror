@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/glob2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.61 2015/05/04 21:21:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/ChangeLog,v 1.62 2015/05/19 15:54:53 mr_bones_ Exp $
+
+  19 May 2015; Michael Sterrett <mr_bones_@gentoo.org> glob2-0.9.4.4-r1.ebuild:
+  use epatch for patches
 
   04 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
   +files/glob2-0.9.4.4-gcc49.patch, files/glob2-0.9.4.4-gcc44.patch,

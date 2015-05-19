@@ -1,6 +1,16 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.94 2015/05/03 10:53:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.95 2015/05/19 15:49:08 titanofold Exp $
+
+*rt-4.2.11 (19 May 2015)
+
+  19 May 2015; Aaron W. Swenson <titanofold@gentoo.org> -rt-4.2.9-r1.ebuild,
+  +rt-4.2.11.ebuild, +files/rt-makefile-serialize-install-prereqs.patch,
+  -files/rt_apache2_fcgi.conf, -files/rt_apache2.conf:
+  Address security bug 542882. Add patch fixing bug 540014 to serialize
+  primary build targets while still allowing parallel building on
+  subtargets. Remove outdated Apache configuration examples fixing bug
+  544566. Users should follow the online guide.
 
   03 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.9-r1.ebuild:
   dev-perl/class-returnvalue just became dev-perl/Class-ReturnValue

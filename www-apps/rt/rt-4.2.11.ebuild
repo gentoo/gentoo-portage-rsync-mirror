@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.9-r1.ebuild,v 1.4 2015/05/03 10:53:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/rt-4.2.11.ebuild,v 1.1 2015/05/19 15:49:08 titanofold Exp $
 
 EAPI=5
 
@@ -23,16 +23,17 @@ DEPEND="
 	>=dev-perl/Apache-Session-1.53
 	>=dev-perl/CSS-Squish-0.06
 	>=dev-perl/Class-Accessor-0.34
+	>=dev-perl/Class-ReturnValue-0.550.0-r1
 	>=dev-perl/DBI-1.37
 	>=dev-perl/Date-Extract-0.02
 	>=dev-perl/DateTime-Format-Natural-0.67
-	>=dev-perl/dbix-searchbuilder-1.660.0
 	>=dev-perl/Devel-StackTrace-1.19
 	>=dev-perl/HTML-FormatText-WithLinks-0.14
 	>=dev-perl/HTML-Mason-1.43
 	>=dev-perl/HTML-Scrubber-0.08
 	>=dev-perl/HTTP-Server-Simple-0.34
 	>=dev-perl/HTTP-Server-Simple-Mason-0.14
+	>=dev-perl/Log-Dispatch-2.410.0
 	>=dev-perl/MIME-tools-5.425
 	>=dev-perl/MailTools-1.60
 	>=dev-perl/Module-Versions-Report-1.05
@@ -42,16 +43,15 @@ DEPEND="
 	>=dev-perl/Text-WikiFormat-0.76
 	>=dev-perl/Tree-Simple-1.04
 	>=dev-perl/XML-RSS-1.05
-	>=dev-perl/Class-ReturnValue-0.40
-	>=dev-perl/dbix-searchbuilder-1.59
+	>=dev-perl/dbix-searchbuilder-1.660.0
 	>=dev-perl/locale-maketext-lexicon-0.32
-	>=dev-perl/Log-Dispatch-2.230.0
 	>=virtual/perl-CGI-4
 	>=virtual/perl-Digest-MD5-2.27
+	>=virtual/perl-Encode-2.730.0
 	>=virtual/perl-File-Spec-0.8
 	>=virtual/perl-Getopt-Long-2.24
-	>=virtual/perl-Storable-2.08
 	>=virtual/perl-Locale-Maketext-1.06
+	>=virtual/perl-Storable-2.08
 	dev-perl/CGI-Emulate-PSGI
 	dev-perl/CGI-PSGI
 	dev-perl/Cache-Simple-TimedExpiry
@@ -92,8 +92,8 @@ DEPEND="
 	dev-perl/Plack
 	dev-perl/Regexp-Common-net-CIDR
 	dev-perl/Regexp-IPv6
-	dev-perl/String-ShellQuote
 	dev-perl/Starlet
+	dev-perl/String-ShellQuote
 	dev-perl/TermReadKey
 	dev-perl/Text-Password-Pronounceable
 	dev-perl/Time-modules
@@ -106,10 +106,10 @@ DEPEND="
 	dev-perl/text-autoformat
 	dev-perl/text-template
 	dev-perl/text-wrapper
+	virtual/perl-Digest
 	virtual/perl-File-Temp
 	virtual/perl-Scalar-List-Utils
 	virtual/perl-Time-HiRes
-	virtual/perl-Digest
 	virtual/perl-libnet
 
 	fastcgi? (
@@ -195,10 +195,13 @@ src_prepare() {
 	sed -e "s|PREFIX|${ED}/${MY_HOSTROOTDIR}/${PF}|g" \
 		-e "s|HTMLDIR|${ED}/${MY_HTDOCSDIR}|g" \
 		-e 's|/\+|/|g' \
-		-i ./config.layout || die
+		-i ./config.layout || die 'config sed failed'
 
 	# don't need to check dev dependencies
-	sed -e "s|\$args{'with-DEV'} =1;|#\$args{'with-DEV'} =1;|" -i sbin/rt-test-dependencies.in || die
+	sed -e "s|\$args{'with-DEV'} =1;|#\$args{'with-DEV'} =1;|" \
+		-i sbin/rt-test-dependencies.in || die 'dev sed failed'
+
+	epatch "${FILESDIR}/rt-makefile-serialize-install-prereqs.patch"
 }
 
 src_configure() {
@@ -258,7 +261,7 @@ src_install() {
 	webapp_src_preinst
 	emake install
 
-	dodoc -r docs
+	dodoc -r docs/*
 	# Disable compression because `perldoc` doesn't decompress transparently
 	docompress -x /usr/share/doc
 
@@ -276,8 +279,6 @@ src_install() {
 		newinitd "${FILESDIR}"/${PN}.init.d.2 ${PN}
 		newconfd "${FILESDIR}"/${PN}.conf.d.2 ${PN}
 		sed -i -e "s/@@PF@@/${PF}/g" "${ED}"/etc/conf.d/${PN} || die
-	else
-		doins "${FILESDIR}"/rt_apache2{,_fcgi}.conf
 	fi
 
 	# require the web server's permissions
