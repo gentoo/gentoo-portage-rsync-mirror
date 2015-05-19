@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.148 2015/03/03 07:18:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.149 2015/05/19 18:10:11 jlec Exp $
+
+*simplejson-3.7.1 (19 May 2015)
+
+  19 May 2015; Justin Lecher <jlec@gentoo.org> +simplejson-3.7.1.ebuild:
+  Version Bump
 
   02 Mar 2015; Yixun Lan <dlan@gentoo.org> simplejson-3.6.5.ebuild:
   add arm64 support, tested on A53 board
