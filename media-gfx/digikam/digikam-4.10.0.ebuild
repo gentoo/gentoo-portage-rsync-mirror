@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.6.0.ebuild,v 1.2 2014/12/21 21:46:01 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.10.0.ebuild,v 1.1 2015/05/19 22:41:45 dilfridge Exp $
 
 EAPI=5
 
@@ -9,7 +9,6 @@ hu id is it ja ka kk km ko ku lb lo lt lv mi mk mn ms mt nb nds ne nl nn nso oc 
 rw se sk sl sq sr sr@Latn ss sv ta te tg th tr tt uk uz uz@cyrillic ven vi wa xh zh_CN zh_HK zh_TW zu"
 
 KDE_HANDBOOK="optional"
-CMAKE_MIN_VERSION="2.8"
 KDE_MINIMAL="4.10"
 
 KDE_DOC_DIRS="doc-digikam doc-showfoto"
@@ -42,6 +41,7 @@ CDEPEND="
 			$(add_kdebase_dep libkipi)
 			kde-base/marble:4=[plasma] )
 	)
+	dev-qt/qtgui:4
 	media-libs/jasper
 	media-libs/lcms:2
 	>=media-libs/lensfun-0.2.6
@@ -51,15 +51,16 @@ CDEPEND="
 	>=media-libs/libpgf-6.12.27
 	media-libs/libpng:0=
 	>=media-libs/opencv-2.4.9
-	>=media-libs/tiff-3.8.2
-	virtual/jpeg
-	dev-qt/qtgui:4
+	media-libs/phonon[qt4]
+	>=media-libs/tiff-3.8.2:0
+	virtual/jpeg:0
+	x11-libs/libX11
 	|| ( dev-qt/qtsql:4[mysql] dev-qt/qtsql:4[sqlite] )
 	addressbook? ( $(add_kdebase_dep kdepimlibs) )
 	gphoto2? ( media-libs/libgphoto2:= )
 	mysql? ( virtual/mysql )
 	semantic-desktop? (
-		$(add_kdebase_dep baloo "" 4.12.0)
+		$(add_kdebase_dep baloo '' 4.12.0)
 	)
 "
 RDEPEND="${CDEPEND}
@@ -118,7 +119,6 @@ src_configure() {
 	# LQR = only allows to choose between bundled/external
 	local mycmakeargs=(
 		-DENABLE_LCMS2=ON
-		-DFORCED_UNBUNDLE=ON
 		-DWITH_LQR=ON
 		-DWITH_LENSFUN=ON
 		$(cmake-utils_use_enable addressbook KDEPIMLIBSSUPPORT)
