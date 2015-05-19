@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/mbuffer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.32 2014/01/28 06:45:26 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/mbuffer/ChangeLog,v 1.33 2015/05/19 12:55:25 chainsaw Exp $
+
+*mbuffer-20150412 (19 May 2015)
+
+  19 May 2015; Tony Vroon <chainsaw@gentoo.org> +mbuffer-20150412.ebuild:
+  Version bump, as requested by Jonas Stein in bug #546688.
 
 *mbuffer-20140126 (28 Jan 2014)
 
