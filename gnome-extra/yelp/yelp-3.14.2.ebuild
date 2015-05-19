@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.12.0.ebuild,v 1.3 2014/07/23 15:18:37 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-3.14.2.ebuild,v 1.1 2015/05/19 19:26:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,18 +13,18 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Yelp"
 LICENSE="GPL-2+"
 SLOT="0"
 IUSE=""
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 
 RDEPEND="
 	app-arch/bzip2:=
 	>=app-arch/xz-utils-4.9:=
 	dev-db/sqlite:3=
-	>=dev-libs/glib-2.25.11:2
+	>=dev-libs/glib-2.38:2
 	>=dev-libs/libxml2-2.6.5:2
 	>=dev-libs/libxslt-1.1.4
-	>=gnome-extra/yelp-xsl-3.6.1
+	>=gnome-extra/yelp-xsl-3.12
 	>=net-libs/webkit-gtk-1.3.10:3
-	>=x11-libs/gtk+-3.8:3
+	>=x11-libs/gtk+-3.13.3:3
 	x11-themes/gnome-icon-theme-symbolic
 "
 DEPEND="${RDEPEND}
@@ -49,6 +49,5 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-static \
 		--enable-bz2 \
-		--enable-lzma \
-		ITSTOOL=$(type -P true)
+		--enable-lzma
 }
