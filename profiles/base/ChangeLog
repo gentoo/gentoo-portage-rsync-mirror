@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.797 2015/05/16 08:08:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.798 2015/05/19 21:07:02 chewi Exp $
+
+  19 May 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
+  Remove dev-java/diablo-jdk entry as it has gone away.
 
   16 May 2015; Mike Gilbert <floppym@gentoo.org> package.use.mask:
   Reinstate dev-lang/python[berkdb] mask.

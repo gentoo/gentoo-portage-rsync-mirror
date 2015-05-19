@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.675 2015/05/16 08:08:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.676 2015/05/19 21:07:02 chewi Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -324,12 +324,6 @@ games-action/minetest luajit
 # Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (13 Oct 2013)
 # Masked for security bug #472280, CVE 2013-1872
 <=media-libs/mesa-9.0.3 video_cards_intel video_cards_i965
-
-# Tom Wijsman <TomWij@gentoo.org> (15 Sep 2013)
-# Mask JCE functionality of diablo-jdk because it depends on masked sun-jce-bin,
-# this needs to be revisited to either be dropped from the Portage tree or to
-# use the new way of doing JCE as part of a revision or version bump.
-dev-java/diablo-jdk jce
 
 # Tom Wijsman <TomWij@gentoo.org> (7 Sep 2013)
 # Dependency (www-servers/mongrel) currently only
