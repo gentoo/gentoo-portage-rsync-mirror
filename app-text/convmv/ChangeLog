@@ -1,6 +1,11 @@
 # ChangeLog for app-text/convmv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.42 2014/09/09 09:36:02 polynomial-c Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/convmv/ChangeLog,v 1.43 2015/05/19 09:50:32 polynomial-c Exp $
+
+*convmv-2.0 (19 May 2015)
+
+  19 May 2015; Lars Wendler <polynomial-c@gentoo.org> +convmv-2.0.ebuild:
+  Version bump.
 
 *convmv-1.15-r1 (09 Sep 2014)
 
