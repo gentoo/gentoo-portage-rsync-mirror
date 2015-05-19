@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.4.ebuild,v 1.1 2015/04/19 19:21:59 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/rb_libtorrent-1.0.4.ebuild,v 1.2 2015/05/19 19:40:43 hwoarang Exp $
 
 EAPI=5
 
@@ -68,7 +68,7 @@ src_compile() {
 }
 
 src_install() {
-	use doc && HTML_DOCS=( docs/. )
+	use doc && HTML_DOCS=( "${S}"/docs/. )
 
 	autotools-utils_src_install
 	use python && cd "${BUILD_DIR}"/bindings/python && distutils-r1_src_install

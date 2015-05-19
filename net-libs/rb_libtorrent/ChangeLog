@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rb_libtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.197 2015/05/17 09:18:45 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rb_libtorrent/ChangeLog,v 1.198 2015/05/19 19:40:43 hwoarang Exp $
+
+  19 May 2015; Markos Chandras <hwoarang@gentoo.org> rb_libtorrent-1.0.4.ebuild,
+  rb_libtorrent-1.0.5.ebuild:
+  Use absolute path to install html docs. Bug #549870
 
 *rb_libtorrent-1.0.5 (17 May 2015)
 
