@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlwt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.30 2015/05/11 06:39:31 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlwt/ChangeLog,v 1.31 2015/05/19 04:57:43 jer Exp $
+
+  19 May 2015; Jeroen Roovers <jer@gentoo.org> xlwt-1.0.0.ebuild:
+  Mark ~ppc64 (bug #549148).
 
 *xlwt-1.0.0 (11 May 2015)
 

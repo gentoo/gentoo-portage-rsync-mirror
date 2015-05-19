@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.167.2_p1.ebuild,v 1.1 2015/05/07 04:48:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.178.2_p1.ebuild,v 1.1 2015/05/19 04:37:15 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
