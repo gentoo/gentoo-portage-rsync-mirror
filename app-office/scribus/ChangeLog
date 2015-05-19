@@ -1,6 +1,10 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.205 2015/05/19 04:54:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.206 2015/05/19 06:57:27 jlec Exp $
+
+  19 May 2015; Justin Lecher <jlec@gentoo.org> -scribus-1.4.3.ebuild,
+  scribus-1.4.5-r1.ebuild:
+  Drop old; obsoletes bug #490542
 
   19 May 2015; Jeroen Roovers <jer@gentoo.org> scribus-1.4.4-r1.ebuild:
   Stable for PPC64 (bug #519890).

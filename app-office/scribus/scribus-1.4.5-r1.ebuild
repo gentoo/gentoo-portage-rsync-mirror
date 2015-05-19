@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.5-r1.ebuild,v 1.1 2015/05/18 16:56:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.5-r1.ebuild,v 1.2 2015/05/19 06:57:27 jlec Exp $
 
 EAPI=5
 
@@ -56,6 +56,7 @@ DEPEND="${COMMON_DEPEND}
 PATCHES=(
 	"${FILESDIR}"/${PN}-1.4.2-docs.patch
 	"${FILESDIR}"/${PN}-1.4.0-minizip.patch
+	"${FILESDIR}"/${PN}-1.4.4-ppc64-fpic.patch
 	)
 
 src_prepare() {
