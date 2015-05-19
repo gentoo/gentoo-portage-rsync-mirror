@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in-r4,v 1.1 2015/05/12 01:11:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/files/openconnect.init.in-r4,v 1.2 2015/05/19 01:36:39 floppym Exp $
 
 VPN="${RC_SVCNAME#*.}"
 VPNDIR="/etc/openconnect/${VPN}"
@@ -12,7 +12,7 @@ VPNERRFILE="${VPNLOG}/openconnect.err"
 command="/usr/sbin/openconnect"
 name="OpenConnect: ${VPN}"
 pidfile="/run/openconnect/${VPN}.pid"
-retry="SIGINT/90"
+stopsig="SIGINT"
 
 depend() {
 	before netmount

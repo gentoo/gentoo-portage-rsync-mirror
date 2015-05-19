@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openconnect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.45 2015/05/12 01:11:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openconnect/ChangeLog,v 1.46 2015/05/19 01:36:39 floppym Exp $
+
+  19 May 2015; Mike Gilbert <floppym@gentoo.org> files/openconnect.init.in-r4:
+  Set stopsig instead of retry.
 
 *openconnect-7.06-r1 (12 May 2015)
 
