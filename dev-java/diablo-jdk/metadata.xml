@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-<pkgmetadata>
-  <herd>bsd</herd>
-  <herd>java</herd>
-  <use>
-    <flag name="jce">Enable Java Cryptographic Extension Unlimited Strength Policy files</flag>
-  </use>
-</pkgmetadata>
