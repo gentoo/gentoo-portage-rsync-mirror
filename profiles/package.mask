@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16527 2015/05/14 11:49:56 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16528 2015/05/19 20:47:05 chewi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -140,24 +140,10 @@ games-strategy/freecnc
 # Removal in 30 days.
 dev-ruby/json_pure
 
-# James Le Cuirot <chewi@gentoo.org> (18 Apr 2015)
-# Old, unmaintained, not used by anything, and superseded by
-# plexus-classworlds. There is a newer version in java-overlay that
-# can't go yet but will go eventually. Removal in 30 days.
-dev-java/classworlds
-
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (17 Apr 2015)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-44
-
-# James Le Cuirot <chewi@gentoo.org> (14 Apr 2015)
-# Not updated beyond Java 6, no longer supported upstream, full of
-# holes, and probably doesn't work. This is the last VM currently
-# available to FreeBSD until we try icedtea but BSD team are cool with
-# this. Removal in 30 days.
-dev-java/diablo-jdk
-dev-java/diablo-jre-bin
 
 # Patrice Clement <monsieurp@gentoo.org> (14 Apr 2014)
 # Upstream seems to be dead. No updates since 12 March 2007.
