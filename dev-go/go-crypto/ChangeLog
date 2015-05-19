@@ -1,0 +1,9 @@
+# ChangeLog for dev-go/go-crypto
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/ChangeLog,v 1.1 2015/05/19 05:21:21 zmedico Exp $
+
+*go-crypto-9999 (19 May 2015)
+
+  19 May 2015; Zac Medico <zmedico@gentoo.org> +go-crypto-9999.ebuild,
+  +metadata.xml:
+  Add go-crypto.
