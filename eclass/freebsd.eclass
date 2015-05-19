@@ -122,7 +122,7 @@ freebsd_do_patches() {
 			epatch "${x}"
 		done
 	fi
-	epatch $(freebsd_upstream_patches -s)
+	[[ ${#UPSTREAM_PATCHES[@]} -gt 0 ]] && epatch $(freebsd_upstream_patches -s)
 	epatch_user
 }
 
