@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/x11vnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.123 2015/05/15 11:54:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x11vnc/ChangeLog,v 1.124 2015/05/19 07:25:10 ago Exp $
+
+  19 May 2015; Agostino Sarubbo <ago@gentoo.org> x11vnc-0.9.13_p20150111.ebuild:
+  Stable for x86, wrt bug #515268
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> x11vnc-0.9.13_p20150111.ebuild:
   ppc stable wrt bug #515268

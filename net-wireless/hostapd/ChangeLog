@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/hostapd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.158 2015/05/18 08:46:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostapd/ChangeLog,v 1.159 2015/05/19 07:22:46 ago Exp $
+
+  19 May 2015; Agostino Sarubbo <ago@gentoo.org> hostapd-2.4-r2.ebuild:
+  Stable for x86, wrt bug #548744
 
   18 May 2015; Agostino Sarubbo <ago@gentoo.org> hostapd-2.4-r2.ebuild:
   Stable for amd64, wrt bug #548744
