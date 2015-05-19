@@ -107,7 +107,7 @@ freebsd_upstream_patches() {
 		if [[ ${opt} == -s ]] ; then
 			echo "${DISTDIR}/${out}"
 		else
-			echo "https://security.freebsd.org/patches/${patch} -> ${out}"
+			echo "https://security.freebsd.org/patches/${x} -> ${out}"
 		fi
 	done
 }
