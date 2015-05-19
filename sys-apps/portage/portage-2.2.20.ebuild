@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.19.ebuild,v 1.1 2015/05/13 21:06:42 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.2.20.ebuild,v 1.1 2015/05/18 23:19:00 dolsen Exp $
 
 EAPI=5
 
@@ -354,10 +354,10 @@ pkg_postinst() {
 	einfo "The 'websync' module has now been properly renamed to 'webrsync'"
 	einfo "Please update your repos.conf/gentoo.conf file if needed."
 	einfo ""
-	einfo "This release of portage also instroduces a new squashfs sync module"
-	einfo "This new module is named 'squashdelta'. It will download either "
-	einfo "full or partial squashfs images and replace/rebuild the exixting "
-	einfo "squashfs image used for the gentoo ebuild tree"
-	einfo "This module requires the dev-util/squashmerge pkg to be installed"
+	einfo "This release of portage removed the new squashfs sync module "
+	einfo "introduced in portage-2.2.19."
+	einfo "Look for it to be released as an installable portage module soon."
+	einfo "This will allow it to develop at it's own pace partially independant"
+	einfo "of portage"
 	einfo ""
 }
