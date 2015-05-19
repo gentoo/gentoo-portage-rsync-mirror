@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.6.0.ebuild,v 1.3 2015/04/03 19:47:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/kipi-plugins-4.10.0.ebuild,v 1.1 2015/05/19 21:59:34 dilfridge Exp $
 
 #
 # TODO: complete packaging of qtsoap and qtkoauth, see dilfridge overlay for work in progress
@@ -43,10 +43,11 @@ COMMONDEPEND="
 	dev-libs/libxml2
 	dev-libs/libxslt
 	dev-libs/qjson
+	dev-qt/qtxmlpatterns:4
 	gpssync?	( >=media-libs/libkgeomap-4.6.0 )
 	media-libs/libpng:0=
-	media-libs/tiff
-	virtual/jpeg
+	media-libs/tiff:0
+	virtual/jpeg:0
 	calendar?	( $(add_kdebase_dep kdepimlibs) )
 	crypt?		( app-crypt/qca:2[qt4(+)] )
 	ipod?		(
@@ -54,6 +55,10 @@ COMMONDEPEND="
 			  x11-libs/gtk+:2
 			)
 	mediawiki?	( >=net-libs/libmediawiki-3.0.0 )
+	opengl?		(
+				media-libs/phonon[qt4]
+				x11-libs/libXrandr
+			)
 	redeyes?	( >=media-libs/opencv-2.4.9 )
 	scanner? 	(
 			|| ( kde-apps/libksane:4 $(add_kdebase_dep libksane) )
@@ -106,6 +111,10 @@ src_prepare() {
 	echo "find_package(Gettext REQUIRED)" >> CMakeLists.txt || die
 	echo "add_subdirectory( po )" >> CMakeLists.txt
 
+	if ! use redeyes ; then
+		sed -i -e "/DETECT_OPENCV/d" CMakeLists.txt || die
+	fi
+
 	kde4-base_src_prepare
 }
 
@@ -124,11 +133,12 @@ src_configure() {
 		$(cmake-utils_use_with calendar KdepimLibs)
 		$(cmake-utils_use_with gpssync KGeoMap)
 		$(cmake-utils_use_with mediawiki Mediawiki)
-		$(cmake-utils_use_with redeyes OpenCV)
+		$(cmake-utils_use_find_package redeyes OpenCV)
 		$(cmake-utils_use_with opengl OpenGL)
 		$(cmake-utils_use_with crypt QCA2)
 		$(cmake-utils_use_with scanner KSane)
 		$(cmake-utils_use_with upnp Hupnp)
+		$(cmake-utils_use_with vkontakte LibKVkontakte)
 		$(cmake-utils_use_with videoslideshow QtGStreamer)
 		$(cmake-utils_use_enable expoblending)
 		$(cmake-utils_use_enable panorama)

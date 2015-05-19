@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.178 2015/04/03 19:47:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.179 2015/05/19 21:59:34 dilfridge Exp $
+
+*kipi-plugins-4.10.0 (19 May 2015)
+
+  19 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -kipi-plugins-4.6.0.ebuild, +kipi-plugins-4.10.0.ebuild:
+  Version bump; remove old
 
   03 Apr 2015; Michael Palimaka <kensington@gentoo.org>
   kipi-plugins-4.4.0.ebuild, kipi-plugins-4.6.0.ebuild,
