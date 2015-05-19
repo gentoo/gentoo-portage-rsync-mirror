@@ -127,7 +127,7 @@ src_install() {
 	doins -r "${S}/".
 	if use zfs ; then
 		insinto "/usr/src/cddl"
-		doins -r "${WORKDIR}/".
+		doins -r "${WORKDIR}/cddl/".
 	fi
 }
 
