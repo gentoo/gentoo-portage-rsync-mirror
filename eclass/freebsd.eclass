@@ -13,26 +13,26 @@ PLEVEL=${PV##*_p}
 LICENSE="BSD"
 HOMEPAGE="http://www.freebsd.org/"
 
+# Define global package names
+LIB="freebsd-lib-${PV}"
+BIN="freebsd-bin-${PV}"
+CONTRIB="freebsd-contrib-${PV}"
+SHARE="freebsd-share-${PV}"
+UBIN="freebsd-ubin-${PV}"
+USBIN="freebsd-usbin-${PV}"
+CRYPTO="freebsd-crypto-${PV}"
+LIBEXEC="freebsd-libexec-${PV}"
+SBIN="freebsd-sbin-${PV}"
+GNU="freebsd-gnu-${PV}"
+ETC="freebsd-etc-${PV}"
+SYS="freebsd-sys-${PV}"
+INCLUDE="freebsd-include-${PV}"
+RESCUE="freebsd-rescue-${PV}"
+CDDL="freebsd-cddl-${PV}"
+SECURE="freebsd-secure-${PV}"
+
 # Release version (5.3, 5.4, 6.0, etc)
 RV="$(get_version_component_range 1-2 ${MY_PV})"
-
-# Define global package names
-LIB="freebsd-lib-${RV}"
-BIN="freebsd-bin-${RV}"
-CONTRIB="freebsd-contrib-${RV}"
-SHARE="freebsd-share-${RV}"
-UBIN="freebsd-ubin-${RV}"
-USBIN="freebsd-usbin-${RV}"
-CRYPTO="freebsd-crypto-${RV}"
-LIBEXEC="freebsd-libexec-${RV}"
-SBIN="freebsd-sbin-${RV}"
-GNU="freebsd-gnu-${RV}"
-ETC="freebsd-etc-${RV}"
-SYS="freebsd-sys-${RV}"
-INCLUDE="freebsd-include-${RV}"
-RESCUE="freebsd-rescue-${RV}"
-CDDL="freebsd-cddl-${RV}"
-SECURE="freebsd-secure-${RV}"
 
 # SVN ebuild support.
 #   9.1.0.9999 -->	release/9.1.0
