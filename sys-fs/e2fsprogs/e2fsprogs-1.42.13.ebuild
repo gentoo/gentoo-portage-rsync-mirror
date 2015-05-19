@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.11.ebuild,v 1.6 2015/02/22 17:18:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.42.13.ebuild,v 1.1 2015/05/19 09:18:22 polynomial-c Exp $
 
 EAPI=4
 
@@ -37,8 +37,7 @@ src_prepare() {
 	if [[ ${CHOST} == *-mint* ]] ; then
 		epatch "${WORKDIR}"/${PN}-1.42.9-mint-r1.patch
 	fi
-	epatch "${FILESDIR}"/${PN}-1.42.10-fix-build-cflags.patch
-	epatch "${FILESDIR}"/${PN}-1.42.11-prototypes.patch
+	epatch "${FILESDIR}"/${PN}-1.42.13-fix-build-cflags.patch
 
 	# blargh ... trick e2fsprogs into using e2fsprogs-libs
 	rm -rf doc

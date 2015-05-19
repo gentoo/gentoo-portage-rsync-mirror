@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.857 2015/05/18 13:45:39 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.858 2015/05/19 09:24:10 aballier Exp $
+
+  19 May 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
+  bump x265 dep
 
 *ffmpeg-2.6.3 (18 May 2015)
 

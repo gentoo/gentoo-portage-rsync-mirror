@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/scala-mode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/scala-mode/ChangeLog,v 1.6 2014/03/25 19:17:04 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/scala-mode/ChangeLog,v 1.7 2015/05/19 09:27:28 ago Exp $
+
+  19 May 2015; Agostino Sarubbo <ago@gentoo.org> scala-mode-2.10.3.ebuild:
+  Stable for amd64, wrt bug #546818
 
   25 Mar 2014; Ulrich Müller <ulm@gentoo.org> -scala-mode-2.9.0.1.ebuild,
   scala-mode-2.10.3.ebuild:
@@ -36,4 +39,3 @@
   +scala-mode-2.7.3.ebuild:
   Initial import. Ebuild contributed by Anders Bach Nielsen
   <abachn@daimi.au.dk> in bug 250688, with modifications by me.
-

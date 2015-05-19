@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/scala
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.47 2015/05/18 21:15:40 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala/ChangeLog,v 1.48 2015/05/19 09:27:21 ago Exp $
+
+  19 May 2015; Agostino Sarubbo <ago@gentoo.org> scala-2.11.4-r1.ebuild:
+  Stable for amd64, wrt bug #546818
 
   18 May 2015; Patrice Clement <monsieurp@gentoo.org> scala-2.10.2-r2.ebuild,
   scala-2.10.3-r1.ebuild, scala-2.10.4-r1.ebuild, scala-2.11.1-r1.ebuild,

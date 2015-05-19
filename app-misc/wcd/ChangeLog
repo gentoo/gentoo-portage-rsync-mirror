@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/wcd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.27 2015/04/07 14:07:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/wcd/ChangeLog,v 1.28 2015/05/19 09:19:34 jlec Exp $
+
+*wcd-5.2.7 (19 May 2015)
+
+  19 May 2015; Justin Lecher <jlec@gentoo.org> +wcd-5.2.7.ebuild:
+  Version Bump
 
   26 Jan 2015; Justin Lecher <jlec@gentoo.org> -wcd-5.2.5.ebuild:
   Drop old

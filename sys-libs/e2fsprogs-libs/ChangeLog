@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.139 2015/04/04 22:28:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.140 2015/05/19 09:18:00 polynomial-c Exp $
+
+*e2fsprogs-libs-1.42.13 (19 May 2015)
+
+  19 May 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -e2fsprogs-libs-1.42.7.ebuild, -e2fsprogs-libs-1.42.10.ebuild,
+  -e2fsprogs-libs-1.42.11.ebuild, +e2fsprogs-libs-1.42.13.ebuild,
+  -files/e2fsprogs-libs-1.42.11-prototypes.patch,
+  +files/e2fsprogs-libs-1.42.13-fix-build-cflags.patch:
+  Version bump. Removed old.
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.12.ebuild:
   Mark arm64/m68k/s390/sh stable.
