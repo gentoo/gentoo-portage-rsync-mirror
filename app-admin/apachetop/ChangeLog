@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/apachetop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.57 2015/04/26 17:19:06 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/apachetop/ChangeLog,v 1.58 2015/05/19 10:21:32 nimiux Exp $
+
+  19 May 2015; Chema Alonso <nimiux@gentoo.org> apachetop-0.12.6-r2.ebuild:
+  Stable for amd64 wrt bug #513988
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> apachetop-0.12.6-r2.ebuild:
   ppc stable wrt bug #513988
