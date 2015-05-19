@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/sonnet/sonnet-5.10.0.ebuild,v 1.1 2015/05/09 10:36:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/sonnet/sonnet-5.10.0.ebuild,v 1.2 2015/05/19 13:29:18 kensington Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde5
 DESCRIPTION="Framework for providing spell-checking capabilities through abstraction of popular backends"
 LICENSE="LGPL-2+ LGPL-2.1+"
 KEYWORDS="~amd64 ~x86"
-IUSE="aspell hunspell nls"
+IUSE="+aspell hunspell nls"
 
 RDEPEND="
 	dev-qt/qtgui:5
