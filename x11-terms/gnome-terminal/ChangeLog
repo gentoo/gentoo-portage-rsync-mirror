@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.298 2015/03/28 09:38:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.299 2015/05/19 14:10:09 tetromino Exp $
+
+  19 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gnome-terminal-3.14.2-r2.ebuild, gnome-terminal-3.14.3.ebuild:
+  Fix missing deps, misleading comments (see bug #549304).
 
 *gnome-terminal-3.14.3 (28 Mar 2015)
 
