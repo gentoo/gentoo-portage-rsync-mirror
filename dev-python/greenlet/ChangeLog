@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/greenlet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.42 2015/05/05 17:21:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/greenlet/ChangeLog,v 1.43 2015/05/19 17:58:29 jlec Exp $
+
+*greenlet-0.4.7 (19 May 2015)
+
+  19 May 2015; Justin Lecher <jlec@gentoo.org> +greenlet-0.4.7.ebuild:
+  Version Bump
 
 *greenlet-0.4.6 (05 May 2015)
 

@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile configure install postinst preinst prepare
+DEPEND=app-arch/xz-utils
+DESCRIPTION=small and fast portage helper tools written in C
+EAPI=4
+HOMEPAGE=https://wiki.gentoo.org/wiki/Portage-utils
+IUSE=nls static
+KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~hppa-hpux ~ia64-hpux ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~m68k-mint ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE=GPL-2
+SLOT=0
+SRC_URI=mirror://gentoo/portage-utils-0.55.tar.xz http://dev.gentoo.org/~vapier/dist/portage-utils-0.55.tar.xz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_md5_=ede974036e1f1b1c01b3b129fdabff68
