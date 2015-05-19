@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.72 2015/05/17 17:21:01 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.73 2015/05/19 13:32:23 ago Exp $
+
+  19 May 2015; Agostino Sarubbo <ago@gentoo.org> metadata.xml:
+  typo
 
 *tornado-4.2.0_beta1 (17 May 2015)
 
