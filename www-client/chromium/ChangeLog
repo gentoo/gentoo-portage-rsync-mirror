@@ -1,6 +1,16 @@
 # ChangeLog for www-client/chromium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1245 2015/05/20 15:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/ChangeLog,v 1.1247 2015/05/20 20:13:44 phajdan.jr Exp $
+
+  20 May 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  chromium-43.0.2357.65.ebuild, chromium-44.0.2403.4.ebuild:
+  Enable USE="proprietary-codecs" by default, bug #547800 by miflab.
+
+*chromium-44.0.2403.4 (20 May 2015)
+
+  20 May 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org>
+  -chromium-44.0.2391.0.ebuild, +chromium-44.0.2403.4.ebuild, metadata.xml:
+  Dev channel bump. Remove old.
 
   20 May 2015; Agostino Sarubbo <ago@gentoo.org> -chromium-42.0.2311.135.ebuild,
   -chromium-43.0.2357.52.ebuild:
