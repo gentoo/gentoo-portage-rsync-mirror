@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/jsoncpp-1.6.2.ebuild,v 1.1 2015/05/12 17:57:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/jsoncpp-1.6.2.ebuild,v 1.2 2015/05/20 00:28:41 mattst88 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/open-source-parsers/${PN}/archive/${PV}.tar.gz -> ${
 
 LICENSE="|| ( public-domain MIT )"
 SLOT="0/1"
-KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~mips ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~mips ~ppc64 ~x86"
 IUSE="doc test"
 
 DEPEND="
