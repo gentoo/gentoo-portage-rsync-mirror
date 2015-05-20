@@ -3,6 +3,10 @@
 <pkgmetadata>
   <herd>proxy-maintainers</herd>
   <maintainer>
+    <email>mschiff@gentoo.org</email>
+    <name>Marc Schiffbauer</name>
+  </maintainer>
+  <maintainer>
     <email>nabeken@tknetworks.org</email>
     <description>Proxied developer. Please CC on bugs.</description>
     <name>TANABE Ken-ichi</name>

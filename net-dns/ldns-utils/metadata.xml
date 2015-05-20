@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-    <email>maintainer-needed@gentoo.org</email>
+    <email>mschiff@gentoo.org</email>
+    <name>Marc Schiffbauer</name>
   </maintainer>
   <longdescription lang="en">
   ldns is a library with the aim to simplify DNS programing in C. All
