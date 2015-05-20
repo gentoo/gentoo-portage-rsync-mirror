@@ -35,4 +35,3 @@ src_install() {
         doman "${S}"/man/3proxy*.[38]
 
 }
-
