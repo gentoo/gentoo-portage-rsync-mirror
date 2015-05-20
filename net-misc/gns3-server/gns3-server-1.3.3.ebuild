@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-server/gns3-server-1.3.1.ebuild,v 1.1 2015/04/18 06:33:37 bman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-server/gns3-server-1.3.3.ebuild,v 1.1 2015/05/20 11:08:27 bman Exp $
 
 EAPI=5
 
@@ -25,14 +25,7 @@ RDEPEND=">=app-emulation/dynamips-0.2.12
 		>=dev-python/raven-5.2.0[${PYTHON_USEDEP}]
 		>=dev-python/pyzmq-14.3.1[${PYTHON_USEDEP}]
 		>=www-servers/tornado-3.1.1[${PYTHON_USEDEP}]"
-
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-
-python_prepare_all() {
-	# avoid file collisions caused by required tests
-	sed -e "s:find_packages():find_packages(exclude=['tests','tests.*']):" -i setup.py || die
-	distutils-r1_python_prepare_all
-}
 
 pkg_postinst() {
 	ewarn "net-misc/gns3-server has several optional packages that must be merged manually for additional functionality."

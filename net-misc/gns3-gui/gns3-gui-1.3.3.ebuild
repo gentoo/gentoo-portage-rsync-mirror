@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/gns3-gui-1.3.1-r1.ebuild,v 1.2 2015/04/21 13:05:54 bman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gns3-gui/gns3-gui-1.3.3.ebuild,v 1.1 2015/05/20 11:13:50 bman Exp $
 
 EAPI=5
 
@@ -17,7 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 #net-misc/gns3-server version should always match gns3-gui version
-#block net-misc/gns3 as it conflicts
 
 RDEPEND=">=dev-python/libcloud-0.15.1[${PYTHON_USEDEP}]
 	>=dev-python/ws4py-0.3.4[${PYTHON_USEDEP}]
@@ -28,15 +27,8 @@ RDEPEND=">=dev-python/libcloud-0.15.1[${PYTHON_USEDEP}]
 	dev-qt/qtgui:4
 	dev-qt/qtsvg:4
 	>=net-misc/gns3-converter-1.2.3[${PYTHON_USEDEP}]
-	=net-misc/gns3-server-$PV[${PYTHON_USEDEP}]
-	!!net-misc/gns3"
+	=net-misc/gns3-server-$PV[${PYTHON_USEDEP}]"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
-
-python_prepare_all() {
-	# avoid file collisions caused by required tests
-	sed -e "s:find_packages():find_packages(exclude=['tests','tests.*']):" -i setup.py || die
-	distutils-r1_python_prepare_all
-}
 
 python_install_all() {
 	distutils-r1_python_install_all
