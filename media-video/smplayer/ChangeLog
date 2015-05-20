@@ -1,6 +1,9 @@
 # ChangeLog for media-video/smplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.164 2015/05/08 05:25:55 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/ChangeLog,v 1.165 2015/05/20 04:37:39 jer Exp $
+
+  20 May 2015; Jeroen Roovers <jer@gentoo.org> smplayer-14.9.0.6690-r3.ebuild:
+  Mark ~ppc64 (bug #538804).
 
   08 May 2015; Sergey Popov <pinkbyte@gentoo.org> smplayer-14.3.0.ebuild,
   smplayer-14.9.0-r1.ebuild:

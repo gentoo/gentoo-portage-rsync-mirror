@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10004 2015/05/19 20:47:05 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10005 2015/05/20 04:56:09 jer Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 May 2015; Jeroen Roovers <jer@gentoo.org> desc/linguas.desc:
+  Add sa, de_1901, de_CH. Sort.
 
   19 May 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
   dev-java/classworlds, dev-java/diablo-jdk, and dev-java/diablo-jre-bin have

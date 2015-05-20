@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/frescobaldi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.28 2014/10/27 05:44:48 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/frescobaldi/ChangeLog,v 1.29 2015/05/20 04:51:01 idella4 Exp $
+
+*frescobaldi-2.18 (20 May 2015)
+
+  20 May 2015; Ian Delaney <idella4@gentoo.org> +frescobaldi-2.18.ebuild:
+  bump; py3 support added
 
   27 Oct 2014; Samuli Suominen <ssuominen@gentoo.org>
   -frescobaldi-2.0.13.ebuild, -frescobaldi-2.0.14.ebuild,

@@ -1048,16 +1048,6 @@ app-office/lyx:rcs - Add support for revision control via dev-vcs/rcs
 app-office/lyx:rtf - Add support for RTF import/export packages
 app-office/scribus:graphicsmagick - Add support for media-gfx/graphicsmagick
 app-office/scribus:hunspell - Enable support for spell checking with app-text/hunspell
-app-office/scribus:linguas_cs_CZ - Language support for cs_CZ
-app-office/scribus:linguas_da_DK - Language support for da_DK
-app-office/scribus:linguas_de_1901 - Language support for de_1901
-app-office/scribus:linguas_de_CH - Language support for de_CH
-app-office/scribus:linguas_en_AU - Language support for en_AU
-app-office/scribus:linguas_lt_LT - Language support for lt_LT
-app-office/scribus:linguas_pl_PL - Language support for pl_PL
-app-office/scribus:linguas_sa - Language support for sa
-app-office/scribus:linguas_sk_SK - Language support for sk_SK
-app-office/scribus:linguas_th_TH - Language support for th_TH
 app-office/scribus:minimal - Don't install headers (only required for e.g. plug-in developers)
 app-office/scribus:osg - 3D redering via dev-games/openscenegraph
 app-office/scribus:poppler - Native pdf import

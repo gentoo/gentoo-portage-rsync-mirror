@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.9.0.6690-r3.ebuild,v 1.1 2015/03/22 06:18:09 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/smplayer/smplayer-14.9.0.6690-r3.ebuild,v 1.2 2015/05/20 04:37:39 jer Exp $
 
 EAPI=5
 PLOCALES="ar ar_SY bg ca cs da de el_GR en_GB en_US es et eu fi fr gl he_IL hr
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~hppa ~x86 ~x86-fbsd ~amd64-linux"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc64 ~x86 ~x86-fbsd ~amd64-linux"
 IUSE="autoshutdown bidi debug qt4 qt5 streaming"
 REQUIRED_USE="^^ ( qt4 qt5 )"
 
