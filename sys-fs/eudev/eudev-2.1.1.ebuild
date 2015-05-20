@@ -1,10 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-2.1.1.ebuild,v 1.2 2015/05/07 15:48:26 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-2.1.1.ebuild,v 1.3 2015/05/20 16:47:04 blueness Exp $
 
 EAPI="5"
 
 KV_min=2.6.39
+WANT_AUTOMAKE=1.13
 
 inherit autotools eutils linux-info multilib multilib-minimal user
 
@@ -111,8 +112,6 @@ src_prepare() {
 	else
 		echo 'EXTRA_DIST =' > docs/gtk-doc.make
 	fi
-	# This may break without WANT_AUTOMAKE=1.13, but we
-	# we want this so we can fix problems upstream.
 	eautoreconf
 }
 
