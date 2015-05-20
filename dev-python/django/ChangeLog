@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/django
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.170 2015/05/05 17:26:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django/ChangeLog,v 1.171 2015/05/20 19:59:14 jlec Exp $
+
+*django-1.8.2 (20 May 2015)
+
+  20 May 2015; Justin Lecher <jlec@gentoo.org> +django-1.8.2.ebuild,
+  -django-1.8.1.ebuild, -django-1.8.ebuild:
+  Version Bump; drop vulnerable Versions, CVE-2015-3982
 
 *django-1.7.8 (05 May 2015)
 *django-1.8.1 (05 May 2015)

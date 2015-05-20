@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.103 2015/02/15 08:37:19 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.104 2015/05/20 19:48:25 titanofold Exp $
+
+*pgadmin3-1.20.0-r1 (20 May 2015)
+
+  20 May 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  +pgadmin3-1.20.0-r1.ebuild:
+  Version bump fixes bug 533336. Now supports best wxGTK available, instead of
+  just 2.8, fixing bug 517232.
 
 *pgadmin3-1.20.0 (15 Feb 2015)
 
