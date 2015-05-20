@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pbr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.37 2015/05/15 07:11:57 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pbr/ChangeLog,v 1.38 2015/05/20 06:58:39 prometheanfire Exp $
+
+*pbr-1.0.1 (20 May 2015)
+
+  20 May 2015; Matthew Thode <prometheanfire@gentoo.org> +pbr-1.0.1.ebuild:
+  bup
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> pbr-0.8.2.ebuild:
   x86 stable wrt bug #530600

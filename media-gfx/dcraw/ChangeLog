@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/dcraw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.107 2015/05/01 19:13:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/dcraw/ChangeLog,v 1.109 2015/05/20 06:50:54 radhermit Exp $
+
+  20 May 2015; Tim Harder <radhermit@gentoo.org> dcraw-9.25.0.ebuild:
+  Add slot dep for virtual/jpeg.
+
+*dcraw-9.25.0 (20 May 2015)
+
+  20 May 2015; Tim Harder <radhermit@gentoo.org> +dcraw-9.25.0.ebuild:
+  Version bump.
 
   01 May 2015; Jeroen Roovers <jer@gentoo.org> dcraw-9.24.4.ebuild:
   Stable for PPC64 (bug #546250).
