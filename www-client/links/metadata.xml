@@ -9,4 +9,8 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <maintainer>
+    <email>monsieurp@gentoo.org</email>
+    <name>Patrice Clement</name>
+  </maintainer>
 </pkgmetadata>

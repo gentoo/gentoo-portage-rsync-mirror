@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pfm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pfm/ChangeLog,v 1.3 2014/11/02 00:33:28 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pfm/ChangeLog,v 1.4 2015/05/20 08:00:04 monsieurp Exp $
+
+  20 May 2015; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Add myself to the maintainers list.
 
   02 Nov 2014; Tim Harder <radhermit@gentoo.org> -pfm-2.12.0.ebuild:
   Remove old.
@@ -15,4 +18,3 @@
   18 Nov 2011; Tim Harder <radhermit@gentoo.org> +pfm-2.12.0.ebuild,
   +metadata.xml:
   Initial import.
-
