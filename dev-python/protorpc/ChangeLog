@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/protorpc
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/protorpc/ChangeLog,v 1.1 2015/05/20 10:38:10 vapier Exp $
+
+*protorpc-0.10.0 (20 May 2015)
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +protorpc-0.10.0.ebuild:
+  New package for new gsutil from Chromium OS.

@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/google-apitools
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apitools/ChangeLog,v 1.1 2015/05/20 10:46:48 vapier Exp $
+
+*google-apitools-0.4.6 (20 May 2015)
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> +google-apitools-0.4.6.ebuild,
+  +metadata.xml:
+  New package for new gsutil from Chromium OS.
