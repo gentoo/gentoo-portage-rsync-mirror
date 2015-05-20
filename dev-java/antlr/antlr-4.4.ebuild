@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-4.4.ebuild,v 1.5 2015/05/18 13:15:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-4.4.ebuild,v 1.6 2015/05/20 20:32:44 monsieurp Exp $
 
 EAPI="5"
 
@@ -8,9 +8,14 @@ JAVA_PKG_IUSE="source"
 
 inherit java-pkg-2 java-ant-2
 
+# List of jar files we need to get from the Internets.
+JAR_LIST=(antlr-3.5.2-complete-no-st3.jar antlr-4.3-complete.jar)
+
 DESCRIPTION="A parser generator for C++, C#, Java, and Python"
 HOMEPAGE="http://www.antlr.org/"
-SRC_URI="https://github.com/${PN}/${PN}4/archive/${PV}.zip"
+SRC_URI="https://github.com/${PN}/${PN}4/archive/${PV}.zip
+http://www.antlr3.org/download/${JAR_LIST[0]}
+http://www.antlr.org/download/${JAR_LIST[1]}"
 LICENSE="BSD"
 SLOT="4"
 KEYWORDS="amd64 ~arm ~ia64 ~ppc ppc64 ~x86 ~x64-freebsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
@@ -27,6 +32,19 @@ DEPEND="${RDEPEND}
 	>=virtual/jdk-1.6"
 
 S="${WORKDIR}/${PN}4-${PV}"
+
+src_prepare() {
+	# Disable manual download + lib directory creation.
+	epatch "${FILESDIR}"/${P}-build.xml.patch
+
+	# Create lib directory ourselves.
+	mkdir "${S}"/lib/
+
+	# Copy downloaded jars in lib directory.
+	for myjar in ${JAR_LIST[@]}; do
+		cp "${DISTDIR}"/${myjar} "${S}"/lib/
+	done
+}
 
 src_compile() {
 	eant -f build.xml
