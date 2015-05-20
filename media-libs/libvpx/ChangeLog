@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.120 2015/05/20 15:26:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.122 2015/05/20 15:52:21 ago Exp $
+
+  20 May 2015; Agostino Sarubbo <ago@gentoo.org> libvpx-1.4.0.ebuild:
+  Stable for x86, wrt bug #549978
+
+  20 May 2015; Agostino Sarubbo <ago@gentoo.org> libvpx-1.4.0.ebuild:
+  Stable for amd64, wrt bug #549978
 
   20 May 2015; Mike Gilbert <floppym@gentoo.org> -libvpx-9999.ebuild:
   Drop unmaintained live ebuild.

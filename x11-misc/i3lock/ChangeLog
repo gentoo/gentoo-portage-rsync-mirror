@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/i3lock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.20 2015/01/21 18:22:43 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/i3lock/ChangeLog,v 1.21 2015/05/20 15:37:24 xarthisius Exp $
+
+*i3lock-2.7 (20 May 2015)
+
+  20 May 2015; Kacper Kowalik <xarthisius@gentoo.org> +i3lock-2.7.ebuild:
+  Version bump
 
   21 Jan 2015; Kacper Kowalik <xarthisius@gentoo.org> i3lock-2.6.ebuild:
   Apply epatch_user wrt #537272 by Alex Shaindlin <me@ashaindlin.com>
