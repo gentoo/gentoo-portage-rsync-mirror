@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.69.ebuild,v 1.1 2015/05/20 12:32:46 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cppcheck/cppcheck-1.69.ebuild,v 1.2 2015/05/20 18:54:34 xmw Exp $
 
 EAPI=5
 
@@ -81,7 +81,9 @@ src_test() {
 }
 
 src_install() {
-	emake install DESTDIR="${D}"
+	# it's not autotools-based, so "${ED}" here, not "${D}", bug 531760
+	emake install DESTDIR="${ED}"
+
 	insinto "/usr/share/${PN}/cfg"
 	doins cfg/*.cfg
 	if use qt4 ; then
