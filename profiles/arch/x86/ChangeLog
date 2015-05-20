@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/x86 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.193 2015/03/29 19:01:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/ChangeLog,v 1.194 2015/05/20 22:48:51 chewi Exp $
+
+  20 May 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
+  Unmask icedtea[infinality] as I'm about to mask it in base.
 
   29 Mar 2015; Mike Frysinger <vapier@gentoo.org> use.mask:
   Unmask USE=cilk.

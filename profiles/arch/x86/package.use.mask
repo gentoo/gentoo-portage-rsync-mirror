@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.151 2015/03/15 01:55:12 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.152 2015/05/20 22:48:51 chewi Exp $
 
 # This file requires >=portage-2.1.1
 
@@ -105,6 +105,10 @@ media-libs/phonon zeitgeist
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # dependency keyworded here, masked in base
 media-libs/freetype -infinality
+
+# James Le Cuirot <chewi@gentoo.org> (20 May 2015)
+# Masked in base like the above.
+dev-java/icedtea -infinality
 
 # Rick Farina <zerochaos@gentoo.org> (05 July 2012)
 # masked in base, unmask x86/amd64 only

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.676 2015/05/19 21:07:02 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.677 2015/05/20 22:50:10 chewi Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -516,6 +516,10 @@ sys-auth/pam_mktemp prevent-removal
 # Ben de Groot <yngwin@gentoo.org> (30 Jul 2012)
 # fontconfig-infinality dependency not yet keyworded on most arches
 media-libs/freetype infinality
+
+# James Le Cuirot <chewi@gentoo.org> (20 May 2015)
+# Mask this in conjunction with the above.
+dev-java/icedtea infinality
 
 # Ralph Sennhauser <sera@gentoo.org> (18 Jul 2012)
 # Requires masked eclipse-sdk.
