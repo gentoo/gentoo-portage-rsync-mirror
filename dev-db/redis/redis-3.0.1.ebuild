@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~hppa ~ppc64 ~x86 ~amd64-linux ~x86-linux ~x86-macos ~x86-solar
 IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 
-RDEPEND=">=dev-lang/lua-5.1:*
+RDEPEND=">=dev-lang/lua-5.1:=
 	tcmalloc? ( dev-util/google-perftools )
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND="virtual/pkgconfig
@@ -89,9 +89,9 @@ src_compile() {
 }
 
 src_install() {
-	insinto /etc/
+	insinto /etc
 	doins redis.conf sentinel.conf
-	use prefix || fowners redis:redis /etc/{redis,sentinel}.conf
+	fowners redis:redis /etc/{redis,sentinel}.conf
 	fperms 0644 /etc/{redis,sentinel}.conf
 
 	newconfd "${FILESDIR}/redis.confd" redis
@@ -100,7 +100,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}/redis.service"
 	systemd_newtmpfilesd "${FILESDIR}/redis.tmpfiles" redis.conf
 
-	nonfatal dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
+	dodoc 00-RELEASENOTES BUGS CONTRIBUTING MANIFESTO README
 
 	dobin src/redis-cli
 	dosbin src/redis-benchmark src/redis-server src/redis-check-aof src/redis-check-dump
