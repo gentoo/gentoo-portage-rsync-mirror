@@ -11,7 +11,6 @@ LICENSE="GPL3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
-RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${PN}"
 
