@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test
-DEPEND=gnome-base/libglade:2.0 sci-libs/gsl x11-libs/gtk+:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=gnome-base/libglade:2.0 sci-libs/gsl x11-libs/gtk+:2 virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=new user-friendly method built for automatic dX-tensor determination
 EAPI=5
 HOMEPAGE=http://www.nmr.chem.uu.nl/~christophe/numbat.html
@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=gnome-base/libglade:2.0 sci-libs/gsl x11-libs/gtk+:2 sci-chemistry/molmol sci-chemistry/pymol sci-visualization/gnuplot
 SLOT=0
 SRC_URI=http://comp-bio.anu.edu.au/private/downloads/Numbat/Numbat-0.999.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=b7c7f0effe772ff87c855fd2f6fff462

@@ -1,10 +1,10 @@
 DEFINED_PHASES=prepare pretend setup unpack
-DEPEND=sys-apps/util-linux app-text/docbook-xsl-stylesheets dev-libs/libxslt >=sys-boot/gnu-efi-3.0.2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+DEPEND=sys-apps/util-linux app-text/docbook-xsl-stylesheets dev-libs/libxslt >=sys-boot/gnu-efi-3.0.2 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=Minimalistic UEFI bootloader
 EAPI=5
 HOMEPAGE=http://freedesktop.org/wiki/Software/gummiboot/
 LICENSE=LGPL-2.1+
 RDEPEND=sys-apps/util-linux
 SLOT=0
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	25e9476cdec14dfb0af32f4c83c3f297	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	linux-info	25e9476cdec14dfb0af32f4c83c3f297	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=49cd17173d8d2f915e7294ec888a8fde

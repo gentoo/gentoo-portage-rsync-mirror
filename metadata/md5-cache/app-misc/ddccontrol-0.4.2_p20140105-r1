@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=app-misc/ddccontrol-db dev-libs/libxml2:2 gtk? ( x11-libs/gtk+:2 ) nls? ( sys-devel/gettext ) pci? ( sys-apps/pciutils ) video_cards_fglrx? ( x11-libs/amd-adl-sdk ) dev-perl/XML-Parser dev-util/intltool sys-kernel/linux-headers doc? ( >=app-text/docbook-xsl-stylesheets-1.65.1 >=dev-libs/libxslt-1.1.6 app-text/htmltidy ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=app-misc/ddccontrol-db dev-libs/libxml2:2 gtk? ( x11-libs/gtk+:2 ) nls? ( sys-devel/gettext ) pci? ( sys-apps/pciutils ) video_cards_fglrx? ( x11-libs/amd-adl-sdk ) dev-perl/XML-Parser dev-util/intltool sys-kernel/linux-headers doc? ( >=app-text/docbook-xsl-stylesheets-1.65.1 >=dev-libs/libxslt-1.1.6 app-text/htmltidy ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=DDCControl allows control of monitor parameters via DDC
 EAPI=5
 HOMEPAGE=http://ddccontrol.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-misc/ddccontrol-db dev-libs/libxml2:2 gtk? ( x11-libs/gtk+:2 ) nls? ( sys-devel/gettext ) pci? ( sys-apps/pciutils ) video_cards_fglrx? ( x11-libs/amd-adl-sdk )
 SLOT=0
 SRC_URI=https://github.com/ddccontrol/ddccontrol/archive/9d89d8c0b959a4da62ecc50fb2aeb23142d4bfb4.tar.gz -> ddccontrol-0.4.2_p20140105.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=6413b0d993fae87b10329a4e370798cd

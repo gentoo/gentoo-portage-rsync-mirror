@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install postinst postrm prepare unpack
-DEPEND=!dev-cpp/libcmis:0 !dev-cpp/libcmis:0.2 !dev-cpp/libcmis:0.3 !dev-cpp/libcmis:0.4 dev-libs/boost:= dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X dev-libs/libxslt ) test? ( dev-util/cppcheck dev-util/cppunit ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
+DEPEND=!dev-cpp/libcmis:0 !dev-cpp/libcmis:0.2 !dev-cpp/libcmis:0.3 !dev-cpp/libcmis:0.4 dev-libs/boost:= dev-libs/libxml2 net-misc/curl virtual/pkgconfig man? ( app-text/docbook2X dev-libs/libxslt ) test? ( dev-util/cppcheck dev-util/cppunit ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=dev-vcs/git-1.8.2.1
 DESCRIPTION=C++ client library for the CMIS interface
 EAPI=5
 HOMEPAGE=https://sourceforge.net/projects/libcmis/
@@ -7,5 +7,5 @@ IUSE=static-libs man test
 LICENSE=|| ( GPL-2 LGPL-2 MPL-1.1 )
 RDEPEND=!dev-cpp/libcmis:0 !dev-cpp/libcmis:0.2 !dev-cpp/libcmis:0.3 !dev-cpp/libcmis:0.4 dev-libs/boost:= dev-libs/libxml2 net-misc/curl
 SLOT=0.5
-_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=alternatives	326031758c86cd08f5844f475f03ac01	autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=5de2ee1c99cdcc33e023ebf4cf551321

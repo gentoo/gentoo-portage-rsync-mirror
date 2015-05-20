@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=introspection? ( >=dev-libs/gobject-introspection-0.10 ) >=sys-devel/libtool-2.2 vala? ( || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
+DEPEND=introspection? ( >=dev-libs/gobject-introspection-0.10 ) >=sys-devel/libtool-2.2 vala? ( || ( dev-lang/vala:0.26[vapigen(+)] dev-lang/vala:0.24[vapigen(+)] dev-lang/vala:0.22[vapigen(+)] dev-lang/vala:0.20[vapigen(+)] ) ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 dev-vcs/git
 DESCRIPTION=A dynamic, any to any, pixel format conversion library
 EAPI=4
 HOMEPAGE=http://www.gegl.org/babl/
@@ -7,5 +7,5 @@ IUSE=altivec +introspection cpu_flags_x86_sse cpu_flags_x86_mmx vala
 LICENSE=LGPL-3
 RDEPEND=introspection? ( >=dev-libs/gobject-introspection-0.10 )
 SLOT=0
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	vala	a41415fe361172827ed11b6a32ee38fb
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	git-2	e28f0d8a9b321431b1e699782851b827	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	vala	a41415fe361172827ed11b6a32ee38fb
 _md5_=2c2b3131b3e5c80ea735b9deb96799dd

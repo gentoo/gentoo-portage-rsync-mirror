@@ -1,6 +1,16 @@
 # ChangeLog for dev-embedded/openocd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.52 2014/06/17 04:57:34 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.54 2015/05/20 05:51:15 vapier Exp $
+
+*openocd-0.9.0 (20 May 2015)
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> +openocd-0.9.0.ebuild,
+  openocd-9999.ebuild:
+  Version bump from Chromium OS.
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> openocd-0.8.0.ebuild,
+  openocd-9999.ebuild:
+  Fix typo in usb blaster configure flag #524932 by Marek Czerski.
 
   17 Jun 2014; Mike Frysinger <vapier@gentoo.org> openocd-0.8.0.ebuild,
   openocd-9999.ebuild:

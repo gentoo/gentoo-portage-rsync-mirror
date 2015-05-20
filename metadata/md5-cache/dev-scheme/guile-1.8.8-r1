@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile config configure install postinst postrm prepare
-DEPEND=>=dev-libs/gmp-4.1 >=sys-devel/libtool-1.5.6 sys-devel/gettext emacs? ( virtual/emacs ) sys-apps/texinfo !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-libs/gmp-4.1 >=sys-devel/libtool-1.5.6 sys-devel/gettext emacs? ( virtual/emacs ) sys-apps/texinfo !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Scheme interpreter
 EAPI=5
 HOMEPAGE=http://www.gnu.org/software/guile/
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/gmp-4.1 >=sys-devel/libtool-1.5.6 sys-devel/gettext emacs? ( 
 RESTRICT=!regex? ( test )
 SLOT=12
 SRC_URI=mirror://gnu/guile/guile-1.8.8.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=282a639d3fa4a8ac2d129cf155531c5e

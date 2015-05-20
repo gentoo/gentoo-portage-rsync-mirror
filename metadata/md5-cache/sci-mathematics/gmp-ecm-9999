@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install preinst prepare unpack
-DEPEND=dev-libs/gmp blas? ( sci-libs/gsl ) gwnum? ( sci-mathematics/gwnum ) openmp? ( sys-devel/gcc[openmp] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
+DEPEND=dev-libs/gmp blas? ( sci-libs/gsl ) gwnum? ( sci-mathematics/gwnum ) openmp? ( sys-devel/gcc[openmp] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 || ( dev-vcs/subversion[http] dev-vcs/subversion[webdav-neon] dev-vcs/subversion[webdav-serf] ) net-misc/rsync
 DESCRIPTION=Elliptic Curve Method for Integer Factorization
 EAPI=5
 HOMEPAGE=http://ecm.gforge.inria.fr/
@@ -8,5 +8,5 @@ LICENSE=GPL-3 LGPL-3
 RDEPEND=dev-libs/gmp blas? ( sci-libs/gsl ) gwnum? ( sci-mathematics/gwnum ) openmp? ( sys-devel/gcc[openmp] )
 REQUIRED_USE=gwnum? ( !openmp )
 SLOT=0
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	subversion	c12bdf4fcc82f86ad89b14c8f76c4026	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=4ee0ec301ac58841b34cf70d09bf2fca

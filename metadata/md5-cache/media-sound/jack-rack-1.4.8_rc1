@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure prepare unpack
-DEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf ) virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf ) virtual/pkgconfig sys-devel/gettext !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=JACK Rack is an effects rack for the JACK low latency audio API
 EAPI=4
 HOMEPAGE=http://jack-rack.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=x11-libs/gtk+-2.12:2 >=media-libs/ladspa-sdk-1.12 media-sound/jack-audio-connection-kit alsa? ( media-libs/alsa-lib ) lash? ( >=media-sound/lash-0.5 ) gnome? ( >=gnome-base/libgnomeui-2 ) virtual/libintl xml? ( dev-libs/libxml2 media-libs/liblrdf )
 SLOT=0
 SRC_URI=mirror://debian/pool/main/j/jack-rack/jack-rack_1.4.8~rc1.orig.tar.gz mirror://debian/pool/main/j/jack-rack/jack-rack_1.4.8~rc1-1.debian.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=f75942d86607024c1793c05beac33226

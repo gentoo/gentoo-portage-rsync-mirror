@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst postrm prepare setup test unpack
-DEPEND=ruby_targets_ruby19? ( dev-ruby/ruby-romkan[ruby_targets_ruby19] dev-ruby/bsearch[ruby_targets_ruby19] ) app-dicts/migemo-dict[-unicode] emacs? ( virtual/emacs app-emacs/apel ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
+DEPEND=ruby_targets_ruby19? ( dev-ruby/ruby-romkan[ruby_targets_ruby19] dev-ruby/bsearch[ruby_targets_ruby19] ) app-dicts/migemo-dict[-unicode] emacs? ( virtual/emacs app-emacs/apel ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 ruby_targets_ruby19? ( dev-lang/ruby:1.9 )
 DESCRIPTION=Migemo is Japanese Incremental Search Tool
 EAPI=5
 HOMEPAGE=http://0xcc.net/migemo/
@@ -10,5 +10,5 @@ RDEPEND=ruby_targets_ruby19? ( dev-ruby/ruby-romkan[ruby_targets_ruby19] dev-rub
 REQUIRED_USE=|| ( ruby_targets_ruby19 )
 SLOT=0
 SRC_URI=https://github.com/yshl/migemo-for-Ruby-1.9/archive/0.40p2.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	f7dce580d4098b526be3fa17d4242820	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	f7dce580d4098b526be3fa17d4242820	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=4e14a843f5a626e84631d9583753b387

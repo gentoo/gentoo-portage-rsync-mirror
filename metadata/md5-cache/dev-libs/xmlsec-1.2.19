@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare test
-DEPEND=>=dev-libs/libxml2-2.7.4 >=dev-libs/libxslt-1.0.20 gcrypt? ( >=dev-libs/libgcrypt-1.4.0:0 ) gnutls? ( >=net-libs/gnutls-2.8.0 ) nss? ( >=dev-libs/nspr-4.4.1 >=dev-libs/nss-3.9 ) openssl? ( >=dev-libs/openssl-0.9.7 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=dev-libs/libxml2-2.7.4 >=dev-libs/libxslt-1.0.20 gcrypt? ( >=dev-libs/libgcrypt-1.4.0:0 ) gnutls? ( >=net-libs/gnutls-2.8.0 ) nss? ( >=dev-libs/nspr-4.4.1 >=dev-libs/nss-3.9 ) openssl? ( >=dev-libs/openssl-0.9.7 ) virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Command line tool for signing, verifying, encrypting and decrypting XML
 EAPI=5
 HOMEPAGE=http://www.aleksey.com/xmlsec
@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/libxml2-2.7.4 >=dev-libs/libxslt-1.0.20 gcrypt? ( >=dev-libs/
 REQUIRED_USE=|| ( gcrypt gnutls nss openssl ) gnutls? ( gcrypt )
 SLOT=0
 SRC_URI=http://www.aleksey.com/xmlsec/download/xmlsec1-1.2.19.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=5bf2bb902c5d7af508075ba92e4621eb

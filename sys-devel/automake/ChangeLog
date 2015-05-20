@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.220 2015/05/20 04:21:29 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.221 2015/05/20 05:56:59 vapier Exp $
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> automake-1.14.1.ebuild:
+  Mark stable for all #547876.
 
   20 May 2015; Matt Turner <mattst88@gentoo.org> automake-1.14.1.ebuild:
   alpha stable, bug 547876.

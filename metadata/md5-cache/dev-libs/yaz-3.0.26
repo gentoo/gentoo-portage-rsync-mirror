@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install unpack
-DEPEND=dev-libs/libxml2 dev-libs/libxslt dev-libs/openssl icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ziffy? ( net-libs/libpcap ) virtual/pkgconfig dev-lang/tcl !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=dev-libs/libxml2 dev-libs/libxslt dev-libs/openssl icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ziffy? ( net-libs/libpcap ) virtual/pkgconfig dev-lang/tcl !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1 >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=C/C++ programmer's toolkit supporting the development of Z39.50v3 clients and servers
 HOMEPAGE=http://www.indexdata.dk/yaz
 IUSE=debug icu tcpd ziffy
@@ -8,5 +8,5 @@ LICENSE=BSD GPL-2
 RDEPEND=dev-libs/libxml2 dev-libs/libxslt dev-libs/openssl icu? ( dev-libs/icu ) tcpd? ( sys-apps/tcp-wrappers ) ziffy? ( net-libs/libpcap )
 SLOT=0
 SRC_URI=http://ftp.indexdata.dk/pub/yaz/yaz-3.0.26.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=4c6264f12ab909c59e0e51e5bc7ae759

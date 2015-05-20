@@ -1,5 +1,5 @@
 DEFINED_PHASES=configure install prepare
-DEPEND=media-libs/libogg virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=media-libs/libogg virtual/pkgconfig !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=A fixed-point version of the Ogg Vorbis decoder (also known as libvorbisidec)
 EAPI=4
 HOMEPAGE=http://wiki.xiph.org/Tremor
@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=media-libs/libogg
 SLOT=0
 SRC_URI=mirror://gentoo/tremor-0_pre20120120.tar.xz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=60d0066652b9be6dbd92873bf8516ab3

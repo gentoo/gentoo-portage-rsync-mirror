@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm prepare
-DEPEND=>=sys-libs/ncurses-5.2 emacs? ( virtual/emacs ) sys-devel/flex virtual/pkgconfig virtual/yacc !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13:1.13 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=>=sys-libs/ncurses-5.2 emacs? ( virtual/emacs ) sys-devel/flex virtual/pkgconfig virtual/yacc !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1:1.14 >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Interactively examine a C program
 EAPI=4
 HOMEPAGE=http://cscope.sourceforge.net/
@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2+
 RDEPEND=>=sys-libs/ncurses-5.2 emacs? ( virtual/emacs )
 SLOT=0
 SRC_URI=mirror://sourceforge/cscope/cscope-15.8a.tar.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=ed47075da95fc6b74784cff941bd3a25

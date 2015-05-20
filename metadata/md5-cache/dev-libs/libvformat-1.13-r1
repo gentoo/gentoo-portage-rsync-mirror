@@ -1,10 +1,10 @@
 DEFINED_PHASES=install unpack
-DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=!<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1 >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Library to read and write vcard files
 HOMEPAGE=http://sourceforge.net/projects/vformat/
 KEYWORDS=alpha amd64 ppc sparc x86
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=mirror://debian/pool/main/libv/libvformat/libvformat_1.13.orig.tar.gz mirror://debian/pool/main/libv/libvformat/libvformat_1.13-4.diff.gz
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=2e622e068051de8e0e9acd7adee33681

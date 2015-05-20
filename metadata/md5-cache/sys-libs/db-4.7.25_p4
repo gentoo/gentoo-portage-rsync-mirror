@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install postinst postrm preinst setup test unpack
-DEPEND=tcl? ( >=dev-lang/tcl-8.4 ) test? ( >=dev-lang/tcl-8.4 ) java? ( >=virtual/jdk-1.5 ) >=sys-devel/binutils-2.16.1 test? ( >=dev-lang/tcl-8.4 ) java? ( >=dev-java/java-config-2.2.0 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.13 >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+DEPEND=tcl? ( >=dev-lang/tcl-8.4 ) test? ( >=dev-lang/tcl-8.4 ) java? ( >=virtual/jdk-1.5 ) >=sys-devel/binutils-2.16.1 test? ( >=dev-lang/tcl-8.4 ) java? ( >=dev-java/java-config-2.2.0 ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.14.1 >=sys-devel/automake-1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 DESCRIPTION=Oracle Berkeley DB
 HOMEPAGE=http://www.oracle.com/technology/software/products/berkeley-db/index.html
 IUSE=doc java cxx tcl test rpc doc test examples elibc_FreeBSD java
@@ -8,5 +8,5 @@ LICENSE=Sleepycat
 RDEPEND=tcl? ( dev-lang/tcl ) java? ( >=virtual/jre-1.5 ) java? ( >=dev-java/java-config-2.2.0 )
 SLOT=4.7
 SRC_URI=http://download.oracle.com/berkeley-db/db-4.7.25.tar.gz http://www.oracle.com/technology/products/berkeley-db/db/update/4.7.25/patch.4.7.25.1 http://www.oracle.com/technology/products/berkeley-db/db/update/4.7.25/patch.4.7.25.2 http://www.oracle.com/technology/products/berkeley-db/db/update/4.7.25/patch.4.7.25.3 http://www.oracle.com/technology/products/berkeley-db/db/update/4.7.25/patch.4.7.25.4
-_eclasses_=autotools	999c8f6cf5d91495cb0779588f20716c	db	217d1394b8ade73a6a416da2b3be3332	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f7dce580d4098b526be3fa17d4242820	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	db	217d1394b8ade73a6a416da2b3be3332	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	java-pkg-opt-2	f9bbbe5092225a2059aa9e6a3a2b52f1	java-utils-2	f7dce580d4098b526be3fa17d4242820	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=a62ac3c8f34cec49c96d948c6c23ba15
