@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/stevedore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.30 2015/04/22 19:39:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/stevedore/ChangeLog,v 1.31 2015/05/20 15:06:59 floppym Exp $
+
+*stevedore-1.4.0-r1 (20 May 2015)
+*stevedore-1.1.0-r1 (20 May 2015)
+
+  20 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +files/1.1.0-requirements.patch, +files/1.4.0-requirements.patch,
+  +stevedore-1.1.0-r1.ebuild, +stevedore-1.4.0-r1.ebuild,
+  -stevedore-1.1.0.ebuild, -stevedore-1.4.0.ebuild:
+  Remove invalid entries from requirements.txt, bug 546776.
 
 *stevedore-1.4.0 (22 Apr 2015)
 

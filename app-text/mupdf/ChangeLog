@@ -1,6 +1,11 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.116 2015/04/17 15:37:50 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.117 2015/05/20 15:08:10 xmw Exp $
+
+*mupdf-1.7a (20 May 2015)
+
+  20 May 2015; Michael Weber <xmw@gentoo.org> +mupdf-1.7a.ebuild:
+  Version bump (chneukirchen).
 
 *mupdf-1.7 (17 Apr 2015)
 
