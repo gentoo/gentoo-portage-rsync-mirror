@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mpfr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.189 2015/05/17 06:33:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mpfr/ChangeLog,v 1.190 2015/05/20 00:39:57 mattst88 Exp $
+
+  20 May 2015; Matt Turner <mattst88@gentoo.org> mpfr-3.1.2_p10.ebuild:
+  alpha stable, bug 549520.
 
   17 May 2015; Jeroen Roovers <jer@gentoo.org> mpfr-3.1.2_p10.ebuild:
   Stable for HPPA (bug #549520).
