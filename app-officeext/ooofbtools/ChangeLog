@@ -1,6 +1,12 @@
 # ChangeLog for app-officeext/ooofbtools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.23 2015/05/13 10:06:33 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-officeext/ooofbtools/ChangeLog,v 1.24 2015/05/20 10:14:07 pinkbyte Exp $
+
+*ooofbtools-2.35 (20 May 2015)
+
+  20 May 2015; Sergey Popov <pinkbyte@gentoo.org> +ooofbtools-2.35.ebuild:
+  Version bump, wrt bug #549158, thanks to Sergey Starikoff <Ikonta AT
+  yandex.ru>
 
   13 May 2015; Sergey Popov <pinkbyte@gentoo.org> -ooofbtools-2.30.ebuild,
   -ooofbtools-2.31.ebuild:
