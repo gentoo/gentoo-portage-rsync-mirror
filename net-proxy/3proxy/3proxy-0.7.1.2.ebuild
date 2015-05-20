@@ -6,7 +6,7 @@ inherit eutils
 
 DESCRIPTION="3Proxy is really tiny cross-platform proxy servers set"
 HOMEPAGE="http://www.3proxy.ru/"
-SRC_URI="http://3proxy.ru/${PVR}/${P}.tgz"
+SRC_URI="http://3proxy.ru/${PV}/${P}.tgz"
 LICENSE="GPL3"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
