@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.2 2015/05/05 08:46:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.3 2015/05/20 01:35:05 idella4 Exp $
 
 EAPI=5
 
@@ -35,8 +35,8 @@ DEPEND="${RDEPEND}
 	app-arch/unzip
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? (
-		dev-python/sphinx
-		dev-python/sphinx-better-theme
+		dev-python/sphinx[${PYTHON_USEDEP}]
+		dev-python/sphinx-better-theme[${PYTHON_USEDEP}]
 	)
 	test? ( dev-python/nose[${PYTHON_USEDEP}] )
 	"

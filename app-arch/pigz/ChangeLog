@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pigz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.41 2015/01/27 04:33:36 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pigz/ChangeLog,v 1.42 2015/05/20 01:55:37 mattst88 Exp $
+
+  20 May 2015; Matt Turner <mattst88@gentoo.org> pigz-2.3.3.ebuild:
+  alpha stable.
 
 *pigz-2.3.3 (27 Jan 2015)
 

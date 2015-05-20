@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.50 2015/05/05 08:46:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.52 2015/05/20 01:37:33 idella4 Exp $
+
+  20 May 2015; Ian Delaney <idella4@gentoo.org> pillow-2.8.1.ebuild:
+  add missed '[${PYTHON_USEDEP}]' to deps
 
   05 May 2015; Justin Lecher <jlec@gentoo.org> pillow-2.8.1.ebuild:
   Add missing test dep, bug #547784
