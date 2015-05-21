@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/tkdvd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.24 2015/05/21 13:28:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/tkdvd/ChangeLog,v 1.25 2015/05/21 17:26:10 jlec Exp $
+
+  21 May 2015; Justin Lecher <jlec@gentoo.org> -tkdvd-4.0.7.ebuild,
+  -tkdvd-4.0.9.ebuild:
+  Drop old
 
   21 May 2015; Agostino Sarubbo <ago@gentoo.org> tkdvd-4.0.9-r1.ebuild:
   Stable for amd64, wrt bug #547274
