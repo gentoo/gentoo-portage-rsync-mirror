@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pykerberos
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.14 2015/04/08 08:05:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pykerberos/ChangeLog,v 1.15 2015/05/21 12:20:38 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> pykerberos-1.1.5.ebuild:
+  Stable for amd64, wrt bug #535348
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pykerberos-1.1-r2.ebuild,
   pykerberos-1.1.5.ebuild:

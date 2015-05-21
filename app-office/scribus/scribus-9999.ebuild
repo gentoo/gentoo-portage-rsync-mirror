@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.14 2015/05/18 16:56:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.15 2015/05/21 12:12:02 jlec Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ ESVN_PROJECT=Scribus-1.5
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
-IUSE="cairo debug examples graphicsmagick hunspell +minimal osg +pdf poppler scripts templates tk"
+IUSE="+boost debug examples graphicsmagick hunspell +minimal osg +pdf scripts templates tk"
 
 #a=$((ls resources/translations/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'; ls resources/loremipsum/*xml | sed -e 's:\.: :g' -e 's:loremipsum\/: :g'| awk '{print $2}'; ls resources/dicts/hyph*dic | sed -e 's:\.: :g' -e 's:hyph_: :g' | awk '{print $2}'; ls resources/dicts/README_*txt | sed -e 's:_hyph::g' -e 's:\.: :g' -e 's:README_: :g' | awk '{print $2}') | sort | uniq); echo $a
 IUSE_LINGUAS=" af ar bg br ca ca_ES cs cs_CZ cy cy_GB da da_DK de de_1901 de_CH de_DE el en_AU en_EN en_GB en_US eo es es_ES et eu fi fi_FI fr gl he hr hu hu_HU ia id id_ID is is_IS it ja ko ku la lt lt_LT nb_NO nl nn_NO pl pl_PL pt pt_BR pt_PT ro ro_RO ru ru_RU_0 sa sk sk_SK sl sl_SI sq sr sv sv_SE th_TH tr uk uk_UA zh_CN zh_TW"
@@ -33,6 +33,7 @@ REQUIRED_USE="
 COMMON_DEPEND="
 	${PYTHON_DEPS}
 	app-text/libmspub
+	>=app-text/poppler-0.19.0:=
 	dev-libs/boost
 	dev-libs/hyphen
 	dev-libs/librevenge
@@ -59,13 +60,12 @@ COMMON_DEPEND="
 	net-print/cups
 	sys-libs/zlib[minizip]
 	virtual/jpeg:0=
-	cairo? ( >=x11-libs/cairo-1.10.0[X,svg] )
-	!cairo? ( media-libs/libart_lgpl )
+	>=x11-libs/cairo-1.10.0[X,svg]
+	boost? ( dev-libs/boost )
 	hunspell? ( app-text/hunspell )
 	graphicsmagick? ( media-gfx/graphicsmagick )
 	osg? ( dev-games/openscenegraph )
 	pdf? ( app-text/podofo )
-	poppler? ( >=app-text/poppler-0.19.0:= )
 	scripts? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 	tk? ( virtual/python-imaging[tk?,${PYTHON_USEDEP}] )
 "
@@ -75,7 +75,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.5.0-docs.patch
+	"${FILESDIR}"/${PN}-1.5.0-docdir.patch
+	"${FILESDIR}"/${PN}-1.5.0-fpic.patch
 	)
 
 src_prepare() {
@@ -91,13 +92,12 @@ src_prepare() {
 	sed \
 		-e "/^\s*unzip\.[ch]/d" \
 		-e "/^\s*ioapi\.[ch]/d" \
-		-i scribus/CMakeLists.txt || die
+		-i scribus/CMakeLists.txt Scribus.pro || die
+	rm scribus/ioapi.[ch] || die
 
 	sed \
 		-e 's:\(${CMAKE_INSTALL_PREFIX}\):./\1:g' \
 		-i resources/templates/CMakeLists.txt || die
-
-	use amd64 && append-flags -fPIC
 
 	cmake-utils_src_prepare
 	subversion_src_prepare
@@ -124,13 +124,11 @@ src_configure() {
 		-DHAVE_PYTHON=ON
 		-DPYTHON_INCLUDE_PATH="$(python_get_includedir)"
 		-DPYTHON_LIBRARY="$(python_get_library_path)"
-		-DWANT_NORPATH=ON
-		-DWANT_QTARTHUR=ON
-		-DWANT_QT3SUPPORT=OFF
-		-DGENTOOVERSION=${PVR}
+		-DWANT_DISTROBUILD=ON
+		-DDOCDIR="/usr/share/doc/${PF}/"
 		-DWANT_GUI_LANG=${langs#;}
 		$(cmake-utils_use_with pdf PODOFO)
-		$(cmake-utils_use_want cairo)
+		$(cmake-utils_use_with boost)
 		$(cmake-utils_use_want graphicsmagick)
 		$(cmake-utils_use_want osg)
 		$(cmake-utils_use_want debug DEBUG)
@@ -164,7 +162,12 @@ src_install() {
 
 	mv "${ED}"/usr/share/doc/${PF}/{en,html} || die
 	ln -sf html "${ED}"/usr/share/doc/${PF}/en || die
-	docompress -x /usr/share/doc/${PF}/en
+	cat >> "${T}"/COPYING <<- EOF
+	${PN} is licensed under the "${LICENSE}".
+	Please visit http://www.gnu.org/licenses/gpl-2.0.html for the complete license text.
+	EOF
+	dodoc "${T}"/COPYING
+	docompress -x /usr/share/doc/${PF}/en /usr/share/doc/${PF}/{AUTHORS,TRANSLATION,LINKS,COPYING}
 	doicon resources/icons/scribus.png
 	domenu scribus.desktop
 }
@@ -183,12 +186,16 @@ safe_delete () {
 	case $1 in
 		dir)
 			if [[ -d "${2}" ]]; then
+				ebegin "Deleting ${2} recursively"
 				rm -r "${2}" || die
+				eend $?
 			fi
 			;;
 		file)
 			if [[ -f "${2}" ]]; then
+				ebegin "Deleting ${2}"
 				rm "${2}" || die
+				eend $?
 			fi
 			;;
 		*)

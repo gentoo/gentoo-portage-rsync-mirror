@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.44 2015/05/07 18:28:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.45 2015/05/21 12:20:29 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> opendbx-1.4.5-r1.ebuild:
+  Stable for amd64, wrt bug #530176
 
 *opendbx-1.4.5-r1 (07 May 2015)
 *opendbx-1.5.0-r1 (07 May 2015)

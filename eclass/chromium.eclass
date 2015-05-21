@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.10 2015/05/21 01:37:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.11 2015/05/21 12:28:00 floppym Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -33,7 +33,7 @@ chromium_suid_sandbox_check_kernel_config() {
 		ERROR_NET_NS="NET_NS is required for sandbox to work"
 		ERROR_USER_NS="USER_NS is required for sandbox to work"
 		ERROR_SECCOMP_FILTER="SECCOMP_FILTER is required for sandbox to work"
-		CONFIG_CHECK="~PID_NS ~NET_NS ~SECCOMP_FILTER ~USED_NS"
+		CONFIG_CHECK="~PID_NS ~NET_NS ~SECCOMP_FILTER ~USER_NS"
 		check_extra_config
 	fi
 }

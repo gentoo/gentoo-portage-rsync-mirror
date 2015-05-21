@@ -1,6 +1,14 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.207 2015/05/20 04:59:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.208 2015/05/21 12:12:02 jlec Exp $
+
+*scribus-1.5.0 (21 May 2015)
+
+  21 May 2015; Justin Lecher <jlec@gentoo.org>
+  +files/scribus-1.5.0-docdir.patch, +files/scribus-1.5.0-fpic.patch,
+  +scribus-1.5.0.ebuild, -scribus-1.4.9999.ebuild, metadata.xml,
+  scribus-9999.ebuild:
+  Version Bump
 
   20 May 2015; Jeroen Roovers <jer@gentoo.org>
   -files/scribus-1.3.5.1-system-hyphen.patch,
