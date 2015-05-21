@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/slf4j-api
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.24 2015/05/18 13:15:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/slf4j-api/ChangeLog,v 1.25 2015/05/21 08:28:12 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> slf4j-api-1.7.7.ebuild:
+  Stable for x86, wrt bug #549760
 
   18 May 2015; Agostino Sarubbo <ago@gentoo.org> slf4j-api-1.7.7.ebuild:
   Stable for amd64, wrt bug #549760

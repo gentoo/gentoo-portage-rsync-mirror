@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile install test unpack
-DEPEND=>=dev-lang/go-1.4 dev-go/go-net >=dev-vcs/git-1.8.2.1
+DEPEND=>=dev-lang/go-1.4 dev-go/go-net
 DESCRIPTION=Go Tools
 EAPI=5
 HOMEPAGE=https://godoc.org/golang.org/x/tools
@@ -7,5 +7,4 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/golang/tools/archive/3d1847243ea4f07666a91110f48e79e43396603d.tar.gz -> go-tools-1.4.2_p20150520.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=a9d0c13e086a65abd49ea47ce8f4255c
+_md5_=e74119e413d788a54964bd9cbfa5a0a9

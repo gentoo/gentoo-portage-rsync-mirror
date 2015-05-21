@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-modules/jboss-modules-1.3.3.ebuild,v 1.1 2014/05/31 19:38:55 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jboss-modules/jboss-modules-1.3.3.ebuild,v 1.3 2015/05/21 08:24:48 ago Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/${PN}/${PN}/archive/${PV}.Final.tar.gz -> ${P}.tar.g
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.7"

@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150520.ebuild,v 1.1 2015/05/21 06:58:41 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150520.ebuild,v 1.2 2015/05/21 08:25:46 zmedico Exp $
 
 EAPI=5
-inherit git-r3
 
 KEYWORDS="~amd64"
 DESCRIPTION="Go supplementary network libraries"
