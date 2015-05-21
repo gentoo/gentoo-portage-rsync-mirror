@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.521 2015/04/28 07:45:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.522 2015/05/21 16:33:45 maekke Exp $
+
+  21 May 2015; Markus Meier <maekke@gentoo.org> lftp-4.6.2.ebuild:
+  arm stable, bug #536036
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> lftp-4.6.2.ebuild:
   Stable for ia64, wrt bug #536036
