@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/npth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/npth/ChangeLog,v 1.6 2015/04/26 12:49:51 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/npth/ChangeLog,v 1.7 2015/05/21 04:27:43 mattst88 Exp $
+
+  21 May 2015; Matt Turner <mattst88@gentoo.org> npth-1.1.ebuild:
+  added ~alpha, bug 546478.
 
   26 Apr 2015; Anthony G. Basile <blueness@gentoo.org> npth-0.91.ebuild,
   npth-1.0.ebuild, npth-1.1.ebuild:

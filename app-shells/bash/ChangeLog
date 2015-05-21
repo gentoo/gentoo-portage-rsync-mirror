@@ -1,6 +1,16 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.429 2015/02/24 20:58:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.431 2015/05/21 04:06:28 vapier Exp $
+
+*bash-4.3_p39 (21 May 2015)
+
+  21 May 2015; Mike Frysinger <vapier@gentoo.org> +bash-4.3_p39.ebuild:
+  Version bump.
+
+  20 May 2015; Mike Frysinger <vapier@gentoo.org> files/bashrc-r2:
+  Back out the `history -a` by default as it can be a bit troublesome with
+  the constant disk load (failing drives, flaky network e.g. NFS, etc...).
+  See #517342 for details.
 
 *bash-4.3_p33-r2 (24 Feb 2015)
 
