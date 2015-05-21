@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.61 2015/04/26 16:51:22 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.62 2015/05/21 03:40:29 mattst88 Exp $
+
+  21 May 2015; Matt Turner <mattst88@gentoo.org> unittest2-1.0.1-r1.ebuild:
+  Added ~alpha, bug 544146.
 
   26 Apr 2015; Jeroen Roovers <jer@gentoo.org> unittest2-1.0.1-r1.ebuild:
   Marked ~ppc64 (bug #544148).
