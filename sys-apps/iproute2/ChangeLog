@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.260 2015/05/13 09:47:21 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.262 2015/05/21 02:22:03 vapier Exp $
+
+*iproute2-4.0.0-r2 (21 May 2015)
+
+  21 May 2015; Mike Frysinger <vapier@gentoo.org> +iproute2-4.0.0-r2.ebuild:
+  Increase min kernel headers dep so we can enable ipset all the time #549948 by
+  Igor Vasilkov.
+
+  21 May 2015; Mike Frysinger <vapier@gentoo.org> iproute2-3.19.0.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   13 May 2015; Anthony G. Basile <blueness@gentoo.org> iproute2-3.19.0.ebuild:
   Stable for arm.  Bug #543662.
