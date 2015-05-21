@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.41 2015/05/15 12:27:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.42 2015/05/21 02:57:12 patrick Exp $
 
 # This file requires >=portage-2.1.1
+
+# Patrick Lauer <patrick@gentoo.org> (21 May 2015)
+# missing keywords on icedtea7
+dev-java/icedtea-web icedtea7
 
 # Pacho Ramos <pacho@gentoo.org> (15 May 2015)
 # Missing stable

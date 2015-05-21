@@ -1,4 +1,4 @@
-DEFINED_PHASES=install nofetch postinst postrm preinst prerm setup unpack
+DEFINED_PHASES=install nofetch postinst postrm preinst setup unpack
 DEPEND=>=sys-apps/sed-4
 DESCRIPTION=The web browser from Google
 EAPI=5
@@ -11,4 +11,4 @@ RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_44.0.2403.4-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-unstable/google-chrome-unstable_44.0.2403.4-1_i386.deb )
 _eclasses_=chromium	c6002d4dc78228dc8f0c71d5d8c747b2	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	linux-info	25e9476cdec14dfb0af32f4c83c3f297	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=85976ed421f125cd62add50fe165a5f1
+_md5_=acd4a61a7b66706b23c51a6cca56c01b

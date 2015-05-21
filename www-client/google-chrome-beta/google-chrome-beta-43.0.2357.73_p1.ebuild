@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/google-chrome-beta-43.0.2357.73_p1.ebuild,v 1.1 2015/05/20 20:34:33 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-beta/google-chrome-beta-43.0.2357.73_p1.ebuild,v 1.2 2015/05/21 02:55:47 floppym Exp $
 
 EAPI="5"
 
@@ -154,22 +154,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
-	local lib libdir
-	for libdir in {,usr/}$(get_libdir); do
-		lib=${EROOT}${libdir}/libudev.so.1
-		if [[ -e ${lib} ]]; then
-			ln -fs "${lib}" "${EROOT}${CHROME_HOME}/libudev.so.0"
-			break
-		fi
-	done
-
 	fdo-mime_desktop_database_update
 	gnome2_icon_cache_update
 	readme.gentoo_print_elog
-}
-
-pkg_prerm() {
-	if [[ -z ${REPLACED_BY_VERSION} ]]; then
-		rm -f "${EROOT}${CHROME_HOME}/libudev.so.0"
-	fi
 }
