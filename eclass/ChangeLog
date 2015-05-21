@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1617 2015/05/17 11:10:22 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1618 2015/05/21 01:37:25 floppym Exp $
+
+  21 May 2015; Mike Gilbert <floppym@gentoo.org> chromium.eclass:
+  Add kernel Check for USER_NS, bug 545078.
 
   17 May 2015; Ulrich Müller <ulm@gentoo.org> latex-package.eclass:
   Prevent compression of symlink targets in docdir in EAPIs where this is
