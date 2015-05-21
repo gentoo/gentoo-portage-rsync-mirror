@@ -34,6 +34,5 @@
 		<flag name='minimal'>Disable building extra plugins with no additional
 			deps.</flag>
 		<flag name='openssl'>Support encryption in sim plugin, using OpenSSL.</flag>
-		<flag name='sqlite2'>Prefer SQLite2 over SQLite3 (if USE=sqlite is set).</flag>
 	</use>
 </pkgmetadata>
