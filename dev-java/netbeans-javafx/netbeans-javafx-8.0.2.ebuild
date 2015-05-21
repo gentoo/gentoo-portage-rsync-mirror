@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/netbeans-javafx-8.0.2.ebuild,v 1.2 2015/02/04 21:38:32 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-javafx/netbeans-javafx-8.0.2.ebuild,v 1.4 2015/05/21 09:51:47 ago Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -18,7 +18,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/20D826CC819A5A969CF3F7204E2E26CB6263EC43-jnlp-servlet.jar
 	http://hg.netbeans.org/binaries/0F7FC8D69950B86D5F67529B5C551DB84C5BCF87-nb-javac-api.jar"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 

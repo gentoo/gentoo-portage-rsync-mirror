@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-8.0.2-r2.ebuild,v 1.1 2015/04/17 09:54:44 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-java/netbeans-java-8.0.2-r2.ebuild,v 1.3 2015/05/21 09:51:37 ago Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -35,7 +35,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/7666B94C1004AFFFE88E5328BD70EBA6F60125F4-spring-framework-3.2.7.RELEASE.zip
 	http://hg.netbeans.org/binaries/91B55CDAC59BC4DDDF0AF9A54EAAE4304EDEF266-spring-framework-4.0.1.RELEASE.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 

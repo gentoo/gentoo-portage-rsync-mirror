@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netbeans-extide
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-extide/ChangeLog,v 1.5 2015/02/04 21:54:19 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-extide/ChangeLog,v 1.7 2015/05/21 09:51:23 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> netbeans-extide-8.0.2.ebuild:
+  Stable for x86, wrt bug #538862
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> netbeans-extide-8.0.2.ebuild:
+  Stable for amd64, wrt bug #538862
 
   04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
   -netbeans-extide-7.4.ebuild, -netbeans-extide-8.0.ebuild:
@@ -27,4 +33,3 @@
   16 Oct 2013; Miroslav Šulc <fordfrog@gentoo.org>
   +netbeans-extide-7.4.ebuild, +metadata.xml:
   new netbeans module
-

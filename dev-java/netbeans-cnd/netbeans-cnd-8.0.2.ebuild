@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/netbeans-cnd-8.0.2.ebuild,v 1.2 2015/02/04 21:36:29 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-cnd/netbeans-cnd-8.0.2.ebuild,v 1.4 2015/05/21 09:51:10 ago Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -17,7 +17,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/2BCF2047382FB68A2F275677745C80E79B4046AB-cnd-rfs-1.0.zip
 	http://hg.netbeans.org/binaries/C51780D99464CBF45B0495C7646B442AB3C7B463-open-fortran-parser-0.7.1.2.zip"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 

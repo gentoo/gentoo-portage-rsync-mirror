@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/mpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.372 2015/04/12 16:35:01 angelos Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/ChangeLog,v 1.373 2015/05/21 09:57:11 zlg Exp $
+
+*mpd-0.19.9-r1 (21 May 2015)
+*mpd-0.19.6-r1 (21 May 2015)
+
+  21 May 2015; Daniel Campbell <zlg@gentoo.org> +mpd-0.19.6-r1.ebuild,
+  +mpd-0.19.9-r1.ebuild:
+  Fix 'samba' USE flag dependencies
 
 *mpd-0.18.23 (12 Apr 2015)
 *mpd-0.19.9 (12 Apr 2015)

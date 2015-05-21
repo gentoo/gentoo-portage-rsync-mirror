@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/netbeans-dlight
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-dlight/ChangeLog,v 1.23 2015/02/04 21:53:45 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-dlight/ChangeLog,v 1.25 2015/05/21 09:51:14 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> netbeans-dlight-8.0.2.ebuild:
+  Stable for x86, wrt bug #538862
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> netbeans-dlight-8.0.2.ebuild:
+  Stable for amd64, wrt bug #538862
 
   04 Feb 2015; Miroslav Šulc <fordfrog@gentoo.org>
   -netbeans-dlight-7.0.1.ebuild, -netbeans-dlight-7.1.1.ebuild,
@@ -114,4 +120,3 @@
   30 Mar 2011; Miroslav Šulc <fordfrog@gentoo.org>
   +netbeans-dlight-7.0_rc1.ebuild, +metadata.xml:
   Added new ebuild
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-webcommon/netbeans-webcommon-8.0.2.ebuild,v 1.2 2015/02/04 21:39:57 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-webcommon/netbeans-webcommon-8.0.2.ebuild,v 1.4 2015/05/21 09:52:05 ago Exp $
 
 EAPI="4"
 inherit eutils java-pkg-2 java-ant-2
@@ -20,7 +20,7 @@ SRC_URI="${SOURCE_URL}
 	http://hg.netbeans.org/binaries/08FE518AB60FFA2E5440B75B4D9F8502E0791B3C-libs.jstestdriver-ext.jar
 	http://hg.netbeans.org/binaries/D05B7274396C8EED185207399B6D0400DE347DB7-libusbmuxd.2.dylib"
 LICENSE="|| ( CDDL GPL-2-with-linking-exception )"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 S="${WORKDIR}"
 
