@@ -5081,8 +5081,7 @@ net-im/ekg2:jpeg - JPEG token support for Gadu-Gadu protocol.
 net-im/ekg2:minimal - Disable building extra plugins with no additional deps.
 net-im/ekg2:openssl - Support encryption in sim plugin, using OpenSSL.
 net-im/ekg2:oracle - Support logging messages into Oracle database.
-net-im/ekg2:sqlite - Support logging messages into SQLite2 database. If 'sqlite3' is set too, it will be used instead.
-net-im/ekg2:sqlite3 - Support logging messages into SQLite3 database. If 'sqlite' is set too, SQLite3 will be used.
+net-im/ekg2:sqlite - Support logging messages into SQLite3 database.
 net-im/ekg2:ssl - Enable the complete SSL/TLS support through OpenSSL. This also enables the 'sim' plugin which relies on OpenSSL.
 net-im/empathy:geoloc - Enable geolocation support through app-misc/geoclue
 net-im/empathy:gnome-online-accounts - Enable using net-libs/gnome-online-accounts for authorization (e.g. for Google Talk)

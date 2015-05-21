@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r1.ebuild,v 1.9 2015/05/08 04:26:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg2/ekg2-0.3.1-r2.ebuild,v 1.1 2015/05/21 16:01:15 mgorny Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,34 +14,33 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="gadu gif gnutls gpg gpm gsm gtk idn jpeg ncurses nls
-	oracle perl python readline rss spell sqlite sqlite3 ssl threads unicode
+	oracle perl python readline rss spell sqlite ssl threads unicode
 	xmpp xosd zlib"
 
 RDEPEND="
-	gpg? ( app-crypt/gpgme )
-	gsm? ( media-sound/gsm )
-	gtk? ( x11-libs/gtk+:2 )
-	idn? ( net-dns/libidn )
-	nls? ( virtual/libintl )
-	oracle? ( dev-db/oracle-instantclient-basic )
-	perl? ( dev-lang/perl )
+	gpg? ( app-crypt/gpgme:= )
+	gsm? ( media-sound/gsm:= )
+	gtk? ( x11-libs/gtk+:2= )
+	idn? ( net-dns/libidn:= )
+	nls? ( virtual/libintl:= )
+	oracle? ( dev-db/oracle-instantclient-basic:= )
+	perl? ( dev-lang/perl:= )
 	python? ( ${PYTHON_DEPS} )
-	readline? ( sys-libs/readline )
-	ssl? ( dev-libs/openssl )
-	xosd? ( x11-libs/xosd )
-	zlib? ( sys-libs/zlib )
+	readline? ( sys-libs/readline:0= )
+	ssl? ( dev-libs/openssl:0= )
+	xosd? ( x11-libs/xosd:= )
+	zlib? ( sys-libs/zlib:= )
 
-	gadu? ( <net-libs/libgadu-1.12
-		gif? ( media-libs/giflib )
-		jpeg? ( virtual/jpeg ) )
-	ncurses? ( sys-libs/ncurses[unicode?]
-		gpm? ( sys-libs/gpm )
-		spell? ( app-text/aspell ) )
-	rss? ( dev-libs/expat )
-	sqlite3? ( dev-db/sqlite:3 )
-	!sqlite3? ( sqlite? ( dev-db/sqlite:0 ) )
-	xmpp? ( dev-libs/expat
-		gnutls? ( net-libs/gnutls ) )"
+	gadu? ( <net-libs/libgadu-1.12:=
+		gif? ( media-libs/giflib:= )
+		jpeg? ( virtual/jpeg:0= ) )
+	ncurses? ( sys-libs/ncurses:=[unicode?]
+		gpm? ( sys-libs/gpm:= )
+		spell? ( app-text/aspell:= ) )
+	rss? ( dev-libs/expat:= )
+	sqlite? ( dev-db/sqlite:3= )
+	xmpp? ( dev-libs/expat:=
+		gnutls? ( net-libs/gnutls:= ) )"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -91,8 +90,7 @@ src_configure() {
 		$(use_with python)
 		$(use_with readline)
 		$(use_with spell aspell)
-		$(use_with sqlite)
-		$(use_with sqlite3)
+		$(use_with sqlite sqlite3)
 		$(use_with ssl openssl)
 		$(use_with threads pthread)
 		$(use_with xosd libxosd)
@@ -101,6 +99,7 @@ src_configure() {
 		$(use_enable unicode)
 		--with-inotify
 		--without-ioctld
+		--without-sqlite
 		--disable-remote
 		--enable-skip-relative-plugins-dir
 	)
