@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.2.0.ebuild,v 1.1 2015/05/17 05:18:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-1.2.0.ebuild,v 1.2 2015/05/21 03:21:17 vapier Exp $
 
 EAPI=5
 
@@ -90,6 +90,9 @@ src_prepare() {
 }
 
 multilib_src_configure() {
+	# Do not let user's BROWSER setting mess us up. #549684
+	unset BROWSER
+
 	# Disable automatic detection of libxcrypt; we _don't_ want the
 	# user to link libxcrypt in by default, since we won't track the
 	# dependency and allow to break PAM this way.
