@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libRocket
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/ChangeLog,v 1.16 2015/05/14 07:05:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libRocket/ChangeLog,v 1.17 2015/05/21 13:28:49 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  libRocket-1.2.1_p20130110-r1.ebuild:
+  Stable for amd64, wrt bug #549430
 
   14 May 2015; Michael Sterrett <mr_bones_@gentoo.org> -libRocket-1.2.1.ebuild:
   old

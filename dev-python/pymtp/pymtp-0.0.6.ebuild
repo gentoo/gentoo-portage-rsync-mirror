@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/pymtp-0.0.6.ebuild,v 1.2 2015/05/15 11:20:24 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymtp/pymtp-0.0.6.ebuild,v 1.3 2015/05/21 13:28:08 ago Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="${DEB_URI}/${PN}_${PV}.orig.tar.gz"
 
 LICENSE=GPL-3
 SLOT=0
-KEYWORDS="~amd64 ppc ~x86"
+KEYWORDS="amd64 ppc ~x86"
 IUSE="examples"
 
 RDEPEND="media-libs/libmtp"

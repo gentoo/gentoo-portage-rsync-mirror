@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.142 2015/05/17 20:05:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.143 2015/05/21 13:27:38 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> virtualenv-12.0.5.ebuild:
+  Stable for amd64, wrt bug #538528
 
   17 May 2015; Pacho Ramos <pacho@gentoo.org> virtualenv-12.0.5.ebuild:
   ppc64 stable wrt bug #538528

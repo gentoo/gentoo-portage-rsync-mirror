@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.76.ebuild,v 1.1 2015/02/22 16:37:48 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jimtcl/jimtcl-0.76.ebuild,v 1.2 2015/05/21 13:28:44 ago Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 else
 	inherit vcs-snapshot
 	SRC_URI="https://github.com/msteveb/jimtcl/zipball/${PV} -> ${P}.zip"
-	KEYWORDS="~amd64 ~arm ~arm64 ~m68k ~mips ~s390 ~sh ~x86"
+	KEYWORDS="amd64 ~arm ~arm64 ~m68k ~mips ~s390 ~sh ~x86"
 fi
 
 DESCRIPTION="Small footprint implementation of Tcl programming language"

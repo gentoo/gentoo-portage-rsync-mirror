@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.318 2015/03/31 20:05:20 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.319 2015/05/21 13:29:29 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> wxGTK-3.0.2.0-r1.ebuild:
+  Stable for amd64, wrt bug #547680
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> wxGTK-2.8.12.1-r1.ebuild,
   wxGTK-2.9.4.1-r1.ebuild, wxGTK-3.0.0.0.ebuild, wxGTK-3.0.1.1.ebuild,

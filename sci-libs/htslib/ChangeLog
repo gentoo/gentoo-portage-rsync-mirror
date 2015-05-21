@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/htslib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/htslib/ChangeLog,v 1.8 2015/04/07 14:41:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/htslib/ChangeLog,v 1.9 2015/05/21 13:29:34 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> htslib-1.0.ebuild:
+  Stable for amd64, wrt bug #540646
 
 *htslib-1.2.1 (18 Feb 2015)
 

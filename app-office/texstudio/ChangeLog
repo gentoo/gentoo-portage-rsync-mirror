@@ -1,6 +1,9 @@
 # ChangeLog for app-office/texstudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.46 2015/05/10 13:03:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/texstudio/ChangeLog,v 1.47 2015/05/21 13:30:04 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> texstudio-2.8.8.ebuild:
+  Stable for amd64, wrt bug #542712
 
   10 May 2015; Davide Pesavento <pesa@gentoo.org> texstudio-2.8.4.ebuild,
   texstudio-2.8.6.ebuild:

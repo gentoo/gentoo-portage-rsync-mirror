@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.40.ebuild,v 1.1 2015/05/08 19:25:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_jk/mod_jk-1.2.40.ebuild,v 1.2 2015/05/21 13:28:03 ago Exp $
 
 EAPI="5"
 inherit apache-module java-pkg-opt-2 readme.gentoo
 
 MY_P="tomcat-connectors-${PV#-*}-src"
 
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 
 DESCRIPTION="JK module for connecting Tomcat and Apache using the ajp13 protocol."
 HOMEPAGE="http://tomcat.apache.org/connectors-doc/"

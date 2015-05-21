@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/pmacct
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.107 2015/05/15 10:42:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pmacct/ChangeLog,v 1.108 2015/05/21 13:26:58 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> pmacct-1.5.1.ebuild:
+  Stable for amd64, wrt bug #542210
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> pmacct-1.5.1.ebuild:
   ppc stable wrt bug #542210

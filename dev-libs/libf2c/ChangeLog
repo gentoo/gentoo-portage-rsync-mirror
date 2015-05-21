@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libf2c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.65 2015/05/17 20:05:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/ChangeLog,v 1.66 2015/05/21 13:27:18 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> libf2c-20110801-r4.ebuild:
+  Stable for amd64, wrt bug #542232
 
   17 May 2015; Pacho Ramos <pacho@gentoo.org> libf2c-20110801-r4.ebuild:
   ppc64 stable wrt bug #542232
