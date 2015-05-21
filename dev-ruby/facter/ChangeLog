@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.131 2015/04/10 17:21:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.132 2015/05/21 07:44:22 prometheanfire Exp $
+
+*facter-2.4.4 (21 May 2015)
+
+  21 May 2015; Matthew Thode <prometheanfire@gentoo.org> +facter-2.4.4.ebuild:
+  bup
 
   10 Apr 2015; Hans de Graaff <graaff@gentoo.org> facter-2.4.3.ebuild:
   Add ruby22.
