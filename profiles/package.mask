@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16528 2015/05/19 20:47:05 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16529 2015/05/21 05:53:38 mr_bones_ Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -120,17 +120,6 @@ dev-ruby/ipaddress
 # Dead upstream, nothing in tree uses it
 # Masked for removal in 30 days
 net-libs/libcapsinetwork
-
-# Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
-# Upstream has discontinued the project; doesn't build on modern systems.
-# Bug #510262
-# masked for removal on 20150521
-games-util/searchtool
-
-# Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
-# Upstream is dead; doesn't build on modern systems.
-# masked for removal on 20150521
-games-strategy/freecnc
 
 # Hans de Graaff <graaff@gentoo.org> (19 Apr 2015)
 # Pure-ruby implementation of dev-ruby/json for uses where a compiled
