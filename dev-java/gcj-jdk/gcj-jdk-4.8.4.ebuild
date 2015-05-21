@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.8.4.ebuild,v 1.1 2015/05/03 20:33:18 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gcj-jdk/gcj-jdk-4.8.4.ebuild,v 1.2 2015/05/21 08:50:13 chewi Exp $
 
 EAPI="5"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gentoo.org/"
 SRC_URI=""
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~arm ~x86 ~x86-linux"
+KEYWORDS="~amd64 ~arm ~ppc ~x86 ~x86-linux"
 SLOT="0"
 IUSE="X"
 
