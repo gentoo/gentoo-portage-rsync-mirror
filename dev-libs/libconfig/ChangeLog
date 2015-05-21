@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libconfig
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.63 2014/07/02 06:08:47 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.64 2015/05/21 06:01:08 jer Exp $
+
+*libconfig-1.5 (21 May 2015)
+
+  21 May 2015; Jeroen Roovers <jer@gentoo.org> +libconfig-1.5.ebuild,
+  files/libconfig-1.4.9-out-of-source-build.patch,
+  +files/libconfig-1.5-out-of-source-build.patch:
+  Version bump.
 
   02 Jul 2014; Yixun Lan <dlan@gentoo.org> libconfig-1.4.9-r1.ebuild:
   fixed, bug #489596, thanks Johan Bergström

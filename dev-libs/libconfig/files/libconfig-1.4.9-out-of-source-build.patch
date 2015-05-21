@@ -1,6 +1,5 @@
-diff -ur libconfig-1.4.9.orig/tests/Makefile.am libconfig-1.4.9/tests/Makefile.am
---- libconfig-1.4.9.orig/tests/Makefile.am	2011-08-04 05:36:33.000000000 +0200
-+++ libconfig-1.4.9/tests/Makefile.am	2013-04-01 21:50:54.413811947 +0200
+--- a/libconfig-1.4.9/tests/Makefile.am
++++ b/libconfig-1.4.9/tests/Makefile.am
 @@ -3,10 +3,10 @@
  
  libconfig_tests_SOURCES = tests.c
