@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pyxattr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.76 2015/05/14 02:18:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxattr/ChangeLog,v 1.77 2015/05/21 09:03:39 idella4 Exp $
+
+  21 May 2015; Ian Delaney <idella4@gentoo.org> pyxattr-0.5.3.ebuild,
+  pyxattr-0.5.5.ebuild:
+  fix to theme in conf.py, fixes doc build, fixes bug #548486 by Torsten Kaiser
 
 *pyxattr-0.5.5 (14 May 2015)
 

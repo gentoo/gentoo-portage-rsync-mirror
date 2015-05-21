@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.134 2015/05/07 12:17:28 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.135 2015/05/21 09:01:24 chewi Exp $
+
+  21 May 2015; James Le Cuirot <chewi@gentoo.org> +files/6-more-memory.patch,
+  +files/7-more-memory.patch, icedtea-6.1.13.7.ebuild, icedtea-7.2.5.5.ebuild:
+  Add memory patches for ppc/CACAO and keyword latest versions for ~ppc.
 
   07 May 2015;  <chewi@gentoo.org> icedtea-6.1.13.5.ebuild,
   icedtea-6.1.13.7.ebuild, icedtea-7.2.4.8.ebuild, icedtea-7.2.5.5.ebuild:

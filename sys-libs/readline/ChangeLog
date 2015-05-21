@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.221 2015/05/21 05:45:33 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.222 2015/05/21 09:20:11 zlogene Exp $
+
+  21 May 2015; Mikle Kolyada <zlogene@gentoo.org> readline-6.3_p8-r2.ebuild:
+  amd64 stable wrt bug #548756
 
   21 May 2015; Matt Turner <mattst88@gentoo.org> readline-6.3_p8-r2.ebuild:
   alpha stable, bug 548756.
