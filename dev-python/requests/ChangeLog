@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/requests
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.96 2015/05/21 16:34:47 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/requests/ChangeLog,v 1.97 2015/05/21 18:10:17 jlec Exp $
+
+  21 May 2015; Justin Lecher <jlec@gentoo.org>
+  -files/requests-1.2.0-system-cacerts.patch,
+  -files/requests-1.2.0-system-libs.patch,
+  -files/requests-1.2.1-urllib3-py3.patch, -requests-2.3.0.ebuild:
+  Drop vulnerable version, bug #543480
 
   21 May 2015; Markus Meier <maekke@gentoo.org> requests-2.6.0.ebuild:
   arm stable, bug #543480
