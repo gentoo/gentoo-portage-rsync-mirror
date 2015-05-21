@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.23 2015/04/12 23:40:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.24 2015/05/21 11:58:34 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> klayout-0.23.10.ebuild:
+  Stable for amd64, wrt bug #541652
 
 *klayout-0.23.10 (12 Apr 2015)
 
