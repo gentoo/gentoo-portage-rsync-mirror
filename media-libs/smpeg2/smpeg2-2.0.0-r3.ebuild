@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/smpeg2-2.0.0-r3.ebuild,v 1.2 2015/04/26 16:42:08 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg2/smpeg2-2.0.0-r3.ebuild,v 1.3 2015/05/21 10:46:55 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs autotools multilib-minimal
@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~hasufell/distfiles/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE="debug cpu_flags_x86_mmx static-libs"
 
 DEPEND=">=media-libs/libsdl2-2.0.1-r1[${MULTILIB_USEDEP}]"

@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/ufo-ai
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.44 2014/10/22 06:45:48 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ChangeLog,v 1.45 2015/05/21 10:47:25 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> ufo-ai-2.4.ebuild:
+  Stable for amd64, wrt bug #542372
 
   22 Oct 2014; Alfredo Tupone <tupone@gentoo.org> ufo-ai-2.4.ebuild,
   +files/ufo-ai-2.4-anon.patch:

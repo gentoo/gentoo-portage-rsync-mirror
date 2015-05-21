@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/zsdx-1.9.0.ebuild,v 1.2 2015/04/26 16:28:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/zsdx/zsdx-1.9.0.ebuild,v 1.3 2015/05/21 10:46:40 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.zelda-solarus.com/downloads/${PN}/${P}.tar.gz"
 
 LICENSE="all-rights-reserved CC-BY-SA-3.0 GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 RESTRICT="mirror"
 

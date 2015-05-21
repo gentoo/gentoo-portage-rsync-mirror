@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.6 2014/10/22 06:45:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-2.4.ebuild,v 1.7 2015/05/21 10:47:25 ago Exp $
 
 EAPI=5
 inherit eutils flag-o-matic games
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/ufoai/${MY_P}-source.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="debug dedicated editor"
 
 # Dependencies and more instructions can be found here:
