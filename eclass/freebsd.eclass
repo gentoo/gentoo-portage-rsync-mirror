@@ -99,11 +99,10 @@ freebsd_get_bmake() {
 freebsd_upstream_patches() {
 	local opt=$1
 	[[ ${#UPSTREAM_PATCHES[@]} -eq 0 ]] && return 1
-	for x in ${UPSTREAM_PATCHES[@]}
+	for x in "${UPSTREAM_PATCHES[@]}"
 	do
-		local out=${x/\//-}
+		local out=${PN}-${x/\//-}
 		out=${out/:/}
-		out="${PN}-${RV}-${out}"
 		if [[ ${opt} == -s ]] ; then
 			echo "${DISTDIR}/${out}"
 		else
@@ -155,7 +154,7 @@ freebsd_src_unpack() {
 		fi
 	else
 		for f in ${A} ; do
-			[[ ${f} == *".tar."* ]] && unpack ${f}
+			[[ ${f} == *.tar.* ]] && unpack ${f}
 		done
 	fi
 	cd "${S}"
