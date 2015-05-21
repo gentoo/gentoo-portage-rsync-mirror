@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.3.ebuild,v 1.1 2015/04/15 09:54:45 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/katawa-shoujo/katawa-shoujo-1.3.ebuild,v 1.2 2015/05/21 10:30:46 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://dl.katawa-shoujo.com/gold_1.3/%5b4ls%5d_katawa_shoujo_1.3-%5blin
 LICENSE="CC-BY-NC-ND-3.0
 	!system-renpy? ( MIT PSF-2 LGPL-2.1 || ( FTL GPL-2+ ) IJG libpng ZLIB BZIP2 )"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="doc +system-renpy"
 
 RDEPEND="system-renpy? ( games-engines/renpy )"

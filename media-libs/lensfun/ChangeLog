@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/lensfun
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.87 2015/05/19 15:00:30 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lensfun/ChangeLog,v 1.88 2015/05/21 10:30:41 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org> lensfun-0.3.0.ebuild:
+  Stable for amd64, wrt bug #549902
 
   19 May 2015; Markus Meier <maekke@gentoo.org> -lensfun-0.2.8.ebuild:
   remove old

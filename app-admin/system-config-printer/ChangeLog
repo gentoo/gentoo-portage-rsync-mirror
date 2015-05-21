@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/system-config-printer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/ChangeLog,v 1.10 2015/05/17 20:09:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/ChangeLog,v 1.11 2015/05/21 10:30:36 ago Exp $
+
+  21 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  system-config-printer-1.4.8.ebuild:
+  Stable for amd64, wrt bug #549642
 
   17 May 2015; Pacho Ramos <pacho@gentoo.org>
   system-config-printer-1.4.8.ebuild:
