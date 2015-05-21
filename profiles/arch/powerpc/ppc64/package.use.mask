@@ -1,6 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.66 2015/05/08 04:58:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.67 2015/05/20 23:47:14 chewi Exp $
+
+# James Le Cuirot <chewi@gentoo.org> (21 May 2015)
+# Mask rdeps of icedtea-web to deal with bug #549134. I had hoped to
+# apply the ppc64 keyword today but it segfaulted upon testing.
+dev-java/icedtea nsplugin webstart
 
 # Jeroen Roovers <jer@gentoo.org> (26 Apr 2015)
 # Needs the entire LXDE to be useful (bug #520296)
