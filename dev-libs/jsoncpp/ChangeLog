@@ -1,6 +1,15 @@
 # ChangeLog for dev-libs/jsoncpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.19 2015/05/20 00:28:41 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.20 2015/05/21 15:53:05 mgorny Exp $
+
+*jsoncpp-1.6.2-r1 (21 May 2015)
+*jsoncpp-0.10.2-r1 (21 May 2015)
+
+  21 May 2015; Michał Górny <mgorny@gentoo.org>
+  +files/jsoncpp-1.6.2-fix-pkgconfig.patch, +jsoncpp-0.10.2-r1.ebuild,
+  +jsoncpp-1.6.2-r1.ebuild, -jsoncpp-0.10.1.ebuild, -jsoncpp-0.10.2.ebuild,
+  -jsoncpp-0.6.0_rc2.ebuild, -jsoncpp-1.6.2.ebuild:
+  Fix includedir path in pkg-config file, patch applied upstream. Remove old.
 
   20 May 2015; Matt Turner <mattst88@gentoo.org> jsoncpp-0.10.2.ebuild,
   jsoncpp-1.6.2.ebuild:
