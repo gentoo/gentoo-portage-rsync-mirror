@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install postinst prepare setup
+DEPEND=>=gnustep-base/gnustep-gui-0.22.0 >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back
+DESCRIPTION=A clone of the NeXTstep Interface Builder application for GNUstep
+EAPI=5
+HOMEPAGE=http://www.gnustep.org/experience/Gorm.html
+IUSE=debug doc
+KEYWORDS=~amd64 ~x86 ~x86-fbsd
+LICENSE=GPL-2
+RDEPEND=>=gnustep-base/gnustep-gui-0.22.0 >=gnustep-base/gnustep-make-2.0 virtual/gnustep-back debug? ( !<sys-devel/gdb-6.0 )
+SLOT=0
+SRC_URI=ftp://ftp.gnustep.org/pub/gnustep/dev-apps/gorm-1.2.22.tar.gz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	gnustep-2	5c8ef29c1d72267699559746ef1c0096	gnustep-base	87d599af9a09a523d6d233e462f3758e	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_md5_=1a7b19c7f6b9bfc37d55ff1a63687430
