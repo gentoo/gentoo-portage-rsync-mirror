@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/tagsoup
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.42 2014/08/10 20:25:31 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagsoup/ChangeLog,v 1.43 2015/05/22 09:21:34 chewi Exp $
+
+  22 May 2015; James Le Cuirot <chewi@gentoo.org> tagsoup-1.2.1.ebuild:
+  ~arm keyword.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> tagsoup-1.2.1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

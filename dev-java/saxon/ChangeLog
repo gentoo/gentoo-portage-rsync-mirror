@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/saxon
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.45 2014/08/10 20:23:18 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/ChangeLog,v 1.46 2015/05/22 09:20:32 chewi Exp $
+
+  22 May 2015; James Le Cuirot <chewi@gentoo.org> saxon-9.2.0.6.ebuild:
+  ~arm keyword for v9.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> saxon-6.5.5.ebuild,
   saxon-8.4b-r3.ebuild:
