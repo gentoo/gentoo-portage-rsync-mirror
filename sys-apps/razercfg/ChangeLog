@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/razercfg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.34 2015/04/08 18:27:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/razercfg/ChangeLog,v 1.35 2015/05/22 08:39:18 joker Exp $
+
+*razercfg-0.32 (22 May 2015)
+
+  22 May 2015; Christian Birchinger <joker@gentoo.org> +razercfg-0.32.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> razercfg-0.23.ebuild,
   razercfg-0.24.ebuild, razercfg-0.25.ebuild, razercfg-0.26.ebuild,

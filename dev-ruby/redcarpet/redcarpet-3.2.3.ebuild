@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/redcarpet-3.2.3.ebuild,v 1.1 2015/04/13 18:08:18 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/redcarpet/redcarpet-3.2.3.ebuild,v 1.2 2015/05/22 08:42:15 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -27,6 +27,9 @@ all_ruby_prepare() {
 
 	# Avoid broken tests that should use render_with instead.
 	sed -i -e '/no_rewind_into_previous_inline/,/^  end/ s:^:#:' test/markdown_test.rb || die
+
+	# Avoid unneeded dependency on rake-compiler
+	sed -i -e '/extensiontask/I s:^:#:' Rakefile || die
 }
 
 each_ruby_configure() {
