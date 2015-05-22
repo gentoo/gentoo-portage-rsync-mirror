@@ -1,6 +1,9 @@
 # ChangeLog for sci-chemistry/molscript
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.18 2015/05/13 06:46:22 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/molscript/ChangeLog,v 1.19 2015/05/22 09:49:13 ago Exp $
+
+  22 May 2015; Agostino Sarubbo <ago@gentoo.org> molscript-2.1.2-r2.ebuild:
+  Stable for amd64, wrt bug #540370
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> molscript-2.1.2-r2.ebuild:
   ppc stable wrt bug #540370

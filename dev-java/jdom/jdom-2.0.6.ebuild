@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-2.0.6.ebuild,v 1.1 2015/04/04 19:28:53 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdom/jdom-2.0.6.ebuild,v 1.2 2015/05/22 09:49:25 ago Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="source test"
@@ -14,7 +14,7 @@ SRC_URI="http://www.jdom.org/dist/binary/${P}.zip"
 HOMEPAGE="http://www.jdom.org"
 LICENSE="JDOM"
 SLOT="2"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="amd64 ~ppc ~ppc64 ~x86"
 
 COMMON_DEP="dev-java/iso-relax
 		dev-java/jaxen:1.1
