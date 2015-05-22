@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.9999.ebuild,v 1.9 2015/04/13 03:02:24 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/glance/glance-2014.2.9999.ebuild,v 1.10 2015/05/22 06:08:33 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -39,7 +39,7 @@ DEPEND="
 			!~dev-python/sphinx-1.2.0[${PYTHON_USEDEP}]
 			<dev-python/sphinx-1.3[${PYTHON_USEDEP}]
 			>=dev-python/requests-2.1.0[${PYTHON_USEDEP}]
-			<dev-python/requests-2.4.0[${PYTHON_USEDEP}]
+			!~dev-python/requests-2.4.0[${PYTHON_USEDEP}]
 			>=dev-python/testrepository-0.0.18[${PYTHON_USEDEP}]
 		  <dev-python/testrepository-0.0.21[${PYTHON_USEDEP}]
 		  >=dev-python/testtools-0.9.34[${PYTHON_USEDEP}]

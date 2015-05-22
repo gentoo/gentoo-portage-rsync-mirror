@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.37 2015/05/04 08:19:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-9999.ebuild,v 1.38 2015/05/22 06:26:32 vapier Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -102,6 +102,7 @@ gdb_branding() {
 	else
 		printf "vanilla"
 	fi
+	[[ -n ${EGIT_COMMIT} ]] && printf " ${EGIT_COMMIT}"
 }
 
 src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.297 2015/05/14 02:32:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.298 2015/05/22 06:26:32 vapier Exp $
+
+  22 May 2015; Mike Frysinger <vapier@gentoo.org> gdb-9999.ebuild:
+  Include EGIT_COMMIT in the branding when available.
 
 *gdb-7.9.1 (14 May 2015)
 
