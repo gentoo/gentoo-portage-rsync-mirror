@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.1.ebuild,v 1.5 2015/01/29 17:21:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/luminance-hdr/luminance-hdr-2.3.1.ebuild,v 1.6 2015/05/22 21:01:01 maekke Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RDEPEND="
 	sci-libs/fftw:3.0[threads]
 	sci-libs/gsl
 	virtual/jpeg:0"
-DEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 	test? ( dev-cpp/gtest )"
 
 DOCS=( AUTHORS BUGS Changelog README TODO )
