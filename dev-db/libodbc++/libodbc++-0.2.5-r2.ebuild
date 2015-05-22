@@ -1,18 +1,19 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.5-r1.ebuild,v 1.3 2014/08/10 20:01:08 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/libodbc++-0.2.5-r2.ebuild,v 1.1 2015/05/22 06:39:56 pinkbyte Exp $
 
-EAPI=2
+EAPI=5
 inherit eutils flag-o-matic
-
-KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
 
 DESCRIPTION="C++ class library that provides a subset of the well-known JDBC 2.0(tm) and runs on top of ODBC"
 SRC_URI="mirror://sourceforge/libodbcxx/${P}.tar.bz2"
 HOMEPAGE="http://libodbcxx.sourceforge.net/"
+
 LICENSE="LGPL-2.1"
 SLOT=0
-IUSE=""
+KEYWORDS="~alpha ~amd64 ~hppa ~ppc ~x86"
+
+IUSE="static-libs"
 
 DEPEND="dev-db/unixODBC
 		sys-libs/ncurses"
@@ -34,12 +35,17 @@ src_prepare() {
 
 	# Fix configure to use ncurses instead of termcap (bug #103105)
 	sed -i -e 's~termcap~ncurses~g' configure
+
+	# Fix undeclared ODBCXX_STRING_PERCENT symbol, bug #532356
+	sed -i -e 's/ODBCXX_STRING_PERCENT/"%"/' src/dtconv.h || die
+
+	epatch_user
 }
 
 src_configure() {
 	local commonconf buildlist
 	commonconf="--with-odbc=/usr --without-tests"
-	commonconf="${commonconf} --enable-static --enable-shared"
+	commonconf="${commonconf} $(use_enable static-libs static) --enable-shared"
 	# " --enable-threads"
 
 	export ECONF_SOURCE="${S}"
@@ -94,7 +100,7 @@ src_install () {
 	for sd in ${buildlist}; do
 		einfo "Doing install pass for $sd"
 		cd ${sd}
-		emake DESTDIR="${D}" install || die "make install failed"
+		emake DESTDIR="${D}" install
 	done
 	if [[ "${P}" != "${PF}" ]]; then
 		mv "${D}"/usr/share/doc/${P}/* "${D}"/usr/share/doc/${PF}/

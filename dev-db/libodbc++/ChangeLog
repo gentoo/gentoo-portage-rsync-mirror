@@ -1,6 +1,15 @@
 # ChangeLog for dev-db/libodbc++
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.22 2014/08/10 20:01:08 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libodbc++/ChangeLog,v 1.23 2015/05/22 06:39:56 pinkbyte Exp $
+
+*libodbc++-0.2.5-r2 (22 May 2015)
+
+  22 May 2015; Sergey Popov <pinkbyte@gentoo.org> -libodbc++-0.2.5-r1.ebuild,
+  +libodbc++-0.2.5-r2.ebuild:
+  Revision bump: EAPI 5, add support for user patches, do not build static libs
+  unconditionally. Fix build error with undeclared ODBCXX_STRING_PERCENT
+  symbol, bug #532356, patch by Duane Griffin <duaneg AT dghda.com>. Drop old
+  revision
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> libodbc++-0.2.5-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
