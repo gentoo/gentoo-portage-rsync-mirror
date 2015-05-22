@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/docker-py-1.2.2.ebuild,v 1.1 2015/05/09 22:12:36 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docker-py/docker-py-1.2.2.ebuild,v 1.2 2015/05/22 03:13:25 patrick Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -13,7 +13,7 @@ SRC_URI="https://github.com/docker/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE="doc test"
 
 DEPEND="
