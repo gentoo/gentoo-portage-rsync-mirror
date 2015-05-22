@@ -6017,6 +6017,10 @@ net-p2p/gift:ares - pull in Ares plugin
 net-p2p/gift:fasttrack - pull in FastTrack plugin
 net-p2p/gift:gnutella - pull in Gnutella plugin
 net-p2p/gift:openft - pull in OpenFT plugin
+net-p2p/i2p:nls - Adds Native Language Support using GNU gettext.
+net-p2p/imule:nls - Adds Native Language Support using GNU gettext.
+net-p2p/imule:static-libs - Builds a statically-linked application.
+net-p2p/imule:webserver - Enables a webserver to administer remotely.
 net-p2p/ktorrent:bwscheduler - Schedule upload and download limits over a period of a week
 net-p2p/ktorrent:downloadorder - Specify the download order of a multi-file torrent
 net-p2p/ktorrent:infowidget - Displays general information about a torrent in several tabs
