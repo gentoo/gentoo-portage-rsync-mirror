@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/salt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.62 2015/05/06 22:27:59 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/salt/ChangeLog,v 1.63 2015/05/22 22:22:56 chutzpah Exp $
+
+*salt-2015.5.1 (22 May 2015)
+
+  22 May 2015; Patrick McLean <chutzpah@gentoo.org>
+  +files/salt-2015.5.1-skip-libvirt-test-on-nonroot.patch,
+  +salt-2015.5.1.ebuild:
+  Version bump.
 
 *salt-2015.5.0 (06 May 2015)
 
