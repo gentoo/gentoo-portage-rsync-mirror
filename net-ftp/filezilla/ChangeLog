@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/filezilla
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.124 2015/05/20 13:27:34 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/filezilla/ChangeLog,v 1.125 2015/05/22 15:45:33 voyageur Exp $
+
+*filezilla-3.11.0.1 (22 May 2015)
+
+  22 May 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +filezilla-3.11.0.1.ebuild:
+  Version bump, rejects Diffie-Hellman Groups smaller than 1024 bits when using
+  FTP over TLS (Logjam vulnerability)
 
 *filezilla-3.11.0 (20 May 2015)
 
