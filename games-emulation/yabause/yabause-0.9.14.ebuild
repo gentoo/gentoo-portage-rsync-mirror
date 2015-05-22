@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.14.ebuild,v 1.3 2015/03/25 13:48:49 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/yabause/yabause-0.9.14.ebuild,v 1.4 2015/05/22 16:55:18 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils cmake-utils games
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="openal opengl qt5 sdl"
+IUSE="openal opengl pic qt5 sdl"
 
 # x11-libs/libXrandr is an automagic dep
 # qt5 over qt4 and libsdl2 over libsdl is
@@ -53,6 +53,7 @@ src_configure() {
 		$(cmake-utils_use sdl YAB_WANT_SDL)
 		$(cmake-utils_use openal YAB_WANT_OPENAL)
 		$(cmake-utils_use opengl YAB_WANT_OPENGL)
+		$(cmake-utils_use !pic SH2_DYNAREC)
 		-DYAB_PORTS=$(usex qt5 "qt" "gtk")
 	)
 	cmake-utils_src_configure

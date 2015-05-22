@@ -1,6 +1,12 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.141 2015/04/25 16:25:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.142 2015/05/22 16:39:00 floppym Exp $
+
+*gentoolkit-dev-0.3.0 (22 May 2015)
+
+  22 May 2015; Mike Gilbert <floppym@gentoo.org> +gentoolkit-dev-0.3.0.ebuild,
+  gentoolkit-dev-9999.ebuild:
+  Version bump.
 
   25 Apr 2015; Mike Gilbert <floppym@gentoo.org> gentoolkit-dev-9999.ebuild:
   Replace links pointing at git.overlays.gentoo.org.

@@ -2778,6 +2778,7 @@ games-emulation/pcsxr:sdl - Use SDL sound backend (other parts of SDL are used u
 games-emulation/snes9x:netplay - Enable playing ROMs over the network (not recommended)
 games-emulation/snes9x:xrandr - Enable support for the X xrandr extension
 games-emulation/vbam:link - Enable GBA linking functionality
+games-emulation/yabause:pic - disable optimized assembly code that is not PIC friendly
 games-emulation/zsnes:debug - Enable the builtin debugger
 games-emulation/zsnes:pax_kernel - Triggers a paxmarking of the binary
 games-engines/frobtads:tads2compiler - Build TADS2 compiler
