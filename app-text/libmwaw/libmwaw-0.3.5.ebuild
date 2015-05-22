@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.3.1.ebuild,v 1.2 2014/10/10 20:17:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/libmwaw-0.3.5.ebuild,v 1.1 2015/05/22 22:53:42 dilfridge Exp $
 
 EAPI=5
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/libwps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.60 2015/02/15 14:58:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwps/ChangeLog,v 1.61 2015/05/22 22:45:59 dilfridge Exp $
+
+*libwps-0.4.0 (22 May 2015)
+
+  22 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> +libwps-0.4.0.ebuild:
+  Version bump (no keywords, for live libreoffice)
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libwps-0.3.1.ebuild:
   Stable for x86, wrt bug #534684
