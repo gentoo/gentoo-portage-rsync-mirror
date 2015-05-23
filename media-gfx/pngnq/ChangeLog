@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/pngnq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.16 2015/02/08 12:06:00 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pngnq/ChangeLog,v 1.17 2015/05/23 08:58:25 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> pngnq-1.1.ebuild:
+  Needs automake-1.13 (#531812)
 
   08 Feb 2015;  <hanno@gentoo.org> metadata.xml:
   re-assign to maintainer-needed
