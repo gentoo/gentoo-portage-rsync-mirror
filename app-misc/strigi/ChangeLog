@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/strigi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.112 2015/05/21 13:29:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/ChangeLog,v 1.113 2015/05/23 21:32:49 zlogene Exp $
+
+  23 May 2015; Mikle Kolyada <zlogene@gentoo.org> strigi-0.7.8-r1.ebuild:
+  x86 stable wrt bug #530910
 
   21 May 2015; Agostino Sarubbo <ago@gentoo.org> strigi-0.7.8-r1.ebuild:
   Stable for amd64, wrt bug #530910

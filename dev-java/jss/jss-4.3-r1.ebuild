@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3-r1.ebuild,v 1.2 2015/05/23 18:22:18 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3-r1.ebuild,v 1.4 2015/05/23 21:40:39 monsieurp Exp $
 
 EAPI="5"
 
@@ -45,6 +45,12 @@ java_prepare() {
 	epatch "${FILESDIR}"/${P}-secitem.patch
 }
 
+# See bug 539100.
+pkg_setup() {
+	linux-info_pkg_setup
+	java-pkg-2_pkg_setup
+}
+
 src_compile() {
 	export JAVA_GENTOO_OPTS="-source $(java-pkg_get-source) -target $(java-pkg_get-target)"
 
@@ -57,11 +63,6 @@ src_compile() {
 	if [[ ${KV_MAJOR} -ge 3 ]]; then
 		cp Linux2.6.mk Linux${KV_MAJOR}.${KV_MINOR}.mk || die
 	fi
-
-	# workaround for bug 539100
-	local MY_JAVA_HOME=/etc/java-config-2/current-system-vm/
-	JAVA_HOME=${MY_JAVA_HOME}
-	export JAVA_HOME
 
 	emake -j1 BUILD_OPT=1
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-6.0.348_p20150502.ebuild,v 1.1 2015/05/04 04:30:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ekopath/ekopath-6.0.373_p20150519.ebuild,v 1.1 2015/05/23 21:32:10 mgorny Exp $
 
 EAPI=5
 
@@ -56,6 +56,8 @@ src_install() {
 	./"${INSTALLER}" \
 		--prefix "${ED%/}/opt/${PN}" \
 		--mode unattended || die
+
+	[[ -d ${ED%/}/opt/${PN}/lib/${MY_PV} ]] || die "Incorrect release version in PV"
 
 	rm -r "${ED}/opt/${PN}"/uninstall* || die
 	doenvd 99${PN}
