@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-sound/icedtea-sound-1.0.1.ebuild,v 1.2 2015/05/21 09:03:39 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-sound/icedtea-sound-1.0.1.ebuild,v 1.3 2015/05/23 22:52:22 chewi Exp $
 # Build written by Andrew John Hughes (gnu_andrew@member.fsf.org)
 
 EAPI="5"
@@ -13,7 +13,7 @@ SRC_URI="http://icedtea.classpath.org/download/source/${P}.tar.xz"
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~arm ~ppc ~x86"
 
 IUSE="+doc test"
 
