@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/greycstoration
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.9 2013/02/27 16:11:20 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/greycstoration/ChangeLog,v 1.10 2015/05/23 01:18:50 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -greycstoration-2.9.ebuild:
+  Remove old.
 
 *greycstoration-2.9-r1 (27 Feb 2013)
 
@@ -44,4 +47,3 @@
   25 Feb 2008; Denis Dupeyron <calchan@gentoo.org> +metadata.xml,
   +greycstoration-1.2.7.ebuild:
   Initial commit, see bug #114577.
-

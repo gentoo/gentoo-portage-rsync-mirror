@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/fontypython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.20 2015/04/05 10:16:38 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontypython/ChangeLog,v 1.21 2015/05/23 01:16:35 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -fontypython-0.4.2.3.ebuild,
+  -fontypython-0.4.4.ebuild:
+  Remove old.
 
   05 Apr 2015; Chema Alonso <nimiux@gentoo.org> fontypython-0.4.4-r1.ebuild:
   Stable for amd64 wrt bug #512862

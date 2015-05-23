@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/sam2p
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.59 2014/11/08 18:31:08 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sam2p/ChangeLog,v 1.60 2015/05/23 01:09:00 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -sam2p-0.47.ebuild,
+  -sam2p-0.48.ebuild:
+  Remove old.
 
   08 Nov 2014; Mike Frysinger <vapier@gentoo.org>
   +files/sam2p-0.49-glibc-2.20.patch, sam2p-0.49.1.ebuild, sam2p-0.49.2.ebuild:

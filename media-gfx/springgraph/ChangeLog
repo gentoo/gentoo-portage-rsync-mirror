@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/springgraph
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/ChangeLog,v 1.22 2011/02/06 07:45:39 leio Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/springgraph/ChangeLog,v 1.23 2015/05/23 01:06:29 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -springgraph-79.ebuild,
+  -springgraph-82.ebuild:
+  Remove old.
 
   06 Feb 2011; Mart Raudsepp <leio@gentoo.org> springgraph-88.ebuild:
   Drop to ~mips
@@ -73,4 +77,3 @@
   01 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
   springgraph-79.ebuild:
   initial commit, ebuild by robbat2@gentoo.org
-

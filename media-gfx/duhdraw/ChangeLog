@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/duhdraw
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.21 2014/03/05 15:47:51 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.22 2015/05/23 01:15:32 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -duhdraw-2.8.13.ebuild:
+  Remove old.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> duhdraw-2.8.13-r1.ebuild:
   Stable for ppc, wrt bug #495698

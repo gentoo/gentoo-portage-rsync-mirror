@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/openclipart
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.9 2014/03/05 16:10:25 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/openclipart/ChangeLog,v 1.10 2015/05/23 01:10:02 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -openclipart-0.19.ebuild:
+  Remove old.
 
   05 Mar 2014; Agostino Sarubbo <ago@gentoo.org> openclipart-0.20.ebuild:
   Stable for ppc, wrt bug #489124
