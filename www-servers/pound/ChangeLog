@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/pound
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.55 2014/12/30 04:54:38 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/pound/ChangeLog,v 1.56 2015/05/23 00:21:41 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -pound-2.5.ebuild,
+  -pound-2.7a.ebuild:
+  Remove old.
 
 *pound-2.7f (30 Dec 2014)
 

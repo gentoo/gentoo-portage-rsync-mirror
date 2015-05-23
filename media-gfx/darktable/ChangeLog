@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/darktable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.69 2015/05/22 20:41:04 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/darktable/ChangeLog,v 1.70 2015/05/23 00:14:02 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> darktable-1.6.6.ebuild,
+  darktable-9999.ebuild:
+  Add kde-apps/kwalletd as an alternative.
 
 *darktable-1.6.6 (22 May 2015)
 
