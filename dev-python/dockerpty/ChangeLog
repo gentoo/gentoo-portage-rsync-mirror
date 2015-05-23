@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/dockerpty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dockerpty/ChangeLog,v 1.2 2014/11/10 02:01:16 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dockerpty/ChangeLog,v 1.3 2015/05/23 21:00:20 alunduil Exp $
+
+*dockerpty-0.3.3 (23 May 2015)
+
+  23 May 2015; Alex Brandt <alunduil@gentoo.org> +dockerpty-0.3.3.ebuild,
+  metadata.xml:
+  add version 0.3.3
 
 *dockerpty-0.3.2 (10 Nov 2014)
 
@@ -12,4 +18,3 @@
   27 Oct 2014; Alex Brandt <alunduil@gentoo.org> +dockerpty-0.2.4.ebuild,
   +metadata.xml:
   add ebuild written by me
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.5.6.ebuild,v 1.1 2015/04/04 23:49:28 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/liblangtag/liblangtag-0.5.6.ebuild,v 1.2 2015/05/23 20:41:39 dilfridge Exp $
 
 EAPI=5
 
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 
 # Upstream expect liblangtag to be installed when one runs tests...
 RESTRICT="test"
+
+PATCHES=( "${FILESDIR}/${PN}-0.5.6-musl.patch" )
 
 src_configure() {
 	local myeconfargs=(
