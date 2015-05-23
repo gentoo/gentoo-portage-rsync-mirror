@@ -1,6 +1,9 @@
 # ChangeLog for kde-frameworks/kpackage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpackage/ChangeLog,v 1.8 2015/05/17 13:14:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpackage/ChangeLog,v 1.9 2015/05/23 01:33:52 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -kpackage-5.9.0.ebuild:
+  Remove old.
 
   17 May 2015; Manuel Rüger <mrueg@gentoo.org> -kpackage-5.8.0.ebuild:
   Remove old.

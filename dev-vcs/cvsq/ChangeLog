@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/cvsq
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsq/ChangeLog,v 1.4 2014/08/10 21:22:55 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/cvsq/ChangeLog,v 1.5 2015/05/23 01:35:20 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -cvsq-0.4.3.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cvsq-0.4.3.ebuild,
   cvsq-0.4.4.ebuild:

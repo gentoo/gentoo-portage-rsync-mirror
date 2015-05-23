@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/svn2cl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/ChangeLog,v 1.4 2014/08/10 21:23:47 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/svn2cl/ChangeLog,v 1.5 2015/05/23 01:36:07 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -svn2cl-0.9.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> svn2cl-0.9.ebuild:
   QA: drop trailing '.' from DESCRIPTION
