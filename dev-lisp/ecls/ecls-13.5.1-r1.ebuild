@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-13.5.1-r1.ebuild,v 1.5 2015/03/31 17:46:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-13.5.1-r1.ebuild,v 1.6 2015/05/23 15:15:15 pacho Exp $
 
 EAPI=5
 inherit eutils multilib
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tgz"
 
 LICENSE="BSD LGPL-2"
 SLOT="0/${PV}"
-KEYWORDS="amd64 ~ppc ~sparc ~x86"
+KEYWORDS="amd64 ~ppc ~sparc x86"
 IUSE="debug emacs gengc precisegc cpu_flags_x86_sse +threads +unicode X"
 
 CDEPEND="dev-libs/gmp

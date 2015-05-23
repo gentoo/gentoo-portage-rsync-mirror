@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/gcl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.68 2014/11/04 17:25:51 grozin Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gcl/ChangeLog,v 1.69 2015/05/23 15:15:23 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> gcl-2.6.10.ebuild:
+  x86 stable wrt bug #511170
 
 *gcl-2.6.12 (04 Nov 2014)
 

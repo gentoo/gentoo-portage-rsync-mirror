@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.75 2015/01/08 04:04:52 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.76 2015/05/23 15:14:14 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> slime-2.0_p20101103.ebuild:
+  x86 stable wrt bug #511170
 
 *slime-2.12 (08 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-ppcre
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.51 2014/08/10 20:41:23 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.52 2015/05/23 15:14:52 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> cl-ppcre-1.2.16.ebuild:
+  x86 stable wrt bug #511170
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> cl-ppcre-1.2.10.ebuild,
   cl-ppcre-1.2.11.ebuild, cl-ppcre-1.2.12.ebuild, cl-ppcre-1.2.13.ebuild,

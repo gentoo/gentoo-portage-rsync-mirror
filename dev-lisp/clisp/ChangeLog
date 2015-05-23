@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.115 2015/02/20 16:48:02 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.116 2015/05/23 15:15:00 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> clisp-2.49-r8.ebuild:
+  x86 stable wrt bug #511170
 
   20 Feb 2015; Andrey Grozin <grozin@gentoo.org> -clisp-2.47-r1.ebuild,
   -files/pari.patch:

@@ -1,6 +1,23 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.44 2015/01/28 19:40:59 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.46 2015/05/23 15:18:39 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> -cmucl-19c.ebuild,
+  -cmucl-19d_p2.ebuild, -cmucl-20a.ebuild, -cmucl-20b_p001.ebuild,
+  -cmucl-20d-r3.ebuild, -files/19c/README.Gentoo, -files/19c/cmucl.sh,
+  -files/19c/herald-save.lisp-gentoo.patch, -files/19c/install-clc.lisp,
+  -files/19c/site-init.lisp.in, -files/19d-cmucl-patch-002.patch,
+  -files/19d-gentoo.patch, -files/20a-multiplefixes.patch,
+  -files/20a-patch000.patch,
+  -files/20b-customize-lisp-implementation-version.patch,
+  -files/20b-execstack-fixes.patch, -files/20b-nositeinit-build.patch,
+  -files/20b-patch001.patch,
+  -files/20d-customize-lisp-implementation-version.patch,
+  -files/20d-execstack-fixes.patch, -files/fix-man-and-doc-installation.patch:
+  Drop old
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> cmucl-20e.ebuild:
+  x86 stable wrt bug #526744
 
   28 Jan 2015; Michał Górny <mgorny@gentoo.org> cmucl-20a.ebuild,
   cmucl-20b_p001.ebuild, cmucl-20d-r3.ebuild, cmucl-20e.ebuild:

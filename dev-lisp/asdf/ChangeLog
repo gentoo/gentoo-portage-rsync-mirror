@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/asdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.22 2015/01/09 02:42:34 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/asdf/ChangeLog,v 1.23 2015/05/23 15:14:37 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> asdf-3.0.3.ebuild:
+  x86 stable wrt bug #511170
 
   09 Jan 2015; Mark Wright <gienah@gentoo.org> asdf-3.0.3.ebuild:
   asdf-3.0.3 needs the same prefix changes as asdf-3.1.4 since it uses the same
