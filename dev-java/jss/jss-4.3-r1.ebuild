@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3-r1.ebuild,v 1.1 2013/06/05 09:30:15 tomwij Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/jss-4.3-r1.ebuild,v 1.2 2015/05/23 18:22:18 monsieurp Exp $
 
 EAPI="5"
 
@@ -51,11 +51,17 @@ src_compile() {
 	use amd64 && export USE_64=1
 
 	cd "${S}/security/coreconf" || die
+
 	# Hotfix for kernel 3.x #379283
 	get_running_version || die "Failed to determine kernel version"
 	if [[ ${KV_MAJOR} -ge 3 ]]; then
 		cp Linux2.6.mk Linux${KV_MAJOR}.${KV_MINOR}.mk || die
 	fi
+
+	# workaround for bug 539100
+	local MY_JAVA_HOME=/etc/java-config-2/current-system-vm/
+	JAVA_HOME=${MY_JAVA_HOME}
+	export JAVA_HOME
 
 	emake -j1 BUILD_OPT=1
 

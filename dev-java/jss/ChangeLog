@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jss
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.27 2013/06/05 09:30:15 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jss/ChangeLog,v 1.28 2015/05/23 18:22:18 monsieurp Exp $
+
+  23 May 2015; Patrice Clement <monsieurp@gentoo.org> jss-4.3-r1.ebuild:
+  Manually set JAVA_HOME since it is needed at compilation time. Fix bug 539100.
 
 *jss-4.3-r1 (05 Jun 2013)
 
