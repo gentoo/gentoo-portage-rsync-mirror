@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/keepass
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/ChangeLog,v 1.15 2014/10/12 15:36:10 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/ChangeLog,v 1.16 2015/05/23 03:05:22 idella4 Exp $
+
+*keepass-2.29 (23 May 2015)
+
+  23 May 2015; Ian Delaney <idella4@gentoo.org> +keepass-2.29.ebuild:
+  bump; closes bug #549094 by maintainer
 
 *keepass-2.28 (12 Oct 2014)
 
