@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/genkernel-next
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.49 2015/04/21 18:35:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel-next/ChangeLog,v 1.51 2015/05/23 09:27:15 pacho Exp $
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> genkernel-next-63.ebuild:
+  sys-boot/plymouth[libkms] needed (#536084 by blackd)
+
+*genkernel-next-63 (23 May 2015)
+
+  23 May 2015; Pacho Ramos <pacho@gentoo.org> +genkernel-next-63.ebuild,
+  -genkernel-next-54.ebuild, -genkernel-next-58-r1.ebuild,
+  -genkernel-next-58.ebuild, metadata.xml:
+  Version bump, drop old
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> genkernel-next-55.ebuild:
   ppc stable wrt bug #506888
