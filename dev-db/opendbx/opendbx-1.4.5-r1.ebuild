@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5-r1.ebuild,v 1.4 2015/05/21 12:20:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/opendbx-1.4.5-r1.ebuild,v 1.5 2015/05/23 10:23:31 pacho Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.linuxnetworks.de/opendbx/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="firebird +mysql oracle postgres sqlite"
 RESTRICT="firebird? ( bindist )"
 
