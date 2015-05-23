@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/nipper
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.29 2013/03/26 23:53:09 ikelos Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nipper/ChangeLog,v 1.30 2015/05/23 00:39:01 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -nipper-0.10.10.ebuild,
+  -nipper-0.11.10.ebuild, -nipper-0.11.8.ebuild, -nipper-0.11.9.ebuild:
+  Remove old.
 
   26 Mar 2013; Mike Auty <ikelos@gentoo.org> nipper-0.12.0.ebuild:
   Bump to EAPI 4, see bug 460572.
@@ -175,4 +179,3 @@
   +files/nipper-0.9.4-banner-exclamation.patch,
   +files/nipper-0.9.4-pix-xml.patch, +metadata.xml, +nipper-0.9.4.ebuild:
   Initial commit.
-

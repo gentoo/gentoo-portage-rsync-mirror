@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/raddump
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/ChangeLog,v 1.5 2013/11/06 04:03:30 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/raddump/ChangeLog,v 1.6 2015/05/23 00:38:10 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -raddump-0.2.1.ebuild:
+  Remove old.
 
   06 Nov 2013; Patrick Lauer <patrick@gentoo.org> raddump-0.2.1.ebuild,
   raddump-0.3.1.ebuild:

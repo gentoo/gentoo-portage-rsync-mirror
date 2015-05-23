@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/thrulay
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.15 2014/08/10 21:00:52 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thrulay/ChangeLog,v 1.16 2015/05/23 00:36:39 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -thrulay-0.6.ebuild,
+  -thrulay-0.8.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> thrulay-0.6.ebuild,
   thrulay-0.8.ebuild, thrulay-0.9-r1.ebuild:
