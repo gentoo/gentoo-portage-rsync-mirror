@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rack-attack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-attack/ChangeLog,v 1.6 2015/04/19 06:06:50 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-attack/ChangeLog,v 1.7 2015/05/23 05:54:37 graaff Exp $
+
+*rack-attack-4.3.0 (23 May 2015)
+
+  23 May 2015; Hans de Graaff <graaff@gentoo.org> +rack-attack-4.3.0.ebuild:
+  Version bump.
 
   19 Apr 2015; Hans de Graaff <graaff@gentoo.org> rack-attack-4.2.0.ebuild:
   Also avoid bundler in the Rakefile.
