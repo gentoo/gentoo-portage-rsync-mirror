@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/letter_opener
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/letter_opener/ChangeLog,v 1.4 2014/12/13 07:36:44 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/letter_opener/ChangeLog,v 1.5 2015/05/23 21:23:40 mrueg Exp $
+
+*letter_opener-1.4.0 (23 May 2015)
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> +letter_opener-1.4.0.ebuild:
+  Version bump.
 
 *letter_opener-1.3.0 (13 Dec 2014)
 
