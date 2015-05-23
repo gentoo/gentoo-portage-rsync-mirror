@@ -1,6 +1,11 @@
 # ChangeLog for app-text/dos2unix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.159 2015/04/24 11:50:11 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dos2unix/ChangeLog,v 1.160 2015/05/23 06:41:12 jlec Exp $
+
+*dos2unix-7.2.2 (23 May 2015)
+
+  23 May 2015; Justin Lecher <jlec@gentoo.org> +dos2unix-7.2.2.ebuild:
+  Version Bump
 
   24 Apr 2015; Lars Wendler <polynomial-c@gentoo.org> dos2unix-6.0.6.ebuild:
   Stabilize for x86 (bug #547568).

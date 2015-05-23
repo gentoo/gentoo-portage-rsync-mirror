@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16529 2015/05/21 05:53:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16530 2015/05/23 06:37:12 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -120,14 +120,6 @@ dev-ruby/ipaddress
 # Dead upstream, nothing in tree uses it
 # Masked for removal in 30 days
 net-libs/libcapsinetwork
-
-# Hans de Graaff <graaff@gentoo.org> (19 Apr 2015)
-# Pure-ruby implementation of dev-ruby/json for uses where a compiled
-# version is not possible. This implementation is not needed on Gentoo
-# and slower than the compiled version, so all packages should depend
-# on dev-ruby/json instead. Nothing depends on this package.
-# Removal in 30 days.
-dev-ruby/json_pure
 
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (17 Apr 2015)
 # Dev channel releases are only for people who are developers or want more
