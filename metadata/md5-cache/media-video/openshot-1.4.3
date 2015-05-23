@@ -3,12 +3,12 @@ DEPEND=python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) >=dev-l
 DESCRIPTION=Free, open-source, non-linear video editor to create and edit videos and movies
 EAPI=5
 HOMEPAGE=http://www.openshotvideo.com
-IUSE=+python +ffmpeg python_targets_python2_7
+IUSE=+python +ffmpeg libav python_targets_python2_7
 KEYWORDS=~amd64
 LICENSE=GPL-3
-RDEPEND=dev-python/pygoocanvas[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygtk[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyxdg[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] virtual/python-imaging[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=media-libs/mlt-0.8.2[ffmpeg,frei0r,gtk,melt,python,sdl,xml] ffmpeg? ( >=virtual/ffmpeg-0.6[encode,sdl,x264,mp3,theora] media-sound/sox[encode,ffmpeg] ) python? ( dev-python/httplib2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/librsvg-python ) x11-libs/gtk+:2 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
+RDEPEND=dev-python/pygoocanvas[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pygtk[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/pyxdg[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] virtual/python-imaging[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] >=media-libs/mlt-0.8.2[ffmpeg,frei0r,gtk,melt,python,sdl,xml] ffmpeg? ( libav? ( media-video/libav:=[encode,sdl,x264,mp3,theora] ) !libav? ( media-video/ffmpeg:0=[encode,sdl,x264,mp3,theora] ) ) python? ( dev-python/httplib2[python_targets_python2_7(-)?,-python_single_target_python2_7(-)] dev-python/librsvg-python ) x11-libs/gtk+:2 python_targets_python2_7? ( >=dev-lang/python-2.7.5-r2:2.7[xml] ) >=dev-lang/python-exec-2:=[python_targets_python2_7(-)?,-python_single_target_python2_7(-)]
 REQUIRED_USE=|| ( python ffmpeg ) || ( python_targets_python2_7 )
 SLOT=0
 SRC_URI=http://launchpad.net/openshot/1.4/1.4.3/+download/openshot-1.4.3.tar.gz
 _eclasses_=distutils-r1	c01d5c4af34f4a37a51fc9638299c222	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	multiprocessing	d7f2985a2c76c365ee20269db5261414	python-r1	6d3a3cb5705b9fff1aeb7cfa4e3336fe	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=eca69fba57512d22dd4b8befc4b3bd03
+_md5_=c842da8fc3c93f0104cd08b8f70f3530
