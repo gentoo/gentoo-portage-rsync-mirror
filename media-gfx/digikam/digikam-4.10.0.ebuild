@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.10.0.ebuild,v 1.1 2015/05/19 22:41:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.10.0.ebuild,v 1.2 2015/05/23 19:34:35 dilfridge Exp $
 
 EAPI=5
 
@@ -30,16 +30,23 @@ IUSE="addressbook debug doc gphoto2 mysql semantic-desktop +thumbnails video"
 
 CDEPEND="
 	|| (
-		(	kde-apps/kdebase-kioslaves:4
+		(
+			kde-apps/kdebase-kioslaves:4
 			kde-apps/libkdcraw:4=
 			kde-apps/libkexiv2:4=
 			kde-apps/libkipi:4
-			kde-apps/marble:4=[plasma] )
-		( 	$(add_kdebase_dep kdebase-kioslaves)
+			kde-apps/marble:4=[plasma]
+			kde-apps/kcmshell:4
+		)
+		(
+			$(add_kdebase_dep kdebase-kioslaves)
 			kde-base/libkdcraw:4=
 			kde-base/libkexiv2:4=
 			$(add_kdebase_dep libkipi)
-			kde-base/marble:4=[plasma] )
+			kde-base/marble:4=[plasma]
+			kde-base/kcmshell:4
+			kde-base/systemsettings:4
+		)
 	)
 	dev-qt/qtgui:4
 	media-libs/jasper

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.123 2015/05/05 08:28:32 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.124 2015/05/23 19:50:32 dilfridge Exp $
+
+  23 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> opencv-2.4.10.ebuild,
+  +files/opencv-2.4.10-pic-x86.patch:
+  Add build fix for x86, bug 546508
 
   05 May 2015; Jeroen Roovers <jer@gentoo.org> opencv-2.4.9.ebuild,
   opencv-2.4.10.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.280 2015/05/19 22:41:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.281 2015/05/23 19:34:35 dilfridge Exp $
+
+  23 May 2015; Andreas K. Huettel <dilfridge@gentoo.org> digikam-4.10.0.ebuild:
+  Add kcmshell and systemsettings to dependencies, bug 550012
 
 *digikam-4.10.0 (19 May 2015)
 

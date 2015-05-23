@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.181 2015/05/04 11:52:07 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.182 2015/05/23 19:38:43 polynomial-c Exp $
+
+*gawk-4.1.3 (23 May 2015)
+
+  23 May 2015; Lars Wendler <polynomial-c@gentoo.org> -gawk-4.1.1-r1.ebuild,
+  +gawk-4.1.3.ebuild, -files/gawk-4.1.1-sandbox_issue.patch,
+  -files/gawk-4.1.1-sigpipe.patch:
+  Version bump. Removed old.
 
 *gawk-4.1.2 (04 May 2015)
 

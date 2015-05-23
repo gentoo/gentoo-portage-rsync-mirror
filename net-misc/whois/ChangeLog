@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/whois
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.217 2015/05/13 06:00:04 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/whois/ChangeLog,v 1.218 2015/05/23 19:58:31 polynomial-c Exp $
+
+*whois-5.2.8 (23 May 2015)
+
+  23 May 2015; Lars Wendler <polynomial-c@gentoo.org> -whois-5.2.4.ebuild,
+  +whois-5.2.8.ebuild:
+  Version bump. Removed old.
 
   13 May 2015; Jack Morgan <jmorgan@gentoo.org> whois-5.1.5.ebuild:
   sparc stable wrt bug #524264
