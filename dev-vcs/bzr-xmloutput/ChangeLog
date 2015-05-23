@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/bzr-xmloutput
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.18 2015/03/10 14:40:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/bzr-xmloutput/ChangeLog,v 1.19 2015/05/23 15:50:35 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -bzr-xmloutput-0.8.8.ebuild:
+  Remove old.
 
 *bzr-xmloutput-0.8.8-r2 (10 Mar 2015)
 

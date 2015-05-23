@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/rsvndump
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.11 2013/12/28 12:07:22 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rsvndump/ChangeLog,v 1.12 2015/05/23 15:48:58 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -rsvndump-0.5.2-r3.ebuild,
+  -rsvndump-0.5.3.ebuild, -rsvndump-0.5.4.ebuild, -rsvndump-0.5.5.ebuild,
+  -rsvndump-0.5.6.ebuild, -rsvndump-0.5.7.ebuild, -rsvndump-0.5.8.ebuild:
+  Remove old.
 
   28 Dec 2013; Ulrich Müller <ulm@gentoo.org> rsvndump-0.6.ebuild:
   Fix LICENSE, bug 496258.
@@ -66,4 +71,3 @@
   +rsvndump-0.5.2-r3.ebuild, +files/rsvndump-disable-man.patch,
   +metadata.xml:
   New Ebuild for bug 280039
-

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/mozart-stdlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/ChangeLog,v 1.16 2012/12/16 13:52:46 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mozart-stdlib/ChangeLog,v 1.17 2015/05/23 15:42:43 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -mozart-stdlib-1.3.2-r1.ebuild,
+  -mozart-stdlib-1.3.2.ebuild, -mozart-stdlib-1.4.0.ebuild:
+  Remove old.
 
   16 Dec 2012; Agostino Sarubbo <ago@gentoo.org> mozart-stdlib-1.4.0-r1.ebuild:
   Stable for x86, wrt bug #441176

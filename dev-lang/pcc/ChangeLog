@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/pcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.15 2015/05/13 03:08:22 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/pcc/ChangeLog,v 1.16 2015/05/23 15:41:46 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -pcc-1.0.0.ebuild,
+  -pcc-1.0.1_pre20121112.ebuild, -pcc-1.0.1_pre20131013.ebuild:
+  Remove old.
 
 *pcc-9999 (13 May 2015)
 

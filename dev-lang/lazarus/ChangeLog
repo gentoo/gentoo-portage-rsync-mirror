@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/lazarus
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.46 2014/11/24 02:48:14 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lazarus/ChangeLog,v 1.47 2015/05/23 15:46:54 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -lazarus-1.0.10.ebuild:
+  Remove old.
 
 *lazarus-1.2.6 (24 Nov 2014)
 
