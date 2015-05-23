@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10007 2015/05/23 06:37:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10008 2015/05/23 13:22:47 mrueg Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> package.mask:
+  Cleanup unneeded masks.
 
   23 May 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
   Remove dev-ruby/json_pure mask now that package is removed.

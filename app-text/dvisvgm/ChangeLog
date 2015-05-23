@@ -1,6 +1,10 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.69 2015/04/13 15:06:21 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.70 2015/05/23 13:03:55 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -dvisvgm-1.0.8.ebuild,
+  -dvisvgm-1.0.9.ebuild:
+  Remove old.
 
   13 Apr 2015; Alexis Ballier <aballier@gentoo.org> dvisvgm-1.9.2.ebuild:
   add missing app-text/{xmlto,asciidoc} build dep, bug #546458
