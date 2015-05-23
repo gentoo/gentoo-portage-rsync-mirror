@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.799 2015/05/20 22:50:10 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.800 2015/05/23 22:26:52 monsieurp Exp $
+
+  23 May 2015; Patrice Clement <monsieurp@gentoo.org> package.use.stable.mask:
+  Remove dev-python/pyudev entry. Signed off by floppym.
 
   20 May 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
   Mask icedtea[infinality] in conjunction with freetype[infinality].
