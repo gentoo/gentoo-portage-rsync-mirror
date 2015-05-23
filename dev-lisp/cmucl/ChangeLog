@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cmucl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.46 2015/05/23 15:18:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/ChangeLog,v 1.47 2015/05/23 18:51:08 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop unneeded USE flag description.
 
   23 May 2015; Pacho Ramos <pacho@gentoo.org> -cmucl-19c.ebuild,
   -cmucl-19d_p2.ebuild, -cmucl-20a.ebuild, -cmucl-20b_p001.ebuild,

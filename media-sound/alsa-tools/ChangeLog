@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.230 2015/03/25 11:51:03 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.231 2015/05/23 18:35:29 zlogene Exp $
+
+  23 May 2015; Mikle Kolyada <zlogene@gentoo.org> alsa-tools-1.0.29.ebuild:
+  amd64 stable wrt bug #550214
 
 *alsa-tools-1.0.29 (25 Mar 2015)
 

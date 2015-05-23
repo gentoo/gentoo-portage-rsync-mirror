@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/alsa-plugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.207 2015/04/06 19:17:56 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-plugins/ChangeLog,v 1.208 2015/05/23 18:36:58 zlogene Exp $
+
+  23 May 2015; Mikle Kolyada <zlogene@gentoo.org> alsa-plugins-1.0.29.ebuild:
+  amd64 stable wrt bug #550214
 
   06 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org>
   +files/alsa-plugins-1.0.28-libav10.patch, alsa-plugins-1.0.29.ebuild:
