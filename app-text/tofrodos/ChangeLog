@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tofrodos
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tofrodos/ChangeLog,v 1.7 2014/01/20 07:57:31 heroxbd Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/tofrodos/ChangeLog,v 1.8 2015/05/23 12:42:03 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org> -tofrodos-1.7.8.ebuild,
+  -tofrodos-1.7.9.ebuild:
+  Remove old.
 
   20 Jan 2014; Benda Xu <heroxbd@gentoo.org> tofrodos-1.7.12a.ebuild:
   keyword ~arm

@@ -1,6 +1,12 @@
 # ChangeLog for app-text/pdfjam
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.48 2013/04/25 21:25:34 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdfjam/ChangeLog,v 1.49 2015/05/23 12:35:40 mrueg Exp $
+
+  23 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/pdfjam-1.20-security.patch, -pdfjam-1.20-r1.ebuild,
+  -pdfjam-1.20.ebuild, -pdfjam-1.21.ebuild, -pdfjam-2.01.ebuild,
+  -pdfjam-2.05.ebuild:
+  Remove old.
 
   25 Apr 2013; Agostino Sarubbo <ago@gentoo.org> pdfjam-2.08.ebuild:
   Stable for sh, wrt bug #449298
