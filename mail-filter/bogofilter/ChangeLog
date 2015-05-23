@@ -1,6 +1,10 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.164 2015/04/18 20:38:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.165 2015/05/23 11:01:17 johu Exp $
+
+  23 May 2015; Johannes Huber <johu@gentoo.org> -bogofilter-1.2.3.ebuild,
+  -bogofilter-1.2.4.ebuild:
+  Remove old.
 
   18 Apr 2015; Pacho Ramos <pacho@gentoo.org> bogofilter-1.2.4-r1.ebuild:
   ppc64 stable wrt bug #506822
