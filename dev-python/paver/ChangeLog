@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/paver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.58 2015/03/21 07:50:44 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paver/ChangeLog,v 1.59 2015/05/23 07:12:32 idella4 Exp $
+
+  23 May 2015; Ian Delaney <idella4@gentoo.org> paver-1.2.3.ebuild,
+  paver-1.2.4.ebuild:
+  correction to dep mock
 
 *paver-1.2.4 (21 Mar 2015)
 

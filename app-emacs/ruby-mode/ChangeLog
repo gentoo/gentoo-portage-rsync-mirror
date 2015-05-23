@@ -1,6 +1,16 @@
 # ChangeLog for app-emacs/ruby-mode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.59 2014/12/28 08:51:38 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.61 2015/05/23 07:17:33 graaff Exp $
+
+  23 May 2015; Hans de Graaff <graaff@gentoo.org> -ruby-mode-2.1.1.ebuild,
+  -ruby-mode-2.1.2.ebuild, -files/50ruby-mode-gentoo-2.1.2.el:
+  Cleanup.
+
+*ruby-mode-2.2.2 (23 May 2015)
+
+  23 May 2015; Hans de Graaff <graaff@gentoo.org> +ruby-mode-2.2.2.ebuild,
+  +files/50ruby-mode-gentoo-2.2.2.el:
+  Version bump.
 
 *ruby-mode-2.2.0 (28 Dec 2014)
 
