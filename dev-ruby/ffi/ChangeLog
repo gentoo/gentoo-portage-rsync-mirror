@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.100 2015/03/20 09:16:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ChangeLog,v 1.101 2015/05/23 06:24:55 graaff Exp $
+
+  23 May 2015; Hans de Graaff <graaff@gentoo.org> ffi-1.9.8.ebuild:
+  Avoid broken tests. Add ruby22.
 
 *ffi-1.9.8 (20 Mar 2015)
 

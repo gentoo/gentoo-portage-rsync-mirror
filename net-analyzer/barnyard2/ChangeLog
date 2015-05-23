@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/barnyard2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.9 2015/05/23 00:43:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard2/ChangeLog,v 1.10 2015/05/23 06:15:19 patrick Exp $
+
+  23 May 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   23 May 2015; Manuel Rüger <mrueg@gentoo.org> -barnyard2-1.8.ebuild:
   Remove old.

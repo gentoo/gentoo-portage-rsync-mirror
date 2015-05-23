@@ -30,7 +30,6 @@
         <bugs-to>mailto:dev@securixlive.com</bugs-to>
     </upstream>
 	<use>
-		<flag name='aruba'>Enable Aruba support</flag>
 		<flag name='gre'>Enable GRE support</flag>
 		<flag name='mpls'>Enable support for mpls networks</flag>
 	</use>

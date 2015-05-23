@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.8.ebuild,v 1.1 2015/03/20 09:16:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ffi/ffi-1.9.8.ebuild,v 1.2 2015/05/23 06:24:55 graaff Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec3"
 
@@ -40,6 +40,12 @@ all_ruby_prepare() {
 
 	# Remove bundled version of libffi.
 	rm -rf ext/ffi_c/libffi || die
+
+	# Avoid GC-related specs that are broken
+	# https://github.com/ffi/ffi/issues/427
+	sed -i -e '/should release memory properly/,/^  end/ s:^:#:' \
+		spec/ffi/managed_struct_spec.rb || die
+	sed -i -e '173,211 s:^:#:' spec/ffi/pointer_spec.rb || die
 }
 
 each_ruby_configure() {
