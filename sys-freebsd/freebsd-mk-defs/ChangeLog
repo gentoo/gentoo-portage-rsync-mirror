@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-mk-defs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.61 2015/04/10 13:30:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/ChangeLog,v 1.62 2015/05/24 11:24:02 mgorny Exp $
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org>
+  -files/freebsd-mk-defs-9.2-gentoo.patch, -files/freebsd-mk-defs-9.2-gnu.patch,
+  -freebsd-mk-defs-9.2.ebuild, -freebsd-mk-defs-9.2_rc1.ebuild,
+  -freebsd-mk-defs-9.2_rc2.ebuild, -freebsd-mk-defs-9.2_rc3.ebuild:
+  Remove 9.2. Part of https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/126 by nigoro.
 
   10 Apr 2015; Michał Górny <mgorny@gentoo.org>
   +files/freebsd-mk-defs-10.1-gnu.patch, -files/freebsd-mk-defs-10.0-gnu.patch,

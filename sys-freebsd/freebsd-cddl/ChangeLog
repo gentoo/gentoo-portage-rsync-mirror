@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-cddl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.41 2015/03/08 14:01:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/ChangeLog,v 1.42 2015/05/24 11:24:01 mgorny Exp $
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org>
+  -files/freebsd-cddl-9.2-underlink.patch, -freebsd-cddl-9.2.ebuild,
+  -freebsd-cddl-9.2_rc1.ebuild, -freebsd-cddl-9.2_rc2.ebuild,
+  -freebsd-cddl-9.2_rc3.ebuild:
+  Remove 9.2. Part of https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/126 by nigoro.
 
 *freebsd-cddl-10.1 (08 Mar 2015)
 

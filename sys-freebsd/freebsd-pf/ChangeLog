@@ -1,6 +1,12 @@
 # ChangeLog for sys-freebsd/freebsd-pf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.50 2015/03/08 14:01:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/ChangeLog,v 1.51 2015/05/24 11:24:02 mgorny Exp $
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org> -freebsd-pf-9.2.ebuild,
+  -freebsd-pf-9.2_rc1.ebuild, -freebsd-pf-9.2_rc2.ebuild,
+  -freebsd-pf-9.2_rc3.ebuild:
+  Remove 9.2. Part of https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/126 by nigoro.
 
 *freebsd-pf-10.1 (08 Mar 2015)
 

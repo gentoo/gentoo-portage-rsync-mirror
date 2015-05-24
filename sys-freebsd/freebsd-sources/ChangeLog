@@ -1,6 +1,13 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.111 2015/05/24 08:45:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.112 2015/05/24 11:24:01 mgorny Exp $
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org>
+  -files/freebsd-sources-9.2-gentoo.patch, -freebsd-sources-9.2.ebuild,
+  -freebsd-sources-9.2_rc1.ebuild, -freebsd-sources-9.2_rc2.ebuild,
+  -freebsd-sources-9.2_rc3.ebuild, metadata.xml:
+  Remove 9.2. Part of https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/126 by nigoro.
 
 *freebsd-sources-10.1-r3 (24 May 2015)
 
