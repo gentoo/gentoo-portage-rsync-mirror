@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-4.0.0-r2.ebuild,v 1.1 2015/05/21 02:22:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-4.0.0-r2.ebuild,v 1.2 2015/05/24 03:42:06 vapier Exp $
 
 EAPI="5"
 
@@ -23,7 +23,7 @@ IUSE="atm berkdb +iptables ipv6 minimal selinux"
 
 RDEPEND="!net-misc/arpd
 	iptables? ( >=net-firewall/iptables-1.4.20:= )
-	!minimal? ( berkdb? ( sys-libs/db:= ) )
+	berkdb? ( sys-libs/db:= )
 	atm? ( net-dialup/linux-atm )
 	selinux? ( sys-libs/libselinux )"
 # We require newer linux-headers for ipset support #549948
@@ -62,7 +62,7 @@ src_prepare() {
 	# don't build arpd if USE=-berkdb #81660
 	use berkdb || sed -i '/^TARGETS=/s: arpd : :' misc/Makefile
 
-	use minimal && sed -i -e '/^SUBDIRS=/s:=.*:=lib tc:' Makefile
+	use minimal && sed -i -e '/^SUBDIRS=/s:=.*:=lib tc ip:' Makefile
 }
 
 src_configure() {
@@ -93,6 +93,7 @@ src_install() {
 	if use minimal ; then
 		into /
 		dosbin tc/tc
+		dobin ip/ip
 		return 0
 	fi
 

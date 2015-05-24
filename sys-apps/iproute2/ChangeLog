@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/iproute2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.262 2015/05/21 02:22:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/ChangeLog,v 1.263 2015/05/24 03:42:06 vapier Exp $
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org> iproute2-4.0.0-r2.ebuild,
+  iproute2-9999.ebuild, metadata.xml:
+  Install `ip` with USE=minimal and document the flag #549988 by Mike Gilbert.
 
 *iproute2-4.0.0-r2 (21 May 2015)
 

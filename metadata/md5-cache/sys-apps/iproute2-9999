@@ -1,11 +1,11 @@
 DEFINED_PHASES=configure install prepare unpack
-DEPEND=!net-misc/arpd iptables? ( >=net-firewall/iptables-1.4.5 ) !minimal? ( berkdb? ( sys-libs/db ) ) atm? ( net-dialup/linux-atm ) app-arch/xz-utils iptables? ( virtual/pkgconfig ) sys-devel/bison sys-devel/flex >=sys-kernel/linux-headers-2.6.27 elibc_glibc? ( >=sys-libs/glibc-2.7 ) dev-vcs/git
+DEPEND=!net-misc/arpd iptables? ( >=net-firewall/iptables-1.4.20:= ) berkdb? ( sys-libs/db:= ) atm? ( net-dialup/linux-atm ) selinux? ( sys-libs/libselinux ) app-arch/xz-utils iptables? ( virtual/pkgconfig ) sys-devel/bison sys-devel/flex >=sys-kernel/linux-headers-3.7 elibc_glibc? ( >=sys-libs/glibc-2.7 ) dev-vcs/git
 DESCRIPTION=kernel routing and traffic control utilities
-EAPI=4
+EAPI=5
 HOMEPAGE=http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
-IUSE=atm berkdb +iptables ipv6 minimal
+IUSE=atm berkdb +iptables ipv6 minimal selinux
 LICENSE=GPL-2
-RDEPEND=!net-misc/arpd iptables? ( >=net-firewall/iptables-1.4.5 ) !minimal? ( berkdb? ( sys-libs/db ) ) atm? ( net-dialup/linux-atm )
+RDEPEND=!net-misc/arpd iptables? ( >=net-firewall/iptables-1.4.20:= ) berkdb? ( sys-libs/db:= ) atm? ( net-dialup/linux-atm ) selinux? ( sys-libs/libselinux )
 SLOT=0
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	git-2	e28f0d8a9b321431b1e699782851b827	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=bc9ee130fd958a135042919597efe9e4
+_md5_=be84f176f1fff630d420b49188467cc1
