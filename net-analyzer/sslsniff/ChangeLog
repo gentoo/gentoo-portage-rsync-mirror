@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/sslsniff
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.9 2013/11/03 05:56:12 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sslsniff/ChangeLog,v 1.10 2015/05/24 00:57:19 mrueg Exp $
+
+  24 May 2015; Manuel Rüger <mrueg@gentoo.org> -sslsniff-0.6.ebuild:
+  Remove old.
 
   03 Nov 2013; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
   adding myself to the list of maintainers

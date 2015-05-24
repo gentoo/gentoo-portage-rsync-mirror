@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/snmptt
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.21 2013/11/26 12:32:49 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.22 2015/05/24 00:56:31 mrueg Exp $
+
+  24 May 2015; Manuel Rüger <mrueg@gentoo.org> -snmptt-1.3.ebuild:
+  Remove old.
 
 *snmptt-1.4 (26 Nov 2013)
 
@@ -85,4 +88,3 @@
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
   +snmptt-0.9.ebuild:
   Initial ebuild. Thanks to Karl Dag Gursli <karl-d@gursli.com>. Closes #50968
-

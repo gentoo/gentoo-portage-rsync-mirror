@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.59 2015/02/07 10:32:27 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.60 2015/05/24 00:54:39 mrueg Exp $
+
+  24 May 2015; Manuel Rüger <mrueg@gentoo.org> -dsniff-2.4_beta1-r5.ebuild,
+  -dsniff-2.4_beta1-r6.ebuild:
+  Remove old.
 
 *dsniff-2.4_beta1-r8 (07 Feb 2015)
 
