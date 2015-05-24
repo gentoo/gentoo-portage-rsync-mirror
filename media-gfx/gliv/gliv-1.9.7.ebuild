@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.7.ebuild,v 1.3 2014/08/09 12:09:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.9.7.ebuild,v 1.4 2015/05/24 09:46:10 pacho Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils autotools
 
 DESCRIPTION="An image viewer that uses OpenGL"
@@ -15,18 +14,29 @@ SLOT="0"
 KEYWORDS="~amd64 ppc ~x86"
 IUSE="nls"
 
-RDEPEND=">=x11-libs/gtk+-2.6:2
+RDEPEND="
+	>=x11-libs/gtk+-2.6:2
 	virtual/opengl
-	>x11-libs/gtkglext-1.0.6"
+	>x11-libs/gtkglext-1.0.6
+"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/bison-1.875
-	nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )
+"
 
 src_prepare() {
-	 epatch "${FILESDIR}"/${P}-as-needed.patch \
-	 	"${FILESDIR}/${P}-destdir.patch"
-	 eautoreconf
+	# Fix build with gettext-0.19, bug #512624
+	# using gettextize no-interactive example from dev-util/bless package
+	if use nls; then
+		cp $(type -p gettextize) "${T}"/
+		sed -i -e 's:read dummy < /dev/tty::' "${T}/gettextize" || die
+		"${T}"/gettextize -f --no-changelog --intl > /dev/null
+	fi
+
+	epatch 	"${FILESDIR}"/${P}-as-needed.patch \
+		"${FILESDIR}/${P}-destdir.patch"
+	eautoreconf
 }
 
 src_configure() {

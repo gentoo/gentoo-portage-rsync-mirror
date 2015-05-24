@@ -1,6 +1,9 @@
 # ChangeLog for sci-geosciences/bt747
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.7 2012/05/24 19:57:45 scarabeus Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/bt747/ChangeLog,v 1.8 2015/05/24 09:52:42 pacho Exp $
+
+  24 May 2015; Pacho Ramos <pacho@gentoo.org> bt747-2.0.3.ebuild:
+  Needs glib and gsettings (#520214 by Robert G. Siebeck)
 
   24 May 2012; Tomáš Chvátal <scarabeus@gentoo.org> bt747-2.0.3.ebuild:
   Actually lets use eapi4.
@@ -32,4 +35,3 @@
   16 Jul 2009; Tupone Alfredo <tupone@gentoo.org> +metadata.xml,
   +bt747-1.68.22.ebuild:
   New package. Bug #235598 by me
-
