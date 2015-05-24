@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.4.1.2.ebuild,v 1.4 2015/05/24 16:37:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.4.3.2.ebuild,v 1.1 2015/05/24 16:37:05 dilfridge Exp $
 
 EAPI=5
 
@@ -55,22 +55,21 @@ SRC_URI="
 IUSE="gnome java kde"
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 
 BIN_COMMON_DEPEND="
 	=app-text/libexttextcat-3.4*
 	=app-text/libmwaw-0.3*
 	app-text/poppler:0/51
 	dev-libs/boost:0/1.55.0
-	dev-libs/icu:0/54a
+	dev-libs/icu:0/55
 	=media-gfx/graphite2-1.2*
 	media-libs/glew:0/1.10
 	media-libs/harfbuzz:0/0.9.18[icu]
 	media-libs/libpng:0/16
-	amd64? ( >=sys-libs/glibc-2.20-r2 )
-	x86? ( >=sys-libs/glibc-2.19-r1 )
+	>=sys-libs/glibc-2.20-r2
 	virtual/jpeg:62
-	kde? ( >=kde-base/kdelibs-4.14.3-r1:4 >=dev-qt/qtcore-4.8.5-r2:4 >=dev-qt/qtgui-4.8.5-r4:4 )
+	kde? ( >=kde-base/kdelibs-4.14.3-r1:4 >=dev-qt/qtcore-4.8.6-r2:4 >=dev-qt/qtgui-4.8.6-r4:4 )
 "
 
 # PLEASE place any restrictions that are specific to the binary builds
