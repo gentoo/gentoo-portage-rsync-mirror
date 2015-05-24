@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.305 2015/05/17 21:56:09 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.306 2015/05/24 18:22:59 mattst88 Exp $
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org> icu-55.1.ebuild:
+  alpha stable, bug 546156.
 
 *icu-55.1 (17 May 2015)
 
