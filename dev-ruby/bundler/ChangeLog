@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.87 2015/05/11 18:17:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.89 2015/05/24 18:45:08 graaff Exp $
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
+  Create stable candidate.
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> -bundler-1.7.4.ebuild,
+  -bundler-1.8.7.ebuild, -bundler-1.8.8.ebuild:
+  Cleanup.
 
 *bundler-1.8.9 (11 May 2015)
 

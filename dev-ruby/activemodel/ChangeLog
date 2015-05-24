@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activemodel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.102 2015/03/19 19:23:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activemodel/ChangeLog,v 1.103 2015/05/24 18:52:35 graaff Exp $
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> -activemodel-4.0.12.ebuild,
+  -activemodel-4.1.8.ebuild, -activemodel-4.1.9.ebuild,
+  -activemodel-4.2.0.ebuild:
+  Cleanup.
 
 *activemodel-4.2.1 (19 Mar 2015)
 *activemodel-4.1.10 (19 Mar 2015)

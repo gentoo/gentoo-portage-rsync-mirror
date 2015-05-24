@@ -1,6 +1,13 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.458 2015/05/18 11:31:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.459 2015/05/24 18:45:23 dilfridge Exp $
+
+*poppler-0.33.0-r1 (24 May 2015)
+
+  24 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +poppler-0.33.0-r1.ebuild, poppler-9999.ebuild,
+  +files/poppler-0.33.0-openjpeg2.patch:
+  Use libopenjpeg:2 and workaround broken slotting
 
 *poppler-0.33.0 (18 May 2015)
 

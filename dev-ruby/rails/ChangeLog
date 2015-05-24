@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.312 2015/03/19 19:26:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/ChangeLog,v 1.313 2015/05/24 18:49:17 graaff Exp $
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> -rails-4.0.12.ebuild,
+  -rails-4.1.8.ebuild, -rails-4.1.9.ebuild, -rails-4.2.0.ebuild:
+  Cleanup.
 
 *rails-4.2.1 (19 Mar 2015)
 *rails-4.1.10 (19 Mar 2015)
