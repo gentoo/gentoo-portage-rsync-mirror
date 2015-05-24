@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.10-r5.ebuild,v 1.3 2015/05/24 19:32:06 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.12-r2.ebuild,v 1.1 2015/05/24 21:05:42 tamiko Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${P/_rc/-rc}"
 
 inherit eutils user autotools linux-info systemd readme.gentoo
 
-BACKPORTS="20150127"
+BACKPORTS="20150524"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -36,8 +36,8 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
-IUSE="audit avahi +caps firewalld fuse iscsi +libvirtd lvm lxc +macvtap nfs \
-	nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
+IUSE="audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm lxc \
+	+macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
 	elibc_glibc systemd"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -73,6 +73,7 @@ RDEPEND="sys-libs/readline:0=
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
 	fuse? ( >=sys-fs/fuse-2.8.6 )
+	glusterfs? ( >=sys-cluster/glusterfs-3.4.1 )
 	iscsi? ( sys-block/open-iscsi )
 	lxc? ( !systemd? ( sys-power/pm-utils ) )
 	lvm? ( >=sys-fs/lvm2-2.02.48-r2 )
@@ -114,6 +115,7 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	app-text/xhtml1
 	dev-lang/perl
+	dev-perl/XML-XPath
 	dev-libs/libxslt"
 
 DOC_CONTENTS="For the basic networking support (bridged and routed networks)
@@ -225,7 +227,7 @@ src_prepare() {
 	fi
 
 	epatch "${FILESDIR}"/${PN}-1.2.9-do_not_use_sysconf.patch
-	epatch "${FILESDIR}"/${PN}-1.2.9-fix-firewalld-configuration.patch
+
 	[[ -n ${BACKPORTS} ]] && \
 		EPATCH_FORCE=yes EPATCH_SUFFIX="patch" \
 			EPATCH_SOURCE="${WORKDIR}/patches" epatch
@@ -239,7 +241,7 @@ src_prepare() {
 	local iscsi_init=
 	local rbd_init=
 	local firewalld_init=
-	cp "${FILESDIR}/libvirtd.init-r13" "${S}/libvirtd.init"
+	cp "${FILESDIR}/libvirtd.init-r14" "${S}/libvirtd.init"
 	use avahi && avahi_init='avahi-daemon'
 	use iscsi && iscsi_init='iscsid'
 	use rbd && rbd_init='ceph'
@@ -288,6 +290,8 @@ src_configure() {
 	myconf+=" $(use_with lvm storage-lvm)"
 	myconf+=" $(use_with iscsi storage-iscsi)"
 	myconf+=" $(use_with parted storage-disk)"
+	mycond+=" $(use_with glusterfs)"
+	mycond+=" $(use_with glusterfs storage-gluster)"
 	myconf+=" $(use_with lvm storage-mpath)"
 	myconf+=" $(use_with rbd storage-rbd)"
 	myconf+=" $(use_with numa numactl)"
@@ -401,7 +405,7 @@ src_install() {
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
-	newinitd "${FILESDIR}/virtlockd.init" virtlockd || die
+	newinitd "${FILESDIR}/virtlockd.init-r1" virtlockd || die
 
 	readme.gentoo_create_doc
 }

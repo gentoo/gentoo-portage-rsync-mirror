@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.76 2015/05/24 19:32:06 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.77 2015/05/24 21:05:42 tamiko Exp $
 
 EAPI=5
 
@@ -407,7 +407,7 @@ src_install() {
 
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
-	newinitd "${FILESDIR}/virtlockd.init" virtlockd || die
+	newinitd "${FILESDIR}/virtlockd.init-r1" virtlockd || die
 
 	readme.gentoo_create_doc
 }

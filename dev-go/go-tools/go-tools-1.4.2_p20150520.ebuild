@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/go-tools-1.4.2_p20150520.ebuild,v 1.3 2015/05/24 09:31:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/go-tools-1.4.2_p20150520.ebuild,v 1.4 2015/05/24 21:06:53 zmedico Exp $
 
 EAPI=5
 
@@ -64,11 +64,21 @@ src_test() {
 }
 
 src_install() {
+	local x
 	exeinto /usr/lib/go/bin
 	doexe "${WORKDIR}"/bin/*
+
+	# godoc ends up in ${GOROOT}/bin
+	while read -r -d '' x; do
+		doexe "${x}"
+		dosym ../lib/go/bin/${x##*/} /usr/bin/${x##*/}
+	done < <(find "${GOROOT}/bin" -type f -print0)
+
+	# cover and vet end up in ${GOROOT}/pkg/tool/linux_amd64
+	exeinto /usr/lib/go/pkg/tool/linux_amd64
+	find "${GOROOT}/pkg/tool/linux_amd64" -type f -exec doexe {} \;
+
 	insinto /usr/lib/go
 	find "${WORKDIR}"/{pkg,src} -name '.git*' -exec rm -rf {} \; 2>/dev/null
 	doins -r "${WORKDIR}"/{pkg,src}
-	exeinto /usr/lib/go/pkg/tool/linux_amd64
-	find "${GOROOT}/pkg/tool/linux_amd64" -type f -exec doexe {} \;
 }

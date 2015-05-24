@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.12-r1.ebuild,v 1.3 2015/05/24 19:32:06 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.14-r3.ebuild,v 1.1 2015/05/24 21:05:42 tamiko Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_P="${P/_rc/-rc}"
 
 inherit eutils user autotools linux-info systemd readme.gentoo
 
-BACKPORTS=""
+BACKPORTS="20150524"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -36,6 +36,7 @@ S="${WORKDIR}/${P%_rc*}"
 DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
+# TODO: Reenable IUSE wireshark-plugins
 IUSE="audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm lxc \
 	+macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
@@ -56,7 +57,7 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 # We can use both libnl:1.1 and libnl:3, but if you have both installed, the
 # package will use 3 by default. Since we don't have slot pinning in an API,
 # we must go with the most recent
-RDEPEND="sys-libs/readline:0=
+RDEPEND="sys-libs/readline:0
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
 	dev-libs/libgcrypt:0
@@ -403,9 +404,11 @@ src_install() {
 	use systemd && systemd_install_serviced \
 		"${FILESDIR}"/libvirtd.service.conf libvirtd.service
 
+	systemd_newtmpfilesd "${FILESDIR}"/libvirtd.tmpfiles.conf libvirtd.conf
+
 	newinitd "${S}/libvirtd.init" libvirtd || die
 	newconfd "${FILESDIR}/libvirtd.confd-r4" libvirtd || die
-	newinitd "${FILESDIR}/virtlockd.init" virtlockd || die
+	newinitd "${FILESDIR}/virtlockd.init-r1" virtlockd || die
 
 	readme.gentoo_create_doc
 }
