@@ -9,6 +9,9 @@ inherit bsdmk freebsd flag-o-matic multilib toolchain-funcs eutils multibuild mu
 DESCRIPTION="FreeBSD's base system libraries"
 SLOT="0"
 
+# Security Advisory and Errata patches.
+UPSTREAM_PATCHES=( "SA-14:27/stdio.patch" )
+
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
 # extracting the whole tarball
@@ -24,7 +27,8 @@ if [[ ${PV} != *9999* ]]; then
 			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
 			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SECURE}.tar.xz
 			build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz )
-			zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )"
+			zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )
+			$(freebsd_upstream_patches)"
 fi
 
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
@@ -105,7 +109,6 @@ PATCHES=(
 	"${FILESDIR}/${PN}-9.0-bluetooth.patch"
 	"${FILESDIR}/${PN}-9.1-.eh_frame_hdr-fix.patch"
 	"${FILESDIR}/${PN}-add-nossp-cflags.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2014-8611.patch"
 	)
 
 # Here we disable and remove source which we don't need or want
