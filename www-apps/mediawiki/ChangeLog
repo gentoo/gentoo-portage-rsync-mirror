@@ -1,6 +1,14 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.290 2015/03/03 10:23:40 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.291 2015/05/24 06:57:33 dev-zero Exp $
+
+*mediawiki-1.24.2 (24 May 2015)
+*mediawiki-1.19.24 (24 May 2015)
+*mediawiki-1.23.9 (24 May 2015)
+
+  24 May 2015; Tiziano Müller <dev-zero@gentoo.org> +mediawiki-1.19.24.ebuild,
+  +mediawiki-1.23.9.ebuild, +mediawiki-1.24.2.ebuild:
+  Security bumps (bug #545944).
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> mediawiki-1.24.1.ebuild:
   add arm64 support, tested on A53 board

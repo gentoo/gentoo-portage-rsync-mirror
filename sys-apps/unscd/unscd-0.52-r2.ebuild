@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/unscd-0.52-r2.ebuild,v 1.1 2015/04/08 21:35:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/unscd-0.52-r2.ebuild,v 1.2 2015/05/24 06:58:54 vapier Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://busybox.net/~vda/unscd/nscd-${PV}.c"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="sys-libs/glibc[nscd(+)]"

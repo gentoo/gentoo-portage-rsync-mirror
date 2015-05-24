@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/unscd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.20 2015/04/08 21:35:04 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/unscd/ChangeLog,v 1.21 2015/05/24 06:58:54 vapier Exp $
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org> unscd-0.52-r2.ebuild:
+  Mark stable for all #535652.
 
 *unscd-0.52-r2 (08 Apr 2015)
 

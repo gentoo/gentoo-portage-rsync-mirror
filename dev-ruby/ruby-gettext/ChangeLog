@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby-gettext
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.153 2015/01/25 12:12:49 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gettext/ChangeLog,v 1.155 2015/05/24 06:41:18 graaff Exp $
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-gettext-3.1.6.ebuild:
+  Add ruby22.
+
+  24 May 2015; Hans de Graaff <graaff@gentoo.org> -ruby-gettext-3.1.4.ebuild,
+  -ruby-gettext-3.1.5.ebuild:
+  Cleanup.
 
 *ruby-gettext-3.1.6 (25 Jan 2015)
 
