@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/commoncpp2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.63 2015/04/21 19:10:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/ChangeLog,v 1.64 2015/05/24 01:02:13 mrueg Exp $
+
+  24 May 2015; Manuel Rüger <mrueg@gentoo.org> -commoncpp2-1.8.0.ebuild,
+  -files/1.6.1-gcc42_atomicity.patch,
+  -files/1.6.2-configure_detect_netfilter.patch:
+  Remove old.
 
   21 Apr 2015; Pacho Ramos <pacho@gentoo.org> commoncpp2-1.8.1-r1.ebuild:
   ppc stable wrt bug #491974
