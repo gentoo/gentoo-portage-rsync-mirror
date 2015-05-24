@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=dev-qt/qtgui:4 media-sound/jack-audio-connection-kit media-libs/alsa-lib
 SLOT=0
 SRC_URI=mirror://sourceforge/alsamodular/qarecord-0.5.0.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=b157d42c6f574e759461a2e830412700

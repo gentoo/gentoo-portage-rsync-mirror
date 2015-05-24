@@ -9,5 +9,5 @@ LICENSE=GPL-1 GPL-2 MIT PSF-2 public-domain
 RDEPEND==media-video/avidemux-2.6.2-r1
 SLOT=2.6
 SRC_URI=mirror://sourceforge/avidemux/2.6.2/avidemux_2.6.2.tar.gz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=895af4a9864b08b76778937ed9a2e271

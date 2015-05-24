@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-libs/pam-0.78-r3 >=sys-auth/skey-1.1.5-r4
 SLOT=0
 SRC_URI=http://dkorunic.net/tarballs/pam_skey-1.1.5.tar.gz mirror://gentoo/pam_skey-1.1.5-patches-6.tar.xz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=71efba8f7e79ac839e328ec4e2bf12aa

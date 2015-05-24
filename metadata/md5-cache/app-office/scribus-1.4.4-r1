@@ -10,5 +10,5 @@ RDEPEND=>=dev-lang/python-2.7.5-r2:2.7[tk?] >=dev-lang/python-exec-2:=[python_ta
 REQUIRED_USE=python_targets_python2_7 tk? ( scripts )
 SLOT=0
 SRC_URI=mirror://sourceforge/scribus/1.4.4/scribus-1.4.4.tar.xz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=5ff1499966a43aa6b3e2815fc081b7f0

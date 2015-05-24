@@ -9,5 +9,5 @@ LICENSE=|| ( LGPL-2.1 MPL-1.1 )
 RDEPEND=sys-libs/zlib sdl? ( >=media-libs/libsdl-1.2.6 )
 SLOT=0
 SRC_URI=mirror://sourceforge/zziplib/zziplib-0.13.62.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=92e490b8ad33005a0a2edc1bce47fe37

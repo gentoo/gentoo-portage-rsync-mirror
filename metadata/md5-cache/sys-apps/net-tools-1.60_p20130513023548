@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=!<sys-apps/openrc-0.9.9.3 selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=mirror://gentoo/net-tools-1.60_p20130513023548.tar.xz mirror://gentoo/net-tools-1.60_p20130513023548-patches-1.tar.xz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=5d90ef750f492d021f846452e7fea4a3

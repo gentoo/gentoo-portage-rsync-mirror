@@ -10,5 +10,5 @@ RDEPEND=dev-libs/expat sci-geosciences/gpsbabel >=sci-libs/gdal-1.6.1[geos,pytho
 RESTRICT=test
 SLOT=0
 SRC_URI=http://qgis.org/downloads/qgis-1.7.0.tar.bz2 examples? ( http://download.osgeo.org/qgis/data/qgis_sample_data.tar.gz )
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=6aed9058668c918e1c6bdcc9b1be6486

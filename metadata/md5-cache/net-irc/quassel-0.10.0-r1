@@ -10,5 +10,5 @@ RDEPEND=dev-qt/qtcore:4[ssl?] sys-libs/zlib monolithic? ( dev-qt/qtscript:4 cryp
 REQUIRED_USE=|| ( X server monolithic ) crypt? ( || ( server monolithic ) ) postgres? ( || ( server monolithic ) ) syslog? ( || ( server monolithic ) ) kde? ( || ( X monolithic ) ) phonon? ( || ( X monolithic ) ) dbus? ( || ( X monolithic ) ) ayatana? ( || ( X monolithic ) ) webkit? ( || ( X monolithic ) )
 SLOT=0
 SRC_URI=http://quassel-irc.org/pub/quassel-0.10.0.tar.bz2
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=cf5efd406839ab7caf2763db88c963b9

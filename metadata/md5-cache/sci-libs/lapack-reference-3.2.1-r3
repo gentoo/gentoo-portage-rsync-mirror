@@ -8,5 +8,5 @@ LICENSE=BSD
 RDEPEND=app-eselect/eselect-lapack virtual/blas virtual/fortran
 SLOT=0
 SRC_URI=mirror://gentoo/lapack-3.2.1.tgz mirror://gentoo/lapack-reference-3.2.1-autotools.patch.bz2
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=440a8d472117a5065b57235a0fc3b51d

@@ -10,5 +10,5 @@ RDEPEND=x11-libs/libX11 x11-libs/libXext png? ( >=media-libs/libpng-1.2.43:0 ) g
 RESTRICT=bindist
 SLOT=0
 SRC_URI=http://snes9x-gtk.googlecode.com/files/snes9x-1.53-src.tar.bz2
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	games	1ad3205dbf62a2c98249f2f59b0a2d39	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	games	1ad3205dbf62a2c98249f2f59b0a2d39	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=c355c34e3b7672a36240410b9bac620d

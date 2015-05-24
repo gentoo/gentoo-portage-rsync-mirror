@@ -9,5 +9,5 @@ LICENSE=BSD GPL-2
 RDEPEND=acl? ( sys-apps/acl ) audit? ( sys-process/audit ) cracklib? ( >=sys-libs/cracklib-2.7-r3 ) pam? ( virtual/pam ) skey? ( sys-auth/skey ) selinux? ( >=sys-libs/libselinux-1.28 sys-libs/libsemanage ) nls? ( virtual/libintl ) xattr? ( sys-apps/attr ) pam? ( >=sys-auth/pambase-20150213 )
 SLOT=0
 SRC_URI=http://pkg-shadow.alioth.debian.org/releases/shadow-4.2.1.tar.xz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pam	aa1ebb3ab720ea04dbbdd6eaaf9554ed	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=44a3e17b28452ea0dc3353d17ff981e8

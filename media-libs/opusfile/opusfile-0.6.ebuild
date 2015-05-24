@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/opusfile-0.6.ebuild,v 1.4 2015/05/09 14:14:41 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/opusfile-0.6.ebuild,v 1.5 2015/05/24 07:09:02 jer Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ SRC_URI="http://downloads.xiph.org/releases/opus/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc ~ppc64 x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ppc ppc64 x86"
 IUSE="doc fixed-point +float +http static-libs"
 
 RDEPEND="media-libs/libogg

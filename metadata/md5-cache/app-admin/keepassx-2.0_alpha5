@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 GPL-3 ) BSD GPL-2 LGPL-2.1 LGPL-3+ CC0-1.0 public-domain || (
 RDEPEND=dev-libs/libgcrypt:0= dev-qt/qtcore:4 dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qttest:4 sys-libs/zlib x11-libs/libX11 x11-libs/libXtst
 SLOT=0
 SRC_URI=https://github.com/keepassx/keepassx/archive/2.0-alpha5.tar.gz -> keepassx-2.0_alpha5.tar.gz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
 _md5_=930036eb5a434b08bab8854b9003894f

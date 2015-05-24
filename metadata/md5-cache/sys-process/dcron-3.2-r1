@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-process/cronbase-0.3.2 !sys-process/vixie-cron !sys-process/bcron !sys-process/cronie !sys-process/fcron
 SLOT=0
 SRC_URI=http://apollo.backplane.com/FreeSrc/dcron32.tgz
-_eclasses_=cron	18adefe7a7b2f043ca5b63e912835970	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cron	18adefe7a7b2f043ca5b63e912835970	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=7377827fbe043f5fad8abd628a964c8d

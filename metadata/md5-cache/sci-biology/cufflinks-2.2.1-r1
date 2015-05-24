@@ -9,5 +9,5 @@ LICENSE=Artistic
 RDEPEND=|| ( ( >=sci-biology/samtools-0.1.18 sci-libs/htslib ) <sci-biology/samtools-1 ) >=dev-libs/boost-1.47.0:= <dev-libs/boost-1.56.0:= dev-cpp/eigen:3
 SLOT=0
 SRC_URI=http://cufflinks.cbcb.umd.edu/downloads/cufflinks-2.2.1.tar.gz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=1513a76e1e2778c3655520f8686a47b6

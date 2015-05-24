@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=media-libs/opencv:= sci-libs/pcl[openni] sci-libs/vtk sys-libs/zlib ieee1394? ( media-libs/libdc1394 ) openni2? ( dev-libs/OpenNI2 ) !qt5? ( qt4? ( dev-qt/qtgui:4 dev-qt/qtsvg:4 dev-qt/qtcore:4 ) ) qt5? ( dev-qt/qtwidgets:5 dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtsvg:5 )
 SLOT=0
 SRC_URI=https://github.com/introlab/rtabmap/archive/0.9.0.tar.gz -> rtabmap-0.9.0.tar.gz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	5d5921a298e95441da2f85be419894c0	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=f52071b7ecf7d6c6094c03d76b8294d5
