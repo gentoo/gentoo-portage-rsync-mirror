@@ -95,6 +95,22 @@ freebsd_get_bmake() {
 	echo "${bmake}"
 }
 
+# Generates a patch SRC_URI or DISTDIR of upstream.
+freebsd_upstream_patches() {
+	local opt=$1
+	[[ ${#UPSTREAM_PATCHES[@]} -eq 0 ]] && return 1
+	for x in "${UPSTREAM_PATCHES[@]}"
+	do
+		local out=${PN}-${x/\//-}
+		out=${out/:/}
+		if [[ ${opt} == -s ]] ; then
+			echo "${DISTDIR}/${out}"
+		else
+			echo "https://security.freebsd.org/patches/${x} -> ${out}"
+		fi
+	done
+}
+
 freebsd_do_patches() {
 	if [[ ${#PATCHES[@]} -gt 1 ]] ; then
 		for x in "${PATCHES[@]}"; do
@@ -105,6 +121,7 @@ freebsd_do_patches() {
 			epatch "${x}"
 		done
 	fi
+	[[ ${#UPSTREAM_PATCHES[@]} -gt 0 ]] && epatch $(freebsd_upstream_patches -s)
 	epatch_user
 }
 
@@ -136,7 +153,9 @@ freebsd_src_unpack() {
 			[[ -e "${WORKDIR}"/share/mk ]] && rm -rf "${WORKDIR}"/share/mk/*.mk
 		fi
 	else
-		unpack ${A}
+		for f in ${A} ; do
+			[[ ${f} == *.tar.* ]] && unpack ${f}
+		done
 	fi
 	cd "${S}"
 
