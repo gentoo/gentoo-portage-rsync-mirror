@@ -60,8 +60,6 @@ src_prepare() {
 	sed -i -e "s/'lib'/'${LIBDIR}'/" lib/module.js || die
 	sed -i -e "s|\"lib\"|\"${LIBDIR}\"|" deps/npm/lib/npm.js || die
 
-	epatch "${FILESDIR}"/${PN}-1.8.1-pkgconfig.patch
-
 	# Avoid a test that I've only been able to reproduce from emerge. It doesnt
 	# seem sandbox related either (invoking it from a sandbox works fine).
 	# The issue is that no stdin handle is openened when asked for one.
@@ -113,7 +111,7 @@ src_install() {
 	emake install DESTDIR="${ED}" PREFIX=/usr
 	use npm && dodoc -r "${LIBDIR}"/node_modules/npm/html
 	rm -rf "${LIBDIR}"/node_modules/npm/{doc,html} || die
-	find "${LIBDIR}"/node_modules -type f -name "LICENSE" -or -name "LICENCE" -delete || die
+	find "${LIBDIR}"/node_modules -type f -name "LICENSE*" -or -name "LICENCE*" -delete || die
 
 	pax-mark -m "${ED}"/usr/bin/iojs
 }
