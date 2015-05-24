@@ -1,0 +1,11 @@
+# ChangeLog for dev-python/pycanberra
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycanberra/ChangeLog,v 1.1 2015/05/24 19:22:35 tetromino Exp $
+
+*pycanberra-0_pre20130515 (24 May 2015)
+
+  24 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +pycanberra-0_pre20130515.ebuild, +metadata.xml:
+  Add python libcanberra package, needed for pitivi, requested by Thomas
+  Raschbacher (bug #550294).
+

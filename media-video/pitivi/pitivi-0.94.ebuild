@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.94.ebuild,v 1.2 2015/04/11 09:50:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/pitivi-0.94.ebuild,v 1.3 2015/05/24 19:23:14 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,6 +32,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/gst-python-1.1.90:1.0[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/pycanberra[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-3.8:3[${PYTHON_USEDEP}]
 	dev-python/pyxdg[${PYTHON_USEDEP}]
 
