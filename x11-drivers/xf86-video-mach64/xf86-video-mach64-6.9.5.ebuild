@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/xf86-video-mach64-6.9.1.ebuild,v 1.8 2012/11/10 23:50:52 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/xf86-video-mach64-6.9.5.ebuild,v 1.1 2015/05/24 03:08:33 mattst88 Exp $
 
-EAPI=4
+EAPI=5
 
 XORG_DRI="dri"
 inherit xorg-2

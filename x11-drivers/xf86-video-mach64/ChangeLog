@@ -1,6 +1,18 @@
 # ChangeLog for x11-drivers/xf86-video-mach64
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/ChangeLog,v 1.47 2013/01/04 14:09:48 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-mach64/ChangeLog,v 1.49 2015/05/24 03:09:23 mattst88 Exp $
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org>
+  -xf86-video-mach64-6.8.2.ebuild, -xf86-video-mach64-6.9.0.ebuild,
+  -xf86-video-mach64-6.9.1.ebuild, -xf86-video-mach64-6.9.2.ebuild,
+  -xf86-video-mach64-6.9.3.ebuild, -xf86-video-mach64-6.9.4.ebuild:
+  Drop old.
+
+*xf86-video-mach64-6.9.5 (24 May 2015)
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org>
+  +xf86-video-mach64-6.9.5.ebuild:
+  Version bump to 6.9.5 for bug 541896. Straight to stable.
 
   04 Jan 2013; Agostino Sarubbo <ago@gentoo.org> xf86-video-mach64-6.9.4.ebuild:
   Stable for ppc64, wrt bug #448562

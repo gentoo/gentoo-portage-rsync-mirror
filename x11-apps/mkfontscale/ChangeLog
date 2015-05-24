@@ -1,6 +1,9 @@
 # ChangeLog for x11-apps/mkfontscale
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontscale/ChangeLog,v 1.123 2015/03/14 13:56:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/mkfontscale/ChangeLog,v 1.124 2015/05/24 03:02:53 mattst88 Exp $
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org> mkfontscale-1.1.2.ebuild:
+  Add dependencies for zlib/bzip2, bug 545900.
 
   14 Mar 2015; Markus Meier <maekke@gentoo.org> mkfontscale-1.1.2.ebuild:
   arm stable, bug #530652
