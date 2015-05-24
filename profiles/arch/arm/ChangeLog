@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.357 2015/05/20 23:42:37 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.358 2015/05/23 23:12:12 chewi Exp $
+
+  23 May 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
+  icedtea-web has now been keyworded so remove the nsplugin and webstart USE
+  masks wrt bug #549134.
 
   20 May 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
   Temporarily mask rdeps of icedtea-web to deal with bug #549134 until I have a

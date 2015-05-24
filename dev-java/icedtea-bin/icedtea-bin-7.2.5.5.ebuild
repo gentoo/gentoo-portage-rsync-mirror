@@ -1,29 +1,30 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.5.5.ebuild,v 1.1 2015/05/10 20:45:35 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.5.5.ebuild,v 1.2 2015/05/23 23:17:18 chewi Exp $
 
 EAPI="5"
 
-inherit java-vm-2 multilib prefix versionator
+inherit java-vm-2 multilib prefix toolchain-funcs versionator
 
-dist="http://dev.gentoo.org/~chewi/distfiles/"
+dist="http://dev.gentoo.org/~chewi/distfiles"
 TARBALL_VERSION="${PV}"
 
 DESCRIPTION="A Gentoo-made binary build of the IcedTea JDK"
 HOMEPAGE="http://icedtea.classpath.org"
-SRC_URI="
-	amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.xz )
-	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.xz )
-	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.xz )
-	examples? (
-		amd64? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-amd64.tar.xz )
-		x86? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-x86.tar.xz )
-	)
+SRC_URI="doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.xz )
 	source? ( ${dist}/${PN}-src-${TARBALL_VERSION}.tar.xz )"
+
+for arch in amd64 arm ppc x86; do
+	SRC_URI+="
+		${arch}? (
+			${dist}/${PN}-core-${TARBALL_VERSION}-${arch}.tar.xz
+			examples? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-${arch}.tar.xz )
+		)"
+done
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="7"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~arm ~ppc ~x86"
 
 IUSE="+X +alsa cjk +cups doc examples nsplugin pulseaudio selinux source webstart"
 REQUIRED_USE="nsplugin? ( X )"
@@ -80,11 +81,19 @@ RDEPEND="${COMMON_DEP}
 	selinux? ( sec-policy/selinux-java )
 	>=gnome-base/gsettings-desktop-schemas-3.12.2"
 
-DEPEND="dev-util/patchelf"
+DEPEND="!arm? ( dev-util/patchelf )"
 
 PDEPEND="webstart? ( dev-java/icedtea-web:0[icedtea7] )
 	nsplugin? ( dev-java/icedtea-web:0[icedtea7,nsplugin] )
 	pulseaudio? ( dev-java/icedtea-sound )"
+
+pkg_pretend() {
+	if [[ "$(tc-is-softfloat)" != "no" ]]; then
+		die "These binaries require a hardfloat system."
+	elif use arm && [[ "${CHOST}" != armv7* ]]; then
+		die "These binaries require an ARMv7 CPU."
+	fi
+}
 
 src_prepare() {
 	# Ensures HeadlessGraphicsEnvironment is used.
@@ -96,19 +105,27 @@ src_prepare() {
 	sed -i 's:=/:=@GENTOO_PORTAGE_EPREFIX@/:' jre/lib/fontconfig.Gentoo.properties || die
 	eprefixify jre/lib/fontconfig.Gentoo.properties
 
-	# Fix the RPATHs.
+	# Fix the RPATHs, except on arm.
 	# https://bugs.gentoo.org/show_bug.cgi?id=543658#c3
-	local old="/usr/$(get_libdir)/icedtea${SLOT}"
-	local new="${EPREFIX}/opt/${P}"
-	local elf rpath
+	# https://github.com/NixOS/patchelf/issues/8
+	if use arm; then
+		ewarn "The RPATHs on these binaries are normally modified to avoid"
+		ewarn "conflicts with an icedtea installation built from source. This"
+		ewarn "is currently not possible on ARM so please refrain from"
+		ewarn "installing dev-java/icedtea on the same system."
+	else
+		local old="/usr/$(get_libdir)/icedtea${SLOT}"
+		local new="${EPREFIX}/opt/${P}"
+		local elf rpath
 
-	for elf in $(find -type f -executable ! -name "*.cgi" || die); do
-		rpath=$(patchelf --print-rpath "${elf}" || die "patchelf ${elf}")
+		for elf in $(find -type f -executable ! -name "*.cgi" || die); do
+			rpath=$(patchelf --print-rpath "${elf}" || die "patchelf ${elf}")
 
-		if [[ -n "${rpath}" ]]; then
-			patchelf --set-rpath "${rpath//${old}/${new}}" "${elf}" || die "patchelf ${elf}"
-		fi
-	done
+			if [[ -n "${rpath}" ]]; then
+				patchelf --set-rpath "${rpath//${old}/${new}}" "${elf}" || die "patchelf ${elf}"
+			fi
+		done
+	fi
 }
 
 src_install() {

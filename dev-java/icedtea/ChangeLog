@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.135 2015/05/21 09:01:24 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea/ChangeLog,v 1.136 2015/05/23 23:05:43 chewi Exp $
+
+  23 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-7.2.5.5.ebuild:
+  ~arm keyword but only for 7. We're phasing 6 out so I don't think we'll bother
+  for arm any more. Disallow building with icedtea-6 until bug #531082 is
+  resolved.
 
   21 May 2015; James Le Cuirot <chewi@gentoo.org> +files/6-more-memory.patch,
   +files/7-more-memory.patch, icedtea-6.1.13.7.ebuild, icedtea-7.2.5.5.ebuild:

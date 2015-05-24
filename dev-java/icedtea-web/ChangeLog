@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/icedtea-web
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.52 2015/05/20 23:23:53 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-web/ChangeLog,v 1.53 2015/05/23 23:08:15 chewi Exp $
+
+  23 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-web-1.5.1-r1.ebuild:
+  ~arm keyword.
 
   20 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-web-1.5.1-r1.ebuild:
   ~ppc keyword.

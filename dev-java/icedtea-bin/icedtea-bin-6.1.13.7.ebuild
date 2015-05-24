@@ -1,29 +1,30 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.13.7.ebuild,v 1.1 2015/05/10 20:45:35 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-6.1.13.7.ebuild,v 1.2 2015/05/23 23:17:18 chewi Exp $
 
 EAPI="5"
 
 inherit java-vm-2 prefix versionator
 
-dist="http://dev.gentoo.org/~chewi/distfiles/"
+dist="http://dev.gentoo.org/~chewi/distfiles"
 TARBALL_VERSION="${PV}"
 
 DESCRIPTION="A Gentoo-made binary build of the IcedTea JDK"
 HOMEPAGE="http://icedtea.classpath.org"
-SRC_URI="
-	amd64? ( ${dist}/${PN}-core-${TARBALL_VERSION}-amd64.tar.xz )
-	x86? ( ${dist}/${PN}-core-${TARBALL_VERSION}-x86.tar.xz )
-	doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.xz )
-	examples? (
-		amd64? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-amd64.tar.xz )
-		x86? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-x86.tar.xz )
-	)
+SRC_URI="doc? ( ${dist}/${PN}-doc-${TARBALL_VERSION}.tar.xz )
 	source? ( ${dist}/${PN}-src-${TARBALL_VERSION}.tar.xz )"
+
+for arch in amd64 ppc x86; do
+	SRC_URI+="
+		${arch}? (
+			${dist}/${PN}-core-${TARBALL_VERSION}-${arch}.tar.xz
+			examples? ( ${dist}/${PN}-examples-${TARBALL_VERSION}-${arch}.tar.xz )
+		)"
+done
 
 LICENSE="GPL-2-with-linking-exception"
 SLOT="6"
-KEYWORDS="-* ~amd64 ~x86"
+KEYWORDS="-* ~amd64 ~ppc ~x86"
 
 IUSE="+X +alsa cjk +cups doc examples nsplugin selinux source webstart"
 REQUIRED_USE="nsplugin? ( X )"

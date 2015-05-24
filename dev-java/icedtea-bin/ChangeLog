@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.79 2015/05/10 20:45:35 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.80 2015/05/23 23:17:18 chewi Exp $
+
+  23 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-bin-6.1.13.7.ebuild,
+  icedtea-bin-7.2.5.5.ebuild:
+  ~arm (7) and ~ppc (6 and 7) keywords. Unfortunately patchelf doesn't work on
+  arm.
 
 *icedtea-bin-6.1.13.7 (10 May 2015)
 *icedtea-bin-7.2.5.5 (10 May 2015)
