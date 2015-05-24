@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.5.5.ebuild,v 1.2 2015/05/23 23:17:18 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/icedtea-bin-7.2.5.5.ebuild,v 1.3 2015/05/24 12:52:22 chewi Exp $
 
 EAPI="5"
 
@@ -90,8 +90,6 @@ PDEPEND="webstart? ( dev-java/icedtea-web:0[icedtea7] )
 pkg_pretend() {
 	if [[ "$(tc-is-softfloat)" != "no" ]]; then
 		die "These binaries require a hardfloat system."
-	elif use arm && [[ "${CHOST}" != armv7* ]]; then
-		die "These binaries require an ARMv7 CPU."
 	fi
 }
 

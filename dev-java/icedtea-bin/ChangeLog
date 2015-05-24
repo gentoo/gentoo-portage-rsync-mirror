@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/icedtea-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.80 2015/05/23 23:17:18 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/icedtea-bin/ChangeLog,v 1.81 2015/05/24 12:52:22 chewi Exp $
+
+  24 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-bin-7.2.5.5.ebuild:
+  Mask has now been applied in non-armv7a profiles so no need to do an awkward
+  pkg_pretend check except for hardfloat.
 
   23 May 2015; James Le Cuirot <chewi@gentoo.org> icedtea-bin-6.1.13.7.ebuild,
   icedtea-bin-7.2.5.5.ebuild:

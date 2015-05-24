@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.359 2015/05/24 04:32:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.360 2015/05/24 12:48:51 chewi Exp $
+
+  24 May 2015; James Le Cuirot <chewi@gentoo.org> +armv7a/package.mask,
+  package.mask:
+  Mask icedtea-bin in non-armv7a profiles instead of relying on pkg_pretend.
 
   24 May 2015; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Drop dead r600-llvm-compiler USE flag from package.use.mask.
