@@ -1,6 +1,10 @@
 # ChangeLog for dev-go/go-text
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/ChangeLog,v 1.5 2015/05/21 06:57:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/ChangeLog,v 1.6 2015/05/24 08:19:30 zmedico Exp $
+
+  24 May 2015; Zac Medico <zmedico@gentoo.org> go-text-1.4.2_p20150506.ebuild,
+  go-text-9999.ebuild:
+  Add workaround for TestLinking in display/dict_test.go.
 
   21 May 2015; Zac Medico <zmedico@gentoo.org> go-text-1.4.2_p20150506.ebuild:
   Add ~amd64 keyword.

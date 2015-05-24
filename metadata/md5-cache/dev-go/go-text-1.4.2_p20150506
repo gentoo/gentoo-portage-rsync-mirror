@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/golang/text/archive/c93e7c9fff19fb9139b5ab04ce041833add0134e.tar.gz -> go-text-1.4.2_p20150506.tar.gz
-_md5_=eece3f325434fcdb673728f02f787c6c
+_md5_=aafdbe8da72c3477d085816dfa4ccf2c

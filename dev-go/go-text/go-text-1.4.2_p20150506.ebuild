@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/go-text-1.4.2_p20150506.ebuild,v 1.3 2015/05/21 06:57:23 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/go-text-1.4.2_p20150506.ebuild,v 1.4 2015/05/24 08:19:30 zmedico Exp $
 
 EAPI=5
 
@@ -36,55 +36,12 @@ src_compile() {
 }
 
 src_test() {
+	# Create go symlink for TestLinking in display/dict_test.go
+	mkdir -p "${GOROOT}/bin"
+	ln -s /usr/bin/go  "${GOROOT}/bin/go" || die
+
 	GOROOT="${GOROOT}" GOPATH=${WORKDIR} \
-		go test -run "^("$(
-			echo -n 'Example(|_build|CanonType|Collator_Strings|Compacter|'
-			echo -n 'Compose|DecodeWindows1252|Dictionary|Gen_build|'
-			echo -n 'Gen_lookup|If|In|Iter|_lookup|Map|Matcher|Namer|Parent|'
-			echo -n 'ParseAcceptLanguage|Parse_errors|Region_TLD|Remove|'
-			echo -n 'RemoveFunc|Tag_Base|Tag_ComprehensibleTo|Tag_Region|'
-			echo -n 'Tags|Tag_Script|Tag_values|Transformer_fold|'
-			echo -n 'Transformer_narrow|Transformer_widen|UTF8Validator)|'
-			echo -n 'Test(AcceptMinSize|AddLikelySubtags|Ambiguous|Append|'
-			echo -n 'AppendNext|AppendString|AttrKey|Base|Basics|BestMatch|'
-			echo -n 'Big5CircumflexAndMacron|BOMOverride|Bytes|Bytes|'
-			echo -n 'BytesAllocation|Canonicalize|CaseMappings|'
-			echo -n 'CaseProperties|CCC|Chain|ColElem|ColElem|Compare|'
-			echo -n 'CompareWeights|Compose1|Compose2|Compose3|Composition|'
-			echo -n 'Contains|Context|Contract|ConvertLarge|Coverage|'
-			echo -n 'Currency|DecomposeSegment|DecomposeToLastBoundary|'
-			echo -n 'Decomposition|DeepCopy|Discard|DoNorm|Enclosing|'
-			echo -n 'EncodeInvalidUTF8|EncodeM49|EntryLess|EntrySort|'
-			echo -n 'Equality|Errors|Expand|Files|Filter|FindField|'
-			echo -n 'FindKeyAndType|FirstBoundary|FixCase|Flush|Fold|'
-			echo -n 'FoldSingleRunes|GenColElems|GenerateTrie|GenIdxSort|'
-			echo -n 'GenStates|Get|GetColElems|GetScriptID|Getters|'
-			echo -n 'Grandfathered|Group|Implicit|In|Index|Index|Insert|'
-			echo -n 'InsertAfter|InsertBefore|IsCountry|IsGroup|IsNormal|'
-			echo -n 'IsNormalString|IsPrivateUse|IsRoot|Iter|IterNext|'
-			echo -n 'IterSegmentation|Key|Key|KeyFromElems|LangID|Language|'
-			echo -n 'LastBoundary|LookupContraction|LookupContraction|'
-			echo -n 'LookupContraction|LookupTrie|MakeSlice|MakeString|Map|'
-			echo -n 'MapAlloc|Mapping|MatchLang|Merge|Minimize|Narrow|'
-			echo -n 'NarrowSingleRunes|NewCoverage|NextIndexed|NextWeight|'
-			echo -n 'NonDigits|NonRepertoire|Nop|NotIn|Numeric|'
-			echo -n 'NumericAppendNext|NumericCompare|NumericOverflow|'
-			echo -n 'NumericWeighterAlloc|OffsetSort|Options|Parent|'
-			echo -n 'ParentDistance|Parse|ParseAcceptLanguage|ParseBase|'
-			echo -n 'ParseCurrency|ParseDraft|ParseExtensions|ParseRegion|'
-			echo -n 'ParseScript|ParseTag|Path|PlaceHolder|Predicate|'
-			echo -n 'PrintContractionTrieSet|ProcessWeights|QuickSpan|'
-			echo -n 'Reader|Reader|Region|Region|RegionCanonicalize|'
-			echo -n 'RegionDeprecation|RegionDistance|RegionID|RegionISO3|'
-			echo -n 'RegionM49|RegionTLD|RegionType|Remove|Remove|'
-			echo -n 'RemoveAlloc|RemoveFunc|Replacement|RuleProcessor|'
-			echo -n 'Scan|Script|Script|Search|SelectAnyOf|SelectOnePerGroup|'
-			echo -n 'Self|SetTypeForKey|ShortBuffersAndOverflow|Simplify|'
-			echo -n 'Sort|String|String|StringAllocation|Supported|Supported|'
-			echo -n 'TagSize|Transform|TransformNorm|TypeForKey|Update|'
-			echo -n 'UpdateTertiary|UTF16|UTF8Validator|Widen|'
-			echo -n 'WidenSingleRunes|WordBreaks|Writer))$') \
-			-x -v ${GO_PN}/... || die $?
+		go test -x -v ${GO_PN}/... || die $?
 }
 
 src_install() {
