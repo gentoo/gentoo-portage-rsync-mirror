@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/sparc profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.249 2015/05/11 01:50:28 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/ChangeLog,v 1.250 2015/05/24 04:34:52 mattst88 Exp $
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Drop dead r600-llvm-compiler USE flag from package.use.mask.
 
   11 May 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
   Extend Qt4-multilib mask to cover 4.8.7 as well.

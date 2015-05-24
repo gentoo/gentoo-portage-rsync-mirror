@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.73 2015/05/04 15:21:35 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-9999.ebuild,v 1.74 2015/05/24 04:44:23 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -26,14 +26,13 @@ fi
 # See Copyright in source tarball and bug #506946. Waf is BSD, libmpv is ISC.
 LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
-IUSE="+alsa bluray bs2b cdio +cli doc-pdf drm dvb +dvd dvdnav egl +enca encode
-+iconv jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit
-openal +opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux v4l
-vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
+IUSE="+alsa bluray bs2b cdio +cli doc-pdf drm dvb +dvd egl +enca encode +iconv
+jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit openal
++opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux v4l vaapi
+vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
-	dvdnav? ( dvd )
 	egl? ( opengl X )
 	enca? ( iconv )
 	lcms? ( opengl )
@@ -79,7 +78,7 @@ RDEPEND="
 	dvb? ( virtual/linuxtv-dvb-headers )
 	dvd? (
 		>=media-libs/libdvdread-4.1.3
-		dvdnav? ( >=media-libs/libdvdnav-4.2.0 )
+		>=media-libs/libdvdnav-4.2.0
 	)
 	enca? ( app-i18n/enca )
 	iconv? ( virtual/libiconv )
@@ -183,7 +182,7 @@ src_configure() {
 		$(use_enable encode encoding)
 		$(use_enable bluray libbluray)
 		$(use_enable dvd dvdread)
-		$(use_enable dvdnav)
+		$(use_enable dvd dvdnav)
 		$(use_enable cdio cdda)
 		$(use_enable enca)
 		$(use_enable ladspa)

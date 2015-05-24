@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.229 2015/05/20 20:55:03 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.230 2015/05/24 04:32:45 mattst88 Exp $
+
+  24 May 2015; Matt Turner <mattst88@gentoo.org> package.use.mask:
+  Drop dead r600-llvm-compiler USE flag from package.use.mask.
 
   20 May 2015; James Le Cuirot <chewi@gentoo.org> package.use.mask:
   Temporarily mask rdeps of icedtea-web to deal with bug #549134 until I have a

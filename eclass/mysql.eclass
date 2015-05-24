@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.182 2015/05/01 12:34:31 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mysql.eclass,v 1.183 2015/05/24 04:35:49 vapier Exp $
 
 # @ECLASS: mysql.eclass
 # @MAINTAINER:
@@ -1461,8 +1461,7 @@ mysql_pkg_config() {
 		fi
 	fi
 
-	einfo "Creating the mysql database and setting proper"
-	einfo "permissions on it ..."
+	einfo "Creating the mysql database and setting proper permissions on it ..."
 
 	local socket="${EROOT}/var/run/mysqld/mysqld${RANDOM}.sock"
 	local pidfile="${EROOT}/var/run/mysqld/mysqld${RANDOM}.pid"
@@ -1502,7 +1501,7 @@ mysql_pkg_config() {
 		-e "${sql}"
 	eend $?
 
-	ebegin "Loading \"zoneinfo\", this step may require a few seconds ..."
+	ebegin "Loading \"zoneinfo\", this step may require a few seconds"
 	"${EROOT}/usr/bin/mysql" \
 		--socket=${socket} \
 		-hlocalhost \

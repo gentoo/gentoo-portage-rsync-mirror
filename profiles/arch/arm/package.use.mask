@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.255 2015/05/23 23:12:12 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.mask,v 1.256 2015/05/24 04:32:05 mattst88 Exp $
 
 # Ben de Groot <yngwin@gentoo.org> (03 May 2015)
 # media-libs/rubberband lacks arm keyword, bug 548446
@@ -238,10 +238,6 @@ media-libs/phonon zeitgeist
 # Patrick Lauer <patrick@gentoo.org> (31 May 2013)
 # no stable jdk+java-config
 net-misc/tightvnc java
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (28 May 2013)
-# depends on sys-devel/llvm[video_cards_radeon]
-media-libs/mesa r600-llvm-compiler
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (27 May 2013)
 # Firmware loader not keyworded yet

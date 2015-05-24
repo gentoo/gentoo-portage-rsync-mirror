@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.8.3.ebuild,v 1.8 2015/05/17 20:11:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpv/mpv-0.9.2-r1.ebuild,v 1.1 2015/05/24 04:44:23 yngwin Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -17,24 +17,22 @@ DOCS=( README.md etc/example.conf etc/input.conf )
 if [[ ${PV} == *9999* ]]; then
 	EGIT_REPO_URI="https://github.com/mpv-player/mpv.git"
 	inherit git-r3
-	KEYWORDS=""
 else
 	SRC_URI+=" https://github.com/mpv-player/mpv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
-	KEYWORDS="~alpha amd64 ~arm ~arm64 ~hppa ppc ppc64 ~sparc x86 ~amd64-linux"
+	KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux"
 	DOCS+=( RELEASE_NOTES )
 fi
 
 # See Copyright in source tarball and bug #506946. Waf is BSD, libmpv is ISC.
 LICENSE="GPL-2+ BSD ISC"
 SLOT="0"
-IUSE="+alsa bluray bs2b cdio +cli doc-pdf dvb +dvd dvdnav egl +enca encode
-+iconv jack joystick jpeg ladspa lcms +libass libav libcaca libguess libmpv
-lirc lua luajit mpg123 openal +opengl oss pulseaudio pvr samba sdl selinux
-v4l vaapi vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
+IUSE="+alsa bluray bs2b cdio +cli doc-pdf drm dvb +dvd egl +enca encode +iconv
+jack jpeg ladspa lcms +libass libav libcaca libguess libmpv lua luajit openal
++opengl oss pulseaudio pvr raspberry-pi rubberband samba sdl selinux v4l vaapi
+vdpau vf-dlopen wayland +X xinerama +xscreensaver xv"
 
 REQUIRED_USE="
 	|| ( cli libmpv )
-	dvdnav? ( dvd )
 	egl? ( opengl X )
 	enca? ( iconv )
 	lcms? ( opengl )
@@ -51,8 +49,8 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	libav? ( >=media-video/libav-10:0=[encode?,threads,vaapi?,vdpau?] )
-	!libav? ( >=media-video/ffmpeg-2.1.4:0=[encode?,threads,vaapi?,vdpau?] )
+	libav? ( >=media-video/libav-11:0=[encode?,threads,vaapi?,vdpau?] )
+	!libav? ( >=media-video/ffmpeg-2.4.0:0=[encode?,threads,vaapi?,vdpau?] )
 	sys-libs/zlib
 	X? (
 		x11-libs/libX11
@@ -63,7 +61,7 @@ RDEPEND="
 			egl? ( media-libs/mesa[egl] )
 		)
 		lcms? ( >=media-libs/lcms-2.6:2 )
-		vaapi? ( >=x11-libs/libva-0.34.0[X(+),opengl?] )
+		vaapi? ( >=x11-libs/libva-0.34.0[X(+)] )
 		vdpau? ( >=x11-libs/libvdpau-0.2 )
 		xinerama? ( x11-libs/libXinerama )
 		xscreensaver? ( x11-libs/libXScrnSaver )
@@ -76,10 +74,11 @@ RDEPEND="
 		dev-libs/libcdio
 		dev-libs/libcdio-paranoia
 	)
+	drm? ( x11-libs/libdrm )
 	dvb? ( virtual/linuxtv-dvb-headers )
 	dvd? (
 		>=media-libs/libdvdread-4.1.3
-		dvdnav? ( >=media-libs/libdvdnav-4.2.0 )
+		>=media-libs/libdvdnav-4.2.0
 	)
 	enca? ( app-i18n/enca )
 	iconv? ( virtual/libiconv )
@@ -87,19 +86,18 @@ RDEPEND="
 	jpeg? ( virtual/jpeg:0 )
 	ladspa? ( media-libs/ladspa-sdk )
 	libass? (
-		>=media-libs/libass-0.9.10:=[enca?,fontconfig]
+		>=media-libs/libass-0.12.1:=[enca?,fontconfig]
 		virtual/ttf-fonts
 	)
 	libcaca? ( >=media-libs/libcaca-0.99_beta18 )
 	libguess? ( >=app-i18n/libguess-1.0 )
-	lirc? ( app-misc/lirc )
 	lua? (
-		!luajit? ( >=dev-lang/lua-5.1:= )
+		!luajit? ( || ( =dev-lang/lua-5.1*:= =dev-lang/lua-5.2*:= ) )
 		luajit? ( dev-lang/luajit:2 )
 	)
-	mpg123? ( >=media-sound/mpg123-1.14.0 )
 	openal? ( >=media-libs/openal-1.13 )
 	pulseaudio? ( media-sound/pulseaudio )
+	rubberband? ( >=media-libs/rubberband-1.8.0 )
 	samba? ( net-fs/samba )
 	sdl? ( media-libs/libsdl2[threads] )
 	v4l? ( media-libs/libv4l )
@@ -128,6 +126,16 @@ RDEPEND+="
 pkg_setup() {
 	if ! use libass; then
 		ewarn "You have disabled the libass flag. No OSD or subtitles will be displayed."
+	fi
+
+	if use openal; then
+		ewarn "You have enabled the openal audio output which is a fallback"
+		ewarn "and disabled by upstream."
+	fi
+
+	if use sdl; then
+		ewarn "You have enabled the sdl video and audio outputs which are fallbacks"
+		ewarn "and disabled by upstream."
 	fi
 
 	if use libav; then
@@ -172,15 +180,13 @@ src_configure() {
 		$(use_enable libass)
 		$(use_enable libass libass-osd)
 		$(use_enable encode encoding)
-		$(use_enable joystick)
-		$(use_enable lirc)
 		$(use_enable bluray libbluray)
 		$(use_enable dvd dvdread)
-		$(use_enable dvdnav)
+		$(use_enable dvd dvdnav)
 		$(use_enable cdio cdda)
 		$(use_enable enca)
-		$(use_enable mpg123)
 		$(use_enable ladspa)
+		$(use_enable rubberband)
 		$(use_enable bs2b libbs2b)
 		$(use_enable lcms lcms2)
 		--disable-vapoursynth	# vapoursynth is not packaged
@@ -217,7 +223,10 @@ src_configure() {
 		$(use_enable vaapi vaapi-vpp)
 		$(usex vaapi "$(use_enable opengl vaapi-glx)" '--disable-vaapi-glx')
 		$(use_enable libcaca caca)
+		$(use_enable drm)
 		$(use_enable jpeg)
+		$(use_enable raspberry-pi rpi)
+		$(use_enable raspberry-pi rpi-gles)
 
 		# hwaccels
 		$(use_enable vaapi vaapi-hwaccel)
