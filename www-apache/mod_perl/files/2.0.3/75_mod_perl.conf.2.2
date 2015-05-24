@@ -14,40 +14,36 @@ Alias /cgi-perl/ /var/www/localhost/perl/
 <Location /perl-status>
 	SetHandler perl-script
 	PerlResponseHandler Apache2::Status
-	Require host localhost
+	Order deny,allow
+	Deny from all
+	Allow from 127.0.0.1
 </Location>
 
 <Directory /home/*/public_html/perl>
 	SetHandler perl-script
 	PerlResponseHandler ModPerl::PerlRun
+	Options -Indexes ExecCGI
 	PerlOptions +ParseHeaders
-
-	# Clear all existing options and only permit cgi.
-	Options ExecCGI
 </Directory>
 
 # set Apache::Registry Mode for /perl Alias
 <Location /perl/*.pl>
 	SetHandler perl-script
 	PerlResponseHandler ModPerl::Registry
+	Options -Indexes ExecCGI
 	PerlSendHeader On
-
-	# Clear all existing options and only permit cgi.
-	Options ExecCGI
-
-	Require all granted
+	Order allow,deny
+	Allow from all
 </Location>
 
 # set Apache::PerlRun Mode for /cgi-perl Alias
 <Location /cgi-perl/*.pl>
 	SetHandler perl-script
 	PerlResponseHandler ModPerl::PerlRun
+	Options -Indexes ExecCGI
 	PerlSendHeader On
-
-	# Clear all existing options and only permit cgi.
-	Options ExecCGI
-
-	Require all granted
+	Order allow,deny
+	Allow from all
 </Location>
 </IfDefine>
 

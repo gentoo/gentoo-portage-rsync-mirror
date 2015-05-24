@@ -1,6 +1,16 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.120 2015/05/12 17:22:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.122 2015/05/24 02:45:01 vapier Exp $
+
+*mod_perl-2.0.8-r2 (24 May 2015)
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/mod_perl-2.0.4-inline.patch, +mod_perl-2.0.8-r2.ebuild:
+  Use inline patch from Fedora to fix build w/gcc-5 #550244.
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org> mod_perl-2.0.8.ebuild,
+  files/2.0.3/75_mod_perl.conf, +files/2.0.3/75_mod_perl.conf.2.2:
+  Convert mod_perl.conf to apache-2.4 #550246.
 
   12 May 2015; Pacho Ramos <pacho@gentoo.org> mod_perl-2.0.8-r1.ebuild:
   Needs apache 2.4 now
