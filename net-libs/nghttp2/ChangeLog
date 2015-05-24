@@ -1,0 +1,11 @@
+# ChangeLog for net-libs/nghttp2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/ChangeLog,v 1.1 2015/05/24 13:55:00 vapier Exp $
+
+*nghttp2-9999 (24 May 2015)
+*nghttp2-1.0.1 (24 May 2015)
+*nghttp2-0.7.15 (24 May 2015)
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org> +metadata.xml,
+  +nghttp2-0.7.15.ebuild, +nghttp2-1.0.1.ebuild, +nghttp2-9999.ebuild:
+  Initial ebuild by me.

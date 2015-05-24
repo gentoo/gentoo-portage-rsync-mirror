@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/jansson-2.7.ebuild,v 1.1 2014/10/10 02:25:06 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/jansson-2.7.ebuild,v 1.2 2015/05/24 13:49:51 vapier Exp $
 
 EAPI="5"
 AUTOTOOLS_AUTORECONF=1
@@ -13,7 +13,7 @@ SRC_URI="http://www.digip.org/jansson/releases/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="doc static-libs"
 
 DEPEND="doc? ( >=dev-python/sphinx-1.0.4 )"

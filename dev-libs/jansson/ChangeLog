@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jansson
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.20 2014/10/10 03:28:12 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jansson/ChangeLog,v 1.21 2015/05/24 13:49:51 vapier Exp $
+
+  24 May 2015; Mike Frysinger <vapier@gentoo.org> jansson-2.7.ebuild:
+  Keyword for everyone for nghttp2.
 
   10 Oct 2014; Yixun Lan <dlan@gentoo.org> -jansson-2.3.1.ebuild,
   -jansson-2.5.ebuild:
