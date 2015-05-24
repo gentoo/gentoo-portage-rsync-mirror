@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/consul
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/ChangeLog,v 1.1 2015/05/24 07:59:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/ChangeLog,v 1.2 2015/05/24 21:38:02 zmedico Exp $
+
+  24 May 2015; Zac Medico <zmedico@gentoo.org> consul-0.5.2.ebuild,
+  consul-9999.ebuild:
+  Remove dev-lang/go from RDEPEND.
 
 *consul-0.5.2 (24 May 2015)
 *consul-9999 (24 May 2015)

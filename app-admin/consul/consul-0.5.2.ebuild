@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/consul-0.5.2.ebuild,v 1.1 2015/05/24 07:59:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/consul-0.5.2.ebuild,v 1.2 2015/05/24 21:38:02 zmedico Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-lang/go-1.4
 		dev-ruby/sass
 		dev-ruby/uglifier
 	)"
-RDEPEND=">=dev-lang/go-1.4"
+RDEPEND=""
 
 SRC_URI="https://github.com/hashicorp/consul/archive/v0.5.2.tar.gz -> ${P}.tar.gz
 https://github.com/armon/circbuf/archive/f092b4f207b6e5cce0569056fba9e1a2735cb6cf.tar.gz -> circbuf-f092b4f207b6e5cce0569056fba9e1a2735cb6cf.tar.gz

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/consul-9999.ebuild,v 1.1 2015/05/24 07:59:56 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/consul-9999.ebuild,v 1.2 2015/05/24 21:38:02 zmedico Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ DEPEND=">=dev-lang/go-1.4
 		dev-ruby/sass
 		dev-ruby/uglifier
 	)"
-RDEPEND=">=dev-lang/go-1.4"
+RDEPEND=""
 SRC_URI=""
 
 STRIP_MASK="*.a"

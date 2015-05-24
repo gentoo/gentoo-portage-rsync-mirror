@@ -9,5 +9,5 @@ LICENSE=GPL-2+
 RDEPEND=>=app-eselect/eselect-emacs-1.15 X? ( x11-libs/libXau ) !!app-emacs/gnuserv-programs !!<app-editors/xemacs-21.4.22-r3 !!~app-editors/xemacs-21.5.29 !!~app-editors/xemacs-21.5.30 !!~app-editors/xemacs-21.5.31 !!~app-editors/xemacs-21.5.33 !!=app-editors/xemacs-21.5.34 !!=app-editors/xemacs-21.5.34-r1 >=virtual/emacs-23
 SLOT=0
 SRC_URI=http://meltin.net/hacks/emacs/src/gnuserv-3.12.8.tar.gz
-_eclasses_=elisp	b7ff113c97bf466ace6f3235f80af600	elisp-common	82fe92893adf25f1e5d0db48b0ec4cb3	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=elisp	d13b0507622afb8ac9e3f54e91d58614	elisp-common	19f2d9563dbe52566883a600dbb6cb0c	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=ee1c76ca1d53254913692d4f11faf84b
