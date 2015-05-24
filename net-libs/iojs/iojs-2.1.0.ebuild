@@ -113,6 +113,13 @@ src_install() {
 	rm -rf "${LIBDIR}"/node_modules/npm/{doc,html} || die
 	find "${LIBDIR}"/node_modules -type f -name "LICENSE*" -or -name "LICENCE*" -delete || die
 
+	# set up a symlink structure that npm expects..
+	mkdir -p "${ED}"/usr/include/node/deps/{v8,uv} || die
+	dosym . /usr/include/node/src
+	for var in deps/{v8,uv}/include; do
+		dosym ../.. "/usr/include/node/${var}"
+	done
+
 	pax-mark -m "${ED}"/usr/bin/iojs
 }
 
@@ -120,4 +127,11 @@ src_test() {
 	out/${BUILDTYPE}/cctest || die
 	declare -xl TESTTYPE="${BUILDTYPE}"
 	"${PYTHON}" tools/test.py --mode=${TESTTYPE} -J message parallel sequential || die
+}
+
+pkg_postinst() {
+	einfo "When using node-gyp to install native modules, you can avoid"
+	einfo "having to download the full tarball by doing the following:"
+	einfo ""
+	einfo "node-gyp --nodedir /usr/include/node <command>"
 }
