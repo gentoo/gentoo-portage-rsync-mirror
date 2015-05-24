@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1619 2015/05/24 08:43:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1620 2015/05/24 20:40:40 chewi Exp $
+
+  24 May 2015; James Le Cuirot <chewi@gentoo.org> java-pkg-simple.eclass:
+  Remove annoying java-pkg-simple build script check. Most people only use
+  java-pkg-simple as a last resort and a usable Maven eclass is still some way
+  off.
 
   24 May 2015; Michał Górny <mgorny@gentoo.org> freebsd.eclass:
   Support fetching upstream patches,
