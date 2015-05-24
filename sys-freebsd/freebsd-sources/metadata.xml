@@ -3,7 +3,6 @@
 <pkgmetadata>
 <herd>bsd</herd>
   <use>
-    <flag name='build-generic'>Build and install a generic kernel (recommended).</flag>
     <flag name='build-kernel'>Build and install a kernel (recommended).</flag>
     <flag name='dtrace'>Enable DTrace support.</flag>
     <flag name='zfs'>Enable ZFS support.</flag>
