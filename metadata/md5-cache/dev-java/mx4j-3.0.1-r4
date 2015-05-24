@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=examples? ( dev-java/bcel dev-java/log4j dev-java/commons-logging www-servers/axis:1 java-virtuals/servlet-api:2.3 dev-java/burlap:3.0 dev-java/hessian:3.0.8 =dev-java/jython-2.2* dev-java/gnu-jaf:1 java-virtuals/javamail ) dev-java/mx4j-core:3.0 dev-java/mx4j-tools:3.0 !<dev-java/mx4j-tools-3.0.1-r1 examples? ( >=virtual/jre-1.4 ) >=dev-java/java-config-2.2.0 >=sys-apps/portage-2.1.2.7 source? ( app-arch/zip )
 SLOT=3.0
 SRC_URI=mirror://sourceforge/mx4j/mx4j-3.0.1-src.tar.gz doc? ( mirror://sourceforge/mx4j/mx4j-3.0.1.tar.gz )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	f7dce580d4098b526be3fa17d4242820	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	4a7c80c1feba48616b58c79d977e084c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=eb479ab3363ce8fb75d9ed952fb56cc6

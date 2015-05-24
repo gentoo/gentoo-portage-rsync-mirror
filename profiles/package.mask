@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16532 2015/05/23 13:22:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16533 2015/05/24 22:41:21 monsieurp Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Patrice Clement <monsieurp@gentoo.org> (25 May 2015)
+# Upstream dead. Project no longer supported by the ASF 
+# who moved it into the Attic in 2010.
+# See #550326. Masked for removal in 30 days.
+dev-java/excalibur-logger
 
 # Pacho Ramos <pacho@gentoo.org> (23 May 2015)
 # Unmaintained for ages and no longer useful, also multiple

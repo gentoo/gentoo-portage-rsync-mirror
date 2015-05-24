@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/faraday_middleware
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware/ChangeLog,v 1.1 2015/05/24 22:56:46 robbat2 Exp $
+
+*faraday_middleware-0.9.1 (24 May 2015)
+
+  24 May 2015; Robin H. Johnson <robbat2@gentoo.org>
+  +faraday_middleware-0.9.1.ebuild, +metadata.xml:
+  Initial commit, dependency for app-admin/r10k-1.5.x

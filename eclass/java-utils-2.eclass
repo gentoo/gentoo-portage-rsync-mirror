@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.161 2015/05/09 22:20:44 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.162 2015/05/24 22:44:37 chewi Exp $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:
@@ -280,18 +280,6 @@ java-pkg_dojar() {
 	done
 
 	java-pkg_do_write_
-}
-
-# @FUNCTION: depend-java-query
-# @INTERNAL
-# @DESCRIPTION:
-# Wrapper for the depend-java-query binary to enable passing USE in env.
-# Using env variables keeps this eclass working with java-config versions that
-# do not handle use flags.
-depend-java-query() {
-	# Used to have a which call here but it caused endless loops for some people
-	# that had some weird bashrc voodoo for which.
-	USE="${USE}" /usr/bin/depend-java-query "${@}"
 }
 
 # @FUNCTION: java-pkg_regjar
