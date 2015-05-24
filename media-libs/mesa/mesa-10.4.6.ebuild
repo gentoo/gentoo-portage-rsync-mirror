@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.6.ebuild,v 1.1 2015/04/28 00:45:39 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-10.4.6.ebuild,v 1.2 2015/05/24 04:30:12 mattst88 Exp $
 
 EAPI=5
 
@@ -51,7 +51,7 @@ done
 
 IUSE="${IUSE_VIDEO_CARDS}
 	bindist +classic d3d9 debug +dri3 +egl +gallium +gbm gles1 gles2 +llvm
-	+nptl opencl osmesa pax_kernel openmax pic r600-llvm-compiler selinux
+	+nptl opencl osmesa pax_kernel openmax pic selinux
 	+udev vaapi vdpau wayland xvmc xa kernel_FreeBSD"
 
 REQUIRED_USE="
@@ -60,14 +60,10 @@ REQUIRED_USE="
 	opencl? (
 		gallium
 		llvm
-		video_cards_r600? ( r600-llvm-compiler )
-		video_cards_radeon? ( r600-llvm-compiler )
-		video_cards_radeonsi? ( r600-llvm-compiler )
 	)
 	openmax? ( gallium )
 	gles1?  ( egl )
 	gles2?  ( egl )
-	r600-llvm-compiler? ( gallium llvm || ( video_cards_r600 video_cards_radeonsi video_cards_radeon ) )
 	vaapi? ( gallium )
 	vdpau? ( gallium )
 	wayland? ( egl gbm )
@@ -156,7 +152,6 @@ done
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
 	llvm? (
-		r600-llvm-compiler? ( sys-devel/llvm[video_cards_radeon] )
 		video_cards_radeonsi? ( sys-devel/llvm[video_cards_radeon] )
 	)
 	opencl? (
@@ -266,7 +261,6 @@ multilib_src_configure() {
 			$(use_enable d3d9 nine)
 			$(use_enable llvm gallium-llvm)
 			$(use_enable openmax omx)
-			$(use_enable r600-llvm-compiler)
 			$(use_enable vaapi va)
 			$(use_enable vdpau)
 			$(use_enable xa)
