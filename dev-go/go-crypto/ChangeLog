@@ -1,6 +1,10 @@
 # ChangeLog for dev-go/go-crypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/ChangeLog,v 1.4 2015/05/21 08:45:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-crypto/ChangeLog,v 1.5 2015/05/24 08:37:29 zmedico Exp $
+
+  24 May 2015; Zac Medico <zmedico@gentoo.org> go-crypto-1.4.2_p20150514.ebuild,
+  go-crypto-9999.ebuild:
+  Disable broken tests.
 
   21 May 2015; Zac Medico <zmedico@gentoo.org> go-crypto-9999.ebuild:
   Merge src_test from 1.4.2_p20150514 to 9999.

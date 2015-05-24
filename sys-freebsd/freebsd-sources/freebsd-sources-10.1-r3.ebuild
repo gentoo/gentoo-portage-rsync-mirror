@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r2.ebuild,v 1.1 2015/04/10 13:34:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r3.ebuild,v 1.1 2015/05/24 08:45:46 mgorny Exp $
 
 EAPI=5
 
@@ -11,11 +11,22 @@ SLOT="0"
 
 IUSE="+build-kernel debug dtrace profile zfs"
 
+# Security Advisory and Errata patches.
+UPSTREAM_PATCHES=( "SA-15:02/sctp.patch"
+	"SA-15:03/sctp.patch"
+	"SA-15:04/igmp.patch"
+	"SA-15:04/igmp-errata.patch"
+	"SA-15:09/ipv6.patch"
+	"EN-15:01/vt.patch"
+	"EN-15:05/ufs.patch" )
+
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
 	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
 		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz"
+		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
+		zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )
+		$(freebsd_upstream_patches)"
 fi
 
 RDEPEND="dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
@@ -44,13 +55,6 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-7.1-includes.patch"
 	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
 	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch" )
-
-# Fix Security Advisory and Errata.
-PATCHES+=( "${FILESDIR}/${PN}-10.1-cve-2014-8612.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2014-8613.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2015-1414.patch"
-	"${FILESDIR}/${PN}-10.1-cve-2015-2923.patch"
-	"${FILESDIR}/${PN}-10.1-en-1501-vt.patch" )
 
 pkg_setup() {
 	# Force set CC=clang. when using gcc, aesni fails to build.
@@ -120,7 +124,11 @@ src_install() {
 	fi
 
 	insinto "/usr/src/sys"
-	doins -r "${S}/"*
+	doins -r "${S}/".
+	if use zfs ; then
+		insinto "/usr/src/cddl"
+		doins -r "${WORKDIR}/cddl/".
+	fi
 }
 
 pkg_preinst() {
@@ -134,5 +142,18 @@ pkg_preinst() {
 		ewarn "on sparc64. This is probably a gcc-4.1 issue, but"
 		ewarn "we need gcc-4.1 to compile the kernel correctly :/"
 		ewarn "Please compile all modules you need into the kernel"
+	fi
+
+	ewarn "If you want manual compile (not recommended), please don't forget the following step."
+	if ! use sparc-fbsd ; then
+		ewarn "export CC=clang"
+		ewarn "export CXX=clang++"
+	fi
+	if ! use zfs ; then
+		ewarn "export WITHOUT_CDDL="
+		ewarn "Note, Please set USE=zfs if you want to enable modules of CDDL license."
+	fi
+	if ! use dtrace && ! has_version '>=sys-freebsd/freebsd-cddl-9.2_beta1' ; then
+		ewarn "GENERIC config require sys-freebsd/freebsd-cddl. Please emerge it."
 	fi
 }

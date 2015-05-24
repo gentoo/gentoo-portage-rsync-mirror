@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150520.ebuild,v 1.2 2015/05/21 08:25:46 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150520.ebuild,v 1.3 2015/05/24 08:52:41 zmedico Exp $
 
 EAPI=5
 
@@ -27,6 +27,12 @@ src_unpack() {
 	mv ${MY_PN}-${EGIT_COMMIT} src/${GO_PN} || die
 }
 
+src_prepare() {
+	# disable broken tests
+	sed -e 's:TestReadProppatch(:_\0:' -i webdav/xml_test.go || die
+	sed -e 's:TestPingGoogle(:_\0:' -i icmp/ping_test.go || die
+}
+
 src_compile() {
 	# Create a writable GOROOT in order to avoid sandbox violations.
 	GOROOT="${WORKDIR}/goroot"
@@ -38,51 +44,7 @@ src_compile() {
 
 src_test() {
 	GOROOT="${GOROOT}" GOPATH=${WORKDIR} \
-		go test -run "^(Example(WithTimeout|Parse)|"$(
-		echo -n '|Test(Background|TODO|WithCancel|ParentFinishesChild|'
-		echo -n 'ChildFinishesFirst|Deadline|Timeout|CanceledTimeout|'
-		echo -n 'Values|Allocs|SimultaneousCancels|InterlockedCancels|'
-		echo -n 'LayersCancel|LayersTimeout|CancelRemoves|EntityLength|'
-		echo -n 'Unescape|UnescapeEscape|Parser|NodeConsistency|Renderer|'
-		echo -n 'Tokenizer|MaxBuffer|MaxBufferReconstruction|Passthrough|'
-		echo -n 'BufAPI|ConvertNewlines|ReaderEdgeCases|Known|Hits|Misses|'
-		echo -n 'ForeignObject|Decode|Encode|Names|Sniff|Reader|FromMeta|'
-		echo -n 'XML|MarshalAndParseExtension|ParseIPv4Header|'
-		echo -n 'MarshalAndParseMessageForIPv4|MarshalAndParseMessageForIPv6|'
-		echo -n 'MarshalAndParseMultipartMessageForIPv4|'
-		echo -n 'MarshalAndParseMultipartMessageForIPv6|IDNA|Punycode|'
-		echo -n 'PunycodeErrors|MarshalHeader|ParseHeader|ICMPString|'
-		echo -n 'ICMPFilter|UDPSinglePacketConnWithMultipleGroupListeners|'
-		echo -n 'UDPMultiplePacketConnWithMultipleGroupListeners|'
-		echo -n 'UDPPerInterfaceSinglePacketConnWithSingleGroupListener|'
-		echo -n 'PacketConnConcurrentReadWriteUnicastUDP|'
-		echo -n 'PacketConnReadWriteUnicastUDP|ConnUnicastSocketOptions|'
-		echo -n 'PacketConnUnicastSocketOptions|ParseHeader|ICMPString|'
-		echo -n 'ICMPFilter|UDPSinglePacketConnWithMultipleGroupListeners|'
-		echo -n 'UDPMultiplePacketConnWithMultipleGroupListeners|'
-		echo -n 'UDPPerInterfaceSinglePacketConnWithSingleGroupListener|'
-		echo -n 'PacketConnConcurrentReadWriteUnicastUDP|ConnInitiatorPathMTU|'
-		echo -n 'ConnResponderPathMTU|PacketConnReadWriteUnicastUDP|'
-		echo -n 'ConnUnicastSocketOptions|PacketConnUnicastSocketOptions|'
-		echo -n 'LimitListener|LimitListenerError|PerHost|FromURL|SOCKS5|'
-		echo -n 'NodeLabel|Find|ICANN|PublicSuffix|SlowPublicSuffix|'
-		echo -n 'EffectiveTLDPlusOne|SlashClean|DirResolve|Walk|Dir|MemFS|'
-		echo -n 'MemFSRoot|MemFileReaddir|MemFile|MemFileWriteAllocs|WalkFS|'
-		echo -n 'ParseIfHeader|WalkToRoot|MemLSCanCreate|MemLSLookup|'
-		echo -n 'MemLSConfirm|MemLSNonCanonicalRoot|MemLSExpiry|MemLS|'
-		echo -n 'ParseTimeout|MemPS|ReadLockInfo|ReadPropfind|'
-		echo -n 'SecWebSocketAccept|HybiClientHandshake|'
-		echo -n 'HybiClientHandshakeWithHeader|HybiServerHandshake|'
-		echo -n 'HybiServerHandshakeNoSubProtocol|'
-		echo -n 'HybiServerHandshakeHybiBadVersion|HybiShortTextFrame|'
-		echo -n 'HybiShortMaskedTextFrame|HybiShortBinaryFrame|'
-		echo -n 'HybiControlFrame|HybiLongFrame|HybiClientRead|'
-		echo -n 'HybiShortRead|HybiServerRead|HybiServerReadWithoutMasking|'
-		echo -n 'HybiClientReadWithMasking|HybiServerFirefoxHandshake|Echo|'
-		echo -n 'Addr|Count|WithQuery|WithProtocol|WithTwoProtocol|'
-		echo -n 'WithBadProtocol|HTTP|TrailingSpaces|DialConfigBadVersion|'
-		echo -n 'SmallBuffer|ParseAuthority|Close))$') \
-		-x -v ${GO_PN}/... || die $?
+		go test -x -v ${GO_PN}/... || die $?
 }
 
 src_install() {

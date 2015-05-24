@@ -1,6 +1,17 @@
 # ChangeLog for sys-freebsd/freebsd-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.110 2015/04/10 13:34:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/ChangeLog,v 1.111 2015/05/24 08:45:46 mgorny Exp $
+
+*freebsd-sources-10.1-r3 (24 May 2015)
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org> +freebsd-sources-10.1-r3.ebuild,
+  -files/freebsd-sources-10.1-cve-2014-8612.patch,
+  -files/freebsd-sources-10.1-cve-2014-8613.patch,
+  -files/freebsd-sources-10.1-cve-2015-1414.patch,
+  -files/freebsd-sources-10.1-cve-2015-2923.patch,
+  -files/freebsd-sources-10.1-en-1501-vt.patch, -freebsd-sources-10.1-r2.ebuild:
+  Fix FreeBSD Errata. Fix build failure with USE=zfs, reported by NP-Hardass.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/121 by nigoro.
 
 *freebsd-sources-10.1-r2 (10 Apr 2015)
 

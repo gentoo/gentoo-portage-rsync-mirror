@@ -1,4 +1,4 @@
-DEFINED_PHASES=compile install test unpack
+DEFINED_PHASES=compile install prepare test unpack
 DEPEND=>=dev-lang/go-1.4 dev-go/go-text
 DESCRIPTION=Go supplementary network libraries
 EAPI=5
@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/golang/net/archive/7212a0803472eb1ec2686896a7c626528172a7a6.tar.gz -> go-net-1.4.2_p20150520.tar.gz
-_md5_=8adc06317aa8b374839802230eebefb0
+_md5_=d2d7341d9d909af753a325ec9c16058c

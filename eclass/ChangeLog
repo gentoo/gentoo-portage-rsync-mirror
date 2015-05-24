@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1618 2015/05/21 01:37:25 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1619 2015/05/24 08:43:02 mgorny Exp $
+
+  24 May 2015; Michał Górny <mgorny@gentoo.org> freebsd.eclass:
+  Support fetching upstream patches,
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/121 by nigoro.
 
   21 May 2015; Mike Gilbert <floppym@gentoo.org> chromium.eclass:
   Add kernel Check for USER_NS, bug 545078.
