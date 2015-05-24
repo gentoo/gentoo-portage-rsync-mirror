@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.353 2015/05/15 16:30:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.354 2015/05/24 16:14:01 kensington Exp $
+
+  24 May 2015; Michael Palimaka <kensington@gentoo.org>
+  kdepim-meta-4.14.8.ebuild:
+  Add support for linguas from KDE Applications 5.
 
 *kdepim-meta-4.14.8 (15 May 2015)
 

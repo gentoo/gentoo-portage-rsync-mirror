@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/plasma/package.use,v 1.5 2015/05/12 14:15:37 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/plasma/package.use,v 1.6 2015/05/24 16:05:17 kensington Exp $
 
 # Not required, but makes life easier with Qt; bug 457934
 app-arch/unzip natspec
@@ -34,6 +34,7 @@ media-libs/mesa egl
 
 # Allow certain KDE 4 components to be coinstalled with Plasma 5
 <dev-util/kdevelop-4.8.0 -gdbui
+kde-apps/kde4-l10n minimal
 kde-base/baloo minimal
 kde-base/kactivities minimal
 kde-base/kde-l10n minimal
