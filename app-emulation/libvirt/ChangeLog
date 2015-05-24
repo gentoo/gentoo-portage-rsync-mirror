@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/libvirt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.426 2015/05/13 09:40:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/ChangeLog,v 1.427 2015/05/24 19:32:06 tamiko Exp $
+
+  24 May 2015; Matthias Maier <tamiko@gentoo.org> libvirt-1.2.10-r4.ebuild,
+  libvirt-1.2.10-r5.ebuild, libvirt-1.2.11-r4.ebuild, libvirt-1.2.12-r1.ebuild,
+  libvirt-1.2.12.ebuild, libvirt-1.2.13-r2.ebuild, libvirt-1.2.14-r2.ebuild,
+  libvirt-1.2.15.ebuild, libvirt-9999.ebuild:
+  rdepend on iptables[ipv6], bug #550116, thanks to Agostino Sarubbo; update
+  slot dependencies for 1.2.10-r4 and 1.2.12
 
   13 May 2015; Agostino Sarubbo <ago@gentoo.org> libvirt-1.2.14-r2.ebuild:
   Stable for x86, wrt bug #548706

@@ -1,6 +1,24 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.414 2015/04/22 13:55:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.415 2015/05/24 19:47:09 tetromino Exp $
+
+  24 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -cairo-1.10.2-r3.ebuild, -cairo-1.12.16.ebuild, -cairo-1.12.16-r4.ebuild,
+  -cairo-1.14.0-r2.ebuild, -files/cairo-1.8.8-interix.patch,
+  -files/cairo-1.10.0-buggy_gradients.patch,
+  -files/cairo-1.10.2-export-symbols.patch, -files/cairo-1.10.2-interix.patch,
+  -files/cairo-1.10.2-qt-surface.patch, -files/cairo-1.10.2-ubuntu.patch,
+  -files/cairo-1.12.16-all-clipped-1.patch,
+  -files/cairo-1.12.16-all-clipped-2.patch,
+  -files/cairo-1.12.16-all-clipped-3.patch,
+  -files/cairo-1.12.16-lto-optional.patch,
+  -files/cairo-1.14.0-CFF-unaligned-access.patch,
+  -files/cairo-1.14.0-align-64bit-types.patch,
+  -files/cairo-1.14.0-image-negative-span-length.patch,
+  -files/cairo-1.14.0-tor-scan-converter-do_fullrow-intersection.patch,
+  -files/cairo-1.14.0-xcb-0-sized-glyph.patch,
+  -files/cairo-1.14.0-xlib-0-sized-glyph.patch:
+  Clean up old ebuilds and patches.
 
   22 Apr 2015; Mike Frysinger <vapier@gentoo.org> cairo-1.10.2-r3.ebuild:
   Only add -finline-limit=1200 to CFLAGS when the compiler supports it to fix
