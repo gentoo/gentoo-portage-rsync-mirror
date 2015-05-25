@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/harfbuzz
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.109 2015/05/16 04:19:45 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/harfbuzz/ChangeLog,v 1.110 2015/05/25 18:37:46 tetromino Exp $
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -harfbuzz-0.9.28.ebuild:
+  Clean up old.
 
   16 May 2015; Jeroen Roovers <jer@gentoo.org> harfbuzz-0.9.38.ebuild:
   Stable for PPC64 (bug #544792).
