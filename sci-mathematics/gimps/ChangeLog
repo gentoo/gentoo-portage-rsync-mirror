@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/gimps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.73 2015/03/05 08:32:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/gimps/ChangeLog,v 1.74 2015/05/25 07:07:24 tomka Exp $
+
+*gimps-28.6 (25 May 2015)
+
+  25 May 2015; Thomas Kahle <tomka@gentoo.org> +gimps-28.6.ebuild:
+  Bump to 28.6 (bug 549972)
 
   05 Mar 2015; Justin Lecher <jlec@gentoo.org> gimps-27.9-r2.ebuild,
   gimps-28.5.ebuild:
