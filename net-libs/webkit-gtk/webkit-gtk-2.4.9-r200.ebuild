@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.9-r200.ebuild,v 1.2 2015/05/24 23:12:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.9-r200.ebuild,v 1.3 2015/05/25 21:54:38 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -99,8 +99,6 @@ S="${WORKDIR}/${MY_P}"
 CHECKREQS_DISK_BUILD="18G" # and even this might not be enough, bug #417307
 
 pkg_pretend() {
-	#nvidia_check || die #463960
-
 	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		einfo "Checking for sufficient disk space to build ${PN} with debugging CFLAGS"
 		check-reqs_pkg_pretend
@@ -112,8 +110,6 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-	#nvidia_check || die #463960
-
 	# Check whether any of the debugging flags is enabled
 	if [[ ${MERGE_TYPE} != "binary" ]] && is-flagq "-g*" && ! is-flagq "-g*0" ; then
 		if is-flagq "-ggdb" && [[ ${WEBKIT_GTK_GGDB} != "yes" ]]; then
@@ -153,22 +149,15 @@ src_prepare() {
 	# * mimehandling test sometimes fails under Xvfb (works fine manually), bug #???
 	# * webdatasource test needs a network connection and intermittently fails with icedtea-web
 	# * webplugindatabase intermittently fails with icedtea-web, bug #????
-	sed -e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebinspector/ d' \
-		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testkeyevents/ d' \
-		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testmimehandling/ d' \
-		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebdatasource/ d' \
-		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebplugindatabase/ d' \
-		-i Tools/TestWebKitAPI/GNUmakefile.am || die
+#	sed -e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebinspector/ d' \
+#		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testkeyevents/ d' \
+#		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testmimehandling/ d' \
+#		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebdatasource/ d' \
+#		-e '/Programs\/TestWebKitAPI\/WebKitGtk\/testwebplugindatabase/ d' \
+#		-i Tools/TestWebKitAPI/GNUmakefile.am || die
 
 	# bug #459978, upstream bug #113397
 	epatch "${FILESDIR}"/${PN}-1.11.90-gtk-docize-fix.patch
-
-	# Deadlock causing infinite compilations with nvidia-drivers:
-	# https://bugs.gentoo.org/show_bug.cgi?id=463960
-	# http://osdyson.org/issues/161
-	# https://bugs.webkit.org/show_bug.cgi?id=125651
-	# FIXME: it doesn't really work for us
-	#epatch "${FILESDIR}"/${PN}-2.2.5-gir-nvidia-hangs.patch
 
 	# Debian patches to fix support for some arches
 	# https://bugs.webkit.org/show_bug.cgi?id=129540
@@ -291,20 +280,3 @@ src_install() {
 	# bug #402699, https://bugs.webkit.org/show_bug.cgi?id=78134
 	rm -rf "${ED}usr/share/gtk-doc" || die
 }
-
-#nvidia_check() {
-#	if [[ ${MERGE_TYPE} != "binary" ]] &&
-#	   use introspection &&
-#	   has_version 'x11-drivers/nvidia-drivers' &&
-#	   [[ $(eselect opengl show 2> /dev/null) = "nvidia" ]]
-#	then
-#		eerror "${PN} freezes while compiling if x11-drivers/nvidia-drivers is"
-#		eerror "used as the system OpenGL library. We are very sorry about that."
-#		eerror "You should temporarily select Mesa as the system OpenGL library:"
-#		eerror " # eselect opengl set xorg-x11"
-#		eerror " and then run emerge again."
-#		eerror "See https://bugs.gentoo.org/463960 for more details."
-#		eerror
-#		return 1
-#	fi
-#}

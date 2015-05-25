@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.318 2015/05/24 23:12:46 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.319 2015/05/25 21:54:38 pacho Exp $
+
+  25 May 2015; Pacho Ramos <pacho@gentoo.org> webkit-gtk-2.4.9-r200.ebuild,
+  webkit-gtk-2.4.9.ebuild:
+  nvidia_check stuff can be dropped, tests look to run ok too
 
   24 May 2015; Gilles Dartiguelongue <eva@gentoo.org> webkit-gtk-2.4.9.ebuild,
   webkit-gtk-2.4.9-r200.ebuild, webkit-gtk-2.6.6.ebuild:
