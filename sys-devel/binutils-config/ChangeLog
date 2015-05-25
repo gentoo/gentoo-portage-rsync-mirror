@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/binutils-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.77 2015/04/26 19:08:54 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-config/ChangeLog,v 1.79 2015/05/25 06:07:20 vapier Exp $
+
+*binutils-config-4-r3 (25 May 2015)
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> +binutils-config-4-r3.ebuild,
+  files/binutils-config-4:
+  Do not delete native ld.so.conf.d fragment when uninstalling cross binutils
+  #549708 by Alexander Tsoy.
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> binutils-config-4-r2.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   26 Apr 2015; Mikle Kolyada <zlogene@gentoo.org> binutils-config-4-r2.ebuild:
   ia64 stable wrt bug #547330

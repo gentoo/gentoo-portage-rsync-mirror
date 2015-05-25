@@ -1,16 +1,23 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-9999.ebuild,v 1.10 2015/05/25 06:06:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qpsmtpd/qpsmtpd-0.95.ebuild,v 1.1 2015/05/25 06:06:06 robbat2 Exp $
 
 EAPI=5
 
-inherit eutils perl-app user git-2
+[[ ${PV} == *9999 ]] && SCM="git-2"
+inherit eutils perl-app user ${SCM}
 
 DESCRIPTION="qpsmtpd is a flexible smtpd daemon written in Perl"
 HOMEPAGE="http://smtpd.develooper.com"
-# This is a spotted development fork with many improvements
+KEYWORDS=""
+if [[ ${PV} != *9999 ]]; then
+	SRC_URI="https://github.com/smtpd/qpsmtpd/archive/v${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+else
+	# This is a spotted development fork with many improvements
 EGIT_REPO_URI="git://github.com/qpsmtpd-dev/qpsmtpd-dev.git
 	https://github.com/qpsmtpd-dev/qpsmtpd-dev.git"
+fi
 
 LICENSE="MIT"
 SLOT="0"
@@ -37,6 +44,16 @@ pkg_setup() {
 		additional_groups="${additional_groups},postdrop"
 	fi
 	enewuser smtpd -1 -1 /var/spool/qpsmtpd smtpd${additional_groups}
+}
+
+src_unpack() {
+	if [[ ${PV} != *9999 ]]; then
+		unpack ${A}
+		cd "${S}"
+	else
+		git-2_src_unpack
+		cd "${S}"
+	fi
 }
 
 src_install() {
