@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16533 2015/05/24 22:41:21 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16534 2015/05/25 08:55:09 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,14 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Hans de Graaff <graaff@gentoo.org> (25 May 2015)
+# With the wwwold services going offline gorg no longer plays a role
+# in Gentoo's web environment. The wwwold services went offline due to
+# issues with gorg and instead of trying to fix them it was decided to
+# move the offline date forward. Consequently gorg will now also be
+# masked for removal in 30 days.
+www-servers/gorg
 
 # Patrice Clement <monsieurp@gentoo.org> (25 May 2015)
 # Upstream dead. Project no longer supported by the ASF 

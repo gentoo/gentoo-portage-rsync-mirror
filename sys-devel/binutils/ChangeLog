@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.530 2015/04/21 01:23:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.531 2015/05/25 08:53:36 vapier Exp $
+
+*binutils-2.25-r1 (25 May 2015)
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> +binutils-2.25-r1.ebuild:
+  Add fix from upstream for gold and COPY relocs #549276 by Marcin Mirosław.
 
   21 Apr 2015; Mike Frysinger <vapier@gentoo.org> binutils-2.25.ebuild:
   Add fix from upstream for enabling mips/gold.
