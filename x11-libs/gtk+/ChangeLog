@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.777 2015/05/17 10:13:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.778 2015/05/25 02:53:12 tetromino Exp $
+
+*gtk+-2.24.28-r1 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk+-2.24.28-r1.ebuild, gtk+-3.14.13.ebuild,
+  +files/gtk+-2.24.27-update-icon-cache.patch:
+  Move gtk+ ebuilds depending on split gtk-update-icon-cache from the overlay;
+  allows gtk+:3 to not depend on gtk+:2. See bug #528810, thanks to Gilles
+  Dartiguelongue for the fix.
 
 *gtk+-3.14.13 (17 May 2015)
 *gtk+-2.24.28 (17 May 2015)

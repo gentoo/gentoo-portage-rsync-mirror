@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.13.ebuild,v 1.1 2015/05/17 10:13:32 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.14.13.ebuild,v 1.2 2015/05/25 02:53:12 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -23,14 +23,12 @@ KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86
 
 # FIXME: introspection data is built against system installation of gtk+:3
 # NOTE: cairo[svg] dep is due to bug 291283 (not patched to avoid eautoreconf)
-# Use gtk+:2 for gtk-update-icon-cache
 COMMON_DEPEND="
 	>=dev-libs/atk-2.12[introspection?,${MULTILIB_USEDEP}]
 	>=dev-libs/glib-2.41.2:2[${MULTILIB_USEDEP}]
 	media-libs/fontconfig[${MULTILIB_USEDEP}]
 	>=x11-libs/cairo-1.12[aqua?,glib,svg,X?,${MULTILIB_USEDEP}]
 	>=x11-libs/gdk-pixbuf-2.30:2[introspection?,X?,${MULTILIB_USEDEP}]
-	>=x11-libs/gtk+-2.24:2[${MULTILIB_USEDEP}]
 	>=x11-libs/pango-1.36.7[introspection?,${MULTILIB_USEDEP}]
 	x11-misc/shared-mime-info
 
@@ -84,6 +82,7 @@ DEPEND="${COMMON_DEPEND}
 # >=xorg-server-1.11.4 needed for
 #  http://mail.gnome.org/archives/desktop-devel-list/2012-March/msg00024.html
 RDEPEND="${COMMON_DEPEND}
+	>=dev-util/gtk-update-icon-cache-3
 	!<gnome-base/gail-1000
 	!<x11-libs/vte-0.31.0:2.90
 	>=x11-themes/adwaita-icon-theme-3.14

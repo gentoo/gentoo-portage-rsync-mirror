@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.285 2015/04/22 14:33:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.286 2015/05/25 02:52:22 idella4 Exp $
+
+*shorewall-4.6.9 (25 May 2015)
+
+  25 May 2015; Ian Delaney <idella4@gentoo.org> +shorewall-4.6.9.ebuild:
+  rename shorewall-4.6.8.1.ebuild to shorewall-4.6.9.ebuild closes bug #549070
 
 *shorewall-4.6.8.1 (22 Apr 2015)
 
