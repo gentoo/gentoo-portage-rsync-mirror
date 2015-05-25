@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.86 2015/04/12 16:13:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypy/ChangeLog,v 1.87 2015/05/25 02:15:27 patrick Exp $
+
+  25 May 2015; Patrick Lauer <patrick@gentoo.org> pypy-2.5.1.ebuild:
+  Fix openssl dep #549542
 
   12 Apr 2015; Michał Górny <mgorny@gentoo.org> -pypy-2.5.0.ebuild,
   pypy-2.5.1.ebuild:

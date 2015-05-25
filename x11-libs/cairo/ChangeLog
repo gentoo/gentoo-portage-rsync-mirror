@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.415 2015/05/24 19:47:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.416 2015/05/25 02:02:27 patrick Exp $
+
+  25 May 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
+  Remove unneeded useflag description from metadata.xml
 
   24 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   -cairo-1.10.2-r3.ebuild, -cairo-1.12.16.ebuild, -cairo-1.12.16-r4.ebuild,
