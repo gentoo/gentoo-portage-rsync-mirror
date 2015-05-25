@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.86 2015/05/25 16:41:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.87 2015/05/25 17:16:54 floppym Exp $
+
+*m2crypto-0.21.1-r3 (25 May 2015)
+
+  25 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +files/0.21.1-0001-Fixed-invalid-variable-name.patch,
+  +files/0.21.1-0002-Fixing-memory-leaks-in-the-SWIG-wrapper.patch,
+  +files/0.21.1-0003-Use-swig-generated-python-loader.patch,
+  +files/0.21.1-packaging.patch, +m2crypto-0.21.1-r3.ebuild:
+  Resolve issues with swig-3.0.5 in the older 0.21 fork as well.
 
 *m2crypto-0.22.3-r4 (25 May 2015)
 
