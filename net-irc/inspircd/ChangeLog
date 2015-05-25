@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/inspircd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.109 2015/01/26 10:16:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/inspircd/ChangeLog,v 1.110 2015/05/25 08:10:36 nimiux Exp $
+
+  25 May 2015; Chema Alonso <nimiux@gentoo.org> metadata.xml:
+  Drop package maintainership
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> inspircd-2.0.18.ebuild:
   Stable for x86, wrt bug #530840

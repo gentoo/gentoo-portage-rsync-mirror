@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>proxy-maintainers</herd>
 	<maintainer>
-		<email>nimiux@gentoo.org</email>
-		<name>Chema Alonso</name>
-		<description>Primary-Maintainer</description>
-	</maintainer>
-	<maintainer>
-		<email>brain@brainbox.cc</email>
-		<name>Craig Edwards</name>
-		<description>Proxy-Maintainer</description>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		InspIRCd is a modular Internet Relay Chat (IRC) server written in C++
