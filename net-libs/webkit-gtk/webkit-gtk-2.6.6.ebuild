@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.6.6.ebuild,v 1.1 2015/05/02 16:18:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.6.6.ebuild,v 1.2 2015/05/24 23:12:46 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -35,24 +35,24 @@ REQUIRED_USE="
 # gtk2 is needed for plugin process support, should we add a USE flag to configure this?
 # gtk3-3.10 required for wayland
 RDEPEND="
-	>=dev-libs/glib-2.36.0:2
+	dev-db/sqlite:3=
+	>=dev-libs/glib-2.36:2
+	>=dev-libs/icu-3.8.1-r1:=
 	>=dev-libs/libxml2-2.8:2
 	>=dev-libs/libxslt-1.1.7
-	virtual/jpeg:0=
+	>=media-libs/fontconfig-2.8:1.0
+	>=media-libs/freetype-2.4.2:2
 	>=media-libs/harfbuzz-0.9.18:=[icu(+)]
 	>=media-libs/libpng-1.4:0=
 	media-libs/libwebp:=
-	>=dev-libs/icu-3.8.1-r1:=
-	>=media-libs/fontconfig-2.8:1.0
-	>=media-libs/freetype-2.4.2:2
 	>=net-libs/libsoup-2.42:2.4[introspection?]
+	virtual/jpeg:0=
 	>=x11-libs/cairo-1.10.2:=[X]
 	>=x11-libs/gtk+-3.6.0:3[X,introspection?]
-	dev-db/sqlite:3=
-	>=x11-libs/pango-1.30.0.0
+	>=x11-libs/pango-1.30.0
+	x11-libs/libX11
 	x11-libs/libXrender
 	x11-libs/libXt
-	x11-libs/libX11
 
 	>=x11-libs/gtk+-2.24.10:2
 
@@ -144,7 +144,7 @@ src_configure() {
 	# Arches without JIT support also need this to really disable it in all places
 	use jit || append-cppflags -DENABLE_JIT=0 -DENABLE_YARR_JIT=0 -DENABLE_ASSEMBLER=0
 
-	# It doesn't compile on alpha without this in LDFLAGS
+	# It does not compile on alpha without this in LDFLAGS
 	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=648761
 	use alpha && append-ldflags "-Wl,--no-relax"
 

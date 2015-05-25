@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/webkit-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.317 2015/05/24 22:43:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/ChangeLog,v 1.318 2015/05/24 23:12:46 eva Exp $
+
+  24 May 2015; Gilles Dartiguelongue <eva@gentoo.org> webkit-gtk-2.4.9.ebuild,
+  webkit-gtk-2.4.9-r200.ebuild, webkit-gtk-2.6.6.ebuild:
+  Sync ebuilds. Add missing minimum version requirements, fix dependencies for
+  USE=X on slot 3 and USE=aqua on slot 2.
 
 *webkit-gtk-2.4.9-r200 (24 May 2015)
 *webkit-gtk-2.4.9 (24 May 2015)

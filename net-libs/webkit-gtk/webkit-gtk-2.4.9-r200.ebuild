@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.9-r200.ebuild,v 1.1 2015/05/24 22:43:39 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/webkit-gtk/webkit-gtk-2.4.9-r200.ebuild,v 1.2 2015/05/24 23:12:46 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,8 +21,8 @@ IUSE="aqua coverage debug +egl +geoloc gles2 +gstreamer +introspection +jit libs
 # bugs 372493, 416331
 REQUIRED_USE="
 	geoloc? ( introspection )
-	introspection? ( gstreamer )
 	gles2? ( egl )
+	introspection? ( gstreamer )
 	webgl? ( ^^ ( gles2 opengl ) )
 	!webgl? ( ?? ( gles2 opengl ) )
 	|| ( aqua X )
@@ -30,21 +30,23 @@ REQUIRED_USE="
 
 # use sqlite, svg by default
 RDEPEND="
-	dev-libs/libxml2:2
-	dev-libs/libxslt
-	media-libs/harfbuzz:=[icu(+)]
-	media-libs/libwebp:=
-	virtual/jpeg:0=
-	>=media-libs/libpng-1.4:0=
-	>=x11-libs/cairo-1.10:=[X]
-	>=dev-libs/glib-2.36.0:2
-	>=dev-libs/icu-3.8.1-r1:=
-	>=net-libs/libsoup-2.42.0:2.4[introspection?]
 	dev-db/sqlite:3=
-	>=x11-libs/pango-1.30.0.0
+	>=dev-libs/glib-2.36:2
+	>=dev-libs/icu-3.8.1-r1:=
+	>=dev-libs/libxml2-2.6:2
+	>=dev-libs/libxslt-1.1.7
+	>=media-libs/fontconfig-2.5:1.0
+	>=media-libs/freetype-2.4.2:2
+	>=media-libs/harfbuzz-0.9.7:=[icu(+)]
+	>=media-libs/libpng-1.4:0=
+	media-libs/libwebp:=
+	>=net-libs/libsoup-2.42:2.4[introspection?]
+	virtual/jpeg:0=
+	>=x11-libs/cairo-1.10:=[X]
+	>=x11-libs/gtk+-2.24.10:2[aqua?,introspection?]
 	x11-libs/libXrender
 	x11-libs/libXt
-	>=x11-libs/gtk+-2.24.10:2
+	>=x11-libs/pango-1.30.0
 
 	egl? ( media-libs/mesa[egl] )
 	geoloc? ( >=app-misc/geoclue-2.1.5:2.0 )
@@ -66,7 +68,7 @@ RDEPEND="
 # Need real bison, not yacc
 DEPEND="${RDEPEND}
 	${PYTHON_DEPS}
-	dev-lang/perl
+	>=dev-lang/perl-5.10
 	|| (
 		virtual/rubygems[ruby_targets_ruby20]
 		virtual/rubygems[ruby_targets_ruby21]
@@ -75,9 +77,9 @@ DEPEND="${RDEPEND}
 	)
 	>=dev-libs/atk-2.8.0
 	>=dev-util/gtk-doc-am-1.10
-	dev-util/gperf
+	>=dev-util/gperf-3.0.1
 	>=sys-devel/bison-2.4.3
-	>=sys-devel/flex-2.5.33
+	>=sys-devel/flex-2.5.34
 	|| ( >=sys-devel/gcc-4.7 >=sys-devel/clang-3.3 )
 	sys-devel/gettext
 	>=sys-devel/make-3.82-r4
@@ -159,14 +161,14 @@ src_prepare() {
 		-i Tools/TestWebKitAPI/GNUmakefile.am || die
 
 	# bug #459978, upstream bug #113397
-	epatch "${FILESDIR}/${PN}-1.11.90-gtk-docize-fix.patch"
+	epatch "${FILESDIR}"/${PN}-1.11.90-gtk-docize-fix.patch
 
 	# Deadlock causing infinite compilations with nvidia-drivers:
 	# https://bugs.gentoo.org/show_bug.cgi?id=463960
 	# http://osdyson.org/issues/161
 	# https://bugs.webkit.org/show_bug.cgi?id=125651
-#	FIXME: it doesn't really work for us
-#	epatch "${FILESDIR}"/${PN}-2.2.5-gir-nvidia-hangs.patch
+	# FIXME: it doesn't really work for us
+	#epatch "${FILESDIR}"/${PN}-2.2.5-gir-nvidia-hangs.patch
 
 	# Debian patches to fix support for some arches
 	# https://bugs.webkit.org/show_bug.cgi?id=129540
@@ -174,7 +176,9 @@ src_prepare() {
 	# https://bugs.webkit.org/show_bug.cgi?id=129542
 	epatch "${FILESDIR}"/${PN}-2.4.1-ia64-malloc.patch
 
-	epatch "${FILESDIR}"/${PN}-2.4.4-jpeg-9a.patch #481688
+	# Fix build with recent libjpeg, bug #481688
+	# https://bugs.webkit.org/show_bug.cgi?id=122412
+	epatch "${FILESDIR}"/${PN}-2.4.4-jpeg-9a.patch
 
 	# Fix building with --disable-webgl, bug #500966
 	# https://bugs.webkit.org/show_bug.cgi?id=131267
@@ -192,7 +196,8 @@ src_configure() {
 	# Arches without JIT support also need this to really disable it in all places
 	use jit || append-cppflags -DENABLE_JIT=0 -DENABLE_YARR_JIT=0 -DENABLE_ASSEMBLER=0
 
-	# It doesn't compile on alpha without this in LDFLAGS, bug #???
+	# It does not compile on alpha without this in LDFLAGS
+	# https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=648761
 	use alpha && append-ldflags "-Wl,--no-relax"
 
 	# Sigbuses on SPARC with mcpu and co., bug #???
@@ -210,16 +215,16 @@ src_configure() {
 		append-ldflags "-Wl,--reduce-memory-overheads"
 	fi
 
-	local myconf=""
+	local ruby_interpreter=""
 
 	if has_version "virtual/rubygems[ruby_targets_ruby22]"; then
-		myconf="${myconf} RUBY=$(type -P ruby22)"
+		ruby_interpreter="RUBY=$(type -P ruby22)"
 	elif has_version "virtual/rubygems[ruby_targets_ruby21]"; then
-		myconf="${myconf} RUBY=$(type -P ruby21)"
+		ruby_interpreter="RUBY=$(type -P ruby21)"
 	elif has_version "virtual/rubygems[ruby_targets_ruby20]"; then
-		myconf="${myconf} RUBY=$(type -P ruby20)"
+		ruby_interpreter="RUBY=$(type -P ruby20)"
 	else
-		myconf="${myconf} RUBY=$(type -P ruby19)"
+		ruby_interpreter="RUBY=$(type -P ruby19)"
 	fi
 
 	# TODO: Check Web Audio support
@@ -247,7 +252,7 @@ src_configure() {
 		--disable-webkit2 \
 		--enable-dependency-tracking \
 		--disable-gtk-doc \
-		${myconf}
+		${ruby_interpreter}
 }
 
 src_compile() {
