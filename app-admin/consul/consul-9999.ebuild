@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/consul-9999.ebuild,v 1.2 2015/05/24 21:38:02 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/consul/consul-9999.ebuild,v 1.3 2015/05/25 19:12:07 zmedico Exp $
 
 EAPI=5
 
@@ -99,7 +99,16 @@ src_install() {
 	newconfd "${FILESDIR}/consul.confd" "${PN}"
 	systemd_dounit "${FILESDIR}/consul.service"
 
-	insinto /usr/lib/go
 	find "${WORKDIR}"/{pkg,src} -name '.git*' -exec rm -rf {} \; 2>/dev/null
-	doins -r "${WORKDIR}"/{pkg,src}
+	find "${WORKDIR}"/src/${GO_PN} -mindepth 1 -maxdepth 1 -type f -delete
+	while read -r -d '' x; do
+		x=${x#${WORKDIR}/src}
+		[[ -d ${WORKDIR}/pkg/${KERNEL}_${ARCH}/${x} ||
+			-f ${WORKDIR}/pkg/${KERNEL}_${ARCH}/${x}.a ]] && continue
+		rm -rf "${WORKDIR}"/src/${x}
+	done < <(find "${WORKDIR}"/src/${GO_PN} -mindepth 1 -maxdepth 1 -type d -print0)
+	insinto /usr/lib/go/pkg/${KERNEL}_${ARCH}/${GO_PN%/*}
+	doins -r "${WORKDIR}"/pkg/${KERNEL}_${ARCH}/${GO_PN}
+	insinto /usr/lib/go/src/${GO_PN%/*}
+	doins -r "${WORKDIR}"/src/${GO_PN}
 }

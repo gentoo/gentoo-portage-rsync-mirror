@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libcanberra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.122 2015/04/11 09:57:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcanberra/ChangeLog,v 1.123 2015/05/25 19:17:30 tetromino Exp $
+
+*libcanberra-0.30-r5 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libcanberra-0.30-r5.ebuild:
+  Add multilib support.
 
   11 Apr 2015; Pacho Ramos <pacho@gentoo.org> -libcanberra-0.30-r1.ebuild,
   libcanberra-0.30-r4.ebuild:
