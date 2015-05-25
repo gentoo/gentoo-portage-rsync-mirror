@@ -911,5 +911,8 @@ linux-info_pkg_setup() {
 		fi
 	fi
 
-	[ -n "${CONFIG_CHECK}" ] && CONFIG_CHECK="${CONFIG_CHECK}" check_extra_config;
+	if [ -n "${CONFIG_CHECK}" ]; then
+		declare -g CONFIG_CHECK="${CONFIG_CHECK}"
+		check_extra_config
+	fi
 }
