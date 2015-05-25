@@ -45,7 +45,7 @@ multilib_src_install_all() {
 	prune_libtool_files
 
 	if use examples; then
-		find examples/ -name "Makefile.*" -delete || die
-		dodoc -r examples/
+		find examples -name "Makefile.*" -delete || die
+		dodoc -r examples
 	fi
 }
