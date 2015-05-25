@@ -1,6 +1,13 @@
 # ChangeLog for net-firewall/firewalld
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.16 2015/04/13 06:32:01 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firewalld/ChangeLog,v 1.17 2015/05/25 20:58:45 tamiko Exp $
+
+*firewalld-0.3.13 (25 May 2015)
+
+  25 May 2015; Matthias Maier <tamiko@gentoo.org> +firewalld-0.3.13.ebuild,
+  firewalld-0.3.10.ebuild, metadata.xml:
+  co-maintain package; version bump; also install man pages, bug #540108
+  reported by 'dE', also thanks to Jeroen Roovers
 
   13 Apr 2015; Ian Delaney <idella4@gentoo.org> firewalld-0.3.10.ebuild:
   add py3.4 support, update python_export_best to python_setup, no need for
