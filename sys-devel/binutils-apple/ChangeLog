@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/binutils-apple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.43 2015/02/27 08:14:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/ChangeLog,v 1.44 2015/05/25 13:30:49 grobian Exp $
+
+  25 May 2015; Fabian Groffen <grobian@gentoo.org> binutils-apple-5.1.ebuild,
+  binutils-apple-6.1.ebuild:
+  libcxx, move away from apple-version by Michael Weiser in bug #538364
 
   27 Feb 2015; Mike Frysinger <vapier@gentoo.org> binutils-apple-3.1.2.ebuild,
   binutils-apple-3.2.6.ebuild, binutils-apple-3.2.ebuild,

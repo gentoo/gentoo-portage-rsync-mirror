@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-5.1.ebuild,v 1.4 2015/02/27 08:14:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils-apple/binutils-apple-5.1.ebuild,v 1.5 2015/05/25 13:30:49 grobian Exp $
 
 EAPI="3"
 
@@ -25,7 +25,7 @@ IUSE="lto test libcxx"
 
 RDEPEND="sys-devel/binutils-config
 	lto? ( sys-devel/llvm )
-	libcxx? ( sys-libs/libcxx-apple )"
+	libcxx? ( sys-libs/libcxx )"
 DEPEND="${RDEPEND}
 	test? ( >=dev-lang/perl-5.8.8 )
 	|| ( >=sys-devel/gcc-apple-4.2.1 sys-devel/llvm )

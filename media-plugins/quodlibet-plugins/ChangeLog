@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/quodlibet-plugins
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.30 2014/07/09 11:38:01 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/quodlibet-plugins/ChangeLog,v 1.31 2015/05/25 13:29:29 tamiko Exp $
+
+  25 May 2015; Matthias Maier <tamiko@gentoo.org>
+  -quodlibet-plugins-3.0.2.ebuild, -quodlibet-plugins-3.1.1.ebuild,
+  metadata.xml:
+  take over (co-)maintainership; remove old
 
 *quodlibet-plugins-3.1.2 (09 Jul 2014)
 
