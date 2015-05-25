@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-vp8
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.31 2015/05/25 04:19:10 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-vp8/ChangeLog,v 1.32 2015/05/25 10:44:46 zlogene Exp $
+
+  25 May 2015; Mikle Kolyada <zlogene@gentoo.org>
+  gst-plugins-vp8-0.10.23-r3.ebuild:
+  x86 stable wrt bug #550004
 
   25 May 2015; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-vp8-0.10.23-r3.ebuild:
