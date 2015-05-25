@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/clsync-docs/clsync-docs-0.4.ebuild,v 1.1 2015/02/11 03:31:16 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/clsync-docs/clsync-docs-0.4.1.ebuild,v 1.1 2015/05/25 00:10:53 bircoph Exp $
 
 EAPI=5
 
@@ -20,6 +20,7 @@ DESCRIPTION="Clsync and libclsync API documentation"
 HOMEPAGE="http://ut.mephi.ru/oss/clsync https://github.com/xaionaro/clsync"
 LICENSE="GPL-3+"
 SLOT="0"
+IUSE="api +examples"
 
 DEPEND="
 	app-doc/doxygen
@@ -31,9 +32,19 @@ src_configure() {
 }
 
 src_compile() {
-	doxygen .doxygen || die "doxygen failed"
+	if use api; then
+		doxygen .doxygen || die "doxygen failed"
+	fi
 }
 
 src_install() {
-	dohtml -r doc/doxygen/html/*
+	dodoc CONTRIB DEVELOPING NOTES PROTOCOL README.md SHORTHANDS TODO
+	if use api; then
+		dohtml -r doc/doxygen/html/*
+		dodoc -r doc/devel/*
+	fi
+	if use examples; then
+		docinto examples
+		dodoc -r examples/{production,clsync*}
+	fi
 }
