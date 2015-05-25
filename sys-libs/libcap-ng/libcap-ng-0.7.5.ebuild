@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.7.5.ebuild,v 1.1 2015/05/11 10:00:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.7.5.ebuild,v 1.2 2015/05/25 18:04:24 blueness Exp $
 
 EAPI=5
 
@@ -25,6 +25,7 @@ DEPEND="${RDEPEND}
 	python? ( >=dev-lang/swig-2 )"
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-add-unistd_h.patch
 	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 
 	autotools-utils_src_prepare

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap-ng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.77 2015/05/11 10:00:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/ChangeLog,v 1.78 2015/05/25 18:04:24 blueness Exp $
+
+  25 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/libcap-ng-0.7.5-add-unistd_h.patch, libcap-ng-0.7.5.ebuild:
+  Fix build for musl.  Bug #550298.
 
 *libcap-ng-0.7.5 (11 May 2015)
 

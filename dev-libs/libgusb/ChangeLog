@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgusb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.47 2015/03/29 10:33:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/ChangeLog,v 1.48 2015/05/25 18:15:30 tetromino Exp $
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  libgusb-0.2.4.ebuild:
+  Fix dependencies: >=libusb-1.0.19 is needed, gudev is not.
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> libgusb-0.2.4.ebuild:
   Stable for HPPA (bug #534012).

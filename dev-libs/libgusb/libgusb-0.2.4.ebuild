@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.2.4.ebuild,v 1.4 2015/03/29 10:33:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgusb/libgusb-0.2.4.ebuild,v 1.5 2015/05/25 18:15:30 tetromino Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -19,10 +19,10 @@ KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc x86"
 IUSE="+introspection static-libs vala"
 REQUIRED_USE="vala? ( introspection )"
 
+# Yes, we really need API from dev-libs/libusb-1.0.19, not virtual/libusb
 RDEPEND="
 	>=dev-libs/glib-2.28:2[${MULTILIB_USEDEP}]
-	virtual/libusb:1[${MULTILIB_USEDEP}]
-	virtual/libgudev:=[${MULTILIB_USEDEP}]
+	>=dev-libs/libusb-1.0.19[udev,${MULTILIB_USEDEP}]
 	introspection? ( >=dev-libs/gobject-introspection-1.29 )
 "
 DEPEND="${RDEPEND}
