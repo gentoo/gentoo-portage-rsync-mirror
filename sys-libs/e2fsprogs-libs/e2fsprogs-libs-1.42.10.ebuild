@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.10.ebuild,v 1.15 2015/05/21 13:20:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/e2fsprogs-libs-1.42.10.ebuild,v 1.17 2015/05/25 10:21:48 vapier Exp $
 
 EAPI="4"
 
@@ -9,7 +9,7 @@ case ${PV} in
 *)      UP_PV=${PV} ;;
 esac
 
-inherit autotools toolchain-funcs eutils multilib-minimal
+inherit toolchain-funcs eutils multilib-minimal
 
 DESCRIPTION="e2fsprogs libraries (common error and subsystem)"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -35,8 +35,7 @@ S=${WORKDIR}/${P%_pre*}
 src_prepare() {
 	printf 'all:\n%%:;@:\n' > doc/Makefile.in # don't bother with docs #305613
 	epatch "${FILESDIR}"/${PN}-1.42.9-no-quota.patch
-	epatch "${FILESDIR}"/${P}-fix-build-cflags.patch
-	eautoreconf
+	epatch "${FILESDIR}"/${P}-fix-build-cflags.patch #516854
 }
 
 multilib_src_configure() {

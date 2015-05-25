@@ -1,6 +1,20 @@
 # ChangeLog for sys-libs/e2fsprogs-libs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.141 2015/05/21 13:20:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/e2fsprogs-libs/ChangeLog,v 1.143 2015/05/25 10:21:48 vapier Exp $
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.10.ebuild,
+  e2fsprogs-libs-1.42.12.ebuild, e2fsprogs-libs-1.42.13.ebuild,
+  files/e2fsprogs-libs-1.42.10-fix-build-cflags.patch,
+  files/e2fsprogs-libs-1.42.13-fix-build-cflags.patch:
+  Change build-cflags patch to apply to configure since it is super tiny and the
+  other modifications in src_prepare expect to patch the generated autotools
+  #549926 by Patrick McLean.
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> e2fsprogs-libs-1.42.10.ebuild,
+  e2fsprogs-libs-1.42.12.ebuild, e2fsprogs-libs-1.42.13.ebuild,
+  files/e2fsprogs-libs-1.42.10-fix-build-cflags.patch,
+  files/e2fsprogs-libs-1.42.13-fix-build-cflags.patch:
+  Add missing documentation on build-cflags patch #516854 by Ian Stakenvicius.
 
 *e2fsprogs-libs-1.42.10 (21 May 2015)
 
