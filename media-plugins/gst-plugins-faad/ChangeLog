@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/gst-plugins-faad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.176 2015/03/29 10:53:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-faad/ChangeLog,v 1.177 2015/05/25 22:48:38 tetromino Exp $
+
+*gst-plugins-faad-1.4.5-r1 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gst-plugins-faad-1.4.5-r1.ebuild,
+  +files/gst-plugins-faad-1.4.5-version-check.patch:
+  Fix broken build with gcc-5.1 that makes Firefox segfault (bug #549612,
+  thanks to Gabriel Marcano).
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gst-plugins-faad-1.4.5.ebuild:
   Stable for HPPA (bug #534012).

@@ -1,6 +1,14 @@
 # ChangeLog for x11-misc/shared-mime-info
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.222 2015/04/28 09:53:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/shared-mime-info/ChangeLog,v 1.223 2015/05/25 22:35:57 tetromino Exp $
+
+*shared-mime-info-1.4-r1 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +shared-mime-info-1.4-r1.ebuild, +files/shared-mime-info-1.4-iso-1.patch,
+  +files/shared-mime-info-1.4-iso-2.patch:
+  Add upstream patches to fix ISO image detection (bug #548676, thanks to
+  i.Dark_Templar). Add epatch_user.
 
   28 Apr 2015; Agostino Sarubbo <ago@gentoo.org> shared-mime-info-1.4.ebuild:
   Stable for sparc, wrt bug #545866

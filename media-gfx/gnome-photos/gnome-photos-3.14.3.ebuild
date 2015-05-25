@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.14.3.ebuild,v 1.1 2015/05/19 19:20:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/gnome-photos-3.14.3.ebuild,v 1.2 2015/05/25 22:55:05 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND="
 	>=gnome-base/librsvg-2.26.0
 	>=dev-libs/libgdata-0.15.2
 	media-libs/babl
-	>=media-libs/gegl-0.2
+	>=media-libs/gegl-0.2:0
 	>=media-libs/grilo-0.2.6:0.2
 	>=media-plugins/grilo-plugins-0.2.6:0.2[upnp-av]
 	>=media-libs/exempi-1.99.5
