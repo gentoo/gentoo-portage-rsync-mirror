@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware/faraday_middleware-0.9.1.ebuild,v 1.2 2015/05/25 05:14:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware/faraday_middleware-0.9.1.ebuild,v 1.3 2015/05/25 05:47:01 patrick Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ SRC_URI="https://github.com/lostisland/faraday_middleware/archive/v${PV}.tar.gz 
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="+parsexml +oauth +mashify +rashify"
 
 ruby_add_rdepend "

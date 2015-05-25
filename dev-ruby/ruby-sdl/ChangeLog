@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-sdl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.40 2014/06/04 05:19:42 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-sdl/ChangeLog,v 1.41 2015/05/25 05:41:33 graaff Exp $
+
+*ruby-sdl-2.1.2-r2 (25 May 2015)
+
+  25 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-sdl-2.1.2-r1.ebuild,
+  +ruby-sdl-2.1.2-r2.ebuild:
+  Add ruby22. Create stable candidate.
 
 *ruby-sdl-2.1.2-r1 (04 Jun 2014)
 
