@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r3.ebuild,v 1.3 2015/05/15 09:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r3.ebuild,v 1.4 2015/05/25 17:41:50 floppym Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit distutils-r1
 MY_PN="M2Crypto"
 
 DESCRIPTION="M2Crypto: A Python crypto and SSL toolkit"
-HOMEPAGE="http://chandlerproject.org/bin/view/Projects/MeTooCrypto http://pypi.python.org/pypi/M2Crypto"
+HOMEPAGE="https://github.com/martinpaljak/M2Crypto http://pypi.python.org/pypi/M2Crypto"
 SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
