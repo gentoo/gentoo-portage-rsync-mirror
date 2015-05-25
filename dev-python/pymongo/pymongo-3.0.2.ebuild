@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-3.0.2.ebuild,v 1.1 2015/05/13 08:27:29 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymongo/pymongo-3.0.2.ebuild,v 1.2 2015/05/25 03:33:55 idella4 Exp $
 
 EAPI=5
 
@@ -25,7 +25,6 @@ DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (
-		dev-python/nose[${PYTHON_USEDEP}]
 		>=dev-db/mongodb-2.6.0
 	)
 "
