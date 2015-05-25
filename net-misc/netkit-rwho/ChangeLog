@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/netkit-rwho
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.30 2014/07/18 19:45:52 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwho/ChangeLog,v 1.31 2015/05/25 09:58:42 vapier Exp $
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/netkit-rwho-0.17-printf.patch, netkit-rwho-0.17-r4.ebuild:
+  Fix by Andrew Miller to use printf instead of echo -n #529974 by Diego Elio
+  Pettenò.
 
   18 Jul 2014; Jeroen Roovers <jer@gentoo.org> -netkit-rwho-0.17-r3.ebuild,
   netkit-rwho-0.17-r4.ebuild:
