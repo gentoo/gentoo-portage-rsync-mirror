@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pax-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.175 2015/05/24 20:43:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pax-utils/ChangeLog,v 1.176 2015/05/25 00:42:23 blueness Exp $
+
+  25 May 2015; Anthony G. Basile <blueness@gentoo.org> pax-utils-1.0.3.ebuild:
+  Stable on ppc and ppc64.  Bug #550300.
 
   24 May 2015; Mikle Kolyada <zlogene@gentoo.org> pax-utils-1.0.3.ebuild:
   amd64 stable wrt bug #550300
