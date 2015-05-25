@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.222 2015/05/22 04:44:36 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.223 2015/05/25 04:18:19 jer Exp $
+
+  25 May 2015; Jeroen Roovers <jer@gentoo.org> swig-3.0.5.ebuild:
+  Stable for PPC64 (bug #531736).
 
   22 May 2015; Jeroen Roovers <jer@gentoo.org> swig-3.0.5.ebuild:
   Stable for HPPA (bug #531736).

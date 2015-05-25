@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libvpx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.122 2015/05/20 15:52:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvpx/ChangeLog,v 1.123 2015/05/25 04:16:08 jer Exp $
+
+  25 May 2015; Jeroen Roovers <jer@gentoo.org> libvpx-1.4.0.ebuild:
+  Stable for HPPA (bug #549978).
 
   20 May 2015; Agostino Sarubbo <ago@gentoo.org> libvpx-1.4.0.ebuild:
   Stable for x86, wrt bug #549978
