@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.330 2015/05/24 04:33:58 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.331 2015/05/25 04:45:31 jer Exp $
+
+  25 May 2015; Jeroen Roovers <jer@gentoo.org> use.mask:
+  Mask USE=gnuefi for PowerPC (bug #550322).
 
   24 May 2015; Matt Turner <mattst88@gentoo.org> ppc64/64ul/package.use.mask:
   Drop dead r600-llvm-compiler USE flag from package.use.mask.
