@@ -912,6 +912,8 @@ linux-info_pkg_setup() {
 	fi
 
 	if [ -n "${CONFIG_CHECK}" ]; then
+		# CONFIG_CHECK is re-declared here to ensure that this variable will be
+		# available in environment.bz2
 		declare -g CONFIG_CHECK="${CONFIG_CHECK}"
 		check_extra_config
 	fi
