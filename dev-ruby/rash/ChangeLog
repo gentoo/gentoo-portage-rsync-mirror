@@ -1,6 +1,14 @@
 # ChangeLog for dev-ruby/rash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.12 2015/04/27 06:00:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.14 2015/05/25 05:05:26 graaff Exp $
+
+  25 May 2015; Hans de Graaff <graaff@gentoo.org> -rash-0.4.0-r1.ebuild:
+  Remove broken version.
+
+*rash-0.4.0-r2 (25 May 2015)
+
+  25 May 2015; Hans de Graaff <graaff@gentoo.org> +rash-0.4.0-r2.ebuild:
+  Make hashie dependency more lenient to match versions still in the tree.
 
   27 Apr 2015; Hans de Graaff <graaff@gentoo.org> rash-0.4.0-r1.ebuild:
   Add ruby22. Depend on the correct slot.

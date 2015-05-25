@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/faraday_middleware
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware/ChangeLog,v 1.1 2015/05/24 22:56:46 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware/ChangeLog,v 1.2 2015/05/25 05:14:26 graaff Exp $
+
+  25 May 2015; Hans de Graaff <graaff@gentoo.org>
+  faraday_middleware-0.9.1.ebuild:
+  Fix broken tests. Install documentation. Fix broken dependencies. Remove code
+  that modifies the scripts since we don't use or install them.
 
 *faraday_middleware-0.9.1 (24 May 2015)
 

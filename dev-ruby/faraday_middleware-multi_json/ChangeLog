@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/faraday_middleware-multi_json
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware-multi_json/ChangeLog,v 1.1 2015/05/24 22:55:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/faraday_middleware-multi_json/ChangeLog,v 1.2 2015/05/25 05:24:14 graaff Exp $
+
+  25 May 2015; Hans de Graaff <graaff@gentoo.org>
+  faraday_middleware-multi_json-0.0.6.ebuild:
+  Run tests. Fix repoman warnings. Drop x86 keyword since dependencies are not
+  keyworded. Avoid unlisted dependency on dev-vcs/git. Install documentation.
 
 *faraday_middleware-multi_json-0.0.6 (24 May 2015)
 
