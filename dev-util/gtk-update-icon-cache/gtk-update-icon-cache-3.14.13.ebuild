@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-update-icon-cache/gtk-update-icon-cache-3.14.13.ebuild,v 1.1 2015/05/25 02:52:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-update-icon-cache/gtk-update-icon-cache-3.14.13.ebuild,v 1.2 2015/05/25 03:05:52 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -21,7 +21,6 @@ RDEPEND="
 	>=dev-libs/glib-2.41.2:2
 	>=x11-libs/gdk-pixbuf-2.30:2
 	!<x11-libs/gtk+-2.24.28-r1:2
-	!<x11-libs/gtk+-3.14.13-r1:3
 "
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.50.1

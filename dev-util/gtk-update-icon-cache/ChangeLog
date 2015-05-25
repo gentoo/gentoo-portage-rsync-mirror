@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/gtk-update-icon-cache
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-update-icon-cache/ChangeLog,v 1.1 2015/05/25 02:52:21 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-update-icon-cache/ChangeLog,v 1.2 2015/05/25 03:05:52 tetromino Exp $
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gtk-update-icon-cache-2.24.27.ebuild, gtk-update-icon-cache-3.14.13.ebuild:
+  Wrong dependency.
 
 *gtk-update-icon-cache-3.14.13 (25 May 2015)
 *gtk-update-icon-cache-2.24.27 (25 May 2015)
