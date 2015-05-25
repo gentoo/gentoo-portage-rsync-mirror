@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/kphotoalbum
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.69 2015/04/03 18:45:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/ChangeLog,v 1.70 2015/05/25 11:07:34 kensington Exp $
+
+*kphotoalbum-4.6.2 (25 May 2015)
+
+  25 May 2015; Michael Palimaka <kensington@gentoo.org>
+  +kphotoalbum-4.6.2.ebuild, -files/kphotoalbum-4.6.1-include.patch,
+  -kphotoalbum-4.6.1.ebuild:
+  Version bump wrt bug #549996. Remove old.
 
 *kphotoalbum-4.6.1 (03 Apr 2015)
 

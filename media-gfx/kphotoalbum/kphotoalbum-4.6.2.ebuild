@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.6.1.ebuild,v 1.1 2015/04/03 18:45:24 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.6.2.ebuild,v 1.1 2015/05/25 11:07:34 kensington Exp $
 
 EAPI=5
 
@@ -40,7 +40,6 @@ RDEPEND="${COMMON_DEPEND}
 	kipi? ( >=media-plugins/kipi-plugins-4.7.0 )
 "
 
-PATCHES=( "${FILESDIR}/${P}-include.patch" )
 DOCS=( ChangeLog README )
 
 src_configure() {
