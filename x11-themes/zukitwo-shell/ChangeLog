@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/zukitwo-shell
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo-shell/ChangeLog,v 1.16 2015/04/07 14:49:05 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/zukitwo-shell/ChangeLog,v 1.17 2015/05/26 01:23:59 tetromino Exp $
+
+*zukitwo-shell-2014.10.22 (26 May 2015)
+
+  26 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +zukitwo-shell-2014.10.22.ebuild:
+  Version bump (bug #512378, thanks to José Romildo Malaquias and Sebastian
+  Pipping). Shell theme name is now "ZukiShell".
 
   27 Apr 2014; Pacho Ramos <pacho@gentoo.org> -zukitwo-shell-2012.07.02.ebuild,
   -zukitwo-shell-2012.12.16.ebuild, -zukitwo-shell-2013.04.24.ebuild:
