@@ -1,6 +1,21 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.346 2015/05/07 17:01:38 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.349 2015/05/26 20:07:51 fordfrog Exp $
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  -files/tomcat-8.0.20-build.xml.patch, -files/tomcat-8.0.21-build.xml.patch:
+  removed obsolete files
+
+*tomcat-8.0.23 (26 May 2015)
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org> +tomcat-8.0.23.ebuild,
+  +files/tomcat-8.0.23-build.xml.patch:
+  version bump
+
+  26 May 2015; Miroslav Šulc <fordfrog@gentoo.org> -tomcat-8.0.18.ebuild,
+  -tomcat-8.0.20.ebuild, -tomcat-8.0.21.ebuild,
+  -files/tomcat-8.0.18-build.xml.patch:
+  removed obsolete ebuilds
 
 *tomcat-8.0.22 (07 May 2015)
 

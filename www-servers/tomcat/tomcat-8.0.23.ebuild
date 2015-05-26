@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-8.0.20.ebuild,v 1.1 2015/02/24 21:06:23 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-8.0.23.ebuild,v 1.1 2015/05/26 20:06:45 fordfrog Exp $
 
 EAPI="5"
 
@@ -26,7 +26,7 @@ SAPI_SLOT="3.1"
 
 COMMON_DEP="
 	dev-java/eclipse-ecj:${ECJ_SLOT}
-	~dev-java/tomcat-servlet-api-${PV}
+	~dev-java/tomcat-servlet-api-${PV}:${SAPI_SLOT}
 	extra-webapps? ( dev-java/jakarta-jstl:0 )"
 RDEPEND="${COMMON_DEP}
 	!<dev-java/tomcat-native-1.1.24
