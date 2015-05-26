@@ -5,7 +5,7 @@
 EAPI="5"
 LANGS="de pl ru uk"
 
-inherit cmake-utils git-2
+inherit cmake-utils git-r3
 
 DESCRIPTION="Qt4 Crossplatform Jabber client"
 HOMEPAGE="http://www.vacuum-im.org/"
