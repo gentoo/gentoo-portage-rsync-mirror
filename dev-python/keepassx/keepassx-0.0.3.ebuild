@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/keepassx/keepassx-0.0.3.ebuild,v 1.1 2015/05/26 09:07:43 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/keepassx/keepassx-0.0.3.ebuild,v 1.2 2015/05/26 12:16:16 jlec Exp $
 
 EAPI=5
 
@@ -28,6 +28,6 @@ DEPEND="${RDEPEND}
 	test? ( dev-python/pytest[${PYTHON_USEDEP}] )
 "
 
-src_test() {
+python_test() {
 	py.test keepassx || die
 }
