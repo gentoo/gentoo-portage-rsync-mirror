@@ -210,11 +210,6 @@ dev-java/sun-j2me-bin
 # Dead upstream. Fails to build (bug #543644).
 >=sys-devel/dragonegg-3.6
 
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (30 Mar 2015)
-# Does not build against glibc-2.20 or modern X servers, bug #544904.
-# Removal in 30 days.
-<x11-drivers/xf86-input-synaptics-1.7
-
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Mar 2015)
 # Mask Perl 5.18 for removal. Please upgrade to Perl 5.20
 =dev-lang/perl-5.18.2-r2
