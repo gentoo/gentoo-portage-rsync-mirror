@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5-r2.ebuild,v 1.1 2015/03/21 15:59:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/pythong-2.1.5-r2.ebuild,v 1.2 2015/05/26 13:56:25 jlec Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ IUSE="doc"
 
 RDEPEND="
 	>=dev-lang/tk-8.3.4:0=
-	>=dev-python/pmw-1.2:0"
+	virtual/pmw[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
 
 S="${WORKDIR}/${MY_PN}-${MY_PV}"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/readline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.225 2015/05/23 17:34:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.226 2015/05/26 13:52:09 vapier Exp $
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  readline-6.3_p8-r2.ebuild:
+  Add USE=utils to control install of rlfe util.
 
   23 May 2015; Mikle Kolyada <zlogene@gentoo.org> readline-6.3_p8-r2.ebuild:
   ia64 stable wrt bug #548756

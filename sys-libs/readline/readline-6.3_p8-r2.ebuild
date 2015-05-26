@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p8-r2.ebuild,v 1.6 2015/05/23 17:34:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-6.3_p8-r2.ebuild,v 1.7 2015/05/26 13:52:09 vapier Exp $
 
 EAPI=4
 
@@ -34,8 +34,8 @@ SRC_URI="mirror://gnu/${PN}/${MY_P}.tar.gz $(patches)"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ~arm64 ~hppa ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
-IUSE="static-libs"
+KEYWORDS="alpha amd64 arm arm64 ~hppa ia64 m68k ~mips ~ppc ~ppc64 s390 sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~amd64-linux ~arm-linux ~x86-linux"
+IUSE="static-libs utils"
 
 RDEPEND=">=sys-libs/ncurses-5.9-r3[${MULTILIB_USEDEP}]
 	abi_x86_32? (
@@ -111,7 +111,7 @@ multilib_src_configure() {
 		--with-curses \
 		$(use_enable static-libs static)
 
-	if multilib_is_native_abi && ! tc-is-cross-compiler ; then
+	if use utils && multilib_is_native_abi && ! tc-is-cross-compiler ; then
 		# code is full of AC_TRY_RUN()
 		mkdir -p examples/rlfe || die
 		cd examples/rlfe || die
@@ -123,7 +123,7 @@ multilib_src_configure() {
 multilib_src_compile() {
 	emake
 
-	if multilib_is_native_abi && ! tc-is-cross-compiler ; then
+	if use utils && multilib_is_native_abi && ! tc-is-cross-compiler ; then
 		# code is full of AC_TRY_RUN()
 		cd examples/rlfe || die
 		local l
@@ -141,7 +141,7 @@ multilib_src_install() {
 	if multilib_is_native_abi ; then
 		gen_usr_ldscript -a readline history #4411
 
-		if ! tc-is-cross-compiler; then
+		if use utils && ! tc-is-cross-compiler; then
 			dobin examples/rlfe/rlfe
 		fi
 	fi
