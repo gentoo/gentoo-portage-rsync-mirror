@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.5.3-r1.ebuild,v 1.3 2015/05/17 09:22:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.5.3-r1.ebuild,v 1.4 2015/05/26 04:56:46 jer Exp $
 
 EAPI="5"
 
@@ -62,7 +62,10 @@ python_install() {
 }
 
 src_prepare() {
-	cp "${FILESDIR}"/${PN}-1.5.3-rrd_rados.h src/rrd_rados.h || die
+	# At the next version bump, please see if you actually still need these
+	# before adding versions
+	cp "${FILESDIR}"/${P}-rrd_rados.h src/rrd_rados.h || die
+	cp "${FILESDIR}"/${P}-rrdrados.pod doc/rrdrados.pod || die
 
 	epatch \
 		"${FILESDIR}"/${PN}-1.4.7-configure.ac.patch \

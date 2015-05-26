@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.292 2015/05/17 09:22:59 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.293 2015/05/26 04:56:46 jer Exp $
+
+  26 May 2015; Jeroen Roovers <jer@gentoo.org> rrdtool-1.5.3-r1.ebuild,
+  +files/rrdtool-1.5.3-rrdrados.pod:
+  Add one more missing file by Andrew Miller (bug #548818).
 
   17 May 2015; Jeroen Roovers <jer@gentoo.org> rrdtool-1.5.3-r1.ebuild:
   Mark ~hppa (bug #549516).
