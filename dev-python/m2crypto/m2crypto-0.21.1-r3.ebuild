@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.21.1-r3.ebuild,v 1.2 2015/05/26 00:26:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.21.1-r3.ebuild,v 1.3 2015/05/26 00:35:30 floppym Exp $
 
 EAPI=5
 
@@ -13,7 +13,8 @@ MY_PN="M2Crypto"
 
 DESCRIPTION="M2Crypto: A Python crypto and SSL toolkit"
 HOMEPAGE="http://chandlerproject.org/bin/view/Projects/MeTooCrypto http://pypi.python.org/pypi/M2Crypto"
-SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz"
+SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_PN}-${PV}.tar.gz
+	http://dev.gentoo.org/~floppym/dist/m2crypto-0.21.1-backports.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
@@ -33,12 +34,11 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 RESTRICT=test
 
 PATCHES=(
-	0.21.1-0001-Fixed-invalid-variable-name.patch
-	0.21.1-0002-Fixing-memory-leaks-in-the-SWIG-wrapper.patch
-	0.21.1-0003-Use-swig-generated-python-loader.patch
-	0.21.1-packaging.patch
+	"${WORKDIR}"/patch/0.21.1-0001-Fixed-invalid-variable-name.patch
+	"${WORKDIR}"/patch/0.21.1-0002-Fixing-memory-leaks-in-the-SWIG-wrapper.patch
+	"${WORKDIR}"/patch/0.21.1-0003-Use-swig-generated-python-loader.patch
+	"${FILESDIR}"/0.21.1-packaging.patch
 )
-PATCHES=( "${PATCHES[@]/#/${FILESDIR}/}" )
 
 python_test() {
 	esetup.py test

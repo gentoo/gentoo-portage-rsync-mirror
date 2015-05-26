@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.90 2015/05/26 00:28:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.91 2015/05/26 00:35:30 floppym Exp $
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org>
+  -files/0.21.1-0001-Fixed-invalid-variable-name.patch,
+  -files/0.21.1-0002-Fixing-memory-leaks-in-the-SWIG-wrapper.patch,
+  -files/0.21.1-0003-Use-swig-generated-python-loader.patch,
+  m2crypto-0.21.1-r3.ebuild:
+  Move patches to a tarball to avoid QA warning.
 
   26 May 2015; Mike Gilbert <floppym@gentoo.org> m2crypto-0.22.3-r4.ebuild:
   Whitespace.
