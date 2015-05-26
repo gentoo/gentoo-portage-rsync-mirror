@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r2.ebuild,v 1.4 2015/04/19 13:15:00 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/paraview/paraview-4.1.0-r2.ebuild,v 1.5 2015/05/26 02:11:33 patrick Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ RDEPEND="
 	dev-libs/expat
 	dev-libs/jsoncpp
 	dev-libs/libxml2:2
-	dev-libs/protobuf
+	<dev-libs/protobuf-2.6
 	media-libs/freetype
 	media-libs/libpng:0
 	media-libs/libtheora
