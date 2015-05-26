@@ -1,6 +1,11 @@
 # ChangeLog for media-video/pitivi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.39 2015/05/24 19:23:14 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/pitivi/ChangeLog,v 1.40 2015/05/26 22:38:56 eva Exp $
+
+  26 May 2015; Gilles Dartiguelongue <eva@gentoo.org> pitivi-0.94.ebuild,
+  +files/pitivi-0.94-unittest.patch:
+  Add support for python3_3 as it works there, raise various dependencies
+  according to configure/check.py, fix unittests.
 
   24 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org> pitivi-0.94.ebuild:
   Add pycanberra dep (bug #550294, thanks to Thomas Raschbacher).

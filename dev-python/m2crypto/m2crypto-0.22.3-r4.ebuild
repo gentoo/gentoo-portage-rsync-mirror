@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r4.ebuild,v 1.3 2015/05/26 00:28:19 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r4.ebuild,v 1.4 2015/05/26 22:34:33 floppym Exp $
 
 EAPI=5
 
@@ -20,7 +20,6 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE=""
 
-# swig-3.0.5 results in broken constants, #538920
 RDEPEND=">=dev-libs/openssl-0.9.8:0="
 DEPEND="${RDEPEND}
 	>=dev-lang/swig-1.3.28:0

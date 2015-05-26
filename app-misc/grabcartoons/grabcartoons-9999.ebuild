@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/grabcartoons-9999.ebuild,v 1.2 2015/02/07 11:34:12 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grabcartoons/grabcartoons-9999.ebuild,v 1.3 2015/05/26 22:59:33 tamiko Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ EGIT_REPO_URI="https://github.com/zzamboni/grabcartoons.git"
 
 if [[ "${PV}" != "9999" ]] ; then
 	KEYWORDS="~amd64 ~x86"
-	EGIT_COMMIT="cb230f01fb288a0b9f0fc437545b97d06c846bd3"
+	#EGIT_COMMIT=""
 fi
 
 LICENSE="BSD"
