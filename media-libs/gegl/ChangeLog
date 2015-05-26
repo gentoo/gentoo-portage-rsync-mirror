@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.108 2015/02/26 18:25:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.109 2015/05/25 23:49:49 tetromino Exp $
+
+*gegl-0.3.0_pre20150304 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  gegl-0.2.0-r2.ebuild, +gegl-0.3.0_pre20150304.ebuild, gegl-9999.ebuild,
+  metadata.xml:
+  Non-maintainer version bump from the gnome overlay, needed for gnome-3.16
+  (bug #550108). Update live ebuild. Slotify deps.
 
   26 Feb 2015; Michał Górny <mgorny@gentoo.org> gegl-0.2.0-r2.ebuild,
   gegl-9999.ebuild:

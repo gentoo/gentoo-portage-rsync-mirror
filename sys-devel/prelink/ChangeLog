@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.95 2015/04/28 04:55:37 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.96 2015/05/25 23:54:12 vapier Exp $
+
+  25 May 2015; Mike Frysinger <vapier@gentoo.org> prelink-20110511.ebuild,
+  prelink-20111012.ebuild, prelink-20120628.ebuild, prelink-20130503.ebuild:
+  Update prelink guide URL #534504 by Alex Legler.
 
   28 Apr 2015; Jeroen Roovers <jer@gentoo.org> prelink-20130503.ebuild:
   Stable for PPC64 (bug #508326).

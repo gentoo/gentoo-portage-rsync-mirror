@@ -1,69 +1,77 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.2.0-r2.ebuild,v 1.17 2015/05/25 23:49:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-0.3.0_pre20150304.ebuild,v 1.1 2015/05/25 23:49:49 tetromino Exp $
 
 EAPI=5
 
-WANT_AUTOMAKE=1.11  # see bug 471990, comment 3
 # vala and introspection support is broken, bug #468208
-#VALA_MIN_API_VERSION=0.14
-#VALA_USE_DEPEND=vapigen
+VALA_MIN_API_VERSION=0.20
+VALA_USE_DEPEND=vapigen
 
-inherit versionator gnome2-utils eutils autotools #vala
+inherit versionator gnome2-utils eutils autotools vala
+
+if [[ ${PV} == *9999* ]]; then
+	inherit autotools git-r3
+	EGIT_REPO_URI="git://git.gnome.org/gegl"
+	SRC_URI=""
+else
+	SRC_URI="http://dev.gentoo.org/~eva/distfiles/${PN}/${PN}-0.3.0-c9bbc81.tar.bz2 -> ${P}.tar.bz2"
+	# ftp://ftp.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.bz2"
+	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+fi
 
 DESCRIPTION="A graph based image processing framework"
 HOMEPAGE="http://www.gegl.org/"
-SRC_URI="ftp://ftp.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.bz2"
 
 LICENSE="|| ( GPL-3 LGPL-3 )"
-SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+SLOT="0.3"
 
-IUSE="cairo debug ffmpeg jpeg jpeg2k lensfun libav cpu_flags_x86_mmx openexr png raw sdl cpu_flags_x86_sse svg umfpack" # +introspection vala
+IUSE="cairo cpu_flags_x86_mmx cpu_flags_x86_sse debug ffmpeg +introspection jpeg jpeg2k lcms lensfun libav openexr png raw sdl svg umfpack vala v4l webp"
+REQUIRED_IUSE="vala? ( introspection )"
 
 RDEPEND="
-	>=media-libs/babl-0.1.10
-	>=dev-libs/glib-2.28:2
+	>=dev-libs/glib-2.36:2
+	dev-libs/json-glib
+	>=media-libs/babl-0.1.12
+	sys-libs/zlib
 	>=x11-libs/gdk-pixbuf-2.18:2
 	x11-libs/pango
-	sys-libs/zlib
+
 	cairo? ( x11-libs/cairo )
 	ffmpeg? (
 		libav? ( media-video/libav:0= )
 		!libav? ( media-video/ffmpeg:0= )
 	)
-	jpeg? ( virtual/jpeg:0 )
+	introspection? (
+		>=dev-libs/gobject-introspection-1.32
+		>=dev-python/pygobject-3.2:3 )
+	jpeg? ( virtual/jpeg:0= )
 	jpeg2k? ( >=media-libs/jasper-1.900.1 )
+	lcms? ( >=media-libs/lcms-2.2:2 )
+	lensfun? ( >=media-libs/lensfun-0.2.5 )
 	openexr? ( media-libs/openexr )
-	png? ( media-libs/libpng:0 )
+	png? ( media-libs/libpng:0= )
 	raw? ( =media-libs/libopenraw-0.0.9 )
 	sdl? ( media-libs/libsdl )
 	svg? ( >=gnome-base/librsvg-2.14:2 )
 	umfpack? ( sci-libs/umfpack )
-	lensfun? ( >=media-libs/lensfun-0.2.5 )
+	v4l? ( >=media-libs/libv4l-1.0.1 )
+	webp? ( media-libs/libwebp )
 "
-#	>=media-libs/babl-0.1.10[introspection?]
-#	introspection? ( >=dev-libs/gobject-introspection-0.10
-#			>=dev-python/pygobject-2.26:2 )
 DEPEND="${RDEPEND}
+	>=dev-util/gtk-doc-am-1
 	>=dev-util/intltool-0.40.1
 	dev-lang/perl
 	virtual/pkgconfig
 	>=sys-devel/libtool-2.2
+	vala? ( $(vala_depend) )
 "
-#	vala? ( $(vala_depend) )"
 
-DOCS=( ChangeLog INSTALL README NEWS )
+# Only needed for snapshot
+S="${WORKDIR}/${PN}-0.3.0"
 
 src_prepare() {
-	# https://bugs.gentoo.org/show_bug.cgi?id=442016
-	epatch "${FILESDIR}/${P}-cve-2012-4433-1e92e523.patch"
-	epatch "${FILESDIR}/${P}-cve-2012-4433-4757cdf7.patch"
-
-	# https://bugs.gentoo.org/show_bug.cgi?id=416587
-	epatch "${FILESDIR}/${P}-introspection-version.patch"
-
-	epatch "${FILESDIR}/${P}-ffmpeg-0.11.diff"
+	# FIXME: the following should be proper patch sent to upstream
 	# fix OSX loadable module filename extension
 	sed -i -e 's/\.dylib/.bundle/' configure.ac || die
 	# don't require Apple's OpenCL on versions of OSX that don't have it
@@ -71,14 +79,21 @@ src_prepare() {
 		sed -i -e 's/#ifdef __APPLE__/#if 0/' gegl/opencl/* || die
 	fi
 
-	epatch "${FILESDIR}"/${P}-g_log_domain.patch
+	#epatch "${FILESDIR}"/${P}-g_log_domain.patch
+
+	# gegl test fail on 64bits and a later commit switch the break to 32bits
+	sed -e '/gegl.xml/d' \
+		-e '/contrast-curve.xml/d' \
+		-i tests/compositions/Makefile.am || die
+
+	# Skip broken test with >=dev-python/pygobject-3.14
+	sed -e '/test_buffer/ i\    @unittest.skip("broken")\' \
+		-i tests/python/test-gegl-format.py || die
+
+	epatch_user
 	eautoreconf
 
-	# https://bugs.gentoo.org/show_bug.cgi?id=468248
-	local deps_file="${PN}/${PN}-$(get_version_component_range 1-2).deps"
-	[[ -f "${deps_file}" ]] || touch "${deps_file}"
-
-#	use vala && vala_src_prepare
+	use vala && vala_src_prepare
 }
 
 src_configure() {
@@ -108,11 +123,14 @@ src_configure() {
 	# https://bugs.gentoo.org/show_bug.cgi?id=451136
 	#
 	econf \
-		--disable-silent-rules \
+		--disable-docs \
 		--disable-profile \
+		--disable-silent-rules \
+		--disable-workshop \
+		--program-suffix=-${SLOT} \
+		--with-gdk-pixbuf \
+		--with-pango \
 		--without-libspiro \
-		--disable-docs --disable-workshop \
-		--with-pango --with-gdk-pixbuf \
 		$(use_enable cpu_flags_x86_mmx mmx) \
 		$(use_enable cpu_flags_x86_sse sse) \
 		$(use_enable debug) \
@@ -123,6 +141,8 @@ src_configure() {
 		--without-graphviz \
 		$(use_with jpeg libjpeg) \
 		$(use_with jpeg2k jasper) \
+		$(use_with lcms) \
+		$(use_with lensfun) \
 		--without-lua \
 		$(use_with openexr) \
 		$(use_with png libpng) \
@@ -130,12 +150,11 @@ src_configure() {
 		$(use_with sdl) \
 		$(use_with svg librsvg) \
 		$(use_with umfpack) \
-		--without-libv4l \
-		$(use_with lensfun) \
-		--disable-introspection \
-		--without-vala
-#		$(use_enable introspection) \
-#		$(use_with vala)
+		$(use_with v4l libv4l) \
+		$(use_with v4l libv4l2) \
+		$(use_enable introspection) \
+		$(use_with vala) \
+		$(use_with webp)
 }
 
 src_test() {
@@ -146,9 +165,11 @@ src_test() {
 src_compile() {
 	gnome2_environment_reset  # sandbox issues (bug #396687)
 	default
+
+	[[ ${PV} == *9999* ]] && emake ./ChangeLog  # "./" prevents "Circular ChangeLog <- ChangeLog dependency dropped."
 }
 
 src_install() {
 	default
-	find "${ED}" -name '*.la' -delete
+	prune_libtool_files --all
 }

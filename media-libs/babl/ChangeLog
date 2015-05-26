@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/babl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.63 2015/01/29 17:27:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/babl/ChangeLog,v 1.64 2015/05/25 23:49:21 tetromino Exp $
+
+*babl-0.1.12 (25 May 2015)
+
+  25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org> +babl-0.1.12.ebuild,
+  babl-9999.ebuild, metadata.xml:
+  Non-maintainer version bump from the gnome overlay, needed for gegl-0.3 (bug
+  #550108). Update live ebuild. Remove unused flag descriptions.
 
   29 Jan 2015; Michał Górny <mgorny@gentoo.org> babl-0.1.10-r1.ebuild,
   babl-9999.ebuild:

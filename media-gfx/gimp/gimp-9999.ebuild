@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.55 2015/01/29 17:21:06 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-9999.ebuild,v 1.56 2015/05/25 23:48:45 tetromino Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,7 +40,7 @@ RDEPEND=">=dev-libs/glib-2.40.0:2
 	dev-libs/libxslt
 	x11-themes/hicolor-icon-theme
 	>=media-libs/babl-0.1.11
-	>=media-libs/gegl-0.2.1
+	media-libs/gegl:0.3
 	aalib? ( media-libs/aalib )
 	alsa? ( media-libs/alsa-lib )
 	aqua? ( x11-libs/gtk-mac-integration )
