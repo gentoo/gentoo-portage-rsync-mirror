@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/python-sqlparse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.50 2015/04/15 08:56:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-sqlparse/ChangeLog,v 1.51 2015/05/26 16:22:40 jlec Exp $
+
+*python-sqlparse-0.1.15 (26 May 2015)
+
+  26 May 2015; Justin Lecher <jlec@gentoo.org> +python-sqlparse-0.1.15.ebuild:
+  Version Bump
 
 *python-sqlparse-0.1.14 (15 Apr 2015)
 
