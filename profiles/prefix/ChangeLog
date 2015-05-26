@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.453 2015/02/17 18:00:53 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.454 2015/05/26 08:05:08 grobian Exp $
+
+  26 May 2015; Fabian Groffen <grobian@gentoo.org> darwin/package.use.mask,
+  sunos/solaris/package.use.mask:
+  Mask USE=uuid on Solaris and Darwin for ossp-uuid doesn't compile and isn't
+  actually necessary, bug #324527
 
   17 Feb 2015; Michael Haubenwallner <haubi@gentoo.org>
   sunos/solaris/package.mask:
