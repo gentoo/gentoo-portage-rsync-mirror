@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.5.ebuild,v 1.1 2015/05/21 06:01:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/libconfig-1.5.ebuild,v 1.2 2015/05/26 10:08:29 mgorny Exp $
 
 EAPI=5
 
@@ -45,11 +45,7 @@ multilib_src_install_all() {
 	prune_libtool_files
 
 	if use examples; then
-		find examples/ -name "Makefile.*" -delete || die
-		local dir
-		for dir in examples/c examples/c++; do
-			insinto /usr/share/doc/${PF}/${dir}
-			doins ${dir}/*
-		done
+		find examples -name "Makefile.*" -delete || die
+		dodoc -r examples
 	fi
 }

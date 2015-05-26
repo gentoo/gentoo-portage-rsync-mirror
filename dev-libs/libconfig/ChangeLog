@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.64 2015/05/21 06:01:08 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libconfig/ChangeLog,v 1.65 2015/05/26 10:08:29 mgorny Exp $
+
+  26 May 2015; Michał Górny <mgorny@gentoo.org> libconfig-1.5.ebuild:
+  Simplify example install code, from https://github.com/gentoo/gentoo-portage-
+  rsync-mirror/pull/123 by jbergstroem.
 
 *libconfig-1.5 (21 May 2015)
 

@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/nodejs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.146 2015/05/26 03:47:13 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nodejs/ChangeLog,v 1.147 2015/05/26 10:14:04 mgorny Exp $
+
+*nodejs-0.12.4-r1 (26 May 2015)
+
+  26 May 2015; Michał Górny <mgorny@gentoo.org> +nodejs-0.12.4-r1.ebuild,
+  -nodejs-0.12.4.ebuild:
+  Remove BrE-spelled 'LICENCE' files. Introduce a node-gyp-friendly include
+  structure. Made from https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/124 by jbergstroem.
 
 *nodejs-0.12.4 (26 May 2015)
 
