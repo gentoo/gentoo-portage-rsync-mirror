@@ -1,10 +1,10 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02-r1.ebuild,v 1.4 2010/01/03 14:17:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02-r3.ebuild,v 1.1 2015/05/26 06:22:16 jlec Exp $
 
-EAPI="2"
+EAPI="5"
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PV=${PV//./}
 
@@ -15,14 +15,19 @@ SRC_URI="http://www.cbcb.umd.edu/software/${PN}/${PN}${MY_PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=""
-RDEPEND="app-shells/tcsh
-	!app-crypt/pkcrack
-	!media-libs/libextractor"
+RDEPEND="app-shells/tcsh"
 
 S="${WORKDIR}/${PN}${PV}"
+
+PATCHES=(
+	"${FILESDIR}"/${P}-glibc210.patch
+	"${FILESDIR}"/${P}-jobserver-fix.patch
+	"${FILESDIR}"/${P}-ldflags.patch
+	"${FILESDIR}"/${PN}-3.02b-rename_extract.patch
+)
 
 src_prepare() {
 	sed -i -e 's|\(set awkpath =\).*|\1 /usr/share/'${PN}'/scripts|' \
@@ -31,20 +36,26 @@ src_prepare() {
 	sed -i 's/$(MAKE) $(TGT)/$(MAKE) $(TGT) || exit 1/' src/c_make.gen || die
 	# GCC 4.3 include fix
 	sed -i 's/include  <string>/include  <string.h>/' src/Common/delcher.hh || die
-	epatch "${FILESDIR}/${PN}-${PV}-glibc210.patch"
+	epatch "${PATCHES[@]}"
 }
 
 src_compile() {
-	emake -C src || die
+	emake \
+		-C src \
+		CC=$(tc-getCC) \
+		CXX=$(tc-getCXX) \
+		AR=$(tc-getAR) \
+		CXXFLAGS="${CXXFLAGS}" \
+		CFLAGS="${CFLAGS}" \
+		LDFLAGS="${LDFLAGS}"
 }
 
 src_install() {
-	rm bin/test
-	dobin bin/* || die
+	rm bin/test || die
+	dobin bin/*
 
-	dodir /usr/share/${PN}/scripts
-	insinto /usr/share/${PN}/scripts
-	doins scripts/* || die
+	insinto /usr/share/${PN}
+	doins -r scripts
 
 	dodoc glim302notes.pdf
 }
