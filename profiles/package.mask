@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16534 2015/05/25 08:55:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16535 2015/05/26 18:38:07 mgorny Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -144,76 +144,19 @@ dev-tex/mh
 dev-ruby/echoe
 dev-ruby/rubyforge
 
-# Hans de Graaff <graaff@gentoo.org> (26 Apr 2015)
-# Ruby packages that only work with ruby19. Masked for removal in 30
-# days.
-#
-# Only compatible with ruby19.
-app-misc/booh
-# Only compatible with ruby19. New versions bring in many new
-# dependencies and this would require a dedicated maintainer.
-dev-ruby/adhearsion
-dev-ruby/adhearsion-loquacious
-# Newer versions depend on beta versions of unreleased and
-# unmaintained software. No upstream release in two years.
-dev-ruby/em-http-request
-# Old slot, nothing in the tree depends on it.
-dev-ruby/haml:0
-# Only compatible with ruby19.
-dev-ruby/ipaddress
-
-# Sergey Popov <pinkbyte@gentoo.org> (24 Apr 2015)
-# Dead upstream, nothing in tree uses it
-# Masked for removal in 30 days
-net-libs/libcapsinetwork
-
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (17 Apr 2015)
 # Dev channel releases are only for people who are developers or want more
 # experimental features and accept a more unstable release.
 >=www-client/chromium-44
-
-# Patrice Clement <monsieurp@gentoo.org> (14 Apr 2014)
-# Upstream seems to be dead. No updates since 12 March 2007.
-# Masked for removal in 30 days. See bug 546506.
-dev-java/openjms
-
-# Andreas K. Huettel <dilfridge@gentoo.org> (11 Apr 2015)
-# media-libs/lcms:0 has serious security issues, is unmaintained
-# and will be removed soon, see bug 526642
-# Here we remove its last unconditional/unported reverse dependencies,
-# media-libs/sk1libs media-gfx/uniconvw sci-libs/libecwj2
-# (removal in 30 days).
-media-gfx/uniconvw
-media-libs/sk1libs
-sci-libs/libecwj2
 
 # Patrick Lauer <patrick@gentoo.org> (10 Apr 2015)
 # Breaks pretty much all consumers, like samba
 # Mask until it's more usable
 >=net-libs/gnutls-3.4.0
 
-# Maciej Mrozowski <reavertm@gentoo.org> (06 Apr 2015)
-# Does not link against latest ncurses and no interest to fix it.
-# Superseded by LVM2 and all clusters should be migrated by now.
-# Removal in 30 days.
-sys-fs/evms
-
-# James Le Cuirot <chewi@gentoo.org> (05 Apr 2015)
-# A 32-on-64 Java VM is no longer considered necessary and a multilib
-# icedtea-bin would be preferred anyway. sun-j2me-bin depends on this
-# but it has been superseded by Oracle's JME and I doubt we'll ever
-# need that either. Removal in 30 days.
-app-emulation/emul-linux-x86-java
-dev-java/sun-j2me-bin
-
 # Christoph Junghans <ottxor@gentoo.org> (3 Apr 2015)
 # Dead upstream. Fails to build (bug #543644).
 >=sys-devel/dragonegg-3.6
-
-# Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org> (30 Mar 2015)
-# Does not build against glibc-2.20 or modern X servers, bug #544904.
-# Removal in 30 days.
-<x11-drivers/xf86-input-synaptics-1.7
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Mar 2015)
 # Mask Perl 5.18 for removal. Please upgrade to Perl 5.20

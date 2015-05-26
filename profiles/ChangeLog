@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10012 2015/05/25 08:55:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10013 2015/05/26 18:38:07 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 May 2015; Michał Górny <mgorny@gentoo.org> package.mask:
+  Clean up after removing some lastrited packages.
 
   25 May 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
   Mask gorg for removal.

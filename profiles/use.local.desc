@@ -537,7 +537,6 @@ app-emulation/emul-linux-x86-db:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gstplugins:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gtklibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-gtkmmlibs:development - Install pkgconfig files
-app-emulation/emul-linux-x86-java:pax_kernel - Use paxctl to mark the JVM binaries.
 app-emulation/emul-linux-x86-jna:development - Install pkgconfig files
 app-emulation/emul-linux-x86-medialibs:development - Install pkgconfig files
 app-emulation/emul-linux-x86-motif:development - Install pkgconfig files

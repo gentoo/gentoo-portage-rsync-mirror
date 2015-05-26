@@ -1,6 +1,10 @@
 # ChangeLog for x11-drivers/xf86-input-synaptics
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.116 2015/03/30 12:03:31 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-input-synaptics/ChangeLog,v 1.117 2015/05/26 18:37:35 mgorny Exp $
+
+  26 May 2015; Michał Górny <mgorny@gentoo.org>
+  -xf86-input-synaptics-1.5.2.ebuild, -xf86-input-synaptics-1.6.4.ebuild:
+  Remove lastrited versions
 
 *xf86-input-synaptics-1.8.2 (30 Mar 2015)
 
