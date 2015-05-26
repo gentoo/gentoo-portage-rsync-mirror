@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=!<dev-java/java-config-2.2
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~sera/distfiles/baselayout-java-0.1.0.tar.gz
-_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=f70dd74eab53608d96c7cdac6807447e

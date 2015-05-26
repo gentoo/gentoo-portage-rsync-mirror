@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-sound/jack-audio-connection-kit-0.80.0 >=media-plugins/swh-plugins-0.4.6 media-libs/ladspa-sdk >=sci-libs/fftw-3.0.1 media-libs/libsndfile media-libs/alsa-lib >=dev-libs/libxml2-2.5 >=x11-libs/gtk+-2:2 osc? ( >=media-libs/liblo-0.5 )
 SLOT=0
 SRC_URI=mirror://sourceforge/jamin/jamin-0.95.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=8821fd31740db0c248a1631b089fd1f4

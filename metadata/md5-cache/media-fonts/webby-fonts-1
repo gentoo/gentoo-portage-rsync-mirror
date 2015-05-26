@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 ia64 sparc x86
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://dl.liveforge.org/fonts/webby-fonts-1.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	font	b3239d2dc442d1717b9725e2be7cb5d6	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=6efc14e6e78100dcad2fc07afcaca035

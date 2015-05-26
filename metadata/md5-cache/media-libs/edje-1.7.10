@@ -9,5 +9,5 @@ LICENSE=BSD-2 GPL-2
 RDEPEND=dev-lang/lua >=dev-libs/eet-1.7.10 >=dev-libs/eina-1.7.10 >=dev-libs/embryo-1.7.10 >=media-libs/evas-1.7.10 >=dev-libs/ecore-1.7.10 nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=http://download.enlightenment.org/releases/edje-1.7.10.tar.bz2
-_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=de388e521600ae005a30dd2b3cc545e2

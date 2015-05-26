@@ -9,5 +9,5 @@ LICENSE=QPL-1.0 LGPL-2
 RDEPEND=>=dev-lang/tk-8.0.3 >=dev-lang/ocaml-4.02:=[ocamlopt?,X?]
 SLOT=0/8.06.0
 SRC_URI=https://forge.ocamlcore.org/frs/download.php/1455/labltk-8.06.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	findlib	9cf6020ee5481f39f1aa566a323f9868	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=65bea061c2ad811e750b1390e1f8bf59

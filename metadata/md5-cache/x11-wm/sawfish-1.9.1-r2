@@ -9,5 +9,5 @@ LICENSE=GPL-2 Artistic-2
 RDEPEND=emacs? ( virtual/emacs !app-emacs/sawfish ) >=dev-libs/librep-0.92.1 >=x11-libs/rep-gtk-0.90.7 x11-libs/pangox-compat >=x11-libs/gtk+-2.24.0:2 x11-libs/libXtst nls? ( sys-devel/gettext ) xinerama? ( x11-libs/libXinerama )
 SLOT=0
 SRC_URI=http://download.tuxfamily.org/sawfish/sawfish-1.9.1.tar.xz
-_eclasses_=elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=7b458f4780a55cf87acd9f2751b6a0e2

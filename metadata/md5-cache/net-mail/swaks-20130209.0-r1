@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=dev-lang/perl-5.8.8 >=dev-perl/Net-DNS-0.65 ssl? ( >=dev-perl/Net-SSLeay-1.35 ) >=virtual/perl-MIME-Base64-3.07 >=virtual/perl-Digest-MD5-2.39 >=virtual/perl-Time-HiRes-1.97 >=virtual/perl-Time-Local-1.19 >=dev-perl/Authen-NTLM-1.02 >=dev-perl/Authen-DigestMD5-0.04 virtual/perl-Digest-SHA
 SLOT=0
 SRC_URI=http://www.jetmore.org/john/code/swaks/swaks-20130209.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=16a865b67bef4d1b4443de0dcaa76d8e

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-4.0_pre20080406.ebuild,v 1.3 2015/04/04 06:55:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-4.0_pre20080406.ebuild,v 1.4 2015/05/26 14:31:03 ottxor Exp $
 
 EAPI=5
 
@@ -96,7 +96,7 @@ pkg_postinst() {
 
 	# bug #226491, remove <=openntpd-20080406-r7 trash
 	rm -f "${EROOT%/}${NTP_HOME}"etc/localtime
-	rmdir "${EROOT%/}${NTP_HOME}"etc
+	[-d "${EROOT%/}${NTP_HOME}"etc ] && rmdir "${EROOT%/}${NTP_HOME}"etc
 }
 
 pkg_postrm() {

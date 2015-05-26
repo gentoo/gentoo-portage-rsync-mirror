@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXaw x11-libs/libXt media-video/kaffeine
 SLOT=0
 SRC_URI=mirror://sourceforge/kaffeine/kaffeine-mozilla-0.2.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	mozextension	ba6829881080a663d68531424a3dfbc6	multilib	62927b3db3a589b0806255f3a002d5d3	nsplugins	7ea51b2f6cbd5b36b9c0163cc3ee03a2	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=cd530982b9a1b6d059729f8afed19fef

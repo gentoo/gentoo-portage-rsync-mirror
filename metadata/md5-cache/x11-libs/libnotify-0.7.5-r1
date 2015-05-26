@@ -10,5 +10,5 @@ PDEPEND=virtual/notification-daemon
 RDEPEND=app-eselect/eselect-notify-send >=dev-libs/glib-2.26 x11-libs/gdk-pixbuf:2 introspection? ( >=dev-libs/gobject-introspection-1.32 )
 SLOT=0
 SRC_URI=mirror://gnome/sources/libnotify/0.7/libnotify-0.7.5.tar.xz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	gnome.org	8fef8f967214f56e08fa92d61163d891	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=dbdbc9276f8929a305aa88f644a0b1b8

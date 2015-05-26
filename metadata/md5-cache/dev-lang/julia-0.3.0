@@ -10,5 +10,5 @@ RDEPEND=dev-lang/R:0= dev-libs/double-conversion:0= dev-libs/gmp:0= dev-libs/lib
 RESTRICT=test
 SLOT=0
 SRC_URI=https://github.com/JuliaLang/julia/archive/v0.3.0.tar.gz -> julia-0.3.0.tar.gz http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/dSFMT-src-2.2.tar.gz http://dev.gentoo.org/~patrick/libuv-julia-0.3.0.tar.bz2 http://dev.gentoo.org/~patrick/rmath-0_p20140821.tar.bz2 http://www.public-software-group.org/pub/projects/utf8proc/v1.1.6/utf8proc-v1.1.6.tar.gz
-_eclasses_=elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	pax-utils	dfe060cb70d89757fde5c1ff8405e950	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=7ad14b4ce10884a6bc8eb625821f8c41

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=tcpd? ( sys-apps/tcp-wrappers ) dev-libs/openssl selinux? ( sec-policy/selinux-stunnel )
 SLOT=0
 SRC_URI=ftp://ftp.stunnel.org/stunnel/archive/5.x/stunnel-5.08.tar.gz http://www.usenix.org.uk/mirrors/stunnel/archive/5.x/stunnel-5.08.tar.gz http://ftp.nluug.nl/pub/networking/stunnel/archive/5.x/stunnel-5.08.tar.gz http://www.namesdir.com/mirrors/stunnel/archive/5.x/stunnel-5.08.tar.gz http://stunnel.cybermirror.org/archive/5.x/stunnel-5.08.tar.gz http://mirrors.zerg.biz/stunnel/archive/5.x/stunnel-5.08.tar.gz ftp://mirrors.go-parts.com/stunnel/archive/5.x/stunnel-5.08.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ssl-cert	b53367370fde96e19beca78050a47c61	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	ssl-cert	b53367370fde96e19beca78050a47c61	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=ebaad65ec2a3518e040901347cc7c3a4

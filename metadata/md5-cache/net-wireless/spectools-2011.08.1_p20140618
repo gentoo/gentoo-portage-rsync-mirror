@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/libusb:0 ncurses? ( sys-libs/ncurses ) gtk? ( x11-libs/gtk+:2 )
 SLOT=0
 SRC_URI=https://dev.gentoo.org/~zerochaos/distfiles/spectools-2011-08-R1_p20140618.tar.xz
-_eclasses_=multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	udev	da001465a2e939c93f7ae16947ce3438
+_eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	udev	da001465a2e939c93f7ae16947ce3438
 _md5_=38abfdbca0fd6935d7fd9a5b941da503

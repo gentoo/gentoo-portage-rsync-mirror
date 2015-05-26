@@ -9,5 +9,5 @@ PDEPEND=media-libs/freetype:2[infinality] >=x11-libs/libXft-2.3.0 nyx? ( media-f
 RDEPEND=app-eselect/eselect-fontconfig app-eselect/eselect-infinality app-eselect/eselect-lcdfilter
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~yngwin/distfiles/fontconfig-infinality-20130404.tar.xz nyx? ( http://dev.gentoo.org/~yngwin/distfiles/fontconfig-nyx-2.tar.xz )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=10473b087bd44087f75d7a7ee37d72a5

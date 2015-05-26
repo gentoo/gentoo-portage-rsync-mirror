@@ -10,5 +10,5 @@ RDEPEND=dev-qt/qtgui:4[qt3support] ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ru
 REQUIRED_USE=|| ( ruby_targets_ruby20 )
 SLOT=0
 SRC_URI=http://178.77.72.242/downloads/klayout-0.23.10.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	4a7c80c1feba48616b58c79d977e084c	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	4a7c80c1feba48616b58c79d977e084c	multilib	62927b3db3a589b0806255f3a002d5d3	ruby-ng	c79a9fd7644eefe8009be02a82648e1f	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=6d306be975ca652905336c64de06a788

@@ -10,5 +10,5 @@ RDEPEND=gmp? ( dev-libs/gmp )
 REQUIRED_USE=asm? ( amd64 )
 SLOT=0
 SRC_URI=https://github.com/bitcoin/secp256k1/archive/2a53a472f24acd9ff10878b5bf21b5b27ab8060a.tar.gz -> secp256k1-v0.0.0_pre20141212.tgz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=e369c4c3807ef16f07a3d6b88c252340

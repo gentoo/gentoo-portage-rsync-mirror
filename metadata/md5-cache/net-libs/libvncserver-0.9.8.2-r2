@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=gcrypt? ( dev-libs/libgcrypt:0 ) gnutls? ( net-libs/gnutls ) jpeg? ( virtual/jpeg ) zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=http://libvncserver.sourceforge.net/LibVNCServer-0.9.8.2.tar.gz mirror://sourceforge/libvncserver/LibVNCServer-0.9.8.2.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=f53a1584fa54a67feb68877211656b0c

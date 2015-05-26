@@ -9,5 +9,5 @@ LICENSE=Apache-2.0
 RDEPEND=>=dev-libs/boost-1.50[threads(+)] sasl? ( dev-libs/cyrus-sasl ) ssl? ( dev-libs/openssl:= )
 SLOT=0
 SRC_URI=https://github.com/mongodb/mongo-cxx-driver/archive/legacy-1.0.0.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	scons-utils	988e24b9e2e4642189b4e97c03e5ae71	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=431b770647c141eeeb2b9abc0fc11c18

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-qt/qtdbus:4 dev-qt/qtgui:4 dev-qt/qtsvg:4 bittorrent? ( >=net-libs/rb_libtorrent-0.14.5 >=dev-cpp/asio-1.1.0 dev-qt/qtwebkit:4 ) curl? ( >=net-misc/curl-7.18.2 ) doc? ( dev-qt/qthelp:4 ) xmpp? ( net-libs/gloox ) webinterface? ( dev-qt/qtscript:4 )
 SLOT=0
 SRC_URI=http://www.dolezel.info/download/data/fatrat/fatrat-1.2.0_beta2.tar.xz
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=01aff0c904129d5ae80c67ff96eb1a5f

@@ -10,5 +10,5 @@ RDEPEND=>=sys-fs/fuse-2.8.6:= lzma? ( >=app-arch/xz-utils-5.0.4:= ) zlib? ( >=sy
 REQUIRED_USE=|| ( lzma zlib lzo )
 SLOT=0
 SRC_URI=https://github.com/vasi/squashfuse/archive/f03158f49cb4adbb6459cb2a1898e586b488cb10.zip -> squashfuse-0.1_p20130530.zip
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=e34dbff56dd8864c4bacb6ed468cfe5e

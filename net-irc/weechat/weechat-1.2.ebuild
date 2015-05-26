@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-1.2.ebuild,v 1.1 2015/05/16 19:17:21 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/weechat/weechat-1.2.ebuild,v 1.2 2015/05/26 14:25:14 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -102,6 +102,7 @@ src_configure() {
 		"-DENABLE_LARGEFILE=ON"
 		"-DENABLE_DEMO=OFF"
 		"-DENABLE_GTK=OFF"
+		"-DENABLE_JAVASCRIPT=OFF"
 		"-DPYTHON_EXECUTABLE=${PYTHON}"
 		$(cmake-utils_use_enable alias)
 		$(cmake-utils_use_enable doc)

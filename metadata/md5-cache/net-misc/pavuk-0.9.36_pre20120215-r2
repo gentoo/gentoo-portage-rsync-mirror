@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=virtual/libintl:= gtk? ( x11-libs/gtk+:2 ) pcre? ( dev-libs/libpcre:= ) ssl? ( dev-libs/openssl:= )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pacho/maintainer-needed/pavuk-0.9.36_pre20120215.tar.xz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	autotools-utils	3727db64c7b960903d5033280f108080	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=abda28c1df112f9e12ee1da72112d3bd

@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=bluetooth? ( net-wireless/bluez ) curl? ( net-misc/curl ) usb? ( virtual/libusb:1 ) mysql? ( virtual/mysql ) postgres? ( dev-db/postgresql[server] ) dbi? ( >=dev-db/libdbi-0.8.3 ) dev-util/dialog python? ( =dev-lang/python-2* )
 SLOT=0
 SRC_URI=http://dl.cihar.com/gammu/releases/gammu-1.33.0.tar.bz2
-_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=909892852cc7a48eaef06c8e6c73b7ef

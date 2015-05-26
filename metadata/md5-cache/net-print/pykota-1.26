@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/python dev-python/egenix-mx-base net-print/pkpgcounter dev-python/chardet dev-python/pkipplib ldap? ( dev-python/python-ldap ) mysql? ( dev-python/mysql-python ) postgres? ( dev-db/postgresql[server] dev-db/pygresql ) snmp? ( net-analyzer/net-snmp =dev-python/pysnmp-3.4* ) xml? ( dev-python/jaxml ) =dev-lang/python-2* =dev-lang/python-2*[sqlite?]
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~dilfridge/distfiles/pykota-1.26.tar.xz
-_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=distutils	92e738ea29389cb3f34778d7a349ac71	multilib	62927b3db3a589b0806255f3a002d5d3	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=7019959996fbe43303d70d3e89067b4f

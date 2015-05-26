@@ -10,5 +10,5 @@ PDEPEND=examples? ( app-doc/zsh-lovers )
 RDEPEND=>=sys-libs/ncurses-5.1 static? ( >=sys-libs/ncurses-5.7-r4[static-libs] ) caps? ( sys-libs/libcap ) pcre? ( >=dev-libs/libpcre-3.9 static? ( >=dev-libs/libpcre-3.9[static-libs] ) ) gdbm? ( sys-libs/gdbm )
 SLOT=0
 SRC_URI=http://www.zsh.org/pub/zsh-5.0.7.tar.bz2 doc? ( http://www.zsh.org/pub/zsh-5.0.7-doc.tar.bz2 )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=9e37f63bc6b48d95a3eec81f6eb6066e

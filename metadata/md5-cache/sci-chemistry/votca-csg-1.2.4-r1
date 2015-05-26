@@ -10,5 +10,5 @@ PDEPEND=extras? ( =sci-chemistry/votca-csgapps-1.2.4 )
 RDEPEND=~sci-libs/votca-tools-1.2.4 gromacs? ( sci-chemistry/gromacs:= ) dev-lang/perl app-shells/bash
 SLOT=0
 SRC_URI=http://downloads.votca.googlecode.com/hg/votca-csg-1.2.4.tar.gz doc? ( http://downloads.votca.googlecode.com/hg/votca-csg-manual-1.2.4.pdf ) examples? ( http://downloads.votca.googlecode.com/hg/votca-csg-tutorials-1.2.4.tar.gz )
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
 _md5_=5eb854bce161f4761b62943c01e3191e

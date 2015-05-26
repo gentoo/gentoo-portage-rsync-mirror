@@ -10,5 +10,5 @@ RDEPEND=sys-libs/glibc amd64? ( sys-libs/glibc[multilib] ) cdinstall? ( games-fp
 RESTRICT=strip
 SLOT=0
 SRC_URI=mirror://idsoftware/quake3/linux/linuxq3apoint-1.32b-3.x86.run mirror://idsoftware/quake3/quake3-1.32c.zip
-_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	3bf24e6abb9b76d9f6c20600f0b716bf	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
+_eclasses_=base	87f7447ccfc06fd0729ff4684e11e0d6	eutils	9fb270e417e0e83d64ca52586c4a79de	games	1ad3205dbf62a2c98249f2f59b0a2d39	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52	user	f54e098dd38ba1c0847a13e685b87747
 _md5_=47939cc8e63e3aa4f1d6f77a9ce9af5d
