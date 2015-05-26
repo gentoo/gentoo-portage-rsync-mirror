@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/vault
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/vault/ChangeLog,v 1.1 2015/05/26 03:17:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/vault/ChangeLog,v 1.2 2015/05/26 04:00:36 zmedico Exp $
+
+  26 May 2015; Zac Medico <zmedico@gentoo.org> metadata.xml:
+  Remove unused local USE-description.
 
 *vault-0.1.2 (26 May 2015)
 *vault-9999 (26 May 2015)
