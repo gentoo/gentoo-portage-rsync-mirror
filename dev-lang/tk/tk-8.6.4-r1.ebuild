@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.3.ebuild,v 1.4 2015/03/20 10:11:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.6.4-r1.ebuild,v 1.1 2015/05/26 11:51:48 jlec Exp $
 
 EAPI=5
 
@@ -65,6 +65,8 @@ src_prepare() {
 		-e 's:-O[2s]\?::g' \
 		-i tcl.m4 || die
 
+	mv configure.{in,ac} || die
+
 	eautoconf
 
 	multilib_copy_sources
@@ -100,12 +102,12 @@ multilib_src_install() {
 	# and drop unnecessary -L inclusion to default system libdir
 
 	sed \
-		-e "/^TK_BUILD_LIB_SPEC=/s:-L${SPARENT}.*unix *::g" \
+		-e "/^TK_BUILD_LIB_SPEC=/s:-L${S}-\w*\.\w* ::g" \
 		-e "/^TK_LIB_SPEC=/s:-L${EPREFIX}/usr/${mylibdir} *::g" \
 		-e "/^TK_SRC_DIR=/s:${SPARENT}:${EPREFIX}/usr/${mylibdir}/tk${v1}/include:g" \
-		-e "/^TK_BUILD_STUB_LIB_SPEC=/s:-L${SPARENT}.*unix *::g" \
+		-e "/^TK_BUILD_STUB_LIB_SPEC=/s:-L${S}-\w*\.\w* *::g" \
 		-e "/^TK_STUB_LIB_SPEC=/s:-L${EPREFIX}/usr/${mylibdir} *::g" \
-		-e "/^TK_BUILD_STUB_LIB_PATH=/s:${SPARENT}.*unix:${EPREFIX}/usr/${mylibdir}:g" \
+		-e "/^TK_BUILD_STUB_LIB_PATH=/s:${S}-\w*\.\w*:${EPREFIX}/usr/${mylibdir}:g" \
 		-e "/^TK_LIB_FILE=/s:'libtk${v1}..TK_DBGX..so':\"libk${v1}\$\{TK_DBGX\}.so\":g" \
 		-i "${ED}"/usr/${mylibdir}/tkConfig.sh || die
 	if use prefix && [[ ${CHOST} != *-darwin* && ${CHOST} != *-mint* ]] ; then
