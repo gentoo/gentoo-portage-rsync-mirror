@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/vault
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/vault/ChangeLog,v 1.2 2015/05/26 04:00:36 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/vault/ChangeLog,v 1.3 2015/05/26 05:28:24 patrick Exp $
+
+  26 May 2015; Patrick Lauer <patrick@gentoo.org> vault-9999.ebuild:
+  Whitespace
 
   26 May 2015; Zac Medico <zmedico@gentoo.org> metadata.xml:
   Remove unused local USE-description.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/vault/vault-9999.ebuild,v 1.1 2015/05/26 03:17:37 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/vault/vault-9999.ebuild,v 1.2 2015/05/26 05:28:24 patrick Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_unpack() {
 }
 
 src_compile() {
-	go install -v -x github.com/awslabs/aws-sdk-go || die 
+	go install -v -x github.com/awslabs/aws-sdk-go || die
 	if ! type -P gox >/dev/null; then
 		go install -v -x github.com/mitchellh/gox || die
 	fi
