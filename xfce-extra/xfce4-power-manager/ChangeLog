@@ -1,6 +1,13 @@
 # ChangeLog for xfce-extra/xfce4-power-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.93 2015/04/26 07:08:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-power-manager/ChangeLog,v 1.94 2015/05/26 07:34:18 mgorny Exp $
+
+*xfce4-power-manager-1.5.0 (26 May 2015)
+
+  26 May 2015; Michał Górny <mgorny@gentoo.org>
+  +xfce4-power-manager-1.5.0.ebuild:
+  Version bump. The new version switches to GTK+3 and upower-0.99*, has some
+  real icon improvements and some icon-related bug fixes.
 
   26 Apr 2015; Jeroen Roovers <jer@gentoo.org>
   xfce4-power-manager-1.4.1.ebuild, xfce4-power-manager-1.4.4.ebuild:

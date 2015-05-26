@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-jxpath
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.35 2015/05/24 21:56:29 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-jxpath/ChangeLog,v 1.36 2015/05/26 07:52:55 monsieurp Exp $
+
+  26 May 2015; Patrice Clement <monsieurp@gentoo.org>
+  commons-jxpath-1.3-r1.ebuild:
+  EAPI 5 bump.
 
 *commons-jxpath-1.3-r1 (24 May 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/freeorion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.15 2015/04/08 18:11:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freeorion/ChangeLog,v 1.16 2015/05/26 07:49:18 tomka Exp $
+
+  26 May 2015; Thomas Kahle <tomka@gentoo.org> freeorion-0.4.5_pre.ebuild:
+  Add missing glew dependency (bug 550382)
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> freeorion-0.4.5_pre.ebuild:
   Drop old Python implementations
