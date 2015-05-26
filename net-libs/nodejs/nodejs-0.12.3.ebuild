@@ -102,12 +102,11 @@ src_install() {
 	find "${LIBDIR}"/node_modules -type f -name "LICENSE*" -or -name "LICENCE*" -delete
 
 	# set up a symlink structure that npm expects..
-	mkdir -p "${ED}/usr/include/node/deps/{v8,uv}" || die
+	dodir /usr/include/node/deps/{v8,uv}
 	dosym . /usr/include/node/src
-	for var in deps/v8/include deps/uv/include; do
-		dosym ../.. "/usr/include/node/${var}"
+	for var in deps/{uv,v8}/include; do
+		dosym ../.. /usr/include/node/${var}
 	done
-
 
 	pax-mark -m "${ED}"/usr/bin/node
 }
