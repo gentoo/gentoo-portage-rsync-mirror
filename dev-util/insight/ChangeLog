@@ -1,6 +1,19 @@
 # ChangeLog for dev-util/insight
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.58 2015/03/25 13:26:47 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.62 2015/05/26 09:29:49 vapier Exp $
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> insight-6.8.1-r1.ebuild:
+  Minor style touchups.
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> insight-6.8.1-r1.ebuild:
+  Add missing EPREFIX to --datadir #465460#8 by Michael Haubenwallner.
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> insight-6.8.1-r1.ebuild:
+  Fix by Michael Haubenwallner to stop trying to generate info pages we never
+  install as they fail with newer texinfo #465460 by Yixun Lan.
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> insight-6.8.1-r1.ebuild:
+  Drop patch that breaks building w/newer glibc.
 
   25 Mar 2015; Justin Lecher <jlec@gentoo.org> insight-6.8.1-r1.ebuild,
   insight-6.8.1.ebuild:
