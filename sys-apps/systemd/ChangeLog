@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.367 2015/05/24 20:53:03 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.368 2015/05/26 19:47:15 floppym Exp $
+
+*systemd-220-r1 (26 May 2015)
+
+  26 May 2015; Mike Gilbert <floppym@gentoo.org> +systemd-220-r1.ebuild:
+  Backport a regression fix for udev inotify handling, bug 550358. Thanks to
+  Matthias Dahl and poncho.
 
 *systemd-220 (24 May 2015)
 
