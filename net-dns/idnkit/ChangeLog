@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/idnkit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.40 2012/03/03 18:17:01 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/idnkit/ChangeLog,v 1.41 2015/05/26 01:43:59 vapier Exp $
+
+  26 May 2015; Mike Frysinger <vapier@gentoo.org> idnkit-1.0-r2.ebuild:
+  Add arm64/m68k love and modernize the ebuild.
 
   03 Mar 2012; Jeroen Roovers <jer@gentoo.org> -idnkit-1.0-r1.ebuild:
   Old.
@@ -127,4 +130,3 @@
   Added to ~ppc.
 
   10 Apr 2004; Jared Hudson <jhhudso@gentoo.org> : Initial import.
-
