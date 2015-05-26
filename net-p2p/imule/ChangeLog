@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/imule
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/imule/ChangeLog,v 1.1 2015/05/22 06:00:49 zlg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/imule/ChangeLog,v 1.2 2015/05/26 13:25:19 zlg Exp $
+
+*imule-2.3.2.3-r1 (26 May 2015)
+
+  26 May 2015; Daniel Campbell <zlg@gentoo.org> +imule-2.3.2.3-r1.ebuild:
+  Move SRC_URI to HTTP instead of I2P, properly install nodes.dat file
 
 *imule-2.3.2.3 (22 May 2015)
 

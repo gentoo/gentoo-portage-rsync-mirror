@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/openpyxl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/ChangeLog,v 1.14 2015/05/13 12:50:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/openpyxl/ChangeLog,v 1.15 2015/05/26 13:15:28 jlec Exp $
+
+*openpyxl-2.2.3 (26 May 2015)
+
+  26 May 2015; Justin Lecher <jlec@gentoo.org> +openpyxl-2.2.3.ebuild:
+  Version Bump
 
 *openpyxl-2.2.2 (13 May 2015)
 *openpyxl-9999 (13 May 2015)
