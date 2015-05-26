@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16535 2015/05/26 18:38:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16536 2015/05/26 21:06:30 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -160,6 +160,7 @@ dev-ruby/rubyforge
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (29 Mar 2015)
 # Mask Perl 5.18 for removal. Please upgrade to Perl 5.20
+# Will be removed with the Perl 5.22 version bump.
 =dev-lang/perl-5.18.2-r2
 =virtual/perl-Archive-Tar-1.900.0-r2
 =virtual/perl-Attribute-Handlers-0.940.0-r1
