@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.21.1-r3.ebuild,v 1.1 2015/05/25 17:16:54 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.21.1-r3.ebuild,v 1.2 2015/05/26 00:26:47 floppym Exp $
 
 EAPI=5
 
@@ -23,7 +23,6 @@ IUSE="doc examples"
 # swig-3.0.5 results in broken constants, #538920
 RDEPEND=">=dev-libs/openssl-0.9.8:0="
 DEPEND="${RDEPEND}
-	<dev-lang/swig-3.0.5
 	>=dev-lang/swig-1.3.28
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/epydoc[${PYTHON_USEDEP}] )"

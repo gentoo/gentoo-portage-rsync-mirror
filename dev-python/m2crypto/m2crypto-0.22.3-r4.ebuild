@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r4.ebuild,v 1.2 2015/05/25 17:41:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r4.ebuild,v 1.3 2015/05/26 00:28:19 floppym Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 # Tests access network, and fail randomly. Bug #431458.
 RESTRICT=test
 
-PATCHES=( 
+PATCHES=(
 	"${FILESDIR}"/0.22.3-Use-swig-generated-python-loader.patch
 	"${FILESDIR}"/0.22.3-packaging.patch
 )
