@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtopengl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.31 2015/05/16 11:29:37 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtopengl/ChangeLog,v 1.32 2015/05/26 18:16:35 pesa Exp $
+
+*qtopengl-4.8.7 (26 May 2015)
+
+  26 May 2015; Davide Pesavento <pesa@gentoo.org> +qtopengl-4.8.7.ebuild:
+  Version bump.
 
   16 May 2015; Pacho Ramos <pacho@gentoo.org> qtopengl-4.8.6-r1.ebuild:
   ppc stable wrt bug #530238

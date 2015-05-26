@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.87 2015/05/16 18:51:53 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.88 2015/05/26 18:15:39 pesa Exp $
+
+*qtgui-4.8.7 (26 May 2015)
+
+  26 May 2015; Davide Pesavento <pesa@gentoo.org> +qtgui-4.8.7.ebuild:
+  Version bump.
 
 *qtgui-5.4.1-r2 (16 May 2015)
 

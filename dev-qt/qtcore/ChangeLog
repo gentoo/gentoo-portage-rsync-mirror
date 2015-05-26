@@ -1,6 +1,11 @@
 # ChangeLog for dev-qt/qtcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.78 2015/05/17 01:49:50 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtcore/ChangeLog,v 1.79 2015/05/26 18:14:28 pesa Exp $
+
+*qtcore-4.8.7 (26 May 2015)
+
+  26 May 2015; Davide Pesavento <pesa@gentoo.org> +qtcore-4.8.7.ebuild:
+  Version bump.
 
   17 May 2015; Patrick Lauer <patrick@gentoo.org> qtcore-4.8.6-r2.ebuild,
   qtcore-5.4.1.ebuild:
