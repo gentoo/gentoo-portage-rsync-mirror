@@ -1,20 +1,18 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/fleet-9999.ebuild,v 1.7 2015/05/27 05:19:21 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/fleet-0.10.1-r1.ebuild,v 1.1 2015/05/27 05:19:21 zmedico Exp $
 
 EAPI=5
 
-inherit git-r3 systemd
-
-EGIT_REPO_URI="git://github.com/coreos/fleet.git"
+inherit systemd vcs-snapshot
 
 DESCRIPTION="A Distributed init System"
 HOMEPAGE="https://github.com/coreos/fleet"
-SRC_URI=""
+SRC_URI="https://github.com/coreos/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="doc examples test"
 
 DEPEND=">=dev-lang/go-1.3

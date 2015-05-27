@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/fleet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.18 2015/05/02 15:56:46 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fleet/ChangeLog,v 1.19 2015/05/27 05:19:21 zmedico Exp $
+
+*fleet-0.10.1-r1 (27 May 2015)
+
+  27 May 2015; Zac Medico <zmedico@gentoo.org> +fleet-0.10.1-r1.ebuild,
+  fleet-9999.ebuild:
+  Add test? ( dev-go/go-tools ) dep for 'go vet' and enable tests.
 
   02 May 2015; Alex Brandt <alunduil@gentoo.org> fleet-9999.ebuild:
   land changes from 0.10.1 onto 9999
