@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.105-r1.ebuild,v 1.10 2015/05/16 11:09:43 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/polkit-gnome/polkit-gnome-0.105-r1.ebuild,v 1.11 2015/05/27 13:46:24 zlogene Exp $
 
 EAPI=4
 inherit gnome.org
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/PolicyKit"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~x86-fbsd"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.30

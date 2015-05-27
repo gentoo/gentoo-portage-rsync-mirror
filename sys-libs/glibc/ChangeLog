@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1052 2015/05/21 04:23:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1053 2015/05/27 13:55:42 vapier Exp $
+
+  27 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/eblits/pkg_pretend.eblit, files/eblits/pkg_preinst.eblit,
+  glibc-2.20-r1.ebuild, glibc-2.20-r2.ebuild, glibc-2.20.ebuild,
+  glibc-2.21.ebuild, glibc-9999.ebuild:
+  Run devpts check in pkg_pretend when using newer EAPIs #539928 by teika.
 
   21 May 2015; Matt Turner <mattst88@gentoo.org> glibc-2.20-r2.ebuild:
   alpha stable, bug 544034.

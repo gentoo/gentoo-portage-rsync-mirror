@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.13-r1.ebuild,v 1.3 2015/04/19 09:48:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/qpdfview-0.4.13-r1.ebuild,v 1.4 2015/05/27 13:37:38 zlogene Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="https://launchpad.net/${PN}/trunk/${PV}/+download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm x86 ~amd64-linux ~x86-linux"
 IUSE="cups dbus djvu fitz +pdf postscript +qt4 qt5 sqlite +svg synctex"
 
 REQUIRED_USE="^^ ( qt4 qt5 )

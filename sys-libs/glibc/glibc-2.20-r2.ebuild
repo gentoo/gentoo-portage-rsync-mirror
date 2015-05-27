@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20-r2.ebuild,v 1.10 2015/05/21 04:23:48 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.20-r2.ebuild,v 1.11 2015/05/27 13:55:42 vapier Exp $
 
 EAPI="4"
 
@@ -145,7 +145,7 @@ src_test()      { eblit-run src_test      ; }
 src_install()   { eblit-run src_install   ; }
 
 # FILESDIR might not be available during binpkg install
-for x in setup {pre,post}inst ; do
+for x in pretend setup {pre,post}inst ; do
 	e="${FILESDIR}/eblits/pkg_${x}.eblit"
 	if [[ -e ${e} ]] ; then
 		. "${e}"
