@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.00.ebuild,v 1.3 2015/03/05 01:05:38 heroxbd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-4.10.00.ebuild,v 1.4 2015/05/27 15:28:09 bircoph Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE="+data dawn doc examples gdml geant3 inventor motif opengl
 
 RDEPEND="
 	dev-libs/expat
-	>=sci-physics/clhep-2.1.3
+	>=sci-physics/clhep-2.1.3:2=
 	dawn? ( media-gfx/dawn )
 	gdml? ( dev-libs/xerces-c )
 	motif? ( x11-libs/motif:0 )

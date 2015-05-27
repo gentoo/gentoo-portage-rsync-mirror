@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.8-r2.ebuild,v 1.11 2015/04/08 07:30:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.3.0.8-r2.ebuild,v 1.12 2015/05/27 15:23:25 floppym Exp $
 
 EAPI="5"
 
@@ -32,7 +32,7 @@ PATCHES=(
 )
 
 python_prepare_all() {
-	python_export_best
+	python_setup
 	echo VERSION="${PVR}" "${PYTHON}" setup.py set_version
 	VERSION="${PVR}" "${PYTHON}" setup.py set_version
 	mv ./bin/revdep-rebuild{,.py} || die

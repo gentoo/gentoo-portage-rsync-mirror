@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/gentoolkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.328 2015/04/25 15:43:59 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/ChangeLog,v 1.329 2015/05/27 15:23:25 floppym Exp $
+
+  27 May 2015; Mike Gilbert <floppym@gentoo.org> gentoolkit-0.3.0.8-r2.ebuild,
+  gentoolkit-0.3.0.9-r1.ebuild, gentoolkit-0.3.0.9-r2.ebuild,
+  gentoolkit-0.3.0.9.ebuild, gentoolkit-9999.ebuild:
+  s/python_export_best/python_setup/
 
   25 Apr 2015; Brian Dolbec <dolsen@gentoo.org> gentoolkit-9999.ebuild:
   Update EGIT_REPO_URI.

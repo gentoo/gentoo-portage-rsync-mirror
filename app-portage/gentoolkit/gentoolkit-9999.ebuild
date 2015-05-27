@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.40 2015/04/25 15:43:59 dolsen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-9999.ebuild,v 1.41 2015/05/27 15:23:25 floppym Exp $
 
 EAPI="5"
 
@@ -31,7 +31,7 @@ RDEPEND="${DEPEND}
 	sys-apps/grep"
 
 python_prepare_all() {
-	python_export_best
+	python_setup
 	echo VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
 	VERSION="9999-${EGIT_VERSION}" "${PYTHON}" setup.py set_version
 	distutils-r1_python_prepare_all
