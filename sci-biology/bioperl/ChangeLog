@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/bioperl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.58 2015/05/27 10:14:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/ChangeLog,v 1.59 2015/05/27 16:18:24 jlec Exp $
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> -bioperl-1.6.0-r2.ebuild:
+  Drop old
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> bioperl-1.6.9.ebuild:
   Stable for amd64, wrt bug #539426
