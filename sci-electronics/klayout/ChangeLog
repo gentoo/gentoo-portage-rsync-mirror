@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/klayout
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.25 2015/05/27 11:21:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/klayout/ChangeLog,v 1.26 2015/05/27 11:32:54 mrueg Exp $
+
+  27 May 2015; Manuel Rüger <mrueg@gentoo.org> -klayout-0.22.9.ebuild:
+  Remove old.
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> klayout-0.23.10.ebuild:
   Stable for x86, wrt bug #541652

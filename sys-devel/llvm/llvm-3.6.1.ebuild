@@ -1,25 +1,28 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.106 2015/05/27 11:58:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-3.6.1.ebuild,v 1.1 2015/05/27 11:58:56 voyageur Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 pypy )
 
-inherit eutils cmake-utils flag-o-matic git-r3 multibuild multilib \
-	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs
+inherit eutils flag-o-matic multibuild multilib \
+	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs prefix
 
 DESCRIPTION="Low Level Virtual Machine"
 HOMEPAGE="http://llvm.org/"
-SRC_URI=""
-EGIT_REPO_URI="http://llvm.org/git/llvm.git
-	https://github.com/llvm-mirror/llvm.git"
+SRC_URI="http://llvm.org/releases/${PV}/${P}.src.tar.xz
+	clang? ( http://llvm.org/releases/${PV}/compiler-rt-${PV}.src.tar.xz
+		http://llvm.org/releases/${PV}/cfe-${PV}.src.tar.xz
+		http://llvm.org/releases/${PV}/clang-tools-extra-${PV}.src.tar.xz )
+	!doc? ( http://dev.gentoo.org/~voyageur/distfiles/${P}-manpages.tar.bz2 )"
 
 LICENSE="UoI-NCSA"
-SLOT="0/${PV}"
-KEYWORDS=""
+SLOT="0/3.6"
+KEYWORDS="~amd64 ~arm ~arm64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="clang debug doc gold libedit +libffi multitarget ncurses ocaml python
-	+static-analyzer test xml video_cards_radeon kernel_Darwin"
+	+static-analyzer test xml video_cards_radeon
+	kernel_Darwin kernel_FreeBSD"
 
 COMMON_DEPEND="
 	sys-libs/zlib:0=
@@ -38,17 +41,23 @@ COMMON_DEPEND="
 	ocaml? ( dev-lang/ocaml:0= )"
 # configparser-3.2 breaks the build (3.3 or none at all are fine)
 DEPEND="${COMMON_DEPEND}
+	app-arch/xz-utils
 	dev-lang/perl
-	dev-python/sphinx
 	>=sys-devel/make-3.81
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
+	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1
+		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
+	)
+	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-5.1 )
 	clang? ( xml? ( virtual/pkgconfig ) )
+	doc? ( dev-python/sphinx )
 	libffi? ( virtual/pkgconfig )
 	!!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
-	clang? ( !<=sys-devel/clang-${PV}-r99 )
+	clang? ( !<=sys-devel/clang-${PV}-r99
+		!>=sys-devel/clang-9999 )
 	abi_x86_32? ( !<=app-emulation/emul-linux-x86-baselibs-20130224-r2
 		!app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)] )"
 PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
@@ -57,6 +66,8 @@ PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	test? ( || ( $(python_gen_useflags 'python*') ) )"
+
+S=${WORKDIR}/${P/_}.src
 
 # Some people actually override that in make.conf. That sucks since
 # we need to run install per-directory, and ninja can't do that...
@@ -116,31 +127,26 @@ pkg_setup() {
 }
 
 src_unpack() {
-	if use clang; then
-		git-r3_fetch "http://llvm.org/git/compiler-rt.git
-			https://github.com/llvm-mirror/compiler-rt.git"
-		git-r3_fetch "http://llvm.org/git/clang.git
-			https://github.com/llvm-mirror/clang.git"
-		git-r3_fetch "http://llvm.org/git/clang-tools-extra.git
-			https://github.com/llvm-mirror/clang-tools-extra.git"
-	fi
-	git-r3_fetch
+	default
+
+	rm -f "${S}"/tools/clang "${S}"/projects/compiler-rt \
+		|| die "symlinks removal failed"
 
 	if use clang; then
-		git-r3_checkout http://llvm.org/git/compiler-rt.git \
-			"${S}"/projects/compiler-rt
-		git-r3_checkout http://llvm.org/git/clang.git \
-			"${S}"/tools/clang
-		git-r3_checkout http://llvm.org/git/clang-tools-extra.git \
-			"${S}"/tools/clang/tools/extra
+		mv "${WORKDIR}"/cfe-${PV/_}.src "${S}"/tools/clang \
+			|| die "clang source directory move failed"
+		mv "${WORKDIR}"/compiler-rt-${PV/_}.src "${S}"/projects/compiler-rt \
+			|| die "compiler-rt source directory move failed"
+		mv "${WORKDIR}"/clang-tools-extra-${PV/_}.src "${S}"/tools/clang/tools/extra \
+			|| die "clang-tools-extra source directory move failed"
 	fi
-	git-r3_checkout
 }
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-3.7-nodoctargz.patch
+	epatch "${FILESDIR}"/${PN}-3.2-nodoctargz.patch
 	epatch "${FILESDIR}"/${PN}-3.5-gcc-4.9.patch
 	epatch "${FILESDIR}"/${PN}-3.6-gentoo-install.patch
+	epatch "${FILESDIR}"/${PN}-3.6.0-ocaml-ctypes-0.4.0.patch
 	# Make ocaml warnings non-fatal, bug #537308
 	sed -e "/RUN/s/-warn-error A//" -i test/Bindings/OCaml/*ml  || die
 
@@ -149,6 +155,8 @@ src_prepare() {
 		epatch "${FILESDIR}"/clang-3.5-gentoo-runtime-gcc-detection-v3.patch
 
 		epatch "${FILESDIR}"/clang-3.6-gentoo-install.patch
+		epatch "${FILESDIR}"/clang-3.4-darwin_prefix-include-paths.patch
+		eprefixify tools/clang/lib/Frontend/InitHeaderSearch.cpp
 	fi
 
 	if use prefix && use clang; then
@@ -176,6 +184,11 @@ src_prepare() {
 		-e "s,@EPREFIX@,${EPREFIX},g" \
 		-i "${sub_files[@]}" \
 		|| die "install paths sed failed"
+
+	if use clang; then
+		# constantly fails for a long time, likely due to our patches
+		rm tools/clang/test/Driver/cross-linux.c || die
+	fi
 
 	# User patches
 	epatch_user
@@ -233,8 +246,7 @@ multilib_src_configure() {
 	tc-export CC CXX
 
 	ECONF_SOURCE=${S} \
-	cmake-utils_src_configure
-	#econf "${conf_flags[@]}"
+	econf "${conf_flags[@]}"
 }
 
 set_makeargs() {
@@ -294,10 +306,12 @@ multilib_src_compile() {
 		set_makeargs
 		emake -C tools "${MAKEARGS[@]}"
 
-		emake -C "${S}"/docs -f Makefile.sphinx man
-		use clang && emake -C "${S}"/tools/clang/docs/tools \
-			BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man
-		use doc && emake -C "${S}"/docs -f Makefile.sphinx html
+		if use doc; then
+			emake -C "${S}"/docs -f Makefile.sphinx man
+			use clang && emake -C "${S}"/tools/clang/docs/tools \
+				BUILD_FOR_WEBSITE=1 DST_MAN_DIR="${T}"/ man
+			emake -C "${S}"/docs -f Makefile.sphinx html
+		fi
 	fi
 
 	if use debug; then
@@ -353,6 +367,9 @@ src_install() {
 	fi
 
 	multilib-minimal_src_install
+
+	# Remove unnecessary headers on FreeBSD, bug #417171
+	use kernel_FreeBSD && use clang && rm "${ED}"usr/lib/clang/${PV}/include/{std,float,iso,limits,tgmath,varargs}*.h
 }
 
 multilib_src_install() {
@@ -369,9 +386,16 @@ multilib_src_install() {
 		dosym "${CHOST}"-llvm-config /usr/bin/llvm-config.${ABI}
 	else
 		# Install docs.
-		doman "${S}"/docs/_build/man/*.1
-		use clang && doman "${T}"/clang.1
-		use doc && dohtml -r "${S}"/docs/_build/html/
+		if use doc; then
+			doman "${S}"/docs/_build/man/*.1
+			use clang && doman "${T}"/clang.1
+			dohtml -r "${S}"/docs/_build/html/
+		else
+			if ! use clang; then
+				rm "${WORKDIR}"/${P}-manpages/clang.1 || die
+			fi
+			doman "${WORKDIR}"/${P}-manpages/*.1
+		fi
 
 		# Symlink the gold plugin.
 		if use gold; then
@@ -461,14 +485,11 @@ multilib_src_install() {
 }
 
 multilib_src_install_all() {
-	pushd utils/vim >/dev/null || die
-	for dir in */; do
-		insinto /usr/share/vim/vimfiles/${dir}
-		doins ${dir}/*.vim
-	done
+	insinto /usr/share/vim/vimfiles/syntax
+	doins utils/vim/*.vim
 
 	if use clang; then
-		pushd tools/clang >/dev/null || die
+		cd tools/clang || die
 
 		if use static-analyzer ; then
 			dobin tools/scan-build/ccc-analyzer

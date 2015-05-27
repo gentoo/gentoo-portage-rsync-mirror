@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.239 2015/05/04 16:01:35 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.240 2015/05/27 11:58:56 voyageur Exp $
+
+*llvm-3.6.1 (27 May 2015)
+
+  27 May 2015; Bernard Cafarelli <voyageur@gentoo.org> +llvm-3.6.1.ebuild,
+  llvm-9999.ebuild:
+  Version bump, mostly MIPS and R600 bug fixes
 
   04 May 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
   Fix vim files installation, thanks Tobias Jakobi. Note this does not fix

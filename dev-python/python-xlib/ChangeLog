@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/python-xlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.43 2015/04/08 08:05:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-xlib/ChangeLog,v 1.44 2015/05/27 11:50:51 mrueg Exp $
+
+  27 May 2015; Manuel Rüger <mrueg@gentoo.org> -python-xlib-0.14.ebuild,
+  -python-xlib-0.15_rc1-r1.ebuild:
+  Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-xlib-0.15_rc1-r2.ebuild:
   Drop old Python implementations
