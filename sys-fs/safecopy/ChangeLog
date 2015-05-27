@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/safecopy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.17 2014/10/14 22:14:36 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/safecopy/ChangeLog,v 1.18 2015/05/26 23:08:01 tamiko Exp $
+
+  26 May 2015; Matthias Maier <tamiko@gentoo.org> metadata.xml:
+  drop maintainership
 
   14 Oct 2014; Matthias Maier <tamiko@gentoo.org> safecopy-1.7.ebuild:
   fix license

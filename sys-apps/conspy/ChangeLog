@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/conspy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/conspy/ChangeLog,v 1.11 2014/10/14 21:34:23 tamiko Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/conspy/ChangeLog,v 1.12 2015/05/26 23:03:38 tamiko Exp $
+
+  26 May 2015; Matthias Maier <tamiko@gentoo.org> metadata.xml:
+  drop maintainership
 
 *conspy-1.10 (14 Oct 2014)
 
