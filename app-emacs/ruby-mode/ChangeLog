@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/ruby-mode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.61 2015/05/23 07:17:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ruby-mode/ChangeLog,v 1.62 2015/05/27 08:26:21 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> ruby-mode-2.0.0_p247.ebuild:
+  Stable for amd64, wrt bug #550308
 
   23 May 2015; Hans de Graaff <graaff@gentoo.org> -ruby-mode-2.1.1.ebuild,
   -ruby-mode-2.1.2.ebuild, -files/50ruby-mode-gentoo-2.1.2.el:

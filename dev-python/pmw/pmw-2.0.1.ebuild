@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.1.ebuild,v 1.1 2015/05/26 14:06:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pmw/pmw-2.0.1.ebuild,v 1.2 2015/05/27 08:18:24 jlec Exp $
 
 EAPI=5
 
@@ -27,8 +27,6 @@ RDEPEND="${DEPEND}"
 RESTRICT="test"
 
 S="${WORKDIR}/${MY_P}"
-
-DOCS="Pmw/README"
 
 python_prepare() {
 	distutils-r1_python_prepare

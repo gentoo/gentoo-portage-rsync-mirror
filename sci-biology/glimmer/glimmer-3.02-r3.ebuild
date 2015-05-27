@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02-r3.ebuild,v 1.1 2015/05/26 06:22:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/glimmer-3.02-r3.ebuild,v 1.2 2015/05/27 08:25:41 ago Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.cbcb.umd.edu/software/${PN}/${PN}${MY_PV}.tar.gz"
 LICENSE="Artistic"
 SLOT="0"
 IUSE=""
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 
 DEPEND=""
 RDEPEND="app-shells/tcsh"

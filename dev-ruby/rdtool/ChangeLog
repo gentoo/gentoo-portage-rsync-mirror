@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rdtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.65 2015/05/23 09:45:53 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/ChangeLog,v 1.66 2015/05/27 08:26:26 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> rdtool-0.6.38-r1.ebuild:
+  Stable for amd64, wrt bug #550212
 
 *rdtool-0.6.38-r2 (23 May 2015)
 

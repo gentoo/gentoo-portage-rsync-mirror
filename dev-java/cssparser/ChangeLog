@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cssparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cssparser/ChangeLog,v 1.4 2015/04/08 12:32:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cssparser/ChangeLog,v 1.5 2015/05/27 08:29:33 monsieurp Exp $
+
+*cssparser-0.9.15 (27 May 2015)
+
+  27 May 2015; Patrice Clement <monsieurp@gentoo.org> +cssparser-0.9.15.ebuild:
+  Version bump.
 
   08 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cssparser-0.9.14.ebuild:
   Stable for x86, wrt bug #545578

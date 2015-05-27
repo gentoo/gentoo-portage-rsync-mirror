@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bundler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.89 2015/05/24 18:45:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bundler/ChangeLog,v 1.90 2015/05/27 08:25:56 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> bundler-1.7.13.ebuild:
+  Stable for amd64, wrt bug #550314
 
   24 May 2015; Hans de Graaff <graaff@gentoo.org> bundler-1.7.13.ebuild:
   Create stable candidate.
