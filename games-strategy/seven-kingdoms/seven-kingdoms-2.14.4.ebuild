@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.5 2015/05/27 08:26:11 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/seven-kingdoms-2.14.4.ebuild,v 1.6 2015/05/27 11:00:56 ago Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://sourceforge/skfans/${MY_PN}-source-${PV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="network"
 
 DEPEND="media-libs/libsdl[X,video]
