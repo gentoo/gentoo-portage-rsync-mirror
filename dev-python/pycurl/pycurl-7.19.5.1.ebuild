@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.5.1.ebuild,v 1.1 2015/05/27 09:29:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/pycurl-7.19.5.1.ebuild,v 1.2 2015/05/27 12:40:01 jlec Exp $
 EAPI=5
 
 # The selftests fail with pypy, and urlgrabber segfaults for me.
@@ -46,7 +46,6 @@ python_prepare_all() {
 python_configure_all() {
 	# Override faulty detection in setup.py, bug 510974.
 	export PYCURL_SSL_LIBRARY=${CURL_SSL}
-	distutils-r1_python_configure_all
 }
 
 python_compile() {

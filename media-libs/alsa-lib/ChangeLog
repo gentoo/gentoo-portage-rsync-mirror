@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.404 2015/05/23 18:33:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.405 2015/05/27 12:41:29 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> alsa-lib-1.0.29.ebuild:
+  Stable for x86, wrt bug #550214
 
   23 May 2015; Mikle Kolyada <zlogene@gentoo.org> alsa-lib-1.0.29.ebuild:
   amd64 stable wrt bug #550214
