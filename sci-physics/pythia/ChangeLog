@@ -1,6 +1,11 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.62 2015/05/27 14:06:39 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.63 2015/05/27 17:53:32 bircoph Exp $
+
+*pythia-8.1.86-r1 (27 May 2015)
+
+  27 May 2015; Andrew Savchenko <bircoph@gentoo.org> +pythia-8.1.86-r1.ebuild:
+  Install additional docs.
 
   27 May 2015; Andrew Savchenko <bircoph@gentoo.org> -pythia-8.1.45.ebuild:
   Remove old, fixes bug 478636.
