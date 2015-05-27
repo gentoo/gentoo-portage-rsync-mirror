@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/pythong
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.26 2015/05/26 13:56:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythong/ChangeLog,v 1.27 2015/05/27 03:11:09 patrick Exp $
+
+  27 May 2015; Patrick Lauer <patrick@gentoo.org> -pythong-2.1.5-r1.ebuild,
+  pythong-2.1.5-r2.ebuild:
+  Drop old, stable for x86 to fix breakage after pmw cleanup
 
   26 May 2015; Justin Lecher <jlec@gentoo.org> pythong-2.1.5-r2.ebuild:
   Move to virtual

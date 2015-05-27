@@ -4,10 +4,10 @@ DESCRIPTION=Nice and powerful spanish development environment for Python
 EAPI=5
 HOMEPAGE=http://www3.uji.es/~dllorens/PythonG/principal.html
 IUSE=doc python_targets_python2_7
-KEYWORDS=~amd64 ~ia64 ~x86
+KEYWORDS=~amd64 ~ia64 x86
 LICENSE=GPL-2
 RDEPEND=>=dev-lang/tk-8.3.4:0= virtual/pmw[python_targets_python2_7(-)?,-python_single_target_jython2_5(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_3(-),-python_single_target_python3_4(-),python_single_target_python2_7(+)]
 SLOT=0
 SRC_URI=http://www3.uji.es/~dllorens/downloads/pythong/linux/pythonG-2_1_5.tgz doc? ( http://marmota.act.uji.es/MTP/pdf/python.pdf )
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	python-single-r1	7a178335dbd6ea7f50ed4e3e1c13c1e4	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
-_md5_=44de08b2e2495de8126fd77a79d2d48e
+_md5_=623061319c31e6b0615a0c1d7ba07771
