@@ -1,0 +1,348 @@
+# HG changeset patch
+# User Martin Thomson <martin.thomson@gmail.com>
+# Date 1428438189 25200
+#      Tue Apr 07 13:23:09 2015 -0700
+# Node ID ae72d76f8d2472505b499c498191c3ce441b6a17
+# Parent  17b065430727befe3251d63583b350d7dc120564
+Bug 1138554 - Raising minimum key size on DH and RSA to 1023, r=wtc
+
+diff -r 17b065430727 -r ae72d76f8d24 lib/cryptohi/keyhi.h
+--- a/lib/cryptohi/keyhi.h	Wed May 20 16:28:19 2015 -0700
++++ b/lib/cryptohi/keyhi.h	Tue Apr 07 13:23:09 2015 -0700
+@@ -37,6 +37,11 @@
+ extern SECStatus
+ SECKEY_UpdateCertPQG(CERTCertificate * subjectCert);
+ 
++/*
++** Return the number of bits in the provided big integer.  This assumes that the
++** SECItem contains a big-endian number and counts from the first non-zero bit.
++*/
++extern unsigned SECKEY_BigIntegerBitLength(const SECItem *number);
+ 
+ /*
+ ** Return the strength of the public key in bytes
+diff -r 17b065430727 -r ae72d76f8d24 lib/cryptohi/seckey.c
+--- a/lib/cryptohi/seckey.c	Wed May 20 16:28:19 2015 -0700
++++ b/lib/cryptohi/seckey.c	Tue Apr 07 13:23:09 2015 -0700
+@@ -178,8 +178,8 @@
+     PK11SlotInfo *slot;
+ 
+     if (!param || !param->base.data || !param->prime.data ||
+-        param->prime.len < 512/8 || param->base.len == 0 || 
+-        param->base.len > param->prime.len + 1 || 
++        SECKEY_BigIntegerBitLength(&param->prime) < DH_MIN_P_BITS ||
++        param->base.len == 0 || param->base.len > param->prime.len + 1 ||
+ 	(param->base.len == 1 && param->base.data[0] == 0)) {
+ 	PORT_SetError(SEC_ERROR_INVALID_ARGS);
+ 	return NULL;
+@@ -941,61 +941,76 @@
+     }
+ }
+ 
++/* The number of bits in the number from the first non-zero bit onward. */
++unsigned
++SECKEY_BigIntegerBitLength(const SECItem *number)
++{
++    const unsigned char *p;
++    unsigned octets;
++    unsigned bits;
++
++    if (!number || !number->data) {
++        PORT_SetError(SEC_ERROR_INVALID_KEY);
++        return 0;
++    }
++
++    p = number->data;
++    octets = number->len;
++    while (octets > 0 && !*p) {
++        ++p;
++        --octets;
++    }
++    if (octets == 0) {
++        return 0;
++    }
++    /* bits = 7..1 because we know at least one bit is set already */
++    /* Note: This could do a binary search, but this is faster for keys if we
++     * assume that good keys will have the MSB set. */
++    for (bits = 7; bits > 0; --bits) {
++        if (*p & (1 << bits)) {
++            break;
++        }
++    }
++    return octets * 8 + bits - 7;
++}
++
+ /* returns key strength in bytes (not bits) */
+ unsigned
+ SECKEY_PublicKeyStrength(const SECKEYPublicKey *pubk)
+ {
+-    unsigned char b0;
+-    unsigned size;
+-
+-    /* interpret modulus length as key strength */
+-    if (!pubk)
+-    	goto loser;
+-    switch (pubk->keyType) {
+-    case rsaKey:
+-	if (!pubk->u.rsa.modulus.data) break;
+-    	b0 = pubk->u.rsa.modulus.data[0];
+-    	return b0 ? pubk->u.rsa.modulus.len : pubk->u.rsa.modulus.len - 1;
+-    case dsaKey:
+-	if (!pubk->u.dsa.publicValue.data) break;
+-    	b0 = pubk->u.dsa.publicValue.data[0];
+-    	return b0 ? pubk->u.dsa.publicValue.len :
+-	    pubk->u.dsa.publicValue.len - 1;
+-    case dhKey:
+-	if (!pubk->u.dh.publicValue.data) break;
+-    	b0 = pubk->u.dh.publicValue.data[0];
+-    	return b0 ? pubk->u.dh.publicValue.len :
+-	    pubk->u.dh.publicValue.len - 1;
+-    case ecKey:
+-	/* Get the key size in bits and adjust */
+-	size =	SECKEY_ECParamsToKeySize(&pubk->u.ec.DEREncodedParams);
+-	return (size + 7)/8;
+-    default:
+-	break;
+-    }
+-loser:
+-    PORT_SetError(SEC_ERROR_INVALID_KEY);
+-    return 0;
++    return (SECKEY_PublicKeyStrengthInBits(pubk) + 7) / 8;
+ }
+ 
+ /* returns key strength in bits */
+ unsigned
+ SECKEY_PublicKeyStrengthInBits(const SECKEYPublicKey *pubk)
+ {
+-    unsigned size;
++    unsigned bitSize = 0;
++
++    if (!pubk) {
++        PORT_SetError(SEC_ERROR_INVALID_KEY);
++        return 0;
++    }
++
++    /* interpret modulus length as key strength */
+     switch (pubk->keyType) {
+     case rsaKey:
++        bitSize = SECKEY_BigIntegerBitLength(&pubk->u.rsa.modulus);
++        break;
+     case dsaKey:
++        bitSize = SECKEY_BigIntegerBitLength(&pubk->u.dsa.publicValue);
++        break;
+     case dhKey:
+-	return SECKEY_PublicKeyStrength(pubk) * 8; /* 1 byte = 8 bits */
++        bitSize = SECKEY_BigIntegerBitLength(&pubk->u.dh.publicValue);
++        break;
+     case ecKey:
+-	size = SECKEY_ECParamsToKeySize(&pubk->u.ec.DEREncodedParams);
+-	return size;
++        bitSize = SECKEY_ECParamsToKeySize(&pubk->u.ec.DEREncodedParams);
++        break;
+     default:
+-	break;
++        PORT_SetError(SEC_ERROR_INVALID_KEY);
++        break;
+     }
+-    PORT_SetError(SEC_ERROR_INVALID_KEY);
+-    return 0;
++    return bitSize;
+ }
+ 
+ /* returns signature length in bytes (not bits) */
+diff -r 17b065430727 -r ae72d76f8d24 lib/freebl/blapit.h
+--- a/lib/freebl/blapit.h	Wed May 20 16:28:19 2015 -0700
++++ b/lib/freebl/blapit.h	Tue Apr 07 13:23:09 2015 -0700
+@@ -138,10 +138,10 @@
+  * These values come from the initial key size limits from the PKCS #11
+  * module. They may be arbitrarily adjusted to any value freebl supports.
+  */
+-#define RSA_MIN_MODULUS_BITS   128
++#define RSA_MIN_MODULUS_BITS   512
+ #define RSA_MAX_MODULUS_BITS 16384
+ #define RSA_MAX_EXPONENT_BITS   64
+-#define DH_MIN_P_BITS	       128
++#define DH_MIN_P_BITS	      1023
+ #define DH_MAX_P_BITS        16384
+ 
+ /*
+@@ -181,7 +181,7 @@
+ 
+ #define DSA1_Q_BITS      160
+ #define DSA_MAX_P_BITS	3072
+-#define DSA_MIN_P_BITS	 512
++#define DSA_MIN_P_BITS  1023
+ #define DSA_MAX_Q_BITS   256
+ #define DSA_MIN_Q_BITS   160
+ 
+diff -r 17b065430727 -r ae72d76f8d24 lib/nss/nss.def
+--- a/lib/nss/nss.def	Wed May 20 16:28:19 2015 -0700
++++ b/lib/nss/nss.def	Tue Apr 07 13:23:09 2015 -0700
+@@ -1076,3 +1076,9 @@
+ ;+    local:
+ ;+       *;
+ ;+};
++;+NSS_3.19.1 { 	# NSS 3.19.1 release
++;+    global:
++SECKEY_BigIntegerBitLength;
++;+    local:
++;+       *;
++;+};
+diff -r 17b065430727 -r ae72d76f8d24 lib/ssl/SSLerrs.h
+--- a/lib/ssl/SSLerrs.h	Wed May 20 16:28:19 2015 -0700
++++ b/lib/ssl/SSLerrs.h	Tue Apr 07 13:23:09 2015 -0700
+@@ -422,3 +422,6 @@
+ ER3(SSL_ERROR_INAPPROPRIATE_FALLBACK_ALERT, (SSL_ERROR_BASE + 131),
+ "The server rejected the handshake because the client downgraded to a lower "
+ "TLS version than the server supports.")
++
++ER3(SSL_ERROR_WEAK_SERVER_CERT_KEY, (SSL_ERROR_BASE + 132),
++"The server certificate included a public key that was too weak.")
+diff -r 17b065430727 -r ae72d76f8d24 lib/ssl/ssl3con.c
+--- a/lib/ssl/ssl3con.c	Wed May 20 16:28:19 2015 -0700
++++ b/lib/ssl/ssl3con.c	Tue Apr 07 13:23:09 2015 -0700
+@@ -6599,29 +6599,6 @@
+     return SECFailure;
+ }
+ 
+-/* ssl3_BigIntGreaterThanOne returns true iff |mpint|, taken as an unsigned,
+- * big-endian integer is > 1 */
+-static PRBool
+-ssl3_BigIntGreaterThanOne(const SECItem* mpint) {
+-    unsigned char firstNonZeroByte = 0;
+-    unsigned int i;
+-
+-    for (i = 0; i < mpint->len; i++) {
+-	if (mpint->data[i]) {
+-	    firstNonZeroByte = mpint->data[i];
+-	    break;
+-	}
+-    }
+-
+-    if (firstNonZeroByte == 0)
+-	return PR_FALSE;
+-    if (firstNonZeroByte > 1)
+-	return PR_TRUE;
+-
+-    /* firstNonZeroByte == 1, therefore mpint > 1 iff the first non-zero byte
+-     * is followed by another byte. */
+-    return (i < mpint->len - 1);
+-}
+ 
+ /* Called from ssl3_HandleHandshakeMessage() when it has deciphered a complete
+  * ssl3 ServerKeyExchange message.
+@@ -6666,6 +6643,12 @@
+     	if (rv != SECSuccess) {
+ 	    goto loser;		/* malformed. */
+ 	}
++        /* This exchange method is only used by export cipher suites.
++         * Those are broken and so this code will eventually be removed. */
++        if (SECKEY_BigIntegerBitLength(&modulus) < 512) {
++            desc = isTLS ? insufficient_security : illegal_parameter;
++            goto alert_loser;
++        }
+     	rv = ssl3_ConsumeHandshakeVariable(ss, &exponent, 2, &b, &length);
+     	if (rv != SECSuccess) {
+ 	    goto loser;		/* malformed. */
+@@ -6751,12 +6734,16 @@
+ 	SECItem          dh_p      = {siBuffer, NULL, 0};
+ 	SECItem          dh_g      = {siBuffer, NULL, 0};
+ 	SECItem          dh_Ys     = {siBuffer, NULL, 0};
++        unsigned dh_p_bits;
++        unsigned dh_g_bits;
++        unsigned dh_Ys_bits;
+ 
+     	rv = ssl3_ConsumeHandshakeVariable(ss, &dh_p, 2, &b, &length);
+     	if (rv != SECSuccess) {
+ 	    goto loser;		/* malformed. */
+ 	}
+-	if (dh_p.len < 512/8) {
++        dh_p_bits = SECKEY_BigIntegerBitLength(&dh_p);
++        if (dh_p_bits < DH_MIN_P_BITS) {
+ 	    errCode = SSL_ERROR_WEAK_SERVER_EPHEMERAL_DH_KEY;
+ 	    goto alert_loser;
+ 	}
+@@ -6764,13 +6751,16 @@
+     	if (rv != SECSuccess) {
+ 	    goto loser;		/* malformed. */
+ 	}
+-	if (dh_g.len > dh_p.len || !ssl3_BigIntGreaterThanOne(&dh_g))
++        /* Abort if dh_g is 0, 1, or obviously too big. */
++        dh_g_bits = SECKEY_BigIntegerBitLength(&dh_g);
++        if (dh_g_bits > dh_p_bits || dh_g_bits <= 1)
+ 	    goto alert_loser;
+     	rv = ssl3_ConsumeHandshakeVariable(ss, &dh_Ys, 2, &b, &length);
+     	if (rv != SECSuccess) {
+ 	    goto loser;		/* malformed. */
+ 	}
+-	if (dh_Ys.len > dh_p.len || !ssl3_BigIntGreaterThanOne(&dh_Ys))
++        dh_Ys_bits = SECKEY_BigIntegerBitLength(&dh_Ys);
++        if (dh_Ys_bits > dh_p_bits || dh_Ys_bits <= 1)
+ 	    goto alert_loser;
+ 	if (isTLS12) {
+ 	    rv = ssl3_ConsumeSignatureAndHashAlgorithm(ss, &b, &length,
+@@ -10057,33 +10047,25 @@
+ 	if (pubKey) {
+ 	    ss->sec.keaKeyBits = ss->sec.authKeyBits =
+ 		SECKEY_PublicKeyStrengthInBits(pubKey);
+-#ifndef NSS_DISABLE_ECC
+-	    if (ss->sec.keaType == kt_ecdh) {
+-		/* Get authKeyBits from signing key.
+-		 * XXX The code below uses a quick approximation of
+-		 * key size based on cert->signatureWrap.signature.data
+-		 * (which contains the DER encoded signature). The field
+-		 * cert->signatureWrap.signature.len contains the
+-		 * length of the encoded signature in bits.
+-		 */
+-		if (ss->ssl3.hs.kea_def->kea == kea_ecdh_ecdsa) {
+-		    ss->sec.authKeyBits = 
+-			cert->signatureWrap.signature.data[3]*8;
+-		    if (cert->signatureWrap.signature.data[4] == 0x00)
+-			    ss->sec.authKeyBits -= 8;
+-		    /* 
+-		     * XXX: if cert is not signed by ecdsa we should
+-		     * destroy pubKey and goto bad_cert
+-		     */
+-		} else if (ss->ssl3.hs.kea_def->kea == kea_ecdh_rsa) {
+-		    ss->sec.authKeyBits = cert->signatureWrap.signature.len;
+-		    /* 
+-		     * XXX: if cert is not signed by rsa we should
+-		     * destroy pubKey and goto bad_cert
+-		     */
+-		}
+-	    }
+-#endif /* NSS_DISABLE_ECC */
++            KeyType pubKeyType = SECKEY_GetPublicKeyType(pubKey);
++            /* Too small: not good enough. Send a fatal alert. */
++            /* TODO: Use 1023 for RSA because a higher RSA_MIN_MODULUS_BITS
++             * breaks export cipher suites; when those are removed, increase
++             * RSA_MIN_MODULUS_BITS and use that here. */
++            /* We aren't checking EC here on the understanding that we only
++             * support curves we like, a decision that might need revisiting. */
++            if (((pubKeyType == rsaKey || pubKeyType == rsaPssKey ||
++                  pubKeyType == rsaOaepKey) && ss->sec.authKeyBits < 1023) ||
++                (pubKeyType == dsaKey && ss->sec.authKeyBits < DSA_MIN_P_BITS) ||
++                (pubKeyType == dhKey && ss->sec.authKeyBits < DH_MIN_P_BITS)) {
++                PORT_SetError(SSL_ERROR_WEAK_SERVER_CERT_KEY);
++                (void)SSL3_SendAlert(ss, alert_fatal,
++                                     ss->version >= SSL_LIBRARY_VERSION_TLS_1_0
++                                     ? insufficient_security
++                                     : illegal_parameter);
++                SECKEY_DestroyPublicKey(pubKey);
++                return SECFailure;
++            }
+ 	    SECKEY_DestroyPublicKey(pubKey); 
+ 	    pubKey = NULL;
+     	}
+diff -r 17b065430727 -r ae72d76f8d24 lib/ssl/sslerr.h
+--- a/lib/ssl/sslerr.h	Wed May 20 16:28:19 2015 -0700
++++ b/lib/ssl/sslerr.h	Tue Apr 07 13:23:09 2015 -0700
+@@ -198,6 +198,8 @@
+ 
+ SSL_ERROR_INAPPROPRIATE_FALLBACK_ALERT  = (SSL_ERROR_BASE + 131),
+ 
++SSL_ERROR_WEAK_SERVER_CERT_KEY          = (SSL_ERROR_BASE + 132),
++
+ SSL_ERROR_END_OF_LIST   /* let the c compiler determine the value of this. */
+ } SSLErrorCodes;
+ #endif /* NO_SECURITY_ERROR_ENUM */
