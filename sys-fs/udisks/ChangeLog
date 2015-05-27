@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/udisks
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.184 2015/05/18 02:21:32 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/ChangeLog,v 1.185 2015/05/27 12:20:01 zlogene Exp $
+
+  27 May 2015; Mikle Kolyada <zlogene@gentoo.org> udisks-2.1.4.ebuild:
+  arm stable wrt bug #545856
 
   18 May 2015; Mart Raudsepp <leio@gentoo.org> udisks-2.1.4.ebuild:
   Fix glib version requirement
