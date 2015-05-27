@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1077 2015/05/24 18:57:13 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1078 2015/05/27 16:01:17 vapier Exp $
+
+  27 May 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.6.4.ebuild,
+  gcc-4.7.4.ebuild, gcc-4.8.4.ebuild, gcc-4.9.2.ebuild, gcc-5.1.0.ebuild:
+  Fix hppa/microblaze/nios2 handling of -pthread/-D_REENTRANT #543114 by Jeroen
+  Roovers.
 
   24 May 2015; Matt Turner <mattst88@gentoo.org> gcc-4.7.4.ebuild:
   alpha stable, bug 548802.
