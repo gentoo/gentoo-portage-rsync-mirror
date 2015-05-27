@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tarsync
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.23 2014/01/26 22:38:39 ottxor Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/ChangeLog,v 1.24 2015/05/26 23:41:12 tamiko Exp $
+
+  26 May 2015; Matthias Maier <tamiko@gentoo.org>
+  +files/tarsync-0.2.1-gcc5.patch, tarsync-0.2.1-r1.ebuild:
+  fix compilation with gcc-5.1, bug #548314
 
   26 Jan 2014; Christoph Junghans <ottxor@gentoo.org> tarsync-0.2.1-r1.ebuild:
   added prefix support

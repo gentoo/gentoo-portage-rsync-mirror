@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/tarsync-0.2.1-r1.ebuild,v 1.7 2014/01/26 22:38:39 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tarsync/tarsync-0.2.1-r1.ebuild,v 1.8 2015/05/26 23:41:12 tamiko Exp $
 
 EAPI=5
 
@@ -26,6 +26,7 @@ pkg_setup() {
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-make.patch
+	epatch "${FILESDIR}"/${P}-gcc5.patch
 }
 
 src_install() {
