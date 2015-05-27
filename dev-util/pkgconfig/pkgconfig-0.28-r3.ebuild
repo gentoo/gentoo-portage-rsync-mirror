@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.15 2015/05/27 04:35:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.28-r3.ebuild,v 1.1 2015/05/27 04:35:41 tetromino Exp $
 
 EAPI=5
 
-inherit eutils flag-o-matic libtool multilib multilib-minimal
+inherit autotools eutils flag-o-matic libtool multilib multilib-minimal
 
 MY_P=pkg-config-${PV}
 
@@ -35,15 +35,20 @@ S=${WORKDIR}/${MY_P}
 DOCS=( AUTHORS NEWS README )
 
 src_prepare() {
+	epatch "${FILESDIR}"/${P}-strip_system_library_dirs_reliably.patch
+
 	sed -i -e "s|^prefix=/usr\$|prefix=${EPREFIX}/usr|" check/simple.pc || die #434320
+
+	# Large file support, fixed in git; requires eautoreconf; bug #550508
+	epatch "${FILESDIR}"/${P}-lfs.patch
 
 	epatch_user
 
-	if [[ ${PV} == *9999* ]]; then
+	#if [[ ${PV} == *9999* ]]; then
 		eautoreconf
-	else
-		elibtoolize # Required for FreeMiNT wrt #333429
-	fi
+	#else
+	#	elibtoolize # Required for FreeMiNT wrt #333429
+	#fi
 }
 
 multilib_src_configure() {

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.436 2015/05/23 17:35:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.437 2015/05/27 04:44:52 jer Exp $
+
+  27 May 2015; Jeroen Roovers <jer@gentoo.org> bash-4.3_p33-r2.ebuild:
+  Stable for HPPA PPC64 (bug #548756).
 
   23 May 2015; Mikle Kolyada <zlogene@gentoo.org> bash-4.3_p33-r2.ebuild:
   ia64 stable wrt bug #548756
