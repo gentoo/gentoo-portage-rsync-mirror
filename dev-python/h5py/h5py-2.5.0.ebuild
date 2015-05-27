@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.5.0.ebuild,v 1.1 2015/05/27 07:10:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/h5py-2.5.0.ebuild,v 1.2 2015/05/27 09:02:48 jlec Exp $
 
 EAPI=5
 
@@ -22,8 +22,9 @@ RDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
 	dev-python/six[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/cython[${PYTHON_USEDEP}]
+	dev-python/pkgconfig[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? (
 		dev-python/alabaster[${PYTHON_USEDEP}]
 		dev-python/sphinx[${PYTHON_USEDEP}]

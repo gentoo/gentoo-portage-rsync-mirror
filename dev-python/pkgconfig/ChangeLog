@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/pkgconfig
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkgconfig/ChangeLog,v 1.1 2015/05/27 09:03:02 jlec Exp $
+
+*pkgconfig-1.1.0 (27 May 2015)
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> +metadata.xml,
+  +pkgconfig-1.1.0.ebuild:
+  New package, ebuild written by me

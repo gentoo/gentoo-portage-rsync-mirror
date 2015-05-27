@@ -1,6 +1,9 @@
 # ChangeLog for www-client/fetch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/ChangeLog,v 1.10 2014/08/10 20:10:28 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/fetch/ChangeLog,v 1.11 2015/05/27 09:19:23 monsieurp Exp $
+
+  27 May 2015; Patrice Clement <monsieurp@gentoo.org> metadata.xml:
+  Take over maintainership.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fetch-1.0-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION
