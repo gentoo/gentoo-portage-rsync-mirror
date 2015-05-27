@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opusfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.15 2015/05/24 07:09:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.16 2015/05/27 05:41:15 jer Exp $
+
+  27 May 2015; Jeroen Roovers <jer@gentoo.org> opusfile-0.6.ebuild:
+  Stable for HPPA (bug #511778).
 
   24 May 2015; Jeroen Roovers <jer@gentoo.org> opusfile-0.6.ebuild:
   Stable for PPC64 (bug #511778).

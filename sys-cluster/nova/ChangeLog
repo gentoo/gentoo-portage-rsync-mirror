@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.98 2015/05/17 23:19:18 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.99 2015/05/27 05:48:31 prometheanfire Exp $
+
+  27 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  nova-2015.1.0-r2.ebuild, nova-2015.1.9999.ebuild:
+  adding missing dep for iscsi (lsiscsi)
 
 *nova-2015.1.0-r2 (17 May 2015)
 
