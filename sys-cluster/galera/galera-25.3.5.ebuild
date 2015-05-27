@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.5 2015/04/03 13:04:03 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/galera/galera-25.3.5.ebuild,v 1.6 2015/05/27 16:34:48 grknight Exp $
 
 EAPI=5
 
@@ -61,8 +61,6 @@ src_prepare() {
 }
 
 src_configure() {
-	# Bug 545376 - some arches need this for pthread
-	append-flags -D_REENTRANT
 	tc-export CC CXX
 	# strict_build_flags=0 disables -Werror, -pedantic, -Weffc++,
 	# and -Wold-style-cast

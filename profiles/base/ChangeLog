@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.800 2015/05/23 22:26:52 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.801 2015/05/27 17:00:04 grknight Exp $
+
+  27 May 2015; <grknight@gentoo.org> package.use.mask:
+  Mask s6 USE since all arches do not have sys-apps/s6 keyworded
 
   23 May 2015; Patrice Clement <monsieurp@gentoo.org> package.use.stable.mask:
   Remove dev-python/pyudev entry. Signed off by floppym.

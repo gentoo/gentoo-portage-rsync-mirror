@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.199 2015/05/20 22:48:16 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/package.use.mask,v 1.200 2015/05/27 17:00:04 grknight Exp $
 
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -17,6 +17,10 @@
 #
 
 #--- END OF EXAMPLES ---
+
+# Brian Evans <grknight@gentoo.org> (27 May 2015)
+# Unmask s6 USE since amd64 has it keyworded
+dev-db/mysql-init-scripts -s6
 
 # Michael Sterrett <mr_bones_@gentoo.org> (21 Apr 2015)
 # None of the fusionsound deps support multilib currently, maybe later.

@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.152 2015/05/20 22:48:51 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/x86/package.use.mask,v 1.153 2015/05/27 17:00:04 grknight Exp $
 
 # This file requires >=portage-2.1.1
+
+# Brian Evans <grknight@gentoo.org> (27 May 2015)
+# Unmask s6 USE since x86 has it keyworded
+dev-db/mysql-init-scripts -s6
 
 # Ben de Groot <yngwin@gentoo.org> (15 Mar 2015)
 # media-libs/libbdplus is keyworded on x86, so unmask the useflag

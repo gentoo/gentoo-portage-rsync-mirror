@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/glimmer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.13 2015/05/27 11:01:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/glimmer/ChangeLog,v 1.14 2015/05/27 16:32:11 jlec Exp $
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> -glimmer-3.02-r2.ebuild:
+  Drop old
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> glimmer-3.02-r3.ebuild:
   Stable for x86, wrt bug #550436
