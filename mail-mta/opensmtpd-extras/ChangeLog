@@ -1,0 +1,10 @@
+# ChangeLog for mail-mta/opensmtpd-extras
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd-extras/ChangeLog,v 1.1 2015/05/27 13:15:25 zx2c4 Exp $
+
+*opensmtpd-extras-5.4.5.201505202252 (27 May 2015)
+
+  27 May 2015; Jason A. Donenfeld <zx2c4@gentoo.org>
+  +files/opensmtpd-extras-libevent-version-macro.patch, +metadata.xml,
+  +opensmtpd-extras-5.4.5.201505202252.ebuild:
+  Initial import

@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure prepare
+DEPEND=mail-mta/opensmtpd filter-python? ( dev-lang/python:2.7 ) filter-perl? ( dev-lang/perl ) table-sqlite? ( dev-db/sqlite:3 ) table-mysql? ( virtual/mysql ) table-postgres? ( dev-db/postgresql ) table-redis? ( dev-libs/hiredis ) table-python? ( dev-lang/python:2.7 ) scheduler-python? ( dev-lang/python:2.7 ) queue-python? ( dev-lang/python:2.7 )
+DESCRIPTION=Extra tables, filters, and various other addons for OpenSMTPD
+EAPI=5
+HOMEPAGE=https://github.com/OpenSMTPD/OpenSMTPD-extras
+IUSE=filter-dnsbl filter-monkey filter-perl filter-python filter-stub filter-trace filter-void queue-null queue-python queue-ram queue-stub table-ldap table-mysql table-postgres table-redis table-socketmap table-passwd table-python table-sqlite scheduler-ram scheduler-stub scheduler-python
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC BSD BSD-1 BSD-2 BSD-4
+RDEPEND=mail-mta/opensmtpd filter-python? ( dev-lang/python:2.7 ) filter-perl? ( dev-lang/perl ) table-sqlite? ( dev-db/sqlite:3 ) table-mysql? ( virtual/mysql ) table-postgres? ( dev-db/postgresql ) table-redis? ( dev-libs/hiredis ) table-python? ( dev-lang/python:2.7 ) scheduler-python? ( dev-lang/python:2.7 ) queue-python? ( dev-lang/python:2.7 )
+SLOT=0
+SRC_URI=https://www.opensmtpd.org/archives/opensmtpd-extras-201505202252.tar.gz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=9b670ff87748febee75a4484828cc840

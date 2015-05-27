@@ -1,6 +1,9 @@
 # ChangeLog for app-text/t1utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.88 2015/05/19 07:25:23 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/t1utils/ChangeLog,v 1.89 2015/05/27 13:01:07 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> t1utils-1.39.ebuild:
+  Stable for arm, wrt bug #548638
 
   19 May 2015; Agostino Sarubbo <ago@gentoo.org> t1utils-1.39.ebuild:
   Stable for x86, wrt bug #548638

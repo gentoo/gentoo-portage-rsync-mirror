@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dpkg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.326 2015/05/19 04:28:19 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dpkg/ChangeLog,v 1.327 2015/05/27 13:01:04 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> dpkg-1.17.25.ebuild:
+  Stable for arm, wrt bug #546108
 
 *dpkg-1.18.0 (19 May 2015)
 
