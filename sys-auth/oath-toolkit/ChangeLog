@@ -1,6 +1,9 @@
 # ChangeLog for sys-auth/oath-toolkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/oath-toolkit/ChangeLog,v 1.1 2015/03/04 06:42:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/oath-toolkit/ChangeLog,v 1.2 2015/05/27 06:25:04 swegener Exp $
+
+  27 May 2015; Sven Wegener <swegener@gentoo.org> oath-toolkit-2.4.1.ebuild:
+  DEPEND on dev-util/gtk-doc-am for gtk-doc.m4.
 
 *oath-toolkit-2.4.1 (04 Mar 2015)
 

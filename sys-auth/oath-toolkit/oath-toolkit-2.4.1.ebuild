@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/oath-toolkit/oath-toolkit-2.4.1.ebuild,v 1.1 2015/03/04 06:42:24 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/oath-toolkit/oath-toolkit-2.4.1.ebuild,v 1.2 2015/05/27 06:25:04 swegener Exp $
 EAPI=5
 
 inherit pam eutils autotools
@@ -17,7 +17,8 @@ RDEPEND="
 	pam? ( virtual/pam )
 	pskc? ( dev-libs/xmlsec )"
 DEPEND="${RDEPEND}
-	test? ( dev-libs/libxml2 )"
+	test? ( dev-libs/libxml2 )
+	dev-util/gtk-doc-am"
 
 src_prepare() {
 	# These tests need git/cvs and don't reflect anything in the final app
