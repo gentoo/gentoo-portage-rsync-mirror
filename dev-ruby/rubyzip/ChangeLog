@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.53 2015/05/03 11:57:13 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.54 2015/05/27 06:50:51 mrueg Exp $
+
+*rubyzip-1.1.7-r1 (27 May 2015)
+
+  27 May 2015; Manuel Rüger <mrueg@gentoo.org> +rubyzip-1.1.7-r1.ebuild,
+  -rubyzip-1.1.6.ebuild, rubyzip-1.1.7.ebuild:
+  Create stable candidate. Remove old.
 
   03 May 2015; Jeroen Roovers <jer@gentoo.org> rubyzip-0.9.9-r1.ebuild:
   Stable for PPC64 (bug #542574).

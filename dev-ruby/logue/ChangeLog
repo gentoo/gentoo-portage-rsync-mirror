@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/logue
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.18 2015/04/11 09:11:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/logue/ChangeLog,v 1.19 2015/05/27 06:34:51 mrueg Exp $
+
+*logue-1.0.2-r2 (27 May 2015)
+
+  27 May 2015; Manuel Rüger <mrueg@gentoo.org> +logue-1.0.2-r2.ebuild,
+  logue-1.0.2-r1.ebuild:
+  Create stable candidate.
 
   11 Apr 2015; Hans de Graaff <graaff@gentoo.org> logue-1.0.2-r1.ebuild:
   Document ruby22 status.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.11 2014/01/08 06:24:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/amule/amule-2.3.1.ebuild,v 1.12 2015/05/27 06:38:18 zlg Exp $
 
 EAPI="2"
 
@@ -26,7 +26,8 @@ DEPEND=">=dev-libs/crypto++-5
 	remote? ( >=media-libs/libpng-1.2.0
 	unicode? ( >=media-libs/gd-2.0.26 ) )
 	X? ( >=x11-libs/wxGTK-2.8.12:2.8[X] )
-	!X? ( >=x11-libs/wxGTK-2.8.12:2.8 )"
+	!X? ( >=x11-libs/wxGTK-2.8.12:2.8 )
+	!net-p2p/imule"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {

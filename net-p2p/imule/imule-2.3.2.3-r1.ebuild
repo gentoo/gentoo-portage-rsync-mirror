@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/imule/imule-2.3.2.3-r1.ebuild,v 1.1 2015/05/26 13:25:19 zlg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/imule/imule-2.3.2.3-r1.ebuild,v 1.2 2015/05/27 06:38:18 zlg Exp $
 
 EAPI="5"
 WX_GTK_VER="2.8"
@@ -26,7 +26,8 @@ DEPEND="x11-libs/wxGTK:2.8
 	>=net-libs/libupnp-1.6.6
 	sys-devel/flex
 	sys-apps/texinfo
-	>=dev-libs/crypto++-5.1"
+	>=dev-libs/crypto++-5.1
+	!net-p2p/amule"
 RDEPEND="x11-libs/wxGTK:2.8 net-p2p/i2p"
 
 S="${WORKDIR}/${MY_PN}-${PV}-src"

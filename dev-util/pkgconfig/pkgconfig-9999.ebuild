@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.15 2015/05/27 04:35:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.16 2015/05/27 06:32:02 tetromino Exp $
 
 EAPI=5
+
+# 1.12 is only needed for tests due to some am__check_pre / LOG_DRIVER
+# weirdness with "/bin/bash /bin/sh" in arguments chain with >=1.13
+WANT_AUTOMAKE=1.12
 
 inherit eutils flag-o-matic libtool multilib multilib-minimal
 

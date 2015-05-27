@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.1.6.ebuild,v 1.1 2014/10/28 18:10:09 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.1.7-r1.ebuild,v 1.1 2015/05/27 06:50:51 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="Changelog.md README.md TODO"
@@ -24,7 +24,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="${DEPEND} test? ( app-arch/zip )"
 
-ruby_add_bdepend "test? ( dev-ruby/minitest:0 )"
+ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4:5 )"
 
 all_ruby_install() {
 	all_fakegem_install
@@ -39,8 +39,4 @@ all_ruby_prepare() {
 
 	# Avoid dependency on bundler
 	sed -i -e '/bundler/ s:^:#:' Rakefile || die
-
-	# rubyzip's tests will fail when run in random order, so require a
-	# minitest version that still preserves ordering.
-	sed -i -e '2igem "minitest", "~> 4.0"' test/test_helper.rb || die
 }
