@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/json-c
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.47 2014/11/30 11:34:16 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/json-c/ChangeLog,v 1.48 2015/05/27 04:11:13 mattst88 Exp $
+
+  27 May 2015; Matt Turner <mattst88@gentoo.org> json-c-0.12.ebuild:
+  Added ~mips.
 
   30 Nov 2014; Michał Górny <mgorny@gentoo.org> json-c-0.11-r1.ebuild,
   json-c-0.12.ebuild:
