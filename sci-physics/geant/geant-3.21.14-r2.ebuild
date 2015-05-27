@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.22 2012/10/24 19:42:46 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/geant/geant-3.21.14-r2.ebuild,v 1.23 2015/05/27 14:57:09 bircoph Exp $
 
 EAPI=2
 
@@ -12,7 +12,7 @@ DEB_PR=8
 DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN's detector description and simulation Tool"
-HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/geant/index.html"
+HOMEPAGE="https://wiki.gentoo.org/wiki/No_homepage"
 SRC_URI="
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"

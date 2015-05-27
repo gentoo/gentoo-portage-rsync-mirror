@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.15 2013/02/20 16:48:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/cernlib-2006-r3.ebuild,v 1.16 2015/05/27 14:52:33 bircoph Exp $
 
 EAPI=3
 
@@ -12,7 +12,7 @@ DEB_PR=14
 DEB_P=${DEB_PN}_${DEB_PV}
 
 DESCRIPTION="CERN program library for High Energy Physics"
-HOMEPAGE="http://wwwasd.web.cern.ch/wwwasd/cernlib"
+HOMEPAGE="https://cernlib.web.cern.ch/cernlib/"
 SRC_URI="
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}.orig.tar.gz
 	mirror://debian/pool/main/${DEB_PN:0:1}/${DEB_PN}/${DEB_P}-${DEB_PR}.diff.gz"

@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.119 2015/05/26 14:04:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.120 2015/05/27 15:01:02 vapier Exp $
+
+*crossdev-20150527 (27 May 2015)
+
+  27 May 2015; Mike Frysinger <vapier@gentoo.org> +crossdev-20150527.ebuild:
+  Version bump.
 
 *crossdev-20150526 (26 May 2015)
 

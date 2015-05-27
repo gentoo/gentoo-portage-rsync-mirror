@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.34 2013/05/23 20:09:32 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib/ChangeLog,v 1.35 2015/05/27 14:52:33 bircoph Exp $
+
+  27 May 2015; Andrew Savchenko <bircoph@gentoo.org> cernlib-2006-r3.ebuild,
+  cernlib-2006-r5.ebuild:
+  Update homepage.
 
   23 May 2013; Sébastien Fabbro <bicatali@gentoo.org> -cernlib-2006-r4.ebuild,
   cernlib-2006-r5.ebuild:
