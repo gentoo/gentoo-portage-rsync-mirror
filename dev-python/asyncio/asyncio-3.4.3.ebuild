@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/asyncio/asyncio-3.4.2.ebuild,v 1.6 2015/05/27 08:37:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/asyncio/asyncio-3.4.3.ebuild,v 1.1 2015/05/27 08:37:34 jlec Exp $
 
 EAPI=5
 
@@ -19,3 +19,8 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
+
+python_test() {
+	${PYTHON} runtests.py || die
+	PYTHONASYNCIODEBUG=1 ${PYTHON} runtests.py || die
+}

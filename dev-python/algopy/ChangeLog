@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/algopy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/algopy/ChangeLog,v 1.1 2015/03/03 15:08:25 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/algopy/ChangeLog,v 1.2 2015/05/27 09:00:23 jlec Exp $
+
+*algopy-0.5.2 (27 May 2015)
+
+  27 May 2015; Justin Lecher <jlec@gentoo.org> +algopy-0.5.2.ebuild:
+  Version Bump
 
 *algopy-0.5.1 (03 Mar 2015)
 
