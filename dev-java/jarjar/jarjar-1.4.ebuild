@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-1.4.ebuild,v 1.2 2015/05/01 01:00:07 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/jarjar-1.4.ebuild,v 1.4 2015/05/27 09:47:54 monsieurp Exp $
 EAPI=5
 
 JAVA_PKG_IUSE="doc source test"
@@ -20,13 +20,25 @@ CDEPEND="
 	dev-java/asm:4
 	dev-java/gnu-regexp:1
 	dev-java/java-getopt:1
-	>=dev-java/ant-core-1.7.0"
+	dev-java/ant-core:0"
 RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.6
-	test? ( dev-java/ant-junit )
 	app-arch/unzip
 	${CDEPEND}"
+
+RESTRICT='test'
+
+# FIXME: tests fail to pass.
+#src_test() {
+#	# regenerates this
+#	cp -i dist/${P}.jar "${T}" || die
+#	cd lib || die
+#	java-pkg_jar-from junit
+#	cd ..
+#	ANT_TASKS="ant-junit" eant test
+#	cp "${T}/${P}.jar" dist || die
+#}
 
 src_unpack() {
 	unpack ${A}
@@ -52,17 +64,6 @@ src_prepare() {
 
 ANT_TASKS="none"
 EANT_BUILD_TARGET="jar-nojarjar"
-
-# FIXME: tests fail to pass.
-#src_test() {
-#	# regenerates this
-#	cp -i dist/${P}.jar "${T}" || die
-#	cd lib || die
-#	java-pkg_jar-from junit
-#	cd ..
-#	ANT_TASKS="ant-junit" eant test
-#	cp "${T}/${P}.jar" dist || die
-#}
 
 src_install() {
 	java-pkg_newjar dist/${P}.jar ${PN}.jar

@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jarjar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.37 2015/05/01 01:00:07 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jarjar/ChangeLog,v 1.39 2015/05/27 09:47:54 monsieurp Exp $
+
+  27 May 2015; Patrice Clement <monsieurp@gentoo.org> jarjar-1.4.ebuild:
+  Disable tests altogether with RESTRICT=test.
+
+  27 May 2015; Patrice Clement <monsieurp@gentoo.org> jarjar-1.4.ebuild:
+  Declare dependencies with SLOTs to avoid java-pkg_ensure-dep QA warnings. Fix
+  bug 550140.
 
   01 May 2015; Patrice Clement <monsieurp@gentoo.org> jarjar-1.4.ebuild:
   Adjust SLOTs in CDEPEND.
