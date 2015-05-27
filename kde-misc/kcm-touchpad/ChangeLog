@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kcm-touchpad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-touchpad/ChangeLog,v 1.3 2015/05/21 10:31:01 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-touchpad/ChangeLog,v 1.4 2015/05/27 11:08:10 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> kcm-touchpad-1.1.ebuild:
+  Stable for x86, wrt bug #549770
 
   21 May 2015; Agostino Sarubbo <ago@gentoo.org> kcm-touchpad-1.1.ebuild:
   Stable for amd64, wrt bug #549770

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/to-the-moon-0.ebuild,v 1.4 2015/05/21 10:47:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/to-the-moon/to-the-moon-0.ebuild,v 1.5 2015/05/27 11:29:29 ago Exp $
 
 # TODO: unbundling sdl-sound breaks the game
 
@@ -15,7 +15,7 @@ SRC_URI="${MY_PN}_linux_1389114090.sh"
 
 LICENSE="all-rights-reserved bundled-libs? ( LGPL-2 LGPL-2.1 ZLIB )"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="bundled-libs"
 RESTRICT="fetch bindist splitdebug"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.145 2015/05/23 08:16:59 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.146 2015/05/27 11:24:14 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> virtualenv-12.0.5.ebuild:
+  Stable for x86, wrt bug #538528
 
 *virtualenv-13.0.1 (23 May 2015)
 

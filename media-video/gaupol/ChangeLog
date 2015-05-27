@@ -1,6 +1,11 @@
 # ChangeLog for media-video/gaupol
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.18 2014/05/22 21:16:49 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.19 2015/05/27 11:12:26 mgorny Exp $
+
+*gaupol-0.28.2 (27 May 2015)
+
+  27 May 2015; Michał Górny <mgorny@gentoo.org> +gaupol-0.28.2.ebuild:
+  Version bump. Bug #449306. Ebuild from Louis Sautier with some minor changes.
 
 *gaupol-0.19.2-r1 (22 May 2014)
 

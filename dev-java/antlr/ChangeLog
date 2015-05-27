@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.114 2015/05/20 20:32:44 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.116 2015/05/27 11:28:25 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> antlr-2.7.7-r5.ebuild:
+  Stable for x86, wrt bug #529558
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> antlr-4.4.ebuild:
+  Stable for x86, wrt bug #549586
 
   20 May 2015; Patrice Clement <monsieurp@gentoo.org>
   +files/antlr-4.4-build.xml.patch, antlr-4.4.ebuild:

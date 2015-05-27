@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsoup/jsoup-1.8.1.ebuild,v 1.2 2015/05/18 13:15:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsoup/jsoup-1.8.1.ebuild,v 1.3 2015/05/27 11:11:40 ago Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="https://github.com/jhy/${PN}/archive/${PN}-${MY_PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 IUSE=""
 

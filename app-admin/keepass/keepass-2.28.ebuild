@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.28.ebuild,v 1.2 2015/05/27 10:14:50 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/keepass/keepass-2.28.ebuild,v 1.3 2015/05/27 11:16:29 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}-Source.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="aot"
 
 COMMON_DEPEND=">=dev-lang/mono-2.10.5"

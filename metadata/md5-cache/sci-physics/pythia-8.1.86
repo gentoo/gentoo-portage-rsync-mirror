@@ -4,10 +4,10 @@ DESCRIPTION=Lund Monte Carlo high-energy physics event generator
 EAPI=5
 HOMEPAGE=http://pythia8.hepforge.org/
 IUSE=doc examples gzip +hepmc static-libs
-KEYWORDS=amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=gzip? ( dev-libs/boost sys-libs/zlib ) hepmc? ( sci-physics/hepmc:0= )
 SLOT=8
 SRC_URI=http://home.thep.lu.se/~torbjorn/pythia8/pythia8186.tgz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=d362074dd4411667f0298d7e88b799e9
+_md5_=e0d4b1b5904d6ecc57fad915e5e23cde

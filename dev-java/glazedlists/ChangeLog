@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/glazedlists
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.25 2015/05/27 10:14:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glazedlists/ChangeLog,v 1.26 2015/05/27 11:15:33 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org> glazedlists-1.8.0.ebuild:
+  Stable for x86, wrt bug #549378
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> glazedlists-1.8.0.ebuild:
   Stable for amd64, wrt bug #549378

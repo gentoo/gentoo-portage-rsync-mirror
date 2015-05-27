@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/android-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/ChangeLog,v 1.6 2015/05/21 13:29:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-tools/ChangeLog,v 1.7 2015/05/27 11:19:49 ago Exp $
+
+  27 May 2015; Agostino Sarubbo <ago@gentoo.org>
+  android-tools-0_p20130218.ebuild:
+  Stable for x86, wrt bug #543800
 
   21 May 2015; Agostino Sarubbo <ago@gentoo.org>
   android-tools-0_p20130218.ebuild:
