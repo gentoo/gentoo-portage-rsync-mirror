@@ -1,10 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.8 2015/04/21 18:41:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-9999.ebuild,v 1.9 2015/05/27 01:41:40 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
-
 inherit cmake-utils wxwidgets subversion gnome2-utils fdo-mime games
 
 ESVN_REPO_URI="https://vbam.svn.sourceforge.net/svnroot/vbam/trunk"
@@ -54,7 +53,7 @@ src_prepare() {
 		CMakeLists.txt src/wx/CMakeLists.txt || die
 
 	# fix desktop file QA warnings
-	edos2unix src/gtk/gvbam.desktop src/wx/wxvbam.desktop || die
+	edos2unix src/gtk/gvbam.desktop src/wx/wxvbam.desktop
 }
 
 src_configure() {
@@ -84,9 +83,11 @@ src_install() {
 	cmake-utils_src_install
 
 	if use sdl ; then
-		dodoc doc/ReadMe.SDL.txt || die
-		doman debian/vbam.1 || die
+		dodoc doc/ReadMe.SDL.txt
+		doman src/debian/vbam.1
 	fi
+	use wxwidgets && doman src/debian/wxvbam.1
+	use gtk && doman src/debian/gvbam.1
 
 	prepgamesdirs
 }
