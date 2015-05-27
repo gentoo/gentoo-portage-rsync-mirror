@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1053 2015/05/27 13:55:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1054 2015/05/27 14:02:58 vapier Exp $
+
+  27 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/pkg_pretend.eblit, files/eblits/pkg_setup.eblit:
+  Relocate all pkg_setup checks to pkg_pretend #547420#31 by Pacho Ramos.
 
   27 May 2015; Mike Frysinger <vapier@gentoo.org>
   +files/eblits/pkg_pretend.eblit, files/eblits/pkg_preinst.eblit,
