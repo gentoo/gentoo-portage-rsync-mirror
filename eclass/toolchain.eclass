@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.671 2015/05/26 08:32:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.672 2015/05/27 10:29:03 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -1818,9 +1818,11 @@ gcc_movelibs() {
 # -are-, and not where they -used- to be.  also, any dependencies we have
 # on our own .la files need to be updated.
 fix_libtool_libdir_paths() {
+	local libpath="$1"
+
 	pushd "${D}" >/dev/null
 
-	pushd "./${1}" >/dev/null
+	pushd "./${libpath}" >/dev/null
 	local dir="${PWD#${D%/}}"
 	local allarchives=$(echo *.la)
 	allarchives="\(${allarchives// /\\|}\)"
@@ -1832,9 +1834,9 @@ fix_libtool_libdir_paths() {
 	# Would be nice to combine these, but -maxdepth can not be specified
 	# on sub-expressions.
 	find "./${PREFIX}"/lib* -maxdepth 3 -name '*.la' \
-		-exec sed -i -e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${LIBPATH}/\1:g" {} + || die
+		-exec sed -i -e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${libpath}/\1:g" {} + || die
 	find "./${dir}/" -maxdepth 1 -name '*.la' \
-		-exec sed -i -e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${LIBPATH}/\1:g" {} + || die
+		-exec sed -i -e "/^dependency_libs=/s:/[^ ]*/${allarchives}:${libpath}/\1:g" {} + || die
 
 	popd >/dev/null
 }
