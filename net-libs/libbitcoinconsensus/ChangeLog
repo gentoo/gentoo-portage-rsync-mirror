@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libbitcoinconsensus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libbitcoinconsensus/ChangeLog,v 1.5 2015/03/14 19:23:07 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libbitcoinconsensus/ChangeLog,v 1.6 2015/05/27 00:55:08 blueness Exp $
+
+*libbitcoinconsensus-0.10.1 (27 May 2015)
+
+  27 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  +libbitcoinconsensus-0.10.1.ebuild:
+  Version bump.
 
   14 Mar 2015; Anthony G. Basile <blueness@gentoo.org>
   libbitcoinconsensus-0.10.0.ebuild:
