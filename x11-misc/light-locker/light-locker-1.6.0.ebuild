@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/light-locker/light-locker-1.6.0.ebuild,v 1.1 2015/03/27 16:40:06 calchan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/light-locker/light-locker-1.6.0.ebuild,v 1.2 2015/05/27 17:27:12 calchan Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="dev-libs/dbus-glib
 	gtk3? ( x11-libs/gtk+:3 )
 	screensaver? ( x11-libs/libXScrnSaver )
 	systemd? ( sys-apps/systemd )
-	upower? ( sys-power/upower-pm-utils )"
+	upower? ( || ( sys-power/upower sys-power/upower-pm-utils ) )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser

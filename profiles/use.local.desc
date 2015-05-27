@@ -1320,6 +1320,7 @@ dev-db/mysql-cluster:profiling - Add support for statement profiling (requires U
 dev-db/mysql-cluster:systemtap - Build support for profiling and tracing using dev-util/systemtap
 dev-db/mysql-cluster:test - Install upstream testsuites for end use.
 dev-db/mysql-connector-c++:gcov - Build coverage support
+dev-db/mysql-init-scripts:s6 - Install an OpenRC service that monitors using sys-apps/s6 instead of using start-stop-daemon
 dev-db/percona-server:cluster - Add support for NDB clustering (deprecated)
 dev-db/percona-server:community - Enables the community features from upstream.
 dev-db/percona-server:embedded - Build embedded server (libmysqld)

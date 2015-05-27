@@ -1,0 +1,18 @@
+#!/bin/sh
+# Copyright 1999-2015 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/run-s6,v 1.1 2015/05/27 17:02:26 grknight Exp $
+
+get_config() {
+	my_print_defaults --config-file="$1" mysqld |
+	sed -n -e "s/^--$2=//p"
+}
+
+SVCNAME=$(cd `dirname $0` && pwd | awk -F/ '{ print $NF }' )
+
+source "${ROOT:-/}etc/conf.d/${SVCNAME}"
+
+MY_CNF="${MY_CNF:-/etc/${SVCNAME}/my.cnf}"
+
+basedir=$(get_config "${MY_CNF}" basedir | tail -n1)
+exec "${basedir}"/sbin/mysqld --defaults-file="${MY_CNF}" ${MY_ARGS} 2>&1
