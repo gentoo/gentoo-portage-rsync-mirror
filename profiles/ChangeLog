@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10017 2015/05/28 11:54:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10018 2015/05/28 13:24:22 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  28 May 2015; Mike Gilbert <floppym@gentoo.org> package.mask:
+  Unmask dev-lang/python-2.7.10.
 
   28 May 2015; Lars Wendler <polynomial-c@gentoo.org> package.mask:
   Masked =dev-lang/python-2.7.10 until bug #550632 is resolved.

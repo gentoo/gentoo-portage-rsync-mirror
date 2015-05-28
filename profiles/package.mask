@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16538 2015/05/28 11:52:58 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16539 2015/05/28 13:24:22 floppym Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,10 +29,6 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
-
-# Lars Wendler <polynomial-c@gentoo.org> (28 May 2015)
-# Masked until patches are available (bug #550632)
-=dev-lang/python-2.7.10
 
 # Matthias Maier <tamiko@gentoo.org> (27 May 2015)
 # on behalf of Andreas K. Huettel <dilfridge@gentoo.org>
