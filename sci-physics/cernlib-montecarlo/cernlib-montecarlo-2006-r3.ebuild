@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.7 2015/05/27 14:46:30 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/cernlib-montecarlo-2006-r3.ebuild,v 1.8 2015/05/28 10:29:36 ago Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ SRC_URI="
 SLOT="0"
 LICENSE="GPL-2 LGPL-2 BSD"
 IUSE="+herwig"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~x86 ~amd64-linux ~x86-linux"
 
 RDEPEND="
 	x11-libs/motif:0

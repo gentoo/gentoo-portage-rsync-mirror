@@ -1,37 +1,30 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.1.ebuild,v 1.7 2015/05/09 14:07:43 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/opus-1.1.ebuild,v 1.8 2015/05/28 10:06:37 yngwin Exp $
 
 EAPI=5
+AUTOTOOLS_AUTORECONF="1"
+inherit autotools-multilib
 
 if [[ ${PV} == *9999 ]] ; then
-	SCM="git-2"
+	inherit git-2
 	EGIT_REPO_URI="git://git.opus-codec.org/opus.git"
-	AUTOTOOLS_AUTORECONF="1"
+else
+	SRC_URI="http://downloads.xiph.org/releases/${PN}/${P}.tar.gz"
+	KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd"
 fi
 
-inherit autotools-multilib ${SCM}
-
-MY_P=${P/_/-}
 DESCRIPTION="Open versatile codec designed for interactive speech and audio transmission over the internet"
 HOMEPAGE="http://opus-codec.org/"
 SRC_URI="http://downloads.xiph.org/releases/opus/${P}.tar.gz"
-if [[ ${PV} == *9999 ]] ; then
-	SRC_URI=""
-elif [[ ${PV%_p*} != ${PV} ]] ; then # Gentoo snapshot
-	SRC_URI="http://dev.gentoo.org/~lu_zero/${PN}/${P}.tar.xz"
-else # Official release
-	SRC_URI="http://downloads.xiph.org/releases/${PN}/${MY_P}.tar.gz"
-fi
 
 LICENSE="BSD-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ~ia64 ppc ppc64 ~sparc x86 ~amd64-fbsd"
 IUSE="custom-modes doc static-libs"
 
 DEPEND="doc? ( app-doc/doxygen )"
 
-S=${WORKDIR}/${MY_P}
+PATCHES=( "${FILESDIR}/1.1-fix-configure.ac-shell-bug.patch" ) # bug 510918
 
 src_configure() {
 	local myeconfargs=(

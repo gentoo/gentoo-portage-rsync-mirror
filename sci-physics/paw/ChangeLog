@@ -1,6 +1,9 @@
 # ChangeLog for sci-physics/paw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.28 2015/05/27 15:36:27 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/paw/ChangeLog,v 1.29 2015/05/28 10:29:45 ago Exp $
+
+  28 May 2015; Agostino Sarubbo <ago@gentoo.org> paw-2.14.04-r4.ebuild:
+  Stable for amd64, wrt bug #550572
 
   27 May 2015; Andrew Savchenko <bircoph@gentoo.org> paw-2.14.04-r2.ebuild,
   paw-2.14.04-r3.ebuild, paw-2.14.04-r4.ebuild:

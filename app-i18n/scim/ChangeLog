@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.163 2015/04/20 19:30:48 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/ChangeLog,v 1.164 2015/05/28 10:30:09 ago Exp $
+
+  28 May 2015; Agostino Sarubbo <ago@gentoo.org> scim-1.4.14.ebuild:
+  Stable for amd64, wrt bug #525016
 
   20 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
   -files/scim-1.4.7-syslibltdl.patch,
