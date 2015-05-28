@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/golang/tools/archive/3d1847243ea4f07666a91110f48e79e43396603d.tar.gz -> go-tools-1.4.2_p20150520.tar.gz
-_md5_=61b947c5ce2f75592a01c6e8601c10ff
+_md5_=29d68ac3f8d9570cecfa76c57f720d4e

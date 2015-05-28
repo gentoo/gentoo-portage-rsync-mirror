@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/go-tools-9999.ebuild,v 1.4 2015/05/24 21:06:53 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-tools/go-tools-9999.ebuild,v 1.5 2015/05/28 07:11:30 zmedico Exp $
 
 EAPI=5
 inherit git-r3
@@ -63,9 +63,10 @@ src_install() {
 	doexe "${WORKDIR}"/bin/*
 
 	# godoc ends up in ${GOROOT}/bin
+	dodir /usr/bin
 	while read -r -d '' x; do
 		doexe "${x}"
-		dosym ../lib/go/bin/${x##*/} /usr/bin/${x##*/}
+		ln "${ED}"usr/{lib/go/bin,bin}/${x##*/} || die
 	done < <(find "${GOROOT}/bin" -type f -print0)
 
 	# cover and vet end up in ${GOROOT}/pkg/tool/linux_amd64
