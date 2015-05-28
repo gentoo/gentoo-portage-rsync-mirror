@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/cryptography
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.46 2015/05/17 08:00:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/ChangeLog,v 1.47 2015/05/28 18:50:42 jlec Exp $
+
+  28 May 2015; Justin Lecher <jlec@gentoo.org> cryptography-0.8.2.ebuild,
+  cryptography-0.9.ebuild:
+  Fix dependencies, thanks Arfrever
 
   17 May 2015; Jeroen Roovers <jer@gentoo.org> cryptography-0.9.ebuild:
   Mark ~hppa (bug #549518).

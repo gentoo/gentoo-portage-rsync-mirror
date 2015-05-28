@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.8.2.ebuild,v 1.3 2015/05/16 14:15:53 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cryptography/cryptography-0.8.2.ebuild,v 1.4 2015/05/28 18:50:42 jlec Exp $
 
 EAPI=5
 
@@ -22,8 +22,8 @@ RDEPEND="
 	dev-libs/openssl:0
 	>=dev-python/six-1.4.1[${PYTHON_USEDEP}]
 	dev-python/pyasn1[${PYTHON_USEDEP}]
-	>=dev-python/cffi-0.8:=[$(python_gen_usedep 'python*')]
-	dev-python/enum34[$(python_gen_usedep python2_7 python3_3 pypy)]"
+	$(python_gen_cond_dep '>=dev-python/cffi-0.8:=[${PYTHON_USEDEP}]' 'python*')
+	$(python_gen_cond_dep 'dev-python/enum34[${PYTHON_USEDEP}]' python2_7 python3_3 pypy)"
 DEPEND="${RDEPEND}
 	test? (
 		~dev-python/cryptography-vectors-${PV}[${PYTHON_USEDEP}]
