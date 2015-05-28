@@ -8,5 +8,5 @@ RDEPEND=app-arch/bzip2 dev-libs/expat dev-libs/glib dev-libs/libffi sys-apps/uti
 RESTRICT=mirror strip
 SLOT=0
 SRC_URI=amd64? ( https://demo.vidyo.com/upload/VidyoDesktopInstaller-ubuntu64-TAG_VD_3_3_0_127.deb ) x86? ( https://demo.vidyo.com/upload/VidyoDesktopInstaller-ubuntu-TAG_VD_3_3_0_127.deb )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=b0b37bd5a461c51fa8fcac1c807fe175

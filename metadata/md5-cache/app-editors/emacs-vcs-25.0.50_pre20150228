@@ -10,5 +10,5 @@ RDEPEND=sys-libs/ncurses >=app-eselect/eselect-emacs-1.16 >=app-emacs/emacs-comm
 REQUIRED_USE=?? ( aqua X )
 SLOT=25
 SRC_URI=http://dev.gentoo.org/~ulm/distfiles/emacs-25.0.50_pre20150228.tar.xz mirror://gnu-alpha/emacs/pretest/emacs-25.0.50_pre20150228.tar.xz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=9f31fd924f9908d157a31ddbc3477b26

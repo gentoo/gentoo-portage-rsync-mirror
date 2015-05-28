@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=jbig? ( media-libs/jbigkit ) jpeg? ( virtual/jpeg:0 ) jpeg2k? ( media-libs/jasper ) png? ( >=media-libs/libpng-1.4:0 ) rle? ( media-libs/urt ) svga? ( media-libs/svgalib ) tiff? ( >=media-libs/tiff-3.5.5:0 ) xml? ( dev-libs/libxml2 ) zlib? ( sys-libs/zlib ) X? ( x11-libs/libX11 )
 SLOT=0
 SRC_URI=mirror://gentoo/netpbm-10.51.00.tar.xz mirror://gentoo/netpbm-10.51.00-libpng-1.5.patch.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=e3cfdbf8d769f4800540b776d7deae05

@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND==media-libs/freetype-2* bzip2? ( app-arch/bzip2 ) zlib? ( sys-libs/zlib ) gif? ( >=media-libs/giflib-4.1.0 ) png? ( media-libs/libpng:0 ) jpeg? ( virtual/jpeg:0 ) tiff? ( media-libs/tiff:0 ) X? ( x11-libs/libX11 x11-libs/libXext ) mp3? ( media-libs/libid3tag ) nls? ( sys-devel/gettext )
 SLOT=0
 SRC_URI=mirror://sourceforge/enlightenment/imlib2-1.4.6.tar.gz
-_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=enlightenment	98392d364f7f4c6cde8a516cbc298472	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=0049f55feb97cc5cea6c20553ede5ea3

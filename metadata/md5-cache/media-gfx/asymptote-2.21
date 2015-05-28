@@ -10,5 +10,5 @@ RDEPEND=>=sys-libs/readline-4.3-r5:0 >=sys-libs/ncurses-5.4-r5 imagemagick? ( me
 REQUIRED_USE=offscreen? ( opengl )
 SLOT=0
 SRC_URI=mirror://sourceforge/asymptote/asymptote-2.21.src.tgz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	base	87f7447ccfc06fd0729ff4684e11e0d6	elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	latex-package	d023314500e725be8c78a868e4771dbb	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	base	87f7447ccfc06fd0729ff4684e11e0d6	elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	latex-package	d023314500e725be8c78a868e4771dbb	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=466bb7153f7fdcfca84f086e6a439c24

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-VimColor/Text-VimColor-0.26.ebuild,v 1.1 2015/05/27 22:36:20 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-VimColor/Text-VimColor-0.260.ebuild,v 1.1 2015/05/28 07:38:23 monsieurp Exp $
 
 EAPI=5
 

@@ -10,5 +10,5 @@ RDEPEND=gpm? ( sys-libs/gpm[static-libs(+)] ) truetype? ( >=media-libs/freetype-
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/fbsplash.berlios/splashutils-lite-1.5.4.4.tar.bz2 mirror://sourceforge/fbsplash.berlios/splashutils-gentoo-1.0.17.tar.bz2 mirror://gentoo/miscsplashutils-0.1.8.tar.bz2 mirror://sourceforge/libpng/libpng-1.4.3.tar.bz2 ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v8a.tar.gz mirror://sourceforge/freetype/freetype-2.3.12.tar.bz2 http://www.gzip.org/zlib/zlib-1.2.3.tar.bz2
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=a748720555801299c71d30ea1de31adf

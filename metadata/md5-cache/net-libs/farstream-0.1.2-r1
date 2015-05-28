@@ -10,5 +10,5 @@ RDEPEND=>=media-libs/gstreamer-0.10.33:0.10 >=media-libs/gst-plugins-base-0.10.3
 RESTRICT=test
 SLOT=0.1
 SRC_URI=http://freedesktop.org/software/farstream/releases/farstream/farstream-0.1.2.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	python	3a270b7b1d1e679847ff0faeac25c5a3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=c54bbdfe6024e501434d77ec9f6d2eb3

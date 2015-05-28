@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=gtk? ( x11-libs/gtk+:2 ) berkdb? ( >=sys-libs/db-3.2 )
 SLOT=0
 SRC_URI=http://atterer.net/jigdo/jigdo-0.7.3.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=6c5e6962fd7f7620257e7df52245bd9d

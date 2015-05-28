@@ -10,5 +10,5 @@ RDEPEND=x11-libs/gtk+:2 x11-libs/libXmu x11-libs/libXpm x11-libs/cairo x11-libs/
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/LXPanel%20%28desktop%20panel%29/LXPanel%200.5.12/lxpanel-0.5.12.tar.gz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=8cadcba631678fb4035fb35778078070

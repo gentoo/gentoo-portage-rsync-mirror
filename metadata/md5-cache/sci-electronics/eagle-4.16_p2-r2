@@ -9,5 +9,5 @@ RDEPEND=sys-libs/glibc || ( ( x11-libs/libXext[abi_x86_32(-)] x11-libs/libX11[ab
 RESTRICT=strip
 SLOT=0
 SRC_URI=linguas_de? ( ftp://ftp.cadsoft.de/pub/program/4.16r2/eagle-lin-ger-4.16r2.tgz doc? ( mirror://gentoo/cadsoft_eagle_manual-ger-2006.12.13.pdf ) ) !linguas_de? ( ftp://ftp.cadsoft.de/pub/program/4.16r2/eagle-lin-eng-4.16r2.tgz doc? ( mirror://gentoo/cadsoft_eagle_manual-eng-2006.12.13.pdf ) )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=c25fd50719048e6d23c896e46bcee1ba

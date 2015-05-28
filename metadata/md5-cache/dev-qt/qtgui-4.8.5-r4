@@ -11,5 +11,5 @@ RDEPEND=app-eselect/eselect-qtgraphicssystem ~dev-qt/qtcore-4.8.5[aqua=,debug=,g
 REQUIRED_USE=gtkstyle? ( glib )
 SLOT=4
 SRC_URI=http://download.qt.io/archive/qt/4.8/4.8.5/qt-everywhere-opensource-src-4.8.5.tar.gz http://dev.gentoo.org/~pesa/patches/qtgui-systemtrayicon-plugin-system.patch
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	qt4-build	206e6eef1013eddad5bf79dbf8381c2d	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	qt4-build	206e6eef1013eddad5bf79dbf8381c2d	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=65cd1929b1e80bcaa9b16dd1439a860e

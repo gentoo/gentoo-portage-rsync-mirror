@@ -9,5 +9,5 @@ LICENSE=|| ( GPL-2 GPL-3 )
 RDEPEND=>=dev-qt/qtcore-4.8.5:4 >=dev-qt/qtgui-4.8.5:4 designer? ( >=dev-qt/designer-4.8.5:4 )
 SLOT=0/11
 SRC_URI=mirror://sourceforge/pyqt/QScintilla-gpl-2.8.4.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	qmake-utils	b9c5231d68391b53f154f7643e94605c	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	qmake-utils	b9c5231d68391b53f154f7643e94605c	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=4943b84f8d2804b2c5567f1429ac0c14

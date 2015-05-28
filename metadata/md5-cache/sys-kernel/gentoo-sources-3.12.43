@@ -11,5 +11,5 @@ RDEPEND=!build? ( >=sys-libs/ncurses-5.2 sys-devel/make dev-lang/perl sys-devel/
 RESTRICT=binchecks strip
 SLOT=3.12.43
 SRC_URI=mirror://kernel/linux/kernel/v3.x/linux-3.12.tar.xz deblob? ( http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.12-gnu/deblob-3.12 http://www.fsfla.org/svn/fsfla/software/linux-libre/releases/tags/3.12-gnu/deblob-check -> deblob-check-3.12 ) mirror://gentoo/genpatches-3.12-42.base.tar.xz mirror://gentoo/genpatches-3.12-42.extras.tar.xz experimental? ( mirror://gentoo/genpatches-3.12-42.experimental.tar.xz )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	c301713d773578dc856a813c0901896f	multilib	62927b3db3a589b0806255f3a002d5d3	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	kernel-2	c301713d773578dc856a813c0901896f	multilib	62927b3db3a589b0806255f3a002d5d3	python-any-r1	da352ea9da8eb9bf158d56cca65d6c82	python-utils-r1	096f8247eae93026af13ab88cf4305cd	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
 _md5_=8d54d914cfae0f249f3fd01ccf5baa05

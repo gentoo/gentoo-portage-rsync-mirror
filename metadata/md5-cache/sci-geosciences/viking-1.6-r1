@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=app-arch/bzip2 dev-libs/expat dev-libs/glib:2 net-misc/curl sys-libs/zlib x11-libs/gdk-pixbuf:2 x11-libs/gtk+:2 gps? ( >=sci-geosciences/gpsd-2.96 ) exif? ( libexif? ( media-libs/libexif ) !libexif? ( media-libs/gexiv2 ) ) magic? ( sys-apps/file ) mapnik? ( sci-geosciences/mapnik ) sqlite3? ( dev-db/sqlite:3 ) sci-geosciences/gpsbabel
 SLOT=0
 SRC_URI=mirror://sourceforge/viking/viking-1.6.tar.bz2 doc? ( mirror://sourceforge/viking/viking.pdf )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=e86718e9c3fd72b0da886f5e79a26027

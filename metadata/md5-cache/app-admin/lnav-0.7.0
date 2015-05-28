@@ -9,5 +9,5 @@ LICENSE=BSD-2
 RDEPEND=app-arch/bzip2 dev-db/sqlite:3 dev-libs/libpcre[cxx] sys-libs/ncurses[unicode?] sys-libs/readline sys-libs/zlib
 SLOT=0
 SRC_URI=https://github.com/tstack/lnav/releases/download/v0.7.0/lnav-0.7.0.tar.gz
-_eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=aac5c3d0e32259ac3b9f1b1430fdeab7

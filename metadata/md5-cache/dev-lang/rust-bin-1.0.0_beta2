@@ -9,5 +9,5 @@ LICENSE=|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA
 RDEPEND=>=app-eselect/eselect-rust-0.2_pre20150206 !dev-lang/rust:0 cargo-bundled? ( !dev-rust/cargo )
 SLOT=0
 SRC_URI=amd64? ( http://static.rust-lang.org/dist/rust-1.0.0-beta.2-x86_64-unknown-linux-gnu.tar.gz ) x86? ( http://static.rust-lang.org/dist/rust-1.0.0-beta.2-i686-unknown-linux-gnu.tar.gz )
-_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=255d82a6024d4a24e3ca01042aebce25

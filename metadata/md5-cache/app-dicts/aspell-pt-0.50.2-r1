@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/aspell-0.50
 SLOT=0
 SRC_URI=mirror://gnu/aspell/dict/pt/aspell-pt-0.50-2.tar.bz2
-_eclasses_=aspell-dict	fc25d5442beb66c8ff5933832df2222b	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=aspell-dict	fc25d5442beb66c8ff5933832df2222b	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=40f714cbb77dc3da1fad847ff83616a2

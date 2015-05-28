@@ -7,5 +7,5 @@ LICENSE=freedist
 RDEPEND=dev-lang/perl || ( www-client/lynx virtual/w3m )
 SLOT=0
 SRC_URI=http://www.dewn.com/rfc/rfc-3.2.3.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	prefix	21058c21ca48453d771df15500873ede	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=bdbd6ef54bbc3664a52aeef65231e4df

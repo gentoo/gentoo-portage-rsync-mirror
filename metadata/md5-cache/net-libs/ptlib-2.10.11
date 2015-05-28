@@ -10,5 +10,5 @@ RDEPEND=ldap? ( net-nds/openldap ) lua? ( dev-lang/lua ) odbc? ( dev-db/unixODBC
 REQUIRED_USE=sdl? ( video ) xmpp? ( xml ) vxml? ( http tts xml ) xmlrpc? ( http xml ) soap? ( http xml )
 SLOT=0/2.10.11
 SRC_URI=mirror://sourceforge/opalvoip/ptlib-2.10.11.tar.bz2 doc? ( mirror://sourceforge/opalvoip/ptlib-2.10.10-htmldoc.tar.bz2 )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=f68ab96d0d501f5349799cfd2c9e993c

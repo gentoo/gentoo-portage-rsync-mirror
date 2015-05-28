@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.587 2015/05/25 09:22:05 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.589 2015/05/28 08:24:00 eras Exp $
+
+  28 May 2015; Eray Aslan <eras@gentoo.org> postfix-3.0.0.ebuild,
+  postfix-3.0.1-r1.ebuild, postfix-3.1_pre20150523.ebuild:
+  Fix dev-libs/icu dependency - bug #550546
+
+  28 May 2015; Eray Aslan <eras@gentoo.org> -postfix-3.0.1.ebuild:
+  Remove old
 
 *postfix-3.1_pre20150523 (25 May 2015)
 
