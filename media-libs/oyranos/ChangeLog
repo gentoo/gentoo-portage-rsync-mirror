@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/oyranos
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.27 2015/05/10 21:08:13 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/ChangeLog,v 1.28 2015/05/27 20:31:04 tamiko Exp $
+
+  27 May 2015; Matthias Maier <tamiko@gentoo.org> oyranos-0.9.4-r2.ebuild,
+  oyranos-0.9.5.ebuild, oyranos-9999.ebuild:
+  remove dependency on lcms-1*, see bug #526642
 
   10 May 2015; Michael Weber <xmw@gentoo.org>
   files/oyranos-0.9.5-buildsystem-r1.patch,

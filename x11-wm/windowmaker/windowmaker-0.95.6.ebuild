@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.6.ebuild,v 1.4 2015/01/22 09:24:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.6.ebuild,v 1.5 2015/05/27 20:24:52 pacho Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -30,7 +30,9 @@ DEPEND="media-libs/fontconfig
 	xinerama? ( x11-libs/libXinerama )
 	xrandr? ( x11-libs/libXrandr )"
 RDEPEND="${DEPEND}
-	nls? ( >=sys-devel/gettext-0.10.39 )"
+	nls? ( >=sys-devel/gettext-0.10.39 )
+	!app-i18n/scim-anthy[gtk3]
+"
 
 S=${WORKDIR}/${P/windowm/WindowM}
 

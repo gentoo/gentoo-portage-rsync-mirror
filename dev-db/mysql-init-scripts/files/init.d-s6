@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-s6,v 1.1 2015/05/27 17:02:26 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-s6,v 1.2 2015/05/27 21:01:03 grknight Exp $
 
 depend() {
 	use net.lo
@@ -41,6 +41,7 @@ start_pre() {
 	fi
 
 	# tail -n1 is critical as these we only want the last instance of the option
+	local basedir=$(get_config "${MY_CNF}" basedir | tail -n1)
 	local datadir=$(get_config "${MY_CNF}" datadir | tail -n1)
 	local pidfile=$(get_config "${MY_CNF}" pid-file | tail -n1)
 	local socket=$(get_config "${MY_CNF}" socket | tail -n1)
@@ -77,6 +78,14 @@ start_pre() {
 		eerror "Directory $piddir for pidfile does not exist and cannot be created"
 		return 1
 	fi
+
+	# Prepare env files to source
+	mkdir -p "/var/svc.d/${SVCNAME}"
+	echo "MY_CNF=\"${MY_CNF}\"" > "/var/svc.d/${SVCNAME}/env"
+	echo "MY_ARGS=\"${MY_ARGS}\"" >> "/var/svc.d/${SVCNAME}/env"
+	echo "basedir=\"${basedir}\"" >> "/var/svc.d/${SVCNAME}/env"
+	mkdir -p "/var/svc.d/${SVCNAME}/log"
+	echo "SVCNAME=\"${SVCNAME}\"" > "/var/svc.d/${SVCNAME}/log/env"
 }
 
 start_post() {

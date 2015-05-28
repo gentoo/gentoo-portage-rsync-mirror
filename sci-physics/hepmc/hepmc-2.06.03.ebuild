@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.03.ebuild,v 1.8 2011/06/08 15:15:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/hepmc/hepmc-2.06.03.ebuild,v 1.9 2015/05/27 21:37:48 bircoph Exp $
 
 EAPI=2
 
@@ -9,7 +9,7 @@ inherit eutils
 MYP=HepMC-${PV}
 
 DESCRIPTION="Event Record for Monte Carlo Generators"
-HOMEPAGE="https://savannah.cern.ch/projects/hepmc/"
+HOMEPAGE="http://lcgapp.cern.ch/project/simu/HepMC/"
 SRC_URI="http://lcgapp.cern.ch/project/simu/HepMC/download/${MYP}.tar.gz"
 
 LICENSE="GPL-2"

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/networkmanager-vpnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.47 2015/05/17 15:55:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager-vpnc/ChangeLog,v 1.48 2015/05/27 20:33:25 pacho Exp $
+
+  27 May 2015; Pacho Ramos <pacho@gentoo.org> networkmanager-vpnc-1.0.2.ebuild:
+  Newer vpnc is needed (#549038)
 
   17 May 2015; Agostino Sarubbo <ago@gentoo.org>
   networkmanager-vpnc-1.0.2.ebuild:

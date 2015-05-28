@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16536 2015/05/26 21:06:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16537 2015/05/27 20:52:44 tamiko Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,12 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Matthias Maier <tamiko@gentoo.org> (27 May 2015)
+# on behalf of Andreas K. Huettel <dilfridge@gentoo.org>
+# media-libs/lcms:0 has serious security issues, is unmaintained
+# and will be removed in 30 days, see bug 526642
+media-libs/lcms:0
 
 # Hans de Graaff <graaff@gentoo.org> (25 May 2015)
 # With the wwwold services going offline gorg no longer plays a role

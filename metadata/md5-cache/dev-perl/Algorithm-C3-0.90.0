@@ -4,10 +4,10 @@ DESCRIPTION=A module for merging hierarchies using the C3 algorithm
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/Algorithm-C3/
 IUSE=test
-KEYWORDS=~alpha ~amd64 ~ppc64 ~x86 ~x86-solaris
+KEYWORDS=~alpha ~amd64 ~ppc64 ~sparc ~x86 ~x86-solaris
 LICENSE=|| ( Artistic GPL-1+ )
 RDEPEND=dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/H/HA/HAARG/Algorithm-C3-0.09.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	79253b64b2972a3e513329a729242b27	toolchain-funcs	c961250d50160cd37d6b7fd9e8429c92	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=d9e9eecaca62fdbdcd4350e90e3fe020
+_md5_=027a015e79379a88ccee9a1d25d06c80

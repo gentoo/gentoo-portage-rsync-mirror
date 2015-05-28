@@ -1,6 +1,16 @@
 # ChangeLog for www-client/firefox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.421 2015/05/23 19:03:47 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox/ChangeLog,v 1.422 2015/05/27 19:22:55 axs Exp $
+
+*firefox-38.0.1 (27 May 2015)
+*firefox-31.7.0-r1 (27 May 2015)
+
+  27 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +firefox-31.7.0-r1.ebuild, +firefox-38.0.1.ebuild, -firefox-36.0.4.ebuild,
+  -firefox-37.0.1.ebuild, metadata.xml:
+  revbump of 31.7 allows compatibility with libvpx newer than 1.3, bug 550002;
+  38.0.1 version bump committed (various bugs), test worked on non-hardened
+  system with jit disabled, so the use flag is back again for now
 
   23 May 2015; Mikle Kolyada <zlogene@gentoo.org> firefox-31.7.0.ebuild:
   x86 stable wrt bug #549356

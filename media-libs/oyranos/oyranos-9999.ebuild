@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.6 2015/05/10 21:02:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-9999.ebuild,v 1.7 2015/05/27 20:31:04 tamiko Exp $
 
 EAPI=5
 
@@ -30,10 +30,7 @@ RDEPEND="
 	>=dev-libs/yajl-2.0.4-r1[${MULTILIB_USEDEP}]
 	media-libs/icc-profiles-basiccolor-printing2009
 	media-libs/icc-profiles-openicc
-	|| (
-		>=media-libs/lcms-2.5:2[${MULTILIB_USEDEP}]
-		>=media-libs/lcms-1.19-r1:0[${MULTILIB_USEDEP}]
-	)
+	>=media-libs/lcms-2.5:2[${MULTILIB_USEDEP}]
 	>=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}]
 	>=media-libs/libXcm-0.5.3[${MULTILIB_USEDEP}]
 	cairo? ( >=x11-libs/cairo-1.12.14-r4[${MULTILIB_USEDEP}] )

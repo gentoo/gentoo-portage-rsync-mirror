@@ -1,6 +1,14 @@
 # ChangeLog for app-emulation/libguestfs-appliance
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.5 2014/12/05 18:56:43 maksbotan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libguestfs-appliance/ChangeLog,v 1.6 2015/05/27 20:04:41 maksbotan Exp $
+
+*libguestfs-appliance-1.28.1-r1 (27 May 2015)
+
+  27 May 2015; Maxim Koltsov <maksbotan@gentoo.org>
+  +libguestfs-appliance-1.28.1-r1.ebuild:
+  Keep README.fixed in /usr/share/guestfs/appliance, see RedHat bug
+  https://bugzilla.redhat.com/show_bug.cgi?id=1183780. Thanks to lk4d4 for
+  report.
 
   05 Dec 2014; Maxim Koltsov <maksbotan@gentoo.org>
   -libguestfs-appliance-1.20.0.ebuild, -libguestfs-appliance-1.24.8.ebuild,

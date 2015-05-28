@@ -2,7 +2,4 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>mysql</herd>
-	<use>
-		<flag name='s6'>Install an OpenRC service that monitors using <pkg>sys-apps/s6</pkg> instead of using start-stop-daemon</flag>
-	</use>
 </pkgmetadata>

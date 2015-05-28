@@ -24,7 +24,7 @@ INSERT INTO contingent (polling, time_frame, text_entry_limit, initiative_limit)
 INSERT INTO contingent (polling, time_frame, text_entry_limit, initiative_limit) VALUES (true, '1 day', 800, 120);
 INSERT INTO policy (index, name, admission_time, discussion_time, verification_time, voting_time, issue_quorum_num, issue_quorum_den, initiative_quorum_num, initiative_quorum_den) VALUES (1, 'Default policy', '8 days', '15 days', '8 days', '15 days', 10, 100, 10, 100);
 
-cd /var/liquid_feedback_frontend
+cd /var/lib/liquid_feedback_frontend
 /usr/lib/webmcp/framework/bin/webmcp_shell myconfig
 Lua 5.1.5  Copyright (C) 1994-2012 Lua.org, PUC-Rio
 > member = Member:by_id(1)

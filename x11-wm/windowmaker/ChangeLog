@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.152 2015/03/20 09:02:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.153 2015/05/27 20:24:52 pacho Exp $
+
+  27 May 2015; Pacho Ramos <pacho@gentoo.org> windowmaker-0.92.0-r11.ebuild,
+  windowmaker-0.95.5-r1.ebuild, windowmaker-0.95.6.ebuild:
+  Incompatible with app-i18n/scim-anthy[gtk3] (#434138)
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> files/wmaker.desktop:
   Fix desktop file

@@ -1,6 +1,12 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.801 2015/05/27 17:00:04 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.803 2015/05/28 01:36:22 grknight Exp $
+
+  28 May 2015; Brian Evans <grknight@gentoo.org> package.use.mask:
+  Remove use mask for dev-db/mysql-init-scripts
+
+  27 May 2015; Matthias Maier <tamiko@gentoo.org> package.use.mask:
+  mask lcms use flag for media-gfx/dcraw-9.10 that depends on lcms:0
 
   27 May 2015; <grknight@gentoo.org> package.use.mask:
   Mask s6 USE since all arches do not have sys-apps/s6 keyworded

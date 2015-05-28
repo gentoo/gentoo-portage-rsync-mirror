@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.310 2015/05/27 13:01:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.311 2015/05/28 05:28:03 jer Exp $
+
+  28 May 2015; Jeroen Roovers <jer@gentoo.org> icu-55.1.ebuild:
+  Stable for HPPA (bug #546156).
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> icu-55.1.ebuild:
   Stable for arm, wrt bug #546156

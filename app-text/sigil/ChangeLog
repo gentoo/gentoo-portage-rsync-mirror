@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sigil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.16 2015/04/05 17:00:52 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sigil/ChangeLog,v 1.17 2015/05/27 18:54:06 mrueg Exp $
+
+*sigil-0.8.6 (27 May 2015)
+
+  27 May 2015; Manuel Rüger <mrueg@gentoo.org> +sigil-0.8.6.ebuild,
+  -sigil-0.6.2.ebuild, metadata.xml:
+  Version bump. Remove old. Drop myself from metadata.
 
 *sigil-0.8.5 (05 Apr 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Any-Moose
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.42 2015/03/29 11:51:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Any-Moose/ChangeLog,v 1.43 2015/05/27 21:13:53 zlogene Exp $
+
+  27 May 2015; Mikle Kolyada <zlogene@gentoo.org> Any-Moose-0.210.0.ebuild:
+  Drop ~ppc-macos support
 
   29 Mar 2015; Mikle Kolyada <zlogene@gentoo.org> Any-Moose-0.260.0.ebuild:
   Add ~ppc keyword wrt bug #544064

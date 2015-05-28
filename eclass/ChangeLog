@@ -1,6 +1,14 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1625 2015/05/26 14:29:44 ottxor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1627 2015/05/28 06:37:16 polynomial-c Exp $
+
+  28 May 2015; Lars Wendler <polynomial-c@gentoo.org> mozconfig-v5.33.eclass:
+  Fixed case syntax.
+
+  27 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  mozconfig-v5.31.eclass, mozconfig-v5.33.eclass, +mozconfig-v5.38.eclass:
+  updated mozconfig-v5.31.eclass for new libvpx version compatibility, added
+  mozconfig-v5.38.eclass, last rited mozconfig-v5.33
 
   26 May 2015; Christoph Junghans <ottxor@gentoo.org> multilib.eclass:
   export FC/F77 for multilib support (bug #540294)

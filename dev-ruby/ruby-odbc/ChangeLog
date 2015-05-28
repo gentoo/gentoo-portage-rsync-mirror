@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-odbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.44 2015/05/05 06:38:41 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.45 2015/05/28 04:13:35 graaff Exp $
+
+  28 May 2015; Hans de Graaff <graaff@gentoo.org> -ruby-odbc-0.99995-r1.ebuild:
+  Cleanup.
 
 *ruby-odbc-0.99997 (05 May 2015)
 

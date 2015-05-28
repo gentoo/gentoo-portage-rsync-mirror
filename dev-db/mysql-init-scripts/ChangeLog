@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.56 2015/05/27 17:02:26 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/ChangeLog,v 1.57 2015/05/27 21:01:03 grknight Exp $
+
+*mysql-init-scripts-2.1_alpha3 (27 May 2015)
+
+  27 May 2015; Brian Evans <grknight@gentoo.org>
+  +mysql-init-scripts-2.1_alpha3.ebuild, -mysql-init-scripts-2.1_alpha2.ebuild,
+  files/init.d-s6, files/log-s6, files/run-s6, metadata.xml:
+  Version bump to correct s6 support for dependencies and sourcing
 
 *mysql-init-scripts-2.1_alpha2 (27 May 2015)
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.41 2015/04/11 15:38:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.43 2015/05/28 04:14:58 graaff Exp $
+
+  28 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-openid-2.6.0.ebuild:
+  Create stable candidate.
+
+  28 May 2015; Hans de Graaff <graaff@gentoo.org> -ruby-openid-2.5.0.ebuild:
+  Cleanup.
 
   11 Apr 2015; Hans de Graaff <graaff@gentoo.org> ruby-openid-2.7.0.ebuild:
   Add ruby22.

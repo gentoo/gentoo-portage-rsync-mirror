@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/liquid_feedback_frontend
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/ChangeLog,v 1.5 2014/11/28 08:06:42 tupone Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/liquid_feedback_frontend/ChangeLog,v 1.6 2015/05/27 19:20:28 tupone Exp $
+
+*liquid_feedback_frontend-3.0.6 (27 May 2015)
+
+  27 May 2015; Alfredo Tupone <tupone@gentoo.org>
+  +liquid_feedback_frontend-3.0.6.ebuild, files/postinstall-en.txt:
+  Version bump to 3.0.6
 
 *liquid_feedback_frontend-2.2.7 (28 Nov 2014)
 

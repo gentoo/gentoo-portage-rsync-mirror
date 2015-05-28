@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opusfile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.16 2015/05/27 05:41:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opusfile/ChangeLog,v 1.17 2015/05/28 06:30:36 jmorgan Exp $
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> opusfile-0.6.ebuild:
+  adding ~sparc for Bug 511778
 
   27 May 2015; Jeroen Roovers <jer@gentoo.org> opusfile-0.6.ebuild:
   Stable for HPPA (bug #511778).

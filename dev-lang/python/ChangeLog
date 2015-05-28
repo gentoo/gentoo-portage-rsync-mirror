@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.818 2015/04/23 19:25:27 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.819 2015/05/28 04:10:47 floppym Exp $
+
+*python-2.7.10 (28 May 2015)
+
+  28 May 2015; Mike Gilbert <floppym@gentoo.org>
+  +files/python-2.7.10-semaphore-pid.patch, +python-2.7.10.ebuild:
+  Version bump.
 
   23 Apr 2015; Mike Gilbert <floppym@gentoo.org> python-2.6.9.ebuild:
   Fix dep on eselect-python.

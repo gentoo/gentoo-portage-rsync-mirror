@@ -6,11 +6,6 @@
 		<email>tomboy64@sina.cn</email>
 		<description>Maintainer, assign bugs to him</description>
 	</maintainer>
-	<maintainer>
-		<email>mrueg@gentoo.org</email>
-		<name>Manuel Rüger</name>
-	<description>Proxy-Maintainer, CC him on bugs</description>
-	</maintainer>
 	<longdescription lang="en">Sigil is a multi-platform WYSIWYG ebook editor.
 		It is designed to edit books in ePub format.</longdescription>
 	<upstream>
