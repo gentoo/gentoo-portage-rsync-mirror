@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.10.ebuild,v 1.1 2015/04/10 12:26:47 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.10.ebuild,v 1.2 2015/05/28 22:52:28 vapier Exp $
 
 EAPI=5
 
@@ -20,6 +20,8 @@ DEPEND="dev-libs/glib:2
 	>=x11-libs/libpciaccess-0.10
 	python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}"
+
+PATCHES=( "${FILESDIR}/${P}-clang.patch" )
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
