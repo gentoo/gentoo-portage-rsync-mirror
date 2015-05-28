@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/lcms
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.192 2015/04/08 17:59:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/ChangeLog,v 1.193 2015/05/28 18:07:08 dilfridge Exp $
+
+  28 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
+  -files/lcms-1.19-cve-2013-4276.patch,
+  -files/lcms-1.19-disable_static_modules.patch,
+  -files/lcms-1.19-fix-python3.2.patch,
+  -files/lcms-1.19-fix-swig-destructor.patch, -files/lcms-1.19-implicit.patch,
+  -lcms-1.19-r1.ebuild, -lcms-1.19-r2.ebuild, -lcms-1.19-r3.ebuild,
+  -lcms-1.19.ebuild:
+  Drop lcms-1
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> lcms-1.19-r1.ebuild,
   lcms-1.19-r2.ebuild, lcms-1.19-r3.ebuild:
