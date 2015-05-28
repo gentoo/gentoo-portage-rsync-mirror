@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/hedgewars
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.69 2015/05/21 10:47:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/hedgewars/ChangeLog,v 1.70 2015/05/28 19:11:53 mr_bones_ Exp $
+
+  28 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/hedgewars-0.9.20.5-cmake3.patch, -hedgewars-0.9.20.5.ebuild:
+  old
 
   21 May 2015; Agostino Sarubbo <ago@gentoo.org> hedgewars-0.9.21.1.ebuild:
   Stable for amd64, wrt bug #547600

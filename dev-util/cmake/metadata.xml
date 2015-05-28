@@ -3,6 +3,6 @@
 <pkgmetadata>
 	<herd>kde</herd>
 	<use>
-		<flag name='internal-jsoncpp'>Use bundled copy of <pkg>dev-libs/jsoncpp</pkg>. Enable this in order solve the circular dependency between cmake and jsoncpp, disable afterwards.</flag>
+		<flag name="system-jsoncpp">Use system copy of <pkg>dev-libs/jsoncpp</pkg> instead of bundled one.</flag>
 	</use>
 </pkgmetadata>

@@ -2549,7 +2549,7 @@ dev-util/buildbot:irc - Add support for status delivery through an ircbot.
 dev-util/buildbot:mail - Add support for watching a maildir for commits.
 dev-util/buildbot:manhole - Add support for manhole (debug over ssh)
 dev-util/catalyst:ccache - Enables ccache support
-dev-util/cmake:internal-jsoncpp - Use bundled copy of dev-libs/jsoncpp. Enable this in order solve the circular dependency between cmake and jsoncpp, disable afterwards.
+dev-util/cmake:system-jsoncpp - Use system copy of dev-libs/jsoncpp instead of bundled one.
 dev-util/coccigrep:vim - Install the coccigrep vim plugin
 dev-util/codeblocks:contrib - Build additional contrib components
 dev-util/cppcheck:htmlreport - install cppcheck-htmlreport
