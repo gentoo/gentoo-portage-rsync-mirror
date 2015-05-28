@@ -1,0 +1,13 @@
+DEFINED_PHASES=configure
+DEPEND=mail-mta/opensmtpd dev-libs/libevent dev-libs/openssl filter-python? ( dev-lang/python:2.7 ) filter-perl? ( dev-lang/perl ) filter-lua? ( dev-lang/lua:5.2 ) filter-dnsbl? ( net-libs/libasr ) table-sqlite? ( dev-db/sqlite:3 ) table-mysql? ( virtual/mysql ) table-postgres? ( dev-db/postgresql ) table-redis? ( dev-libs/hiredis ) table-python? ( dev-lang/python:2.7 ) scheduler-python? ( dev-lang/python:2.7 ) queue-python? ( dev-lang/python:2.7 )
+DESCRIPTION=Extra tables, filters, and various other addons for OpenSMTPD
+EAPI=5
+HOMEPAGE=https://github.com/OpenSMTPD/OpenSMTPD-extras
+IUSE=filter-clamav filter-dkim-signer filter-dnsbl filter-lua filter-monkey filter-pause filter-perl filter-python filter-regex filter-spamassassin filter-stub filter-trace filter-void queue-null queue-python queue-ram queue-stub table-ldap table-mysql table-postgres table-redis table-socketmap table-passwd table-python table-sqlite table-stub scheduler-ram scheduler-stub scheduler-python
+KEYWORDS=~amd64 ~x86
+LICENSE=ISC BSD BSD-1 BSD-2 BSD-4
+RDEPEND=mail-mta/opensmtpd dev-libs/libevent dev-libs/openssl filter-python? ( dev-lang/python:2.7 ) filter-perl? ( dev-lang/perl ) filter-lua? ( dev-lang/lua:5.2 ) filter-dnsbl? ( net-libs/libasr ) table-sqlite? ( dev-db/sqlite:3 ) table-mysql? ( virtual/mysql ) table-postgres? ( dev-db/postgresql ) table-redis? ( dev-libs/hiredis ) table-python? ( dev-lang/python:2.7 ) scheduler-python? ( dev-lang/python:2.7 ) queue-python? ( dev-lang/python:2.7 )
+SLOT=0
+SRC_URI=https://www.opensmtpd.org/archives/opensmtpd-extras-201505281056.tar.gz
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
+_md5_=1a7477e7eaf426c2fcb5d5de0329ab92
