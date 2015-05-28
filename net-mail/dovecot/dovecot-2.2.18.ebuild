@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.18.ebuild,v 1.1 2015/05/16 09:48:13 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/dovecot-2.2.18.ebuild,v 1.2 2015/05/28 08:46:46 eras Exp $
 
 EAPI=5
 inherit eutils multilib ssl-cert systemd user versionator
@@ -51,7 +51,8 @@ DEPEND="bzip2? ( app-arch/bzip2 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	vpopmail? ( net-mail/vpopmail )
 	zlib? ( sys-libs/zlib )
-	virtual/libiconv"
+	virtual/libiconv
+	dev-libs/icu:="
 
 RDEPEND="${DEPEND}
 	net-mail/mailbase"
@@ -100,6 +101,7 @@ src_configure() {
 		--without-stemmer \
 		--with-storages="${storages}" \
 		--disable-rpath \
+		--with-icu \
 		$( systemd_with_unitdir ) \
 		$( use_with bzip2 bzlib ) \
 		$( use_with caps libcap ) \
