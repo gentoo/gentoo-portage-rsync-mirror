@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/pyglet-1.1.4-r2.ebuild,v 1.5 2015/05/27 11:23:32 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyglet/pyglet-1.1.4-r2.ebuild,v 1.6 2015/05/28 14:11:54 jlec Exp $
 
 EAPI=5
 
@@ -29,10 +29,6 @@ DOCS="NOTICE"
 
 python_install_all() {
 	use doc && HTML_DOCS=( doc/html/. )
+	use examples && EXAMPLES=( examples )
 	distutils-r1_python_install_all
-
-	if use examples; then
-		dodoc -r examples
-		docompress -x /usr/share/doc/${PF}/examples
-	fi
 }
