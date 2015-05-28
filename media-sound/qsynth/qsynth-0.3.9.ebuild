@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.9.ebuild,v 1.2 2015/03/30 18:36:06 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/qsynth-0.3.9.ebuild,v 1.3 2015/05/28 15:22:37 jmorgan Exp $
 
 EAPI=5
 LANGS="cs de fr ru sr"
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/qsynth/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="debug jack alsa pulseaudio"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ppc ~x86"
 
 DEPEND=">=dev-qt/qtcore-4.2:4
 	>=dev-qt/qtgui-4.2:4

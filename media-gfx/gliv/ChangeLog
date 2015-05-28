@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gliv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.37 2015/05/24 09:46:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/ChangeLog,v 1.38 2015/05/28 15:18:49 jmorgan Exp $
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> gliv-1.9.7.ebuild:
+  ppc stable wrt bug #430400
 
   24 May 2015; Pacho Ramos <pacho@gentoo.org> gliv-1.9.7.ebuild:
   Fix build with gettext-0.19, bug #512624 by zimous

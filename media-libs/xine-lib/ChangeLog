@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.718 2015/05/27 11:21:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.719 2015/05/28 15:25:53 jmorgan Exp $
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> xine-lib-1.2.6-r1.ebuild:
+  ppc64 stable wrt bug #541672
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> xine-lib-1.2.6-r1.ebuild:
   Stable for x86, wrt bug #541672

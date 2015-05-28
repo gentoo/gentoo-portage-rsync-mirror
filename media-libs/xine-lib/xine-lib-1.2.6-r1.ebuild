@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.6-r1.ebuild,v 1.3 2015/05/27 11:21:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.2.6-r1.ebuild,v 1.4 2015/05/28 15:25:53 jmorgan Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ if [[ ${PV} == *9999* ]]; then
 	NLS_DEPEND="sys-devel/gettext"
 	NLS_RDEPEND="virtual/libintl"
 else
-	KEYWORDS="amd64 ~hppa ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd"
+	KEYWORDS="amd64 ~hppa ~ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd"
 	SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 	NLS_IUSE="nls"
 	NLS_DEPEND="nls? ( sys-devel/gettext )"

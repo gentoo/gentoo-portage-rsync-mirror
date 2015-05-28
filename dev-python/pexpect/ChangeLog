@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.89 2015/04/08 08:04:53 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.90 2015/05/28 15:12:51 jmorgan Exp $
+
+  28 May 2015; Jack Morgan <jmorgan@gentoo.org> pexpect-3.0.ebuild:
+  sparc stable wrt bug #506042
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pexpect-2.4-r1.ebuild,
   pexpect-3.0.ebuild, pexpect-3.1.ebuild, pexpect-3.2.ebuild,

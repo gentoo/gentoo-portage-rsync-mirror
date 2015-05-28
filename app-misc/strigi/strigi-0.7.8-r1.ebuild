@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.8-r1.ebuild,v 1.4 2015/05/23 21:32:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/strigi/strigi-0.7.8-r1.ebuild,v 1.6 2015/05/28 15:27:22 jmorgan Exp $
 
 EAPI=5
 
 if [[ "${PV}" != "9999" ]]; then
 	SRC_URI="http://www.vandenoever.info/software/strigi/${P}.tar.bz2"
-	KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
+	KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux"
 else
 	EGIT_REPO_URI=( "git://anongit.kde.org/strigi" )
 	GIT_ECLASS="git-r3"
