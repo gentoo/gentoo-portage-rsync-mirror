@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/hprofile
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/ChangeLog,v 1.5 2014/10/19 05:28:00 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hprofile/ChangeLog,v 1.6 2015/05/29 07:59:10 polynomial-c Exp $
+
+*hprofile-3.0.6 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -hprofile-2.0_beta2.ebuild, +hprofile-3.0.6.ebuild:
+  Version bump. Removed old.
 
 *hprofile-3.0.5 (19 Oct 2014)
 

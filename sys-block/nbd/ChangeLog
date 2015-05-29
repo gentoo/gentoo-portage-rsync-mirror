@@ -1,6 +1,11 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.94 2015/04/15 15:13:28 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.95 2015/05/29 07:41:58 polynomial-c Exp $
+
+*nbd-3.11 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org> +nbd-3.11.ebuild:
+  Version bump.
 
 *nbd-3.10 (15 Apr 2015)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.5-r1.ebuild,v 1.2 2015/05/19 06:57:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.4.5-r1.ebuild,v 1.3 2015/05/29 07:51:48 jlec Exp $
 
 EAPI=5
 
@@ -80,9 +80,9 @@ src_prepare() {
 src_configure() {
 	local lang langs
 	for lang in ${IUSE_LINGUAS}; do
-		if use linguas_${lang}; then
+		if use linguas_${lang} || [[ ${lang} == "en" ]]; then
 			# From the CMakeLists.txt
-			# "#Bit of a hack, preprocess all the filenames to generate our language string, needed for -DWANT_GUI_LANG=en_GB,de_DE , etc"
+			# "#Bit of a hack, preprocess all the filenames to generate our language string, needed for -DWANT_GUI_LANG=en_GB;de_DE , etc"
 			langs+=";${lang}"
 		else
 			# Don't install localized documentation
@@ -101,7 +101,7 @@ src_configure() {
 		-DWANT_NORPATH=ON
 		-DWANT_QT3SUPPORT=OFF
 		-DGENTOOVERSION=${PVR}
-		-DWANT_GUI_LANG=${langs#,}
+		-DWANT_GUI_LANG="${langs#;};en"
 		$(cmake-utils_use_with pdf PODOFO)
 		$(cmake-utils_use_want cairo)
 		$(cmake-utils_use_want !cairo QTARTHUR)

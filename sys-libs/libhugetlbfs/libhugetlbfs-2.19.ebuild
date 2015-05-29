@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/libhugetlbfs-2.16.ebuild,v 1.2 2013/11/10 03:38:47 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libhugetlbfs/libhugetlbfs-2.19.ebuild,v 1.1 2015/05/29 07:32:54 polynomial-c Exp $
 
 EAPI="4"
 
@@ -13,6 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc64 ~x86"
+IUSE="static-libs"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.9-build.patch #332517
@@ -33,12 +34,13 @@ src_prepare() {
 }
 
 src_compile() {
-	tc-export AR CC
-	emake libs tools
+	tc-export AR
+	emake CC="$(tc-getCC)" libs tools
 }
 
 src_install() {
 	default
+	use static-libs || rm -f "${D}"/usr/$(get_libdir)/*.a
 	rm "${D}"/usr/bin/oprofile* || die
 }
 

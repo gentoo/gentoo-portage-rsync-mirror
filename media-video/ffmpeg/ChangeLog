@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.858 2015/05/19 09:24:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.859 2015/05/29 07:37:45 jmorgan Exp $
+
+  29 May 2015; Jack Morgan <jmorgan@gentoo.org> ffmpeg-2.2.14.ebuild:
+  sparc stable wrt bug #538798
 
   19 May 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-9999.ebuild:
   bump x265 dep

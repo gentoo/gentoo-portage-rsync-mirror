@@ -1,6 +1,14 @@
 # ChangeLog for app-arch/sharutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.129 2014/08/12 12:19:31 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/ChangeLog,v 1.130 2015/05/29 07:55:04 polynomial-c Exp $
+
+*sharutils-4.15.1 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org> -sharutils-4.10.ebuild,
+  -sharutils-4.11.ebuild, -sharutils-4.11.1.ebuild, -sharutils-4.13.1.ebuild,
+  -sharutils-4.13.3.ebuild, -sharutils-4.13.5.ebuild, +sharutils-4.15.1.ebuild,
+  -files/sharutils-4.11.1-no-gets.patch:
+  Version bump. Removed old.
 
   12 Aug 2014; Mike Frysinger <vapier@gentoo.org> sharutils-4.14-r1.ebuild:
   Mark arm64/m68k/s390/sh stable.
