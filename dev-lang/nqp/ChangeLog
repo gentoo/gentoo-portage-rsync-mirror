@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.66 2015/05/23 19:56:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/ChangeLog,v 1.67 2015/05/29 02:41:04 patrick Exp $
+
+  29 May 2015; Patrick Lauer <patrick@gentoo.org> nqp-2015.05.ebuild:
+  Switch default to moarvm
 
   23 May 2015; Mikle Kolyada <zlogene@gentoo.org> -nqp-2014.12.ebuild:
   Drop old 2014.x series

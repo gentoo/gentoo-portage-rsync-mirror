@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2015.05.ebuild,v 1.1 2015/05/23 00:01:28 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqp/nqp-2015.05.ebuild,v 1.2 2015/05/29 02:41:04 patrick Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SRC_URI="http://github.com/perl6/${PN}/tarball/${PV} -> ${P}.tar.gz"
 LICENSE="Artistic-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="doc +parrot java moar"
+IUSE="doc parrot java +moar"
 REQUIRED_USE="|| ( parrot java moar )"
 
 RDEPEND="parrot? ( >=dev-lang/parrot-${PARROT_VERSION}:=[unicode] )
