@@ -17,7 +17,7 @@ EXTRACTONLY="
 	libexec/
 	usr.bin/
 	bin/
-	contrib/
+	contrib/hyperv/
 	lib/
 	etc/
 	usr.sbin/

@@ -18,7 +18,7 @@ fi
 EXTRACTONLY="
 	sys/
 	lib/
-	contrib/
+	contrib/bzip2/
 "
 
 RDEPEND=""

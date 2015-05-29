@@ -19,7 +19,7 @@ fi
 EXTRACTONLY="
 	usr.sbin/
 	sbin/
-	contrib/
+	contrib/pf/
 	etc/
 "
 
