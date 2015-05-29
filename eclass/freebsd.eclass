@@ -66,6 +66,17 @@ if [[ ${MY_PV} == *9999* ]]; then
 	ESVN_PROJECT="freebsd-${BRANCH}"
 fi
 
+# use the original source code.
+if [[ ${MY_PV} != *9999* ]] && version_is_at_least 10.0 ${RV} ; then
+	DL_PV=${MY_PV/_rc/-RC}
+	DL_PV=${DL_PV/_beta/-BETA}
+	DL_PV=${DL_PV/_alpha/-ALPHA}
+	if [[ ${DL_PV} == ${MY_PV} ]]; then
+		DL_PV="${DL_PV}-RELEASE"
+	fi
+	SRC_URI="mirror://freebsd/releases/i386/${DL_PV}/src.txz -> freebsd-src-${MY_PV}.tar.xz"
+fi
+
 IUSE="profile"
 
 #unalias -a
@@ -151,9 +162,23 @@ freebsd_src_unpack() {
 			[[ -e "${WORKDIR}"/share/mk ]] && rm -rf "${WORKDIR}"/share/mk/*.mk
 		fi
 	else
-		for f in ${A} ; do
-			[[ ${f} == *.tar.* ]] && unpack ${f}
-		done
+		if version_is_at_least 10.0 ${RV} ; then
+			local tarball="freebsd-src-${MY_PV}.tar.xz"
+			local topdir="usr/src/"
+			local extractlist
+			for i in ${EXTRACTONLY} ; do
+				extractlist+=" ${topdir}${i}"
+			done
+			ebegin "Unpacking parts of ${tarball} to ${WORKDIR}"
+			pushd "${WORKDIR}" > /dev/null
+			# https://bugs.gentoo.org/show_bug.cgi?id=550734
+			xzdec -c "${DISTDIR}/${tarball}" | tar -xpf - --strip-components=2 ${extractlist} 2> /dev/null || die "tar extract command failed"
+			popd > /dev/null
+		else
+			for f in ${A} ; do
+				[[ ${f} == *.tar.* ]] && unpack ${f}
+			done
+		fi
 	fi
 	cd "${S}"
 
