@@ -1,30 +1,31 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.166 2015/05/28 03:35:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.167 2015/05/29 00:03:09 floppym Exp $
 
 EAPI=5
 
-#if LIVE
-AUTOTOOLS_AUTORECONF=yes
-EGIT_REPO_URI="git://anongit.freedesktop.org/${PN}/${PN}
-	http://cgit.freedesktop.org/${PN}/${PN}/"
-
-inherit git-r3
-#endif
-
 AUTOTOOLS_PRUNE_LIBTOOL_FILES=all
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
+
+if [[ ${PV} == 9999 ]]; then
+	AUTOTOOLS_AUTORECONF=yes
+	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd
+		http://cgit.freedesktop.org/systemd/systemd"
+	inherit git-r3
+else
+	SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
+	KEYWORDS="~amd64 ~arm ~ia64 ~x86"
+fi
+
 inherit autotools-utils bash-completion-r1 linux-info multilib \
 	multilib-minimal pam python-single-r1 systemd toolchain-funcs udev \
 	user
 
 DESCRIPTION="System and service manager for Linux"
 HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
-SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
 
 LICENSE="GPL-2 LGPL-2.1 MIT public-domain"
 SLOT="0/2"
-KEYWORDS="~amd64 ~arm ~ia64 ~x86"
 IUSE="acl apparmor audit cryptsetup curl doc elfutils gcrypt gnuefi gudev http
 	idn importd introspection kdbus +kmod +lz4 lzma nat pam policykit python
 	qrcode +seccomp selinux ssl sysv-utils terminal test vanilla xkb"
@@ -103,18 +104,15 @@ DEPEND="${COMMON_DEPEND}
 	terminal? ( media-fonts/unifont[utils(+)] )
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
-#if LIVE
-DEPEND="${DEPEND}
-	app-text/docbook-xml-dtd:4.2
-	app-text/docbook-xml-dtd:4.5
-	app-text/docbook-xsl-stylesheets
-	dev-libs/libxslt:0
-	dev-libs/gobject-introspection-common
-	>=dev-libs/libgcrypt-1.4.5:0"
-
-SRC_URI=
-KEYWORDS=
-#endif
+if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
+	DEPEND="${DEPEND}
+		app-text/docbook-xml-dtd:4.2
+		app-text/docbook-xml-dtd:4.5
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt:0
+		dev-libs/gobject-introspection-common
+		>=dev-libs/libgcrypt-1.4.5:0"
+fi
 
 pkg_pretend() {
 	local CONFIG_CHECK="~AUTOFS4_FS ~BLK_DEV_BSG ~CGROUPS
@@ -159,14 +157,14 @@ pkg_setup() {
 }
 
 src_prepare() {
-#if LIVE
-	if use doc; then
-		gtkdocize --docdir docs/ || die
-	else
-		echo 'EXTRA_DIST =' > docs/gtk-doc.make
+	if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
+		if use doc; then
+			gtkdocize --docdir docs/ || die
+		else
+			echo 'EXTRA_DIST =' > docs/gtk-doc.make
+		fi
 	fi
 
-#endif
 	# Bug 463376
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
