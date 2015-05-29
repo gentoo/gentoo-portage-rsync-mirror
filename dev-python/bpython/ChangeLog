@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bpython
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.54 2015/03/21 16:50:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bpython/ChangeLog,v 1.55 2015/05/29 10:38:06 jlec Exp $
+
+*bpython-0.14.2 (29 May 2015)
+
+  29 May 2015; Justin Lecher <jlec@gentoo.org> +bpython-0.14.2.ebuild:
+  Version Bump
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> bpython-0.13.1.ebuild,
   bpython-0.13.2.ebuild:
