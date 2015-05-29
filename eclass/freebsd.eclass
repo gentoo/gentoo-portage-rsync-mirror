@@ -66,9 +66,7 @@ if [[ ${MY_PV} == *9999* ]]; then
 	ESVN_PROJECT="freebsd-${BRANCH}"
 fi
 
-if [[ ${PN} != "freebsd-share" ]] && [[ ${PN} != freebsd-sources ]]; then
-	IUSE="profile"
-fi
+IUSE="profile"
 
 #unalias -a
 alias install-info='/usr/bin/bsdinstall-info'
