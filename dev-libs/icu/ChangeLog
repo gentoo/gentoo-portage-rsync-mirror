@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/icu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.311 2015/05/28 05:28:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/ChangeLog,v 1.312 2015/05/29 05:05:12 vapier Exp $
+
+  29 May 2015; Mike Frysinger <vapier@gentoo.org> icu-54.1-r1.ebuild,
+  icu-55.1.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   28 May 2015; Jeroen Roovers <jer@gentoo.org> icu-55.1.ebuild:
   Stable for HPPA (bug #546156).

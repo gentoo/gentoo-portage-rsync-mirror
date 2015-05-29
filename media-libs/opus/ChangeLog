@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/opus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.44 2015/05/28 10:06:37 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opus/ChangeLog,v 1.46 2015/05/29 05:25:52 jmorgan Exp $
+
+  29 May 2015; Jack Morgan <jmorgan@gentoo.org> opus-1.1.ebuild:
+  sparc stable wrt bug #500868
+
+  29 May 2015; Jack Morgan <jmorgan@gentoo.org> opus-1.1.ebuild:
+  ia64 stable wrt bug #500868
 
   28 May 2015; Ben de Groot <yngwin@gentoo.org>
   +files/1.1-fix-configure.ac-shell-bug.patch, opus-1.1.ebuild:
