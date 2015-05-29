@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opensmtpd-extras/opensmtpd-extras-5.4.5.201505281056.ebuild,v 1.1 2015/05/28 10:37:34 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opensmtpd-extras/opensmtpd-extras-5.4.5.201505281056.ebuild,v 1.2 2015/05/29 02:31:03 patrick Exp $
 
 EAPI=5
 
@@ -27,12 +27,12 @@ IUSE="
 	filter-stub
 	filter-trace
 	filter-void
-	
+
 	queue-null
 	queue-python
 	queue-ram
 	queue-stub
-	
+
 	table-ldap
 	table-mysql
 	table-postgres
@@ -42,7 +42,7 @@ IUSE="
 	table-python
 	table-sqlite
 	table-stub
-	
+
 	scheduler-ram
 	scheduler-stub
 	scheduler-python

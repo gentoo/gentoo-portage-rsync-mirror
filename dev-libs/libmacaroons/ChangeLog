@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libmacaroons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmacaroons/ChangeLog,v 1.4 2015/01/15 05:47:45 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmacaroons/ChangeLog,v 1.5 2015/05/29 02:08:27 patrick Exp $
+
+*libmacaroons-0.3.0 (29 May 2015)
+
+  29 May 2015; Patrick Lauer <patrick@gentoo.org> +libmacaroons-0.3.0.ebuild:
+  Bump
 
 *libmacaroons-0.2.0-r1 (15 Jan 2015)
 

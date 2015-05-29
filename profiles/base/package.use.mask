@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.680 2015/05/28 01:36:22 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.681 2015/05/29 02:30:42 patrick Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Patrick Lauer <patrick@gentoo.org> (29 May 2015)
+# lua:5.2 not there yet
+mail-filter/opensmtpd-extras filter-lua
 
 # Matthias Maier <tamiko@gentoo.org> (27 May 2015)
 # mask lcms use flag for old dcraw versions that depends on lcms:0
