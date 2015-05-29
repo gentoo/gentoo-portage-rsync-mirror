@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.375 2015/03/20 14:41:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.376 2015/05/29 06:31:25 polynomial-c Exp $
+
+*db-6.1.23 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org> +db-6.1.23.ebuild:
+  Version bump.
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> db-4.8.30-r1.ebuild,
   db-4.8.30-r2.ebuild, db-4.8.30.ebuild, db-5.1.29-r1.ebuild, db-5.1.29.ebuild,

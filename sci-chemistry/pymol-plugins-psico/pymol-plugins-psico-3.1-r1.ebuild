@@ -1,15 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-psico/pymol-plugins-psico-3.1.ebuild,v 1.2 2012/11/06 19:10:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/pymol-plugins-psico/pymol-plugins-psico-3.1-r1.ebuild,v 1.1 2015/05/29 07:01:07 jlec Exp $
 
-EAPI=4
+EAPI=5
 
-PYTHON_DEPEND="2"
-SUPPORT_PYTHON_ABIS="1"
-RESTRICT_PYTHON_ABIS="3.*"
-PYTHON_MODNAME="psico"
+PYTHON_COMPAT=( python2_7 )
 
-inherit distutils vcs-snapshot
+inherit distutils-r1 vcs-snapshot
 
 DESCRIPTION="Pymol ScrIpt COllection"
 HOMEPAGE="https://github.com/speleo3/pymol-psico/"
@@ -21,14 +18,15 @@ LICENSE="BSD-2"
 IUSE="minimal"
 
 RDEPEND="
-	dev-python/numpy
-	sci-biology/biopython
-	sci-libs/mmtk
+	dev-python/numpy[${PYTHON_USEDEP}]
+	sci-biology/biopython[${PYTHON_USEDEP}]
+	sci-libs/mmtk[${PYTHON_USEDEP}]
+	sci-chemistry/pymol[${PYTHON_USEDEP}]
 	!minimal? (
 		media-libs/qhull
 		media-video/mplayer
 		sci-biology/stride
-		sci-chemistry/ccp4-apps
+		sci-chemistry/ccp4-apps[${PYTHON_USEDEP}]
 		sci-chemistry/dssp
 		sci-chemistry/mm-align
 		sci-chemistry/pdbmat
