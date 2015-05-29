@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.264 2015/05/29 19:32:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/license_groups,v 1.265 2015/05/29 20:08:06 ulm Exp $
 
 # Please report bugs or other requests at bugs.gentoo.org and assign to
 # licenses@gentoo.org
@@ -60,8 +60,6 @@ FREE-DOCUMENTS @FSF-APPROVED-OTHER @MISC-FREE-DOCS
 # and share modifications
 FREE @FREE-SOFTWARE @FREE-DOCUMENTS
 
-EULA Adaptec-EULA AdobeFlash-11.x ArxFatalis-EULA-JoWooD baudline BCS bf1942-lnxded CAPYBARA-EULA cadsoft Coherent-Graphics CYANA DOOM3 ETQW FAH-EULA-2009 FAH-EULA-2014 FraunhoferFDK GameFront Gameplay-Group-EULA GIMPS GOG-EULA google-chrome googleearth Google-TOS IBM-J1.6 Intel-SDP Introversion LastPass LOKI-EULA LRCTF MakeMKV-EULA MARBLEBLAST Mendeley-terms MSjdbcEULA40 MTA-0.5 NVIDIA-CUDA Nero-AAC-EULA Nero-EULA-US Oracle-BCLA-JavaSE PAPERS-PLEASE POMPOM postal2 Primate-Plunge PUEL Q3AEULA Q3AEULA-20000111 QUAKE4 RTCW RTCW-ETEULA SCM-MICRO SJ-Labs skype-4.0.0.7-copyright spin-commercial spin-educational sun-bcla-java-vm TeamViewer THINKTANKS UPEK-SDK-EULA ut2003 ut2003-demo Vivaldi
-
 # As proposed: http://archives.gentoo.org/gentoo-dev/msg_6c950b46c50fe72ebc5e650bbf70f77c.xml
 # Excerpt of the rules for this license group:
 # - MUST permit redistribution in binary form
@@ -73,6 +71,12 @@ EULA Adaptec-EULA AdobeFlash-11.x ArxFatalis-EULA-JoWooD baudline BCS bf1942-lnx
 #   USE=bindist MUST cause a copy of the license to be installed
 #   in a file location compliant with the license
 BINARY-REDISTRIBUTABLE @FREE atheros-hal bh-luxi Broadcom Dina hashcat intel-ucode ipw2100-fw ipw2200-fw ipw3945 no-source-code NVIDIA-r1 qlogic-fibre-channel-firmware radeon-ucode shmux SmartLabs sun-concurrent-util sun-jlfgr
+
+######################################################################
+
+# License agreements that try to take away your rights. These are more
+# restrictive than "all-rights-reserved" or require explicit approval.
+EULA Adaptec-EULA AdobeFlash-11.x ArxFatalis-EULA-JoWooD baudline BCS bf1942-lnxded CAPYBARA-EULA cadsoft Coherent-Graphics CYANA DOOM3 ETQW FAH-EULA-2009 FAH-EULA-2014 FraunhoferFDK GameFront Gameplay-Group-EULA GIMPS GOG-EULA google-chrome googleearth Google-TOS IBM-J1.6 Intel-SDP Introversion LastPass LOKI-EULA LRCTF MakeMKV-EULA MARBLEBLAST Mendeley-terms MSjdbcEULA40 MTA-0.5 NVIDIA-CUDA Nero-AAC-EULA Nero-EULA-US Oracle-BCLA-JavaSE PAPERS-PLEASE POMPOM postal2 Primate-Plunge PUEL Q3AEULA Q3AEULA-20000111 QUAKE4 RTCW RTCW-ETEULA SCM-MICRO SJ-Labs skype-4.0.0.7-copyright spin-commercial spin-educational sun-bcla-java-vm TeamViewer THINKTANKS UPEK-SDK-EULA ut2003 ut2003-demo Vivaldi
 
 # Deprecated license labels, used by repoman
 #DEPRECATED as-is
