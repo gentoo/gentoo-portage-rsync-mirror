@@ -14,16 +14,18 @@ LICENSE="CDDL GPL-2"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${P}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
-			build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${INCLUDE}.tar.xz )"
 fi
 
 # sys is required.
+EXTRACTONLY="
+	cddl/
+	contrib/
+	usr.bin/
+	lib/
+	sbin/
+	sys/
+"
+use build && EXTRACTONLY+="include/"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*

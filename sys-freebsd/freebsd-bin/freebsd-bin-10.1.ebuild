@@ -13,11 +13,14 @@ IUSE=""
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${BIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz"
 fi
+
+EXTRACTONLY="
+	bin/
+	usr.bin/
+	sbin/
+	lib/
+"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	>=dev-libs/libedit-20120311.3.0-r1

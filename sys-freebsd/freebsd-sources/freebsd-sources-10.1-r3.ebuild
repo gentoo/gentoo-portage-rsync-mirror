@@ -22,12 +22,16 @@ UPSTREAM_PATCHES=( "SA-15:02/sctp.patch"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-		zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )
+	SRC_URI="${SRC_URI}
 		$(freebsd_upstream_patches)"
 fi
+
+EXTRACTONLY="
+	sys/
+	contrib/bmake/
+	usr.bin/bmake/
+"
+use zfs && EXTRACTONLY+="cddl/"
 
 RDEPEND="dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
 	=sys-freebsd/freebsd-mk-defs-${RV}*

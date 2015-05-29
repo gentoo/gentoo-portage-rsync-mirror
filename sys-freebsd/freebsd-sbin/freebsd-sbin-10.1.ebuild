@@ -11,14 +11,17 @@ SLOT="0"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIBEXEC}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
-		build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz )"
 fi
+
+EXTRACTONLY="
+	sbin/
+	contrib/
+	lib/
+	libexec/
+	usr.sbin/
+	etc/
+"
+use build && EXTRACTONLY+="sys/"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*[ipv6?,atm?,netware?]
 	=sys-freebsd/freebsd-libexec-${RV}*

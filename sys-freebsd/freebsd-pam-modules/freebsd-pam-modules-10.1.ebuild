@@ -13,8 +13,9 @@ IUSE="kerberos nis"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz"
 fi
+
+EXTRACTONLY="lib/"
 
 RDEPEND=">=sys-auth/openpam-20050201-r1
 	kerberos? ( dev-libs/openssl

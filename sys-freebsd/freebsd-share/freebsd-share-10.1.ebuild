@@ -13,17 +13,20 @@ IUSE="doc zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SHARE}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${BIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
-		zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )"
 fi
+
+EXTRACTONLY="
+	share/
+	contrib/
+	gnu/
+	usr.bin/
+	usr.sbin/
+	sbin/
+	bin/
+	lib/
+	etc/
+"
+use zfs && EXTRACTONLY+="cddl/"
 
 DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
 		=sys-freebsd/freebsd-sources-${RV}*"

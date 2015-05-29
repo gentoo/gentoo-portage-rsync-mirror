@@ -14,18 +14,21 @@ IUSE="atm netware nis zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${BIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIBEXEC}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${RESCUE}.tar.xz
-			zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )"
 fi
+
+EXTRACTONLY="
+	usr.bin/
+	contrib/
+	lib/
+	bin/
+	sbin/
+	usr.sbin/
+	gnu/
+	sys/
+	libexec/
+	rescue/
+"
+use zfs && EXTRACTONLY+="cddl/"
 
 RDEPEND=""
 DEPEND="sys-devel/flex
