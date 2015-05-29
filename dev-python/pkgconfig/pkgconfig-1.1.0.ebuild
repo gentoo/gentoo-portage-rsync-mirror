@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pkgconfig/pkgconfig-1.1.0.ebuild,v 1.1 2015/05/27 09:03:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkgconfig/pkgconfig-1.1.0.ebuild,v 1.2 2015/05/29 14:53:21 jlec Exp $
 
 EAPI=5
 
@@ -22,6 +22,11 @@ DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? ( >=dev-python/nose-1[${PYTHON_USEDEP}] )
 "
+
+python_prepare_all() {
+	sed -e '/nose/d' -i setup.py || die
+	distutils-r1_python_prepare_all
+}
 
 python_test() {
 	nosetests || die

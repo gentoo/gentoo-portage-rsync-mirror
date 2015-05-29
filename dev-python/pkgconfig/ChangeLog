@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pkgconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pkgconfig/ChangeLog,v 1.1 2015/05/27 09:03:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pkgconfig/ChangeLog,v 1.2 2015/05/29 14:53:21 jlec Exp $
+
+  29 May 2015; Justin Lecher <jlec@gentoo.org> pkgconfig-1.1.0.ebuild:
+  Drop nose requirement from setup.py, bug #550558
 
 *pkgconfig-1.1.0 (27 May 2015)
 
