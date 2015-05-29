@@ -9,7 +9,7 @@ inherit bsdmk freebsd flag-o-matic toolchain-funcs
 DESCRIPTION="FreeBSD kernel sources"
 SLOT="0"
 
-IUSE="+build-kernel debug dtrace profile zfs"
+IUSE="+build-kernel debug dtrace zfs"
 
 # Security Advisory and Errata patches.
 UPSTREAM_PATCHES=( "SA-15:02/sctp.patch"
