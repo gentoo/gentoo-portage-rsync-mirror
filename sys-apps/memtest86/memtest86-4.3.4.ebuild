@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-4.3.3.ebuild,v 1.1 2013/10/10 18:38:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/memtest86-4.3.4.ebuild,v 1.1 2015/05/29 08:06:27 polynomial-c Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ S="${WORKDIR}/src"
 BOOTDIR=/boot/memtest86
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-build.patch #66630
+	epatch "${FILESDIR}"/${PN}-4.3.3-build-nopie.patch #66630 + #206726
 
 	sed -i -e 's,0x10000,0x100000,' memtest.lds || die
 
@@ -29,15 +29,6 @@ src_prepare() {
 			config.h \
 			|| die "sed failed"
 	fi
-
-	cat - > "${T}"/39_${PN} <<EOF
-#!/bin/sh
-exec tail -n +3 \$0
-
-menuentry "${PN} ${PV}" {
-	linux16 ${BOOTDIR}/memtest
-}
-EOF
 
 	tc-export AS CC LD
 }
@@ -50,7 +41,7 @@ src_install() {
 	dosym memtest ${BOOTDIR}/memtest.bin
 
 	exeinto /etc/grub.d
-	doexe "${T}"/39_${PN}
+	doexe "${FILESDIR}"/39_memtest86
 
 	dodoc README README.build-process README.background
 }
