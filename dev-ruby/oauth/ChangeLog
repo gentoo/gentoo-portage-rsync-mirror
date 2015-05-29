@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/oauth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.29 2015/03/16 19:43:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/oauth/ChangeLog,v 1.30 2015/05/29 05:50:54 graaff Exp $
+
+  29 May 2015; Hans de Graaff <graaff@gentoo.org> oauth-0.4.7-r2.ebuild:
+  Avoid now-incomptaible typhoeus tests. Use a newer mocha version so ruby21
+  can be added. Add missing rack test dependency.
 
   16 Mar 2015; Hans de Graaff <graaff@gentoo.org> -oauth-0.4.7-r1.ebuild:
   Cleanup.

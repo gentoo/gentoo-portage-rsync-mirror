@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/childprocess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.64 2015/05/03 11:59:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/childprocess/ChangeLog,v 1.65 2015/05/29 05:35:58 graaff Exp $
+
+  29 May 2015; Hans de Graaff <graaff@gentoo.org> childprocess-0.5.6.ebuild:
+  Add ruby22.
 
   03 May 2015; Jeroen Roovers <jer@gentoo.org> childprocess-0.5.3.ebuild:
   Stable for PPC64 (bug #542574).
