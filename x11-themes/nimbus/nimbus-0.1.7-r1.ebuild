@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nimbus/nimbus-0.1.7-r1.ebuild,v 1.1 2012/06/03 23:00:37 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nimbus/nimbus-0.1.7-r1.ebuild,v 1.2 2015/05/29 09:02:17 haubi Exp $
 
 EAPI=4
 AUTOTOOLS_AUTO_DEPEND=no
@@ -23,7 +23,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	>=x11-misc/icon-naming-utils-0.8.90
 	!gtk? ( ${AUTOTOOLS_DEPEND} )
-	kernel_Interix? ( ${AUTOTOOLS_DEPEND} )"
+	elibc_Interix? ( ${AUTOTOOLS_DEPEND} )"
 
 src_prepare() {
 	# Tango is deprecated

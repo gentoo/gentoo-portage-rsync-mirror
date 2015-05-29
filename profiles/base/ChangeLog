@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.804 2015/05/29 02:30:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.805 2015/05/29 09:12:54 haubi Exp $
+
+  29 May 2015; Michael Haubenwallner <haubi@gentoo.org> make.defaults,
+  use.mask:
+  Cygwin,Interix are pure ELIBC values, KERNEL is Winnt (bug#544518)
 
   29 May 2015; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Fix opensmtpd-extras[filter-lua]

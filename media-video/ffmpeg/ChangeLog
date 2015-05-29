@@ -1,6 +1,10 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.859 2015/05/29 07:37:45 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.860 2015/05/29 09:22:34 aballier Exp $
+
+  29 May 2015; Alexis Ballier <aballier@gentoo.org> -ffmpeg-2.6.1.ebuild,
+  -ffmpeg-2.6.2.ebuild:
+  remove old
 
   29 May 2015; Jack Morgan <jmorgan@gentoo.org> ffmpeg-2.2.14.ebuild:
   sparc stable wrt bug #538798

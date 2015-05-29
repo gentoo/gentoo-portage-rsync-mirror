@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10019 2015/05/28 18:04:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10020 2015/05/29 09:08:51 haubi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  29 May 2015; Michael Haubenwallner <haubi@gentoo.org> base/make.defaults,
+  base/use.mask, prefix/windows/cygwin/make.defaults,
+  prefix/windows/interix/make.defaults, prefix/windows/use.force,
+  prefix/windows/use.mask, prefix/windows/winnt/make.defaults:
+  Cygwin,Interix are pure ELIBC values, KERNEL is Winnt (bug#544518)
 
   28 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org> package.mask:
   Improve lcms:0 mask message

@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.454 2015/05/26 08:05:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.455 2015/05/29 09:14:35 haubi Exp $
+
+  29 May 2015; Michael Haubenwallner <haubi@gentoo.org>
+  windows/cygwin/make.defaults, windows/interix/make.defaults,
+  windows/use.force, windows/use.mask, windows/winnt/make.defaults:
+  Cygwin,Interix are pure ELIBC values, KERNEL is Winnt (bug#544518)
 
   26 May 2015; Fabian Groffen <grobian@gentoo.org> darwin/package.use.mask,
   sunos/solaris/package.use.mask:

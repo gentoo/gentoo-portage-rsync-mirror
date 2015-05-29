@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.221 2015/04/27 16:34:50 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.mask,v 1.222 2015/05/29 09:08:51 haubi Exp $
 
 # cilk has been ported only to x86 systems
 cilk
@@ -213,10 +213,10 @@ kernel_Darwin
 kernel_FreeBSD
 kernel_freemint
 kernel_HPUX
-kernel_Interix
 kernel_NetBSD
 kernel_OpenBSD
 kernel_SunOS
+kernel_Winnt
 
 # Diego Pettenò <flameeyes@gentoo.org> (6 Dec 2006)
 # Mask specific Apple drivers

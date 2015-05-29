@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.106 2015/05/27 11:58:56 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.107 2015/05/29 09:24:43 voyageur Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 pypy )
 
-inherit eutils cmake-utils flag-o-matic git-r3 multibuild multilib \
+inherit eutils flag-o-matic git-r3 multibuild multilib \
 	multilib-minimal python-r1 toolchain-funcs pax-utils check-reqs
 
 DESCRIPTION="Low Level Virtual Machine"
@@ -19,7 +19,8 @@ LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
 IUSE="clang debug doc gold libedit +libffi multitarget ncurses ocaml python
-	+static-analyzer test xml video_cards_radeon kernel_Darwin"
+	+static-analyzer test xml video_cards_radeon
+	kernel_Darwin"
 
 COMMON_DEPEND="
 	sys-libs/zlib:0=
@@ -43,6 +44,10 @@ DEPEND="${COMMON_DEPEND}
 	>=sys-devel/make-3.81
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
+	|| ( >=sys-devel/gcc-3.0 >=sys-devel/gcc-apple-4.2.1
+		( >=sys-freebsd/freebsd-lib-9.1-r10 sys-libs/libcxx )
+	)
+	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-5.1 )
 	clang? ( xml? ( virtual/pkgconfig ) )
 	libffi? ( virtual/pkgconfig )
 	!!<dev-python/configparser-3.3.0.2
@@ -233,8 +238,7 @@ multilib_src_configure() {
 	tc-export CC CXX
 
 	ECONF_SOURCE=${S} \
-	cmake-utils_src_configure
-	#econf "${conf_flags[@]}"
+	econf "${conf_flags[@]}"
 }
 
 set_makeargs() {
@@ -466,6 +470,7 @@ multilib_src_install_all() {
 		insinto /usr/share/vim/vimfiles/${dir}
 		doins ${dir}/*.vim
 	done
+	popd >/dev/null || die
 
 	if use clang; then
 		pushd tools/clang >/dev/null || die
@@ -506,5 +511,6 @@ multilib_src_install_all() {
 			python_doscript "${S}"/projects/compiler-rt/lib/asan/scripts/asan_symbolize.py
 		}
 		python_foreach_impl python_inst
+		popd >/dev/null || die
 	fi
 }
