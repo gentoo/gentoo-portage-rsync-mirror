@@ -35,7 +35,6 @@ EXTRACTONLY="
 use build && EXTRACTONLY+="sys/"
 use zfs && EXTRACTONLY+="cddl/"
 
-
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
 		hesiod? ( net-dns/hesiod )
