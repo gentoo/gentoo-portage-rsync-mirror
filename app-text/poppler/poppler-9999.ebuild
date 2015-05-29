@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.8 2015/05/25 11:42:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-9999.ebuild,v 1.9 2015/05/29 13:00:45 dilfridge Exp $
 
 EAPI=5
 
@@ -36,7 +36,7 @@ COMMON_DEPEND="
 	)
 	curl? ( net-misc/curl )
 	jpeg? ( virtual/jpeg:0 )
-	jpeg2k? ( media-libs/openjpeg:2 )
+	jpeg2k? ( media-libs/openjpeg:2= )
 	lcms? ( media-libs/lcms:2 )
 	png? ( media-libs/libpng:0= )
 	qt4? (
