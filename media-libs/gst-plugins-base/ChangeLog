@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gst-plugins-base
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.268 2015/03/29 10:42:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins-base/ChangeLog,v 1.269 2015/05/29 04:24:01 jmorgan Exp $
+
+  29 May 2015; Jack Morgan <jmorgan@gentoo.org> gst-plugins-base-1.4.5.ebuild:
+  sparc stable wrt bug #519258
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-base-0.10.36-r2.ebuild, gst-plugins-base-1.4.5.ebuild:
