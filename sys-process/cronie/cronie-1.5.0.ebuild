@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.4.11-r1.ebuild,v 1.3 2014/08/10 20:11:30 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/cronie-1.5.0.ebuild,v 1.1 2015/05/29 04:37:40 polynomial-c Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="https://fedorahosted.org/releases/c/r/cronie/${P}.tar.gz"
 HOMEPAGE="https://fedorahosted.org/cronie/wiki"
 
 LICENSE="ISC BSD BSD-2 GPL-2"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="anacron +inotify pam selinux"
 
 DEPEND="pam? ( virtual/pam )
@@ -49,33 +49,33 @@ src_install() {
 	newins "${S}"/crond.sysconfig ${PN}
 
 	insinto /etc
-	newins "${FILESDIR}/${PN}-1.2-crontab" crontab
+	newins "${FILESDIR}/${PN}-1.3-crontab" crontab
 	newins "${FILESDIR}/${PN}-1.2-cron.deny" cron.deny
 
 	keepdir /etc/cron.d
 	newinitd "${FILESDIR}/${PN}-1.3-initd" ${PN}
 	newpamd "${FILESDIR}/${PN}-1.4.3-pamd" crond
 
-	sed s:sysconfig/crond:conf.d/cronie: contrib/cronie.systemd > "${T}"/cronie.service
+	sed s:sysconfig/crond:conf.d/cronie: contrib/cronie.systemd \
+		> "${T}"/cronie.service
 	systemd_dounit "${T}"/cronie.service
 
 	if use anacron ; then
-		keepdir /var/spool/anacron
-		fowners root:cron /var/spool/anacron
-		fperms 0750 /var/spool/anacron
+		local anacrondir="/var/spool/anacron"
+		keepdir ${anacrondir}
+		fowners root:cron ${anacrondir}
+		fperms 0750 ${anacrondir}
 
 		insinto /etc
 
 		doins contrib/anacrontab
-		newinitd "${FILESDIR}"/anacron-1.0-initd anacron
 
-		# Install this without execute permission.
-		# User can enable it with chmod +x.
 		insinto /etc/cron.hourly
 		doins contrib/0anacron
+		fperms 0750 /etc/cron.hourly/0anacron
 	fi
 
-	dodoc AUTHORS README contrib/*
+	dodoc AUTHORS README NEWS contrib/*
 }
 
 pkg_postinst() {

@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/cronie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.64 2015/02/28 21:30:03 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronie/ChangeLog,v 1.65 2015/05/29 04:37:40 polynomial-c Exp $
+
+*cronie-1.5.0 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org> -cronie-1.4.11-r1.ebuild,
+  -cronie-1.4.11-r3.ebuild, +cronie-1.5.0.ebuild, -files/anacron-1.0-initd,
+  -files/cronie-1.2-crontab:
+  Version bump (bug #550706). Removed old.
 
   28 Feb 2015;  <tgall@gentoo.org> cronie-1.4.12.ebuild:
   stable on arm64

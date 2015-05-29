@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.122 2015/05/24 02:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/ChangeLog,v 1.123 2015/05/29 04:32:21 vapier Exp $
+
+  29 May 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/2.0.3/75_mod_perl.2.2.conf, -files/2.0.3/75_mod_perl.conf.2.2:
+  Rename the old mod_perl.conf to match the ebuild #550638 by Vieri.
 
 *mod_perl-2.0.8-r2 (24 May 2015)
 
