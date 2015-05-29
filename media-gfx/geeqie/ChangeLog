@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/geeqie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.31 2015/01/26 10:43:21 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/geeqie/ChangeLog,v 1.32 2015/05/29 15:41:50 voyageur Exp $
+
+  29 May 2015; Bernard Cafarelli <voyageur@gentoo.org> -geeqie-1.0-r4.ebuild,
+  -geeqie-1.1.ebuild, geeqie-1.2-r1.ebuild,
+  -files/geeqie-1.0-automake-1.11.patch, -files/geeqie-1.0-copy_chown.patch,
+  -files/geeqie-1.0-filedata_compare.patch,
+  -files/geeqie-1.0-fix_fullscreen.patch, -files/geeqie-1.0-lfs_support.patch,
+  -files/geeqie-1.0-ui_pathsel.patch, -files/geeqie-1.0-up_path_restore.patch,
+  -files/geeqie-1.0-vflist-refresh.patch,
+  -files/geeqie-1.1-fix_comment_update.patch:
+  Remove old versions, new homepage, host tarball on my devspace for now (bug
+  #544850)
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> geeqie-1.2-r1.ebuild:
   Stable for x86, wrt bug #536862
