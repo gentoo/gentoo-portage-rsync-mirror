@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14-r2.ebuild,v 1.8 2015/03/02 10:19:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/enca/enca-1.14-r2.ebuild,v 1.9 2015/05/29 21:57:35 slyfox Exp $
 
 EAPI=5
 
@@ -22,8 +22,9 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext"
 
 src_prepare() {
-	epatch "${FILESDIR}"/${PN}-remove-dirty-path-hack.patch\
-		"${FILESDIR}"/${P}-automake-1.13.patch
+	epatch "${FILESDIR}"/${PN}-remove-dirty-path-hack.patch \
+		"${FILESDIR}"/${P}-automake-1.13.patch \
+		"${FILESDIR}"/${P}-gcc4.8-avx-bug.patch
 	rm missing # too old, automake will update it
 	# fix crosscompilation, bug #424473
 	if tc-is-cross-compiler; then

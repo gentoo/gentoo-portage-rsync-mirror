@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/radmind
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.19 2014/07/10 18:35:33 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/radmind/ChangeLog,v 1.20 2015/05/29 21:36:57 mrueg Exp $
+
+  29 May 2015; Manuel Rüger <mrueg@gentoo.org> radmind-1.14.1.ebuild:
+  Fix repoman warning.
 
   10 Jul 2014; Jeroen Roovers <jer@gentoo.org> -radmind-1.7.1-r1.ebuild,
   -radmind-1.13.0.ebuild, -radmind-1.14.0.ebuild:

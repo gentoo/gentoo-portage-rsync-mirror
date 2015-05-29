@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/scrapy
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.28 2014/10/09 01:54:48 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.29 2015/05/29 21:40:54 mrueg Exp $
+
+  29 May 2015; Manuel Rüger <mrueg@gentoo.org> -scrapy-0.24.2.ebuild,
+  scrapy-0.25.1.ebuild:
+  Remove old. Fix repoman warning.
 
   09 Oct 2014; Ian Delaney <idella4@gentoo.org> +files/0.25.1-setup.patch,
   -files/scrapy-0.14.3-runtests.patch, -scrapy-0.19.0.ebuild,

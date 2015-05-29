@@ -1,6 +1,9 @@
 # ChangeLog for sci-misc/gato
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.15 2012/09/16 16:07:37 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-misc/gato/ChangeLog,v 1.16 2015/05/29 21:46:04 mrueg Exp $
+
+  29 May 2015; Manuel Rüger <mrueg@gentoo.org> -gato-1.02.ebuild:
+  Remove old.
 
   16 Sep 2012; Justin Lecher <jlec@gentoo.org> gato-1.1.2.ebuild, metadata.xml:
   Require tk support in python, #435036
