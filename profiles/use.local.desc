@@ -3399,6 +3399,7 @@ mail-filter/opensmtpd-extras:filter-spamassassin - filter for scanning with mail
 mail-filter/opensmtpd-extras:filter-stub - stub filter
 mail-filter/opensmtpd-extras:filter-trace - trace filter
 mail-filter/opensmtpd-extras:filter-void - void filter
+mail-filter/opensmtpd-extras:luajit - Use JIT for Lua via dev-lang/luajit instead of dev-lang/lua
 mail-filter/opensmtpd-extras:queue-null - null queue
 mail-filter/opensmtpd-extras:queue-python - queue for interfacing with dev-lang/python
 mail-filter/opensmtpd-extras:queue-ram - ram queue
