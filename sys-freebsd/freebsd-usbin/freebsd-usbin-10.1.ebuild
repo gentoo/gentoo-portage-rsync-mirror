@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-usbin/freebsd-usbin-10.1.ebuild,v 1.1 2015/03/08 14:01:57 mgorny Exp $
 
-EAPI=3
+EAPI=5
 
 inherit bsdmk freebsd flag-o-matic eutils
 
