@@ -5,8 +5,11 @@
  scribus/styles/CMakeLists.txt               | 2 ++
  scribus/text/CMakeLists.txt                 | 1 +
  scribus/third_party/lib2geom/CMakeLists.txt | 8 +-------
+ scribus/third_party/pgf/CMakeLists.txt      | 2 ++
+ scribus/third_party/prc/CMakeLists.txt      | 2 ++
+ scribus/third_party/wpg/CMakeLists.txt      | 7 ++++---
  scribus/third_party/zip/CMakeLists.txt      | 2 ++
- 8 files changed, 18 insertions(+), 7 deletions(-)
+ 11 files changed, 26 insertions(+), 10 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 29d66f3..62d145f 100644
@@ -108,6 +111,51 @@ index 6187d96..3106f6e 100755
  
  OPTION(2GEOM_BUILD_SHARED
    "Build lib2geom and libtoy as shared libraries."
+diff --git a/scribus/third_party/pgf/CMakeLists.txt b/scribus/third_party/pgf/CMakeLists.txt
+index f84b3d4..d3b1db6 100644
+--- a/scribus/third_party/pgf/CMakeLists.txt
++++ b/scribus/third_party/pgf/CMakeLists.txt
+@@ -3,6 +3,8 @@ ${CMAKE_SOURCE_DIR}
+ ${CMAKE_SOURCE_DIR}/scribus
+ )
+ 
++SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_FPIC}")
++
+ SET(SCRIBUS_PGF_LIB_SOURCES
+         Decoder.cpp
+         Encoder.cpp
+diff --git a/scribus/third_party/prc/CMakeLists.txt b/scribus/third_party/prc/CMakeLists.txt
+index 5f7c2c6..1da7177 100644
+--- a/scribus/third_party/prc/CMakeLists.txt
++++ b/scribus/third_party/prc/CMakeLists.txt
+@@ -5,6 +5,8 @@ ${OPENGL_INCLUDE_DIR}
+ ${FREETYPE_INCLUDE_DIRS}
+ )
+ 
++SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_FPIC}")
++
+ SET(SCRIBUS_PRC_LIB_SOURCES
+     oPRCFile.cc
+     PRCbitStream.cc
+diff --git a/scribus/third_party/wpg/CMakeLists.txt b/scribus/third_party/wpg/CMakeLists.txt
+index ff31e9f..fbc5cd4 100644
+--- a/scribus/third_party/wpg/CMakeLists.txt
++++ b/scribus/third_party/wpg/CMakeLists.txt
+@@ -2,10 +2,11 @@ INCLUDE_DIRECTORIES(
+ ${CMAKE_SOURCE_DIR}
+ ${CMAKE_SOURCE_DIR}/scribus
+ )
++
+ SET(LIB_TYPE STATIC)
+-IF (ARCH_X86_64 EQUAL 1)
+-  SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC")
+-ENDIF (ARCH_X86_64 EQUAL 1)
++
++SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_FPIC}")
++
+ SET(WPG_SOURCES
+     WPG1Parser.cpp
+     WPG2Parser.cpp
 diff --git a/scribus/third_party/zip/CMakeLists.txt b/scribus/third_party/zip/CMakeLists.txt
 index edf9683..f7676ab 100644
 --- a/scribus/third_party/zip/CMakeLists.txt

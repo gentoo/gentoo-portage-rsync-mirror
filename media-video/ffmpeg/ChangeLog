@@ -1,6 +1,14 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.860 2015/05/29 09:22:34 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.861 2015/05/29 09:45:15 aballier Exp $
+
+  29 May 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.14.ebuild,
+  ffmpeg-2.2.15.ebuild, ffmpeg-2.6.3.ebuild, ffmpeg-9999.ebuild:
+  Do not pass extra-cflags/cxxflags to configure as those default to
+  CFLAGS/CXXFLAGS respectively. Just disable optflags instead of passing
+  complete CFLAGS to avoid forced -O3 build: This duplicated CFLAGS on the
+  compile line and overridden important ones set by configure script; fixes bug
+  #550554.
 
   29 May 2015; Alexis Ballier <aballier@gentoo.org> -ffmpeg-2.6.1.ebuild,
   -ffmpeg-2.6.2.ebuild:

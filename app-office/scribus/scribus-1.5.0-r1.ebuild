@@ -1,23 +1,21 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-9999.ebuild,v 1.16 2015/05/29 09:37:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/scribus-1.5.0-r1.ebuild,v 1.1 2015/05/29 09:37:12 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="tk?"
 
-inherit cmake-utils fdo-mime flag-o-matic multilib python-single-r1 subversion
+inherit cmake-utils fdo-mime flag-o-matic multilib python-single-r1
 
 DESCRIPTION="Desktop publishing (DTP) and layout program"
 HOMEPAGE="http://www.scribus.net/"
-SRC_URI=""
-ESVN_REPO_URI="svn://scribus.net/trunk/Scribus"
-ESVN_PROJECT=Scribus-1.5
+SRC_URI="mirror://sourceforge/project/${PN}/${PN}-devel/${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+boost debug examples graphicsmagick hunspell +minimal osg +pdf scripts templates tk"
 
 #a=$((ls resources/translations/scribus.*ts | sed -e 's:\.: :g' | awk '{print $2}'; ls resources/loremipsum/*xml | sed -e 's:\.: :g' -e 's:loremipsum\/: :g'| awk '{print $2}'; ls resources/dicts/hyph*dic | sed -e 's:\.: :g' -e 's:hyph_: :g' | awk '{print $2}'; ls resources/dicts/README_*txt | sed -e 's:_hyph::g' -e 's:\.: :g' -e 's:README_: :g' | awk '{print $2}') | sort | uniq); echo $a
@@ -75,8 +73,8 @@ DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig"
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-1.5.0-docdir.patch
-	"${FILESDIR}"/${PN}-1.5.0-fpic.patch
+	"${FILESDIR}"/${P}-docdir.patch
+	"${FILESDIR}"/${P}-fpic.patch
 	)
 
 src_prepare() {
@@ -100,15 +98,14 @@ src_prepare() {
 		-i resources/templates/CMakeLists.txt || die
 
 	cmake-utils_src_prepare
-	subversion_src_prepare
 }
 
 src_configure() {
 	local lang langs
 	for lang in ${IUSE_LINGUAS}; do
-		if use linguas_${lang}; then
+		if use linguas_${lang} || [[ ${lang} == "en" ]]; then
 			# From the CMakeLists.txt
-			# "#Bit of a hack, preprocess all the filenames to generate our language string, needed for -DWANT_GUI_LANG=en_GB,de_DE , etc"
+			# "#Bit of a hack, preprocess all the filenames to generate our language string, needed for -DWANT_GUI_LANG=en_GB;de_DE , etc"
 			langs+=";${lang}"
 		else
 			# Don't install localized documentation
@@ -126,7 +123,7 @@ src_configure() {
 		-DPYTHON_LIBRARY="$(python_get_library_path)"
 		-DWANT_DISTROBUILD=ON
 		-DDOCDIR="/usr/share/doc/${PF}/"
-		-DWANT_GUI_LANG=${langs#;}
+		-DWANT_GUI_LANG="${langs#;};en"
 		$(cmake-utils_use_with pdf PODOFO)
 		$(cmake-utils_use_with boost)
 		$(cmake-utils_use_want graphicsmagick)

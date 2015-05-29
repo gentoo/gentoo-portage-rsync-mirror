@@ -1,6 +1,12 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.209 2015/05/29 07:51:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.210 2015/05/29 09:37:12 jlec Exp $
+
+*scribus-1.5.0-r1 (29 May 2015)
+
+  29 May 2015; Justin Lecher <jlec@gentoo.org> +scribus-1.5.0-r1.ebuild,
+  files/scribus-1.5.0-fpic.patch, scribus-9999.ebuild:
+  Enhance fPIC patch and fix configure options with USE=osg, bug #550130
 
   29 May 2015; Justin Lecher <jlec@gentoo.org> scribus-1.4.5-r1.ebuild:
   Always install en localisation, bug #549876
