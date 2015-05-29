@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrobin/jrobin-1.6.0.ebuild,v 1.1 2015/05/25 20:58:14 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrobin/jrobin-1.6.0-r1.ebuild,v 1.1 2015/05/29 22:34:15 chewi Exp $
 
 EAPI="5"
 
@@ -44,7 +44,7 @@ src_compile() {
 
 src_install() {
 	java-pkg-simple_src_install
-	java-pkg_dolauncher rrdtool --main org.jrobin.cmd.RrdCommander
+	java-pkg_dolauncher "${PN}-rrdtool" --main org.jrobin.cmd.RrdCommander
 }
 
 src_test() {
@@ -57,4 +57,9 @@ src_test() {
 
 	ejavac -cp "${CP}" -d . $(find * -name "*.java")
 	ejunit4 -classpath "${CP}" ${TESTS}
+}
+
+pkg_postinst() {
+	elog "The rrdtool executable has been installed as ${PN}-rrdtool to"
+	elog "avoid conflicting with net-analyzer/rrdtool."
 }

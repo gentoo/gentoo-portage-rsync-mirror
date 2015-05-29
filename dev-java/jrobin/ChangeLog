@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jrobin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jrobin/ChangeLog,v 1.5 2015/05/25 20:58:14 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jrobin/ChangeLog,v 1.6 2015/05/29 22:34:15 chewi Exp $
+
+*jrobin-1.6.0-r1 (29 May 2015)
+
+  29 May 2015; James Le Cuirot <chewi@gentoo.org> +jrobin-1.6.0-r1.ebuild,
+  -jrobin-1.6.0.ebuild:
+  Install rrdtool wrapper as jrobin-rrdtool to avoid conflicting with net-
+  analyzer/rrdtool. Closes bug #550522.
 
 *jrobin-1.6.0 (25 May 2015)
 
