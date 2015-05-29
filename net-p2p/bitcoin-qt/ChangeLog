@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/bitcoin-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.104 2015/05/27 01:40:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/ChangeLog,v 1.106 2015/05/29 11:21:31 blueness Exp $
+
+  29 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.10.0-r1.ebuild, bitcoin-qt-0.10.2.ebuild:
+  Restore vapier's fix for memenv.h.
+
+  29 May 2015; Anthony G. Basile <blueness@gentoo.org>
+  bitcoin-qt-0.10.0-r1.ebuild, bitcoin-qt-0.10.2.ebuild:
+  Fix bug #550690
 
 *bitcoin-qt-0.10.2 (27 May 2015)
 

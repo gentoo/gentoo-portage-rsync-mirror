@@ -1,6 +1,6 @@
 # Copyright 2010-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.10.0-r1.ebuild,v 1.3 2015/03/14 19:37:06 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bitcoin-qt/bitcoin-qt-0.10.0-r1.ebuild,v 1.5 2015/05/29 11:21:31 blueness Exp $
 
 EAPI=5
 
@@ -61,6 +61,13 @@ src_prepare() {
 	sed "s/locale\/${filt}/bitcoin.qrc/" -i 'src/Makefile.qt.include'
 	einfo "Languages -- Enabled:$yeslang -- Disabled:$nolang"
 
+	if has_version '>=dev-libs/leveldb-1.18-r1'; then
+		# Newer leveldb has changed header location.
+		sed -i \
+			-e '/#include/s:memenv.h:leveldb/helpers/memenv.h:' \
+			src/leveldbwrapper.cpp || die
+	fi
+
 	bitcoincore_autoreconf
 }
 
@@ -69,7 +76,7 @@ src_configure() {
 	bitcoincore_conf \
 		$(use_with dbus qtdbus)  \
 		$(use_with qrcode qrencode)  \
-		$(usex 1stclassmsg --enable-first-class-messaging)  \
+		$(usex 1stclassmsg --enable-first-class-messaging "")  \
 		--with-gui=$(usex qt5 qt5 qt4)
 }
 
