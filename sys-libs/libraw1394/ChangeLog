@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libraw1394
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.80 2014/03/19 13:49:29 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libraw1394/ChangeLog,v 1.81 2015/05/29 07:28:12 polynomial-c Exp $
+
+*libraw1394-2.1.1 (29 May 2015)
+
+  29 May 2015; Lars Wendler <polynomial-c@gentoo.org> -libraw1394-2.1.0.ebuild,
+  +libraw1394-2.1.1.ebuild:
+  Version bump. Removed old.
 
   19 Mar 2014; Agostino Sarubbo <ago@gentoo.org> libraw1394-2.1.0-r1.ebuild:
   Stable for alpha, wrt bug #495964
