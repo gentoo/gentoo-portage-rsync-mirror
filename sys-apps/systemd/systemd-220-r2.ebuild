@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-220-r2.ebuild,v 1.1 2015/05/28 03:35:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-220-r2.ebuild,v 1.2 2015/05/28 23:53:21 floppym Exp $
 
 EAPI=5
 
@@ -99,7 +99,12 @@ DEPEND="${COMMON_DEPEND}
 	test? ( >=sys-apps/dbus-1.6.8-r1:0 )"
 
 if [[ -n ${AUTOTOOLS_AUTORECONF} ]]; then
-	DEPEND+=" >=dev-libs/libgcrypt-1.4.5:0"
+	DEPEND+="
+		app-text/docbook-xml-dtd:4.2
+		app-text/docbook-xml-dtd:4.5
+		app-text/docbook-xsl-stylesheets
+		dev-libs/libxslt:0
+		>=dev-libs/libgcrypt-1.4.5:0"
 fi
 
 PATCHES=( "${FILESDIR}/218-Dont-enable-audit-by-default.patch" )
