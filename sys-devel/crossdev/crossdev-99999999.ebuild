@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-99999999.ebuild,v 1.8 2015/04/25 16:38:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/crossdev-99999999.ebuild,v 1.9 2015/05/30 04:46:49 vapier Exp $
 
 EAPI="4"
 
@@ -23,6 +23,7 @@ SLOT="0"
 IUSE=""
 
 RDEPEND=">=sys-apps/portage-2.1
+	>=app-portage/portage-utils-0.55
 	app-shells/bash
 	!sys-devel/crossdev-wrappers"
 DEPEND="app-arch/xz-utils"

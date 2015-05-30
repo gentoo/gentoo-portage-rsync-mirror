@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/http-form_data
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-form_data/ChangeLog,v 1.1 2015/05/30 04:41:22 graaff Exp $
+
+*http-form_data-1.0.1 (30 May 2015)
+
+  30 May 2015; Hans de Graaff <graaff@gentoo.org> +http-form_data-1.0.1.ebuild,
+  +metadata.xml:
+  Initial import. New dependency for dev-ruby/http.
+

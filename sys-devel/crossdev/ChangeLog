@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/crossdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.120 2015/05/27 15:01:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/ChangeLog,v 1.121 2015/05/30 04:46:49 vapier Exp $
+
+  30 May 2015; Mike Frysinger <vapier@gentoo.org> crossdev-99999999.ebuild:
+  Start requiring portage-utils for qmerge.
 
 *crossdev-20150527 (27 May 2015)
 
