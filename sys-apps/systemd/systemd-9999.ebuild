@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.169 2015/05/30 13:58:45 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.170 2015/05/30 18:08:36 floppym Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ REQUIRED_USE="importd? ( curl gcrypt lzma )"
 
 MINKV="3.8"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.25:0=
+COMMON_DEPEND=">=sys-apps/util-linux-2.26:0=
 	sys-libs/libcap:0=
 	!<sys-libs/glibc-2.16
 	acl? ( sys-apps/acl:0= )
