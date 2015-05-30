@@ -9,4 +9,4 @@ RDEPEND=net-analyzer/nagios-core dev-libs/openssl
 SLOT=0
 SRC_URI=http://www.vanheusden.com/nagircbot/nagircbot-0.0.33.tgz
 _eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=f158251d297cda166118e6aa161e23c8
+_md5_=60799b77bdf0db8550012e3a8dc094ed
