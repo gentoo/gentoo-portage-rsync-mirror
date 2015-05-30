@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylibacl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.39 2014/12/25 23:08:56 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylibacl/ChangeLog,v 1.40 2015/05/30 10:52:43 jer Exp $
+
+  30 May 2015; Jeroen Roovers <jer@gentoo.org> pylibacl-0.5.0-r1.ebuild:
+  Stable for PPC64 (bug #550260).
 
 *pylibacl-0.5.0-r1 (25 Dec 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtgui
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.88 2015/05/26 18:15:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtgui/ChangeLog,v 1.89 2015/05/30 10:52:14 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtgui-4.8.6-r4.ebuild:
+  arm stable, bug #530238
 
 *qtgui-4.8.7 (26 May 2015)
 

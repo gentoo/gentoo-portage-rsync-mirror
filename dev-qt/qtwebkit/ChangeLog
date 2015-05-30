@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.36 2015/05/26 18:13:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.37 2015/05/30 10:56:39 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtwebkit-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qtwebkit-4.8.7 (26 May 2015)
 

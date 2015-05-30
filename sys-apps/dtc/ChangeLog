@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dtc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.26 2015/05/20 21:16:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dtc/ChangeLog,v 1.27 2015/05/30 10:55:59 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> dtc-1.4.1.ebuild:
+  arm stable, bug #535644
 
   20 May 2015; Mikle Kolyada <zlogene@gentoo.org> dtc-1.4.1.ebuild:
   x86 stable wrt bug #535644

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qttranslations
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.22 2015/05/26 18:12:47 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qttranslations/ChangeLog,v 1.23 2015/05/30 10:47:28 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qttranslations-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qttranslations-4.8.7 (26 May 2015)
 

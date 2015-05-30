@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.224 2015/05/28 15:19:05 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.225 2015/05/30 10:58:50 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> swig-3.0.5.ebuild:
+  arm stable, bug #531736
 
   28 May 2015; Jack Morgan <jmorgan@gentoo.org> swig-3.0.5.ebuild:
   ppc stable wrt bug #531736

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtsql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.37 2015/05/26 18:13:32 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtsql/ChangeLog,v 1.38 2015/05/30 10:50:50 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtsql-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qtsql-4.8.7 (26 May 2015)
 

@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>java</herd>
-  <maintainer>
-    <email>johu@gentoo.org</email>
-    <name>Johannes Huber</name>
-  </maintainer>
   <use>
     <flag name="themes">Install extra theme packs</flag>
   </use>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdbus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/ChangeLog,v 1.31 2015/05/26 18:15:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdbus/ChangeLog,v 1.32 2015/05/30 10:54:12 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtdbus-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qtdbus-4.8.7 (26 May 2015)
 
