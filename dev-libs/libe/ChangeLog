@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libe
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.18 2015/05/29 23:23:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libe/ChangeLog,v 1.19 2015/05/29 23:32:35 patrick Exp $
+
+  29 May 2015; Patrick Lauer <patrick@gentoo.org> -libe-0.4.0.ebuild,
+  -libe-0.4.1.ebuild, -libe-0.5.0.ebuild, -libe-0.6.0.ebuild,
+  -libe-0.7.0.ebuild, -libe-0.8.0.ebuild, -libe-0.8.1.ebuild,
+  -libe-0.8.2.ebuild:
+  Cleanup old
 
   29 May 2015; Patrick Lauer <patrick@gentoo.org> libe-0.10.0.ebuild:
   Fix libpo6 dep #550756
