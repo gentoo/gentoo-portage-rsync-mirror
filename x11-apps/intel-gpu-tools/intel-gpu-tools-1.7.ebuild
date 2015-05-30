@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.7.ebuild,v 1.7 2015/02/19 08:51:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-apps/intel-gpu-tools/intel-gpu-tools-1.7.ebuild,v 1.8 2015/05/30 03:41:38 vapier Exp $
 
 EAPI=5
 
@@ -21,7 +21,10 @@ DEPEND="dev-libs/glib:2
 	python? ( ${PYTHON_DEPS} )"
 RDEPEND="${DEPEND}"
 
-PATCHES=( "${FILESDIR}/${P}-shader-debugger-Force-file-stdout-IO-as-UTF-8.patch" )
+PATCHES=(
+	"${FILESDIR}/${P}-shader-debugger-Force-file-stdout-IO-as-UTF-8.patch"
+	"${FILESDIR}/${PN}-1.10-clang.patch"
+)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup
