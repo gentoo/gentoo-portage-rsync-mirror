@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/eventlet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.15 2015/04/08 08:05:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/eventlet/ChangeLog,v 1.16 2015/05/30 01:36:31 prometheanfire Exp $
+
+*eventlet-0.17.4 (30 May 2015)
+
+  30 May 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +eventlet-0.17.4.ebuild:
+  bup
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> eventlet-0.13.0.ebuild:
   Drop old Python implementations
