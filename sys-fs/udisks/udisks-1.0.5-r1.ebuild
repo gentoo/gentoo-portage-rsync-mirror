@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.5-r1.ebuild,v 1.11 2015/01/16 09:52:16 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udisks/udisks-1.0.5-r1.ebuild,v 1.12 2015/05/30 01:15:56 tetromino Exp $
 
 EAPI=5
 inherit eutils bash-completion-r1 linux-info udev systemd
@@ -52,7 +52,8 @@ pkg_setup() {
 src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.0.2-ntfs-3g.patch \
-		"${FILESDIR}"/${PN}-1.0.4-revert-floppy.patch
+		"${FILESDIR}"/${PN}-1.0.4-revert-floppy.patch \
+		"${FILESDIR}"/${PN}-1.0.5-stat-includes.patch
 
 	sed -i -e "s:/lib/udev:$(get_udevdir):" data/80-udisks.rules || die
 
