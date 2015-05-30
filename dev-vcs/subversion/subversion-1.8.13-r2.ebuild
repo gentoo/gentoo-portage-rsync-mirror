@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.13.ebuild,v 1.4 2015/05/12 07:54:21 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.8.13-r2.ebuild,v 1.1 2015/05/30 14:55:09 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )

@@ -1,6 +1,15 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.231 2015/05/27 15:48:51 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.232 2015/05/30 14:55:09 polynomial-c Exp $
+
+*subversion-1.8.13-r2 (30 May 2015)
+*subversion-1.8.13-r1 (30 May 2015)
+
+  30 May 2015; Lars Wendler <polynomial-c@gentoo.org>
+  -subversion-1.8.13.ebuild, +subversion-1.8.13-r1.ebuild,
+  +subversion-1.8.13-r2.ebuild:
+  Split subversion-1.8.13 into two versions. One for stable users depending on
+  ruby20 and one for unstable users depending on ruby21.
 
   27 May 2015; Markus Meier <maekke@gentoo.org> subversion-1.7.20.ebuild:
   arm stable, bug #545348
