@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/speex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.117 2015/03/03 09:06:58 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/ChangeLog,v 1.118 2015/05/30 00:32:40 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -speex-1.2_rc1-r1.ebuild,
+  -speex-1.2_rc1.ebuild:
+  Remove old.
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> speex-1.2_rc1-r2.ebuild:
   add arm64 support, tested on A53 board

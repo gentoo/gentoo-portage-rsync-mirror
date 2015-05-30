@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.292 2015/04/29 04:42:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.293 2015/05/30 00:33:45 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -netpbm-10.51.00-r2.ebuild:
+  Remove old.
 
 *netpbm-10.70.00 (29 Apr 2015)
 

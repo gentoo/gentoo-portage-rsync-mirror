@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/gtk-doc-am
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.121 2015/05/17 09:37:40 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc-am/ChangeLog,v 1.122 2015/05/30 00:40:15 tetromino Exp $
+
+*gtk-doc-am-1.24 (30 May 2015)
+
+  30 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gtk-doc-am-1.23.ebuild, +gtk-doc-am-1.24.ebuild:
+  Version bump, drop broken 1.23.
 
 *gtk-doc-am-1.23 (17 May 2015)
 

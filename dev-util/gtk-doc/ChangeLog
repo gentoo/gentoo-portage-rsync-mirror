@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.218 2015/05/17 09:38:00 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.219 2015/05/30 00:40:31 tetromino Exp $
+
+*gtk-doc-1.24 (30 May 2015)
+
+  30 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gtk-doc-1.23.ebuild, +gtk-doc-1.24.ebuild:
+  Version bump, fixes missing xml namespace in devhelp2 files. Drop broken 1.23
+  version.
 
 *gtk-doc-1.23 (17 May 2015)
 
