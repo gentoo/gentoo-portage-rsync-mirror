@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/python-social-auth
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-social-auth/ChangeLog,v 1.4 2015/03/06 22:35:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-social-auth/ChangeLog,v 1.5 2015/05/30 13:27:45 maksbotan Exp $
+
+*python-social-auth-0.2.10 (30 May 2015)
+
+  30 May 2015; Maxim Koltsov <maksbotan@gentoo.org>
+  +python-social-auth-0.2.10.ebuild:
+  Bump to 0.2.10
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> python-social-auth-0.1.26.ebuild:
   amd64 stable, bug 540290

@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.371 2015/05/29 00:03:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.373 2015/05/30 13:03:27 pacho Exp $
+
+  30 May 2015; Pacho Ramos <pacho@gentoo.org> systemd-216-r3.ebuild,
+  systemd-218-r3.ebuild, systemd-219_p112.ebuild, systemd-220-r2.ebuild,
+  systemd-9999.ebuild:
+  Drop systemd-ui references as it's dead and will be removed soon
+
+  30 May 2015; Pacho Ramos <pacho@gentoo.org> -systemd-215-r3.ebuild,
+  -systemd-216-r4.ebuild, -systemd-219-r2.ebuild, -systemd-220-r1.ebuild,
+  -systemd-220.ebuild:
+  Drop old
 
   29 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Convert to a more traditional live ebuild.

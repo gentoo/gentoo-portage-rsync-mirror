@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.167 2015/05/29 00:03:09 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.168 2015/05/30 13:03:27 pacho Exp $
 
 EAPI=5
 
@@ -492,12 +492,6 @@ pkg_postinst() {
 		ewarn "systemd-resolved.service, and create a symlink from /etc/resolv.conf"
 		ewarn "to /run/systemd/resolve/resolv.conf"
 		ewarn
-	fi
-
-	if ! has_version sys-apps/systemd-ui; then
-		elog "To get additional features, a number of optional runtime dependencies may"
-		elog "be installed:"
-		elog "- sys-apps/systemd-ui: for GTK+ systemadm UI and gnome-ask-password-agent"
 	fi
 
 	if has_version sys-apps/openrc &&
