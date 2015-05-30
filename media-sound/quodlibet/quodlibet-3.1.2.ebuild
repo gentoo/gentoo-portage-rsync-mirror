@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-3.1.2.ebuild,v 1.5 2015/05/27 11:01:42 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-3.1.2.ebuild,v 1.6 2015/05/30 12:09:12 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +12,7 @@ SRC_URI="http://bitbucket.org/lazka/${PN}-files/raw/default/releases/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~ppc64 x86"
+KEYWORDS="amd64 ~ppc ppc64 x86"
 IUSE="+dbus gstreamer ipod +udev"
 
 RDEPEND="dev-libs/keybinder:3[introspection]

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-349.16.ebuild,v 1.2 2015/04/21 19:30:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/nvidia-drivers-349.16.ebuild,v 1.3 2015/05/30 12:30:31 jer Exp $
 
 EAPI=5
 
@@ -62,13 +62,8 @@ RDEPEND="
 		<x11-base/xorg-server-1.17.99:=
 		>=x11-libs/libvdpau-0.3-r1
 		multilib? (
-			|| (
-				 (
-					>=x11-libs/libX11-1.6.2[abi_x86_32]
-					>=x11-libs/libXext-1.3.2[abi_x86_32]
-				 )
-				app-emulation/emul-linux-x86-xlibs
-			)
+			>=x11-libs/libX11-1.6.2[abi_x86_32]
+			>=x11-libs/libXext-1.3.2[abi_x86_32]
 		)
 	)
 "
