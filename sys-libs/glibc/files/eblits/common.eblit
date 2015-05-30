@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.46 2015/05/30 04:30:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/files/eblits/common.eblit,v 1.47 2015/05/30 05:28:41 vapier Exp $
 
 alt_prefix() {
 	is_crosscompile && echo /usr/${CTARGET}
@@ -90,6 +90,10 @@ setup_target_flags() {
 				export CFLAGS_x86="${CFLAGS_x86} -march=${t}"
 				einfo "Auto adding -march=${t} to CFLAGS_x86 #185404"
 			fi
+		;;
+		mips)
+			# The mips abi cannot support the GNU style hashes. #233233
+			filter-ldflags -Wl,--hash-style=gnu -Wl,--hash-style=both
 		;;
 		ppc)
 			append-flags "-freorder-blocks"

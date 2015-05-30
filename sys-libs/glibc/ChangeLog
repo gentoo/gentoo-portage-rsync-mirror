@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1055 2015/05/30 04:30:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1057 2015/05/30 05:29:28 vapier Exp $
+
+  30 May 2015; Mike Frysinger <vapier@gentoo.org>
+  files/eblits/src_configure.eblit:
+  Hack around mips compiler settings when generating glibc headers #550192 by
+  Andrew Aladjev.
+
+  30 May 2015; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
+  Filter out -Wl,--hash-style=gnu for mips targets.
 
   30 May 2015; Mike Frysinger <vapier@gentoo.org> files/eblits/common.eblit:
   Fix -march setting when building x86 multilib on x86_64 #528708 by devsk. Also
