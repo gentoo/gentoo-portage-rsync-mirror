@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.63 2015/04/03 01:33:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-9999.ebuild,v 1.64 2015/05/30 11:43:00 vapier Exp $
 
 EAPI="5"
 
@@ -84,6 +84,10 @@ lfs_fallocate_test() {
 
 multilib_src_configure() {
 	lfs_fallocate_test
+	# The scanf test in a run-time test which fails while cross-compiling.
+	# Blindly assume a POSIX setup since we require libmount, and libmount
+	# itself fails when the scanf test fails. #531856
+	tc-is-cross-compiler && export scanf_cv_alloc_modifier=ms
 	export ac_cv_header_security_pam_misc_h=$(multilib_native_usex pam) #485486
 	export ac_cv_header_security_pam_appl_h=$(multilib_native_usex pam) #545042
 	# We manually set --libdir to the default since on prefix, econf will set it to

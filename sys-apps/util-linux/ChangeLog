@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.507 2015/05/04 03:52:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.508 2015/05/30 11:43:00 vapier Exp $
+
+  30 May 2015; Mike Frysinger <vapier@gentoo.org> util-linux-2.25.2-r2.ebuild,
+  util-linux-2.26.2.ebuild, util-linux-9999.ebuild:
+  Force the scanf configure test to select the POSIX version when cross-
+  compiling #531856 by Sven E..
 
 *util-linux-2.26.2 (04 May 2015)
 

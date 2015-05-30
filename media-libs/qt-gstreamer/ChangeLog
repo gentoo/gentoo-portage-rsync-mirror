@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/qt-gstreamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.23 2015/03/09 11:09:27 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qt-gstreamer/ChangeLog,v 1.24 2015/05/30 11:39:48 johu Exp $
+
+  30 May 2015; Johannes Huber <johu@gentoo.org>
+  +files/qt-gstreamer-1.2.0-boost157.patch, qt-gstreamer-1.2.0-r1.ebuild:
+  Add patch to fix build with dev-libs/boost-1.57, bug #550016. Thanks to David
+  Kredba <nheghathivhistha@gmail.com> and Heiko Becker <heirecka@exherbo.org>.
 
   09 Mar 2015; Michael Palimaka <kensington@gentoo.org>
   qt-gstreamer-1.2.0-r1.ebuild:
