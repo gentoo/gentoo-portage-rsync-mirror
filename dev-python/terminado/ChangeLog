@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/terminado
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/terminado/ChangeLog,v 1.1 2015/02/28 11:52:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/terminado/ChangeLog,v 1.2 2015/05/30 07:50:23 jlec Exp $
+
+  30 May 2015; Justin Lecher <jlec@gentoo.org> terminado-0.5.ebuild:
+  Add missing deps and test function, bug #550778
 
 *terminado-0.5 (28 Feb 2015)
 

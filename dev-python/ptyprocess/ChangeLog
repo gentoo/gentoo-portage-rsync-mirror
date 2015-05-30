@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ptyprocess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ptyprocess/ChangeLog,v 1.1 2015/05/30 07:22:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ptyprocess/ChangeLog,v 1.2 2015/05/30 07:33:58 jlec Exp $
+
+  30 May 2015; Justin Lecher <jlec@gentoo.org> ptyprocess-0.5.ebuild:
+  Keyword for linux prefix
 
 *ptyprocess-0.5 (30 May 2015)
 
