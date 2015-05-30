@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/ptyprocess
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ptyprocess/ChangeLog,v 1.1 2015/05/30 07:22:18 jlec Exp $
+
+*ptyprocess-0.5 (30 May 2015)
+
+  30 May 2015; Justin Lecher <jlec@gentoo.org> +metadata.xml,
+  +ptyprocess-0.5.ebuild:
+  New package, mostly written by Marius Brehler, bug #550778
