@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.5 2015/05/23 15:14:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-2.0_p20101103.ebuild,v 1.6 2015/05/30 06:40:13 jmorgan Exp $
 
 EAPI=3
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="GPL-2 xref? ( xref.lisp )"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
+KEYWORDS="amd64 ppc ~sparc x86 ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="doc xref"
 
 RDEPEND="virtual/commonlisp

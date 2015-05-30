@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/uiop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.17 2015/05/29 14:03:30 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/uiop/ChangeLog,v 1.18 2015/05/30 06:41:12 jmorgan Exp $
+
+  30 May 2015; Jack Morgan <jmorgan@gentoo.org> uiop-3.0.3.ebuild:
+  ppc stable wrt bug #511170
 
   29 May 2015; Jack Morgan <jmorgan@gentoo.org> uiop-3.0.3.ebuild:
   sparc stable wrt #511170

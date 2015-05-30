@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/common-lisp-controller
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/ChangeLog,v 1.45 2015/05/29 04:18:50 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/ChangeLog,v 1.46 2015/05/30 06:40:48 jmorgan Exp $
+
+  30 May 2015; Jack Morgan <jmorgan@gentoo.org>
+  common-lisp-controller-5.13-r1.ebuild:
+  ppc stable wrt bug #511170
 
   29 May 2015; Jack Morgan <jmorgan@gentoo.org>
   common-lisp-controller-5.13-r1.ebuild:
