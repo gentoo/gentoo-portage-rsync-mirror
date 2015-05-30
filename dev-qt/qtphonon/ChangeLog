@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtphonon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/ChangeLog,v 1.15 2015/05/26 18:16:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/ChangeLog,v 1.16 2015/05/30 11:02:39 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtphonon-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qtphonon-4.8.7 (26 May 2015)
 

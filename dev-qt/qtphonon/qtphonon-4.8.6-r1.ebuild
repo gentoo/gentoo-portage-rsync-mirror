@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.6-r1.ebuild,v 1.5 2015/05/16 11:31:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.6-r1.ebuild,v 1.6 2015/05/30 11:02:39 maekke Exp $
 
 EAPI=5
 
@@ -9,9 +9,9 @@ inherit qt4-build-multilib
 DESCRIPTION="The Phonon module for the Qt toolkit"
 
 if [[ ${QT4_BUILD_TYPE} == live ]]; then
-	KEYWORDS="hppa ppc ppc64"
+	KEYWORDS="arm hppa ppc ppc64"
 else
-	KEYWORDS="amd64 ~arm hppa ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
+	KEYWORDS="amd64 arm hppa ~ia64 ppc ppc64 x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 fi
 
 IUSE="dbus qt3support"

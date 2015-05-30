@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtmultimedia
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.29 2015/05/26 18:15:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtmultimedia/ChangeLog,v 1.30 2015/05/30 11:06:09 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtmultimedia-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qtmultimedia-4.8.7 (26 May 2015)
 

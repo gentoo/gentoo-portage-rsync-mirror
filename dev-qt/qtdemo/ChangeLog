@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdemo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.20 2015/05/26 18:16:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.21 2015/05/30 11:07:30 maekke Exp $
+
+  30 May 2015; Markus Meier <maekke@gentoo.org> qtdemo-4.8.6-r1.ebuild:
+  arm stable, bug #530238
 
 *qtdemo-4.8.7 (26 May 2015)
 
