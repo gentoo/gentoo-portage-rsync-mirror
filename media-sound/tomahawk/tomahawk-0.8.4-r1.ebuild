@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.8.2.ebuild,v 1.4 2015/05/11 20:57:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.8.4-r1.ebuild,v 1.1 2015/05/30 21:07:18 johu Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ REQUIRED_USE="telepathy? ( kde )"
 DEPEND="
 	dev-cpp/lucene++
 	dev-cpp/sparsehash
-	dev-libs/boost
+	dev-libs/boost:=
 	dev-libs/quazip
 	>=media-libs/libechonest-2.2.0:=
 	media-libs/liblastfm

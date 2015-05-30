@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.32 2015/05/11 20:57:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.33 2015/05/30 21:07:18 johu Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ REQUIRED_USE="telepathy? ( kde )"
 DEPEND="
 	dev-cpp/lucene++
 	dev-cpp/sparsehash
-	dev-libs/boost
+	dev-libs/boost:=
 	dev-libs/quazip
 	>=media-libs/taglib-1.8.0
 	>=net-libs/gnutls-3.2
