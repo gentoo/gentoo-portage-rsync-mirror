@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/idna
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/idna/ChangeLog,v 1.4 2015/05/19 18:01:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/idna/ChangeLog,v 1.5 2015/05/30 19:10:24 floppym Exp $
+
+  30 May 2015; Mike Gilbert <floppym@gentoo.org> idna-1.1.ebuild,
+  idna-2.0.ebuild:
+  Depend on setuptools, bug 550826 by Piotr Karbowski.
 
 *idna-2.0 (19 May 2015)
 

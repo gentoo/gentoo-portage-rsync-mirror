@@ -1,6 +1,15 @@
 # ChangeLog for dev-java/jsr181
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.12 2008/03/28 18:00:13 nixnut Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/ChangeLog,v 1.14 2015/05/30 19:30:49 monsieurp Exp $
+
+*jsr181-1.0-r1 (30 May 2015)
+
+  30 May 2015; Patrice Clement <monsieurp@gentoo.org> +jsr181-1.0-r1.ebuild:
+  EAPI 5 bump.
+
+  30 May 2015; Patrice Clement <monsieurp@gentoo.org> jsr181-1.0.ebuild:
+  Add dependency to virtual/{jdk,jre}. Make use of java-config for finding java
+  binary path. Fix bug 550668.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> jsr181-1.0.ebuild:
   Stable on ppc wrt bug 214778
@@ -46,4 +55,3 @@
   11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> +files/build.xml,
   +metadata.xml, +jsr181-0.7.ebuild:
   Initial version.
-
