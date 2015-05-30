@@ -1,6 +1,15 @@
 # ChangeLog for media-plugins/gst-plugins-ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.196 2015/03/29 10:53:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-ffmpeg/ChangeLog,v 1.197 2015/05/30 15:35:59 pacho Exp $
+
+*gst-plugins-ffmpeg-0.10.13_p201211-r4 (30 May 2015)
+
+  30 May 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/0.10.13_p201211-audioresample.patch,
+  +files/0.10.13_p201211-r_frame_rate.patch,
+  +files/0.10.13_p201211-snow-codec.patch,
+  +gst-plugins-ffmpeg-0.10.13_p201211-r4.ebuild:
+  Support libav-11 too (#509326 by Nikoli, mudler and others).
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org>
   gst-plugins-ffmpeg-0.10.13_p201211-r3.ebuild:
