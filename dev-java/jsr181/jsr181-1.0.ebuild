@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/jsr181-1.0.ebuild,v 1.6 2015/05/30 19:29:31 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr181/jsr181-1.0.ebuild,v 1.7 2015/05/30 19:52:12 monsieurp Exp $
 
 inherit java-pkg-2
 
@@ -15,8 +15,8 @@ SLOT="0"
 KEYWORDS="amd64 ppc x86 ~x86-fbsd"
 IUSE=""
 
-RDEPEND=">=virtual/jdk-1.6"
-DEPEND=">=virtual/jre-1.6
+RDEPEND=">=virtual/jre-1.6"
+DEPEND=">=virtual/jdk-1.6
 	app-arch/unzip
 	${RDEPEND}"
 
