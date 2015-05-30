@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/jpeginfo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.29 2014/08/10 21:15:12 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/jpeginfo/ChangeLog,v 1.30 2015/05/30 14:15:24 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -jpeginfo-1.6.0.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jpeginfo-1.6.0.ebuild,
   jpeginfo-1.6.1.ebuild:

@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.39 2014/08/07 07:37:54 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.40 2015/05/30 14:11:49 polynomial-c Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
-# apache-devs@gentoo.org
+# polynomial-c@gentoo.org
 # @BLURB: Provides a common set of functions for apache-2.x ebuilds
 # @DESCRIPTION:
 # This eclass handles apache-2.x ebuild functions such as LoadModule generation
@@ -105,10 +105,10 @@ DEPEND="dev-lang/perl
 	apache2_modules_deflate? ( sys-libs/zlib )
 	apache2_modules_mime? ( app-misc/mime-types )
 	ldap? ( =net-nds/openldap-2* )
-	selinux? ( sec-policy/selinux-apache )
 	ssl? ( >=dev-libs/openssl-0.9.8m )
 	!=www-servers/apache-1*"
-RDEPEND+=" ${DEPEND}"
+RDEPEND+=" ${DEPEND}
+	selinux? ( sec-policy/selinux-apache )"
 PDEPEND="~app-admin/apache-tools-${PV}"
 
 S="${WORKDIR}/httpd-${PV}"

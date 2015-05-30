@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1627 2015/05/28 06:37:16 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1628 2015/05/30 14:11:49 polynomial-c Exp $
+
+  30 May 2015; Lars Wendler <polynomial-c@gentoo.org> apache-2.eclass:
+  Moved selinux dependency from DEPEND to RDEPEND (bug #550822). Fixed
+  maintainer email in eclass.
 
   28 May 2015; Lars Wendler <polynomial-c@gentoo.org> mozconfig-v5.33.eclass:
   Fixed case syntax.
