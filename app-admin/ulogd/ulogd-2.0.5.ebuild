@@ -1,25 +1,29 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.3.ebuild,v 1.6 2014/12/28 14:40:24 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-2.0.5.ebuild,v 1.1 2015/05/30 09:38:29 idella4 Exp $
 
-EAPI="5"
+EAPI=5
 
 AUTOTOOLS_AUTORECONF=1
 AUTOTOOLS_IN_SOURCE_BUILD=1
-inherit autotools-utils eutils linux-info readme.gentoo user
+
+inherit autotools-utils eutils linux-info readme.gentoo systemd user
 
 DESCRIPTION="A userspace logging daemon for netfilter/iptables related logging"
 HOMEPAGE="http://netfilter.org/projects/ulogd/index.html"
-SRC_URI="http://ftp.netfilter.org/pub/${PN}/${P}.tar.bz2"
+SRC_URI="ftp://ftp.netfilter.org/pub/${PN}/${P}.tar.bz2
+		http://www.netfilter.org/projects/${PN}/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ia64 ppc x86"
-IUSE="dbi doc mysql nfacct +nfct +nflog pcap postgres sqlite"
+KEYWORDS="~amd64 ~ia64 ~ppc ~x86"
+IUSE="dbi doc json mysql nfacct +nfct +nflog pcap postgres sqlite -ulog"
 
-RDEPEND="net-firewall/iptables
+RDEPEND="
+	net-firewall/iptables
 	>=net-libs/libnfnetlink-1.0.1
 	dbi? ( dev-db/libdbi )
+	json? ( dev-libs/jansson )
 	nfacct? (
 		>=net-libs/libmnl-1.0.3
 		>=net-libs/libnetfilter_acct-1.0.1
@@ -28,7 +32,7 @@ RDEPEND="net-firewall/iptables
 	nflog? ( >=net-libs/libnetfilter_log-1.0.0 )
 	mysql? ( virtual/mysql )
 	pcap? ( net-libs/libpcap )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	sqlite? ( dev-db/sqlite:3 )"
 
 DEPEND="${RDEPEND}
@@ -37,6 +41,8 @@ DEPEND="${RDEPEND}
 		app-text/texlive-core
 		virtual/latex-base
 	)"
+
+PATCHES=( "${FILESDIR}/${P}-remove-db-automagic.patch" )
 
 DOCS=( AUTHORS README TODO )
 DOC_CONTENTS="You must have at least one logging stack enabled to make ulogd work.
@@ -53,14 +59,17 @@ pkg_setup() {
 	fi
 
 	if kernel_is lt 2 6 18; then
-		ewarn
 		ewarn "You are using kernel older than 2.6.18"
 		ewarn "Some ulogd2 features may be unavailable"
-		ewarn
 	fi
 
 	if use nfacct && kernel_is lt 3 3 0; then
 		ewarn "NFACCT input plugin requires kernel newer than 3.3.0"
+	fi
+
+	if use ulog && kernel_is gt 3 17 0; then
+		ewarn "ULOG target was removed since 3.17.0 kernel release"
+		ewarn "Consider enabling NFACCT, NFCT or NFLOG support"
 	fi
 }
 
@@ -78,6 +87,7 @@ src_prepare() {
 src_configure() {
 	local myeconfargs=(
 		$(use_with dbi)
+		$(use_with json jansson)
 		$(use_enable nfacct)
 		$(use_enable nfct)
 		$(use_enable nflog)
@@ -85,6 +95,7 @@ src_configure() {
 		$(use_with pcap)
 		$(use_with postgres pgsql)
 		$(use_with sqlite)
+		$(use_enable ulog)
 	)
 	autotools-utils_src_configure
 }
@@ -92,7 +103,7 @@ src_configure() {
 src_compile() {
 	autotools-utils_src_compile
 
-	if use doc ; then
+	if use doc; then
 		# prevent access violations from generation of bitmap font files
 		export VARTEXFONTS="${T}"/fonts
 		emake -C doc
@@ -104,7 +115,7 @@ src_install() {
 	readme.gentoo_create_doc
 	prune_libtool_files --modules
 
-	if use doc ; then
+	if use doc; then
 		dohtml doc/${PN}.html
 		dodoc doc/${PN}.dvi doc/${PN}.txt doc/${PN}.ps
 	fi
@@ -119,10 +130,11 @@ src_install() {
 	fowners root:ulogd /etc/ulogd.conf
 	fperms 640 /etc/ulogd.conf
 
-	newinitd "${FILESDIR}/${PN}-2-ng.init" ${PN}
+	newinitd "${FILESDIR}/${PN}.init" ${PN}
+	systemd_dounit "${FILESDIR}/${PN}.service"
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/${PN}-2.logrotate" ${PN}
+	newins "${FILESDIR}/${PN}.logrotate" ${PN}
 
 	diropts -o ulogd -g ulogd
 	keepdir /var/log/ulogd

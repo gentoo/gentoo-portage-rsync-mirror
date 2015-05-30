@@ -1,13 +1,13 @@
 #!/sbin/runscript
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd-2-ng.init,v 1.2 2014/08/22 10:31:59 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd.init,v 1.1 2015/05/30 09:38:29 idella4 Exp $
 
-ULOGD_PIDFILE="/run/ulogd.pid"
-ULOGD_BINARY="/usr/sbin/ulogd"
-ULOGD_OPTS="--daemon --uid ulogd --pidfile ${ULOGD_PIDFILE}"
+extra_started_commands="reload reopen"
 
-extra_started_commands="reload reopen_logs"
+: ${ULOGD_BINARY:=/usr/sbin/ulogd}
+: ${ULOGD_PIDFILE:=/run/${SVCNAME}.pid}
+: ${ULOGD_OPTS:=--daemon --uid ulogd --pidfile ${ULOGD_PIDFILE}}
 
 depend() {
 	before iptables ip6tables ebtables firewall
@@ -34,7 +34,7 @@ reload() {
 	eend $?
 }
 
-reopen_logs() {
+reopen() {
 	ebegin "Reopening ${SVCNAME} logfiles"
 	start-stop-daemon --signal HUP --pidfile ${ULOGD_PIDFILE}
 	eend $?
