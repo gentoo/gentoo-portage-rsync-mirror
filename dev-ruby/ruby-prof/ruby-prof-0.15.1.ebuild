@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.15.1.ebuild,v 1.1 2014/05/10 06:38:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ruby-prof-0.15.1.ebuild,v 1.2 2015/05/30 05:36:08 graaff Exp $
 
 EAPI=5
 
@@ -36,7 +36,11 @@ all_ruby_prepare() {
 	sed -i -e '/test_class_methods/,/^  end/ s:^:#:' test/measure_cpu_time_test.rb || die
 
 	# We install the shared object in lib, not ext.
-	sed -i -e 's#../ext/ruby_prof#../lib/ruby_prof#' lib/ruby-prof.rb
+	sed -i -e 's#../ext/ruby_prof#../lib/ruby_prof#' lib/ruby-prof.rb || die
+
+	# Avoid unneeded dependency on rake-compiler
+	sed -i -e '/extensiontask/ s:^:#:' \
+		-e '/ExtensionTask/,/end/ s:^:#:' Rakefile || die
 
 	# Create directory required for the test suite to pass
 	mkdir tmp || die

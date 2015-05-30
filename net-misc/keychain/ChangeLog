@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.112 2015/04/04 22:30:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.113 2015/05/30 05:57:14 jlec Exp $
+
+*keychain-2.8.1 (30 May 2015)
+
+  30 May 2015; Justin Lecher <jlec@gentoo.org> +keychain-2.8.1.ebuild:
+  Version Bump
 
 *keychain-2.8.0 (04 Apr 2015)
 

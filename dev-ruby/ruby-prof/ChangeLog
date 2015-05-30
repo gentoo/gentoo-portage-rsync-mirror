@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-prof
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.39 2014/11/09 07:34:02 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-prof/ChangeLog,v 1.40 2015/05/30 05:36:08 graaff Exp $
+
+  30 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-prof-0.15.1.ebuild:
+  Avoid unneeded dependency on rake-compiler.
 
   09 Nov 2014; Hans de Graaff <graaff@gentoo.org> -ruby-prof-0.12.2.ebuild:
   Cleanup.
