@@ -1,6 +1,9 @@
 # ChangeLog for virtual/linux-sources
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.27 2014/08/02 15:48:03 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/ChangeLog,v 1.28 2015/05/30 16:25:09 mpagano Exp $
+
+  30 May 2015; Mike Pagano <mpagano@gentoo.org> linux-sources-1.ebuild:
+  Add sys-kernel/raspberrypi-sources. Bug #550096
 
   02 Aug 2014; Raúl Porcel <armin76@gentoo.org> linux-sources-0.ebuild,
   linux-sources-1.ebuild:

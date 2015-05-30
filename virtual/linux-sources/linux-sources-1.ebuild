@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-1.ebuild,v 1.11 2014/08/02 15:48:03 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/linux-sources/linux-sources-1.ebuild,v 1.12 2015/05/30 16:25:09 mpagano Exp $
 
 EAPI=5
 
@@ -31,4 +31,5 @@ RDEPEND="|| (
 		sys-kernel/xbox-sources
 		sys-kernel/zen-sources
 		sys-kernel/aufs-sources
+		sys-kernel/raspberrypi-sources
 	)"

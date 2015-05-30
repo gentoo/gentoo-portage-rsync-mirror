@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.304 2015/05/14 19:26:29 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.305 2015/05/30 16:09:05 mpagano Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -446,7 +446,6 @@ if [[ ${ETYPE} == sources ]]; then
 		dev-lang/perl
 		sys-devel/bc
 	)"
-	PDEPEND="!build? ( virtual/dev-manager )"
 
 	SLOT="${PVR}"
 	DESCRIPTION="Sources based on the Linux Kernel."

@@ -1,0 +1,9 @@
+# ChangeLog for sec-policy/selinux-kdeconnect
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-kdeconnect/ChangeLog,v 1.1 2015/05/30 16:16:41 perfinion Exp $
+
+*selinux-kdeconnect-9999 (30 May 2015)
+
+  30 May 2015; Jason Zaman <perfinion@gentoo.org> +metadata.xml,
+  +selinux-kdeconnect-9999.ebuild:
+  Add selinux-kdeconnect policy

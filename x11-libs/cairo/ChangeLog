@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/cairo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.419 2015/05/27 11:02:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/cairo/ChangeLog,v 1.420 2015/05/30 16:18:34 zlogene Exp $
+
+  30 May 2015; Mikle Kolyada <zlogene@gentoo.org> cairo-1.14.2.ebuild:
+  arm stable wrt bug #550318
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> cairo-1.14.2.ebuild:
   Stable for x86, wrt bug #550318
