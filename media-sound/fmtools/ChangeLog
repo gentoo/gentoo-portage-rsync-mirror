@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/fmtools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.19 2014/08/10 21:05:46 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmtools/ChangeLog,v 1.20 2015/05/30 00:25:30 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/fmtools-1.0.2-ldflags.patch, -fmtools-1.0.2-r1.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> fmtools-1.0.2-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/celt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.40 2015/04/02 16:19:47 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/celt/ChangeLog,v 1.41 2015/05/30 00:29:56 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -celt-0.11.1.ebuild,
+  -celt-0.6.1.ebuild, -celt-0.7.1.ebuild, -celt-0.8.1.ebuild:
+  Remove old.
 
   02 Apr 2015; Jeroen Roovers <jer@gentoo.org> celt-0.11.1-r1.ebuild:
   Stable for HPPA (bug #538798).

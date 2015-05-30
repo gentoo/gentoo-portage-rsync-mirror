@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.97 2015/03/31 19:59:13 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.98 2015/05/30 00:20:20 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -mpg321-0.2.12.ebuild,
+  -mpg321-0.3.1.ebuild:
+  Remove old.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> mpg321-0.3.1-r1.ebuild:
   Update dependency after package move of eselect modules to app-eselect.

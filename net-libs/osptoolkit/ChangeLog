@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/osptoolkit
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.20 2013/10/27 09:44:45 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/osptoolkit/ChangeLog,v 1.21 2015/05/30 00:09:08 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -osptoolkit-3.3.6-r1.ebuild,
+  -osptoolkit-3.4.2.ebuild:
+  Remove old.
 
   27 Oct 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due voip herd removal:

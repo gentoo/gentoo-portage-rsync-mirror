@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.51 2015/02/27 11:27:58 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.52 2015/05/30 00:11:19 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -libtirpc-0.2.1-r1.ebuild,
+  -libtirpc-0.2.2-r1.ebuild, -libtirpc-0.2.3.ebuild, -libtirpc-0.2.4.ebuild:
+  Remove old.
 
   27 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libtirpc-0.2.5.ebuild:
   Stable for sparc, wrt bug #525268

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.861 2015/05/29 09:45:15 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.862 2015/05/30 00:03:19 jmorgan Exp $
+
+  30 May 2015; Jack Morgan <jmorgan@gentoo.org> ffmpeg-2.2.14.ebuild:
+  ia64 stable wrt bug #538798
 
   29 May 2015; Alexis Ballier <aballier@gentoo.org> ffmpeg-2.2.14.ebuild,
   ffmpeg-2.2.15.ebuild, ffmpeg-2.6.3.ebuild, ffmpeg-9999.ebuild:
