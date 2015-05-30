@@ -1,12 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-BibTeX/Text-BibTeX-0.700.0.ebuild,v 1.1 2014/09/08 21:13:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-BibTeX/Text-BibTeX-0.710.0.ebuild,v 1.1 2015/05/30 13:45:16 mrueg Exp $
 
 EAPI=5
 
 MODULE_AUTHOR="AMBS"
-MODULE_SECTION="Text"
-MODULE_VERSION=0.69
+MODULE_VERSION=0.71
 
 inherit perl-module
 

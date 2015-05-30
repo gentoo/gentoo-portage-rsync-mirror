@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/ddclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.68 2015/05/30 00:14:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ddclient/ChangeLog,v 1.69 2015/05/30 13:32:46 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop unused USE-description from metadata.xml
 
   30 May 2015; Manuel Rüger <mrueg@gentoo.org> -ddclient-3.7.3-r1.ebuild,
   -ddclient-3.8.0.ebuild, -ddclient-3.8.1-r4.ebuild:

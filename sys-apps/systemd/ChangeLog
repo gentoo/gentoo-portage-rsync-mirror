@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.373 2015/05/30 13:03:27 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.374 2015/05/30 13:58:45 floppym Exp $
+
+  30 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-216-r3.ebuild,
+  systemd-218-r3.ebuild, systemd-219_p112.ebuild, systemd-220-r2.ebuild,
+  systemd-9999.ebuild:
+  Remove obsolete postinst messages.
 
   30 May 2015; Pacho Ramos <pacho@gentoo.org> systemd-216-r3.ebuild,
   systemd-218-r3.ebuild, systemd-219_p112.ebuild, systemd-220-r2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/gwenhywfar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.109 2015/01/04 18:58:02 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gwenhywfar/ChangeLog,v 1.110 2015/05/30 13:57:12 mrueg Exp $
+
+  30 May 2015; Manuel Rüger <mrueg@gentoo.org> -gwenhywfar-4.2.1.ebuild:
+  Remove old.
 
 *gwenhywfar-4.13.1 (04 Jan 2015)
 

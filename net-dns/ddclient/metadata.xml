@@ -7,6 +7,5 @@
 </maintainer>
 <use>
   <flag name="hardened">Use iproute2 instead of ifconfig to grab an IP address</flag>
-  <flag name="ssl">Connect to the server utilizing SSL</flag>
 </use>
 </pkgmetadata>
