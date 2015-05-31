@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/gxmessage
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.47 2015/05/23 04:53:57 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gxmessage/ChangeLog,v 1.48 2015/05/31 08:02:24 jer Exp $
+
+*gxmessage-3.4.3 (31 May 2015)
+
+  31 May 2015; Jeroen Roovers <jer@gentoo.org> +gxmessage-3.4.3.ebuild:
+  Version bump.
 
 *gxmessage-3.4.2 (23 May 2015)
 *gxmessage-2.20.3 (23 May 2015)
