@@ -3264,6 +3264,31 @@ kde-misc/plasma-nm:modemmanager - Enable support for mobile broadband devices
 kde-misc/plasma-nm:openconnect - Build support for the OpenConnect VPN client
 kde-misc/tellico:addressbook - Add support for kdepim addressbook (kabc)
 kde-misc/tellico:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
+kde-plasma/breeze:kde4 - Build the Breeze style for KDE 4
+kde-plasma/kdeplasma-addons:ibus - Use ibus input method via app-i18n/ibus
+kde-plasma/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
+kde-plasma/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
+kde-plasma/kinfocenter:egl - Retrieve information about OpenGL via EGL
+kde-plasma/kinfocenter:gles - Show OpenGL ES information in kinfocenter
+kde-plasma/kinfocenter:nfs - Show information about NFS mounts, shares and log entries
+kde-plasma/kinfocenter:pci - Show advanced PCI information
+kde-plasma/kinfocenter:samba - Show information about Samba mounts, shares and log entries
+kde-plasma/kio-extras:phonon - Enable file audio preview plugin using media-libs/phonon
+kde-plasma/kio-extras:sftp - Enable SFTP protocol support using net-libs/libssh
+kde-plasma/kmenuedit:hotkeys - Enable support for hotkey editing
+kde-plasma/kwin:gles2 - Use OpenGL ES 2 instead of full GL
+kde-plasma/libksysguard:processui - Enables the Interface to view process libs.
+kde-plasma/plasma-desktop:touchpad - Enable configuration module for synaptics-based touchpads.
+kde-plasma/plasma-meta:display-manager - Pull in a graphical display manager
+kde-plasma/plasma-meta:sddm - Pull in the x11-misc/sddm display manager and KCM
+kde-plasma/plasma-meta:wallpapers - Install the KDE wallpapers
+kde-plasma/plasma-nm:modemmanager - Enable support for mobile broadband devices
+kde-plasma/plasma-nm:openconnect - Build support for the OpenConnect VPN client
+kde-plasma/plasma-nm:teamd - Enable Teamd control support
+kde-plasma/plasma-workspace:drkonqi - Enables DrKonqi, the KDE crash handler
+kde-plasma/plasma-workspace:prison - Enable support for barcodes/QRcodes
+kde-plasma/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
+kde-plasma/plasma-workspace:systemmonitor - Enables the system monitor dialog for the Plasma workspace
 lxde-base/lxdm:consolekit - Enables support for authorization using consolekit
 lxde-base/lxdm:gtk3 - Use GTK+3 instead of 2
 lxqt-base/lxqt-meta:admin - Install app-admin/lxqt-admin

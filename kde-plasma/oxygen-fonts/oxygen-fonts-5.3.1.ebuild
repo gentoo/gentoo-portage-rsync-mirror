@@ -1,10 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/oxygen-fonts-5.2.0.ebuild,v 1.2 2015/04/11 16:35:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/oxygen-fonts-5.3.1.ebuild,v 1.1 2015/05/31 22:06:17 johu Exp $
 
 EAPI=5
 
 KDE_AUTODEPS="false"
+KDE_DEBUG="false"
 inherit kde5 font
 
 DESCRIPTION="Desktop/GUI font family for integrated use with the KDE desktop"
@@ -15,10 +16,12 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
+	$(add_frameworks_dep extra-cmake-modules)
 	media-gfx/fontforge
-	kde-frameworks/extra-cmake-modules
 "
 RDEPEND="!media-fonts/oxygen-fonts"
+
+DOCS=( README.md )
 
 src_configure() {
 	local mycmakeargs=(

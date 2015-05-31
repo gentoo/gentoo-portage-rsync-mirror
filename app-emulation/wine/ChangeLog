@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.536 2015/05/18 04:59:26 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.537 2015/05/31 22:07:17 tetromino Exp $
+
+*wine-1.7.44 (31 May 2015)
+
+  31 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org> +wine-1.7.44.ebuild,
+  wine-9999.ebuild:
+  Version bump from NP-Hardass, see https://www.winehq.org/announce/1.7.44 for
+  the announcement. Drop support for emul-linux-x86-*
 
 *wine-1.7.43 (18 May 2015)
 

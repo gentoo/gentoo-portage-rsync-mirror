@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10023 2015/05/31 13:14:24 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10024 2015/05/31 22:03:42 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2015; Johannes Huber <johu@gentoo.org>
+  default/linux/amd64/package.use.mask, package.mask:
+  Mask KDE Plasma 5.3.1 for testing.
 
   31 May 2015; Jason Zaman <perfinion@gentoo.org> use.desc:
   update debug url to wiki, bug 550874

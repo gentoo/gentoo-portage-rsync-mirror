@@ -1,6 +1,17 @@
 # ChangeLog for kde-plasma/oxygen-fonts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/ChangeLog,v 1.7 2015/05/09 11:04:41 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/oxygen-fonts/ChangeLog,v 1.9 2015/05/31 22:15:03 johu Exp $
+
+  31 May 2015; Johannes Huber <johu@gentoo.org> -oxygen-fonts-5.2.0.ebuild,
+  -oxygen-fonts-5.3.0.ebuild, metadata.xml:
+  Remove old.
+
+*oxygen-fonts-5.3.1 (31 May 2015)
+
+  31 May 2015; Johannes Huber <johu@gentoo.org> +oxygen-fonts-5.3.1.ebuild,
+  metadata.xml:
+  Initial commit for KDE Plasma 5. Imported from kde overlay. Ebuilds written by
+  several people. Thank you all who worked on it in the overlay.
 
 *oxygen-fonts-5.3.0 (09 May 2015)
 
