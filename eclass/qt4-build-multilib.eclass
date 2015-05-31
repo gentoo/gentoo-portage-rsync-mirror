@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.15 2015/05/10 14:27:29 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.16 2015/05/31 13:56:53 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -154,20 +154,6 @@ qt4-build-multilib_src_prepare() {
 			|| die "sed failed (skip X11 tests)"
 	fi
 
-	if use_if_iuse aqua; then
-		sed -i \
-			-e '/^CONFIG/s:app_bundle::' \
-			-e '/^CONFIG/s:plugin_no_soname:plugin_with_soname absolute_library_soname:' \
-			mkspecs/$(qt4_get_mkspec)/qmake.conf \
-			|| die "sed failed (aqua)"
-
-		# we are crazy and build cocoa + qt3support
-		if { ! in_iuse qt3support || use qt3support; } && [[ ${CHOST##*-darwin} -ge 9 ]]; then
-			sed -i -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
-				configure || die "sed failed (cocoa + qt3support)"
-		fi
-	fi
-
 	if [[ ${PN} == qtcore ]]; then
 		# Bug 373061
 		# qmake bus errors with -O2 or -O3 but -O1 works
@@ -180,6 +166,11 @@ qt4-build-multilib_src_prepare() {
 		if use x86 || use_if_iuse abi_x86_32; then
 			replace-flags -Os -O2
 		fi
+	fi
+
+	if [[ ${PN} == qtwebkit ]]; then
+		# Bug 550780
+		filter-flags -fgraphite-identity -floop-strip-mine
 	fi
 
 	# Bug 261632
@@ -219,6 +210,20 @@ qt4-build-multilib_src_prepare() {
 		mkspecs/common/linux.conf \
 		mkspecs/$(qt4_get_mkspec)/qmake.conf \
 		|| die "sed QMAKE_(LIB|INC)DIR failed"
+
+	if use_if_iuse aqua; then
+		sed -i \
+			-e '/^CONFIG/s:app_bundle::' \
+			-e '/^CONFIG/s:plugin_no_soname:plugin_with_soname absolute_library_soname:' \
+			mkspecs/$(qt4_get_mkspec)/qmake.conf \
+			|| die "sed failed (aqua)"
+
+		# we are crazy and build cocoa + qt3support
+		if { ! in_iuse qt3support || use qt3support; } && [[ ${CHOST##*-darwin} -ge 9 ]]; then
+			sed -i -e "/case \"\$PLATFORM,\$CFG_MAC_COCOA\" in/,/;;/ s|CFG_QT3SUPPORT=\"no\"|CFG_QT3SUPPORT=\"yes\"|" \
+				configure || die "sed failed (cocoa + qt3support)"
+		fi
+	fi
 
 	if [[ ${CHOST} == *-darwin* ]]; then
 		# Set FLAGS and remove -arch, since our gcc-apple is multilib crippled (by design)
