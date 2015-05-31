@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.242 2015/05/31 09:45:07 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.243 2015/05/31 14:38:44 grobian Exp $
+
+  31 May 2015; Fabian Groffen <grobian@gentoo.org> llvm-3.4.2.ebuild,
+  llvm-3.5.2.ebuild, llvm-3.6.1.ebuild, llvm-9999.ebuild:
+  Fix dependencies for Darwin: only 3.4 can be compiled with gcc-apple-4.2.1,
+  later versions need Clang.  We can compile 3.4 without libcxx, later versions
+  need it on Darwin, so require it.
 
   31 May 2015; Fabian Groffen <grobian@gentoo.org> llvm-3.4.2.ebuild,
   llvm-3.5.2.ebuild, llvm-3.6.1.ebuild, llvm-9999.ebuild:

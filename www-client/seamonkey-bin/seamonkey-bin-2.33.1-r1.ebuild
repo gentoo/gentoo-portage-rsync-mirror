@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.31.ebuild,v 1.3 2014/12/10 19:34:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/seamonkey-bin-2.33.1-r1.ebuild,v 1.1 2015/05/31 14:34:58 axs Exp $
 
 EAPI="4"
 
@@ -28,7 +28,7 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.seamonkey-project.org/"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="startup-notification"
@@ -104,6 +104,12 @@ EOF
 	if use startup-notification; then
 	    echo "StartupNotify=true" >> "${D}"/usr/share/applications/${PN}.desktop
 	fi
+
+	# Fix prefs that make no sense for a system-wide install
+	insinto ${MOZILLA_FIVE_HOME}/defaults/pref/
+	doins "${FILESDIR}"/local-settings.js
+	# Copy preferences file so we can do a simple rename.
+	cp "${FILESDIR}"/all-gentoo-1-cve-2015-4000.js  "${D}"${MOZILLA_FIVE_HOME}/all-gentoo.js
 
 	# revdep-rebuild entry
 	insinto /etc/revdep-rebuild

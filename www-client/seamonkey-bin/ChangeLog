@@ -1,6 +1,14 @@
 # ChangeLog for www-client/seamonkey-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.222 2015/03/26 11:36:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey-bin/ChangeLog,v 1.223 2015/05/31 14:34:58 axs Exp $
+
+*seamonkey-bin-2.33.1-r1 (31 May 2015)
+
+  31 May 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org>
+  +files/all-gentoo-1-cve-2015-4000.js, +files/local-settings.js,
+  +seamonkey-bin-2.33.1-r1.ebuild, -seamonkey-bin-2.31.ebuild:
+  ported all-gentoo prefs from firefox-bin to address Logjam attack vector, bug
+  550288
 
   26 Mar 2015; Agostino Sarubbo <ago@gentoo.org> seamonkey-bin-2.33.1.ebuild:
   Stable for x86, wrt bug #544056
