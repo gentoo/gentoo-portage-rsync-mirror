@@ -1,18 +1,18 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.16 2015/05/27 06:32:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-9999.ebuild,v 1.17 2015/05/31 21:03:49 tetromino Exp $
 
 EAPI=5
 
-# 1.12 is only needed for tests due to some am__check_pre / LOG_DRIVER
-# weirdness with "/bin/bash /bin/sh" in arguments chain with >=1.13
-WANT_AUTOMAKE=1.12
-
+# Do not inherit autotools in non-live ebuild - causes circular dependency, bug #550856
 inherit eutils flag-o-matic libtool multilib multilib-minimal
 
 MY_P=pkg-config-${PV}
 
 if [[ ${PV} == *9999* ]]; then
+	# 1.12 is only needed for tests due to some am__check_pre / LOG_DRIVER
+	# weirdness with "/bin/bash /bin/sh" in arguments chain with >=1.13
+	WANT_AUTOMAKE=1.12
 	EGIT_REPO_URI="git://anongit.freedesktop.org/pkg-config"
 	EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
 	inherit autotools git-r3

@@ -1,18 +1,18 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.28-r3.ebuild,v 1.2 2015/05/27 06:32:02 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgconfig/pkgconfig-0.28-r3.ebuild,v 1.3 2015/05/31 21:03:49 tetromino Exp $
 
 EAPI=5
 
-# 1.12 is only needed for tests due to some am__check_pre / LOG_DRIVER
-# weirdness with "/bin/bash /bin/sh" in arguments chain with >=1.13
-WANT_AUTOMAKE=1.12
-
-inherit autotools eutils flag-o-matic libtool multilib multilib-minimal
+# Do not inherit autotools in non-live ebuild - causes circular dependency, bug #550856
+inherit eutils flag-o-matic libtool multilib multilib-minimal
 
 MY_P=pkg-config-${PV}
 
 if [[ ${PV} == *9999* ]]; then
+	# 1.12 is only needed for tests due to some am__check_pre / LOG_DRIVER
+	# weirdness with "/bin/bash /bin/sh" in arguments chain with >=1.13
+	WANT_AUTOMAKE=1.12
 	EGIT_REPO_URI="git://anongit.freedesktop.org/pkg-config"
 	EGIT_CHECKOUT_DIR=${WORKDIR}/${MY_P}
 	inherit autotools git-r3
@@ -43,16 +43,18 @@ src_prepare() {
 
 	sed -i -e "s|^prefix=/usr\$|prefix=${EPREFIX}/usr|" check/simple.pc || die #434320
 
-	# Large file support, fixed in git; requires eautoreconf; bug #550508
+	# Large file support, fixed in upstream git; bug #550508
 	epatch "${FILESDIR}"/${P}-lfs.patch
+	# lfs patch touches config.h.in; need this hack to prevent autoreconf and automake
+	touch aclocal.m4 config.h.in Makefile.in
 
 	epatch_user
 
-	#if [[ ${PV} == *9999* ]]; then
+	if [[ ${PV} == *9999* ]]; then
 		eautoreconf
-	#else
-	#	elibtoolize # Required for FreeMiNT wrt #333429
-	#fi
+	else
+		elibtoolize # Required for FreeMiNT wrt #333429
+	fi
 }
 
 multilib_src_configure() {
