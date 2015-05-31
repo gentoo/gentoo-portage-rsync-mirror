@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/markdown
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.73 2015/05/30 10:06:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/markdown/ChangeLog,v 1.74 2015/05/31 11:16:45 zlogene Exp $
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> markdown-2.6.1.ebuild:
+  arm stable wrt bug #550128
 
   30 May 2015; Jeroen Roovers <jer@gentoo.org> markdown-2.6.1.ebuild:
   Stable for PPC64 (bug #550128).

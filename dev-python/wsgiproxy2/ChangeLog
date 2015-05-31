@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wsgiproxy2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.21 2015/04/08 08:05:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiproxy2/ChangeLog,v 1.22 2015/05/31 11:06:45 maekke Exp $
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> wsgiproxy2-0.4.1.ebuild:
+  arm stable, bug #530622
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> wsgiproxy2-0.4.1.ebuild:
   Drop old Python implementations

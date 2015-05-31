@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.2.ebuild,v 1.8 2015/03/09 00:04:05 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/restkit/restkit-4.2.2.ebuild,v 1.9 2015/05/31 11:06:17 maekke Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ppc ppc64 x86"
+KEYWORDS="amd64 arm ppc ppc64 x86"
 IUSE="+cli doc examples test"
 
 PY27_USEDEP="$(python_gen_usedep python2_7)"

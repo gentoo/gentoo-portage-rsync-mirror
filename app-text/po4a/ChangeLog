@@ -1,6 +1,10 @@
 # ChangeLog for app-text/po4a
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.88 2014/12/19 19:13:48 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.89 2015/05/31 11:26:24 idella4 Exp $
+
+  31 May 2015; Ian Delaney <idella4@gentoo.org> metadata.xml:
+  Edited metadata.xml adding proxy maintainer and proxy-maintainers herd,
+  declaration of interest by new maintainer expressed in bug #550210
 
   19 Dec 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop to maintainer-needed

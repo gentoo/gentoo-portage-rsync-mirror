@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/virtualenv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.146 2015/05/27 11:24:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/virtualenv/ChangeLog,v 1.147 2015/05/31 11:19:00 zlogene Exp $
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> virtualenv-12.0.5.ebuild:
+  arm stable wrt bug #538528
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> virtualenv-12.0.5.ebuild:
   Stable for x86, wrt bug #538528

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.16.ebuild,v 1.5 2015/03/09 00:02:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/webtest/webtest-2.0.16.ebuild,v 1.6 2015/05/31 11:07:13 maekke Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/${MY_PN:0:1}/${MY_PN}/${MY_P}.zip"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~arm ~hppa ppc ppc64 x86"
+KEYWORDS="amd64 arm ~hppa ppc ppc64 x86"
 IUSE="doc test"
 
 #nose<1.3.0
