@@ -1,9 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.682 2015/05/29 15:25:11 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.683 2015/05/31 21:56:35 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
+
+# Johannes Huber <johu@gentoo.org> (31 Nay 2015)
+# No released version available
+kde-plasma/plasma-workspace prison
 
 # Matthias Maier <tamiko@gentoo.org> (27 May 2015)
 # mask lcms use flag for old dcraw versions that depends on lcms:0
