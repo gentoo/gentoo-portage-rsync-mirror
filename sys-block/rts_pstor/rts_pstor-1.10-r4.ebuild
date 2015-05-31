@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts_pstor/rts_pstor-1.10-r3.ebuild,v 1.1 2014/08/14 18:10:46 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts_pstor/rts_pstor-1.10-r4.ebuild,v 1.1 2015/05/31 07:12:23 vikraman Exp $
 
 EAPI=4
 
@@ -24,9 +24,12 @@ MODULE_NAMES="rts_pstor(misc/drivers/scsi)"
 BUILD_TARGETS="default"
 
 src_prepare() {
-	sed -i -e 's/\/lib\/modules\/\$(shell uname -r)\/build\//\$(KERNELDIR)/g' Makefile || die "Sed failed!"
-	[ ${KV_MAJOR} -ge 3 ] && [ ${KV_MINOR} -ge 8 ] && epatch "${FILESDIR}/${PN}-linux-3.8.patch"
-	[ ${KV_MAJOR} -ge 3 ] && [ ${KV_MINOR} -ge 10 ] && epatch "${FILESDIR}/${PN}-linux-3.10.patch"
+	sed -e 's/\/lib\/modules\/\$(shell uname -r)\/build\//\$(KERNELDIR)/g' \
+		-i Makefile || die "Sed failed!"
+	([ ${KV_MAJOR} -gt 3 ] || ([ ${KV_MAJOR} -eq 3 ] && [ ${KV_MINOR} -ge 8 ])) \
+		&& epatch "${FILESDIR}/${PN}-linux-3.8.patch"
+	([ ${KV_MAJOR} -gt 3 ] || ([ ${KV_MAJOR} -eq 3 ] && [ ${KV_MINOR} -ge 10 ])) \
+		&& epatch "${FILESDIR}/${PN}-linux-3.10.patch"
 }
 
 pkg_setup() {

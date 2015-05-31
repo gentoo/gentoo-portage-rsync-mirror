@@ -1,6 +1,12 @@
 # ChangeLog for sys-block/rts5229
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/ChangeLog,v 1.6 2014/08/14 18:00:43 vikraman Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/rts5229/ChangeLog,v 1.7 2015/05/31 07:06:18 vikraman Exp $
+
+*rts5229-1.07-r5 (31 May 2015)
+
+  31 May 2015; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  +rts5229-1.07-r5.ebuild, -rts5229-1.07-r4.ebuild:
+  Fix build with linux 4.0. Fixes bug 549492.
 
 *rts5229-1.07-r4 (14 Aug 2014)
 
