@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.8 2015/05/10 15:24:30 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.9 2015/05/31 12:51:07 pesa Exp $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -10,6 +10,9 @@
 # @BLURB: Common functions for qmake-based packages.
 # @DESCRIPTION:
 # Utility eclass providing wrapper functions for Qt4 and Qt5 qmake.
+#
+# This eclass does not set any metadata variables nor export any phase
+# functions. It can be inherited safely.
 
 if [[ -z ${_QMAKE_UTILS_ECLASS} ]]; then
 _QMAKE_UTILS_ECLASS=1

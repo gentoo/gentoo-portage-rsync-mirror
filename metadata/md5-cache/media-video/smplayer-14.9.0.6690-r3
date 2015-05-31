@@ -10,5 +10,5 @@ RDEPEND=qt4? ( dev-qt/qtcore:4 dev-qt/qtgui:4 autoshutdown? ( dev-qt/qtdbus:4 ) 
 REQUIRED_USE=^^ ( qt4 qt5 )
 SLOT=0
 SRC_URI=mirror://sourceforge/smplayer/smplayer-14.9.0.6690.tar.bz2
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	62927b3db3a589b0806255f3a002d5d3	qmake-utils	b9c5231d68391b53f154f7643e94605c	toolchain-funcs	42408102d713fbad60ca21349865edb4
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	62927b3db3a589b0806255f3a002d5d3	qmake-utils	1c0e4f885b876595f09a9bb6c78a687d	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=6076293dde8d84df08b7fcd465f78085

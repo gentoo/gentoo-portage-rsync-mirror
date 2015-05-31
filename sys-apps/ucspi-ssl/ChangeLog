@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.47 2015/05/31 11:43:20 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.48 2015/05/31 12:35:50 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Really fix herd name in metadata.xml this time.
 
   31 May 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
   Drop unused USE flag description.
