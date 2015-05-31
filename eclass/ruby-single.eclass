@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-single.eclass,v 1.1 2015/05/31 05:57:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby-single.eclass,v 1.2 2015/05/31 06:14:54 graaff Exp $
 
 # @ECLASS: ruby-single
 # @MAINTAINER:
@@ -43,7 +43,9 @@ inherit ruby-utils
 #
 # This is an eclass-generated Ruby dependency string for all
 # implementations listed in USE_RUBY. Any one of the supported ruby
-# targets will satisfy this dependency.
+# targets will satisfy this dependency. A dependency on
+# virtual/rubygems is also added to ensure that this is installed
+# in time for the package to use it.
 #
 # Example use:
 # @CODE
@@ -54,7 +56,7 @@ inherit ruby-utils
 #
 # Example value:
 # @CODE
-# || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 )
+# || ( dev-lang/ruby:2.0 dev-lang/ruby:1.9 ) virtual/rubygems
 # @CODE
 
 _ruby_single_implementations_depend() {
@@ -64,7 +66,7 @@ _ruby_single_implementations_depend() {
 			depend="${depend} $(_ruby_implementation_depend $_ruby_implementation)"
 		fi
 	done
-	echo "|| ( ${depend} )"
+	echo "|| ( ${depend} ) virtual/rubygems"
 }
 
 _ruby_single_set_globals() {

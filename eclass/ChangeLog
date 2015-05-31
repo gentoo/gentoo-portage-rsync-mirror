@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1630 2015/05/31 05:57:23 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1631 2015/05/31 06:14:54 graaff Exp $
+
+  31 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-single.eclass:
+  Add virtual/rubygems to dependencies to ensure that it is present in time,
+  which may not happen since this is a PDEPEND of dev-lang/ruby.
 
   31 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-ng.eclass,
   +ruby-single.eclass, +ruby-utils.eclass:

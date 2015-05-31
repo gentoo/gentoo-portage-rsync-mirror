@@ -1,10 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-2.0.0.ebuild,v 1.2 2015/03/18 20:17:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/phantomjs/phantomjs-2.0.0.ebuild,v 1.3 2015/05/31 06:15:53 graaff Exp $
 
 EAPI=5
 
-inherit eutils toolchain-funcs pax-utils multiprocessing
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
+
+inherit eutils toolchain-funcs pax-utils multiprocessing ruby-single
 
 DESCRIPTION="A headless WebKit scriptable with a JavaScript API"
 HOMEPAGE="http://phantomjs.org/"
@@ -24,6 +26,7 @@ RDEPEND="dev-libs/icu:=
 	media-libs/libpng:0=
 	virtual/jpeg:0"
 DEPEND="${RDEPEND}
+	${RUBY_DEPS}
 	app-arch/unzip
 	virtual/pkgconfig"
 
