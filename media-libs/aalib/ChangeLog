@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/aalib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.58 2015/03/31 20:21:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/ChangeLog,v 1.59 2015/05/31 14:13:38 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> -aalib-1.4_rc5-r4.ebuild,
+  -aalib-1.4_rc5-r5.ebuild, -aalib-1.4_rc5.ebuild:
+  Remove old.
 
   31 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> aalib-1.4_rc5-r6.ebuild:
   stable for fringe archs to support libsdl stablereq

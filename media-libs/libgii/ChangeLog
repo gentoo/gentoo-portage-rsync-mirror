@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgii
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.53 2014/06/18 19:41:22 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgii/ChangeLog,v 1.54 2015/05/31 14:17:26 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> -libgii-1.0.2.ebuild:
+  Remove old.
 
   18 Jun 2014; Michał Górny <mgorny@gentoo.org> libgii-1.0.2-r1.ebuild:
   Update dependencies to require guaranteed EAPI=5 or multilib ebuilds, bug

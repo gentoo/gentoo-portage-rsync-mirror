@@ -1,25 +1,22 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-31.6.0.ebuild,v 1.3 2015/04/24 09:58:14 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/firefox-bin/firefox-bin-38.0.1-r1.ebuild,v 1.1 2015/05/31 14:20:09 axs Exp $
 
 EAPI="5"
-MOZ_ESR="1"
 
 # Can be updated using scripts/get_langs.sh from mozilla overlay
-MOZ_LANGS=(af ar as ast be bg bn-BD bn-IN br bs ca cs csb cy da de el en
+# Not officially supported as of yet
+# csb
+MOZ_LANGS=(af ar as ast be bg bn-BD bn-IN br bs ca cs cy da de el en
 en-GB en-US en-ZA eo es-AR es-CL es-ES es-MX et eu fa fi fr fy-NL ga-IE gd gl
-gu-IN he hi-IN hr hu hy-AM id is it ja kk kn ko ku lt lv mai mk ml mr nb-NO
+gu-IN he hi-IN hr hu hy-AM id is it ja kk kn ko lt lv mai mk ml mr nb-NO
 nl nn-NO or pa-IN pl pt-BR pt-PT rm ro ru si sk sl son sq sr sv-SE ta
-te tr uk vi zh-CN zh-TW zu)
+te tr uk vi zh-CN zh-TW)
 
 # Convert the ebuild version to the upstream mozilla version, used by mozlinguas
 MOZ_PV="${PV/_beta/b}" # Handle beta for SRC_URI
 MOZ_PV="${MOZ_PV/_rc/rc}" # Handle rc for SRC_URI
 MOZ_PN="${PN/-bin}"
-if [[ ${MOZ_ESR} == 1 ]]; then
-	# ESR releases have slightly version numbers
-	MOZ_PV="${MOZ_PV}esr"
-fi
 MOZ_P="${MOZ_PN}-${MOZ_PV}"
 
 # Upstream ftp release URI that's used by mozlinguas.eclass
@@ -36,24 +33,27 @@ SRC_URI="${SRC_URI}
 HOMEPAGE="http://www.mozilla.com/firefox"
 RESTRICT="strip mirror"
 
-KEYWORDS="-* amd64 x86"
+KEYWORDS="-* ~amd64 ~x86"
 SLOT="0"
 LICENSE="MPL-2.0 GPL-2 LGPL-2.1"
 IUSE="selinux startup-notification"
 
 DEPEND="app-arch/unzip"
 RDEPEND="dev-libs/atk
+	>=sys-apps/dbus-0.60
 	>=dev-libs/dbus-glib-0.72
-	dev-libs/glib:2
+	>=dev-libs/glib-2.26:2
 	>=media-libs/alsa-lib-1.0.16
 	media-libs/fontconfig
-	>=media-libs/freetype-2.4.10:2
-	>=sys-apps/dbus-0.60
+	>=media-libs/freetype-2.4.10
 	>=x11-libs/cairo-1.10[X]
-	x11-libs/gdk-pixbuf:2
+	x11-libs/gdk-pixbuf
 	>=x11-libs/gtk+-2.14:2
 	x11-libs/libX11
+	x11-libs/libXcomposite
+	x11-libs/libXdamage
 	x11-libs/libXext
+	x11-libs/libXfixes
 	x11-libs/libXrender
 	x11-libs/libXt
 	>=x11-libs/pango-1.22.0
@@ -117,7 +117,7 @@ src_install() {
 	insinto ${MOZILLA_FIVE_HOME}/defaults/pref/
 	doins "${FILESDIR}"/local-settings.js
 	# Copy preferences file so we can do a simple rename.
-	cp "${FILESDIR}"/all-gentoo-1.js  "${D}"${MOZILLA_FIVE_HOME}/all-gentoo.js
+	cp "${FILESDIR}"/all-gentoo-1-cve-2015-4000.js  "${D}"${MOZILLA_FIVE_HOME}/all-gentoo.js
 
 	# Install language packs
 	mozlinguas_src_install

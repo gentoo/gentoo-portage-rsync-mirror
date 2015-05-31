@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/exempi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.46 2015/05/06 12:13:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/exempi/ChangeLog,v 1.47 2015/05/31 14:07:25 zlogene Exp $
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> exempi-2.2.1.ebuild:
+  arm stable wrt bug #545852
 
   06 May 2015; Manuel Rüger <mrueg@gentoo.org> -exempi-2.1.1.ebuild:
   Remove old.
