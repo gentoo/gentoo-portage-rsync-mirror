@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.39 2015/05/13 02:04:46 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.40 2015/05/31 10:59:31 maekke Exp $
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> urllib3-1.10.3.ebuild:
+  arm stable, bug #530622
 
   13 May 2015; Mike Gilbert <floppym@gentoo.org> urllib3-1.10.3.ebuild:
   Exclude tests which rely on tarpit address 10.255.255.1.

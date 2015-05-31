@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-1.1.0.ebuild,v 1.4 2015/03/30 16:32:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liblognorm/liblognorm-1.1.0.ebuild,v 1.5 2015/05/31 10:55:47 maekke Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.liblognorm.com/files/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0/1"
-KEYWORDS="amd64 ~arm hppa x86 ~amd64-linux"
+KEYWORDS="amd64 arm hppa x86 ~amd64-linux"
 IUSE="debug doc pcre static-libs test"
 
 RDEPEND="

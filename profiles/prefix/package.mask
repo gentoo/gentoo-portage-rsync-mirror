@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.130 2014/11/23 18:41:16 redlizard Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/package.mask,v 1.131 2015/05/31 10:36:10 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked.  This file is for
@@ -9,6 +9,10 @@
 # NOTE: Please add your entry at the top!
 #
 
+
+# Fabian Groffen <grobian@gentoo.org> (31 May 2015)
+# Causes a circular dependency during bootstrap, that's all really #550856
+>=dev-util/pkgconfig-0.28-r3
 
 # Fabian Groffen <grobian@gentoo.org> (11 Feb 2014)
 # Fails to compile, bug #493464

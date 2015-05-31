@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multi_test
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_test/ChangeLog,v 1.16 2015/05/03 12:08:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_test/ChangeLog,v 1.17 2015/05/31 10:52:03 maekke Exp $
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> multi_test-0.1.1.ebuild:
+  arm stable, bug #542574
 
   03 May 2015; Jeroen Roovers <jer@gentoo.org> multi_test-0.1.1.ebuild:
   Stable for PPC64 (bug #542574).

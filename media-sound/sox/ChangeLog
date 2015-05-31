@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/sox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.164 2015/05/28 15:21:10 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/ChangeLog,v 1.165 2015/05/31 10:43:00 maekke Exp $
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> sox-14.4.2.ebuild:
+  arm stable, bug #511778
 
   28 May 2015; Jack Morgan <jmorgan@gentoo.org> sox-14.4.2.ebuild:
   ppc stable wrt bug #511778

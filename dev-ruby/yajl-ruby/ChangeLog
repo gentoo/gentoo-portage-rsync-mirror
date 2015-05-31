@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/yajl-ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.42 2015/05/03 12:05:44 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/yajl-ruby/ChangeLog,v 1.43 2015/05/31 10:48:34 maekke Exp $
+
+  31 May 2015; Markus Meier <maekke@gentoo.org> yajl-ruby-1.1.0-r1.ebuild:
+  arm stable, bug #542574
 
   03 May 2015; Jeroen Roovers <jer@gentoo.org> yajl-ruby-1.1.0-r1.ebuild:
   Stable for PPC64 (bug #542574).
