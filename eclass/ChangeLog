@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1629 2015/05/30 16:09:05 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1630 2015/05/31 05:57:23 graaff Exp $
+
+  31 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-ng.eclass,
+  +ruby-single.eclass, +ruby-utils.eclass:
+  Add ruby-single.eclass to support packages that just need a ruby interpreter
+  to be present. Refactor code common with ruby-ng.eclass into
+  ruby-utils.eclass.
 
   30 May 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Drop PDEPEND on virtual/dev-manager. See bug #550086.
