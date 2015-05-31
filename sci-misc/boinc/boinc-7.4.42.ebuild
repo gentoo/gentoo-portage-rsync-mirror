@@ -8,21 +8,18 @@ EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils eutils flag-o-matic git-r3 systemd user versionator wxwidgets
+inherit autotools-utils eutils flag-o-matic systemd user versionator wxwidgets
 
 MY_PV=$(get_version_component_range 1-2)
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
-EGIT_MIN_CLONE_TYPE="shallow"
-EGIT_REPO_URI="git://boinc.berkeley.edu/boinc-v2.git \
-    http://boinc.berkeley.edu/git/boinc-v2.git"
-EGIT_COMMIT="client_release/${MY_PV}/${PV}"
+SRC_URI="https://github.com/BOINC/boinc/archive/client_release/${MY_PV}/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X cuda static-libs"
+IUSE="X cuda static-libs systemd"
 
 RDEPEND="
 	!sci-misc/boinc-bin
@@ -51,6 +48,8 @@ DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.4
 	app-text/docbook2X
 "
+
+S="${WORKDIR}/${PN}-client_release-${MY_PV}-${PV}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
