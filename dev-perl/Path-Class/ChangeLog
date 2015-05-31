@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Path-Class
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.59 2015/05/20 04:37:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/ChangeLog,v 1.60 2015/05/31 19:31:05 zlogene Exp $
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> Path-Class-0.350.0.ebuild:
+  Add ~sparc keyword wrt bug #548416
 
   20 May 2015; Matt Turner <mattst88@gentoo.org> Path-Class-0.350.0.ebuild:
   Added ~alpha, bug 548416.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/Path-Class-0.350.0.ebuild,v 1.4 2015/05/20 04:37:40 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/Path-Class-0.350.0.ebuild,v 1.5 2015/05/31 19:31:05 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit perl-module
 DESCRIPTION="Cross-platform path specification manipulation"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 IUSE="test"
 
 RDEPEND="
