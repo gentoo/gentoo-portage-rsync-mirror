@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1633 2015/05/31 13:56:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1634 2015/05/31 15:51:21 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> kde5.eclass:
+  Sync verbosely with kde overlay. Drop fetch restriction for unpublished
+  packages including the pkg_nofetch prompt. This did not work out as expected,
+  see bug 549012. Add support for split localization packages via
+  kde-apps/kde4-l10n. Add KDE_BLOCK_SLOT4 variable which makes it possible to
+  adjust coinstallability of kf5 packages.
 
   31 May 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Blacklist graphite-related flags that cause ICEs on qtwebkit (bug 550780).
