@@ -1,6 +1,10 @@
 # ChangeLog for dev-tex/metapost
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/ChangeLog,v 1.7 2015/03/31 19:23:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/metapost/ChangeLog,v 1.8 2015/05/31 00:26:14 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> -metapost-1.212.ebuild,
+  -metapost-1.504.ebuild:
+  Remove old.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> metapost-1.212.ebuild,
   metapost-1.504.ebuild, metapost-1.780.ebuild, metapost-1.803.ebuild:
@@ -34,4 +38,3 @@
   09 Jan 2011; Alexis Ballier <aballier@gentoo.org> +metapost-1.212.ebuild,
   +metadata.xml:
   initial import, standalone version of metapost, ebuild by me
-

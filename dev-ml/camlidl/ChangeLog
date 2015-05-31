@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlidl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/ChangeLog,v 1.8 2014/01/15 23:57:22 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlidl/ChangeLog,v 1.9 2015/05/31 00:11:49 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> -camlidl-1.05.ebuild:
+  Remove old.
 
   15 Jan 2014; Sébastien Fabbro <bicatali@gentoo.org> camlidl-1.05-r1.ebuild:
   Prefixified and keyworded amd64-linux, x86-linux

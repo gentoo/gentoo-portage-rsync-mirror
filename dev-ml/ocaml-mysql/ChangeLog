@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-mysql
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-mysql/ChangeLog,v 1.15 2014/08/10 20:43:03 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-mysql/ChangeLog,v 1.16 2015/05/31 00:13:05 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/ocaml-mysql-1.0.3-head.patch, -files/ocaml-mysql-1.0.3-shtool-r1.patch,
+  -ocaml-mysql-1.0.4.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> ocaml-mysql-1.0.4.ebuild,
   ocaml-mysql-1.1.1.ebuild:
