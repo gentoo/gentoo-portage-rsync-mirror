@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10022 2015/05/31 10:27:03 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10023 2015/05/31 13:14:24 perfinion Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2015; Jason Zaman <perfinion@gentoo.org> use.desc:
+  update debug url to wiki, bug 550874
 
   31 May 2015; Markos Chandras <hwoarang@gentoo.org> package.mask:
   Bump lightdm mask to 1.15

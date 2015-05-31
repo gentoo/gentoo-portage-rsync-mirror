@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.7.2.ebuild,v 1.11 2014/11/02 09:00:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/phonon-4.7.2.ebuild,v 1.12 2015/05/31 13:17:10 johu Exp $
 
 EAPI=5
 
@@ -23,7 +23,6 @@ SLOT="0"
 IUSE="aqua debug designer gstreamer pulseaudio +qt4 qt5 +vlc zeitgeist"
 
 REQUIRED_USE="
-	|| ( aqua gstreamer vlc )
 	|| ( qt4 qt5 )
 	zeitgeist? ( qt4 )
 "
