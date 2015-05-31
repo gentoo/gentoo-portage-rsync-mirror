@@ -1,6 +1,11 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.456 2015/05/31 09:58:49 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.457 2015/05/31 10:03:37 grobian Exp $
+
+  31 May 2015; Fabian Groffen <grobian@gentoo.org>
+  darwin/macos/10.10/profile.bashrc, darwin/macos/package.use.force,
+  darwin/macos/packages:
+  From now on, Mac OS X/Darwin is built with Clang
 
   31 May 2015; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
   Mask llvm/clang >=3.6 on Darwin due to compile issues

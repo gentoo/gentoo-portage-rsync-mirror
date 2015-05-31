@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1631 2015/05/31 06:14:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1632 2015/05/31 10:11:35 perfinion Exp $
+
+  31 May 2015; Jason Zaman <perfinion@gentoo.org> kde4-base.eclass, kde5.eclass:
+  KDE: fix SELinux deps, bug 550824
 
   31 May 2015; Hans de Graaff <graaff@gentoo.org> ruby-single.eclass:
   Add virtual/rubygems to dependencies to ensure that it is present in time,

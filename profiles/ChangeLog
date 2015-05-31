@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10021 2015/05/29 19:32:17 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10022 2015/05/31 10:27:03 hwoarang Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  31 May 2015; Markos Chandras <hwoarang@gentoo.org> package.mask:
+  Bump lightdm mask to 1.15
 
   29 May 2015; Ulrich Müller <ulm@gentoo.org> license_groups:
   The HPND and IJG licenses have been approved by the FSF. Add HPND to the

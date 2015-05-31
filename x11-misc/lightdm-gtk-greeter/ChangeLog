@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/lightdm-gtk-greeter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.29 2015/03/03 12:06:21 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lightdm-gtk-greeter/ChangeLog,v 1.30 2015/05/31 10:28:44 hwoarang Exp $
+
+*lightdm-gtk-greeter-2.0.1 (31 May 2015)
+
+  31 May 2015; Markos Chandras <hwoarang@gentoo.org>
+  +lightdm-gtk-greeter-2.0.1.ebuild:
+  Version bump
 
   03 Mar 2015; Yixun Lan <dlan@gentoo.org> lightdm-gtk-greeter-2.0.0.ebuild:
   add arm64 support, tested on A53 board

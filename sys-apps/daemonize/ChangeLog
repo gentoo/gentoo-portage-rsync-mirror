@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/daemonize
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/ChangeLog,v 1.8 2014/12/19 21:07:32 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemonize/ChangeLog,v 1.9 2015/05/31 10:30:43 hwoarang Exp $
+
+*daemonize-1.7.6 (31 May 2015)
+
+  31 May 2015; Markos Chandras <hwoarang@gentoo.org> +daemonize-1.7.6.ebuild:
+  Version bump
 
 *daemonize-1.7.5 (19 Dec 2014)
 

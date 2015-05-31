@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.8 2015/05/09 15:33:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde5.eclass,v 1.9 2015/05/31 10:11:35 perfinion Exp $
 
 # @ECLASS: kde5.eclass
 # @MAINTAINER:
@@ -197,7 +197,7 @@ case ${KDE_SELINUX_MODULE} in
 	none)   ;;
 	*)
 		IUSE+=" selinux"
-		COMMONDEPEND+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
+		RDEPEND+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
 		;;
 esac
 

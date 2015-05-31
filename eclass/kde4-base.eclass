@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.152 2015/05/15 16:13:42 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.153 2015/05/31 10:11:35 perfinion Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -370,7 +370,7 @@ case ${KDE_SELINUX_MODULE} in
 	none)	;;
 	*)
 		IUSE+=" selinux"
-		kdecommondepend+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
+		kderdepend+=" selinux? ( sec-policy/selinux-${KDE_SELINUX_MODULE} )"
 		;;
 esac
 
