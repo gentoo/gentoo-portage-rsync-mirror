@@ -1,6 +1,10 @@
 # ChangeLog for gnustep-apps/easydiff
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.24 2014/08/10 21:19:40 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/easydiff/ChangeLog,v 1.25 2015/05/31 12:07:03 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org>
+  -easydiff-0.3.1_pre20061115.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   easydiff-0.3.1_pre20061115.ebuild, easydiff-0.4.0.ebuild:

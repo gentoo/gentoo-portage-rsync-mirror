@@ -1,6 +1,9 @@
 # ChangeLog for gnustep-apps/sudoku
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.8 2012/07/09 05:49:50 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/sudoku/ChangeLog,v 1.9 2015/05/31 12:06:26 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> -sudoku-0.6.ebuild:
+  Remove old.
 
   09 Jul 2012; Michael Weber <xmw@gentoo.org> sudoku-0.7.ebuild:
   ppc stable (bug 400359)
