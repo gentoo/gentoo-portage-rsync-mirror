@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ucspi-ssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.45 2015/05/29 04:23:23 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-ssl/ChangeLog,v 1.47 2015/05/31 11:43:20 mrueg Exp $
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop unused USE flag description.
+
+  31 May 2015; Manuel Rüger <mrueg@gentoo.org> -ucspi-ssl-0.70-r1.ebuild,
+  -ucspi-ssl-0.94.ebuild, metadata.xml:
+  Fix herd name in metadata.xml. Remove old.
 
   29 May 2015; Jack Morgan <jmorgan@gentoo.org> ucspi-ssl-0.94-r1.ebuild:
   sparc stable wrt bug #516868

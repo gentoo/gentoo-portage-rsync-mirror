@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1057 2015/05/30 05:29:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.1058 2015/05/31 11:42:03 zlogene Exp $
+
+  31 May 2015; Mikle Kolyada <zlogene@gentoo.org> glibc-2.20-r2.ebuild:
+  Revert sparc stable keyword, this version doesn't work there as expected (see
+  bug #550836)
 
   30 May 2015; Mike Frysinger <vapier@gentoo.org>
   files/eblits/src_configure.eblit:
