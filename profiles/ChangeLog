@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10024 2015/05/31 22:03:42 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10025 2015/06/01 03:52:22 phajdan.jr Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2015; Pawel Hajdan jr <phajdan.jr@gentoo.org> package.mask:
+  Roll dev channel mask for chromium-45.
 
   31 May 2015; Johannes Huber <johu@gentoo.org>
   default/linux/amd64/package.use.mask, package.mask:
