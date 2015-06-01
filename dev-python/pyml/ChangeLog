@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyml/ChangeLog,v 1.6 2015/01/04 05:19:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyml/ChangeLog,v 1.7 2015/06/01 06:20:29 patrick Exp $
+
+*pyml-0.7.13.3 (01 Jun 2015)
+
+  01 Jun 2015; Patrick Lauer <patrick@gentoo.org> +pyml-0.7.13.3.ebuild:
+  Bump
 
 *pyml-0.7.13.2-r1 (04 Jan 2015)
 
