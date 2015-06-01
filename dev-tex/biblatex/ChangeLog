@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/biblatex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.16 2015/04/23 00:03:01 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biblatex/ChangeLog,v 1.17 2015/06/01 19:47:31 mrueg Exp $
+
+  01 Jun 2015; Manuel Rüger <mrueg@gentoo.org> biblatex-3.0.ebuild:
+  Migrate SRC_URI to github.
 
 *biblatex-3.0 (23 Apr 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/poppler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.461 2015/05/29 13:00:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/ChangeLog,v 1.462 2015/06/01 19:54:32 grobian Exp $
+
+  01 Jun 2015; Fabian Groffen <grobian@gentoo.org> poppler-0.33.0-r1.ebuild:
+  Fix compilation with Clang
 
   29 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
   poppler-0.33.0-r1.ebuild, poppler-9999.ebuild:

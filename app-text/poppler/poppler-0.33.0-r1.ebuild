@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.33.0-r1.ebuild,v 1.3 2015/05/29 13:00:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/poppler/poppler-0.33.0-r1.ebuild,v 1.4 2015/06/01 19:54:32 grobian Exp $
 
 EAPI=5
 
@@ -65,6 +65,16 @@ PATCHES=(
 	"${FILESDIR}/${PN}-0.28.1-respect-cflags.patch"
 	"${FILESDIR}/${PN}-0.33.0-openjpeg2.patch"
 )
+
+src_prepare() {
+	cmake-utils_src_prepare
+
+	# Clang doesn't grok this flag, the configure nicely tests that, but
+	# cmake just uses it, so remove it if we use clang
+	if [[ ${CC} == clang ]] ; then
+		sed -i -e 's/-fno-check-new//' cmake/modules/PopplerMacros.cmake || die
+	fi
+}
 
 src_configure() {
 	local mycmakeargs=(
