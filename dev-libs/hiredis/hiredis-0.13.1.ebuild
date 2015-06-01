@@ -13,7 +13,9 @@ SRC_URI="http://github.com/redis/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-solaris"
-IUSE="examples static-libs"
+IUSE="examples static-libs test"
+
+DEPEND="test? ( dev-db/redis )"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-disable-network-tests.patch"
@@ -40,7 +42,23 @@ src_compile() {
 }
 
 src_test() {
-	_emake test
+	local REDIS_PID="${T}"/hiredis.pid
+	local REDIS_SOCK="${T}"/hiredis.sock
+	local REDIS_PORT=56379
+	local REDIS_TEST_CONFIG="daemonize yes \n
+		pidfile ${REDIS_PID} \n
+		port ${REDIS_PORT} \n
+		bind 127.0.0.1 \n
+		unixsocket //${REDIS_SOCK}"
+
+	_emake hiredis-test
+
+	echo -e ${REDIS_TEST_CONFIG} | /usr/sbin/redis-server - || die
+	./hiredis-test -h 127.0.0.1 -p ${REDIS_PID} -s ${REDIS_SOCK} || die
+	local ret=$?
+
+	kill "$(<"${REDIS_PID}")" || die
+	return ${ret}
 }
 
 src_install() {
