@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.13 2015/03/27 03:43:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/bcs-demo/bcs-demo-1.3.ebuild,v 1.14 2015/06/01 20:54:49 mr_bones_ Exp $
 
 EAPI=5
 inherit unpacker games
@@ -17,21 +17,12 @@ IUSE=""
 RESTRICT="strip"
 
 RDEPEND="sys-libs/glibc
-	|| (
-		(
-			media-libs/libsdl[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	media-libs/libsdl[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 
 S=${WORKDIR}
 
@@ -47,8 +38,8 @@ src_unpack() {
 src_install() {
 	dodir "${dir}" "${GAMES_BINDIR}"
 
-	tar -zxf bcsdemo.tar.gz -C "${Ddir}" || die "extracting bcsdemo.tar.gz"
-	rm -f "${Ddir}"/bcs-linux-openal-fixer.sh
+	tar -zxf bcsdemo.tar.gz -C "${Ddir}" || die
+	rm -f "${Ddir}"/bcs-linux-openal-fixer.sh || die
 
 	exeinto "${dir}"
 #	doexe bin/Linux/x86/rungame.sh

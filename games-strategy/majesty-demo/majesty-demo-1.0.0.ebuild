@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.17 2015/03/27 02:33:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/majesty-demo/majesty-demo-1.0.0.ebuild,v 1.18 2015/06/01 20:43:04 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -16,18 +16,10 @@ IUSE=""
 RESTRICT="bindist strip"
 
 RDEPEND="sys-libs/glibc
-	|| (
-		(
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

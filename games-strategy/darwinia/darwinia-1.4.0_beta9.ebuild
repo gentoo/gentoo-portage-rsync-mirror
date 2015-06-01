@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.16 2014/10/13 16:41:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia/darwinia-1.4.0_beta9.ebuild,v 1.17 2015/06/01 20:51:01 mr_bones_ Exp $
 
 EAPI=5
-
 CDROM_OPTIONAL="yes"
 inherit eutils unpacker cdrom games
 
@@ -20,20 +19,10 @@ RESTRICT="mirror strip"
 
 RDEPEND="
 	~virtual/libstdc++-3.3
-	|| (
-		(
-			media-libs/libsdl[abi_x86_32(-)]
-			media-libs/libvorbis[abi_x86_32(-)]
-			virtual/glu[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	media-libs/libsdl[abi_x86_32(-)]
+	media-libs/libvorbis[abi_x86_32(-)]
+	virtual/glu[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

@@ -5,7 +5,7 @@ EAPI=5
 HOMEPAGE=http://www.radgametools.com/default.htm
 KEYWORDS=-* amd64 x86
 LICENSE=freedist
-RDEPEND=|| ( ( >=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] >=media-libs/openal-1.15.1-r1[abi_x86_32(-)] ) amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] ) )
+RDEPEND=>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)] >=media-libs/openal-1.15.1-r1[abi_x86_32(-)]
 SLOT=0
 SRC_URI=mirror://gentoo/binkplayer-1.99w.zip
-_md5_=16253a26acc300511999f2c22c6fe3ce
+_md5_=76cb684a8eb76fa0c7b044f8ad87b72e

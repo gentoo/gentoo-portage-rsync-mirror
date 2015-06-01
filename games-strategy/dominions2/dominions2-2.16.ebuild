@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.12 2014/10/13 16:22:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/dominions2/dominions2-2.16.ebuild,v 1.13 2015/06/01 20:49:09 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils cdrom games
 
 DESCRIPTION="Dominions 2: The Ascension Wars is an epic turn-based fantasy strategy game"
@@ -26,7 +25,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE="doc"
 RESTRICT="bindist strip"
 
-DEPEND="
+RDEPEND="
 	|| (
 		ppc? (
 			media-libs/libsdl
@@ -38,25 +37,17 @@ DEPEND="
 			virtual/opengl[abi_x86_32(-)]
 			virtual/glu[abi_x86_32(-)]
 		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
 	)"
-RDEPEND="${DEPEND}"
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
 
 src_unpack() {
-	mkdir -p "${S}"/patch
-	cd "${S}"/patch
-	if use x86 || use amd64
-	then
+	mkdir -p "${S}"/patch || die
+	cd "${S}"/patch || die
+	if use x86 || use amd64 ; then
 		unpack dompatch${PV/\./}_linux_x86.tgz
-	elif use ppc
-	then
+	elif use ppc ; then
 		unpack dompatch${PV/\./}_linux_ppc.tgz
 	fi
 }
@@ -66,11 +57,9 @@ src_install() {
 	einfo "Copying files to harddisk... this may take a while..."
 
 	exeinto "${dir}"
-	if use amd64 || use x86
-	then
+	if use amd64 || use x86 ; then
 		doexe "${CDROM_ROOT}"/bin_lin/x86/dom2*
-	elif use ppc
-	then
+	elif use ppc ; then
 		doexe "${CDROM_ROOT}"/bin_lin/ppc/dom2*
 	fi
 	insinto "${dir}"
@@ -82,7 +71,7 @@ src_install() {
 	einfo "Applying patch for version ${PV}..."
 	dodoc "${S}"/patch/doc/*
 	doexe "${S}"/patch/dom2
-	rm -rf "${S}"/patch/doc/ "${S}"/patch/dom2 || die "rm failed"
+	rm -rf "${S}"/patch/doc/ "${S}"/patch/dom2 || die
 	doins -r "${S}"/patch/*
 
 	if use doc; then

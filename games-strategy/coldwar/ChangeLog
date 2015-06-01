@@ -1,6 +1,9 @@
 # ChangeLog for games-strategy/coldwar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/ChangeLog,v 1.8 2014/08/29 17:58:08 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/ChangeLog,v 1.9 2015/06/01 20:53:04 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> coldwar-1.0.1-r1.ebuild:
+  clean up app-emulation/emul-linux which has been removed
 
   29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org> -coldwar-1.0.1.ebuild,
   coldwar-1.0.1-r1.ebuild:

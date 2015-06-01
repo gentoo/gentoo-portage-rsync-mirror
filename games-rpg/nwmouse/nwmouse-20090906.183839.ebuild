@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.6 2014/10/15 10:01:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwmouse/nwmouse-20090906.183839.ebuild,v 1.7 2015/06/01 20:57:54 mr_bones_ Exp $
 
 EAPI=5
-
 inherit games
 
 DESCRIPTION="Hardware mouse cursors for Neverwinter Nights"
@@ -21,22 +20,11 @@ RDEPEND="
 	>=games-rpg/nwn-1.68-r4
 	games-rpg/nwn-data
 	sys-libs/glibc
-	|| (
-		(
-			>=dev-libs/elfutils-0.155-r1[abi_x86_32(-)]
-			>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXcursor[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
-"
-DEPEND=""
+	>=dev-libs/elfutils-0.155-r1[abi_x86_32(-)]
+	>=media-libs/libsdl-1.2.15-r5[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXcursor[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]"
 
 # I've looked at this stuff, and I can't find the problem myself, so I'm just
 # removing the warnings.  If someone feels like finding the patch, that would be
@@ -44,11 +32,6 @@ DEPEND=""
 dir="${GAMES_PREFIX_OPT}/nwn"
 QA_PREBUILT="${dir:1}/nwmouse.so
 	${dir:1}/nwmouse/libdis/libdisasm.so"
-
-pkg_setup() {
-	games_pkg_setup
-	elog "This package is pre-compiled so it will work on both x86 and amd64."
-}
 
 src_install() {
 	# libelf moved to games-rpg/nwn, see bug #210562

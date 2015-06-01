@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32-r1.ebuild,v 1.3 2015/03/24 03:16:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/knights-demo/knights-demo-1.32-r1.ebuild,v 1.4 2015/06/01 20:43:41 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -17,18 +17,11 @@ IUSE=""
 RESTRICT="strip"
 
 RDEPEND="sys-libs/glibc
-	|| (
-		(
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-			>=x11-libs/libXau-1.0.7-r1[abi_x86_32(-)]
-			>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
-			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-			>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXau-1.0.7-r1[abi_x86_32(-)]
+	>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
+	>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+	>=x11-libs/libXi-1.7.2[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

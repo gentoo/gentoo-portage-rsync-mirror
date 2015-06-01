@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/gorky17-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/ChangeLog,v 1.12 2014/08/29 18:01:42 mr_bones_ Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/ChangeLog,v 1.13 2015/06/01 20:46:56 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  gorky17-demo-1.0.1.0.1-r1.ebuild:
+  clean up app-emulation/emul-linux which has been removed
 
   29 Aug 2014; Michael Sterrett <mr_bones_@gentoo.org>
   gorky17-demo-1.0.1.0.1-r1.ebuild:

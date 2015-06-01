@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.14 2014/10/13 16:32:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/darwinia-demo-1.3.0.ebuild,v 1.15 2015/06/01 20:50:01 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker games
 
 DESCRIPTION="Darwinia, the hyped indie game of the year. By the Uplink creators"
@@ -18,18 +17,10 @@ RESTRICT="mirror strip"
 
 RDEPEND="
 	~virtual/libstdc++-3.3
-	|| (
-		(
-			media-libs/libsdl[abi_x86_32(-)]
-			media-libs/libvorbis[abi_x86_32(-)]
-			virtual/glu[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	media-libs/libsdl[abi_x86_32(-)]
+	media-libs/libvorbis[abi_x86_32(-)]
+	virtual/glu[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

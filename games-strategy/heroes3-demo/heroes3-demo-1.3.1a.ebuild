@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.9 2014/10/13 16:12:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3-demo/heroes3-demo-1.3.1a.ebuild,v 1.10 2015/06/01 20:46:04 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker games
 
 MY_PN=${PN%-demo}
@@ -28,19 +27,16 @@ RDEPEND=">=sys-libs/lib-compat-loki-0.2
 		!ppc? (
 			x11-libs/libX11[abi_x86_32(-)]
 		)
-		amd64? (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
 	)"
 
-dir="${GAMES_PREFIX_OPT}/${PN}"
+dir=${GAMES_PREFIX_OPT}/${PN}
 QA_PREBUILT="${dir:1}/*"
 
 S=${WORKDIR}
 
 src_install() {
 	# Apply patch
-	loki_patch patch.dat data/ || die "loki patch failed"
+	loki_patch patch.dat data/ || die
 
 	local demo="data/demos/${MY_PN}_demo"
 
@@ -54,7 +50,7 @@ src_install() {
 	insinto "${dir}"
 	exeinto "${dir}"
 	doins -r "${demo}"/*
-	rm "${D}/${dir}"/{${exe_stub}*,*.sh} || die "rm executables failed"
+	rm "${D}/${dir}"/{${exe_stub}*,*.sh} || die
 	doexe "${demo}/${exe}"
 
 	einfo "Linking libs provided by 'sys-libs/lib-compat-loki' to '${dir}'."

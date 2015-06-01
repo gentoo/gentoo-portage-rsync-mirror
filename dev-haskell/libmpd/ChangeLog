@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/libmpd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libmpd/ChangeLog,v 1.10 2014/10/25 12:54:07 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/libmpd/ChangeLog,v 1.11 2015/06/01 20:34:52 slyfox Exp $
+
+*libmpd-0.9.0.2 (01 Jun 2015)
+
+  01 Jun 2015; Sergei Trofimovich <slyfox@gentoo.org> +libmpd-0.9.0.2.ebuild:
+  Version bump, allows latest dev-haskell/utf8-string, bug #550950 by riepernet.
 
 *libmpd-0.9.0.1 (25 Oct 2014)
 

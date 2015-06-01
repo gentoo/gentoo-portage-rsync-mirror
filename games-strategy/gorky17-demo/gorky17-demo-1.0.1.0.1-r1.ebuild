@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1-r1.ebuild,v 1.3 2014/08/29 18:01:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/gorky17-demo/gorky17-demo-1.0.1.0.1-r1.ebuild,v 1.4 2015/06/01 20:46:56 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker versionator games
@@ -20,25 +20,13 @@ IUSE=""
 RESTRICT="mirror bindist strip"
 
 RDEPEND="
-	|| (
-		(
-			>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)]
-			>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
-			>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-			>=x11-libs/libXau-1.0.7-r1[abi_x86_32(-)]
-			>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
-			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-		)
-		amd64? (
-			(
-				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			)
-		)
-	)"
+	>=media-libs/alsa-lib-1.0.27.2[abi_x86_32(-)]
+	>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
+	>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXau-1.0.7-r1[abi_x86_32(-)]
+	>=x11-libs/libXdmcp-1.1.1-r1[abi_x86_32(-)]
+	>=x11-libs/libXext-1.3.2[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

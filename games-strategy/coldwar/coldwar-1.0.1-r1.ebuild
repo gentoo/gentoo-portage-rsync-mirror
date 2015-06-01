@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1-r1.ebuild,v 1.3 2014/08/29 17:58:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/coldwar/coldwar-1.0.1-r1.ebuild,v 1.4 2015/06/01 20:53:04 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker cdrom versionator games
 
 PV_MAJOR=$(get_version_component_range 1-2)
@@ -20,28 +19,14 @@ IUSE="linguas_de linguas_fr linguas_ru"
 RESTRICT="mirror bindist strip"
 
 RDEPEND="
-	|| (
-		(
-			>=dev-libs/glib-2.34.3[abi_x86_32(-)]
-			>=media-libs/libogg-1.3.0[abi_x86_32(-)]
-			>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
-			>=media-libs/openal-1.15.1[abi_x86_32(-)]
-			>=media-libs/smpeg-0.4.4-r10[abi_x86_32(-)]
-			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-		)
-		amd64? (
-			(
-				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			)
-		)
-	)"
-DEPEND=""
+	>=dev-libs/glib-2.34.3[abi_x86_32(-)]
+	>=media-libs/libogg-1.3.0[abi_x86_32(-)]
+	>=media-libs/libvorbis-1.3.3-r1[abi_x86_32(-)]
+	>=media-libs/openal-1.15.1[abi_x86_32(-)]
+	>=media-libs/smpeg-0.4.4-r10[abi_x86_32(-)]
+	>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXext-1.3.2[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

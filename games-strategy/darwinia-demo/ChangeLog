@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/darwinia-demo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.17 2014/10/13 16:32:12 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/darwinia-demo/ChangeLog,v 1.18 2015/06/01 20:50:01 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  darwinia-demo-1.3.0.ebuild:
+  clean up app-emulation/emul-linux which has been removed
 
   13 Oct 2014; Michał Górny <mgorny@gentoo.org> darwinia-demo-1.3.0.ebuild:
   Support multilib providers for deps. Bump to EAPI=5.

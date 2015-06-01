@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/alex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.85 2015/01/25 20:47:30 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alex/ChangeLog,v 1.86 2015/06/01 20:45:45 slyfox Exp $
+
+  01 Jun 2015; Sergei Trofimovich <slyfox@gentoo.org>
+  +files/alex-3.1.4-ghc-7.10.patch, alex-3.1.4.ebuild:
+  Port to upcoming ghc-7.10.
 
 *alex-3.1.4 (25 Jan 2015)
 
