@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libtirpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.52 2015/05/30 00:11:19 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtirpc/ChangeLog,v 1.53 2015/06/01 14:20:34 vapier Exp $
+
+*libtirpc-0.3.1 (01 Jun 2015)
+
+  01 Jun 2015; Mike Frysinger <vapier@gentoo.org> +libtirpc-0.3.1.ebuild:
+  Version bump.
 
   30 May 2015; Manuel Rüger <mrueg@gentoo.org> -libtirpc-0.2.1-r1.ebuild,
   -libtirpc-0.2.2-r1.ebuild, -libtirpc-0.2.3.ebuild, -libtirpc-0.2.4.ebuild:
