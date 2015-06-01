@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/gnome-commander-1.4.1.ebuild,v 1.3 2015/04/08 17:56:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-commander/gnome-commander-1.4.6.ebuild,v 1.1 2015/06/01 06:59:34 idella4 Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PYTHON_COMPAT=( python2_7 )
 
 inherit eutils gnome2 python-single-r1
 
-DESCRIPTION="A full featured, twin-panel file manager for Gnome2"
+DESCRIPTION="A graphical, full featured, twin-panel file manager"
 HOMEPAGE="http://gcmd.github.io/"
 
 LICENSE="GPL-2"
@@ -19,15 +19,13 @@ IUSE="chm doc exif gsf pdf python taglib"
 RDEPEND="app-text/gnome-doc-utils
 	>=dev-libs/glib-2.6.0:2
 	>=dev-libs/libunique-0.9.3:1
-	dev-util/meld
 	gnome-base/gnome-keyring
 	>=gnome-base/gnome-vfs-2.0.0
 	>=gnome-base/libgnome-2.0.0
 	>=gnome-base/libgnomeui-2.4.0
 	>=x11-libs/gtk+-2.8.0:2
 	chm? ( dev-libs/chmlib )
-	doc? ( app-text/scrollkeeper
-		gnome-extra/yelp )
+	doc? ( app-text/scrollkeeper )
 	exif? ( >=media-gfx/exiv2-0.14 )
 	gsf? ( >=gnome-extra/libgsf-1.12.0 )
 	pdf? ( >=app-text/poppler-0.18 )
@@ -49,4 +47,10 @@ src_configure() {
 		$(use_with taglib)
 		$(use_with pdf poppler)"
 	gnome2_src_configure
+}
+
+pkg_postinst() {
+	gnome2_pkg_postinst
+	has_version dev-util/meld || elog "You need dev-util/meld to synchronize files and directories."
+	has_version gnome-extra/yelp || elog "You need gnome-extra/yelp to view the docs."
 }

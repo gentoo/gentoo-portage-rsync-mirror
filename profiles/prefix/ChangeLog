@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.458 2015/05/31 10:36:10 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.459 2015/06/01 06:50:40 grobian Exp $
+
+  01 Jun 2015; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Drop mask for pkgconfig since the cycle was fixed
 
   31 May 2015; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask pkgconfig-0.28-r3 since it depends on automake, which causes a dep-cycle
