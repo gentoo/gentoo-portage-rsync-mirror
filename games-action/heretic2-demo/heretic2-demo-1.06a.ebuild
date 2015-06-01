@@ -1,8 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.13 2014/06/27 11:42:54 mgorny Exp $
-EAPI=4
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2-demo/heretic2-demo-1.06a.ebuild,v 1.14 2015/06/01 22:05:45 mr_bones_ Exp $
 
+EAPI=5
 inherit eutils unpacker multilib games
 
 DESCRIPTION="Third-person classic magical action-adventure game"
@@ -19,15 +19,8 @@ QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/heretic2-demo/ref_glx.so"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="
-	|| (
-		(
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]"
 
 S=${WORKDIR}
 
@@ -41,16 +34,16 @@ src_install() {
 	local demo="data/demos/heretic2_demo"
 	local exe="heretic2_demo.x86"
 
-	loki_patch patch.dat data/ || die "loki patch failed"
+	loki_patch patch.dat data/ || die
 
 	# Remove bad opengl library
 	rm -r "${demo}/gl_drivers/"
 
 	# Change to safe default of 800x600 and option of normal opengl driver
-	sed -i "${demo}"/base/default.cfg \
+	sed -i \
 		-e "s:fullscreen \"1\":fullscreen \"1\"\nset vid_mode \"4\":" \
 		-e "s:libGL:/usr/$(get_libdir)/libGL:" \
-		|| die "sed failed"
+		"${demo}"/base/default.cfg || die
 
 	insinto "${dir}"
 	exeinto "${dir}"

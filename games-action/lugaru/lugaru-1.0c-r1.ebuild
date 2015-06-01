@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c-r1.ebuild,v 1.3 2015/05/22 18:52:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/lugaru/lugaru-1.0c-r1.ebuild,v 1.4 2015/06/01 22:05:44 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -18,15 +18,10 @@ RESTRICT="fetch strip"
 DEPEND="app-arch/unzip"
 RDEPEND="sys-libs/glibc
 	amd64? (
-		|| (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			(
-				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-				media-libs/libsdl[abi_x86_32(-)]
-				media-libs/openal[abi_x86_32(-)]
-			)
-		)
+		media-libs/libsdl[abi_x86_32(-)]
+		media-libs/openal[abi_x86_32(-)]
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
 	)
 	x86? (
 		media-libs/libsdl
@@ -42,7 +37,7 @@ src_unpack() {
 	unpack_zip ${A}
 
 	# Duplicate file and can't be handled by portage, bug #14983
-	rm -f "${S}/Data/Textures/Quit.png "
+	rm -f "${S}/Data/Textures/Quit.png " || die
 }
 
 src_install() {

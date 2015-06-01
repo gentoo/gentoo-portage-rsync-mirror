@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.21 2015/02/07 05:26:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/phobiaii/phobiaii-1.1.ebuild,v 1.22 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -16,15 +16,8 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND="sys-libs/lib-compat
-	|| (
-		(
-			media-libs/sdl-mixer[abi_x86_32(-)]
-			media-libs/libsdl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-		)
-	)"
+	media-libs/sdl-mixer[abi_x86_32(-)]
+	media-libs/libsdl[abi_x86_32(-)]"
 
 S=${WORKDIR}/${MY_P}
 

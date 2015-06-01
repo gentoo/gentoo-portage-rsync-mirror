@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/intrusion2-1.024.ebuild,v 1.5 2015/02/25 15:48:00 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/intrusion2/intrusion2-1.024.ebuild,v 1.6 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils games
 
 USELESS_ID="1370288626"
@@ -22,38 +21,20 @@ QA_PREBUILT="${MYGAMEDIR#/}/${PN}"
 
 RDEPEND="
 	amd64? (
-		|| (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
-		)
-		|| (
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-			(
-				>=dev-libs/atk-2.10.0[abi_x86_32(-)]
-				>=x11-libs/gdk-pixbuf-2.30.7[abi_x86_32(-)]
-				>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
-				>=x11-libs/pango-1.36.3[abi_x86_32(-)]
-			)
-		)
-		|| (
-			app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)]
-			(
-				>=media-libs/gst-plugins-base-0.10.36[abi_x86_32(-)]
-				>=media-libs/gstreamer-0.10.36-r2[abi_x86_32(-)]
-			)
-		)
-		|| (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			(
-				>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
-				>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
-				>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
-				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-				>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
-				>=x11-libs/libXtst-1.2.1-r1[abi_x86_32(-)]
-			)
-		)
+		>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
+		>=dev-libs/atk-2.10.0[abi_x86_32(-)]
+		>=x11-libs/gdk-pixbuf-2.30.7[abi_x86_32(-)]
+		>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+		>=x11-libs/pango-1.36.3[abi_x86_32(-)]
+		>=media-libs/gst-plugins-base-0.10.36[abi_x86_32(-)]
+		>=media-libs/gstreamer-0.10.36-r2[abi_x86_32(-)]
+		>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+		>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+		>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+		>=x11-libs/libXinerama-1.1.3[abi_x86_32(-)]
+		>=x11-libs/libXtst-1.2.1-r1[abi_x86_32(-)]
 	)
 	x86? (
 		dev-libs/glib:2

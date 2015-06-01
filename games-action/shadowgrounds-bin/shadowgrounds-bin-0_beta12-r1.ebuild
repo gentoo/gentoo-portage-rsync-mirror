@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/shadowgrounds-bin-0_beta12-r1.ebuild,v 1.3 2015/05/14 18:51:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/shadowgrounds-bin/shadowgrounds-bin-0_beta12-r1.ebuild,v 1.4 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
-
 inherit unpacker games eutils
 
 DESCRIPTION="an epic action experience combining modern technology with addictive playability"
@@ -24,16 +23,8 @@ RDEPEND=">=sys-libs/glibc-2.4
 		sys-libs/zlib
 	)
 	amd64? (
-		|| (
-			(
-				app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			)
-			(
-				>=gnome-base/libglade-2.6.4-r1[abi_x86_32(-)]
-				sys-libs/zlib[abi_x86_32(-)]
-			)
-		)
+		>=gnome-base/libglade-2.6.4-r1[abi_x86_32(-)]
+		sys-libs/zlib[abi_x86_32(-)]
 	)"
 
 S=${WORKDIR}

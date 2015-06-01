@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.14 2014/06/27 11:11:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3-demo/descent3-demo-1.4.0a.ebuild,v 1.15 2015/06/01 22:05:45 mr_bones_ Exp $
 
-EAPI=4
-
+EAPI=5
 inherit eutils unpacker games
 
 DESCRIPTION="Indoor/outdoor 3D combat with evil robotic mining spacecraft"
@@ -18,17 +17,9 @@ RESTRICT="mirror bindist strip"
 
 DEPEND="games-util/loki_patch"
 RDEPEND="sys-libs/glibc
-	|| (
-		(
-			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXext-1.3.2[abi_x86_32(-)]"
 
 dir="${GAMES_PREFIX_OPT}/${PN}"
 QA_PREBUILT="${dir:1}/descent3_demo.x86
@@ -40,7 +31,7 @@ src_install() {
 	local demo="data/demos/descent3_demo"
 	local exe="descent3_demo.x86"
 
-	loki_patch patch.dat data/ || die "loki patch failed"
+	loki_patch patch.dat data/ || die
 
 	insinto "${dir}"
 	exeinto "${dir}"

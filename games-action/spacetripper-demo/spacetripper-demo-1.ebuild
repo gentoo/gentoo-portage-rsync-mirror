@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.17 2014/09/04 20:19:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacetripper-demo/spacetripper-demo-1.ebuild,v 1.18 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -17,15 +17,8 @@ IUSE=""
 RESTRICT="strip"
 
 RDEPEND="
-	|| (
-		( >=virtual/opengl-7.0-r1[abi_x86_32(-)]
-			>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-),X,video,joystick,opengl,sound]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-		)
-	)"
+	>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+	>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-),X,video,joystick,opengl,sound]"
 
 S=${WORKDIR}
 

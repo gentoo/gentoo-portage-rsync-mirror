@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/abstract-deque
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/abstract-deque/ChangeLog,v 1.4 2014/07/25 09:16:40 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/abstract-deque/ChangeLog,v 1.5 2015/06/01 22:05:54 slyfox Exp $
+
+  01 Jun 2015; Sergei Trofimovich <slyfox@gentoo.org> abstract-deque-0.3.ebuild:
+  Fix depend on 'dev-haskell/atomic-primops'.
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   abstract-deque-0.2.2.ebuild, abstract-deque-0.3.ebuild:

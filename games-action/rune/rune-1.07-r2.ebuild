@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.13 2014/10/13 10:36:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/rune/rune-1.07-r2.ebuild,v 1.14 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils cdrom games
@@ -16,21 +16,10 @@ IUSE=""
 RESTRICT="strip"
 
 RDEPEND="dev-util/xdelta:0
-	|| (
-		(
-			>=media-libs/libsdl-1.2.9-r1[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
-
-DEPEND=""
+	>=media-libs/libsdl-1.2.9-r1[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 
 S=${WORKDIR}
 
@@ -44,7 +33,7 @@ src_unpack() {
 	if [[ ${CDROM_SET} -eq 0 ]]
 	then
 		# unpack the data files
-		tar xzf "${CDROM_ROOT}"/data.tar.gz || die "Could not unpack data.tar.gz"
+		tar xzf "${CDROM_ROOT}"/data.tar.gz || die
 	elif [[ ${CDROM_SET} -eq 1 ]]
 	then
 		# unpack the runelinuxfiles.tar.gz
@@ -87,8 +76,8 @@ src_install() {
 		for x in $(find "${CDROM_ROOT}"/Textures/ -type f -printf '%f ')
 		do
 			echo -ne '\271\325\036\214' | cat - "${CDROM_ROOT}"/Textures/$x \
-				|sed -e '1 s/\(....\)..../\1/' > "${Ddir}"/Textures/$x \
-				|| die "modifying and copying $x"
+				| sed -e '1 s/\(....\)..../\1/' > "${Ddir}"/Textures/$x \
+				|| die
 		done
 
 		doins -r "${S}"/System
@@ -110,16 +99,16 @@ src_install() {
 
 		# modify the files
 		mv "${Ddir}"/System/OpenGlDrv.int "${Ddir}"/System/OpenGLDrv.int \
-			|| die "Could not modify System file OpenGlDrv.int"
+			|| die
 		mv "${Ddir}"/Textures/bloodFX.utx "${Ddir}"/Textures/BloodFX.utx \
-			|| die "Could not modify Texture file bloodFX.utx"
+			|| die
 		mv "${Ddir}"/Textures/RUNESTONES.UTX "${Ddir}"/Textures/RUNESTONES.utx \
-			|| die "Could not modify Texture file RUNESTONES.UTX"
+			|| die
 		mv "${Ddir}"/Textures/tedd.utx "${Ddir}"/Textures/Tedd.utx \
-			|| die "Could not modify Texture file tedd.utx"
+			|| die
 		mv "${Ddir}"/Textures/UNDERANCIENT.utx "${Ddir}"/Textures/UnderAncient.utx \
-			|| die "Could not modify Texture file UNDERANCIENT.utx"
-		rm "${Ddir}"/System/{Setup.int,SGLDrv.int,MeTaLDrv.int,Manifest.int,D3DDrv.int,Galaxy.int,SoftDrv.int,WinDrv.int,Window.int} || die "Could not delete not needed System files"
+			|| die
+		rm "${Ddir}"/System/{Setup.int,SGLDrv.int,MeTaLDrv.int,Manifest.int,D3DDrv.int,Galaxy.int,SoftDrv.int,WinDrv.int,Window.int} || die
 
 		# the most important things: rune and ucc :)
 		doexe "${S}"/bin/x86/rune

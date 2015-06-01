@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c-r1.ebuild,v 1.3 2015/02/01 13:41:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/heretic2/heretic2-1.06c-r1.ebuild,v 1.4 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker cdrom multilib games
 
 DESCRIPTION="Third-person classic magical action-adventure game"
@@ -23,17 +22,9 @@ QA_TEXTRELS="${GAMES_PREFIX_OPT:1}/${PN}/base/*.so"
 DEPEND="games-util/loki_patch"
 RDEPEND="virtual/opengl
 	amd64? (
-		|| (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
-		)
-		|| (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			(
-				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-			)
-		)
+		>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
 	)
 	x86? (
 		x11-libs/libX11
@@ -81,15 +72,14 @@ src_install() {
 	local d
 	for d in "${S}"/* ; do
 		pushd "${d}" > /dev/null
-		loki_patch patch.dat "${D}/${dir}" || die "loki_patch ${d} failed"
+		loki_patch patch.dat "${D}/${dir}" || die
 		popd > /dev/null
 	done
 
 	rmdir gl_drivers
 	sed -i \
 		"128i set gl_driver \"/usr/$(get_libdir)/libGL.so\"" \
-		base/default.cfg \
-		|| die "sed failed"
+		base/default.cfg || die
 
 	prepgamesdirs
 }

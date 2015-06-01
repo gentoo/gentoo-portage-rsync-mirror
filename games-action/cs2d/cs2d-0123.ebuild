@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/cs2d-0123.ebuild,v 1.4 2014/08/10 21:21:50 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/cs2d/cs2d-0123.ebuild,v 1.5 2015/06/01 22:05:45 mr_bones_ Exp $
 
 EAPI=5
 
@@ -27,22 +27,11 @@ RDEPEND="
 		virtual/opengl
 	)
 	amd64? (
-		|| (
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			>=media-libs/openal-1.15.1[abi_x86_32(-)]
-		)
-		|| (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
-		)
-		|| (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			(
-				>=media-libs/freetype-2.5.0.1:2[abi_x86_32(-)]
-				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-				>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
-			)
-		)
+		>=media-libs/openal-1.15.1[abi_x86_32(-)]
+		>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+		>=media-libs/freetype-2.5.0.1:2[abi_x86_32(-)]
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+		>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
 	)"
 
 QA_PRESTRIPPED="opt/cs2d/CounterStrike2D"
@@ -52,10 +41,12 @@ S=${WORKDIR}
 
 src_prepare() {
 	# removing windows files
-	rm -f *.exe *.bat
+	rm -f *.exe *.bat || die
 
 	# OpenAL is default sound driver
-	sed -i -e 's:^sounddriver.*$:sounddriver OpenAL Default:' sys/config.cfg || die
+	sed -i \
+		-e 's:^sounddriver.*$:sounddriver OpenAL Default:' \
+		sys/config.cfg || die
 }
 
 src_install() {

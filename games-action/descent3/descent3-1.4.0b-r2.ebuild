@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r2.ebuild,v 1.1 2014/06/27 11:29:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/descent3/descent3-1.4.0b-r2.ebuild,v 1.2 2015/06/01 22:05:44 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils unpacker cdrom multilib games
 
 IUSE="nocd videos"
@@ -17,22 +16,12 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 RESTRICT="strip"
 
-DEPEND=""
 RDEPEND="sys-libs/glibc
-	|| (
-		(
-			media-libs/libsdl[abi_x86_32(-)]
-			media-libs/smpeg[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	media-libs/libsdl[abi_x86_32(-)]
+	media-libs/smpeg[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]"
 
 dir=${GAMES_PREFIX_OPT}/${PN}
 Ddir=${D}/${dir}
@@ -70,8 +59,8 @@ src_install() {
 
 	cd "${Ddir}" || die
 	# TODO: move this to src_unpack where it belongs
-	tar xzf ${CDROM_ROOT}/data.tar.gz || die "uncompressing data"
-	tar xzf ${CDROM_ROOT}/shared.tar.gz || die "uncompressing shared"
+	tar xzf ${CDROM_ROOT}/data.tar.gz || die
+	tar xzf ${CDROM_ROOT}/shared.tar.gz || die
 
 	if use nocd; then
 		doins -r ${CDROM_ROOT}/missions
@@ -84,10 +73,10 @@ src_install() {
 
 	cd "${S}"/a || die
 	bin/Linux/x86/loki_patch --verify patch.dat || die
-	bin/Linux/x86/loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching a"
+	bin/Linux/x86/loki_patch patch.dat "${Ddir}" >& /dev/null || die
 	cd "${S}"/b || die
 	bin/Linux/x86/loki_patch --verify patch.dat || die
-	bin/Linux/x86/loki_patch patch.dat "${Ddir}" >& /dev/null || die "patching b"
+	bin/Linux/x86/loki_patch patch.dat "${Ddir}" >& /dev/null || die
 
 	# now, since these files are coming off a cd, the times/sizes/md5sums wont
 	# be different ... that means portage will try to unmerge some files (!)

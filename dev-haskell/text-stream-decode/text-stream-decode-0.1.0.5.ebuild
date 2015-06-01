@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-stream-decode/text-stream-decode-0.1.0.5.ebuild,v 1.1 2014/05/10 14:30:52 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text-stream-decode/text-stream-decode-0.1.0.5.ebuild,v 1.2 2015/06/01 22:07:17 slyfox Exp $
 
 EAPI=5
 
@@ -24,8 +24,7 @@ RDEPEND=">=dev-haskell/text-1.1:=[profile?]
 "
 DEPEND="${RDEPEND}
 	>=dev-haskell/cabal-1.8
-	test? ( dev-haskell/deepseq
-		>=dev-haskell/hspec-1.8 )
+	test? ( >=dev-haskell/hspec-1.8 )
 "
 
 src_configure() {
