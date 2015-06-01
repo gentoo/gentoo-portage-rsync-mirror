@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.674 2015/06/01 07:17:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.675 2015/06/01 16:05:43 vapier Exp $
 
 # Maintainer: Toolchain Ninjas <toolchain@gentoo.org>
 
@@ -152,6 +152,7 @@ if [[ ${PN} != "kgcc64" && ${PN} != gcc-* ]] ; then
 	# the older versions, we don't want to bother supporting it.  #448024
 	tc_version_is_at_least 4.8 && IUSE+=" graphite" IUSE_DEF+=( sanitize )
 	tc_version_is_at_least 4.9 && IUSE+=" cilk"
+	tc_version_is_at_least 6.0 && IUSE+=" pie"
 fi
 
 IUSE+=" ${IUSE_DEF[*]/#/+}"
@@ -1191,6 +1192,10 @@ toolchain_src_configure() {
 
 	if tc_version_is_at_least 4.8 ; then
 		confgcc+=( $(use_enable sanitize libsanitizer) )
+	fi
+
+	if tc_version_is_at_least 6.0 ; then
+		confgcc+=( $(use_enable pie default-pie) )
 	fi
 
 	# Disable gcc info regeneration -- it ships with generated info pages

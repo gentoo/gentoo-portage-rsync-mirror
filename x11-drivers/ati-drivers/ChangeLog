@@ -1,6 +1,17 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.378 2015/04/08 09:38:30 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.379 2015/06/01 16:09:39 mgorny Exp $
+
+  01 Jun 2015; Michał Górny <mgorny@gentoo.org> -ati-drivers-13.12.ebuild,
+  -ati-drivers-13.1_pre897.ebuild, -ati-drivers-13.4.ebuild,
+  -ati-drivers-13.9.ebuild, -files/ati-drivers-13.6-linux-3.10-proc.diff,
+  -files/ati-drivers-do_mmap.patch,
+  -files/ati-drivers-kernel-3.8-acpihandle.patch,
+  -files/ati-drivers-linux-3.13-acpi-handle.patch,
+  -files/ati-drivers-vm-reserverd.patch,
+  -files/check-for-iommu-only-if-iommu-is-supported.patch,
+  -files/linux-3.10-proc.diff, metadata.xml:
+  Remove lastrited versions along with unused patches
 
 *ati-drivers-15.1 (08 Apr 2015)
 
