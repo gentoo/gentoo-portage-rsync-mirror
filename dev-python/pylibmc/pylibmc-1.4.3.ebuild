@@ -27,6 +27,8 @@ python_prepare_all() {
 
 python_test() {
 	memcached -d -p 11219 -u nobody -l localhost -P "${T}/m.pid" || die
-	MEMCACHED_PORT=11219 nosetests || die
+	MEMCACHED_PORT=11219 nosetests
+	local ret=$?
 	kill "$(<"${T}/m.pid")" || die
+	[ "${ret}" == "1" ] && die "tests failed!"
 }
