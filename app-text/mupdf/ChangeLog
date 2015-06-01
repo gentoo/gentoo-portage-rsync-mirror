@@ -1,6 +1,10 @@
 # ChangeLog for app-text/mupdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.117 2015/05/20 15:08:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/ChangeLog,v 1.118 2015/06/01 12:31:41 xmw Exp $
+
+  01 Jun 2015; Michael Weber <xmw@gentoo.org>
+  +files/mupdf-1.7a-system-mujs.patch, mupdf-1.7a.ebuild:
+  Enable javascript support (bug 550286, Cedric Sodhi).
 
 *mupdf-1.7a (20 May 2015)
 

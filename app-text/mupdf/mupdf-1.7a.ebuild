@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.7a.ebuild,v 1.1 2015/05/20 15:08:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mupdf/mupdf-1.7a.ebuild,v 1.2 2015/06/01 12:31:41 xmw Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ LICENSE="AGPL-3"
 MY_SOVER=1.7
 SLOT="0/${MY_SOVER}"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~ppc-macos ~x64-macos ~x86-macos"
-IUSE="X vanilla +curl +openssl static static-libs"
+IUSE="X vanilla +curl javascript +openssl static static-libs"
 
 LIB_DEPEND="dev-libs/openssl[static-libs?]
 	media-libs/freetype:2[static-libs?]
@@ -23,7 +23,8 @@ LIB_DEPEND="dev-libs/openssl[static-libs?]
 	net-misc/curl[static-libs?]
 	virtual/jpeg[static-libs?]
 	X? ( x11-libs/libX11[static-libs?]
-		x11-libs/libXext[static-libs?] )"
+		x11-libs/libXext[static-libs?] )
+	javascript? ( dev-lang/mujs )"
 RDEPEND="${LIB_DEPEND}"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
@@ -41,7 +42,8 @@ src_prepare() {
 		"${FILESDIR}"/${PN}-1.3-CFLAGS.patch \
 		"${FILESDIR}"/${PN}-1.5-old-debian-files.patch \
 		"${FILESDIR}"/${PN}-1.3-pkg-config.patch \
-		"${FILESDIR}"/${PN}-1.5-Makerules-openssl-curl.patch
+		"${FILESDIR}"/${PN}-1.5-Makerules-openssl-curl.patch \
+		"${FILESDIR}"/${PN}-1.7a-system-mujs.patch
 
 	if has_version ">=media-libs/openjpeg-2.1:2" ; then
 		epatch \
@@ -71,6 +73,9 @@ src_prepare() {
 	    -e "1iHAVE_X11 = $(usex X)" \
 		-e "1iWANT_OPENSSL = $(usex openssl)" \
 		-e "1iWANT_CURL = $(usex curl)" \
+		-e "1iHAVE_MUJS = $(usex javascript)" \
+		-e "1iMUJS_LIBS = -lmujs" \
+		-e "1iMUJS_CFLAGS =" \
 		-i Makerules || die
 
 	if use static-libs || use static ; then

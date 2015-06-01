@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/girara
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.37 2014/10/24 17:54:42 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/girara/ChangeLog,v 1.38 2015/06/01 12:56:19 xmw Exp $
+
+*girara-0.2.4 (01 Jun 2015)
+
+  01 Jun 2015; Michael Weber <xmw@gentoo.org> +girara-0.2.4.ebuild:
+  Version bump (thanks Jan-Willem Liebezeit, bug 549874).
 
 *girara-0.2.3 (24 Oct 2014)
 

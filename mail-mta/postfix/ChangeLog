@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.589 2015/05/28 08:24:00 eras Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.590 2015/06/01 12:52:16 eras Exp $
+
+  01 Jun 2015; Eray Aslan <eras@gentoo.org> postfix-3.0.0.ebuild:
+  Fix building with linux-4.x kernel
 
   28 May 2015; Eray Aslan <eras@gentoo.org> postfix-3.0.0.ebuild,
   postfix-3.0.1-r1.ebuild, postfix-3.1_pre20150523.ebuild:
