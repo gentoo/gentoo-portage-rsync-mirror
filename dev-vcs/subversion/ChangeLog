@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.232 2015/05/30 14:55:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.233 2015/06/01 01:50:23 jmorgan Exp $
+
+  01 Jun 2015; Jack Morgan <jmorgan@gentoo.org> subversion-1.8.13-r1.ebuild:
+  ia64 stable wrt bug #545348
 
 *subversion-1.8.13-r2 (30 May 2015)
 *subversion-1.8.13-r1 (30 May 2015)
