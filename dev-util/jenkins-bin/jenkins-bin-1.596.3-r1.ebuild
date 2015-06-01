@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.596.3.ebuild,v 1.1 2015/05/22 22:23:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.596.3-r1.ebuild,v 1.1 2015/06/01 15:15:17 mrueg Exp $
 
 EAPI=5
 
-inherit user
+inherit user systemd
 
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="http://jenkins-ci.org/"
@@ -36,10 +36,12 @@ src_install() {
 	newins "${DISTDIR}"/${P}.war ${PN/-bin/}.war
 
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}"/${PN}.logrotate ${PN/-bin/}
+	newins "${FILESDIR}"/${PN}-r1.logrotate ${PN/-bin/}
 
 	newinitd "${FILESDIR}"/${PN}.init2 jenkins
 	newconfd "${FILESDIR}"/${PN}.confd jenkins
+
+	systemd_newunit "${FILESDIR}"/${PN}.service jenkins.service
 
 	fowners jenkins:jenkins /var/log/jenkins ${JENKINS_DIR} ${JENKINS_DIR}/home ${JENKINS_DIR}/backup
 }

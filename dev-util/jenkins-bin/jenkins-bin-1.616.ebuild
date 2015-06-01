@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.612.ebuild,v 1.1 2015/05/07 08:54:05 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jenkins-bin/jenkins-bin-1.616.ebuild,v 1.1 2015/06/01 15:15:17 mrueg Exp $
 
 EAPI=5
 
-inherit user
+inherit user systemd
 
 DESCRIPTION="Extensible continuous integration server"
 HOMEPAGE="http://jenkins-ci.org/"
@@ -40,6 +40,8 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.init2 jenkins
 	newconfd "${FILESDIR}"/${PN}.confd jenkins
+
+	systemd_newunit "${FILESDIR}"/${PN}.service jenkins.service
 
 	fowners jenkins:jenkins /var/log/jenkins ${JENKINS_DIR} ${JENKINS_DIR}/home ${JENKINS_DIR}/backup
 }

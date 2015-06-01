@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.119 2015/04/29 20:46:25 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.120 2015/06/01 15:30:02 williamh Exp $
+
+  01 Jun 2015; William Hubbs <williamh@gentoo.org>
+  udev-init-scripts-9999.ebuild:
+  Always add udev and udev-trigger to the sysinit runlevel
 
   29 Apr 2015; William Hubbs <williamh@gentoo.org>
   udev-init-scripts-9999.ebuild:
