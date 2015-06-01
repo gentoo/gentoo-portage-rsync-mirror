@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01-r1.ebuild,v 1.4 2015/02/01 11:40:26 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/barbarian-bin/barbarian-bin-1.01-r1.ebuild,v 1.5 2015/06/01 21:43:44 mr_bones_ Exp $
 
 EAPI=5
-
 inherit eutils games
 
 MY_PN=${PN/-bin/}
@@ -20,10 +19,7 @@ IUSE=""
 DEPEND="app-arch/unzip"
 RDEPEND="sys-libs/libstdc++-v3:5
 	amd64? ( sys-libs/libstdc++-v3:5[multilib] )
-	|| (
-		>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]
-		amd64? ( app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)] )
-	)"
+	>=media-libs/libsdl-1.2.15-r4[abi_x86_32(-)]"
 
 game_dest="${GAMES_PREFIX_OPT}/${MY_PN}"
 QA_PREBUILT="${game_dest:1}/Barbarian"
@@ -32,7 +28,7 @@ S=${WORKDIR}
 
 src_install() {
 	dodir "${game_dest}"
-	cp -r gfx sounds "${D}${game_dest}/" || die "cp gfx sounds failed"
+	cp -r gfx sounds "${D}${game_dest}/" || die
 
 	exeinto "${game_dest}"
 	doexe Barbarian

@@ -1,6 +1,9 @@
 # ChangeLog for games-emulation/zsnes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.62 2015/01/24 07:11:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/ChangeLog,v 1.63 2015/06/01 21:36:47 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> zsnes-1.51-r4.ebuild:
+  clean up app-emulation/emul-linux which has been removed
 
   24 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   +files/zsnes-1.51-stack-align.patch, zsnes-1.51-r4.ebuild:

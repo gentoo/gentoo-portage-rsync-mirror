@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.10 2015/02/07 13:29:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zinc/zinc-1.1.ebuild,v 1.11 2015/06/01 21:37:32 mr_bones_ Exp $
 
 EAPI=5
 inherit games
@@ -17,16 +17,8 @@ RESTRICT="strip"
 QA_PREBUILT="${GAMES_PREFIX_OPT:1}/bin/zinc /usr/lib*/*.so"
 
 RDEPEND="
-	|| (
-		(
-			x11-libs/libXext[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+	x11-libs/libXext[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 
 S=${WORKDIR}/zinc
 

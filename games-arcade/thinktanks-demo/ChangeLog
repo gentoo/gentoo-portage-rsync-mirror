@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/thinktanks-demo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.14 2015/02/05 03:58:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/thinktanks-demo/ChangeLog,v 1.15 2015/06/01 21:38:20 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  thinktanks-demo-1.1-r2.ebuild:
+  clean up app-emulation/emul-linux which has been removed
 
   05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -thinktanks-demo-1.1-r1.ebuild:
