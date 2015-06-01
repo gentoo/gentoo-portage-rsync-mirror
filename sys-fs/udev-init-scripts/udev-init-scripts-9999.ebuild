@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.37 2015/06/01 15:30:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/udev-init-scripts-9999.ebuild,v 1.38 2015/06/01 16:47:35 williamh Exp $
 
 EAPI=5
 
@@ -35,8 +35,10 @@ pkg_postinst() {
 	# Add udev and udev-trigger to the sysinit runlevel automatically.
 	for f in udev udev-trigger; do
 		if [[ -x ${ROOT%/}/etc/init.d/${f} &&
-			-d ${ROOT%/}/etc/runlevels/sysinit ]]; then
+			-d ${ROOT%/}/etc/runlevels/sysinit &&
+			! -L "${ROOT%/}/etc/runlevels/sysinit/${f}" ]]; then
 			ln -snf /etc/init.d/${f} "${ROOT%/}"/etc/runlevels/sysinit/${f}
+			ewarn "Adding ${f} to the sysinit runlevel"
 		fi
 	done
 

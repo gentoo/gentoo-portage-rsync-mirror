@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10026 2015/06/01 16:11:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10027 2015/06/01 16:40:18 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  01 Jun 2015; Michael Palimaka <kensington@gentoo.org> profiles.desc:
+  Introduce new profile for KDE Plasma 5.
 
   01 Jun 2015; Michał Górny <mgorny@gentoo.org> package.mask:
   Replace lastrite mask of emul-linux-x86 with informatory mask.

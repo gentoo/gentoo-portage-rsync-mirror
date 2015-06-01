@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.120 2015/06/01 15:30:02 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.121 2015/06/01 16:47:35 williamh Exp $
+
+  01 Jun 2015; William Hubbs <williamh@gentoo.org>
+  udev-init-scripts-9999.ebuild:
+  Only add a  service to the sysinit runlevel if it is not already there and log
+  when a service is added
 
   01 Jun 2015; William Hubbs <williamh@gentoo.org>
   udev-init-scripts-9999.ebuild:

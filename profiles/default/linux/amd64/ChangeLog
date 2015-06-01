@@ -1,6 +1,9 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.25 2015/05/01 15:13:48 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.26 2015/06/01 16:54:49 kensington Exp $
+
+  01 Jun 2015; Michael Palimaka <kensington@gentoo.org> package.use.mask:
+  Remove arch-specific mask that is duplicated in the base profile.
 
   01 May 2015; Mike Gilbert <floppym@gentoo.org> +13.0/systemd/eapi,
   +13.0/systemd/parent:
