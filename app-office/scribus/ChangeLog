@@ -1,6 +1,10 @@
 # ChangeLog for app-office/scribus
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.210 2015/05/29 09:37:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.211 2015/06/01 08:59:11 jlec Exp $
+
+  01 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +files/scribus-1.5.0-QObject.patch, scribus-1.5.0-r1.ebuild:
+  Add patch for missing includes, bug #550162
 
 *scribus-1.5.0-r1 (29 May 2015)
 

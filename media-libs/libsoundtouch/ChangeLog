@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/libsoundtouch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.87 2015/02/25 15:29:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsoundtouch/ChangeLog,v 1.88 2015/06/01 09:00:09 aballier Exp $
+
+*libsoundtouch-1.9.0 (01 Jun 2015)
+
+  01 Jun 2015; Alexis Ballier <aballier@gentoo.org>
+  +libsoundtouch-1.9.0.ebuild:
+  version bump
 
   25 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libsoundtouch-1.8.0-r1.ebuild:
   Stable for x86, wrt bug #526018

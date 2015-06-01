@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/bwidget
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.47 2015/05/30 21:00:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/ChangeLog,v 1.48 2015/06/01 08:59:32 jlec Exp $
+
+  01 Jun 2015; Justin Lecher <jlec@gentoo.org> -bwidget-1.9.0.ebuild,
+  -bwidget-1.9.7.ebuild, bwidget-1.9.8.ebuild:
+  Drop old
 
   30 May 2015; Mikle Kolyada <zlogene@gentoo.org> bwidget-1.9.8.ebuild:
   arm stable wrt bug #545932
