@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.4.ebuild,v 1.2 2015/05/21 04:39:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-2.1.4.ebuild,v 1.3 2015/06/01 19:10:08 grobian Exp $
 
 EAPI="5"
 
@@ -85,6 +85,9 @@ src_configure() {
 	else
 		myconf+=( --enable-symcryptrun )
 	fi
+
+	# glib fails and picks up clang's internal stdint.h causing weird errors
+	[[ ${CC} == clang ]] && export gl_cv_absolute_stdint_h=/usr/include/stdint.h
 
 	econf \
 		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
