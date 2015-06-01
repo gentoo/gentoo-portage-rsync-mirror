@@ -1,6 +1,11 @@
 # ChangeLog for app-text/zathura-pdf-mupdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.18 2015/04/17 15:34:08 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/zathura-pdf-mupdf/ChangeLog,v 1.19 2015/06/01 13:07:09 xmw Exp $
+
+*zathura-pdf-mupdf-0.2.8 (01 Jun 2015)
+
+  01 Jun 2015; Michael Weber <xmw@gentoo.org> +zathura-pdf-mupdf-0.2.8.ebuild:
+  Version bump (thanks Jan-Willem Liebezeit, bug 549874).
 
   17 Apr 2015; Michael Weber <xmw@gentoo.org> zathura-pdf-mupdf-0.2.7.ebuild:
   Adjust mupdf dependency
