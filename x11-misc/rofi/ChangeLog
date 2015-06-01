@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/rofi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/ChangeLog,v 1.6 2015/04/30 16:03:51 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/ChangeLog,v 1.7 2015/06/01 04:48:41 jer Exp $
+
+*rofi-0.15.5 (01 Jun 2015)
+
+  01 Jun 2015; Jeroen Roovers <jer@gentoo.org> -rofi-0.15.2.ebuild,
+  +rofi-0.15.5.ebuild, -files/rofi-0.15.2-Werror.patch,
+  -files/rofi-0.15.2-run_test_sh.patch:
+  Version bump.
 
 *rofi-0.15.4 (30 Apr 2015)
 

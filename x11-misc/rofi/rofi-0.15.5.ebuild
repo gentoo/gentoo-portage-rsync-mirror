@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/rofi-0.15.2.ebuild,v 1.1 2015/04/20 04:22:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rofi/rofi-0.15.5.ebuild,v 1.1 2015/06/01 04:48:41 jer Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs
@@ -32,8 +32,7 @@ DEPEND="
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}"/${PN}-0.15.2-run_test_sh.patch \
-		"${FILESDIR}"/${PN}-0.15.2-Werror.patch
+		"${FILESDIR}"/${PN}-0.15.4-Werror.patch
 
 	eautoreconf
 }
