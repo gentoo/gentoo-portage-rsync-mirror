@@ -39,7 +39,7 @@ RDEPEND="${CDEPEND}
 		dev-python/jsonschema[${PYTHON_USEDEP}]
 		>=dev-python/mistune-0.5[${PYTHON_USEDEP}]
 		dev-python/pygments[${PYTHON_USEDEP}]
-		>=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}]
+		>=dev-python/pyzmq-13[${PYTHON_USEDEP}]
 		>=dev-python/terminado-0.3.3[${PYTHON_USEDEP}]
 		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)
