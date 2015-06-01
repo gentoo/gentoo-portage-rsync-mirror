@@ -1,6 +1,11 @@
 # ChangeLog for net-im/sendxmpp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/ChangeLog,v 1.24 2014/08/05 18:34:16 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/sendxmpp/ChangeLog,v 1.25 2015/06/01 11:05:32 mrueg Exp $
+
+*sendxmpp-1.24 (01 Jun 2015)
+
+  01 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +sendxmpp-1.24.ebuild:
+  Version bump by  Ronny Boesger. See bug #541310.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> sendxmpp-1.23.ebuild:
   Remove trailing '.' from DESCRIPTION.
