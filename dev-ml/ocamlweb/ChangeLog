@@ -1,6 +1,14 @@
 # ChangeLog for dev-ml/ocamlweb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.24 2013/12/24 12:41:58 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ChangeLog,v 1.26 2015/06/01 08:28:35 aballier Exp $
+
+*ocamlweb-1.39 (01 Jun 2015)
+
+  01 Jun 2015; Alexis Ballier <aballier@gentoo.org> +ocamlweb-1.39.ebuild:
+  version bump
+
+  01 Jun 2015; Alexis Ballier <aballier@gentoo.org> -ocamlweb-1.38.ebuild:
+  remove old
 
   24 Dec 2013; Agostino Sarubbo <ago@gentoo.org> ocamlweb-1.38-r1.ebuild:
   Stable for x86, wrt bug #492052

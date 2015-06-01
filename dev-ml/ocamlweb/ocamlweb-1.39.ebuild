@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.38.ebuild,v 1.5 2013/07/05 23:08:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocamlweb/ocamlweb-1.39.ebuild,v 1.1 2015/06/01 08:28:35 aballier Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ IUSE=""
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 DEPEND=">=dev-lang/ocaml-3.09:=
 	virtual/latex-base
