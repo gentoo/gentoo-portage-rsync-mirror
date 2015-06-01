@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.719 2015/05/31 18:09:03 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.720 2015/06/01 04:20:10 jer Exp $
+
+  01 Jun 2015; Jeroen Roovers <jer@gentoo.org> wireshark-1.12.5.ebuild:
+  Set RCC per Qt branch, too (maybe bug #549880).
 
 *wireshark-1.99.6 (31 May 2015)
 

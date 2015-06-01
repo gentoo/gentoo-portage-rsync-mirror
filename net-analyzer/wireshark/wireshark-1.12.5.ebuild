@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.5.ebuild,v 1.7 2015/05/16 09:23:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-1.12.5.ebuild,v 1.8 2015/06/01 04:20:10 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps multilib qmake-utils qt4-r2 user
@@ -150,8 +150,10 @@ src_configure() {
 		$(use_with qt4) \
 		$(use_with qt5) \
 		$(usex qt4 MOC=$(qt4_get_bindir)/moc '') \
+		$(usex qt4 RCC=$(qt4_get_bindir)/rcc '') \
 		$(usex qt4 UIC=$(qt4_get_bindir)/uic '') \
 		$(usex qt5 MOC=$(qt5_get_bindir)/moc '') \
+		$(usex qt5 RCC=$(qt5_get_bindir)/rcc '') \
 		$(usex qt5 UIC=$(qt5_get_bindir)/uic '') \
 		$(use_with sbc) \
 		$(use_with smi libsmi) \

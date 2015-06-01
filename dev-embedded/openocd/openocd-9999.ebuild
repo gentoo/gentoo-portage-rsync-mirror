@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.40 2015/05/20 05:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/openocd-9999.ebuild,v 1.41 2015/06/01 04:21:16 vapier Exp $
 
 EAPI="5"
 
@@ -36,6 +36,7 @@ RDEPEND=">=dev-lang/jimtcl-0.76
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+[[ ${PV} == "9999" ]] && DEPEND+=" >=sys-apps/texinfo-5" #549946
 
 src_prepare() {
 	epatch_user

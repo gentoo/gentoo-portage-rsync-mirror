@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/openocd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.54 2015/05/20 05:51:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/openocd/ChangeLog,v 1.55 2015/06/01 04:21:16 vapier Exp $
+
+  01 Jun 2015; Mike Frysinger <vapier@gentoo.org> openocd-9999.ebuild:
+  Require texinfo-5 for 9999 ebuilds #549946 by Alexander Stein.
 
 *openocd-0.9.0 (20 May 2015)
 
