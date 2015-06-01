@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.13 2015/05/14 07:51:39 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/wireshark-99999999.ebuild,v 1.14 2015/06/01 05:46:30 jer Exp $
 
 EAPI=5
 inherit autotools eutils fcaps git-r3 multilib qmake-utils qt4-r2 user
@@ -97,7 +97,6 @@ src_prepare() {
 	epatch \
 		"${FILESDIR}"/${PN}-1.6.13-ldflags.patch \
 		"${FILESDIR}"/${PN}-1.11.0-oldlibs.patch \
-		"${FILESDIR}"/${PN}-1.11.3-gtk-deprecated-warnings.patch \
 		"${FILESDIR}"/${PN}-1.99.0.1975-sse4_2.patch \
 		"${FILESDIR}"/${PN}-99999999-pkgconfig.patch
 
@@ -159,8 +158,10 @@ src_configure() {
 		$(use_with pcap) \
 		$(use_with portaudio) \
 		$(usex qt4 MOC=$(qt4_get_bindir)/moc '') \
+		$(usex qt4 RCC=$(qt4_get_bindir)/rcc '') \
 		$(usex qt4 UIC=$(qt4_get_bindir)/uic '') \
 		$(usex qt5 MOC=$(qt5_get_bindir)/moc '') \
+		$(usex qt5 RCC=$(qt5_get_bindir)/rcc '') \
 		$(usex qt5 UIC=$(qt5_get_bindir)/uic '') \
 		$(use_with sbc) \
 		$(use_with smi libsmi) \

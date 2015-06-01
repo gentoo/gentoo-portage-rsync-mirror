@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/certificate_authority
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/certificate_authority/ChangeLog,v 1.1 2015/05/10 06:40:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/certificate_authority/ChangeLog,v 1.2 2015/06/01 05:59:54 jer Exp $
+
+  01 Jun 2015; Jeroen Roovers <jer@gentoo.org>
+  certificate_authority-0.1.6.ebuild:
+  Mark ~ppc64 (bug #550798).
 
 *certificate_authority-0.1.6 (10 May 2015)
 

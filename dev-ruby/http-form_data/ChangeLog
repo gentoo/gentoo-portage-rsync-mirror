@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/http-form_data
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-form_data/ChangeLog,v 1.1 2015/05/30 04:41:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/http-form_data/ChangeLog,v 1.2 2015/06/01 06:00:32 jer Exp $
+
+  01 Jun 2015; Jeroen Roovers <jer@gentoo.org> http-form_data-1.0.1.ebuild:
+  Mark ~ppc64 (bug #550798).
 
 *http-form_data-1.0.1 (30 May 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dotenv/dotenv-0.11.1.ebuild,v 1.1 2014/05/17 06:12:37 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/dotenv/dotenv-2.0.1.ebuild,v 1.1 2015/06/01 05:50:52 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -13,13 +13,14 @@ inherit ruby-fakegem
 
 DESCRIPTION="Loads environment variables from .env into ENV"
 HOMEPAGE="https://github.com/bkeepers/dotenv"
+SRC_URI="https://github.com/bkeepers/dotenv/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
 
 KEYWORDS="~amd64"
-SLOT="0"
+SLOT="2"
 IUSE=""
 
-ruby_add_rdepend ">=dev-ruby/dotenv-deployment-0.0.2"
+ruby_add_bdepend "test? ( dev-ruby/spring dev-ruby/rails )"
 
 each_ruby_prepare() {
 	sed -i -e "s:ruby -v:${RUBY} -v:g" spec/dotenv/parser_spec.rb || die
