@@ -36,7 +36,7 @@ src_compile() {
 	# The static lib re-uses the same objects as the shared lib, so
 	# overhead is low w/creating it all the time.  It's also needed
 	# by the tests.
-	_emake dynamic static
+	_emake dynamic static hiredis.pc
 }
 
 src_test() {
@@ -47,5 +47,9 @@ src_install() {
 	_emake PREFIX="${ED}/usr" LIBRARY_PATH="$(get_libdir)" install
 	use static-libs || rm "${ED}/usr/$(get_libdir)/libhiredis.a"
 	use examples && dohtml -r examples
+
+	insinto /usr/$(get_libdir)/pkgconfig
+	doins ${PN}.pc
+
 	dodoc CHANGELOG.md README.md
 }
