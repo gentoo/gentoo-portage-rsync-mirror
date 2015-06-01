@@ -1,6 +1,12 @@
 # ChangeLog for www-client/jumanji
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/ChangeLog,v 1.11 2014/04/04 20:49:27 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/jumanji/ChangeLog,v 1.12 2015/06/01 13:34:30 xmw Exp $
+
+*jumanji-0.0.0_p20150527 (01 Jun 2015)
+
+  01 Jun 2015; Michael Weber <xmw@gentoo.org> +jumanji-0.0.0_p20150527.ebuild,
+  jumanji-0.0.0_p20130103-r1.ebuild:
+  New vcs snapshot for updated girara.
 
   04 Apr 2014; Samuli Suominen <ssuominen@gentoo.org>
   -files/jumanji-0.0.0_p20130103-r1-gtk2.patch,
