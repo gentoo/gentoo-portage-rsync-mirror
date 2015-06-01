@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtreadstone/libtreadstone-0.2.0.ebuild,v 1.1 2015/05/29 02:08:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtreadstone/libtreadstone-0.2.0.ebuild,v 1.2 2015/06/01 03:09:38 patrick Exp $
 EAPI=4
 
 DESCRIPTION="Hyperdex libtreadstone support library"
@@ -13,6 +13,6 @@ KEYWORDS="~amd64"
 
 IUSE=""
 
-DEPEND=">=dev-libs/libpo6-0.6.0
-	>=dev-libs/libe-0.9.0"
+DEPEND=">=dev-libs/libpo6-0.7.0
+	>=dev-libs/libe-0.10.0"
 RDEPEND="${DEPEND}"
