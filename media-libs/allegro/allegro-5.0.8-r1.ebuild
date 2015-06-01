@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.8-r1.ebuild,v 1.8 2015/04/30 05:55:04 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-5.0.8-r1.ebuild,v 1.9 2015/06/01 22:40:31 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-multilib
@@ -17,10 +17,10 @@ IUSE="alsa dumb flac gtk jpeg openal oss physfs png pulseaudio test truetype vor
 RDEPEND="alsa? ( >=media-libs/alsa-lib-1.0.27.2[${MULTILIB_USEDEP}] )
 	dumb? ( >=media-libs/dumb-0.9.3-r2[${MULTILIB_USEDEP}] )
 	flac? ( >=media-libs/flac-1.2.1-r5[${MULTILIB_USEDEP}] )
-	jpeg? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
 	openal? ( >=media-libs/openal-1.15.1[${MULTILIB_USEDEP}] )
 	physfs? ( >=dev-games/physfs-2.0.3-r1[${MULTILIB_USEDEP}] )
-	png? ( >=media-libs/libpng-1.5.18[${MULTILIB_USEDEP}] )
+	png? ( >=media-libs/libpng-1.5.18:0[${MULTILIB_USEDEP}] )
 	pulseaudio? ( >=media-sound/pulseaudio-2.1-r1[${MULTILIB_USEDEP}] )
 	truetype? ( >=media-libs/freetype-2.5.0.1[${MULTILIB_USEDEP}] )
 	vorbis? ( >=media-libs/libvorbis-1.3.3-r1[${MULTILIB_USEDEP}] )

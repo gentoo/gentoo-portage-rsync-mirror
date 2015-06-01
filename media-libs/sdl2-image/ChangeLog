@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/sdl2-image
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/ChangeLog,v 1.6 2015/04/19 09:43:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/ChangeLog,v 1.7 2015/06/01 22:32:19 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  sdl2-image-2.0.0-r1.ebuild:
+  add some slot deps for repoman
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> sdl2-image-2.0.0-r1.ebuild:
   x86 stable wrt bug #537328

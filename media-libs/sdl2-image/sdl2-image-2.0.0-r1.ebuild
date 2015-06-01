@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/sdl2-image-2.0.0-r1.ebuild,v 1.4 2015/04/19 09:43:12 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl2-image/sdl2-image-2.0.0-r1.ebuild,v 1.5 2015/06/01 22:32:19 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils multilib-minimal
@@ -19,8 +19,8 @@ RDEPEND="
 	>=media-libs/libsdl2-2.0.1-r1[${MULTILIB_USEDEP}]
 	>=sys-libs/zlib-1.2.8-r1[${MULTILIB_USEDEP}]
 	png? ( >=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}] )
-	jpeg? ( >=virtual/jpeg-0-r2[${MULTILIB_USEDEP}] )
-	tiff? ( >=media-libs/tiff-3.9.7-r1[${MULTILIB_USEDEP}] )
+	jpeg? ( >=virtual/jpeg-0-r2:0[${MULTILIB_USEDEP}] )
+	tiff? ( >=media-libs/tiff-3.9.7-r1:0[${MULTILIB_USEDEP}] )
 	webp? ( >=media-libs/libwebp-0.3.0[${MULTILIB_USEDEP}] )"
 DEPEND="${RDEPEND}"
 

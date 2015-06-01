@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.153 2015/04/30 06:17:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.154 2015/06/01 22:40:31 mr_bones_ Exp $
+
+  01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> allegro-4.4.2-r1.ebuild,
+  allegro-5.0.8-r1.ebuild:
+  add some slot deps for repoman
 
   30 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> -allegro-5.0.8.ebuild:
   old

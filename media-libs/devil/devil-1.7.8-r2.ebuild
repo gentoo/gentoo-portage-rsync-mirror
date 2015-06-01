@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r2.ebuild,v 1.3 2015/01/29 17:28:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.7.8-r2.ebuild,v 1.4 2015/06/01 22:43:24 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -19,7 +19,7 @@ IUSE="allegro gif glut jpeg jpeg2k mng nvtt openexr opengl png sdl cpu_flags_x86
 RDEPEND="allegro? ( media-libs/allegro:0 )
 	gif? ( media-libs/giflib )
 	glut? ( media-libs/freeglut )
-	jpeg? ( virtual/jpeg )
+	jpeg? ( virtual/jpeg:0 )
 	jpeg2k? ( media-libs/jasper )
 	mng? ( media-libs/libmng )
 	nvtt? ( media-gfx/nvidia-texture-tools )
