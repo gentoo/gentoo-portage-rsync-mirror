@@ -13,7 +13,7 @@ SRC_URI="http://github.com/redis/${PN}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x64-solaris"
-IUSE="static-libs"
+IUSE="examples static-libs"
 
 src_prepare() {
 	epatch "${FILESDIR}/${P}-disable-network-tests.patch"
@@ -46,5 +46,6 @@ src_test() {
 src_install() {
 	_emake PREFIX="${ED}/usr" LIBRARY_PATH="$(get_libdir)" install
 	use static-libs || rm "${ED}/usr/$(get_libdir)/libhiredis.a"
+	use examples && dohtml -r examples
 	dodoc CHANGELOG.md README.md
 }
