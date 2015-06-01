@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/pg
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.76 2014/12/28 15:45:53 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pg/ChangeLog,v 1.77 2015/06/01 21:29:09 mrueg Exp $
+
+*pg-0.18.2 (01 Jun 2015)
+
+  01 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +pg-0.18.2.ebuild,
+  pg-0.14.1.ebuild:
+  Version bump. Drop ruby19 target.
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> pg-0.14.1.ebuild,
   pg-0.17.1.ebuild, pg-0.17.1-r1.ebuild:

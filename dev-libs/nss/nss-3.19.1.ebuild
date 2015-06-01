@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.19-r1.ebuild,v 1.1 2015/05/27 03:59:15 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.19.1.ebuild,v 1.1 2015/06/01 21:11:59 axs Exp $
 
 EAPI=5
 inherit eutils flag-o-matic multilib toolchain-funcs multilib-minimal
@@ -56,7 +56,6 @@ src_prepare() {
 	use nss-pem && epatch "${FILESDIR}/${PN}-3.15.4-enable-pem.patch"
 	epatch "${FILESDIR}/nss-3.14.2-solaris-gcc.patch"
 	epatch "${FILESDIR}/${PN}-cacert-class3.patch" # 521462
-	epatch "${FILESDIR}/${P}-raise_minimum_keysize_to_1024.patch"
 
 	pushd coreconf >/dev/null || die
 	# hack nspr paths

@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/nss
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.411 2015/05/27 03:59:15 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.412 2015/06/01 21:11:59 axs Exp $
+
+*nss-3.19.1 (01 Jun 2015)
+
+  01 Jun 2015; Ian Stakenvicius (_AxS_) <axs@gentoo.org> +nss-3.19.1.ebuild,
+  -files/nss-3.19-raise_minimum_keysize_to_1024.patch, -nss-3.19-r1.ebuild:
+  version bump, upstream release to fix Logjam vuln (bug 550288)
 
 *nss-3.19-r1 (27 May 2015)
 
