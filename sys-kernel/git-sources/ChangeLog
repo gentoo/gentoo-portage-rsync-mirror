@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1434 2015/05/25 16:02:22 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1435 2015/06/01 09:23:10 ago Exp $
+
+*git-sources-4.1_rc6 (01 Jun 2015)
+
+  01 Jun 2015; Agostino Sarubbo <ago@gentoo.org> +git-sources-4.1_rc6.ebuild:
+  Automated version bump to 4.1_rc6
 
 *git-sources-4.1_rc5 (25 May 2015)
 
