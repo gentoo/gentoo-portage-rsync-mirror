@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-4.0.4.ebuild,v 1.1 2015/05/19 12:28:01 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ck-sources-4.0.4-r1.ebuild,v 1.1 2015/05/31 23:27:53 yngwin Exp $
 
 EAPI="5"
 ETYPE="sources"
@@ -56,15 +56,16 @@ if [ -n "${XTRA_INCP_MIN}" ]; then
 	done
 fi
 
-#-- CK needs sometimes to patch itself... (3.7/3.13)---------------------------
+#-- CK needs sometimes to patch itself... ---------------------------
 
 CK_INCP_URI=""
 CK_INCP_LIST=""
 
-#-- Local patches needed for the ck-patches to apply smoothly (3.4/3.5) -------
+#-- Local patches needed for the ck-patches to apply smoothly -------
 
 PRE_CK_FIX=""
-POST_CK_FIX=""
+POST_CK_FIX="( ${FILESDIR}/bfs462-rtmn-fix.patch
+	${FILESDIR}/bfs462-update_inittask.patch )"
 
 #--
 

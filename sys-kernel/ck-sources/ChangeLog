@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.250 2015/05/24 05:04:29 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.251 2015/05/31 23:27:53 yngwin Exp $
+
+*ck-sources-4.0.4-r1 (31 May 2015)
+
+  31 May 2015; Ben de Groot <yngwin@gentoo.org> +ck-sources-4.0.4-r1.ebuild,
+  +files/bfs462-rtmn-fix.patch, +files/bfs462-update_inittask.patch,
+  -ck-sources-4.0.4.ebuild:
+  Add upstream BFS 462 patches (bug #549788)
 
 *ck-sources-3.18.14 (24 May 2015)
 *ck-sources-3.14.43 (24 May 2015)
