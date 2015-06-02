@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.15-r1.ebuild,v 1.5 2015/05/31 20:13:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ghostscript-gpl-9.15-r1.ebuild,v 1.6 2015/06/02 18:03:48 pacho Exp $
 
 EAPI=5
 
@@ -176,8 +176,8 @@ src_configure() {
 }
 
 src_compile() {
-
-	emake so all
+	# -j1 needed because of bug #550926
+	emake -j1 so all
 
 	cd "${S}/ijs"
 	emake

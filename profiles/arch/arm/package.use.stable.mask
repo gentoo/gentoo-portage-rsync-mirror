@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.8 2015/05/11 17:05:20 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/package.use.stable.mask,v 1.9 2015/06/02 18:30:37 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (02 Jun 2015)
+# Missing stable
+net-misc/connman l2tp pptp
 
 # Michael Palimaka <kensington@gentoo.org> (11 May 2015)
 # KDE is not stable on arm

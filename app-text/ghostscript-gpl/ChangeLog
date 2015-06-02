@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.181 2015/05/31 20:13:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.182 2015/06/02 18:03:48 pacho Exp $
+
+  02 Jun 2015; Pacho Ramos <pacho@gentoo.org> ghostscript-gpl-9.15-r1.ebuild:
+  -j1 needed because of bug #550926
 
   31 May 2015; Mikle Kolyada <zlogene@gentoo.org>
   ghostscript-gpl-9.15-r1.ebuild:

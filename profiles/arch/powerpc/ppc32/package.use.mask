@@ -1,8 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.43 2015/05/21 09:51:43 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc32/package.use.mask,v 1.44 2015/06/02 18:24:49 pacho Exp $
 
 # This file requires >=portage-2.1.1
+
+# Pacho Ramos <pacho@gentoo.org> (02 Jun 2015)
+# Missing keywords (02 Jun 2015)
+net-misc/connman openconnect
 
 # Pacho Ramos <pacho@gentoo.org> (15 May 2015)
 # Missing stable
