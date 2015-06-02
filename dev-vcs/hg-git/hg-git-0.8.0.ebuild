@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.8.0.ebuild,v 1.1 2015/02/02 10:10:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/hg-git-0.8.0.ebuild,v 1.2 2015/06/02 16:59:12 grobian Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -18,6 +18,7 @@ IUSE=""
 
 RDEPEND="
 	>=dev-vcs/mercurial-1.9.3[${PYTHON_USEDEP}]
+	<dev-vcs/mercurial-3.3.3[${PYTHON_USEDEP}]
 	>=dev-python/dulwich-0.9.4[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}

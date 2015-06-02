@@ -1,6 +1,12 @@
 # ChangeLog for dev-vcs/hg-git
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.62 2015/02/02 10:10:54 djc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/hg-git/ChangeLog,v 1.63 2015/06/02 16:59:12 grobian Exp $
+
+*hg-git-0.8.1 (02 Jun 2015)
+
+  02 Jun 2015; Fabian Groffen <grobian@gentoo.org> +hg-git-0.8.1.ebuild,
+  hg-git-0.7.0.ebuild, hg-git-0.8.0.ebuild:
+  Version bump which works with >=mercurial-3.3.3, thanks Nico R in bug #549434
 
 *hg-git-0.8.0 (02 Feb 2015)
 
