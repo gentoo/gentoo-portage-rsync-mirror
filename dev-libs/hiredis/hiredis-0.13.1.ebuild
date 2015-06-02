@@ -24,7 +24,7 @@ src_prepare() {
 	sed -i -e '/DYLIB_MAKE_CMD=.* -G/d' Makefile || die
 }
 
-_emake() {
+_build() {
 	emake \
 		AR="$(tc-getAR)" \
 		CC="$(tc-getCC)" \
@@ -38,7 +38,7 @@ src_compile() {
 	# The static lib re-uses the same objects as the shared lib, so
 	# overhead is low w/creating it all the time.  It's also needed
 	# by the tests.
-	_emake dynamic static hiredis.pc
+	_build dynamic static hiredis.pc
 }
 
 src_test() {
@@ -51,7 +51,7 @@ src_test() {
 		bind 127.0.0.1 \n
 		unixsocket //${REDIS_SOCK}"
 
-	_emake hiredis-test
+	_build hiredis-test
 
 	echo -e ${REDIS_TEST_CONFIG} | /usr/sbin/redis-server - || die
 	./hiredis-test -h 127.0.0.1 -p ${REDIS_PID} -s ${REDIS_SOCK} || die
@@ -62,7 +62,7 @@ src_test() {
 }
 
 src_install() {
-	_emake PREFIX="${ED}/usr" LIBRARY_PATH="$(get_libdir)" install
+	_build PREFIX="${ED}/usr" LIBRARY_PATH="$(get_libdir)" install
 	use static-libs || rm "${ED}/usr/$(get_libdir)/libhiredis.a"
 	use examples && dohtml -r examples
 
