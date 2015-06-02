@@ -1,6 +1,13 @@
 # ChangeLog for net-im/qutim
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.38 2015/05/16 11:00:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/qutim/ChangeLog,v 1.40 2015/06/02 18:58:48 pacho Exp $
+
+  02 Jun 2015; Pacho Ramos <pacho@gentoo.org> metadata.xml:
+  Clean metadata.xml
+
+  02 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  -files/qutim-0.3.1-cmake-2.8.12-qt-build.patch, -qutim-0.3.1-r1.ebuild:
+  Drop old ebuild still using 'jabber' instead of 'xmpp' USE (#216300)
 
   16 May 2015; Pacho Ramos <pacho@gentoo.org> qutim-0.3.2.ebuild:
   Rename jabber to xmpp USE (#216300)

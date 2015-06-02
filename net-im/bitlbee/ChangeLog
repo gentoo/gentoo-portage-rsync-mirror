@@ -1,6 +1,11 @@
 # ChangeLog for net-im/bitlbee
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.180 2015/05/16 11:06:33 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/bitlbee/ChangeLog,v 1.181 2015/06/02 18:57:22 pacho Exp $
+
+  02 Jun 2015; Pacho Ramos <pacho@gentoo.org> -bitlbee-3.0.5-r1.ebuild,
+  -files/bitlbee-3.0-configure.patch, -files/bitlbee-3.0.5-parallel-make.patch,
+  -files/bitlbee-3.0.6-configure.patch, -files/bitlbee-3.2.1-tests.patch:
+  Drop old ebuild still using 'jabber' instead of 'xmpp' USE (#216300)
 
   16 May 2015; Pacho Ramos <pacho@gentoo.org> bitlbee-3.2.2.ebuild:
   Rename jabber to xmpp USE (#216300)

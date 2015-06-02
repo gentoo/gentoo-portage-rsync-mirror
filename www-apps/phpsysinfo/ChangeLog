@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpsysinfo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.89 2015/02/02 04:45:49 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpsysinfo/ChangeLog,v 1.90 2015/06/02 18:39:08 pacho Exp $
+
+*phpsysinfo-3.2.2 (02 Jun 2015)
+
+  02 Jun 2015; Pacho Ramos <pacho@gentoo.org> +phpsysinfo-3.2.2.ebuild:
+  Version bump adding apache 2.4 support (#550988 by Tomas Mozes)
 
 *phpsysinfo-3.2.0 (02 Feb 2015)
 

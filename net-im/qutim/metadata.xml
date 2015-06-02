@@ -21,9 +21,7 @@
 	<flag name="histman">Enable history importer plugin</flag>
 	<flag name="hunspell">Enable spellchecking using <pkg>app-text/hunspell</pkg></flag>
 	<flag name="irc">Enable IRC protocol support</flag>
-	<flag name="kinetic">Enable Growl-like kinetic popups plugin</flag>
 	<flag name="mrim">Enable mail.ru protocol support</flag>
-	<flag name="multimedia">Add sound support via <pkg>dev-qt/qtmultimedia</pkg></flag>
 	<flag name="otr">Enable plugin for encrypted conversations (Off-The-Record messaging)</flag>
 	<flag name="phonon">Add sound support via <pkg>media-libs/phonon</pkg> or <pkg>dev-qt/qtphonon</pkg></flag>
 	<flag name="purple">Enable libpurple-based protocol support</flag>
