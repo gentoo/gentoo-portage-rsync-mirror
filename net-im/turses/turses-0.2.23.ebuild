@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1
 
@@ -15,23 +15,36 @@ SRC_URI="https://github.com/alejandrogomez/${PN}/archive/v${PV}.tar.gz -> ${P}.t
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="test"
+IUSE="doc test"
 
-RDEPEND="
+DEPEND="
+	dev-python/httplib2[${PYTHON_USEDEP}]
 	dev-python/oauth2[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]
-	dev-python/tweepy[${PYTHON_USEDEP}]
 	dev-python/urwid[${PYTHON_USEDEP}]
-"
-DEPEND="${RDEPEND}
+	>dev-python/tweepy-2.2[${PYTHON_USEDEP}]
+	<dev-python/tweepy-3[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
+	doc? (
+		dev-python/sphinx[${PYTHON_USEDEP}]
+	)
 	test? (
 		dev-python/mock[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}]
+		dev-python/pytest[${PYTHON_USEDEP}]
+		dev-python/coverage[${PYTHON_USEDEP}]
+		dev-python/tox[${PYTHON_USEDEP}]
 	)
 "
 
-DOCS=( AUTHORS HISTORY.rst README.rst )
+python_compile_all() {
+	if use doc; then
+		emake -C docs html
+		dodoc -r "docs/_build/html" || die
+	fi
+	
+	emake -C docs man
+	doman "docs/_build/man/turses.1" || die
+}
 
 python_test() {
-	nosetests || die "Tests fail with ${EPYTHON}"
+	py.test tests || die "Tests fail with ${EPYTHON}"
 }
