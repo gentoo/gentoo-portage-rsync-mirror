@@ -45,20 +45,20 @@ src_test() {
 	local REDIS_PID="${T}"/hiredis.pid
 	local REDIS_SOCK="${T}"/hiredis.sock
 	local REDIS_PORT=56379
-	local REDIS_TEST_CONFIG="daemonize yes \n
-		pidfile ${REDIS_PID} \n
-		port ${REDIS_PORT} \n
-		bind 127.0.0.1 \n
+	local REDIS_TEST_CONFIG=$"daemonize yes
+		pidfile ${REDIS_PID}
+		port ${REDIS_PORT}
+		bind 127.0.0.1
 		unixsocket //${REDIS_SOCK}"
 
 	_build hiredis-test
 
-	echo -e ${REDIS_TEST_CONFIG} | /usr/sbin/redis-server - || die
-	./hiredis-test -h 127.0.0.1 -p ${REDIS_PID} -s ${REDIS_SOCK} || die
+	/usr/sbin/redis-server - <<< "${REDIS_TEST_CONFIG}" || die
+	./hiredis-test -h 127.0.0.1 -p ${REDIS_PID} -s ${REDIS_SOCK}
 	local ret=$?
 
 	kill "$(<"${REDIS_PID}")" || die
-	return ${ret}
+	[ ${ret} != "0" ] && die "tests failed"
 }
 
 src_install() {
