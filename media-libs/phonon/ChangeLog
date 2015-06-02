@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.74 2015/05/31 13:17:10 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.75 2015/06/02 07:41:48 mgorny Exp $
+
+*phonon-4.8.3-r1 (02 Jun 2015)
+
+  02 Jun 2015; Michał Górny <mgorny@gentoo.org> +phonon-4.8.3-r1.ebuild,
+  phonon-9999.ebuild:
+  Enable multilib support and sync the live ebuild. https://github.com/gentoo
+  /gentoo-portage-rsync-mirror/pull/114 by MJDSys with some minor changes.
 
   31 May 2015; Johannes Huber <johu@gentoo.org> phonon-4.7.2.ebuild,
   phonon-4.8.3.ebuild, phonon-9999.ebuild:

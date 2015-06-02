@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.106 2015/06/02 04:27:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.107 2015/06/02 07:39:52 vapier Exp $
 
 # @ECLASS: linux-info.eclass
 # @MAINTAINER:
@@ -531,7 +531,7 @@ get_version() {
 	# caught before this if they are.
 	if [[ -z ${OUTPUT_DIR} ]] ; then
 		# Try to locate a kernel that is most relevant for us.
-		for OUTPUT_DIR in "${SYROOT}" "${ROOT}" "" ; do
+		for OUTPUT_DIR in "${SYSROOT}" "${ROOT}" "" ; do
 			OUTPUT_DIR+="/lib/modules/${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${KV_EXTRA}/build"
 			if [[ -e ${OUTPUT_DIR} ]] ; then
 				break

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.1.0.ebuild,v 1.3 2015/05/20 04:03:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.1.0.ebuild,v 1.4 2015/06/02 08:01:03 jlec Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ RDEPEND="${CDEPEND}
 		dev-python/jsonschema[${PYTHON_USEDEP}]
 		>=dev-python/mistune-0.5[${PYTHON_USEDEP}]
 		dev-python/pygments[${PYTHON_USEDEP}]
-		>=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}]
+		>=dev-python/pyzmq-13[${PYTHON_USEDEP}]
 		>=dev-python/terminado-0.3.3[${PYTHON_USEDEP}]
 		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)
