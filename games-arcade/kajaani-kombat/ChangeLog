@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/kajaani-kombat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/ChangeLog,v 1.16 2015/01/05 10:12:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/ChangeLog,v 1.17 2015/06/02 01:39:06 mr_bones_ Exp $
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  kajaani-kombat-0.7.ebuild:
+  add slot dep for repoman
 
   05 Jan 2015; Tupone Alfredo <tupone@gentoo.org> kajaani-kombat-0.7.ebuild:
   EAPI 5
@@ -62,4 +66,3 @@
   05 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   kajaani-kombat-0.4.ebuild, metadata.xml, files/0.4-makefile.patch:
   initial commit
-

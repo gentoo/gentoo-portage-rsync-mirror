@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.10 2015/01/05 10:12:55 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/kajaani-kombat/kajaani-kombat-0.7.ebuild,v 1.11 2015/06/02 01:39:06 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -20,7 +20,7 @@ DEPEND="media-libs/libsdl[sound,video]
 	media-libs/sdl-ttf
 	media-libs/sdl-mixer[vorbis]
 	sys-libs/ncurses
-	sys-libs/readline"
+	sys-libs/readline:0"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -28,12 +28,10 @@ src_prepare() {
 		"${FILESDIR}"/${P}-ldflags.patch
 	sed -i \
 		-e "s:GENTOODIR:${GAMES_DATADIR}/${PN}/:" \
-		Makefile \
-		|| die "sed failed"
+		Makefile || die
 	sed -i \
 		-e 's/IMG_Load/img_load/' \
-		gui_screens.cpp \
-		|| die "sed failed"
+		gui_screens.cpp || die
 }
 
 src_install() {
