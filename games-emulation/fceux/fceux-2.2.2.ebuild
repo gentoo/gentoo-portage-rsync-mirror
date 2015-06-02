@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.2.2.ebuild,v 1.3 2015/02/10 10:09:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceux/fceux-2.2.2.ebuild,v 1.4 2015/06/02 04:32:43 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils scons-utils games
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE="gtk +lua +opengl"
 
-DEPEND="lua? ( dev-lang/lua )
+DEPEND="lua? ( dev-lang/lua:0 )
 	media-libs/libsdl[opengl?,video]
 	opengl? ( virtual/opengl )
 	gtk? ( x11-libs/gtk+:3 )

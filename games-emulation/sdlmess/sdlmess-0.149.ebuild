@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/sdlmess-0.149.ebuild,v 1.4 2015/04/08 18:10:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmess/sdlmess-0.149.ebuild,v 1.5 2015/06/02 04:36:18 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -36,7 +36,7 @@ RDEPEND=">=dev-lang/lua-5.2
 	>=media-libs/libsdl-1.2.10[sound,joystick,opengl?,video]
 	media-libs/sdl-ttf
 	sys-libs/zlib
-	virtual/jpeg
+	virtual/jpeg:0
 	media-libs/portmidi
 	debug? (
 		x11-libs/gtk+:2

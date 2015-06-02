@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.10 2015/06/01 21:36:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/zsnes/zsnes-1.51-r4.ebuild,v 1.11 2015/06/02 04:40:38 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils autotools flag-o-matic toolchain-funcs multilib pax-utils games
@@ -20,7 +20,7 @@ RDEPEND="
 	ao? ( media-libs/libao[abi_x86_32(-)] )
 	debug? ( sys-libs/ncurses[abi_x86_32(-)] )
 	opengl? ( virtual/opengl[abi_x86_32(-)] )
-	png? ( media-libs/libpng[abi_x86_32(-)] )"
+	png? ( media-libs/libpng:0[abi_x86_32(-)] )"
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	amd64? ( >=sys-apps/portage-2.1 )"
