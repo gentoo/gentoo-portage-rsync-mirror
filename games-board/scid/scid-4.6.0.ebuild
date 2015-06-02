@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.6.0.ebuild,v 1.1 2015/05/09 05:19:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-4.6.0.ebuild,v 1.2 2015/06/02 04:00:07 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-CDEPEND="dev-lang/tk
+CDEPEND="dev-lang/tk:0
 	dev-tcltk/tkimg
 	>=sys-libs/zlib-1.1.3"
 RDEPEND="${CDEPEND}

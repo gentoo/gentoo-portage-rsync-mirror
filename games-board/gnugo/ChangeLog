@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnugo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.38 2015/03/25 13:51:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.40 2015/06/02 03:58:35 mr_bones_ Exp $
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> gnugo-3.9.1-r1.ebuild:
+  add slot dep for repoman
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> -gnugo-3.9.1.ebuild:
+  old
 
   25 Mar 2015; Agostino Sarubbo <ago@gentoo.org> gnugo-3.9.1-r1.ebuild:
   Stable for x86, wrt bug #543564

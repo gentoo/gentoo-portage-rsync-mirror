@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.11 2015/05/05 14:37:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnubg/gnubg-1.04.000.ebuild,v 1.12 2015/06/02 03:57:09 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -30,7 +30,7 @@ RDEPEND="dev-libs/glib:2
 		x11-libs/gtkglext
 		virtual/glu
 	)
-	sys-libs/readline
+	sys-libs/readline:0
 	python? ( ${PYTHON_DEPS} )
 	media-fonts/dejavu
 	virtual/libintl"
