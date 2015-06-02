@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/wsgiintercept
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/ChangeLog,v 1.16 2015/05/29 03:42:41 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wsgiintercept/ChangeLog,v 1.17 2015/06/02 16:01:58 idella4 Exp $
+
+  02 Jun 2015; Ian Delaney <idella4@gentoo.org> wsgiintercept-0.10.0.ebuild:
+  Disable tests connecting to the network, fixes Bug #550710
 
 *wsgiintercept-0.10.0 (29 May 2015)
 
