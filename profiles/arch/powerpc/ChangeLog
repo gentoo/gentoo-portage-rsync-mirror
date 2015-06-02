@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.331 2015/05/25 04:45:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.332 2015/06/02 14:49:34 kensington Exp $
+
+  02 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  ppc64/package.use.stable.mask:
+  Remove obsolete mask.
 
   25 May 2015; Jeroen Roovers <jer@gentoo.org> use.mask:
   Mask USE=gnuefi for PowerPC (bug #550322).
