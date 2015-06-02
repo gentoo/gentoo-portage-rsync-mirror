@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/phonon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.75 2015/06/02 07:41:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/phonon/ChangeLog,v 1.76 2015/06/02 15:53:40 johu Exp $
+
+  02 Jun 2015; Johannes Huber <johu@gentoo.org> phonon-4.8.3-r1.ebuild,
+  phonon-9999.ebuild:
+  Fix gentoo-portage-rsync-mirror merge failure.
 
 *phonon-4.8.3-r1 (02 Jun 2015)
 

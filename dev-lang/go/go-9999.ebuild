@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.25 2015/01/20 04:02:26 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.26 2015/06/02 15:37:10 williamh Exp $
 
 EAPI=5
 
@@ -82,7 +82,7 @@ src_install()
 	# Once this is fixed, we can consider using the doc use flag to control
 	# installing the doc and src directories.
 	# [1] https://golang.org/issue/2775
-	doins -r doc include lib pkg src
+	doins -r doc lib pkg src
 	fperms -R +x /usr/lib/go/pkg/tool
 }
 
