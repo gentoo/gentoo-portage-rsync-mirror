@@ -1,6 +1,10 @@
 # ChangeLog for dev-qt/qtphonon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/ChangeLog,v 1.16 2015/05/30 11:02:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/ChangeLog,v 1.17 2015/06/02 12:16:44 pesa Exp $
+
+  02 Jun 2015; Davide Pesavento <pesa@gentoo.org> qtphonon-4.8.6-r1.ebuild,
+  qtphonon-4.8.7.ebuild:
+  Drop blockers for packages treecleaned more than 4 years ago.
 
   30 May 2015; Markus Meier <maekke@gentoo.org> qtphonon-4.8.6-r1.ebuild:
   arm stable, bug #530238

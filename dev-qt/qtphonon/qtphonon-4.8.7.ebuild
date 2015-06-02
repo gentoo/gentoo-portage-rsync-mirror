@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.7.ebuild,v 1.1 2015/05/26 18:16:00 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.7.ebuild,v 1.2 2015/06/02 12:16:44 pesa Exp $
 
 EAPI=5
 inherit qt4-build-multilib
@@ -23,9 +23,8 @@ DEPEND="
 	)
 	dbus? ( ~dev-qt/qtdbus-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
 	!kde-base/phonon-kde
-	!kde-base/phonon-xine
 	!media-libs/phonon
-	!media-sound/phonon
+	!media-libs/phonon-gstreamer
 "
 RDEPEND="${DEPEND}"
 

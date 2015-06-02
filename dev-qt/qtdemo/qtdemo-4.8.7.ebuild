@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.7.ebuild,v 1.1 2015/05/26 18:16:23 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/qtdemo-4.8.7.ebuild,v 1.2 2015/06/02 12:17:50 pesa Exp $
 
 EAPI=5
 inherit qt4-build-multilib
@@ -28,8 +28,11 @@ DEPEND="
 	opengl? ( ~dev-qt/qtopengl-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
 	openvg? ( ~dev-qt/qtopenvg-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
 	phonon? (
-		kde? ( media-libs/phonon[aqua=,qt4] )
-		!kde? ( || ( ~dev-qt/qtphonon-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] media-libs/phonon[aqua=,qt4] ) )
+		kde? ( >=media-libs/phonon-4.8.3-r1[aqua=,qt4,${MULTILIB_USEDEP}] )
+		!kde? ( || (
+			~dev-qt/qtphonon-${PV}[aqua=,debug=,${MULTILIB_USEDEP}]
+			>=media-libs/phonon-4.8.3-r1[aqua=,qt4,${MULTILIB_USEDEP}]
+		) )
 	)
 	webkit? ( ~dev-qt/qtwebkit-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
 	xmlpatterns? ( ~dev-qt/qtxmlpatterns-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
@@ -86,7 +89,7 @@ multilib_src_configure() {
 		$(qt_use multimedia) -no-audio-backend
 		$(qt_use opengl)
 		$(qt_use openvg)
-		$(qt_native_use phonon) -no-phonon-backend
+		$(qt_use phonon) -no-phonon-backend
 		$(qt_use webkit)
 		$(qt_use xmlpatterns)
 	)
