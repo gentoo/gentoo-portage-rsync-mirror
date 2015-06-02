@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mariadb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.108 2015/05/27 13:05:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mariadb/ChangeLog,v 1.110 2015/06/02 05:03:29 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> mariadb-10.0.19.ebuild:
+  sparc stable wrt bug #546724
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> mariadb-10.0.19.ebuild:
+  ppc stable wrt bug #546724
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> mariadb-10.0.19.ebuild:
   Stable for arm, wrt bug #546724

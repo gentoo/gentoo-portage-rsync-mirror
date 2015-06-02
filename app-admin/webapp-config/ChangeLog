@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/webapp-config
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.130 2015/05/23 18:49:58 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webapp-config/ChangeLog,v 1.131 2015/06/02 05:23:25 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> webapp-config-1.53-r2.ebuild:
+  sparc stable wrt bug #530260
 
   23 May 2015; Mikle Kolyada <zlogene@gentoo.org> webapp-config-1.53-r2.ebuild:
   x86 stable wrt bug #530260

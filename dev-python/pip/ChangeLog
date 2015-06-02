@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.64 2015/05/23 08:24:02 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pip/ChangeLog,v 1.65 2015/06/02 05:16:02 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> pip-1.5.6.ebuild:
+  sparc stable wrt bug #540290
 
 *pip-7.0.1 (23 May 2015)
 

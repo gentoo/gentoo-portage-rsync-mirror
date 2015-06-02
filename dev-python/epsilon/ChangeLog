@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/epsilon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.39 2015/04/08 08:05:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/ChangeLog,v 1.40 2015/06/02 05:10:25 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> epsilon-0.7.0.ebuild:
+  sparc stable wrt bug #540290
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> epsilon-0.6.0-r2.ebuild:
   Drop old Python implementations

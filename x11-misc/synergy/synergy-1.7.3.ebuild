@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.7.3.ebuild,v 1.1 2015/05/28 05:37:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synergy/synergy-1.7.3.ebuild,v 1.2 2015/06/02 05:01:37 jer Exp $
 
 EAPI=5
 inherit eutils flag-o-matic gnome2-utils cmake-utils qt4-r2
@@ -20,7 +20,7 @@ IUSE="qt4 test"
 S=${WORKDIR}/${P}-stable
 
 COMMON_DEPEND="
-	>=dev-libs/crypto++-5.6.2
+	dev-libs/openssl
 	x11-libs/libICE
 	x11-libs/libSM
 	x11-libs/libX11

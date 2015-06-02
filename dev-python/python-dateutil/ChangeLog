@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dateutil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.78 2015/05/15 10:40:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dateutil/ChangeLog,v 1.79 2015/06/02 05:13:00 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> python-dateutil-2.2.ebuild:
+  sparc stable wrt bug #540290
 
 *python-dateutil-2.4.2-r1 (15 May 2015)
 

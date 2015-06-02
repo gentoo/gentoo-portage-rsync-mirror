@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pylint
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.129 2015/04/27 05:46:42 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pylint/ChangeLog,v 1.130 2015/06/02 05:12:37 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> pylint-1.4.1.ebuild:
+  sparc stable wrt bug #540290
 
 *pylint-0.25.2 (27 Apr 2015)
 

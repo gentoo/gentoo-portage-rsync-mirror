@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.7.0.ebuild,v 1.5 2015/03/08 23:46:44 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/epsilon/epsilon-0.7.0.ebuild,v 1.6 2015/06/02 05:10:25 jmorgan Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -11,7 +11,7 @@ DESCRIPTION="Epsilon is a Python utilities package, most famous for its Time cla
 HOMEPAGE="http://divmod.org/trac/wiki/DivmodEpsilon http://pypi.python.org/pypi/Epsilon"
 SRC_URI="mirror://pypi/${TWISTED_PN:0:1}/${TWISTED_PN}/${TWISTED_P}.tar.gz"
 
-KEYWORDS="amd64 ppc ppc64 ~sparc x86"
+KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE="test"
 
 RDEPEND=">=dev-python/twisted-core-13.2.0[${PYTHON_USEDEP}]

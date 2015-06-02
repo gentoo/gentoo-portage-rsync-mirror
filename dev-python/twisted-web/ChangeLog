@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted-web
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.124 2015/05/26 06:21:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted-web/ChangeLog,v 1.125 2015/06/02 05:15:20 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> twisted-web-13.2.0.ebuild:
+  sparc stable wrt bug #540290
 
 *twisted-web-15.2.1 (26 May 2015)
 

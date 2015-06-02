@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vpnc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.136 2015/05/27 11:09:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vpnc/ChangeLog,v 1.137 2015/06/02 05:19:39 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> vpnc-0.5.3_p550.ebuild:
+  sparc stable wrt bug #549652
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> vpnc-0.5.3_p550.ebuild:
   Stable for x86, wrt bug #549652

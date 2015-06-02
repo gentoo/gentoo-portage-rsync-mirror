@@ -1,6 +1,9 @@
 # ChangeLog for www-apache/mod_python
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.34 2015/05/08 19:29:50 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_python/ChangeLog,v 1.35 2015/06/02 05:18:18 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> mod_python-3.5.0.ebuild:
+  sparc stable wrt bug #529544
 
   08 May 2015; Pacho Ramos <pacho@gentoo.org> mod_python-3.5.0.ebuild:
   also works with apache2.4 (#525606 by Klemen Mihevc)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.255 2015/05/30 20:25:27 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.256 2015/06/02 05:23:56 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> libpcre-8.36.ebuild:
+  sparc stable wrt bug #548234
 
   30 May 2015; Mikle Kolyada <zlogene@gentoo.org> libpcre-8.36.ebuild:
   x86 stable wrt bug #548234

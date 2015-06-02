@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/axiom
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.55 2015/04/08 08:05:04 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/axiom/ChangeLog,v 1.56 2015/06/02 05:09:29 jmorgan Exp $
+
+  02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> axiom-0.7.2.ebuild:
+  sparc stable wrt bug #540290
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> axiom-0.6.0-r1.ebuild:
   Drop old Python implementations
