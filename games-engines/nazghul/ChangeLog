@@ -1,6 +1,9 @@
 # ChangeLog for games-engines/nazghul
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/ChangeLog,v 1.10 2015/01/18 15:44:48 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/nazghul/ChangeLog,v 1.11 2015/06/02 06:34:26 mr_bones_ Exp $
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> nazghul-0.7.1.ebuild:
+  add slot dep for repoman
 
   18 Jan 2015; Tupone Alfredo <tupone@gentoo.org> nazghul-0.7.1.ebuild:
   EAPI 5

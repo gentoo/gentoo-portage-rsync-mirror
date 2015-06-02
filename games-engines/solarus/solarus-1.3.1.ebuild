@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/solarus/solarus-1.3.1.ebuild,v 1.3 2015/04/21 17:40:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/solarus/solarus-1.3.1.ebuild,v 1.4 2015/06/02 06:35:10 mr_bones_ Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/sdl2-image[png]
 	>=media-libs/sdl2-ttf-2.0.12
 	luajit? ( dev-lang/luajit:2 )
-	!luajit? ( dev-lang/lua )"
+	!luajit? ( dev-lang/lua:0 )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )"
 

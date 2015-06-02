@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.5 2015/02/25 15:50:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/stratagus/stratagus-2.2.7.ebuild,v 1.6 2015/06/02 06:35:31 mr_bones_ Exp $
 
 EAPI=5
 inherit cmake-utils eutils games
@@ -15,7 +15,7 @@ KEYWORDS="amd64 x86"
 IUSE="bzip2 debug doc mikmod mng theora vorbis"
 
 RDEPEND="dev-db/sqlite:3
-	>=dev-lang/lua-5
+	>=dev-lang/lua-5:0
 	dev-lua/toluapp
 	media-libs/libpng:0
 	virtual/opengl
