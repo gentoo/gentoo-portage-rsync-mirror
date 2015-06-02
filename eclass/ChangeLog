@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1634 2015/05/31 15:51:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1635 2015/06/02 21:08:48 williamh Exp $
+
+  02 Jun 2015; William Hubbs <williamh@gentoo.org> +s6.eclass:
+  Add s6.eclass for handling s6 services
 
   31 May 2015; Manuel Rüger <mrueg@gentoo.org> kde5.eclass:
   Sync verbosely with kde overlay. Drop fetch restriction for unpublished
