@@ -28,7 +28,7 @@ HOMEPAGE="http://tukaani.org/xz/"
 # See top-level COPYING file as it outlines the various pieces and their licenses.
 LICENSE="public-domain LGPL-2.1+ GPL-2+"
 SLOT="0"
-IUSE="kernel_FreeBSD nls static-libs +threads"
+IUSE="elibc_FreeBSD nls static-libs +threads"
 
 RDEPEND="!<app-arch/lzma-4.63
 	!app-arch/lzma-utils
@@ -46,7 +46,7 @@ src_prepare() {
 }
 
 multilib_src_configure() {
-	use kernel_FreeBSD && export ac_cv_header_sha256_h=no #545714
+	use elibc_FreeBSD && export ac_cv_header_sha256_h=no #545714
 	ECONF_SOURCE="${S}" econf \
 		$(use_enable nls) \
 		$(use_enable threads) \
