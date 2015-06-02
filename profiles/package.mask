@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16544 2015/06/01 16:11:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16545 2015/06/02 08:46:26 ulm Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -168,13 +168,6 @@ dev-ruby/fssm
 # by changing output it relies on. See bug #504118,
 # 547586, and 547962.
 >=sys-devel/gcc-config-1.8-r1
-
-# Ulrich Müller <ulm@gentoo.org> (28 Apr 2015)
-# Superseded by the newer "breqn" and "mathtools"
-# modules in dev-texlive/texlive-latexrecommended.
-# mh is no longer maintained upstream. Bug 524114.
-# Masked for removal in 30 days.
-dev-tex/mh
 
 # Sebastian Pipping <sping@gentoo.org> (28 Apr 2015)
 # Get rid of vulnerable releases.
