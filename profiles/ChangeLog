@@ -1,10 +1,23 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10028 2015/06/02 08:46:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10029 2015/06/02 09:15:35 ulm Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  02 Jun 2015; Ulrich Müller <ulm@gentoo.org>
+  arch/amd64/no-multilib/package.mask, arch/amd64/use.mask,
+  base/package.use.force, default/linux/uclibc/amd64/package.mask,
+  default/linux/uclibc/use.mask, default/linux/use.mask, embedded/use.mask,
+  features/64bit-native/package.mask, features/selinux/use.mask,
+  hardened/linux/amd64/no-multilib/package.mask,
+  hardened/linux/musl/amd64/package.mask, hardened/linux/musl/use.mask,
+  hardened/linux/use.mask, prefix/aix/use.mask, prefix/bsd/use.mask,
+  prefix/darwin/use.mask, prefix/hpux/use.mask, prefix/mint/use.mask,
+  prefix/sunos/use.mask, prefix/windows/interix/use.mask,
+  prefix/windows/winnt/use.mask, targets/desktop/package.use, uclibc/use.mask:
+  Remove various masks related to emul-linux* from subprofiles.
 
   02 Jun 2015; Ulrich Müller <ulm@gentoo.org> package.mask:
   Drop mask for dev-tex/mh after package removal.

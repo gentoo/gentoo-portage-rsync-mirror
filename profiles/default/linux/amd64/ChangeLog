@@ -1,6 +1,24 @@
 # ChangeLog for the default/linux/amd64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.26 2015/06/01 16:54:49 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/amd64/ChangeLog,v 1.27 2015/06/02 09:13:41 mgorny Exp $
+
+  02 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  -13.0/no-emul-linux-x86/desktop/eapi,
+  -13.0/no-emul-linux-x86/desktop/gnome/eapi,
+  -13.0/no-emul-linux-x86/desktop/gnome/parent,
+  -13.0/no-emul-linux-x86/desktop/gnome/systemd/eapi,
+  -13.0/no-emul-linux-x86/desktop/gnome/systemd/parent,
+  -13.0/no-emul-linux-x86/desktop/kde/eapi,
+  -13.0/no-emul-linux-x86/desktop/kde/parent,
+  -13.0/no-emul-linux-x86/desktop/kde/systemd/eapi,
+  -13.0/no-emul-linux-x86/desktop/kde/systemd/parent,
+  -13.0/no-emul-linux-x86/desktop/parent,
+  -13.0/no-emul-linux-x86/developer/eapi,
+  -13.0/no-emul-linux-x86/developer/make.defaults,
+  -13.0/no-emul-linux-x86/developer/parent, -13.0/no-emul-linux-x86/eapi,
+  -13.0/no-emul-linux-x86/parent, -13.0/no-emul-linux-x86/selinux/eapi,
+  -13.0/no-emul-linux-x86/selinux/parent:
+  Wipe out obsolete no-emul-linux-x86 profiles.
 
   01 Jun 2015; Michael Palimaka <kensington@gentoo.org> package.use.mask:
   Remove arch-specific mask that is duplicated in the base profile.
