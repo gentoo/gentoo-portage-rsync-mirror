@@ -165,15 +165,14 @@ freebsd_src_unpack() {
 		if version_is_at_least 10.0 ${RV} ; then
 			local tarball="freebsd-src-${MY_PV}.tar.xz"
 			local topdir="usr/src/"
-			local extractlist
+			local extractlist=()
 			for i in ${EXTRACTONLY} ; do
-				extractlist+=" ${topdir}${i}"
+				extractlist+=( ${topdir}${i} )
 			done
 			ebegin "Unpacking parts of ${tarball} to ${WORKDIR}"
-			pushd "${WORKDIR}" > /dev/null
-			# https://bugs.gentoo.org/show_bug.cgi?id=550734
-			xzdec -c "${DISTDIR}/${tarball}" | tar -xpf - --strip-components=2 ${extractlist} 2> /dev/null || die "tar extract command failed"
-			popd > /dev/null
+			cd "${WORKDIR}" || die
+			tar -xJpf "${DISTDIR}/${tarball}" --strip-components=2 "${extractlist[@]}" 2> /dev/null || die "tar extract command failed"
+			cd - || die
 		else
 			for f in ${A} ; do
 				[[ ${f} == *.tar.* ]] && unpack ${f}
