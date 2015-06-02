@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-1.0.ebuild,v 1.3 2015/05/13 09:28:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/performous/performous-1.0.ebuild,v 1.4 2015/06/02 01:28:32 mr_bones_ Exp $
 
 EAPI=5
 CMAKE_REMOVE_MODULES="yes"
@@ -34,11 +34,11 @@ RDEPEND="dev-cpp/glibmm
 	dev-cpp/libxmlpp
 	media-libs/portaudio
 	dev-libs/boost[threads(+)]
-	dev-libs/glib
+	dev-libs/glib:2
 	dev-libs/libxml2
 	gnome-base/librsvg
 	media-gfx/imagemagick
-	virtual/jpeg
+	virtual/jpeg:0
 	media-libs/libpng:0
 	media-libs/libsdl2[joystick,video]
 	virtual/ffmpeg

@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/criticalmass
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.28 2015/01/04 08:51:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/ChangeLog,v 1.29 2015/06/02 01:29:39 mr_bones_ Exp $
+
+  02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  criticalmass-1.0.2.ebuild:
+  add slot dep for repoman
 
   04 Jan 2015; Tupone Alfredo <tupone@gentoo.org> criticalmass-1.0.2.ebuild:
   EAPI 5

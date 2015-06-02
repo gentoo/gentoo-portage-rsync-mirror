@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.2.ebuild,v 1.8 2015/01/04 08:51:01 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/criticalmass/criticalmass-1.0.2.ebuild,v 1.9 2015/06/02 01:29:39 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils games
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND="media-libs/sdl-mixer
 	media-libs/sdl-image[png]
-	media-libs/libpng
+	media-libs/libpng:0
 	virtual/opengl
 	net-misc/curl"
 RDEPEND="${DEPEND}"

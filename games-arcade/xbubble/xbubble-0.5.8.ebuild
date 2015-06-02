@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.17 2015/01/05 20:28:56 tupone Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xbubble/xbubble-0.5.8.ebuild,v 1.18 2015/06/02 01:27:11 mr_bones_ Exp $
 
 EAPI=5
 inherit eutils games
@@ -16,7 +16,7 @@ IUSE="nls"
 
 RDEPEND="x11-libs/libX11
 	x11-libs/libXt
-	media-libs/libpng
+	media-libs/libpng:0
 	nls? ( virtual/libintl )"
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )"
@@ -30,16 +30,14 @@ src_prepare() {
 		"${FILESDIR}"/${P}-png15.patch
 	sed -i \
 		-e '/^AM_CFLAGS/d' \
-		src/Makefile.in || die "sed cflags"
+		src/Makefile.in || die
 	sed -i \
 		-e '/^localedir/s:=.*:=/usr/share/locale:' \
-		configure po/Makefile.in.in || die "sed locale"
+		configure po/Makefile.in.in || die
 }
 
 src_configure() {
-	egamesconf \
-		--disable-dependency-tracking \
-		$(use_enable nls)
+	egamesconf $(use_enable nls)
 }
 
 src_install() {
