@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/opensmtpd-extras/opensmtpd-extras-5.4.5.201505291521.ebuild,v 1.1 2015/05/29 13:54:36 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/opensmtpd-extras/opensmtpd-extras-5.4.5.201506020835.ebuild,v 1.1 2015/06/02 12:00:05 zx2c4 Exp $
 
 EAPI=5
 
@@ -8,8 +8,7 @@ inherit versionator eutils flag-o-matic autotools
 
 DESCRIPTION="Extra tables, filters, and various other addons for OpenSMTPD"
 HOMEPAGE="https://github.com/OpenSMTPD/OpenSMTPD-extras"
-#SRC_URI="https://www.opensmtpd.org/archives/${PN}-$(get_version_component_range 4-).tar.gz"
-SRC_URI="https://dev.gentoo.org/~zx2c4/${PN}-$(get_version_component_range 4-).tar.gz"
+SRC_URI="https://www.opensmtpd.org/archives/${PN}-$(get_version_component_range 4-).tar.gz"
 
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
