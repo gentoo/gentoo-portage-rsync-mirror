@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.191 2015/06/02 09:34:01 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.192 2015/06/02 19:09:49 aidecoe Exp $
+
+  02 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-041-r2.ebuild,
+  -dracut-041-r3.ebuild:
+  Remove unnecessarily rev-bumped ebuild. Add new patch in -r3 to -r2.
 
 *dracut-041-r3 (02 Jun 2015)
 
