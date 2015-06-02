@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/cffi-1.1.0.ebuild,v 1.1 2015/06/01 11:11:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cffi/cffi-1.1.0.ebuild,v 1.2 2015/06/02 08:23:14 jlec Exp $
 
 EAPI="5"
 
@@ -22,6 +22,8 @@ RDEPEND="
 	dev-python/pycparser[${PYTHON_USEDEP}]
 	dev-python/pytest[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}"
+
+PATCHES=( "${FILESDIR}"/${P}-test-backport.patch )
 
 # Avoid race on _configtest.c (distutils/command/config.py:_gen_temp_sourcefile)
 DISTUTILS_IN_SOURCE_BUILD=1
