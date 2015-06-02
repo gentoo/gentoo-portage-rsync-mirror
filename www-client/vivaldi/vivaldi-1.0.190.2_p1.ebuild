@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.174.8_p1.ebuild,v 1.1 2015/05/14 07:56:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/vivaldi/vivaldi-1.0.190.2_p1.ebuild,v 1.1 2015/06/02 04:29:13 jer Exp $
 
 EAPI=5
 CHROMIUM_LANGS="
@@ -12,7 +12,7 @@ inherit chromium multilib unpacker toolchain-funcs
 
 DESCRIPTION="A new browser for our friends"
 HOMEPAGE="http://vivaldi.com/"
-VIVALDI_BASE_URI="${HOMEPAGE}download/download.php?f=${PN}-snapshot_${PV/_p/-}_"
+VIVALDI_BASE_URI="${HOMEPAGE}download/snapshot/${PN}-snapshot_${PV/_p/-}_"
 SRC_URI="
 	amd64? ( ${VIVALDI_BASE_URI}amd64.deb -> ${P}-amd64.deb )
 	x86? ( ${VIVALDI_BASE_URI}i386.deb -> ${P}-i386.deb )
