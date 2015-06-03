@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/memtest86
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.46 2015/05/29 08:06:27 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86/ChangeLog,v 1.47 2015/06/03 09:17:39 polynomial-c Exp $
+
+*memtest86-4.3.5 (03 Jun 2015)
+
+  02 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> +memtest86-4.3.5.ebuild:
+  Version bump.
 
 *memtest86-4.3.4 (29 May 2015)
 
