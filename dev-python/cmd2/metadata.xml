@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Extra features for standard library's cmd module
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">cmd2</remote-id>
+  </upstream>
 </pkgmetadata>
-

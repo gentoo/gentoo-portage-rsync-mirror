@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/cov-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.17 2015/04/13 09:14:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cov-core/ChangeLog,v 1.18 2015/06/03 14:20:54 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   13 Apr 2015; Agostino Sarubbo <ago@gentoo.org> cov-core-1.7.ebuild:
   Stable for alpha, wrt bug #525562

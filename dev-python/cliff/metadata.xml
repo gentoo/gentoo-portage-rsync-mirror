@@ -11,5 +11,7 @@
 	It uses setuptools entry points to provide subcommands,
 	output formatters, and other extensions.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">cliff</remote-id>
+  </upstream>
 </pkgmetadata>
-
