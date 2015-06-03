@@ -11,5 +11,7 @@
 	continued access to an expiring data value while
 	a single thread generates a new value.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">dogpile.cache</remote-id>
+  </upstream>
 </pkgmetadata>
-

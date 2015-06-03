@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.25.ebuild,v 1.1 2015/02/23 22:43:37 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-4.0.25.ebuild,v 1.2 2015/06/03 17:03:40 vapier Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -135,7 +135,7 @@ src_configure() {
 		"
 	use "ads" && myconf+=" --with-shared-modules=idmap_ad"
 
-	CPPFLAGS="-I/usr/include/et ${CPPFLAGS}" \
+	CPPFLAGS="-I${SYSROOT}/usr/include/et ${CPPFLAGS}" \
 		waf-utils_src_configure ${myconf}
 }
 

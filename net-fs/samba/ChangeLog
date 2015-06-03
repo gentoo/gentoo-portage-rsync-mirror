@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.715 2015/05/14 12:36:22 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.716 2015/06/03 17:03:40 vapier Exp $
+
+  03 Jun 2015; Mike Frysinger <vapier@gentoo.org> samba-3.5.21.ebuild,
+  samba-3.5.22.ebuild, samba-3.6.24.ebuild, samba-3.6.25.ebuild,
+  samba-4.0.25.ebuild, samba-4.0.26.ebuild, samba-4.1.17.ebuild,
+  samba-4.1.18.ebuild, samba-4.2.0.ebuild:
+  Use SYSROOT when looking for et headers to help cross-compiling; fix by Nam
+  Nguyen from Chromium OS.
 
   14 May 2015; Lars Wendler <polynomial-c@gentoo.org> samba-4.1.18.ebuild:
   Fixed dependency on talloc (bug #549452).

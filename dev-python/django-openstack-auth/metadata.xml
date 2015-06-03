@@ -9,5 +9,7 @@
   <longdescription lang="en">
     A Django authentication backend for use with the OpenStack Keystone Identity backend.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">django_openstack_auth</remote-id>
+  </upstream>
 </pkgmetadata>
-
