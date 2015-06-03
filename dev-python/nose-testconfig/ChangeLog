@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/nose-testconfig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-testconfig/ChangeLog,v 1.4 2015/04/08 08:04:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/nose-testconfig/ChangeLog,v 1.5 2015/06/03 20:29:32 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> nose-testconfig-0.9.ebuild:
   Drop old Python implementations

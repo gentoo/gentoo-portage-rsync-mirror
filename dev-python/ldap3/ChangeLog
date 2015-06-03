@@ -1,10 +1,12 @@
 # ChangeLog for dev-python/ldap3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ldap3/ChangeLog,v 1.1 2015/04/23 20:45:25 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ldap3/ChangeLog,v 1.2 2015/06/03 20:03:50 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *ldap3-0.9.8.2 (23 Apr 2015)
 
   23 Apr 2015; Patrick McLean <chutzpah@gentoo.org> +ldap3-0.9.8.2.ebuild,
   +metadata.xml:
   Initial version of ldap3.
-

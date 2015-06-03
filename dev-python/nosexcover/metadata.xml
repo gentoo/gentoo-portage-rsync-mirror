@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>python</herd>
   <herd>openstack</herd>
+  <upstream>
+    <remote-id type="pypi">nosexcover</remote-id>
+  </upstream>
 </pkgmetadata>

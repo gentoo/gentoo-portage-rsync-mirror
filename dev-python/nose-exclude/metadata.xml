@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Exclude specific directories from nosetests runs.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">nose-exclude</remote-id>
+  </upstream>
 </pkgmetadata>
-

@@ -9,5 +9,7 @@
   <longdescription lang="en">
     A compiler written in Python for the LESS language.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">lesscpy</remote-id>
+  </upstream>
 </pkgmetadata>
-

@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/YAML-LibYAML
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-LibYAML/ChangeLog,v 1.6 2014/10/27 20:41:25 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/YAML-LibYAML/ChangeLog,v 1.8 2015/06/03 20:13:53 monsieurp Exp $
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -YAML-LibYAML-0.410.0.ebuild, -YAML-LibYAML-0.520.0.ebuild:
+  Remove vulnerable versions. Fix security bug 531848.
+
+*YAML-LibYAML-0.590.0 (03 Jun 2015)
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +YAML-LibYAML-0.590.0.ebuild:
+  Version bump. Fix security bug 531848.
 
 *YAML-LibYAML-0.520.0 (27 Oct 2014)
 

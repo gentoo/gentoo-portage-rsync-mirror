@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/Kivy-1.9.0.ebuild,v 1.2 2015/06/03 19:54:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/Kivy-1.9.0.ebuild,v 1.3 2015/06/03 20:04:07 jlec Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_7,3_1,3_3,3_4} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1 eutils
 
@@ -17,24 +17,27 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="cairo camera doc examples garden gstreamer spell"
 
-DEPEND="<dev-python/cython-0.22
-	garden? ( dev-python/kivy-garden )
-	gstreamer? ( dev-python/gst-python:1.0 )
-	cairo? ( dev-python/pycairo )
-	spell? ( dev-python/pyenchant )
-	dev-python/pygame
-	dev-python/setuptools
+RDEPEND="
+	dev-python/pygame[${PYTHON_USEDEP}]
+	virtual/python-imaging[${PYTHON_USEDEP}]
+	cairo? ( dev-python/pycairo[${PYTHON_USEDEP}] )
 	camera? ( media-libs/opencv )
-	virtual/python-imaging
+	garden? ( dev-python/kivy-garden[${PYTHON_USEDEP}] )
+	gstreamer? ( dev-python/gst-python:1.0[${PYTHON_USEDEP}] )
+	spell? ( dev-python/pyenchant[${PYTHON_USEDEP}] )
 	"
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	<dev-python/cython-0.22[${PYTHON_USEDEP}]
+	dev-python/setuptools[${PYTHON_USEDEP}]
+"
 
-src_prepare() {
-	sed -e '/data_files=/d' -i "${S}/setup.py"
+python_prepare_all() {
+	sed -e '/data_files=/d' -i "${S}/setup.py" || die
+	distutils-r1_python_prepare_all
 }
 
-src_install() {
-	distutils-r1_src_install
-	use doc && dodoc -r doc/sources/*
-	use examples && insinto "/usr/share/doc/${PF}/" && doins -r examples
+python_install_all() {
+	use doc && DOCS=( doc/sources/. )
+	use examples && EXAMPLES=( examples )
+	distutils-r1_python_install_all
 }

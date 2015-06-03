@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/milksets
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/milksets/ChangeLog,v 1.6 2014/07/02 04:41:51 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/milksets/ChangeLog,v 1.7 2015/06/03 20:20:33 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   02 Jul 2014; Ian Delaney <idella4@gentoo.org> milksets-0.1.3-r1.ebuild:
   drop py2.6 pypy2.0, add missing dep setuptools, fixes bug #514776

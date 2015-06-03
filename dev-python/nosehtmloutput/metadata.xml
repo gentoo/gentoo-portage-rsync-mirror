@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Nose plugin to produce test results in html.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">nosehtmloutput</remote-id>
+  </upstream>
 </pkgmetadata>
-

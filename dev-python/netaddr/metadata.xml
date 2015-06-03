@@ -12,4 +12,7 @@
   <use>
     <flag name="cli">Enable netaddr shell with <pkg>dev-python/ipython</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="pypi">netaddr</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/netifaces
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.23 2015/04/08 08:05:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/netifaces/ChangeLog,v 1.24 2015/06/03 20:27:16 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> netifaces-0.10.4.ebuild,
   netifaces-0.8-r2.ebuild:
