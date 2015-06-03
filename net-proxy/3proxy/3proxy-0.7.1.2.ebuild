@@ -23,7 +23,7 @@ src_prepare() {
 src_install() {
         local x
 
-        pushd src
+        cd src || die
         dobin 3proxy
         for x in proxy socks ftppr pop3p tcppm udppm mycrypt dighosts countersutil ; do
         newbin ${x} ${PN}-${x} || die "newbin ${x} failed"
