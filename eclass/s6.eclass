@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/s6.eclass,v 1.1 2015/06/02 21:08:48 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/s6.eclass,v 1.2 2015/06/03 17:37:46 grknight Exp $
 
 # @ECLASS: s6.eclass
 # @MAINTAINER:
@@ -16,7 +16,7 @@
 # src_install() {
 #	...
 #	s6_install_service myservice "${FILESDIR}"/run-s6 "${FILESDIR}"/finish-s6
-	...
+#	...
 #	If you want a service to be logged, install the log service as
 #	shown here.
 #	s6_install_service myservice/log "${FILESDIR}"/log-run-s6 \
@@ -27,7 +27,7 @@
 
 case ${EAPI:-0} in
 	5) ;;
-	*) die "${ECLASS}.eclass: API in EAPI ${EAPI} not yet established"
+	*) die "${ECLASS}.eclass: API in EAPI ${EAPI} not yet established" ;;
 esac
 
 # @FUNCTION: _s6_get_servicedir

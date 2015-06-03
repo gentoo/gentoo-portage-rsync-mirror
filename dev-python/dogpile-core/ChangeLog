@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/dogpile-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dogpile-core/ChangeLog,v 1.5 2015/04/08 08:05:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dogpile-core/ChangeLog,v 1.6 2015/06/03 17:52:56 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> dogpile-core-0.4.1.ebuild:
   Drop old Python implementations
