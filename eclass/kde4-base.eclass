@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.153 2015/05/31 10:11:35 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.154 2015/06/03 22:36:30 mrueg Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -339,7 +339,7 @@ if [[ ${KDEBASE} != "kde-base" && -n ${KDE_LINGUAS} ]]; then
 		# this can't be done on one line because if user doesn't use any localisation
 		# then he is probably not interested in kde-l10n at all.
 		kderdepend+="
-		linguas_${_lingua}? ( || ( kde-apps/kde-l10n[linguas_${_lingua}(+)] $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)") ) )
+		linguas_${_lingua}? ( || ( kde-apps/kde4-l10n[linguas_${_lingua}(+)] $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)") ) )
 		"
 	done
 	unset _lingua
@@ -440,11 +440,14 @@ _calculate_src_uri() {
 					# Part of 14.12.3 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/14.12.3/src/${_kmname_pv}.tar.xz" ;;
 				4.11.18)
-					# Part of 15.04.1 actually, sigh. Not stable for next release!
+					# Part of 15.04.0 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/15.04.0/src/${_kmname_pv}.tar.xz" ;;
 				4.11.19)
-					# Part of 15.04.0 actually, sigh. Not stable for next release!
+					# Part of 15.04.1 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/15.04.1/src/${_kmname_pv}.tar.xz" ;;
+				4.11.20)
+					# Part of 15.04.2 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/applications/15.04.2/src/${_kmname_pv}.tar.xz" ;;
 				4.14.6)
 					# Part of 14.12.3 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/14.12.3/src/${_kmname_pv}.tar.xz" ;;
@@ -454,6 +457,9 @@ _calculate_src_uri() {
 				4.14.8)
 					# Part of 15.04.1 actually, sigh. Not stable for next release!
 					SRC_URI="mirror://kde/stable/applications/15.04.1/src/${_kmname_pv}.tar.xz" ;;
+				4.14.9)
+					# Part of 15.04.2 actually, sigh. Not stable for next release!
+					SRC_URI="mirror://kde/stable/applications/15.04.2/src/${_kmname_pv}.tar.xz" ;;
 				??.?.[6-9]? | ??.??.[4-9]?)
 					# Unstable KDE Applications releases
 					SRC_URI="mirror://kde/unstable/applications/${PV}/src/${_kmname}-${PV}.tar.xz" ;;
@@ -575,6 +581,10 @@ _calculate_live_repo() {
 			# default branching
 			[[ ${PV} != 4.9999* && ${PV} != 9999 && ${KDEBASE} == kde-base ]] && \
 				EGIT_BRANCH="KDE/$(get_kde_version)"
+
+			# Applications branching
+			[[ ${PV} == ??.??.49.9999 && ${KDEBASE} == kde-base ]] && \
+				EGIT_BRANCH="Applications/$(get_kde_version)"
 
 			# default repo uri
 			EGIT_REPO_URI+=( "${EGIT_MIRROR}/${_kmname}" )

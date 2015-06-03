@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1636 2015/06/03 17:37:46 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1637 2015/06/03 22:36:30 mrueg Exp $
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> kde4-base.eclass:
+  Sync verbosely with overlay. Add support for kde4 localization package
+  kde-apps/kde4-l10n. Include URIs to support new kdelibs and kde workspaces
+  releases. Fix a typo in a comment here. Add support for stable live branches
+  for kde applications packages.
 
   03 Jun 2015; <grknight@gentoo.org> s6.eclass:
   Fix missing comment character and case syntax error
