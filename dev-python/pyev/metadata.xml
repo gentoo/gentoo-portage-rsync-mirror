@@ -11,5 +11,7 @@
 	 which provides event loop, support select, poll, the
 	 Linux-specific epoll, and so on.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">pyev</remote-id>
+  </upstream>
 </pkgmetadata>
-

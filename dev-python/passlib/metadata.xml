@@ -10,5 +10,7 @@
   <longdescription lang="en">
     comprehensive password hashing framework supporting over 20 schemes
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">passlib</remote-id>
+  </upstream>
 </pkgmetadata>
-

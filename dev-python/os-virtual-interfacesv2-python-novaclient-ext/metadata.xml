@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Adds Virtual Interfaces support to python-novaclient
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">os_virtual_interfacesv2_python_novaclient_ext</remote-id>
+  </upstream>
 </pkgmetadata>
-

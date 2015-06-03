@@ -4,5 +4,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="google-code">prettytable</remote-id>
+    <remote-id type="pypi">PrettyTable</remote-id>
   </upstream>
 </pkgmetadata>

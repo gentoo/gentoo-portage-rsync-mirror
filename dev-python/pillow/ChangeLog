@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.52 2015/05/20 01:37:33 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.53 2015/06/03 20:46:31 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   20 May 2015; Ian Delaney <idella4@gentoo.org> pillow-2.8.1.ebuild:
   add missed '[${PYTHON_USEDEP}]' to deps

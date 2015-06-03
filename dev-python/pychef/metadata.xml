@@ -9,5 +9,7 @@
   <longdescription lang="en">
     A Python API for interacting with a Chef server.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">PyChef</remote-id>
+  </upstream>
 </pkgmetadata>
-

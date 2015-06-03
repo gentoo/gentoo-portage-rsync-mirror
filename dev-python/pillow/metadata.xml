@@ -5,4 +5,7 @@
   <use>
     <flag name="webp">Enable support for webp image format.</flag>
   </use>
+  <upstream>
+    <remote-id type="pypi">Pillow</remote-id>
+  </upstream>
 </pkgmetadata>

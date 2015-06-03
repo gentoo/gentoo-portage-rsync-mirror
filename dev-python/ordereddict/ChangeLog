@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ordereddict
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ordereddict/ChangeLog,v 1.3 2014/11/18 21:54:29 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ordereddict/ChangeLog,v 1.4 2015/06/03 20:32:32 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *ordereddict-1.1 (18 Nov 2014)
 

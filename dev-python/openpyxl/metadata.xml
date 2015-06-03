@@ -6,4 +6,7 @@
   Openpyxl is a pure Python module to read/write Excel 2007 (OpenXML)
   xlsx/xlsm files.
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">openpyxl</remote-id>
+  </upstream>
 </pkgmetadata>

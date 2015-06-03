@@ -10,5 +10,7 @@
     The Oslo configuration API supports parsing command line arguments.
 	Oslo also supports .ini style configuration files.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">oslo.config</remote-id>
+  </upstream>
 </pkgmetadata>
-

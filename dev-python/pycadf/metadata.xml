@@ -9,5 +9,7 @@
   <longdescription lang="en">
     python implementation of DMTF Cloud Audit (CADF) data model
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">pycadf</remote-id>
+  </upstream>
 </pkgmetadata>
-

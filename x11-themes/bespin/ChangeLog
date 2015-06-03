@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/bespin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.10 2014/08/10 19:56:53 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/bespin/ChangeLog,v 1.11 2015/06/03 20:57:30 mrueg Exp $
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -bespin-0_p20131020.ebuild:
+  Remove old.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> bespin-0_p20131020.ebuild,
   bespin-0_p20140225.ebuild:

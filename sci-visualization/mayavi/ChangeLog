@@ -1,6 +1,10 @@
 # ChangeLog for sci-visualization/mayavi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.32 2015/03/06 22:43:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/mayavi/ChangeLog,v 1.33 2015/06/03 21:00:03 mrueg Exp $
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -mayavi-4.1.0-r1.ebuild,
+  -mayavi-4.2.0.ebuild:
+  Remove old.
 
   06 Mar 2015; Pacho Ramos <pacho@gentoo.org> mayavi-4.3.0.ebuild:
   amd64 stable, bug 540290

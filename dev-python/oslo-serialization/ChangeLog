@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oslo-serialization
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-serialization/ChangeLog,v 1.7 2015/04/22 20:04:44 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-serialization/ChangeLog,v 1.8 2015/06/03 20:38:48 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *oslo-serialization-1.5.0 (22 Apr 2015)
 

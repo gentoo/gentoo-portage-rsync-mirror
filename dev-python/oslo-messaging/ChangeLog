@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oslo-messaging
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-messaging/ChangeLog,v 1.11 2015/04/28 16:37:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-messaging/ChangeLog,v 1.12 2015/06/03 20:36:54 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *oslo-messaging-1.8.2 (28 Apr 2015)
 

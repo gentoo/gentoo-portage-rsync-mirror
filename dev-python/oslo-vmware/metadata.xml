@@ -8,5 +8,7 @@
   <longdescription lang="en">
     The Oslo messaging API supports RPC and notifications over a number of different messaging transports.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">oslo.vmware</remote-id>
+  </upstream>
 </pkgmetadata>
-

@@ -9,5 +9,7 @@
   <longdescription lang="en">
     The Oslo Policy library provides support for RBAC policy enforcement across all OpenStack services.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">oslo.policy</remote-id>
+  </upstream>
 </pkgmetadata>
-
