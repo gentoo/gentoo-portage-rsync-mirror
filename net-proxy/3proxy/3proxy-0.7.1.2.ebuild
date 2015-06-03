@@ -24,7 +24,7 @@ src_install() {
         local x
 
         pushd src
-        dobin 3proxy || die "dobin 3proxy failed"
+        dobin 3proxy
         for x in proxy socks ftppr pop3p tcppm udppm mycrypt dighosts countersutil ; do
                 newbin ${x} ${PN}-${x} || die "newbin ${x} failed"
                 [[ -f ${S}/man/${x}.8 ]] \
