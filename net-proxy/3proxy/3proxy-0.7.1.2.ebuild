@@ -17,7 +17,7 @@ S="${WORKDIR}/${PN}"
 src_prepare() {
         cp "${S}"/Makefile.Linux "${S}"/Makefile
         epatch "${FILESDIR}"/"${PN}"-Makefile.patch || die "epatch failed"
-	sed -i -e 's:/usr/local::' src/stringtable.c
+        sed -i -e 's:/usr/local::' src/stringtable.c || die "sed failed"
 }
 
 src_install() {
@@ -26,9 +26,9 @@ src_install() {
         pushd src
         dobin 3proxy
         for x in proxy socks ftppr pop3p tcppm udppm mycrypt dighosts countersutil ; do
-                newbin ${x} ${PN}-${x} || die "newbin ${x} failed"
-                [[ -f ${S}/man/${x}.8 ]] \
-                        && newman "${S}"/man/${x}.8 ${PN}-${x}.8
+        newbin ${x} ${PN}-${x} || die "newbin ${x} failed"
+        [[ -f ${S}/man/${x}.8 ]] \
+                && newman "${S}"/man/${x}.8 ${PN}-${x}.8
         done
         popd
 
