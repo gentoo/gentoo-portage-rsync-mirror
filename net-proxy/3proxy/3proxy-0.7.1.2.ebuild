@@ -4,7 +4,7 @@
 EAPI=5
 inherit eutils
 
-DESCRIPTION="3Proxy is really tiny cross-platform proxy servers set"
+DESCRIPTION="really tiny cross-platform proxy servers set"
 HOMEPAGE="http://www.3proxy.ru/"
 SRC_URI="http://3proxy.ru/${PV}/${P}.tgz"
 LICENSE="GPL3"
@@ -15,7 +15,7 @@ IUSE=""
 S="${WORKDIR}/${PN}"
 
 src_prepare() {
-        cp "${S}"/Makefile.Linux "${S}"/Makefile
+        cp "${S}"/Makefile.Linux "${S}"/Makefile || die
         epatch "${FILESDIR}"/"${PN}"-Makefile.patch || die "epatch failed"
         sed -i -e 's:/usr/local::' src/stringtable.c || die "sed failed"
 }
