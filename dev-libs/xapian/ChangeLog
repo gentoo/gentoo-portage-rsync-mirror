@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/xapian
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.144 2015/05/23 14:59:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xapian/ChangeLog,v 1.145 2015/06/03 11:25:53 blueness Exp $
+
+*xapian-1.3.3 (03 Jun 2015)
+
+  03 Jun 2015; Anthony G. Basile <blueness@gentoo.org> +xapian-1.3.3.ebuild:
+  Version bump
 
 *xapian-1.2.21 (23 May 2015)
 

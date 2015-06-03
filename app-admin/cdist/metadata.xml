@@ -7,4 +7,7 @@
     <name>Daniel Heule</name>
     <description>Maintainer. Assign bugs to him</description>
   </maintainer>
+  <upstream>
+    <remote-id type="pypi">cdist</remote-id>
+  </upstream>
 </pkgmetadata>
