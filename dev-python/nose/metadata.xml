@@ -2,9 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>python</herd>
-  <use>
-    <flag name="coverage">Utilize <pkg>dev-python/coverage</pkg></flag>
-  </use>
   <upstream>
     <remote-id type="pypi">nose</remote-id>
   </upstream>
