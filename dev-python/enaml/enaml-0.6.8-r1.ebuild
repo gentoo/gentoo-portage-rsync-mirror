@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/enaml/enaml-0.6.8-r1.ebuild,v 1.4 2015/03/08 23:46:22 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/enaml/enaml-0.6.8-r1.ebuild,v 1.5 2015/06/03 18:03:31 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,8 @@ RDEPEND="
 	dev-python/casuarius[${PYTHON_USEDEP}]
 	dev-python/ply[${PYTHON_USEDEP}]
 	dev-python/traits[${PYTHON_USEDEP}]
-	|| ( dev-python/wxpython[${PYTHON_USEDEP}] \
+	|| (
+		dev-python/wxpython:*[${PYTHON_USEDEP}] \
 		dev-python/PyQt4[${PYTHON_USEDEP}] \
 		dev-python/pyside[${PYTHON_USEDEP}] )"
 

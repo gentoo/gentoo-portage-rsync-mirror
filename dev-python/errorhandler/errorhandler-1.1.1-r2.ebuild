@@ -1,13 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/errorhandler/errorhandler-1.1.1-r2.ebuild,v 1.4 2015/04/08 08:05:11 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/errorhandler/errorhandler-1.1.1-r2.ebuild,v 1.5 2015/06/03 18:07:50 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python2_7 pypy )
 
 inherit distutils-r1
 
-DESCRIPTION="A logging framework handler that tracks when messages above a certain level have been logged"
+DESCRIPTION="Logging framework handler that tracks when messages above a certain level have been logged"
 HOMEPAGE="http://pypi.python.org/pypi/errorhandler"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
@@ -23,10 +24,13 @@ DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )"
 
+PATCHES=(
+	"${FILESDIR}"/${P}-test.patch
+	"${FILESDIR}"/docs.patch
+)
+
 python_prepare_all() {
 	sed -e 's:../bin/sphinx-build:/usr/bin/sphinx-build:' -i docs/Makefile || die
-	epatch "${FILESDIR}"/${P}-test.patch \
-		"${FILESDIR}"/docs.patch
 	distutils-r1_python_prepare_all
 }
 
