@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xlsx2csv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/ChangeLog,v 1.12 2015/04/08 07:30:34 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/ChangeLog,v 1.13 2015/06/03 11:36:15 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> xlsx2csv-0.6.ebuild,
   xlsx2csv-0.7.ebuild:
