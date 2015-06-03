@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>python</herd>
-	<longdescription lang="en">
+  <herd>python</herd>
+  <longdescription lang="en">
 		A collection of tools for internationalizing Python applications
 		Babel is composed of two major parts:
 			- tools to build and work with gettext message catalogs
@@ -11,4 +11,3 @@
 			and date formatting, etc.
 	</longdescription>
 </pkgmetadata>
-

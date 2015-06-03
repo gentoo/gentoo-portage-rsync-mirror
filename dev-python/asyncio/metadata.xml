@@ -9,4 +9,7 @@
   <longdescription lang="en">
 reference implementation of PEP 3156
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">asyncio</remote-id>
+  </upstream>
 </pkgmetadata>

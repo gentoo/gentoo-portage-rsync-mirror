@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/audioread
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/audioread/ChangeLog,v 1.10 2015/04/08 08:05:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/audioread/ChangeLog,v 1.11 2015/06/03 12:45:09 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> audioread-1.0.1.ebuild:
   Drop old Python implementations
