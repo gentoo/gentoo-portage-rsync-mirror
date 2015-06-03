@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/defusedxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/defusedxml/ChangeLog,v 1.13 2015/05/05 09:38:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/defusedxml/ChangeLog,v 1.14 2015/06/03 15:05:50 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   05 May 2015; Jeroen Roovers <jer@gentoo.org> defusedxml-0.4.1-r1.ebuild:
   Mark ~ppc64 (bug #516442).
