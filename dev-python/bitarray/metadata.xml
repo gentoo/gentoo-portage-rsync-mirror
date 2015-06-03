@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<herd>sci</herd>
-	<herd>python</herd>
-	<longdescription>
+  <herd>sci</herd>
+  <herd>python</herd>
+  <longdescription>
 This module provides an object type which efficiently represents an array of 
 booleans. Bitarrays are sequence types and behave very much like usual lists. 
 Eight bits are represented by one byte in a contiguous block of memory. The 
@@ -14,4 +14,7 @@ to binary files is required, such as portable bitmap image files (.pbm). Also,
 when dealing with compressed data which uses variable bit length encoding, 
 you may find this module useful.
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">bitarray</remote-id>
+  </upstream>
 </pkgmetadata>
