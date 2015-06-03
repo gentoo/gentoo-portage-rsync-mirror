@@ -9,5 +9,7 @@
   <longdescription lang="en">
     CLI and python client library for OpenStack Neutron
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">python-neutronclient</remote-id>
+  </upstream>
 </pkgmetadata>
-

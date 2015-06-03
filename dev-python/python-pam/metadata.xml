@@ -8,5 +8,7 @@
   <longdescription lang="en">
     A python interface to the PAM library on linux using ctypes.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">pam</remote-id>
+  </upstream>
 </pkgmetadata>
-

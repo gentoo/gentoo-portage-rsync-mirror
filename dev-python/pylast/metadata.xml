@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>idella4gentoo.org</email>
-		<name>Ian Delaney</name>
-	</maintainer>
-	<longdescription lang="en">
+  <maintainer>
+    <email>idella4gentoo.org</email>
+    <name>Ian Delaney</name>
+  </maintainer>
+  <longdescription lang="en">
 Python interface to last.fm and other api-compatible websites
 
 Features:
@@ -19,4 +19,7 @@ Features:
  * Support for other API-compatible networks like Libre.fm
  * Python3-friendly (Starting from 0.5).
 	</longdescription>
+  <upstream>
+    <remote-id type="pypi">pylast</remote-id>
+  </upstream>
 </pkgmetadata>

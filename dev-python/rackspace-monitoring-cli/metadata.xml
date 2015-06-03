@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Command Line Utility for Rackspace Cloud Monitoring (MaaS)
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">rackspace-monitoring-cli</remote-id>
+  </upstream>
 </pkgmetadata>
-

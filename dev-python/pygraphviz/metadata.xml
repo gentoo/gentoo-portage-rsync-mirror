@@ -8,4 +8,7 @@
   With Pygraphviz you can create, edit, read, write, and draw graphs using
   Python to access the Graphviz graph data structure and layout algorithms.
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">pygraphviz</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-troveclient
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/ChangeLog,v 1.8 2014/08/10 21:19:53 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-troveclient/ChangeLog,v 1.9 2015/06/03 21:27:38 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   python-troveclient-1.0.5.ebuild:

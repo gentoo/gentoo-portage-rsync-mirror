@@ -9,5 +9,7 @@
   <longdescription lang="en">
     A client for the OpenStack Keystone API.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">python-keystoneclient</remote-id>
+  </upstream>
 </pkgmetadata>
-

@@ -8,5 +8,7 @@
   <longdescription lang="en">
     Python bindings to the OpenStack Object Storage API
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">python-swiftclient</remote-id>
+  </upstream>
 </pkgmetadata>
-

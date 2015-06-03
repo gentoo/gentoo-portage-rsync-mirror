@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyspf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.30 2015/03/27 16:26:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyspf/ChangeLog,v 1.31 2015/06/03 21:13:39 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   27 Mar 2015; Agostino Sarubbo <ago@gentoo.org> pyspf-2.0.10.ebuild:
   Stable for amd64, wrt bug #537634

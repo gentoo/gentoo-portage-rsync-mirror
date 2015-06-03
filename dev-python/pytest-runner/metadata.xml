@@ -9,4 +9,7 @@
   <longdescription lang="en">
 		Adds support for tests during installation of setup.py files.
 	</longdescription>
+  <upstream>
+    <remote-id type="pypi">pytest-runner</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Client library for Rackspace Cloud Monitoring.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">rackspace-monitoring</remote-id>
+  </upstream>
 </pkgmetadata>
-

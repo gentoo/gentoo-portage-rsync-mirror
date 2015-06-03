@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>thev00d00@gentoo.org</email>
-		<name>Ian Whyman</name>
-	</maintainer>
-	<longdescription>Python interface to the libmagic file type identification library.</longdescription>
+  <maintainer>
+    <email>thev00d00@gentoo.org</email>
+    <name>Ian Whyman</name>
+  </maintainer>
+  <longdescription>Python interface to the libmagic file type identification library.</longdescription>
+  <upstream>
+    <remote-id type="pypi">python-magic</remote-id>
+  </upstream>
 </pkgmetadata>

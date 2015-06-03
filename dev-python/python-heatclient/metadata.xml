@@ -9,5 +9,7 @@
   <longdescription lang="en">
     This is a client library for Heat built on the Heat orchestration API
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">python-heatclient</remote-id>
+  </upstream>
 </pkgmetadata>
-
