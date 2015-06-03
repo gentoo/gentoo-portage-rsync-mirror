@@ -14,4 +14,7 @@
     <description>Proxy Maintainer. CC on bugs</description>
   </maintainer>
   <longdescription>SocketIO server based on the Gevent pywsgi server</longdescription>
+  <upstream>
+    <remote-id type="pypi">gevent-socketio</remote-id>
+  </upstream>
 </pkgmetadata>

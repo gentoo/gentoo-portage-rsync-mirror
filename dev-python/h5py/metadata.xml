@@ -14,5 +14,6 @@
 </longdescription>
   <upstream>
     <remote-id type="google-code">h5py</remote-id>
+    <remote-id type="pypi">h5py</remote-id>
   </upstream>
 </pkgmetadata>

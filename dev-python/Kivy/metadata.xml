@@ -12,4 +12,7 @@
       Install garden tool to manage user maintained widgets
     </flag>
   </use>
+  <upstream>
+    <remote-id type="pypi">Kivy</remote-id>
+  </upstream>
 </pkgmetadata>

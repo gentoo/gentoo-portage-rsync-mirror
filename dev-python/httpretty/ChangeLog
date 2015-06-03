@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/httpretty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httpretty/ChangeLog,v 1.9 2015/03/17 08:26:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httpretty/ChangeLog,v 1.10 2015/06/03 19:41:45 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *httpretty-0.8.0-r1 (17 Mar 2015)
 

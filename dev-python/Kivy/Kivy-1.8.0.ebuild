@@ -1,14 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/Kivy-1.8.0.ebuild,v 1.7 2015/04/08 08:05:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Kivy/Kivy-1.8.0.ebuild,v 1.8 2015/06/03 19:54:18 jlec Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
-inherit distutils-r1
+inherit distutils-r1 eutils
 
-DESCRIPTION="A software library for rapid development of hardware-accelerated multitouch applications."
+DESCRIPTION="A software library for rapid development of hardware-accelerated multitouch applications"
 HOMEPAGE="http://kivy.org/"
 SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/httplib2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.55 2015/04/14 07:41:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/httplib2/ChangeLog,v 1.56 2015/06/03 19:41:51 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *httplib2-0.9.1 (14 Apr 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/ipaddress
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddress/ChangeLog,v 1.4 2015/05/17 07:57:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipaddress/ChangeLog,v 1.5 2015/06/03 19:45:10 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   17 May 2015; Jeroen Roovers <jer@gentoo.org> ipaddress-1.0.7.ebuild:
   Mark ~hppa (bug #549518).

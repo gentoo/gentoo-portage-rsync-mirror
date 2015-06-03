@@ -14,4 +14,7 @@
     <description>Proxy Maintainer. CC on bugs</description>
   </maintainer>
   <longdescription>Gevent compatibility layer for pyzmq</longdescription>
+  <upstream>
+    <remote-id type="pypi">gevent_zeromq</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/h5py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.39 2015/05/30 07:59:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/h5py/ChangeLog,v 1.40 2015/06/03 19:39:09 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   30 May 2015; Justin Lecher <jlec@gentoo.org> h5py-2.5.0.ebuild:
   Fix dependency version of sphinx for themeing support, bug #550720

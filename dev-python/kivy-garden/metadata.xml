@@ -8,4 +8,7 @@
     Tool to manage the installation, removal of flowers at http://github.com/kivy-garden/ 
     They are a set of user maintained widgets, extensions, tools for kivy(http://kivy.org) framework.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">kivy-garden</remote-id>
+  </upstream>
 </pkgmetadata>
