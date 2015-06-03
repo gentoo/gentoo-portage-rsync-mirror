@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=net-libs/librsync-0.9.5 =dev-db/sqlite-2.8* ssl? ( >=net-libs/gnutls-2.7.3 ) xinetd? ( sys-apps/xinetd )
 SLOT=0
 SRC_URI=http://oss.linbit.com/csync2/csync2-1.34.tar.gz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
+_eclasses_=autotools	a9597abac7226d89ad9d010abeef6cfb	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
 _md5_=aab6da618ca23d177ef1568accc1bf3d

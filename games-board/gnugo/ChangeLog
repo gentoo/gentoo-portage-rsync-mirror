@@ -1,6 +1,12 @@
 # ChangeLog for games-board/gnugo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.40 2015/06/02 03:58:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/gnugo/ChangeLog,v 1.42 2015/06/03 04:14:43 jmorgan Exp $
+
+  03 Jun 2015; Jack Morgan <jmorgan@gentoo.org> gnugo-3.9.1-r1.ebuild:
+  ppc64 stable wrt bug #543564
+
+  03 Jun 2015; Jack Morgan <jmorgan@gentoo.org> gnugo-3.9.1-r1.ebuild:
+  ppc stable wrt bug #543564
 
   02 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> gnugo-3.9.1-r1.ebuild:
   add slot dep for repoman

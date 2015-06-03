@@ -10,5 +10,5 @@ RDEPEND=>=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.30 >=dev-libs/libdbusmenu-0
 RESTRICT=test
 SLOT=3
 SRC_URI=http://launchpad.net/libindicate/12.10/12.10.1/+download/libindicate-12.10.1.tar.gz
-_eclasses_=autotools	b49fe68f65ef8b751164926d42b30e60	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	vala	a41415fe361172827ed11b6a32ee38fb
+_eclasses_=autotools	a9597abac7226d89ad9d010abeef6cfb	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	vala	a41415fe361172827ed11b6a32ee38fb
 _md5_=df6831922b70afd3c6ea0b6e8bbf5c26
