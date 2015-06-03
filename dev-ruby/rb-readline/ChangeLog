@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rb-readline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-readline/ChangeLog,v 1.4 2015/05/04 01:59:02 zerochaos Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rb-readline/ChangeLog,v 1.5 2015/06/03 22:00:22 mrueg Exp $
+
+*rb-readline-0.5.3 (03 Jun 2015)
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +rb-readline-0.5.3.ebuild:
+  Version bump.
 
   04 May 2015; Rick Farina <zerochaos@gentoo.org> rb-readline-0.5.1.ebuild,
   rb-readline-0.5.2.ebuild:

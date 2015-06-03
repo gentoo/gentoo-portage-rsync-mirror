@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Setuptools revision control system plugin for Git
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">setuptools-git</remote-id>
+  </upstream>
 </pkgmetadata>
-

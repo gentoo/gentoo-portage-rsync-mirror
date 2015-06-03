@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rtslib-fb
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rtslib-fb/ChangeLog,v 1.1 2014/04/28 02:47:59 prometheanfire Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rtslib-fb/ChangeLog,v 1.2 2015/06/03 21:40:57 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *rtslib-fb-2.1.47 (28 Apr 2014)
 

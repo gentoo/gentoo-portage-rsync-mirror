@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Adds backup-schedule extension support to python-novaclient.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">rax_scheduled_images_python_novaclient_ext</remote-id>
+  </upstream>
 </pkgmetadata>
-

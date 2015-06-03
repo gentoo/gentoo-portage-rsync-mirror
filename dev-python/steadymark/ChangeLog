@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/steadymark
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/steadymark/ChangeLog,v 1.2 2013/12/02 09:45:59 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/steadymark/ChangeLog,v 1.3 2015/06/03 21:56:49 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   02 Dec 2013; Patrick Lauer <patrick@gentoo.org> steadymark-0.5.3.ebuild:
   Whitespace

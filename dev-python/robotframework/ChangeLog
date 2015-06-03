@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/robotframework
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/robotframework/ChangeLog,v 1.12 2015/01/19 16:29:06 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/robotframework/ChangeLog,v 1.13 2015/06/03 21:39:06 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself from metadata.
@@ -59,4 +62,3 @@
   29 Jan 2013; Tim Harder <radhermit@gentoo.org> +robotframework-2.7.6.ebuild,
   +metadata.xml:
   Initial import, ebuild by me.
-

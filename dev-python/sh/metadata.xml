@@ -15,4 +15,7 @@
 
 	sh is not a collection of system commands implemented in Python.
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">sh</remote-id>
+  </upstream>
 </pkgmetadata>

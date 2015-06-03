@@ -9,5 +9,7 @@
   <longdescription lang="en">
     Adds instance default networks extension support to python-novaclient
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">rax_default_network_flags_python_novaclient_ext</remote-id>
+  </upstream>
 </pkgmetadata>
-

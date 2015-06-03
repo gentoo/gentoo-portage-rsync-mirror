@@ -9,5 +9,7 @@
   <longdescription lang="en">
      A Python object API for managing the Linux LIO kernel target
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">rtslib-fb</remote-id>
+  </upstream>
 </pkgmetadata>
-

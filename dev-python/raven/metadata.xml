@@ -5,4 +5,7 @@
     <email>bman@gentoo.org</email>
     <name>Aaron Bauman</name>
   </maintainer>
+  <upstream>
+    <remote-id type="pypi">raven</remote-id>
+  </upstream>
 </pkgmetadata>

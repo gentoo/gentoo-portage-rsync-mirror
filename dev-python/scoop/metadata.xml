@@ -9,4 +9,7 @@
     allowing concurrent parallel programming on various environments, from
     heterogeneous grids to supercomputers.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">scoop</remote-id>
+  </upstream>
 </pkgmetadata>
