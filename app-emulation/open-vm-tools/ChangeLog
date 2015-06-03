@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.88 2015/05/08 01:06:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.89 2015/06/03 16:13:58 vapier Exp $
+
+  03 Jun 2015; Mike Frysinger <vapier@gentoo.org>
+  open-vm-tools-2013.09.16.1328054-r2.ebuild,
+  open-vm-tools-2013.09.16.1328054-r3.ebuild,
+  open-vm-tools-9.10.0_p2476743.ebuild, open-vm-tools-9.4.0.1280544.ebuild:
+  Update HOMEPAGE.
 
   08 May 2015; Mike Gilbert <floppym@gentoo.org> files/9.10.0-vgauth.patch:
   Update patch.

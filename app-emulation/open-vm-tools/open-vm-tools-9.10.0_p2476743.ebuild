@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.10.0_p2476743.ebuild,v 1.3 2015/05/08 01:01:39 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.10.0_p2476743.ebuild,v 1.4 2015/06/03 16:13:58 vapier Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit eutils multilib pam user versionator flag-o-matic systemd toolchain-func
 MY_P="${PN}-${PV/_p/-}"
 
 DESCRIPTION="Opensourced tools for VMware guests"
-HOMEPAGE="http://open-vm-tools.sourceforge.net/"
+HOMEPAGE="https://github.com/vmware/open-vm-tools"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"

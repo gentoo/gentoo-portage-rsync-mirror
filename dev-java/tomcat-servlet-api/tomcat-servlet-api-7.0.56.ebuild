@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-7.0.59.ebuild,v 1.2 2015/06/03 16:28:19 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-7.0.56.ebuild,v 1.7 2015/06/03 16:28:19 monsieurp Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="source"
@@ -25,8 +25,9 @@ S="${WORKDIR}/${MY_P}/"
 
 java_prepare() {
 	cp "${FILESDIR}/${SLOT}-build.xml" build.xml || die "Could not replace build.xml"
-	rm -fR */*/build.xml ||die
-	find "${S}" '(' -name '*.class' -o -name '*.jar' ')' -exec rm -frv {} + || die
+	rm -fR */*/build.xml
+	einfo "Removing bundled jars and classes"
+	find "${S}" '(' -name '*.class' -o -name '*.jar' ')' -exec rm -frv {} +
 }
 
 src_install() {

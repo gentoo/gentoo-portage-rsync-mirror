@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.44.ebuild,v 1.2 2015/06/03 16:28:19 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/tomcat-servlet-api-6.0.41.ebuild,v 1.7 2015/06/03 16:28:19 monsieurp Exp $
 
 EAPI="5"
 JAVA_PKG_IUSE="source"
@@ -18,8 +18,8 @@ SLOT="2.5"
 KEYWORDS="amd64 ~arm ~ia64 ppc ppc64 x86 ~amd64-fbsd ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-DEPEND=">=virtual/jdk-1.6"
-RDEPEND=">=virtual/jre-1.6"
+DEPEND=">=virtual/jdk-1.5"
+RDEPEND=">=virtual/jre-1.5"
 
 S="${WORKDIR}/${MY_P}/"
 

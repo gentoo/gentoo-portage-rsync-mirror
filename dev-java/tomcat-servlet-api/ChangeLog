@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/tomcat-servlet-api
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.185 2015/06/03 14:57:43 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-servlet-api/ChangeLog,v 1.186 2015/06/03 16:28:19 monsieurp Exp $
+
+*tomcat-servlet-api-7.0.56 (03 Jun 2015)
+*tomcat-servlet-api-6.0.43 (03 Jun 2015)
+*tomcat-servlet-api-7.0.57 (03 Jun 2015)
+*tomcat-servlet-api-6.0.41 (03 Jun 2015)
+
+  03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +tomcat-servlet-api-6.0.41.ebuild, +tomcat-servlet-api-6.0.43.ebuild,
+  +tomcat-servlet-api-7.0.56.ebuild, +tomcat-servlet-api-7.0.57.ebuild,
+  tomcat-servlet-api-6.0.44.ebuild, tomcat-servlet-api-7.0.59.ebuild,
+  tomcat-servlet-api-8.0.23.ebuild:
+  Restore vulnerable ebuilds until security team stabilise the the new version.
+  See bug 549536.
 
   03 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
   -tomcat-servlet-api-7.0.56.ebuild, -tomcat-servlet-api-7.0.57.ebuild:

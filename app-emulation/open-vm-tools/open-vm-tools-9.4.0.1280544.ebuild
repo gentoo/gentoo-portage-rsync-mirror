@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.4.0.1280544.ebuild,v 1.1 2013/10/19 23:14:31 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/open-vm-tools-9.4.0.1280544.ebuild,v 1.2 2015/06/03 16:13:58 vapier Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ MY_PV="$(replace_version_separator 3 '-')"
 MY_P="${PN}-${MY_PV}"
 
 DESCRIPTION="Opensourced tools for VMware guests"
-HOMEPAGE="http://open-vm-tools.sourceforge.net/"
+HOMEPAGE="https://github.com/vmware/open-vm-tools"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
