@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.459 2015/06/03 07:35:22 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.460 2015/06/03 18:51:12 mattst88 Exp $
+
+  03 Jun 2015; Matt Turner <mattst88@gentoo.org> dhcpcd-6.9.0.ebuild:
+  alpha stable, bug 551010.
 
   03 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> dhcpcd-6.9.0.ebuild:
   x86 stable wrt bug #551010

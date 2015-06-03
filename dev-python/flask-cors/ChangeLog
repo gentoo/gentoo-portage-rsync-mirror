@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/flask-cors
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-cors/ChangeLog,v 1.4 2014/10/02 15:02:50 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flask-cors/ChangeLog,v 1.5 2015/06/03 18:34:43 jlec Exp $
+
+  03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   02 Oct 2014; Ian Delaney <idella4@gentoo.org> flask-cors-1.9.0.ebuild:
   add missed dep for doc build
