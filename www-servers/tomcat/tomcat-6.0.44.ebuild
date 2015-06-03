@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.43.ebuild,v 1.1 2015/02/10 12:17:43 fordfrog Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-6.0.44.ebuild,v 1.1 2015/06/03 14:41:12 monsieurp Exp $
 
-EAPI=4
+EAPI=5
 
 JAVA_PKG_IUSE="source test"
 
@@ -24,15 +24,13 @@ RESTRICT="test"
 ECJ_SLOT="3.7"
 SAPI_SLOT="2.5"
 
-COMMON_DEP="
-	dev-java/eclipse-ecj:${ECJ_SLOT}
-	~dev-java/tomcat-servlet-api-${PV}
-	extra-webapps? ( dev-java/jakarta-jstl:0 )"
-RDEPEND="${COMMON_DEP}
-	!<dev-java/tomcat-native-1.1.20
-	>=virtual/jre-1.5"
-DEPEND="${COMMON_DEP}
-	>=virtual/jdk-1.5
+CDEPEND="dev-java/eclipse-ecj:${ECJ_SLOT}
+	dev-java/tomcat-servlet-api:2.5"
+RDEPEND="${CDEPEND}
+	>=virtual/jre-1.6
+	!<dev-java/tomcat-native-1.1.20"
+DEPEND="${CDEPEND}
+	>=virtual/jdk-1.6
 	>=dev-java/ant-core-1.8.1:0
 	test? (
 		dev-java/ant-junit:0
@@ -92,11 +90,10 @@ src_install() {
 	java-pkg_dojar output/build/lib/*.jar
 
 	# so we don't have to call java-config with --with-dependencies, which might
-	# bring in more jars then actually desired.
+	# bring in more jars than actually desired.
 	java-pkg_addcp "$(java-pkg_getjars eclipse-ecj-${ECJ_SLOT},tomcat-servlet-api-${SAPI_SLOT})"
 
 	dodoc RELEASE-NOTES RUNNING.txt
-	#use doc && java-pkg_dojavadoc output/dist/webapps/docs/api
 	use source && java-pkg_dosrc java/*
 
 	### Webapps ###
