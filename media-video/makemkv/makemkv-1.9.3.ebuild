@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.9.2.ebuild,v 1.1 2015/04/10 09:27:52 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/makemkv/makemkv-1.9.3.ebuild,v 1.1 2015/06/04 21:02:21 chewi Exp $
 
 EAPI=5
 inherit eutils gnome2-utils multilib flag-o-matic
@@ -8,7 +8,7 @@ inherit eutils gnome2-utils multilib flag-o-matic
 MY_P=makemkv-oss-${PV}
 MY_PB=makemkv-bin-${PV}
 
-DESCRIPTION="Tool for ripping and streaming Blu-Ray, HD-DVD and DVD discs"
+DESCRIPTION="Tool for ripping and streaming Blu-ray, HD-DVD and DVD discs"
 HOMEPAGE="http://www.makemkv.com/"
 SRC_URI="http://www.makemkv.com/download/${MY_P}.tar.gz
 	http://www.makemkv.com/download/${MY_PB}.tar.gz"
@@ -52,7 +52,7 @@ src_configure() {
 }
 
 src_compile() {
-	emake GCC="$(tc-getCC) ${CFLAGS} ${LDFLAGS}" || die "Make failed!"
+	emake GCC="$(tc-getCC) ${CFLAGS} ${LDFLAGS}"
 }
 
 src_install() {

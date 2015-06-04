@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/perl-Module-CoreList-5.201.505.200.ebuild,v 1.1 2015/06/04 15:27:53 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-CoreList/perl-Module-CoreList-5.201.505.200-r1.ebuild,v 1.1 2015/06/04 21:31:15 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,5 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE=""
 
 RDEPEND="
-	|| ( =dev-lang/perl-5.20.2* ~perl-core/${PN#perl-}-${PV} )
-	!<perl-core/${PN#perl-}-${PV}
-	!>perl-core/${PN#perl-}-${PV}-r999
+	~perl-core/${PN#perl-}-${PV}
 "

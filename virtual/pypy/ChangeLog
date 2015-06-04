@@ -1,6 +1,11 @@
 # ChangeLog for virtual/pypy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/ChangeLog,v 1.16 2015/04/12 16:13:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/pypy/ChangeLog,v 1.17 2015/06/04 21:19:46 mgorny Exp $
+
+*pypy-2.6.0 (04 Jun 2015)
+
+  04 Jun 2015; Michał Górny <mgorny@gentoo.org> +pypy-2.6.0.ebuild:
+  Version bump (p.masked).
 
 *pypy-2.5.1 (12 Apr 2015)
 
