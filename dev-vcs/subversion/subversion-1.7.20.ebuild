@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.20.ebuild,v 1.6 2015/06/02 05:05:28 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/subversion-1.7.20.ebuild,v 1.7 2015/06/04 19:02:30 kensington Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -40,7 +40,7 @@ COMMON_DEPEND=">=dev-db/sqlite-3.6.18[threadsafe(+)]
 RDEPEND="${COMMON_DEPEND}
 	apache2? ( www-servers/apache[apache2_modules_dav] )
 	java? ( >=virtual/jre-1.5 )
-	kde? ( kde-base/kwalletd )
+	kde? ( kde-apps/kwalletd:4 )
 	nls? ( virtual/libintl )
 	perl? ( dev-perl/URI )"
 # Note: ctypesgen doesn't need PYTHON_USEDEP, it's used once

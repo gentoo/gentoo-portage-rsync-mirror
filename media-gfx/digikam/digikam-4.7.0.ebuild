@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.7.0.ebuild,v 1.1 2015/02/21 10:43:45 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/digikam-4.7.0.ebuild,v 1.2 2015/06/04 19:03:59 kensington Exp $
 
 EAPI=5
 
@@ -29,18 +29,11 @@ SLOT="4"
 IUSE="addressbook debug doc gphoto2 mysql semantic-desktop +thumbnails video"
 
 CDEPEND="
-	|| (
-		(	kde-apps/kdebase-kioslaves:4
-			kde-apps/libkdcraw:4=
-			kde-apps/libkexiv2:4=
-			kde-apps/libkipi:4
-			kde-apps/marble:4=[plasma] )
-		( 	$(add_kdebase_dep kdebase-kioslaves)
-			kde-base/libkdcraw:4=
-			kde-base/libkexiv2:4=
-			$(add_kdebase_dep libkipi)
-			kde-base/marble:4=[plasma] )
-	)
+	kde-apps/kdebase-kioslaves:4
+	kde-apps/libkdcraw:4=
+	kde-apps/libkexiv2:4=
+	kde-apps/libkipi:4
+	kde-apps/marble:4=[plasma]
 	dev-qt/qtgui:4
 	media-libs/jasper
 	media-libs/lcms:2
@@ -64,14 +57,14 @@ CDEPEND="
 	)
 "
 RDEPEND="${CDEPEND}
-	|| ( kde-apps/kreadconfig:4 $(add_kdebase_dep kreadconfig) )
+	kde-apps/kreadconfig:4
 	media-plugins/kipi-plugins
 	video? (
 		|| (
 			kde-apps/ffmpegthumbs:4
 			kde-apps/mplayerthumbs:4
-			$(add_kdebase_dep mplayerthumbs)
-			$(add_kdebase_dep ffmpegthumbs)
+			$(add_kdeapps_dep mplayerthumbs)
+			$(add_kdeapps_dep ffmpegthumbs)
 		)
 	)
 "

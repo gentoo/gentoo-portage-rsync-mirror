@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.478 2015/02/16 19:46:54 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.479 2015/06/04 19:04:14 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> amarok-2.8.0-r3.ebuild:
+  Move various kde-base packages to kde-apps.
 
   16 Feb 2015; Johannes Huber <johu@gentoo.org> -amarok-2.8.0.ebuild:
   Remove old.

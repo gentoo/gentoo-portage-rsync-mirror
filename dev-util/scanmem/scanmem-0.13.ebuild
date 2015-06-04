@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/scanmem-0.13.ebuild,v 1.1 2012/09/20 11:08:39 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scanmem/scanmem-0.13.ebuild,v 1.2 2015/06/04 19:02:21 kensington Exp $
 
 EAPI=4
 PYTHON_DEPEND="gui? 2"
@@ -20,7 +20,7 @@ DEPEND="sys-libs/readline"
 RDEPEND="${DEPEND}
 	gui? (
 		dev-python/pygtk:2
-		kde? ( kde-base/kdesu )
+		kde? ( kde-apps/kdesu )
 		!kde? ( x11-libs/gksu )
 	)"
 

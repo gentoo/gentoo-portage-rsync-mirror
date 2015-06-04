@@ -1,6 +1,9 @@
 # ChangeLog for www-client/qupzilla
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.57 2015/03/29 13:02:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/ChangeLog,v 1.58 2015/06/04 19:06:11 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> qupzilla-1.8.6.ebuild:
+  Move various kde-base packages to kde-apps.
 
   29 Mar 2015; Ben de Groot <yngwin@gentoo.org> qupzilla-1.8.6.ebuild:
   Ebuild improvements contributed by Nikoli: more precise deps, and epatch_user

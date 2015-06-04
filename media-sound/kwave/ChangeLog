@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/kwave
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.40 2015/01/10 10:52:08 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kwave/ChangeLog,v 1.41 2015/06/04 19:04:15 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> kwave-0.8.10.ebuild,
+  kwave-0.8.12.ebuild, kwave-0.8.99.ebuild:
+  Move various kde-base packages to kde-apps.
 
 *kwave-0.8.99 (10 Jan 2015)
 

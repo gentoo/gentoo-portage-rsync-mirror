@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.6 2015/03/22 13:12:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.11.3d-r3.ebuild,v 1.7 2015/06/04 19:04:08 kensington Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="
 	)
 	npp? (
 		dev-libs/dbus-glib
-		$(add_kdebase_dep kreadconfig)
+		$(add_kdeapps_dep kreadconfig)
 		>=x11-libs/gtk+-2.10.14:2
 		www-plugins/adobe-flash
 	)

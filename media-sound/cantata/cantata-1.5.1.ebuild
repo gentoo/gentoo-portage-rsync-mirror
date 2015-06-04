@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-1.5.1.ebuild,v 1.2 2015/04/02 17:07:36 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cantata/cantata-1.5.1.ebuild,v 1.3 2015/06/04 19:04:14 kensington Exp $
 
 EAPI=5
 
@@ -30,10 +30,10 @@ REQUIRED_USE="
 RDEPEND="
 	sys-libs/zlib
 	x11-libs/libX11
-	|| ( kde-apps/oxygen-icons $(add_kdebase_dep oxygen-icons) )
+	kde-apps/oxygen-icons
 	cdda? ( media-sound/cdparanoia )
 	cddb? ( media-libs/libcddb )
-	kde? ( $(add_kdebase_dep kwalletd) )
+	kde? ( $(add_kdeapps_dep kwalletd) )
 	lame? ( media-sound/lame )
 	mtp? ( media-libs/libmtp )
 	musicbrainz? ( media-libs/musicbrainz:5 )

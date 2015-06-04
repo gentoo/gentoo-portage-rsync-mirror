@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.5.ebuild,v 1.7 2014/11/15 02:37:39 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.5.ebuild,v 1.8 2015/06/04 19:01:21 kensington Exp $
 
 EAPI=4
 
@@ -17,7 +17,7 @@ IUSE="dbus qt3support"
 
 DEPEND="
 	~dev-qt/qtgui-${PV}[aqua=,debug=,qt3support=]
-	!kde-base/phonon-kde
+	!kde-apps/phonon-kde
 	!kde-base/phonon-xine
 	!media-libs/phonon
 	!media-sound/phonon

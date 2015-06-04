@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/lastfm-desktop-2.1.36.ebuild,v 1.3 2014/03/27 07:16:01 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lastfm-desktop/lastfm-desktop-2.1.36.ebuild,v 1.4 2015/06/04 19:04:15 kensington Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	media-libs/libgpod
 	media-libs/liblastfm[fingerprint]
 	sys-libs/zlib
-	|| ( dev-qt/qtphonon:4 kde-base/phonon-kde:4 )"
+	|| ( dev-qt/qtphonon:4 kde-apps/phonon-kde:4 )"
 DEPEND="${RDEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-missing-cast.patch )

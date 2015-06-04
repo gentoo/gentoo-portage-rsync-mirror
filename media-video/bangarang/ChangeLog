@@ -1,6 +1,9 @@
 # ChangeLog for media-video/bangarang
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.20 2015/04/02 14:20:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/ChangeLog,v 1.21 2015/06/04 19:04:08 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> bangarang-2.1-r2.ebuild:
+  Move various kde-base packages to kde-apps.
 
   02 Apr 2015; Michael Palimaka <kensington@gentoo.org> bangarang-2.1-r2.ebuild:
   Remove stray gitorious reference wrt bug #544856.

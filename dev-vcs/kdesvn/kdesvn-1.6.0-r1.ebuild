@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0-r1.ebuild,v 1.5 2014/08/10 21:23:25 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/kdesvn/kdesvn-1.6.0-r1.ebuild,v 1.6 2015/06/04 19:02:30 kensington Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ DEPEND="
 	dev-qt/qtsql:4[sqlite]
 "
 RDEPEND="${DEPEND}
-	!kde-base/kdesdk-kioslaves:4[subversion(+)]
+	!kde-apps/kdesdk-kioslaves:4[subversion(+)]
 "
 
 PATCHES=( "${FILESDIR}/${P}-bug-address.patch" )

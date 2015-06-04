@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kmplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.167 2015/03/22 13:12:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/ChangeLog,v 1.168 2015/06/04 19:04:08 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  kmplayer-0.11.3d-r3.ebuild:
+  Move various kde-base packages to kde-apps.
 
   22 Mar 2015; Johannes Huber <johu@gentoo.org> kmplayer-0.11.3d-r3.ebuild:
   Update HOMEPAGE, bug #544074.

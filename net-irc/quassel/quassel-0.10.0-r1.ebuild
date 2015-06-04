@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.9 2015/03/29 14:26:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/quassel/quassel-0.10.0-r1.ebuild,v 1.10 2015/06/04 19:05:10 kensington Exp $
 
 EAPI=5
 
@@ -35,7 +35,7 @@ GUI_RDEPEND="
 	)
 	kde? (
 		kde-base/kdelibs:4
-		|| ( kde-apps/oxygen-icons kde-base/oxygen-icons:4 )
+		kde-apps/oxygen-icons
 		ayatana? ( kde-misc/plasma-widget-message-indicator )
 	)
 	phonon? ( || ( media-libs/phonon[qt4] dev-qt/qtphonon:4 ) )

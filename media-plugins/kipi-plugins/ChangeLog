@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/kipi-plugins
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.180 2015/05/23 20:17:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.181 2015/06/04 19:07:45 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  kipi-plugins-4.10.0.ebuild, kipi-plugins-4.4.0.ebuild,
+  kipi-plugins-4.7.0.ebuild:
+  Move various kde-base packages to kde-apps.
 
   23 May 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   kipi-plugins-4.10.0.ebuild, +files/kipi-plugins-4.10.0-jpeg.patch:

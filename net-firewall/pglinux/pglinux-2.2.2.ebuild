@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.2.ebuild,v 1.6 2015/03/31 12:19:54 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/pglinux/pglinux-2.2.2.ebuild,v 1.7 2015/06/04 19:04:47 kensington Exp $
 
 EAPI=4
 
@@ -26,7 +26,7 @@ COMMON_DEPEND="
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4
 		dev-qt/qtgui:4
-		|| ( kde-base/kdesu x11-libs/gksu x11-misc/ktsuss )
+		|| ( kde-apps/kdesu x11-libs/gksu x11-misc/ktsuss )
 	)"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig

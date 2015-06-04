@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/nuvola
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.20 2009/10/14 17:15:03 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nuvola/ChangeLog,v 1.21 2015/06/04 19:06:19 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> nuvola-1.0-r1.ebuild:
+  Move various kde-base packages to kde-apps.
 
   14 Oct 2009; Samuli Suominen <ssuominen@gentoo.org> nuvola-1.0-r1.ebuild:
   Block =kde-base/kdeartwork-iconthemes-4* wrt #250898.
@@ -68,4 +71,3 @@
   30 Apr 2004; Dominik Stadler <centic@gentoo.org> +metadata.xml,
   +nuvola-1.0_beta.ebuild:
   New ebuild, taken from Bug 24590, but modified somewhat to fit.
-

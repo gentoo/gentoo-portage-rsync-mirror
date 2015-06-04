@@ -1,6 +1,9 @@
 # ChangeLog for www-client/rekonq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.92 2015/02/14 17:03:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/rekonq/ChangeLog,v 1.93 2015/06/04 19:06:10 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> rekonq-2.4.2-r1.ebuild:
+  Move various kde-base packages to kde-apps.
 
   14 Feb 2015; Johannes Huber <johu@gentoo.org> -rekonq-2.4.2.ebuild:
   Remove old.

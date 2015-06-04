@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/subversion
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.237 2015/06/02 05:05:28 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/subversion/ChangeLog,v 1.238 2015/06/04 19:02:30 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  subversion-1.7.19.ebuild, subversion-1.7.20.ebuild, subversion-1.8.11.ebuild,
+  subversion-1.8.13-r1.ebuild, subversion-1.8.13-r2.ebuild:
+  Move various kde-base packages to kde-apps.
 
   02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> subversion-1.7.20.ebuild,
   subversion-1.8.13-r1.ebuild:

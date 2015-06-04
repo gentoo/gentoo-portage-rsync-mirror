@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/wicd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.157 2015/05/17 20:12:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/ChangeLog,v 1.158 2015/06/04 19:05:22 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> wicd-1.7.2.4-r3.ebuild,
+  wicd-1.7.3.ebuild:
+  Move various kde-base packages to kde-apps.
 
   17 May 2015; Pacho Ramos <pacho@gentoo.org> wicd-1.7.3.ebuild:
   ppc64 stable wrt bug #541794

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.5.ebuild,v 1.2 2014/10/12 10:06:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.5.ebuild,v 1.3 2015/06/04 19:03:59 kensington Exp $
 
 EAPI=5
 
@@ -24,9 +24,9 @@ DEPEND="
 	media-libs/phonon[qt4]
 	virtual/jpeg:0
 	exif? ( >=media-gfx/exiv2-0.17 )
-	geolocation? ( $(add_kdebase_dep marble) )
-	kipi? ( $(add_kdebase_dep libkipi '' 4.9.58) )
-	raw? ( $(add_kdebase_dep libkdcraw '' 4.9.58) )
+	geolocation? ( $(add_kdeapps_dep marble) )
+	kipi? ( $(add_kdeapps_dep libkipi '' 4.9.58) )
+	raw? ( $(add_kdeapps_dep libkdcraw '' 4.9.58) )
 "
 RDEPEND="${DEPEND}
 	|| ( media-video/mplayer2 media-video/mplayer )

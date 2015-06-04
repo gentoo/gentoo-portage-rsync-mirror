@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.7.1.ebuild,v 1.1 2015/02/10 19:49:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevplatform/kdevplatform-1.7.1.ebuild,v 1.2 2015/06/04 19:02:21 kensington Exp $
 
 EAPI=5
 
@@ -39,7 +39,7 @@ DEPEND="${COMMON_DEPEND}
 	classbrowser? ( dev-libs/boost )
 "
 RDEPEND="${COMMON_DEPEND}
-	konsole? ( $(add_kdebase_dep konsole) )
+	konsole? ( $(add_kdeapps_dep konsole) )
 	cvs? ( dev-vcs/cvs )
 	!<dev-util/kdevelop-${KDEVELOP_VERSION}:4
 "

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwag
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.30 2014/07/14 23:08:43 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwag/ChangeLog,v 1.31 2015/06/04 19:04:40 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> netwag-5.39.0.ebuild:
+  Move various kde-base packages to kde-apps.
 
   14 Jul 2014; Jeroen Roovers <jer@gentoo.org> netwag-5.39.0.ebuild:
   EAPI bump. Use dohtml.

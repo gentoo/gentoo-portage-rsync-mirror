@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.6.ebuild,v 1.5 2015/03/29 13:02:16 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/qupzilla/qupzilla-1.8.6.ebuild,v 1.6 2015/06/04 19:06:11 kensington Exp $
 
 EAPI=5
 MY_PN="QupZilla"
@@ -27,7 +27,7 @@ RDEPEND="dev-libs/openssl:0
 	x11-libs/libX11
 	gnome-keyring? ( gnome-base/gnome-keyring )
 	kde? ( kde-base/kdelibs:4
-		kde-base/kwalletd:4 )
+		kde-apps/kwalletd:4 )
 	qt4? ( >=dev-qt/qtcore-4.8:4
 		>=dev-qt/qtgui-4.8:4
 		>=dev-qt/qtscript-4.8:4

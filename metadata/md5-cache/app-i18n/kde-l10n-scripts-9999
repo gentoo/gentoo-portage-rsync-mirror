@@ -1,10 +1,10 @@
 DEFINED_PHASES=prepare unpack
-DEPEND=app-crypt/md5deep app-i18n/pology app-shells/bash dev-vcs/subversion kde-base/poxml[extras] dev-vcs/git
+DEPEND=app-crypt/md5deep app-i18n/pology app-shells/bash dev-vcs/subversion kde-apps/poxml[extras] dev-vcs/git
 DESCRIPTION=Set of scripts to manage KDE translation files
 EAPI=5
 HOMEPAGE=https://github.com/vpelcak/kde-scripts
 LICENSE=LGPL-3
-RDEPEND=app-crypt/md5deep app-i18n/pology app-shells/bash dev-vcs/subversion kde-base/poxml[extras]
+RDEPEND=app-crypt/md5deep app-i18n/pology app-shells/bash dev-vcs/subversion kde-apps/poxml[extras]
 SLOT=0
 _eclasses_=git-2	e28f0d8a9b321431b1e699782851b827
-_md5_=e97311f79b381794dc5febc74a997f02
+_md5_=a296640b9a7f1e470949a840c0d5bde9

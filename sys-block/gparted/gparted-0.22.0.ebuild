@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.22.0.ebuild,v 1.1 2015/05/17 07:52:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/gparted/gparted-0.22.0.ebuild,v 1.2 2015/06/04 19:05:44 kensington Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 "
 RDEPEND="${COMMON_DEPEND}
 	!policykit? (
-		kde? ( kde-base/kdesu ) )
+		kde? ( kde-apps/kdesu ) )
 	policykit? ( sys-auth/polkit )
 
 	>=sys-apps/util-linux-2.20

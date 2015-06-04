@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/kde-l10n-scripts-9999.ebuild,v 1.7 2015/02/28 17:19:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-l10n-scripts/kde-l10n-scripts-9999.ebuild,v 1.8 2015/06/04 19:02:18 kensington Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	app-i18n/pology
 	app-shells/bash
 	dev-vcs/subversion
-	kde-base/poxml[extras]
+	kde-apps/poxml[extras]
 "
 DEPEND="${RDEPEND}"
 

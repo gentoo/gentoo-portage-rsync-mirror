@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.6-r1.ebuild,v 1.7 2015/06/02 12:16:44 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/qtphonon-4.8.6-r1.ebuild,v 1.8 2015/06/04 19:01:21 kensington Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ DEPEND="
 		>=media-plugins/gst-plugins-meta-0.10-r9:0.10[${MULTILIB_USEDEP}]
 	)
 	dbus? ( ~dev-qt/qtdbus-${PV}[aqua=,debug=,${MULTILIB_USEDEP}] )
-	!kde-base/phonon-kde
+	!kde-apps/phonon-kde
 	!media-libs/phonon
 "
 RDEPEND="${DEPEND}"

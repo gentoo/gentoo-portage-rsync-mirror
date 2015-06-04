@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.11 2014/08/02 18:18:19 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wicd/wicd-1.7.2.4-r3.ebuild,v 1.12 2015/06/04 19:05:22 kensington Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="${PYTHON_DEPS}
 		|| (
 			x11-misc/ktsuss
 			x11-libs/gksu
-			kde-base/kdesu
+			kde-apps/kdesu
 			)
 	)
 	|| (

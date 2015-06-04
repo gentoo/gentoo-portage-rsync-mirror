@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1-r2.ebuild,v 1.5 2015/04/02 14:20:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bangarang/bangarang-2.1-r2.ebuild,v 1.6 2015/06/04 19:04:08 kensington Exp $
 
 EAPI=5
 
@@ -21,8 +21,8 @@ IUSE="debug"
 RDEPEND="
 	dev-libs/soprano
 	$(add_kdebase_dep kdelibs 'nepomuk')
-	$(add_kdebase_dep nepomuk)
-	$(add_kdebase_dep audiocd-kio)
+	$(add_kdeapps_dep nepomuk)
+	$(add_kdeapps_dep audiocd-kio)
 	media-libs/taglib
 	media-libs/phonon[qt4]
 	dev-qt/qtscript:4

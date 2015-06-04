@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/lxqt-meta-0.9.0-r2.ebuild,v 1.2 2015/04/15 07:04:51 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/lxqt-base/lxqt-meta/lxqt-meta-0.9.0-r2.ebuild,v 1.3 2015/06/04 19:03:27 kensington Exp $
 
 EAPI=5
 
@@ -28,7 +28,7 @@ RDEPEND="
 	virtual/ttf-fonts
 	admin? ( ~lxqt-base/lxqt-admin-${PV} )
 	filemanager? ( ~x11-misc/pcmanfm-qt-${PV} )
-	icons? ( oxygen? ( kde-base/oxygen-icons )
+	icons? ( oxygen? ( kde-apps/oxygen-icons )
 		!oxygen? ( virtual/freedesktop-icon-theme ) )
 	lightdm? ( x11-misc/lightdm )
 	lximage? ( media-gfx/lximage-qt )
@@ -41,7 +41,7 @@ RDEPEND="
 	sddm? ( >=x11-misc/sddm-0.10.0 )
 	ssh-askpass? ( ~lxqt-base/lxqt-openssh-askpass-${PV} )"
 
-# Note: we prefer kde-base/oxygen-icons over other icon sets, as the initial
+# Note: we prefer kde-apps/oxygen-icons over other icon sets, as the initial
 # install expects oxygen icons, until the user specifies otherwise (bug 543380)
 
 S="${WORKDIR}"

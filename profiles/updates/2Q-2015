@@ -86,7 +86,6 @@ move kde-base/kdemultimedia-meta kde-apps/kdemultimedia-meta
 move kde-base/kdenetwork-filesharing kde-apps/kdenetwork-filesharing
 move kde-base/kdenetwork-meta kde-apps/kdenetwork-meta
 move kde-base/kdepasswd kde-apps/kdepasswd
-move kde-base/kdepimlibs kde-apps/kdepimlibs
 move kde-base/kdesdk-kioslaves kde-apps/kdesdk-kioslaves
 move kde-base/kdesdk-meta kde-apps/kdesdk-meta
 move kde-base/kdesdk-strigi-analyzer kde-apps/kdesdk-strigi-analyzer

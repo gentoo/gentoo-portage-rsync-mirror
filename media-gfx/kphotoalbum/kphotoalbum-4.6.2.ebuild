@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.6.2.ebuild,v 1.1 2015/05/25 11:07:34 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/kphotoalbum/kphotoalbum-4.6.2.ebuild,v 1.2 2015/06/04 19:03:59 kensington Exp $
 
 EAPI=5
 
@@ -27,10 +27,10 @@ COMMON_DEPEND="
 	virtual/jpeg:0
 	exif? ( >=media-gfx/exiv2-0.17 )
 	face? ( >=media-libs/libkface-4.7.0 )
-	geolocation? ( $(add_kdebase_dep marble) )
-	kipi? ( $(add_kdebase_dep libkipi '' 4.9.58) )
+	geolocation? ( $(add_kdeapps_dep marble) )
+	kipi? ( $(add_kdeapps_dep libkipi '' 4.9.58) )
 	map? ( >=media-libs/libkgeomap-4.7.0 )
-	raw? ( $(add_kdebase_dep libkdcraw '' 4.9.58) )
+	raw? ( $(add_kdeapps_dep libkdcraw '' 4.9.58) )
 "
 DEPEND="${COMMON_DEPEND}
 	sys-devel/gettext

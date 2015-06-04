@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.9.4.ebuild,v 1.2 2014/07/04 19:40:05 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/spacefm/spacefm-0.9.4.ebuild,v 1.3 2015/06/04 19:06:03 kensington Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ pkg_postinst() {
 	elog "To perform as root functionality you need one of the following:"
 	elog "  x11-misc/ktsuss"
 	elog "  x11-libs/gksu"
-	elog "  kde-base/kdesu"
+	elog "  kde-apps/kdesu"
 	elog "Other optional dependencies:"
 	elog "  sys-apps/dbus"
 	elog "  sys-process/lsof (device processes)"

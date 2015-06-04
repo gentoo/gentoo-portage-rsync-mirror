@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-4.10.0.ebuild,v 1.1 2015/05/19 21:44:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkgeomap/libkgeomap-4.10.0.ebuild,v 1.2 2015/06/04 19:03:11 kensington Exp $
 
 EAPI=5
 
@@ -21,10 +21,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND="
-	||  (
-		( kde-apps/libkexiv2:4= kde-apps/marble:4=[kde,plasma] )
-		( kde-base/libkexiv2:4= kde-base/marble:4=[kde,plasma] )
-	)
+	kde-apps/libkexiv2:4=
+	kde-apps/marble:4=[kde,plasma]
 "
 RDEPEND="${DEPEND}"
 

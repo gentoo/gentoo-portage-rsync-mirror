@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r3.ebuild,v 1.7 2015/02/16 08:34:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-2.8.0-r3.ebuild,v 1.8 2015/06/04 19:04:14 kensington Exp $
 
 EAPI=5
 
@@ -39,8 +39,7 @@ fi
 COMMONDEPEND="
 	app-crypt/qca:2[qt4(+)]
 	$(add_kdebase_dep kdelibs 'nepomuk?,opengl?' 4.8.4)
-	|| ( kde-apps/kdebase-kioslaves:4
-		$(add_kdebase_dep kdebase-kioslaves) )
+	$(add_kdeapps_dep kdebase-kioslaves)
 	>=media-libs/taglib-1.7[asf,mp4]
 	>=media-libs/taglib-extras-1.0.1
 	sys-libs/zlib
@@ -50,16 +49,9 @@ COMMONDEPEND="
 	>=dev-qt/qtscript-4.8:4
 	>=x11-libs/qtscriptgenerator-0.1.0
 	cdda? (
-		|| (
-			(	kde-apps/libkcddb:4
-				kde-apps/libkcompactdisc:4
-				kde-apps/audiocd-kio:4
-			)
-			(	 $(add_kdebase_dep libkcddb)
-				$(add_kdebase_dep libkcompactdisc)
-				$(add_kdebase_dep audiocd-kio)
-			)
-		)
+		$(add_kdeapps_dep libkcddb)
+		$(add_kdeapps_dep libkcompactdisc)
+		$(add_kdeapps_dep audiocd-kio)
 	)
 	ipod? ( >=media-libs/libgpod-0.7.0[gtk] )
 	lastfm? ( >=media-libs/liblastfm-1.0.3 )
@@ -84,7 +76,7 @@ DEPEND="${COMMONDEPEND}
 RDEPEND="${COMMONDEPEND}
 	!media-sound/amarok-utils
 	|| ( kde-apps/phonon-kde:4
-		$(add_kdebase_dep phonon-kde) )
+		$(add_kdeapps_dep phonon-kde) )
 "
 
 PATCHES=(
