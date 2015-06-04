@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.72-r1.ebuild,v 1.1 2015/05/02 15:59:06 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/leptonica-1.72-r2.ebuild,v 1.1 2015/06/04 23:01:01 chewi Exp $
 
 EAPI=5
 
@@ -38,10 +38,6 @@ src_prepare() {
 			"${X}.html" > "${X}" || die 'awk failed'
 		rm -f -- "${X}.html"
 	done
-
-	# Don't spam /tmp.
-	sed -i -r 's/(#define\s+ADD_LEPTONICA_SUBDIR\s+)0/\11/' \
-		src/environ.h || die
 
 	autotools-utils_src_prepare
 }

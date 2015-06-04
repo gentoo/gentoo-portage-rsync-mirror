@@ -1,6 +1,19 @@
 # ChangeLog for media-libs/leptonica
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.37 2015/05/02 15:59:06 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/leptonica/ChangeLog,v 1.38 2015/06/04 23:01:01 chewi Exp $
+
+*leptonica-1.72-r2 (04 Jun 2015)
+
+  04 Jun 2015; James Le Cuirot <chewi@gentoo.org> +leptonica-1.72-r2.ebuild,
+  -leptonica-1.72-r1.ebuild:
+  Undo use of ADD_LEPTONICA_SUBDIR. I didn't realise this had any effect outside
+  of the test suite and it probably broke every other usage of the library.
+  Unfortunately the test suite spams tons of files to /tmp and intentionally
+  leaves them there. Setting ADD_LEPTONICA_SUBDIR at least confined the mess to
+  a single directory. Quite frankly, Leptonica should use something like glib
+  instead of badly reinventing the wheel. I will speak to upstream and at least
+  try to get it to respect TMPDIR, which would allow Portage to clean up the
+  mess.
 
 *leptonica-1.72-r1 (02 May 2015)
 
