@@ -1,6 +1,9 @@
 # ChangeLog for sci-libs/deap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/deap/ChangeLog,v 1.8 2015/04/08 18:49:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/deap/ChangeLog,v 1.9 2015/06/04 10:54:01 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> deap-0.9.1.ebuild,
   deap-1.0.0.ebuild:

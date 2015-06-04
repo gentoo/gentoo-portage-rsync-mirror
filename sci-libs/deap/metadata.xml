@@ -10,4 +10,7 @@
 	rediscover evolutionary algorithms. DEAP is the proof that evolutionary 
 	algorithms do **not** need to be neither complex or complicated.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">deap</remote-id>
+  </upstream>
 </pkgmetadata>

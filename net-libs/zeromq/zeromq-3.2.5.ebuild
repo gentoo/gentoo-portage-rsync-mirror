@@ -1,31 +1,30 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.3.ebuild,v 1.11 2015/06/04 10:58:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/zeromq-3.2.5.ebuild,v 1.1 2015/06/04 10:58:58 jlec Exp $
 
 EAPI=5
 
-inherit autotools eutils
+inherit autotools
 
 DESCRIPTION="ZeroMQ is a brokerless kernel"
 HOMEPAGE="http://www.zeromq.org/"
 SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 
 LICENSE="LGPL-3"
-SLOT="0"
-KEYWORDS="amd64 arm hppa ~ppc ~ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+SLOT="0/3"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="pgm test static-libs elibc_glibc"
 
 DEPEND="
 	|| ( sys-devel/gcc sys-devel/gcc-apple )
 	pgm? (
 		virtual/pkgconfig
-		=net-libs/openpgm-5.1.118
+		>=net-libs/openpgm-5.2
 	)
 	elibc_glibc? ( sys-apps/util-linux )"
 RDEPEND=""
 
 src_prepare() {
-	epatch "${FILESDIR}"/${P}-unused-variable.patch
 	einfo "Removing bundled OpenPGM library"
 	sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADERS/g' configure.in || die
 	rm -r "${S}"/foreign/openpgm/libpgm* || die

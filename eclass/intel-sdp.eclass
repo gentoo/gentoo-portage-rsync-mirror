@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.20 2015/06/04 10:22:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.21 2015/06/04 10:36:27 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -112,7 +112,7 @@
 # Full path to intel registry db
 INTEL_SDP_DB="${EROOT%/}"/opt/intel/intel-sdp-products.db
 
-inherit check-reqs multilib versionator
+inherit check-reqs eutils multilib versionator
 
 _INTEL_PV1=$(get_version_component_range 1)
 _INTEL_PV2=$(get_version_component_range 2)
@@ -445,9 +445,9 @@ intel-sdp_src_install() {
 	fi
 
 	if [[ -d "${INTEL_SDP_DIR}"/man ]]; then
-		ls "${INTEL_SDP_DIR}"/man/en_US/man1/* &> /dev/null &&
+		path_exists "${INTEL_SDP_DIR}"/man/en_US/man1/* && \
 			doman "${INTEL_SDP_DIR}"/man/en_US/man1/*
-		ls "${INTEL_SDP_DIR}"/man/man1/* &> /dev/null &&
+		path_exists "${INTEL_SDP_DIR}"/man/man1/* && \
 			doman "${INTEL_SDP_DIR}"/man/man1/*
 		has linguas_ja ${IUSE} && use linguas_ja && \
 			doman -i18n=ja_JP "${INTEL_SDP_DIR}"/man/ja_JP/man1/*
