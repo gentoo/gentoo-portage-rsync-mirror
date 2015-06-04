@@ -1,5 +1,5 @@
---- powerpc-utils-1.1.0.orig/Makefile	2006-03-28 14:40:10.000000000 -0600
-+++ powerpc-utils-1.1.0/Makefile	2006-04-19 14:44:55.000000000 -0500
+--- a/Makefile
++++ b/Makefile
 @@ -12,19 +12,12 @@
  TARBALL_FILES += $(FILES) Changelog
  

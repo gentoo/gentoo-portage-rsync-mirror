@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/librtas
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.20 2014/08/10 20:12:38 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/librtas/ChangeLog,v 1.21 2015/06/04 05:10:53 jer Exp $
+
+*librtas-1.3.13 (04 Jun 2015)
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> +librtas-1.3.13.ebuild:
+  Version bump.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> librtas-1.3.3.ebuild,
   librtas-1.3.5.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ibm-powerpc-utils
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.19 2013/07/21 08:27:21 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ibm-powerpc-utils/ChangeLog,v 1.20 2015/06/04 05:10:15 jer Exp $
+
+*ibm-powerpc-utils-1.2.25 (04 Jun 2015)
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org>
+  +ibm-powerpc-utils-1.2.25.ebuild,
+  files/ibm-powerpc-utils-1.1.0-remove-doc.patch, metadata.xml:
+  Version bump.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #88306
