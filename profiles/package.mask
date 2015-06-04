@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16546 2015/06/04 06:11:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16550 2015/06/04 15:58:54 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,24 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (04 Jun 2015)
+# Perl 5.22 version bump in progress. Mask until everything is finishehd.
+=dev-lang/perl-5.22*
+=virtual/perl-Archive-Tar-2.40.0
+=virtual/perl-Attribute-Handlers-0.970.0
+
+# Michał Górny <mgorny@gentoo.org> (04 Jun 2015)
+# New version of PyPy. Masked for testing and binary package build.
+~dev-python/pypy-2.6.0
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (04 Jun 2015)
+# Mask Perl 5.20.1 for removal.
+=dev-lang/perl-5.20.1-r4
+=virtual/perl-Storable-2.490.0
+=virtual/perl-Module-CoreList-5.20.1
+=virtual/perl-File-Spec-3.480.0
+=virtual/perl-CPAN-2.0.5
 
 # Pawel Hajdan, Jr. <phajdan.jr@gentoo.org> (01 Jun 2015)
 # Dev channel releases are only for people who are developers or want more

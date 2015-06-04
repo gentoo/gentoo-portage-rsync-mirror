@@ -1,10 +1,22 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10036 2015/06/04 15:07:30 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10040 2015/06/04 15:58:54 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Attribute::Handlers to Perl 5.22 mask
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Start with Perl version bump, mask work in progress
+
+  04 Jun 2015; Michał Górny <mgorny@gentoo.org> package.mask:
+  Mask new PyPy for testing & binpkg build.
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Mask Perl 5.20.1 for removal.
 
   04 Jun 2015; Michael Palimaka <kensington@gentoo.org> categories:
   Introduce new kde-apps category.

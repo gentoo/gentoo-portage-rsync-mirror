@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Archive-Tar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.67 2014/07/24 17:10:31 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Archive-Tar/ChangeLog,v 1.68 2015/06/04 15:54:19 dilfridge Exp $
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Archive-Tar-1.900.0-r1.ebuild, Archive-Tar-1.920.0.ebuild:
+  Remove old
 
 *Archive-Tar-1.900.0-r1 (24 Jul 2014)
 
