@@ -9,4 +9,7 @@
   <longdescription>Syntax highlighting and autocompletion
 	  for the python interpreter
 	</longdescription>
+  <upstream>
+    <remote-id type="pypi">bpython</remote-id>
+  </upstream>
 </pkgmetadata>

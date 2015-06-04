@@ -12,4 +12,7 @@
   <use>
     <flag name="chaco">Enable interface for implementing qplot and ggplot like functionality using chaco</flag>
   </use>
+  <upstream>
+    <remote-id type="pypi">bokeh</remote-id>
+  </upstream>
 </pkgmetadata>

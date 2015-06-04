@@ -8,4 +8,7 @@
   <longdescription lang="en">
 This is a Python port of the Text::Unidecode Perl (<pkg>dev-perl/Text-Unidecode</pkg> module
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">Unidecode</remote-id>
+  </upstream>
 </pkgmetadata>

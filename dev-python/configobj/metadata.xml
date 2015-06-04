@@ -8,4 +8,7 @@
   use, with a straightforward programmer's interface and a simple syntax
   for config files.
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">configobj</remote-id>
+  </upstream>
 </pkgmetadata>

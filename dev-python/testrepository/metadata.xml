@@ -9,4 +9,7 @@
   <longdescription lang="en">
     A repository of test results.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">testrepository</remote-id>
+  </upstream>
 </pkgmetadata>

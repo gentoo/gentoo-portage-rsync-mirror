@@ -9,4 +9,7 @@
   <longdescription lang="en">
     Openstack Swift sync/backup utility
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">turbolift</remote-id>
+  </upstream>
 </pkgmetadata>

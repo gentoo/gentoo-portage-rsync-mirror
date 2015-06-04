@@ -14,4 +14,7 @@
 	dependency injection (provide tests with dependencies externally to the
 	test code itself, allowing easy testing in different situations).
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">testscenarios</remote-id>
+  </upstream>
 </pkgmetadata>
