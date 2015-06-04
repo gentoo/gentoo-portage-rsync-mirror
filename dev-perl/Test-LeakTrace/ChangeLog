@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-LeakTrace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LeakTrace/ChangeLog,v 1.8 2015/06/03 22:33:23 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LeakTrace/ChangeLog,v 1.9 2015/06/04 04:30:40 jer Exp $
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> Test-LeakTrace-0.150.0.ebuild:
+  Stable for HPPA PPC64 (bug #551118).
 
   03 Jun 2015; Matt Turner <mattst88@gentoo.org> Test-LeakTrace-0.150.0.ebuild:
   added ~mips, bug 551116.

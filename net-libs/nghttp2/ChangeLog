@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/nghttp2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/ChangeLog,v 1.1 2015/05/24 13:55:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/ChangeLog,v 1.2 2015/06/04 04:13:59 vapier Exp $
+
+  04 Jun 2015; Mike Frysinger <vapier@gentoo.org> nghttp2-0.7.15.ebuild,
+  nghttp2-1.0.1.ebuild:
+  Fix bashism in configure test #550962 by Mikael Magnusson.
 
 *nghttp2-9999 (24 May 2015)
 *nghttp2-1.0.1 (24 May 2015)

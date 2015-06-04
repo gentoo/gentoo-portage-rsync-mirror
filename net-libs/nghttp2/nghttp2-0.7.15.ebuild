@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/nghttp2-0.7.15.ebuild,v 1.1 2015/05/24 13:55:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/nghttp2-0.7.15.ebuild,v 1.2 2015/06/04 04:13:59 vapier Exp $
 
 # TODO: Add python support.
 
@@ -36,6 +36,12 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( >=dev-util/cunit-2.1[${MULTILIB_USEDEP}] )"
+
+src_prepare() {
+	sed -i \
+		-e '/test.*have_jansson/s:==:=:' \
+		configure || die #550962
+}
 
 multilib_src_configure() {
 	ECONF_SOURCE=${S} \
