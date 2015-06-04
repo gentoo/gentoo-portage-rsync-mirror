@@ -19,4 +19,7 @@ useful for text console application developers including:
 - Customizable layout for all widgets
 - Easy interface for creating HTML screen shots
 </longdescription>
+  <upstream>
+    <remote-id type="pypi">urwid</remote-id>
+  </upstream>
 </pkgmetadata>
