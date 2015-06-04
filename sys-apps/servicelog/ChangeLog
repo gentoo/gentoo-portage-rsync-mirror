@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/servicelog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/servicelog/ChangeLog,v 1.5 2013/07/21 08:27:33 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/servicelog/ChangeLog,v 1.6 2015/06/04 05:54:16 jer Exp $
+
+*servicelog-1.1.13 (04 Jun 2015)
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> +servicelog-1.1.13.ebuild:
+  Version bump.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #88306

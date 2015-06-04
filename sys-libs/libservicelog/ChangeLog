@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/libservicelog
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/ChangeLog,v 1.6 2013/07/21 08:28:15 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libservicelog/ChangeLog,v 1.7 2015/06/04 05:54:26 jer Exp $
+
+*libservicelog-1.1.15 (04 Jun 2015)
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> +libservicelog-1.1.15.ebuild,
+  files/libservicelog-1.1.11.patch:
+  Version bump.
 
   21 Jul 2013; Pacho Ramos <pacho@gentoo.org> metadata.xml:
   Cleanup due #88306
