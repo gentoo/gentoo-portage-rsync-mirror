@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.217 2015/05/29 05:24:37 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.218 2015/06/04 04:45:18 jer Exp $
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> amavisd-new-2.10.1-r1.ebuild:
+  Mark ~ppc64 (bug #531512).
 
   29 May 2015; Jack Morgan <jmorgan@gentoo.org> amavisd-new-2.8.1-r1.ebuild:
   sparc stable wrt bug #473794
