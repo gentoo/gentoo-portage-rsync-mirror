@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1053 2015/05/15 15:36:26 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.1054 2015/06/03 23:04:52 mrueg Exp $
+
+*kdelibs-4.14.9 (03 Jun 2015)
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +kdelibs-4.14.9.ebuild:
+  Version bump.
 
 *kdelibs-4.14.8 (15 May 2015)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kcheckpass
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.339 2015/05/15 15:53:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kcheckpass/ChangeLog,v 1.340 2015/06/03 23:04:52 mrueg Exp $
+
+*kcheckpass-4.11.20 (03 Jun 2015)
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +kcheckpass-4.11.20.ebuild:
+  Version bump.
 
 *kcheckpass-4.11.19 (15 May 2015)
 

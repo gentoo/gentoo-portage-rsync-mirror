@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/dulwich
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.89 2015/06/03 17:54:15 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/dulwich/ChangeLog,v 1.90 2015/06/03 23:21:42 mrueg Exp $
+
+*dulwich-0.10.1a (03 Jun 2015)
+
+  03 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +dulwich-0.10.1a.ebuild:
+  Version bump.
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml
