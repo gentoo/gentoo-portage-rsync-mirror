@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmametools/sdlmametools-0.148_p1.ebuild,v 1.4 2015/04/08 18:10:41 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/sdlmametools/sdlmametools-0.148_p1.ebuild,v 1.5 2015/06/04 16:36:38 mr_bones_ Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -116,7 +116,7 @@ src_compile() {
 src_install() {
 	for i in chdman jedutil ldresample ldverify regrep romcmp testkeys ; do
 		newgamesbin ${i} sdlmame-${i}
-		nonfatal newman src/osd/sdl/man/${i}.1 sdlmame-${i}.1
+		[[ -f src/osd/sdl/man/${i}.1 ]] && newman src/osd/sdl/man/${i}.1 sdlmame-${i}.1
 	done
 
 	prepgamesdirs

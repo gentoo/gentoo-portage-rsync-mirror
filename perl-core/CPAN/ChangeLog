@@ -1,6 +1,9 @@
 # ChangeLog for perl-core/CPAN
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN/ChangeLog,v 1.12 2014/04/24 17:44:05 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN/ChangeLog,v 1.13 2015/06/04 16:31:23 dilfridge Exp $
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> CPAN-2.0.0.ebuild:
+  Drop keywords
 
   24 Apr 2014; Mikle Kolyada <zlogene@gentoo.org> CPAN-2.0.0.ebuild:
   Add ~sparc keyword wrt bug #505156

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/CPAN-Meta-YAML
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.43 2014/07/25 21:27:39 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-YAML/ChangeLog,v 1.44 2015/06/04 16:48:30 dilfridge Exp $
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  CPAN-Meta-YAML-0.8.0-r1.ebuild:
+  Drop keywords
 
 *CPAN-Meta-YAML-0.8.0-r1 (25 Jul 2014)
 

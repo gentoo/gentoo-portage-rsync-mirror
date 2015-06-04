@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Carp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.23 2015/02/18 08:36:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Carp/ChangeLog,v 1.24 2015/06/04 16:54:35 dilfridge Exp $
+
+*perl-Carp-1.360.0 (04 Jun 2015)
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Carp-1.290.0-r1.ebuild, +perl-Carp-1.360.0.ebuild:
+  Add Perl 5.22 version, remove old
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Carp-1.330.100.ebuild:
   Stable for alpha, wrt bug #536790

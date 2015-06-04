@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/CPAN-Meta-Requirements
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-Requirements/ChangeLog,v 1.22 2014/07/25 21:26:12 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/CPAN-Meta-Requirements/ChangeLog,v 1.23 2015/06/04 16:44:41 dilfridge Exp $
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -CPAN-Meta-Requirements-2.122.0-r1.ebuild:
+  Remove old
 
 *CPAN-Meta-Requirements-2.122.0-r1 (25 Jul 2014)
 *CPAN-Meta-Requirements-2.125.0-r1 (25 Jul 2014)
