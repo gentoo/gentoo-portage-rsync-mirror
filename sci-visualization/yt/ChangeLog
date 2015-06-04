@@ -1,6 +1,9 @@
 # ChangeLog for sci-visualization/yt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/yt/ChangeLog,v 1.5 2015/01/14 13:05:39 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/yt/ChangeLog,v 1.6 2015/06/04 11:05:15 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *yt-3.1 (14 Jan 2015)
 

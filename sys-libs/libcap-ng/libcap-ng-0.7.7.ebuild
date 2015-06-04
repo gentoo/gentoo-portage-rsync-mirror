@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.7.7.ebuild,v 1.1 2015/05/28 01:15:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap-ng/libcap-ng-0.7.7.ebuild,v 1.2 2015/06/04 11:07:36 blueness Exp $
 
 EAPI=5
 
@@ -24,6 +24,8 @@ DEPEND="${RDEPEND}
 	sys-kernel/linux-headers
 	python? ( >=dev-lang/swig-2 )"
 
+RESTRICT="test"
+
 src_prepare() {
 	sed -i -e 's:AM_CONFIG_HEADER:AC_CONFIG_HEADERS:' configure.ac || die
 
@@ -33,16 +35,22 @@ src_prepare() {
 }
 
 src_configure() {
-	local myeconfargs=(
-		--without-python
-	)
-
 	# set up the library build
+        local myeconfargs=( --without-python --without-python3 )
 	autotools-utils_src_configure
 
-	if use python; then
-		python_parallel_foreach_impl \
-			autotools-utils_src_configure --with-python
+	# set up python bindings build(s)
+	if use python ; then
+		setup_python_flags_configure() {
+			if [[ ${EPYTHON} == python2* ]] ; then
+				myeconfargs=( --with-python --without-python3 )
+			else
+				myeconfargs=( --with-python --with-python3 )
+			fi
+			autotools-utils_src_configure
+		}
+
+		python_foreach_impl setup_python_flags_configure
 	fi
 }
 

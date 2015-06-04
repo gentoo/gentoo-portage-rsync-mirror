@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/Fiona
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.12 2015/06/04 10:57:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/Fiona/ChangeLog,v 1.13 2015/06/04 11:05:28 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> -Fiona-1.1.6.ebuild,
+  -Fiona-1.4.1.ebuild, Fiona-1.5.1.ebuild, Fiona-9999.ebuild:
+  Drop old; fix eclass usage
 
   04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml
