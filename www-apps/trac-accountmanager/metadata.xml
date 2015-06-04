@@ -16,4 +16,7 @@
     * login via an HTML form instead of using HTTP authentication
     * allow existing users to change their passwords or delete their accounts 
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">TracAccountManager</remote-id>
+  </upstream>
 </pkgmetadata>
