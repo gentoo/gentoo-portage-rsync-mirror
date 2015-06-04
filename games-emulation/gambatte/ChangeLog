@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/gambatte
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.10 2015/01/22 07:02:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/ChangeLog,v 1.11 2015/06/04 16:07:19 mr_bones_ Exp $
+
+  04 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  gambatte-0.5.0_p20131102.ebuild:
+  remove pointless nonfatal (bug #551168)
 
   22 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -gambatte-0.5.0_p20130601.ebuild, metadata.xml:

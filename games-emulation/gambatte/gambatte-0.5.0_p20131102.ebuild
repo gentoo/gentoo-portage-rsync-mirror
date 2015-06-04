@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/gambatte-0.5.0_p20131102.ebuild,v 1.4 2014/08/29 10:03:19 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gambatte/gambatte-0.5.0_p20131102.ebuild,v 1.5 2015/06/04 16:07:19 mr_bones_ Exp $
 
 EAPI=5
 
@@ -92,7 +92,7 @@ src_install() {
 	use sdl && dogamesbin gambatte_sdl/gambatte_sdl
 	use qt4 && dogamesbin gambatte_qt/bin/gambatte_qt
 
-	nonfatal dodoc README changelog
+	dodoc README changelog
 
 	prepgamesdirs
 }

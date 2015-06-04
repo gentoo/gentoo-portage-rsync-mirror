@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/AutoLoader
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/AutoLoader/ChangeLog,v 1.18 2014/07/24 17:14:54 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/AutoLoader/ChangeLog,v 1.19 2015/06/04 16:05:53 dilfridge Exp $
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  AutoLoader-5.730.0-r1.ebuild:
+  Drop keywords
 
 *AutoLoader-5.730.0-r1 (24 Jul 2014)
 
