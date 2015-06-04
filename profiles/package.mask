@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16559 2015/06/04 21:15:12 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16564 2015/06/04 21:59:01 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -43,6 +43,11 @@
 =virtual/perl-Compress-Raw-Bzip2-2.68.0
 =virtual/perl-Compress-Raw-Zlib-2.68.0
 =virtual/perl-DB_File-1.835.0
+=virtual/perl-Data-Dumper-2.158.0
+=virtual/perl-Devel-PPPort-3.310.0
+=virtual/perl-Digest-MD5-2.540.0
+=virtual/perl-Digest-SHA-5.950.0
+=virtual/perl-Exporter-5.720.0
 
 # Michał Górny <mgorny@gentoo.org> (04 Jun 2015)
 # New version of PyPy. Masked for testing and binary package build.
