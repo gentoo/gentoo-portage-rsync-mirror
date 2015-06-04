@@ -5,4 +5,7 @@
   <maintainer>
     <email>jlec@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="pypi">Whirlpool</remote-id>
+  </upstream>
 </pkgmetadata>

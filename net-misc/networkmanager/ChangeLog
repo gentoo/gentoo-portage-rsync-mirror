@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/networkmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.238 2015/05/31 13:21:09 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/networkmanager/ChangeLog,v 1.240 2015/06/04 09:34:21 pacho Exp $
+
+  04 Jun 2015; Pacho Ramos <pacho@gentoo.org> networkmanager-1.0.2-r1.ebuild:
+  Move to stable as previous one is broken for dhcpcd users
+
+*networkmanager-1.0.2-r1 (04 Jun 2015)
+
+  04 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/networkmanager-1.0.2-configure-dhcpcd.patch,
+  +networkmanager-1.0.2-r1.ebuild:
+  Fix dhcpcd detection (#549970 by Joakim Tjernlund)
 
   31 May 2015; Mikle Kolyada <zlogene@gentoo.org> networkmanager-1.0.2.ebuild:
   arm stable wrt bug #545980

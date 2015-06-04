@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ocrad
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.46 2014/12/23 10:03:47 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.47 2015/06/04 09:41:29 aballier Exp $
+
+*ocrad-0.25 (04 Jun 2015)
+
+  04 Jun 2015; Alexis Ballier <aballier@gentoo.org> +ocrad-0.25.ebuild:
+  version bump
 
   23 Dec 2014; Alexis Ballier <aballier@gentoo.org> -ocrad-0.17.ebuild,
   -ocrad-0.21.ebuild, -files/ocrad-0.17-gcc43.patch:

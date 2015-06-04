@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xcffib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.9 2015/03/25 18:07:31 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xcffib/ChangeLog,v 1.10 2015/06/04 09:59:41 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   25 Mar 2015; Tim Harder <radhermit@gentoo.org> -xcffib-0.1.5.ebuild,
   -xcffib-0.1.8.ebuild:

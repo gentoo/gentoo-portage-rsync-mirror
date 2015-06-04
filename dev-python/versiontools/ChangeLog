@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/versiontools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.12 2015/03/09 00:01:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/versiontools/ChangeLog,v 1.13 2015/06/04 09:44:14 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
   09 Mar 2015; Pacho Ramos <pacho@gentoo.org> versiontools-1.9.1-r1.ebuild:
   x86 stable, bug 540290
