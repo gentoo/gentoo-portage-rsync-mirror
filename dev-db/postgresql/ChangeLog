@@ -1,6 +1,26 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.430 2015/05/31 12:24:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.431 2015/06/04 19:34:58 titanofold Exp $
+
+*postgresql-9.4.3 (04 Jun 2015)
+*postgresql-9.3.8 (04 Jun 2015)
+*postgresql-9.2.12 (04 Jun 2015)
+*postgresql-9.1.17 (04 Jun 2015)
+*postgresql-9.0.21 (04 Jun 2015)
+
+  04 Jun 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  +postgresql-9.0.21.ebuild, +postgresql-9.1.17.ebuild,
+  +postgresql-9.2.12.ebuild, +postgresql-9.3.8.ebuild,
+  +postgresql-9.4.3.ebuild, +files/postgresql.init-9.3:
+  Version bump resolves issue where file permission issues can cause
+  PostgreSQL to fail to start after a crash.
+  (https://wiki.postgresql.org/wiki/May_2015_Fsync_Permissions_Bug)
+
+  Fixed bug 550470: 9.4+ will use native system libraries other than
+  OSSP's will be used when possible.
+
+  Fixed bug 550442: Updated initscript for 9.3+ to recognize and fully
+  support unix_socket_directories.
 
   31 May 2015; Mikle Kolyada <zlogene@gentoo.org> postgresql-9.0.20.ebuild,
   postgresql-9.1.16.ebuild, postgresql-9.2.11.ebuild, postgresql-9.3.7.ebuild,
