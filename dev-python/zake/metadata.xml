@@ -9,4 +9,7 @@
   <longdescription lang="en">
   A python package that works to provide a nice set of testing utilities for the kazoo library.
   </longdescription>
+  <upstream>
+    <remote-id type="pypi">zake</remote-id>
+  </upstream>
 </pkgmetadata>

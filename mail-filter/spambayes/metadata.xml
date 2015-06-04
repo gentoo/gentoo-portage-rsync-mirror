@@ -5,4 +5,7 @@
   <maintainer>
     <email>lordvan@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="pypi">spambayes</remote-id>
+  </upstream>
 </pkgmetadata>

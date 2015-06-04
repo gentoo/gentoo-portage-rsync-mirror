@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.19 2015/01/31 10:16:12 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.20 2015/06/04 10:22:33 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -214,7 +214,7 @@ _isdp_big-warning() {
 	echo ""
 	ewarn "Make sure you have received an Intel license."
 	ewarn "To receive a non-commercial license, you need to register at:"
-	ewarn "http://software.intel.com/en-us/articles/non-commercial-software-development/"
+	ewarn "https://software.intel.com/en-us/qualify-for-free-software"
 	ewarn "Install the license file into ${INTEL_SDP_EDIR}/licenses/"
 
 	case ${1} in
@@ -445,11 +445,12 @@ intel-sdp_src_install() {
 	fi
 
 	if [[ -d "${INTEL_SDP_DIR}"/man ]]; then
-		nonfatal doman "${INTEL_SDP_DIR}"/man/en_US/man1/*
-		nonfatal doman "${INTEL_SDP_DIR}"/man/man1/*
-		if has linguas_ja ${IUSE} && use linguas_ja; then
+		ls "${INTEL_SDP_DIR}"/man/en_US/man1/* &> /dev/null &&
+			doman "${INTEL_SDP_DIR}"/man/en_US/man1/*
+		ls "${INTEL_SDP_DIR}"/man/man1/* &> /dev/null &&
+			doman "${INTEL_SDP_DIR}"/man/man1/*
+		has linguas_ja ${IUSE} && use linguas_ja && \
 			doman -i18n=ja_JP "${INTEL_SDP_DIR}"/man/ja_JP/man1/*
-		fi
 
 		find "${INTEL_SDP_DIR}"/man -delete || die
 	fi

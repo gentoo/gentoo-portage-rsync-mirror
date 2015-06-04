@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/xlsxwriter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/xlsxwriter/ChangeLog,v 1.4 2015/05/27 16:25:28 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/xlsxwriter/ChangeLog,v 1.5 2015/06/04 10:05:34 jlec Exp $
+
+  04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add pypi to remote-id in metadata.xml
 
 *xlsxwriter-0.7.3 (27 May 2015)
 
