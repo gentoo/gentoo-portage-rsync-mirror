@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/django-recaptcha
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/ChangeLog,v 1.14 2015/03/08 23:45:15 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/django-recaptcha/ChangeLog,v 1.15 2015/06/04 06:33:40 idella4 Exp $
+
+*django-recaptcha-1.0.4 (04 Jun 2015)
+
+  04 Jun 2015; Ian Delaney <idella4@gentoo.org> +django-recaptcha-1.0.4.ebuild:
+  bump
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> django-recaptcha-1.0.3.ebuild:
   x86 stable, bug 540290
