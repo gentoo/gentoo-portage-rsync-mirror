@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.8 2014/08/10 18:25:14 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kchmviewer/kchmviewer-6.0-r1.ebuild,v 1.9 2015/06/04 19:00:59 kensington Exp $
 
 EAPI=5
 KDE_REQUIRED="optional"
@@ -26,7 +26,7 @@ RDEPEND="
 	dev-qt/qtwebkit:4
 	kde? (
 		$(add_kdebase_dep kdelibs)
-		!kde-base/okular[chm]
+		!kde-apps/okular[chm]
 	)
 "
 DEPEND="${RDEPEND}"

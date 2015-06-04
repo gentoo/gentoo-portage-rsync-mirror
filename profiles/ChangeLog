@@ -1,10 +1,18 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10048 2015/06/04 17:10:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10050 2015/06/04 18:57:37 kensington Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  arch/nios2/package.use.mask, targets/desktop/kde/package.use,
+  targets/desktop/plasma/package.use:
+  Move various kde-base packages to kde-apps.
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> updates/2Q-2015:
+  Move various kde-base packages to kde-apps.
 
   04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add DB_File to Perl 5.22 mask

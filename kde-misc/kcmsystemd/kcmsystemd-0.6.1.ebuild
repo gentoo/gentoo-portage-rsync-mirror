@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/kcmsystemd-0.6.1.ebuild,v 1.1 2014/04/06 11:11:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/kcmsystemd-0.6.1.ebuild,v 1.2 2015/06/04 18:57:33 kensington Exp $
 
 EAPI=5
 
@@ -18,6 +18,6 @@ KEYWORDS="~amd64 ~x86"
 DEPEND=">=dev-libs/boost-1.45"
 
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep kcmshell)
+	$(add_kdeapps_dep kcmshell)
 	sys-apps/systemd
 "

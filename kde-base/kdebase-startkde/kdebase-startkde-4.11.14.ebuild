@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.11.14.ebuild,v 1.5 2015/02/17 11:06:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/kdebase-startkde-4.11.14.ebuild,v 1.6 2015/06/04 18:39:59 kensington Exp $
 
 EAPI=5
 
@@ -16,18 +16,18 @@ IUSE="+wallpapers"
 # These provide the most minimal KDE desktop.
 RDEPEND="
 	$(add_kdebase_dep kcminit)
-	$(add_kdebase_dep kdebase-runtime-meta)
-	wallpapers? ( $(add_kdebase_dep kde-wallpapers) )
-	$(add_kdebase_dep kfmclient)
-	$(add_kdebase_dep knotify)
-	$(add_kdebase_dep kreadconfig)
+	$(add_kdeapps_dep kdebase-runtime-meta)
+	wallpapers? ( $(add_kdeapps_dep kde-wallpapers) )
+	$(add_kdeapps_dep kfmclient)
+	$(add_kdeapps_dep knotify)
+	$(add_kdeapps_dep kreadconfig)
 	$(add_kdebase_dep krunner)
 	$(add_kdebase_dep ksmserver)
 	$(add_kdebase_dep ksplash)
 	$(add_kdebase_dep kstartupconfig)
 	$(add_kdebase_dep kwin)
-	$(add_kdebase_dep phonon-kde)
-	$(add_kdebase_dep plasma-apps)
+	$(add_kdeapps_dep phonon-kde)
+	$(add_kdeapps_dep plasma-apps)
 	$(add_kdebase_dep plasma-workspace)
 	$(add_kdebase_dep systemsettings)
 	x11-apps/mkfontdir

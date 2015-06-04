@@ -1,6 +1,11 @@
 # ChangeLog for app-office/libreoffice
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.635 2015/05/29 12:56:30 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice/ChangeLog,v 1.636 2015/06/04 19:00:44 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  libreoffice-4.4.3.2.ebuild, libreoffice-4.4.9999.ebuild,
+  libreoffice-9999.ebuild:
+  Move various kde-base packages to kde-apps.
 
   29 May 2015; Andreas K. Hüttel <dilfridge@gentoo.org>
   -libreoffice-4.4.1.2.ebuild, -libreoffice-4.4.2.2.ebuild:

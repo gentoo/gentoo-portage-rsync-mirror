@@ -992,11 +992,11 @@ app-office/calligra:glew - Enable media-libs/glew opengl extension library suppo
 app-office/calligra:glib - Enable support for C library routines from dev-libs/glib
 app-office/calligra:gsf - Enable support for ODT structures extraction via gnome-extra/libgsf
 app-office/calligra:import-filter - Enable support for various import filter file formats like WordPerfect, Visio and Apple Keynote
-app-office/calligra:kdcraw - Enable support for KDE image manipulating interface via kde-base/libkdcraw
+app-office/calligra:kdcraw - Enable support for KDE image manipulating interface via kde-apps/libkdcraw
 app-office/calligra:kdepim - Enable support for KDEPIM resources integration
 app-office/calligra:marble - Enable displaying of maps using Marble
 app-office/calligra:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
-app-office/calligra:okular - Enable bindings for kde-base/okular
+app-office/calligra:okular - Enable bindings for kde-apps/okular
 app-office/calligra:spacenav - Enable support for the 3Dconnexion spacenav input device via dev-libs/libspnav
 app-office/calligra:vc - Enable support for dev-libs/vc, could be a significant speed boost on krita
 app-office/calligra:xbase - Enable support for xbase compatible database formats
@@ -3073,33 +3073,86 @@ gnustep-base/gnustep-make:libobjc2 - Enables use of the GNUstep Objective-C runt
 gnustep-base/gnustep-make:native-exceptions - Enables use of the native Objective-C exception support (@try/@catch/@finally) built-in objective-c exceptions with compilers that support it
 gnustep-base/libobjc2:boehm-gc - Enable Hans Boehm's garbage collector (dev-libs/boehm-gc). Not recommended by upstream
 gpe-base/gpe:games - Builds and installs GPE games.
-kde-base/ark:archive - Enable support for a variety of archive formats through libarchive
-kde-base/cantor:R - Enable dev-lang/R backend support
-kde-base/cantor:analitza - Enable kde-base/analitza backend support
-kde-base/cantor:qalculate - Enable sci-libs/libqalculate backend support
-kde-base/dolphin:thumbnail - Enables video thumbnails generation for kde-base/dolphin file manager.
-kde-base/dolphin-plugins:bazaar - Enable support for the bazaar VCS
-kde-base/dolphin-plugins:mercurial - Enable support for the mercurial VCS
-kde-base/gwenview:kipi - Support for the KDE Image Plugin Interface.
-kde-base/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
+kde-apps/ark:archive - Enable support for a variety of archive formats through libarchive
+kde-apps/cantor:R - Enable dev-lang/R backend support
+kde-apps/cantor:analitza - Enable kde-base/analitza backend support
+kde-apps/cantor:qalculate - Enable sci-libs/libqalculate backend support
+kde-apps/dolphin:thumbnail - Enables video thumbnail generation
+kde-apps/dolphin-plugins:bazaar - Enable support for the bazaar VCS
+kde-apps/dolphin-plugins:mercurial - Enable support for the mercurial VCS
+kde-apps/gwenview:kipi - Support for the KDE Image Plugin Interface.
+kde-apps/kaccessible:speechd - Enable support for the speech-dispatcher speech synthesizer
+kde-apps/kalzium:editor - Enable the embedded molecule editor/viewer
+kde-apps/kalzium:solver - Enable the equation solver
+kde-apps/kdeartwork-kscreensaver:eigen - Enable various arithmetic screensavers which use Eigen2 for computations.
+kde-apps/kdeartwork-kscreensaver:kexiv2 - Enable image rotation based on exif tags with libkexiv2.
+kde-apps/kdebase-data:wallpapers - Install the KDE wallpapers
+kde-apps/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
+kde-apps/kdebase-meta:display-manager - Pull in a graphical display manager
+kde-apps/kdebase-meta:wallpapers - Install the KDE wallpapers
+kde-apps/kdebase-runtime-meta:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
+kde-apps/kdebase-runtime-meta:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
+kde-apps/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
+kde-apps/kdeutils-meta:floppy - Install kde-base/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
+kde-apps/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
+kde-apps/kget:gpg - Support for signature verificatopm by QGpgME via kde-base/kdepimlibs
+kde-apps/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
+kde-apps/kget:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
+kde-apps/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
+kde-apps/kig:scripting - Support Python scripting
+kde-apps/kmix:canberra - Enable sound event support using media-libs/libcanberra
+kde-apps/konqueror:bookmarks - Add dependency on bookmark package.
+kde-apps/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
+kde-apps/kopete:autoreplace - Automatically replace selected text
+kde-apps/kopete:contactnotes - Enables writing personal notes for contacts.
+kde-apps/kopete:gadu - Enable the Gadu protocol handler.
+kde-apps/kopete:groupwise - Enable the Groupwise protocol handler.
+kde-apps/kopete:highlight - Allows you to specify highlights on specific events.
+kde-apps/kopete:history - Enables saving chat history.
+kde-apps/kopete:latex - Embed latex formatted text into messages.
+kde-apps/kopete:meanwhile - Enable the Sametime protocol handler.
+kde-apps/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
+kde-apps/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
+kde-apps/kopete:pipes - Send messages to external pipe.
+kde-apps/kopete:privacy - Filter for incoming messages
+kde-apps/kopete:skype - Enable Skype protocol handler (not fully functional yet).
+kde-apps/kopete:sms - Enable SMS sendinge functionality.
+kde-apps/kopete:statistics - Everybody loves statistic graphs, especially cake ones. ;]
+kde-apps/kopete:testbed - Enable the testbed protocol.
+kde-apps/kopete:texteffect - Various fancy text effects for your messages (don't ever consider writing us with this enabled ;]).
+kde-apps/kopete:translator - Translate incoming and outgoing messages.
+kde-apps/kopete:urlpicpreview - Enables in conversation pictures preview.
+kde-apps/kopete:webpresence - Show your status and some more information on web.
+kde-apps/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
+kde-apps/kopete:yahoo - Enable yahoo protocol support.
+kde-apps/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
+kde-apps/krdc:rdesktop - Enable runtime dependency for net-misc/rdesktop
+kde-apps/krdc:telepathy - Enable desktop sharing through a telepathy client
+kde-apps/krfb:ktp - Enable displaying of KDE Telepathy contacts
+kde-apps/krfb:telepathy - Enable desktop sharing through a telepathy client
+kde-apps/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
+kde-apps/kstars:fits - Enable support for the FITS image format through cfitsio
+kde-apps/kstars:indi - Enable support for Astronomical control library using libindi
+kde-apps/kwalletd:gpg - Support wallets with GnuPG encryption additionally to default blowfish-encrypted file
+kde-apps/lokalize:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
+kde-apps/marble:designer-plugin - Enable designer plugin
+kde-apps/marble:phonon - Enable sound support via media-libs/phonon
+kde-apps/marble:shapefile - Enable support for ESRI shapefiles
+kde-apps/marble:zip - Enable support for reading and displaying .kmz files
+kde-apps/okular:chm - Enable support for Microsoft Compiled HTML Help files
+kde-apps/okular:dpi - DPI detection support for PDF rendering via x11-libs/libkscreen
+kde-apps/okular:ebook - Add E-Book support
+kde-apps/okular:mobi - Add mobipocket support
+kde-apps/oxygen-icons:sources - Additionally install the svg sources of the bitmap icons (needed for redistribution)
+kde-apps/poxml:extras - Build po2xml and swappo tools
+kde-apps/step:qalculate - Enable the libqalculate library for unit conversion
 kde-base/kactivities:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
-kde-base/kalzium:editor - Enable the embedded molecule editor/viewer
-kde-base/kalzium:solver - Enable the equation solver
 kde-base/kde-meta:kdepim - Pull in KDE PIM
 kde-base/kde-meta:sdk - Pull in developer-specific meta-packages
-kde-base/kdeartwork-kscreensaver:eigen - Enable various arithmetic screensavers which use Eigen2 for computations.
-kde-base/kdeartwork-kscreensaver:kexiv2 - Enable image rotation based on exif tags with libkexiv2.
-kde-base/kdebase-data:wallpapers - Install the KDE wallpapers
-kde-base/kdebase-kioslaves:sftp - Enable SFTP protocol support using net-libs/libssh
-kde-base/kdebase-meta:display-manager - Pull in a graphical display manager
-kde-base/kdebase-meta:wallpapers - Install the KDE wallpapers
-kde-base/kdebase-runtime-meta:crash-reporter - Builds a gui tool to submit crash information to the upstream backtracker
-kde-base/kdebase-runtime-meta:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdebase-startkde:wallpapers - Install the KDE wallpapers
 kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
 kde-base/kdelibs:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
-kde-base/kdenetwork-meta:ppp - Enable support for net-dialup/ppp.
 kde-base/kdepim-meta:akonadi - Enables support for kde-base/akonadi
 kde-base/kdepim-runtime:facebook - Facebook service integration via net-libs/libkfbapi
 kde-base/kdepim-runtime:google - Google service integration via net-libs/libkgapi
@@ -3115,72 +3168,21 @@ kde-base/kdeplasma-addons:oauth - Enable OAuth support via dev-libs/qoauth
 kde-base/kdeplasma-addons:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/kdeplasma-addons:qwt - Enable applets that use x11-libs/qwt:5
 kde-base/kdeplasma-addons:scim - Enable applets that use app-i18n/scim
-kde-base/kdeutils-meta:floppy - Install kde-base/kfloppy to format and create DOS or ext2fs filesystems in a floppy.
 kde-base/kdm:consolekit - Enables support for authorization using consolekit
 kde-base/kfilemetadata:epub - Adds support for reading EPUB ebook metadata
 kde-base/kfilemetadata:mobi - Adds support for reading MOBI ebook metadata
-kde-base/kget:bittorrent - Enable bittorrent transfer plugin through net-libs/libktorrent
-kde-base/kget:gpg - Support for signature verificatopm by QGpgME via kde-base/kdepimlibs
-kde-base/kget:mms - Enable MMS (Microsoft Media Server) plugin through media-libs/libmms
-kde-base/kget:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
-kde-base/kget:webkit - Enable KdeWebkit browser plugin using kde-misc/kwebkitpart
-kde-base/kig:scripting - Support Python scripting
 kde-base/kimono:akonadi - Compile bindings for Akonadi
 kde-base/kimono:nepomuk - Compile bindings for Nepomuk
 kde-base/kimono:plasma - Compile bindings for KDE's Plasma
 kde-base/klipper:prison - Enable support for barcodes/QRcodes
-kde-base/kmix:canberra - Enable sound event support using media-libs/libcanberra
-kde-base/konqueror:bookmarks - Add dependency on bookmark package.
-kde-base/kopete:addbookmarks - Automatically add incoming urls to bookmarks.
-kde-base/kopete:autoreplace - Automatically replace selected text
-kde-base/kopete:contactnotes - Enables writing personal notes for contacts.
-kde-base/kopete:gadu - Enable the Gadu protocol handler.
-kde-base/kopete:groupwise - Enable the Groupwise protocol handler.
-kde-base/kopete:highlight - Allows you to specify highlights on specific events.
-kde-base/kopete:history - Enables saving chat history.
-kde-base/kopete:latex - Embed latex formatted text into messages.
-kde-base/kopete:meanwhile - Enable the Sametime protocol handler.
-kde-base/kopete:nowlistening - Shows song you currently listen to in your status/etc. Bindings for many players.
-kde-base/kopete:otr - Allows crypting your chat (drugs and talking nonsense are considered as good alternatives ;]).
-kde-base/kopete:pipes - Send messages to external pipe.
-kde-base/kopete:privacy - Filter for incoming messages
-kde-base/kopete:skype - Enable Skype protocol handler (not fully functional yet).
-kde-base/kopete:sms - Enable SMS sendinge functionality.
-kde-base/kopete:statistics - Everybody loves statistic graphs, especially cake ones. ;]
-kde-base/kopete:testbed - Enable the testbed protocol.
-kde-base/kopete:texteffect - Various fancy text effects for your messages (don't ever consider writing us with this enabled ;]).
-kde-base/kopete:translator - Translate incoming and outgoing messages.
-kde-base/kopete:urlpicpreview - Enables in conversation pictures preview.
-kde-base/kopete:webpresence - Show your status and some more information on web.
-kde-base/kopete:winpopup - Enable pop-up messages sending on windows. (same as good old "net send" messages ;])
-kde-base/kopete:yahoo - Enable yahoo protocol support.
-kde-base/kopete:zeroconf - Enable Link-Local Messaging via the bonjour protocol.
 kde-base/korundum:akonadi - Compile bindings for Akonadi
 kde-base/korundum:kate - Compile bindings for KDE Advanced Text Editor
 kde-base/korundum:nepomuk - Compile bindings for Nepomuk
 kde-base/korundum:okular - Compile bindings for kde-base/okular
-kde-base/krdc:rdesktop - Enable runtime dependency for net-misc/rdesktop
-kde-base/krdc:telepathy - Enable desktop sharing through a telepathy client
-kde-base/krfb:ktp - Enable displaying of KDE Telepathy contacts
-kde-base/krfb:telepathy - Enable desktop sharing through a telepathy client
-kde-base/ksnapshot:kipi - Support for the KDE Image Plugin Interface.
-kde-base/kstars:fits - Enable support for the FITS image format through cfitsio
-kde-base/kstars:indi - Enable support for Astronomical control library using libindi
-kde-base/kwalletd:gpg - Support wallets with GnuPG encryption additionally to default blowfish-encrypted file
 kde-base/kwin:gles - Enable support for GLES.
 kde-base/libplasmaclock:kdepim - KDE PIM integration via kde-base/kdepimlibs
-kde-base/lokalize:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
-kde-base/marble:designer-plugin - Enable designer plugin
-kde-base/marble:phonon - Enable sound support via media-libs/phonon
-kde-base/marble:shapefile - Enable support for ESRI shapefiles
-kde-base/marble:zip - Enable support for reading and displaying .kmz files
 kde-base/nepomuk-core:epub - Adds support for reading EPUB ebook metadata
 kde-base/nepomuk-core:migrator - Installs a kde-base/baloo migration tool
-kde-base/okular:chm - Enable support for Microsoft Compiled HTML Help files
-kde-base/okular:dpi - DPI detection support for PDF rendering via x11-libs/libkscreen
-kde-base/okular:ebook - Add E-Book support
-kde-base/okular:mobi - Add mobipocket support
-kde-base/oxygen-icons:sources - Additionally install the svg sources of the bitmap icons (needed for redistribution)
 kde-base/perlkde:akonadi - Compile bindings for Akonadi
 kde-base/perlkde:attica - Compile bindings for dev-libs/libattica
 kde-base/perlkde:kate - Compile bindings for KDE Advanced Text Editor
@@ -3199,7 +3201,6 @@ kde-base/plasma-workspace:kdepim - KDE PIM integration via kde-base/kdepimlibs
 kde-base/plasma-workspace:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/plasma-workspace:qalculate - Enable Qalculate runner using sci-libs/libqalculate
 kde-base/powerdevil:pm-utils - Adds support for suspend/resume the system through sys-power/pm-utils
-kde-base/poxml:extras - Build po2xml and swappo tools
 kde-base/pykde4:akonadi - Compile bindings for Akonadi
 kde-base/pykde4:nepomuk - Compile bindings for Nepomuk
 kde-base/qtruby:declarative - Compile bindings for dev-qt/qtdeclarative.
@@ -3224,7 +3225,6 @@ kde-base/smokeqt:qthelp - Compile bindings for QtHelp from dev-qt/qthelp.
 kde-base/smokeqt:qwt - Compile bindings for x11-libs/qwt.
 kde-base/smokeqt:webkit - Compile bindings for dev-qt/qtwebkit.
 kde-base/smokeqt:xmlpatterns - Compile bindings for dev-qt/qtxmlpatterns.
-kde-base/step:qalculate - Enable the libqalculate library for unit conversion
 kde-base/systemsettings:kscreen - Use kde-misc/kscreen for screen management
 kde-base/systemsettings:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-frameworks/kdesignerplugin:designer - Build KF5 widgets plugin for QtDesigner

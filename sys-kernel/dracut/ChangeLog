@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.192 2015/06/02 19:09:49 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.194 2015/06/04 18:46:41 aidecoe Exp $
+
+  04 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-041-r2.ebuild,
+  +files/041-0001-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/041-r2-0001-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  +files/041-0002-Install-dracut-install-and-skipcpio-in.patch,
+  -files/041-r2-0002-Install-dracut-install-and-skipcpio-in.patch,
+  +files/041-0003-Take-into-account-lib64-dirs-when-dete.patch,
+  -files/041-r2-0003-Take-into-account-lib64-dirs-when-dete.patch,
+  +files/041-0004-Portability-fixes.patch,
+  -files/041-r2-0004-Portability-fixes.patch:
+  Rename patches.
+
+  04 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-041.ebuild,
+  -files/041-0001-dracut-functions.sh-support-for-altern.patch,
+  -files/041-0002-gentoo.conf-let-udevdir-be-handled-by-.patch,
+  -files/041-0003-Use-the-same-paths-in-dracut.sh-as-tho.patch,
+  -files/041-0004-Install-dracut-install-into-libexec-di.patch,
+  -files/041-0005-Take-into-account-lib64-dirs-when-dete.patch:
+  Remove old revision of 041.
 
   02 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-041-r2.ebuild,
   -dracut-041-r3.ebuild:

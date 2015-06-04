@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/hachoir-metadata-1.3.3-r1.ebuild,v 1.2 2015/03/21 08:27:00 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/hachoir-metadata/hachoir-metadata-1.3.3-r1.ebuild,v 1.3 2015/06/04 19:00:13 kensington Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	>=dev-python/hachoir-parser-1.3[${PYTHON_USEDEP}]
 	gtk? ( >=dev-python/pygtk-2.0[${PYTHON_USEDEP}] )
 	gnome? ( gnome-base/nautilus gnome-extra/zenity )
-	kde? ( kde-base/konqueror )
+	kde? ( kde-apps/konqueror )
 	qt4? ( dev-python/PyQt4[${PYTHON_USEDEP}] )"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]"

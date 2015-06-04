@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.683 2015/05/31 21:56:35 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.684 2015/06/04 18:47:33 kensington Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -251,7 +251,7 @@ sys-infiniband/ofed ofed_drivers_ehca
 # Andreas K. Huettel <dilfridge@gentoo.org> (12 Apr 2014)
 # Upstream regularly forgets to update the bindings after changes in API,
 # leading to build failures. This is becoming more and more painful...
->=kde-base/marble-4.12.49.9999 python
+>=kde-apps/marble-4.12.49.9999 python
 
 # Lars Wendler <polynomial-c@gentoo.org> (12 Apr 2014)
 # Required ffmpeg version still is masked (#507474)

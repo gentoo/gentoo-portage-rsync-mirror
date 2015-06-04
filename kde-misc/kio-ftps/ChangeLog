@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kio-ftps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.7 2015/01/28 21:16:40 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kio-ftps/ChangeLog,v 1.8 2015/06/04 18:57:33 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> kio-ftps-0.2.ebuild:
+  Move various kde-base packages to kde-apps.
 
   28 Jan 2015; Johannes Huber <johu@gentoo.org> kio-ftps-0.2.ebuild:
   Update HOMEPAGE and SRC_URI, thanks to PhobosK <phobosk@fastmail.fm>, 

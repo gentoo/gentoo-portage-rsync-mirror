@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/kosd-0.8.1.ebuild,v 1.3 2014/03/21 18:09:37 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/kosd-0.8.1.ebuild,v 1.4 2015/06/04 18:57:33 kensington Exp $
 
 EAPI=5
 
@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 DEPEND="
-	$(add_kdebase_dep kmix)
+	$(add_kdeapps_dep kmix)
 "
 RDEPEND="${DEPEND}"

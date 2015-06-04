@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kim4/kim4-0.9.5.ebuild,v 1.5 2014/01/05 21:34:47 creffett Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kim4/kim4-0.9.5.ebuild,v 1.6 2015/06/04 18:57:33 kensington Exp $
 
 EAPI=5
 
@@ -18,10 +18,10 @@ IUSE=""
 S=${WORKDIR}/${PN}
 
 RDEPEND="
-	kde-base/kdialog
+	kde-apps/kdialog
 	|| (
-		kde-base/dolphin
-		kde-base/konqueror
+		kde-apps/dolphin
+		kde-apps/konqueror
 	)
 	|| ( media-gfx/imagemagick media-gfx/graphicsmagick[imagemagick] )
 "

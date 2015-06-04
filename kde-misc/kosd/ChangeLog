@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/kosd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.10 2014/03/21 18:09:37 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kosd/ChangeLog,v 1.11 2015/06/04 18:57:33 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> kosd-0.8.1.ebuild:
+  Move various kde-base packages to kde-apps.
 
   21 Mar 2014; Johannes Huber <johu@gentoo.org> kosd-0.8.1.ebuild:
   Bump to EAPI 5.

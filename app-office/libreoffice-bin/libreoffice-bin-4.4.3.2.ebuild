@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.4.3.2.ebuild,v 1.3 2015/05/27 10:58:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/libreoffice-bin/libreoffice-bin-4.4.3.2.ebuild,v 1.4 2015/06/04 19:00:44 kensington Exp $
 
 EAPI=5
 
@@ -150,7 +150,7 @@ RDEPEND="${COMMON_DEPEND}
 	media-fonts/liberation-fonts
 	media-fonts/urw-fonts
 	java? ( >=virtual/jre-1.6 )
-	kde? ( || ( $(add_kdeapps_dep kioclient) $(add_kdebase_dep kioclient) ) )
+	kde? ( $(add_kdeapps_dep kioclient) )
 "
 
 PDEPEND="

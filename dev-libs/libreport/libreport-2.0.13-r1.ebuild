@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.13-r1.ebuild,v 1.4 2015/04/08 17:51:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libreport/libreport-2.0.13-r1.ebuild,v 1.5 2015/06/04 19:01:03 kensington Exp $
 
 EAPI="5"
 
@@ -33,7 +33,7 @@ COMMON_DEPEND=">=dev-libs/btparser-0.18:=
 	${PYTHON_DEPS}
 "
 RDEPEND="${COMMON_DEPEND}
-	|| ( gnome-base/gnome-keyring >=kde-base/kwalletd-4.8 )
+	|| ( gnome-base/gnome-keyring >=kde-apps/kwalletd-4.8 )
 "
 DEPEND="${COMMON_DEPEND}
 	app-text/asciidoc

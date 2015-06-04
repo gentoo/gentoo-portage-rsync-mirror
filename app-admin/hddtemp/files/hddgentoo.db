@@ -11,6 +11,8 @@
 "WDC WD3200AAKS-00SBA0"						194 C "Western Digital WD3200AAKS-00SBA0"
 "ST3120813AS"							194 C "Seagate ST3120813AS"
 "ST3250620AS"							194 C "Seagate ST3250620AS"
+"ST3808110AS"							194 C "Seagate Barracuda 7200.9 SATA2 80GB 8MB"
+"ST3250824AS"							194 C "Seagate Barracuda 7200.9 SATA2 250GB 8MB"
 "ST3250310AS"							194 C "Seagate Barracuda 7200.10 SATA 250GB 8MB"
 "ST3500320AS"							194 C "Seagate Barracuda 7200.11 SATA 500GB 32MB"
 "ST3320613AS"							194 C "Seagate Barracuda 7200.11 SATA 320GB 16MB"
@@ -231,3 +233,4 @@
 "6G160E0"							194 C "Maxtor DiamondMax 17 - 160GB - 8MB Cache SATA"
 "WDC WD7500BFCX-68N6GN0"					194 C "Western Digital Red 750GB SATA"
 "Hitachi HTS547575A9E384"					190 C "Hitachi Travelstar 5K750 750GB SATA2 5400RPM 8MB"
+"WDC WD30PURX-64P6ZY0"						194 C "Western Digital Purple 3TB 64MB Cache"

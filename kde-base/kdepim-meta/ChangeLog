@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.354 2015/05/24 16:14:01 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.355 2015/06/04 18:41:50 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  kdepim-meta-4.14.3.ebuild, kdepim-meta-4.14.6.ebuild,
+  kdepim-meta-4.14.8.ebuild, kdepim-meta-4.4.11.1-r1.ebuild:
+  Move various kde-base packages to kde-apps.
 
   24 May 2015; Michael Palimaka <kensington@gentoo.org>
   kdepim-meta-4.14.8.ebuild:

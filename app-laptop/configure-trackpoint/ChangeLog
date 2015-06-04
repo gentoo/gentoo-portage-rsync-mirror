@@ -1,6 +1,10 @@
 # ChangeLog for app-laptop/configure-trackpoint
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.6 2013/02/15 18:11:41 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/configure-trackpoint/ChangeLog,v 1.7 2015/06/04 18:59:39 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  configure-trackpoint-0.7.ebuild:
+  Move various kde-base packages to kde-apps.
 
   15 Feb 2013; Pacho Ramos <pacho@gentoo.org> configure-trackpoint-0.7.ebuild:
   Don't show elog messages always (#457596)

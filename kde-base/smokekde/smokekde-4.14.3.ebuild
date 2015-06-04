@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.14.3.ebuild,v 1.5 2015/02/17 11:06:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/smokekde/smokekde-4.14.3.ebuild,v 1.6 2015/06/04 18:47:59 kensington Exp $
 
 EAPI=5
 
@@ -16,8 +16,8 @@ DEPEND="
 	$(add_kdebase_dep smokeqt)
 	akonadi? ( $(add_kdebase_dep kdepimlibs) )
 	attica? ( dev-libs/libattica )
-	kate? ( $(add_kdebase_dep kate) )
-	okular? ( $(add_kdebase_dep okular) )
+	kate? ( $(add_kdeapps_dep kate) )
+	okular? ( $(add_kdeapps_dep okular) )
 "
 RDEPEND="${DEPEND}"
 

@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/quickaccess
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.13 2015/02/06 16:28:56 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quickaccess/ChangeLog,v 1.14 2015/06/04 18:57:33 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  quickaccess-0.8.2-r1.ebuild:
+  Move various kde-base packages to kde-apps.
 
   06 Feb 2015; Michael Palimaka <kensington@gentoo.org>
   quickaccess-0.8.2-r1.ebuild:

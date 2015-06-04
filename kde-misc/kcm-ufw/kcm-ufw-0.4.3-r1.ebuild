@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3-r1.ebuild,v 1.4 2015/04/08 18:12:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-ufw/kcm-ufw-0.4.3-r1.ebuild,v 1.5 2015/06/04 18:57:32 kensington Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="
 	sys-auth/polkit-kde-agent
 "
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep kcmshell)
+	$(add_kdeapps_dep kcmshell)
 "
 
 S=${WORKDIR}/${MY_P}

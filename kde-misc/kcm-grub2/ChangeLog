@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kcm-grub2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.17 2014/08/05 16:31:42 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/ChangeLog,v 1.18 2015/06/04 18:57:32 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  kcm-grub2-0.6.4-r1.ebuild:
+  Move various kde-base packages to kde-apps.
 
   05 Aug 2014; Manuel Rüger <mrueg@gentoo.org> kcm-grub2-0.6.4-r1.ebuild:
   Remove trailing '.' from DESCRIPTION.

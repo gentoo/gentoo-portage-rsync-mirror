@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/kcm-grub2-0.6.4-r1.ebuild,v 1.3 2014/08/05 16:31:42 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcm-grub2/kcm-grub2-0.6.4-r1.ebuild,v 1.4 2015/06/04 18:57:32 kensington Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ DEPEND="${COMMON_DEPEND}
 	dev-util/automoc
 "
 RDEPEND="${COMMON_DEPEND}
-	$(add_kdebase_dep kcmshell)
+	$(add_kdeapps_dep kcmshell)
 "
 
 src_configure() {

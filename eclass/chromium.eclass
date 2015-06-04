@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.11 2015/05/21 12:28:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/chromium.eclass,v 1.12 2015/06/04 18:49:42 kensington Exp $
 
 # @ECLASS: chromium.eclass
 # @MAINTAINER:
@@ -136,7 +136,7 @@ chromium_pkg_postinst() {
 		elog "Depending on your desktop environment, you may need"
 		elog "to install additional packages to get icons on the Downloads page."
 		elog
-		elog "For KDE, the required package is kde-base/oxygen-icons."
+		elog "For KDE, the required package is kde-apps/oxygen-icons."
 		elog
 		elog "For other desktop environments, try one of the following:"
 		elog " - x11-themes/gnome-icon-theme"

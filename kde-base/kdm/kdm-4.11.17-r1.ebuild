@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.17-r1.ebuild,v 1.1 2015/03/29 11:33:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-4.11.17-r1.ebuild,v 1.2 2015/06/04 18:43:10 kensington Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ DEPEND="
 	systemd? ( sys-apps/systemd )
 "
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep kdepasswd)
+	$(add_kdeapps_dep kdepasswd)
 	$(add_kdebase_dep libkgreeter)
 	>=x11-apps/xinit-1.0.5-r2
 	x11-apps/xmessage

@@ -1,6 +1,10 @@
 # ChangeLog for app-backup/backintime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.28 2015/04/08 07:30:32 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.29 2015/06/04 18:57:25 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  backintime-1.0.24-r2.ebuild, backintime-1.0.36-r2.ebuild:
+  Move various kde-base packages to kde-apps.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> backintime-1.0.24-r2.ebuild,
   backintime-1.0.36-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/fsrunner/fsrunner-0.7.5.ebuild,v 1.3 2014/08/05 16:31:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/fsrunner/fsrunner-0.7.5.ebuild,v 1.4 2015/06/04 18:57:33 kensington Exp $
 
 EAPI=5
 
@@ -17,5 +17,5 @@ IUSE="debug"
 
 DOCS=( changelog README )
 
-DEPEND="$(add_kdebase_dep libkonq)"
+DEPEND="$(add_kdeapps_dep libkonq)"
 RDEPEND="${DEPEND}"

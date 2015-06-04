@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-20150416.ebuild,v 1.2 2015/04/19 00:00:03 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winetricks/winetricks-20150416.ebuild,v 1.3 2015/06/04 18:59:05 kensington Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND="app-arch/cabextract
 	net-misc/wget
 	x11-misc/xdg-utils
 	gtk? ( gnome-extra/zenity )
-	kde? ( || ( kde-base/kdialog kde-apps/kdialog ) )
+	kde? ( kde-apps/kdialog )
 	rar? ( app-arch/unrar )"
 
 # Uses non-standard "Wine" category, which is provided by app-emulation/wine; #451552

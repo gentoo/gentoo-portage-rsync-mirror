@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/hddtemp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.160 2014/12/23 15:47:28 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.161 2015/06/04 18:34:30 aidecoe Exp $
+
+  04 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> files/hddgentoo.db:
+  Add new drives to hddgentoo.db. Rels bug #545876 and bug #550490.
 
   23 Dec 2014; Michał Górny <mgorny@gentoo.org> files/hddgentoo.db:
   Add HTS547575A9E384, provided by Olexandr Burlaka,

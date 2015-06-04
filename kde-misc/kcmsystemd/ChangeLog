@@ -1,6 +1,10 @@
 # ChangeLog for kde-misc/kcmsystemd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/ChangeLog,v 1.4 2014/07/29 15:23:50 johu Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kcmsystemd/ChangeLog,v 1.5 2015/06/04 18:57:33 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> kcmsystemd-0.6.1.ebuild,
+  kcmsystemd-0.7.0.ebuild:
+  Move various kde-base packages to kde-apps.
 
 *kcmsystemd-0.7.0 (29 Jul 2014)
 

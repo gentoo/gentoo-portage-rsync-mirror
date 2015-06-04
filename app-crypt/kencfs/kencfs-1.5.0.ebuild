@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kencfs/kencfs-1.5.0.ebuild,v 1.1 2015/05/15 18:59:38 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kencfs/kencfs-1.5.0.ebuild,v 1.2 2015/06/04 18:58:27 kensington Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 	kde-base/kdelibs:4
 "
 RDEPEND="${DEPEND}
-	kde-base/kwalletd:4
+	kde-apps/kwalletd:4
 	sys-fs/encfs
 "
 

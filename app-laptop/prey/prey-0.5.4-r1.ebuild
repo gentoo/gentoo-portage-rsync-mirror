@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.4-r1.ebuild,v 1.4 2013/02/15 18:47:47 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/prey/prey-0.5.4-r1.ebuild,v 1.5 2015/06/04 18:59:39 kensington Exp $
 
 EAPI=4
 
@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 	alarm? ( media-sound/mpg123
 			 media-sound/pulseaudio
 		   )
-	alert? ( || ( ( gnome-extra/zenity ) ( kde-base/kdialog ) ) )
+	alert? ( || ( ( gnome-extra/zenity ) ( kde-apps/kdialog ) ) )
 	gtk? ( dev-python/pygtk )
 	lock? ( dev-python/pygtk )
 	network? ( net-analyzer/traceroute )

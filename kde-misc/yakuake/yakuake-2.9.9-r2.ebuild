@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.9-r2.ebuild,v 1.5 2014/12/30 17:41:52 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/yakuake/yakuake-2.9.9-r2.ebuild,v 1.6 2015/06/04 18:57:33 kensington Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ SLOT="4"
 IUSE="debug"
 
 RDEPEND="
-	$(add_kdebase_dep konsole)
+	$(add_kdeapps_dep konsole)
 	x11-libs/libX11
 "
 DEPEND="${RDEPEND}

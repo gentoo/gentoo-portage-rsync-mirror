@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3-r1.ebuild,v 1.4 2014/12/08 16:34:07 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-2.1.3-r1.ebuild,v 1.5 2015/06/04 18:58:57 kensington Exp $
 
 EAPI=5
 
@@ -22,10 +22,10 @@ DEPEND="
 	x11-misc/shared-mime-info
 "
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep kdebase-data)
-	$(add_kdebase_dep konsole)
+	$(add_kdeapps_dep kdebase-data)
+	$(add_kdeapps_dep konsole)
 	|| (
-		$(add_kdebase_dep okular 'pdf?,postscript')
+		$(add_kdeapps_dep okular 'pdf?,postscript')
 		app-text/acroread
 	)
 	virtual/latex-base

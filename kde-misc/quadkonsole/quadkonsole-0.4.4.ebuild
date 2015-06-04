@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/quadkonsole-0.4.4.ebuild,v 1.3 2014/03/21 19:00:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/quadkonsole/quadkonsole-0.4.4.ebuild,v 1.4 2015/06/04 18:57:34 kensington Exp $
 
 EAPI=5
 
@@ -21,8 +21,8 @@ KEYWORDS="~amd64 ~x86"
 IUSE="debug"
 
 RDEPEND="
-	$(add_kdebase_dep konsole)
-	$(add_kdebase_dep libkonq)
+	$(add_kdeapps_dep konsole)
+	$(add_kdeapps_dep libkonq)
 "
 DEPEND="${RDEPEND}"
 

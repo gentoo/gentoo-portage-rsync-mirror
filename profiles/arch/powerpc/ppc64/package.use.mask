@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.67 2015/05/20 23:47:14 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.68 2015/06/04 18:47:17 kensington Exp $
 
 # James Le Cuirot <chewi@gentoo.org> (21 May 2015)
 # Mask rdeps of icedtea-web to deal with bug #549134. I had hoped to
@@ -63,7 +63,7 @@ sys-auth/polkit kde
 
 # Alexey Shvetsov <alexxy@gentoo.org> (26 Jan 2011)
 # Mask gps for marble
-kde-base/marble	gps
+kde-apps/marble	gps
 
 # Pacho Ramos <pacho@gentoo.org> (08 Jul 2010)
 # Needs app-mobilephone/obex-data-server keyworded, bug 305913

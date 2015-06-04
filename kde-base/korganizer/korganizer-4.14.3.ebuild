@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.14.3.ebuild,v 1.5 2015/02/17 11:06:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/korganizer/korganizer-4.14.3.ebuild,v 1.6 2015/06/04 18:44:44 kensington Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ DEPEND="
 	sys-libs/zlib
 "
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep ktimezoned)
+	$(add_kdeapps_dep ktimezoned '' 4.14.3)
 "
 
 RESTRICT="test"

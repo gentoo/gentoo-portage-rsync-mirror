@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.1.ebuild,v 1.3 2013/08/28 11:14:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/simon/simon-0.4.1.ebuild,v 1.4 2015/06/04 18:56:36 kensington Exp $
 
 # KEEP KDE ECLASSES OUT OF HERE
 
@@ -35,7 +35,7 @@ RDEPEND="
 	kdepim? ( kde-base/kdepimlibs:4 )
 	libsamplerate? ( media-libs/libsamplerate )
 	nls? (
-		kde-base/kde-l10n
+		kde-apps/kde4-l10n
 		virtual/libintl
 	)
 	opencv? ( media-libs/opencv )
@@ -80,7 +80,7 @@ pkg_postinst() {
 	gnome2_icon_cache_update
 
 	elog "optional dependencies:"
-	elog "  kde-base/jovie (support for Jovie TTS system)"
+	elog "  kde-apps/jovie (support for Jovie TTS system)"
 	use sphinx && elog "  app-accessibility/julius (alternative backend)"
 }
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/pgame/pgame-0.4.ebuild,v 1.2 2014/07/25 21:35:46 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/pgame/pgame-0.4.ebuild,v 1.3 2015/06/04 18:57:33 kensington Exp $
 
 EAPI=5
 
@@ -19,6 +19,6 @@ IUSE="debug"
 RDEPEND="
 	$(add_kdebase_dep kdelibs 'nepomuk')
 	$(add_kdebase_dep plasma-workspace '' 4.11)
-	$(add_kdebase_dep nepomuk)
+	$(add_kdeapps_dep nepomuk)
 "
 DEPEND="${RDEPEND}"

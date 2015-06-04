@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase-startkde
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.391 2015/06/03 23:04:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase-startkde/ChangeLog,v 1.392 2015/06/04 18:39:59 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  kdebase-startkde-4.11.14.ebuild, kdebase-startkde-4.11.17.ebuild,
+  kdebase-startkde-4.11.19.ebuild, kdebase-startkde-4.11.20.ebuild:
+  Move various kde-base packages to kde-apps.
 
 *kdebase-startkde-4.11.20 (03 Jun 2015)
 

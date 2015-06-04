@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.154 2015/06/03 22:36:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde4-base.eclass,v 1.155 2015/06/04 18:49:42 kensington Exp $
 
 # @ECLASS: kde4-base.eclass
 # @MAINTAINER:
@@ -328,7 +328,7 @@ fi
 
 # all packages needs oxygen icons for basic iconset
 if [[ ${PN} != oxygen-icons ]]; then
-	kderdepend+=" || ( kde-apps/oxygen-icons $(add_kdebase_dep oxygen-icons '' 4.14.3) )"
+	kderdepend+=" kde-apps/oxygen-icons"
 fi
 
 # add a dependency over kde-l10n
@@ -339,7 +339,7 @@ if [[ ${KDEBASE} != "kde-base" && -n ${KDE_LINGUAS} ]]; then
 		# this can't be done on one line because if user doesn't use any localisation
 		# then he is probably not interested in kde-l10n at all.
 		kderdepend+="
-		linguas_${_lingua}? ( || ( kde-apps/kde4-l10n[linguas_${_lingua}(+)] $(add_kdebase_dep kde-l10n "linguas_${_lingua}(+)") ) )
+		linguas_${_lingua}? ( $(add_kdeapps_dep kde4-l10n "linguas_${_lingua}(+)") )
 		"
 	done
 	unset _lingua
@@ -904,7 +904,7 @@ kde4-base_pkg_postinst() {
 		fi
 		# for all 3rd party soft tell user that he SHOULD install kdebase-startkde or kdebase-runtime-meta
 		if [[ ${KDEBASE} != kde-base ]] && \
-				! has_version 'kde-base/kdebase-runtime-meta' && \
+				! has_version 'kde-apps/kdebase-runtime-meta' && \
 				! has_version 'kde-base/kdebase-startkde'; then
 			if [[ ${KDE_REQUIRED} == always ]] || ( [[ ${KDE_REQUIRED} == optional ]] && use kde ); then
 				echo

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.245 2015/05/18 06:30:12 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.246 2015/06/04 18:47:17 kensington Exp $
 
 # Justin Lecher <jlec@gentoo> (18 May 2015)
 # missing keywords
@@ -118,8 +118,8 @@ media-video/mpv sdl
 
 # Johannes Huber <johu@gentoo.org> (16 Apr 2014)
 # unkeyworded deps
-kde-base/gwenview semantic-desktop
-kde-base/okular dpi
+kde-apps/gwenview semantic-desktop
+kde-apps/okular dpi
 kde-base/nepomuk-core migrator
 
 # Pacho Ramos <pacho@gentoo.org> (12 Apr 2014)
@@ -156,7 +156,7 @@ dev-haskell/dataenc test
 
 # Johannes Huber <johu@gentoo.org> (15 Sep 2013)
 # # Depends on kde-misc/networkmanagement, not keyworded yet.
-kde-base/solid-runtime networkmanager
+kde-apps/solid-runtime networkmanager
 
 # Pacho Ramos <pacho@gentoo.org> (08 Sep 2013)
 # monodevelop is not keyworded, bug #468030
@@ -201,8 +201,8 @@ app-emulation/qemu seccomp
 
 # Anthony G. Basile <blueness@gentoo.org> (15 Nove 2012)
 # Mask telepathy, no stable net-libs/telepathy-qt, bug #441456
-kde-base/krdc telepathy
-kde-base/krfb telepathy
+kde-apps/krdc telepathy
+kde-apps/krfb telepathy
 net-im/choqok telepathy
 
 # Robin H Johnson <robbat2@gentoo.org> (01 Nov 2012)

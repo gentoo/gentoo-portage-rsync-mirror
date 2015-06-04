@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-1.1-r1.ebuild,v 1.4 2014/12/12 21:11:14 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/skanlite/skanlite-1.1-r1.ebuild,v 1.5 2015/06/04 18:57:32 kensington Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="amd64 x86"
 IUSE="debug"
 
 RDEPEND="
-	|| ( kde-apps/libksane:4 $(add_kdebase_dep libksane) )
+	$(add_kdeapps_dep libksane)
 	media-libs/libpng:0="
 DEPEND="${RDEPEND}
 	sys-devel/gettext"

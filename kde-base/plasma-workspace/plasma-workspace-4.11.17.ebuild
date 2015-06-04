@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.17.ebuild,v 1.1 2015/03/29 11:33:06 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/plasma-workspace-4.11.17.ebuild,v 1.2 2015/06/04 18:45:04 kensington Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ DEPEND="${COMMONDEPEND}
 	x11-proto/renderproto
 "
 RDEPEND="${COMMONDEPEND}
-	$(add_kdebase_dep plasma-runtime)
+	$(add_kdeapps_dep plasma-runtime)
 "
 
 KMEXTRA="

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.12.0.ebuild,v 1.1 2015/05/15 17:01:48 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/skrooge/skrooge-1.12.0.ebuild,v 1.2 2015/06/04 19:00:44 kensington Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ DEPEND="
 	dev-qt/qtsql:4[sqlite]
 "
 RDEPEND="${DEPEND}
-	$(add_kdebase_dep kde-dev-scripts)
+	$(add_kdeapps_dep kde-dev-scripts)
 "
 
 # upstream does not ship tests in releases

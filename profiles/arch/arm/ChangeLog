@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ARM profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.360 2015/05/24 12:48:51 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/arm/ChangeLog,v 1.361 2015/06/04 18:46:48 kensington Exp $
+
+  04 Jun 2015; Michael Palimaka <kensington@gentoo.org> package.use.mask:
+  Move various kde-base packages to kde-apps.
 
   24 May 2015; James Le Cuirot <chewi@gentoo.org> +armv7a/package.mask,
   package.mask:
