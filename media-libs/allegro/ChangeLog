@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/allegro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.154 2015/06/01 22:40:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.155 2015/06/04 17:49:34 mr_bones_ Exp $
+
+*allegro-5.0.11 (04 Jun 2015)
+
+  04 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> +allegro-5.0.11.ebuild,
+  allegro-4.4.2-r1.ebuild, allegro-5.0.8-r1.ebuild:
+  version bump; remove unneeded nonfatal (bug #551178)
 
   01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org> allegro-4.4.2-r1.ebuild,
   allegro-5.0.8-r1.ebuild:
