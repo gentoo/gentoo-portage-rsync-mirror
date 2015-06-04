@@ -8,4 +8,7 @@
     <flag name="sqlite">Mozilla Bookmark parsing</flag>
     <flag name="login">login form submission</flag>
   </use>
+  <upstream>
+    <remote-id type="pypi">LinkChecker</remote-id>
+  </upstream>
 </pkgmetadata>

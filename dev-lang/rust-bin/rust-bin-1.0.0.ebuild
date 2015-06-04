@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0_beta3.ebuild,v 1.1 2015/05/03 16:30:06 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/rust-bin/rust-bin-1.0.0.ebuild,v 1.1 2015/06/04 11:41:51 jauhien Exp $
 
 EAPI=5
 
@@ -17,11 +17,11 @@ SRC_URI="amd64? ( http://static.rust-lang.org/dist/${MY_P}-x86_64-unknown-linux-
 	x86? ( http://static.rust-lang.org/dist/${MY_P}-i686-unknown-linux-gnu.tar.gz )"
 
 LICENSE="|| ( MIT Apache-2.0 ) BSD-1 BSD-2 BSD-4 UoI-NCSA"
-SLOT="0"
+SLOT="1.0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND=">=app-eselect/eselect-rust-0.3_pre20150428
+DEPEND=">=app-eselect/eselect-rust-0.3_pre20150425
 	!dev-lang/rust:0
 "
 RDEPEND="${DEPEND}"
