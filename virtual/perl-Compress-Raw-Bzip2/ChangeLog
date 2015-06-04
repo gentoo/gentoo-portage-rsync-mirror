@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Compress-Raw-Bzip2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/ChangeLog,v 1.82 2015/04/05 00:05:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Bzip2/ChangeLog,v 1.83 2015/06/04 17:01:43 dilfridge Exp $
+
+*perl-Compress-Raw-Bzip2-2.68.0 (04 Jun 2015)
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Compress-Raw-Bzip2-2.60.0-r2.ebuild,
+  +perl-Compress-Raw-Bzip2-2.68.0.ebuild:
+  Add Perl 5.22 version, remove old
 
   05 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   perl-Compress-Raw-Bzip2-2.60.0-r2.ebuild,

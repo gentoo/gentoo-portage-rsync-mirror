@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Compress-Raw-Zlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Zlib/ChangeLog,v 1.84 2015/04/04 23:50:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Compress-Raw-Zlib/ChangeLog,v 1.85 2015/06/04 17:06:28 dilfridge Exp $
+
+*perl-Compress-Raw-Zlib-2.68.0 (04 Jun 2015)
+
+  04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Compress-Raw-Zlib-2.60.0-r2.ebuild,
+  +perl-Compress-Raw-Zlib-2.68.0.ebuild:
+  Add Perl 5.22 version, remove old
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   perl-Compress-Raw-Zlib-2.60.0-r2.ebuild, perl-Compress-Raw-Zlib-2.65.0.ebuild:
