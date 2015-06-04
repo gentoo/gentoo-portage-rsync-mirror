@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/qbittorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.249 2015/05/17 09:21:39 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/ChangeLog,v 1.250 2015/06/04 18:19:35 pesa Exp $
+
+  04 Jun 2015; Davide Pesavento <pesa@gentoo.org> qbittorrent-3.2.0.ebuild,
+  qbittorrent-9999.ebuild:
+  Add missing dep wrt bug #550480
 
 *qbittorrent-3.2.0 (17 May 2015)
 

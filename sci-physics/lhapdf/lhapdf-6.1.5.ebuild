@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.0.5.ebuild,v 1.2 2015/04/08 18:23:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/lhapdf-6.1.5.ebuild,v 1.1 2015/06/04 18:08:53 bircoph Exp $
 
 EAPI=5
 
 AUTOTOOLS_IN_SOURCE_BUILD=yes
-PYTHON_COMPAT=( python{2_7,3_3} )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit versionator autotools-utils distutils-r1
 
@@ -13,7 +13,7 @@ MY_PV=$(get_version_component_range 1-3 ${PV})
 MY_PF=LHAPDF-${MY_PV}
 
 DESCRIPTION="Les Houches Parton Density Function unified library"
-HOMEPAGE="http://projects.hepforge.org/lhapdf/"
+HOMEPAGE="http://lhapdf.hepforge.org/"
 SRC_URI="http://www.hepforge.org/archive/lhapdf/${MY_PF}.tar.gz"
 
 LICENSE="GPL-2"
@@ -24,8 +24,7 @@ IUSE="doc examples python static-libs"
 REQUIRED_USE="python? ( ${PYTHON_REQUIRED_USE} )"
 
 RDEPEND="
-	dev-libs/boost
-	dev-cpp/yaml-cpp
+	dev-libs/boost:0=
 	python? ( ${PYTHON_DEPS} )"
 DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen[latex] )"
@@ -63,6 +62,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	elog "To install data files, download them into ${EROOT%/}/usr/share/LHAPDF:"
-	elog "http://www.hepforge.org/archive/${PN}/pdfsets/${PV}"
+	elog "Download data files from:"
+	elog "http://www.hepforge.org/archive/${PN}/pdfsets/$(get_version_component_range 1-2 ${PV})"
+	elog "and untar them into ${EROOT%/}/usr/share/LHAPDF"
 }

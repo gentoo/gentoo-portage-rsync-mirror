@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.24 2015/05/10 13:12:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qbittorrent/qbittorrent-9999.ebuild,v 1.25 2015/06/04 18:19:35 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,38 +9,43 @@ inherit eutils python-r1 qt4-r2
 
 DESCRIPTION="BitTorrent client in C++ and Qt"
 HOMEPAGE="http://www.qbittorrent.org/"
+
 MY_P=${P/_}
 if [[ ${PV} == *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/${PN}/qBittorrent.git"
-	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.xz"
-	KEYWORDS="~amd64 ~arm ~x86"
+	KEYWORDS="~amd64 ~arm ~ppc64 ~x86"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="+dbus debug +qt4 qt5 webui +X"
-REQUIRED_USE="^^ ( qt4 qt5 )
-	dbus? ( X )"
+REQUIRED_USE="
+	^^ ( qt4 qt5 )
+	dbus? ( X )
+"
 
 CDEPEND="
 	dev-libs/boost:=
 	>=dev-qt/qtsingleapplication-2.6.1_p20130904-r1[qt4?,qt5?,X?]
 	>=net-libs/rb_libtorrent-1.0.0
 	sys-libs/zlib
-	qt4? ( dev-qt/qtcore:4
+	qt4? (
+		dev-qt/qtcore:4
 		dbus? ( dev-qt/qtdbus:4 )
 		X? ( dev-qt/qtgui:4 )
-		)
-	qt5? ( dev-qt/qtcore:5
+	)
+	qt5? (
+		dev-qt/linguist-tools:5
+		dev-qt/qtcore:5
 		dev-qt/qtnetwork:5
 		dev-qt/qtxml:5
 		dbus? ( dev-qt/qtdbus:5 )
 		X? ( dev-qt/qtgui:5
 			dev-qt/qtwidgets:5 )
-		)
+	)
 "
 DEPEND="${CDEPEND}
 	virtual/pkgconfig

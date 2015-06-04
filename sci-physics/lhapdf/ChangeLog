@@ -1,6 +1,15 @@
 # ChangeLog for sci-physics/lhapdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.30 2015/04/08 18:23:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/lhapdf/ChangeLog,v 1.32 2015/06/04 18:10:45 bircoph Exp $
+
+  04 Jun 2015; Andrew Savchenko <bircoph@gentoo.org> -lhapdf-6.0.5.ebuild,
+  -lhapdf-6.1.0.ebuild, -lhapdf-6.1.2.ebuild, -lhapdf-6.1.3.ebuild:
+  Remove old revsions.
+
+*lhapdf-6.1.5 (04 Jun 2015)
+
+  04 Jun 2015; Andrew Savchenko <bircoph@gentoo.org> +lhapdf-6.1.5.ebuild:
+  Vernios bump in 6.x branch.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> lhapdf-6.0.5.ebuild,
   lhapdf-6.1.0.ebuild, lhapdf-6.1.2.ebuild, lhapdf-6.1.3.ebuild:
