@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.15 2015/05/25 05:42:09 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rash/ChangeLog,v 1.16 2015/06/04 06:17:55 graaff Exp $
+
+  04 Jun 2015; Hans de Graaff <graaff@gentoo.org> rash-0.4.0-r2.ebuild:
+  Avoid unneeded dependency on git, bug 551076.
 
   25 May 2015; Patrick Lauer <patrick@gentoo.org> rash-0.4.0-r2.ebuild:
   Keyword for ~x86

@@ -1,10 +1,16 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10033 2015/06/04 06:00:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10035 2015/06/04 06:11:16 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  04 Jun 2015; Hans de Graaff <graaff@gentoo.org> package.mask:
+  Remove masked for removed ruby packages.
+
+  04 Jun 2015; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
+  Remove two more sourceforge.net mirrors.
 
   04 Jun 2015; Jeroen Roovers <jer@gentoo.org> thirdpartymirrors:
   Remove ignum.dl.sourceforge.net.

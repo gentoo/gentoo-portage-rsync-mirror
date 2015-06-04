@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16545 2015/06/02 08:46:26 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16546 2015/06/04 06:11:16 graaff Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -150,12 +150,6 @@ dev-python/gevent-zeromq
 >=app-emulation/open-vm-tools-2013
 >=app-emulation/open-vm-tools-kmod-2013
 
-# Hans de Graaff <graaff@gentoo.org> (3 May 2015)
-# dev-ruby/fssm is deprecated by its author and nothing
-# in the tree depends on it anymore. Use dev-ruby/listen
-# as an alternative. Masked for removal in 30 days.
-dev-ruby/fssm
-
 # Brian Evans <grknight@gentoo.org> (30 Apr 2015)
 # It is unclear if dev-php/smarty-2* is affected by
 # security bug 526542.  Masked for removal in 30 days
@@ -181,13 +175,6 @@ dev-ruby/fssm
 # help us to get the currently masked rubinius 2.x
 # versions ready. Masked for removal in 30 days.
 =dev-lang/rubinius-1*
-
-# Hans de Graaff <graaff@gentoo.org> (27 Apr 2015)
-# rubyforge.org has not been available for almost a year, making the
-# rubyforge package obsolete. echoe is a leaf package that still
-# depends on it. Masked for removal in 30 days.
-dev-ruby/echoe
-dev-ruby/rubyforge
 
 # Patrick Lauer <patrick@gentoo.org> (10 Apr 2015)
 # Breaks pretty much all consumers, like samba
