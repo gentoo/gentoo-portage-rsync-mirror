@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.5.ebuild,v 1.1 2014/03/25 05:49:23 grozin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/geomview-1.9.5.ebuild,v 1.2 2015/06/04 14:29:28 pacho Exp $
 
 EAPI=5
 
@@ -16,6 +16,7 @@ SLOT="0"
 IUSE="motionaveraging debug emacs zlib"
 
 DEPEND=">=x11-libs/motif-2.3:0
+	virtual/glu
 	virtual/opengl
 	emacs? ( virtual/emacs )
 	zlib? ( sys-libs/zlib )"

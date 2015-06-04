@@ -1,6 +1,9 @@
 # ChangeLog for sci-mathematics/geomview
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.21 2014/11/07 03:33:51 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/geomview/ChangeLog,v 1.22 2015/06/04 14:29:28 pacho Exp $
+
+  04 Jun 2015; Pacho Ramos <pacho@gentoo.org> geomview-1.9.5.ebuild:
+  virtual/glu is needed (#514548)
 
   07 Nov 2014; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag descriptions from metadata.xml

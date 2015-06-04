@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/xearth-1.1-r1.ebuild,v 1.8 2012/03/18 19:57:14 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/xearth-1.1-r1.ebuild,v 1.9 2015/06/04 14:19:40 pacho Exp $
 
-EAPI="2"
+EAPI=5
 
 inherit eutils toolchain-funcs
 
@@ -16,12 +16,16 @@ LICENSE="xearth"
 KEYWORDS="alpha amd64 ppc ppc64 x86"
 IUSE=""
 
-RDEPEND="x11-libs/libX11
-	x11-libs/libXt"
+RDEPEND="
+	x11-libs/libX11
+	x11-libs/libXext
+	x11-libs/libXt
+"
 DEPEND="${RDEPEND}
 	x11-misc/imake
 	app-text/rman
-	x11-proto/xproto"
+	x11-proto/xproto
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-include.patch
@@ -34,8 +38,7 @@ src_configure() {
 src_compile() {
 	emake CC=$(tc-getCC) \
 		CCOPTIONS="${CFLAGS}" \
-		EXTRA_LDOPTIONS="${LDFLAGS}" \
-		|| die
+		EXTRA_LDOPTIONS="${LDFLAGS}"
 }
 
 src_install() {
