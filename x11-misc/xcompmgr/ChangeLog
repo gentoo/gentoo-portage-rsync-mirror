@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcompmgr
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.51 2012/08/26 19:29:11 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/ChangeLog,v 1.52 2015/06/04 13:47:58 pacho Exp $
+
+  04 Jun 2015; Pacho Ramos <pacho@gentoo.org> xcompmgr-1.1.6.ebuild:
+  x11-libs/libXext is needed (#514142)
 
   26 Aug 2012; Raúl Porcel <armin76@gentoo.org> xcompmgr-1.1.6.ebuild:
   sparc stable wrt #419473

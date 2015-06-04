@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-1.1.6.ebuild,v 1.7 2012/08/26 19:29:11 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcompmgr/xcompmgr-1.1.6.ebuild,v 1.8 2015/06/04 13:47:58 pacho Exp $
 
-EAPI=4
+EAPI=5
 
 XORG_STATIC=no
 inherit xorg-2
@@ -15,8 +15,11 @@ LICENSE="BSD"
 KEYWORDS="amd64 ppc ppc64 sparc x86"
 IUSE=""
 
-RDEPEND="x11-libs/libXrender
+RDEPEND="
+	x11-libs/libXrender
 	x11-libs/libXdamage
 	x11-libs/libXfixes
-	x11-libs/libXcomposite"
+	x11-libs/libXcomposite
+	x11-libs/libXext
+"
 DEPEND="${RDEPEND}"
