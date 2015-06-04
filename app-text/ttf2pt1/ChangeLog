@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ttf2pt1
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.29 2015/04/14 23:47:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ChangeLog,v 1.30 2015/06/04 15:05:39 pacho Exp $
+
+  04 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/ttf2pt1-3.4.4-freetype-2.5.patch, ttf2pt1-3.4.4-r1.ebuild:
+  Fix build with freetype 2.5.1 and newer (#514794 by Dmitry 'daks' Fomenko and
+  Patrick)
 
   14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -ttf2pt1-3.4.4.ebuild:
   Remove old.

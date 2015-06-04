@@ -1,8 +1,8 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.4.4-r1.ebuild,v 1.5 2011/02/12 18:32:40 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ttf2pt1/ttf2pt1-3.4.4-r1.ebuild,v 1.6 2015/06/04 15:05:39 pacho Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit eutils multilib toolchain-funcs
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="amd64 ppc sparc x86"
 IUSE=""
 
-DEPEND=">=media-libs/freetype-2.0"
+DEPEND=">=media-libs/freetype-2.5.1:2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -23,6 +23,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${P}-LDFLAGS.patch
 	epatch "${FILESDIR}"/${PN}-3.4.0-man-pages.diff
 	epatch "${FILESDIR}"/${P}-freetype.patch
+	epatch "${FILESDIR}"/${P}-freetype-2.5.patch
 
 	sed -i -e "/^CC=/ { s:gcc:$(tc-getCC): }" Makefile
 	sed -i -e "/^CFLAGS_SYS=/ { s:-O.*$:${CFLAGS}: }" Makefile
@@ -31,7 +32,7 @@ src_prepare() {
 }
 
 src_install() {
-	emake INSTDIR="${D}"/usr install || die
+	emake INSTDIR="${D}"/usr install
 	dodir /usr/share/doc/${PF}
 	pushd "${D}"/usr/share/ttf2pt1 > /dev/null
 	rm -r app other

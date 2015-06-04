@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/pesign-0.108.ebuild,v 1.4 2015/04/18 12:18:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/pesign-0.108.ebuild,v 1.5 2015/06/04 15:13:46 pacho Exp $
 
-EAPI="4"
+EAPI=5
 inherit eutils multilib
 
 DESCRIPTION="Tools for manipulating signed PE-COFF binaries"
@@ -14,20 +14,24 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND="dev-libs/openssl
-	sys-apps/util-linux"
+RDEPEND="
+	dev-libs/nspr
+	dev-libs/openssl:0
+	sys-apps/util-linux
+"
 DEPEND="${RDEPEND}
 	sys-apps/help2man
 	sys-boot/gnu-efi
-	virtual/pkgconfig"
+	virtual/pkgconfig
+"
 
 src_prepare() {
 	epatch "${FILESDIR}"/destdir.patch
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die "Install failed"
-	dodoc README COPYING TODO || die
+	emake DESTDIR="${D}" install
+	dodoc README COPYING TODO
 
 	# remove some files that don't make sense for Gentoo installs
 	rm -rf "${D}/etc/"

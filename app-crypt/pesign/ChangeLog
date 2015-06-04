@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pesign
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/ChangeLog,v 1.5 2015/04/18 12:18:22 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/ChangeLog,v 1.6 2015/06/04 15:13:46 pacho Exp $
+
+  04 Jun 2015; Pacho Ramos <pacho@gentoo.org> pesign-0.108.ebuild:
+  Needs nspr (#515174)
 
   18 Apr 2015; Sven Wegener <swegener@gentoo.org> pesign-0.108.ebuild:
   Rename distfile to include package name.

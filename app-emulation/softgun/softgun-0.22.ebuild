@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/softgun-0.22.ebuild,v 1.1 2013/04/30 03:24:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/softgun/softgun-0.22.ebuild,v 1.2 2015/06/04 15:18:10 pacho Exp $
 
-EAPI="4"
+EAPI=5
 
 inherit toolchain-funcs eutils
 
@@ -14,6 +14,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
+
+DEPEND="media-libs/alsa-lib"
+RDEPEND=""
 
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-0.22-make.patch
