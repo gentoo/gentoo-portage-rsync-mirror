@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/pfl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.81 2015/06/02 05:23:41 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/pfl/ChangeLog,v 1.82 2015/06/04 15:00:58 billie Exp $
+
+  04 Jun 2015; Daniel Pielmeier <billie@gentoo.org> -pfl-2.4-r3.ebuild:
+  Remove old.
 
   02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> pfl-2.4-r4.ebuild:
   sparc stable wrt bug #549562
