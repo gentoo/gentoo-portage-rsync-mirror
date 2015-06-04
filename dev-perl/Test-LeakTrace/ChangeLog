@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-LeakTrace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LeakTrace/ChangeLog,v 1.11 2015/06/04 11:45:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-LeakTrace/ChangeLog,v 1.12 2015/06/04 13:18:03 zlogene Exp $
+
+  04 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> Test-LeakTrace-0.150.0.ebuild:
+  Mark ia64 and sparc straight stable, because of security bug #551118
 
   04 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> Test-LeakTrace-0.150.0.ebuild:
   Add more keywords wrt bug #551116
