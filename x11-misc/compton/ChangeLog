@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/compton
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.21 2015/04/08 17:27:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/ChangeLog,v 1.22 2015/06/05 05:00:25 jer Exp $
+
+  05 Jun 2015; Jeroen Roovers <jer@gentoo.org> compton-9999.ebuild:
+  Drop nonfatal (bug #551200).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> compton-0.1_beta1.ebuild,
   compton-0.1_beta2.ebuild, compton-9999.ebuild:

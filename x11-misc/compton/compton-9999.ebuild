@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.11 2015/04/08 17:27:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/compton/compton-9999.ebuild,v 1.12 2015/06/05 05:00:25 jer Exp $
 
 EAPI=5
 
@@ -67,6 +67,6 @@ src_install() {
 	NO_REGEX_PCRE=$(nobuildit pcre) \
 		default
 	docinto examples
-	nonfatal dodoc compton.sample.conf dbus-examples/*
+	dodoc compton.sample.conf dbus-examples/*
 	python_foreach_impl python_newscript bin/compton-convgen.py compton-convgen
 }
