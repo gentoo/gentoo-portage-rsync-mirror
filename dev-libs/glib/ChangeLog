@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.646 2015/04/08 17:51:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.647 2015/06/05 01:29:16 tetromino Exp $
+
+*glib-1.2.10-r6 (05 Jun 2015)
+
+  05 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +glib-1.2.10-r6.ebuild:
+  Add multilib support for glib-1 since it seems a few users still need it;
+  thanks to Ian Stakenvicius for the ebuild (bug #534016).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> glib-2.40.2.ebuild:
   Drop old Python implementations

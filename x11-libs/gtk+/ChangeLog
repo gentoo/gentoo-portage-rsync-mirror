@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.778 2015/05/25 02:53:12 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.779 2015/06/05 01:30:00 tetromino Exp $
+
+*gtk+-1.2.10-r13 (05 Jun 2015)
+
+  05 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gtk+-1.2.10-r13.ebuild:
+  Add multilib support for gtk+-1 since it seems a few users still need it;
+  thanks to Ian Stakenvicius for the ebuild (bug #534016).
 
 *gtk+-2.24.28-r1 (25 May 2015)
 
