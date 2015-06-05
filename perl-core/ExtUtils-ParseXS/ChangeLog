@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/ExtUtils-ParseXS
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ChangeLog,v 1.62 2014/07/26 13:43:59 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/ExtUtils-ParseXS/ChangeLog,v 1.63 2015/06/05 20:34:06 dilfridge Exp $
+
+  05 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -ExtUtils-ParseXS-3.180.0-r1.ebuild, ExtUtils-ParseXS-3.220.0-r1.ebuild:
+  Remove old, drop keywords
 
 *ExtUtils-ParseXS-3.180.0-r1 (26 Jul 2014)
 *ExtUtils-ParseXS-3.220.0-r1 (26 Jul 2014)
