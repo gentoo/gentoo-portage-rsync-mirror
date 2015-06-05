@@ -28,7 +28,8 @@ _build() {
 	emake \
 		AR="$(tc-getAR)" \
 		CC="$(tc-getCC)" \
-		PREFIX="/usr" \
+		PREFIX="${EPREFIX%/}/usr" \
+		LIBRARY_PATH="$(get_libdir)" \
 		ARCH= \
 		DEBUG= \
 		OPTIMIZATION="${CPPFLAGS}" \
@@ -63,7 +64,7 @@ src_test() {
 }
 
 src_install() {
-	_build PREFIX="${ED%/}/usr" LIBRARY_PATH="$(get_libdir)" install
+	_build PREFIX="${ED%/}/usr" install
 	use static-libs || rm "${ED%/}/usr/$(get_libdir)/libhiredis.a"
 	use examples && dohtml -r examples
 
