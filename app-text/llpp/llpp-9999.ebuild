@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.28 2015/03/17 07:46:15 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/llpp/llpp-9999.ebuild,v 1.29 2015/06/05 13:29:03 xmw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE="+ocamlopt static"
 
-LIB_DEPEND=">=app-text/mupdf-1.5:0=[static-libs]
+LIB_DEPEND=">=app-text/mupdf-1.7a:0=[static-libs]
 	media-libs/openjpeg:2[static-libs]
 	media-libs/fontconfig:1.0[static-libs]
 	media-libs/freetype:2[static-libs]
@@ -50,7 +50,7 @@ src_compile() {
 		local cclib=""
 		local slib=""
 		local spath=( ${EROOT}usr/$(get_libdir) $($(tc-getPKG_CONFIG) --libs-only-L --static mupdf x11 | sed 's:-L::g') )
-		for slib in $($(tc-getPKG_CONFIG) --libs-only-l --static mupdf x11) -ljpeg -ljbig2dec ; do
+		for slib in $($(tc-getPKG_CONFIG) --libs-only-l --static mupdf x11 fontconfig) -ljpeg -ljbig2dec ; do
 			case ${slib} in
 				-lm|-ldl|-lpthread)
 					einfo "${slib}: shared"

@@ -1,6 +1,11 @@
 # ChangeLog for sci-mathematics/4ti2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/ChangeLog,v 1.20 2015/03/22 13:08:28 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/4ti2/ChangeLog,v 1.21 2015/06/05 13:16:32 tomka Exp $
+
+*4ti2-1.6.5 (05 Jun 2015)
+
+  05 Jun 2015; Thomas Kahle <tomka@gentoo.org> +4ti2-1.6.5.ebuild:
+  bump to 1.6.5
 
   22 Mar 2015; Thomas Kahle <tomka@gentoo.org> -4ti2-1.3.2-r1.ebuild,
   -files/4ti2-1.3.2-gcc47.patch:

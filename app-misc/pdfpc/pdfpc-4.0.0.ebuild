@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pdfpc/pdfpc-4.0.0.ebuild,v 1.1 2015/06/01 10:57:37 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pdfpc/pdfpc-4.0.0.ebuild,v 1.2 2015/06/05 13:17:10 xmw Exp $
 
 EAPI=5
 
@@ -20,8 +20,10 @@ RDEPEND="app-text/poppler:=[cairo]
 	dev-libs/libgee:0.8
 	gnome-base/librsvg
 	media-libs/gstreamer:1.0
+	media-libs/gst-plugins-base:1.0
 	x11-libs/gtk+:3"
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+	>=dev-lang/vala-0.26"
 
 S=${WORKDIR}/${PN}-v${PV}
 
