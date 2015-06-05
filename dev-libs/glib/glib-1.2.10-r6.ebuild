@@ -1,9 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r6.ebuild,v 1.1 2015/06/05 01:29:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-1.2.10-r6.ebuild,v 1.2 2015/06/05 16:46:59 pacho Exp $
 
 EAPI=5
-
 GNOME_TARBALL_SUFFIX="gz"
 GNOME2_LA_PUNT="yes"
 
@@ -12,7 +11,8 @@ inherit autotools eutils gnome2 libtool flag-o-matic portability multilib-minima
 DESCRIPTION="The GLib library of C routines"
 HOMEPAGE="http://www.gtk.org/"
 SRC_URI="${SRC_URI}
-	 mirror://gentoo/glib-1.2.10-r1-as-needed.patch.bz2"
+	 mirror://gentoo/glib-1.2.10-r1-as-needed.patch.bz2
+"
 
 LICENSE="LGPL-2.1+"
 SLOT="1"
@@ -39,9 +39,12 @@ src_prepare() {
 	epatch "${FILESDIR}/${P}-automake-1.13.patch"
 
 	use ppc64 && use hardened && replace-flags -O[2-3] -O1
-	append-ldflags $(dlopen_lib)
+	sed -i "/libglib_la_LDFLAGS/i libglib_la_LIBADD = $(dlopen_lib)" Makefile.am || die
 
 	rm -f acinclude.m4 #168198
+
+	mv configure.in configure.ac || die
+
 	eautoreconf
 	elibtoolize
 	gnome2_src_prepare

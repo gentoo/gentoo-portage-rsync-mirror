@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-10.1.ebuild,v 1.2 2015/03/15 18:18:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/boot0/boot0-10.1.ebuild,v 1.3 2015/06/05 16:43:55 mgorny Exp $
 
-EAPI=3
+EAPI=5
 
 inherit bsdmk freebsd flag-o-matic toolchain-funcs
 
@@ -13,10 +13,13 @@ IUSE="bzip2 ieee1394 tftp zfs"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz"
 fi
+
+EXTRACTONLY="
+	sys/
+	lib/
+	contrib/bzip2/
+"
 
 RDEPEND=""
 DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*

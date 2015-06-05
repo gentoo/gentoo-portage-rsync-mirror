@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.2.0.ebuild,v 1.1 2015/05/10 11:57:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/vdr2jpeg-0.2.0.ebuild,v 1.2 2015/06/05 16:32:48 pacho Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://vdr-developerorg/${VERSION}/${P}.tgz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="libav"
 
 RDEPEND="

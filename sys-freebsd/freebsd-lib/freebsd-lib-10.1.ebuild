@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-10.1.ebuild,v 1.2 2015/05/24 11:25:44 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-10.1.ebuild,v 1.3 2015/06/05 16:43:55 mgorny Exp $
 
 EAPI=5
 
@@ -17,19 +17,23 @@ UPSTREAM_PATCHES=( "SA-14:27/stdio.patch" )
 # extracting the whole tarball
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CRYPTO}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIBEXEC}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${INCLUDE}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${GNU}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SECURE}.tar.xz
-			build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz )
-			zfs? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CDDL}.tar.xz )
+	SRC_URI="${SRC_URI}
 			$(freebsd_upstream_patches)"
 fi
+
+EXTRACTONLY="
+	lib/
+	contrib/
+	crypto/
+	libexec/
+	etc/
+	include/
+	usr.sbin/
+	gnu/
+	secure/
+"
+use build && EXTRACTONLY+="sys/"
+use zfs && EXTRACTONLY+="cddl/"
 
 if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 	RDEPEND="ssl? ( dev-libs/openssl )
@@ -51,8 +55,7 @@ if [ "${CATEGORY#*cross-}" = "${CATEGORY}" ]; then
 		=sys-freebsd/freebsd-share-${RV}*
 		>=virtual/libiconv-0-r2"
 else
-	SRC_URI="${SRC_URI}
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz"
+	EXTRACTONLY+="sys/"
 fi
 
 DEPEND="${DEPEND}

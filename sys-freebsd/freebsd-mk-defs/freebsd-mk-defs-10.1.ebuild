@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-10.1.ebuild,v 1.2 2015/04/10 13:30:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-mk-defs/freebsd-mk-defs-10.1.ebuild,v 1.3 2015/06/05 16:43:55 mgorny Exp $
 
 EAPI=5
 
@@ -13,8 +13,9 @@ IUSE="userland_GNU"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64 ~x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SHARE}.tar.xz"
 fi
+
+EXTRACTONLY="share/"
 
 RDEPEND=""
 DEPEND=""

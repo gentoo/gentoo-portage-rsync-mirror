@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-10.1.ebuild,v 1.1 2015/03/08 14:01:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-libexec/freebsd-libexec-10.1.ebuild,v 1.2 2015/06/05 16:43:55 mgorny Exp $
 
 EAPI=5
 
@@ -11,14 +11,17 @@ SLOT="0"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIBEXEC}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${BIN}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz
-		http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz"
 fi
+
+EXTRACTONLY="
+	libexec/
+	usr.bin/
+	bin/
+	contrib/hyperv/
+	lib/
+	etc/
+	usr.sbin/
+"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	>=sys-freebsd/freebsd-lib-9.1-r11[${MULTILIB_USEDEP}]

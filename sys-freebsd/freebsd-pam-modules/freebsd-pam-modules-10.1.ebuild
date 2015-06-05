@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-10.1.ebuild,v 1.1 2015/03/08 14:01:57 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pam-modules/freebsd-pam-modules-10.1.ebuild,v 1.2 2015/06/05 16:43:55 mgorny Exp $
 
-EAPI=3
+EAPI=5
 
 inherit bsdmk freebsd multilib pam
 
@@ -13,8 +13,9 @@ IUSE="kerberos nis"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz"
 fi
+
+EXTRACTONLY="lib/"
 
 RDEPEND=">=sys-auth/openpam-20050201-r1
 	kerberos? ( dev-libs/openssl

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.647 2015/06/05 01:29:16 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.648 2015/06/05 16:46:59 pacho Exp $
+
+  05 Jun 2015; Pacho Ramos <pacho@gentoo.org> -glib-2.42.1.ebuild,
+  glib-1.2.10-r6.ebuild:
+  Don't pass append-ldflags  (#257996), move configure.in to configure.ac, drop
+  old.
 
 *glib-1.2.10-r6 (05 Jun 2015)
 

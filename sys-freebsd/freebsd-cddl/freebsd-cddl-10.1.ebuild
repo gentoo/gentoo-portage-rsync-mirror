@@ -1,8 +1,8 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-10.1.ebuild,v 1.1 2015/03/08 14:01:56 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-cddl/freebsd-cddl-10.1.ebuild,v 1.2 2015/06/05 16:43:55 mgorny Exp $
 
-EAPI=4
+EAPI=5
 
 inherit bsdmk freebsd toolchain-funcs multilib
 
@@ -14,16 +14,18 @@ LICENSE="CDDL GPL-2"
 
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${P}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${UBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${LIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SYS}.tar.xz
-			build? ( http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${INCLUDE}.tar.xz )"
 fi
 
 # sys is required.
+EXTRACTONLY="
+	cddl/
+	contrib/
+	usr.bin/
+	lib/
+	sbin/
+	sys/
+"
+use build && EXTRACTONLY+="include/"
 
 RDEPEND="=sys-freebsd/freebsd-lib-${RV}*
 	=sys-freebsd/freebsd-libexec-${RV}*
