@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-pf/freebsd-pf-10.1.ebuild,v 1.1 2015/03/08 14:01:56 mgorny Exp $
 
-EAPI=3
+EAPI=5
 
 inherit bsdmk freebsd user
 
@@ -14,11 +14,14 @@ IUSE=""
 # Crypto is needed to have an internal OpenSSL header
 if [[ ${PV} != *9999* ]]; then
 	KEYWORDS="~amd64-fbsd ~x86-fbsd"
-	SRC_URI="http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${USBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${SBIN}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${CONTRIB}.tar.xz
-			http://dev.gentoo.org/~mgorny/dist/freebsd/${RV}/${ETC}.tar.xz"
 fi
+
+EXTRACTONLY="
+	usr.sbin/
+	sbin/
+	contrib/pf/
+	etc/
+"
 
 RDEPEND="net-libs/libpcap"
 DEPEND="${RDEPEND}
