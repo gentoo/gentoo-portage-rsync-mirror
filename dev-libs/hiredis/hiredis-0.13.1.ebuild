@@ -28,6 +28,7 @@ _build() {
 	emake \
 		AR="$(tc-getAR)" \
 		CC="$(tc-getCC)" \
+		PREFIX="/usr" \
 		ARCH= \
 		DEBUG= \
 		OPTIMIZATION="${CPPFLAGS}" \
@@ -62,8 +63,8 @@ src_test() {
 }
 
 src_install() {
-	_build PREFIX="${ED}/usr" LIBRARY_PATH="$(get_libdir)" install
-	use static-libs || rm "${ED}/usr/$(get_libdir)/libhiredis.a"
+	_build PREFIX="${ED%/}/usr" LIBRARY_PATH="$(get_libdir)" install
+	use static-libs || rm "${ED%/}/usr/$(get_libdir)/libhiredis.a"
 	use examples && dohtml -r examples
 
 	insinto /usr/$(get_libdir)/pkgconfig
