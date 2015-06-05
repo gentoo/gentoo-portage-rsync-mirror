@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/libscrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/libscrypt/ChangeLog,v 1.6 2015/04/10 09:51:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/libscrypt/ChangeLog,v 1.7 2015/06/05 12:05:34 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libscrypt-1.20.ebuild:
   Stable for amd64/x86/sparc, wrt bug #545940

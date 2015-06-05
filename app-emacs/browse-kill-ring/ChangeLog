@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/browse-kill-ring
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/browse-kill-ring/ChangeLog,v 1.5 2011/12/04 23:35:32 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/browse-kill-ring/ChangeLog,v 1.6 2015/06/05 12:22:18 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *browse-kill-ring-1.3c (04 Dec 2011)
 
@@ -25,4 +28,3 @@
   +browse-kill-ring-1.3.ebuild:
   Initial import from bug 207185. Ebuild contributed by MATSUYAMA Tomohiro
   <matsuyama@ariel-networks.com>.
-

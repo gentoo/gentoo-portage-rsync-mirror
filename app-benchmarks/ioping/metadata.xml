@@ -6,5 +6,6 @@
   </maintainer>
   <upstream>
     <remote-id type="google-code">ioping</remote-id>
+    <remote-id type="github">koct9i/ioping</remote-id>
   </upstream>
 </pkgmetadata>

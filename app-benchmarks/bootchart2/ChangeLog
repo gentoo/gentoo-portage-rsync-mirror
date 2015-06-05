@@ -1,6 +1,13 @@
 # ChangeLog for app-benchmarks/bootchart2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.22 2015/04/08 07:30:37 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bootchart2/ChangeLog,v 1.24 2015/06/05 12:03:16 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> -bootchart2-0.14.5-r1.ebuild,
+  -bootchart2-0.14.5.ebuild:
+  Drop old
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> bootchart2-0.14.5-r1.ebuild:
   Remove old Python implementations

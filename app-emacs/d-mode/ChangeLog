@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/d-mode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/d-mode/ChangeLog,v 1.4 2015/04/18 21:17:10 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/d-mode/ChangeLog,v 1.5 2015/06/05 12:24:02 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   18 Apr 2015; Ulrich Müller <ulm@gentoo.org>
   files/d-mode-2.0.6-emacs-24.4.patch:
@@ -19,4 +22,3 @@
   +files/50d-mode-gentoo.el, +metadata.xml:
   Initial import. Ebuild and site-init file contributed by Martin von Gagern
   <Martin.vGagern@gmx.net> in bug 474036, with modifications by me.
-

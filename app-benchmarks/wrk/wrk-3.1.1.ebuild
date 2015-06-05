@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/wrk/wrk-3.1.1.ebuild,v 1.1 2014/10/02 19:09:59 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/wrk/wrk-3.1.1.ebuild,v 1.2 2015/06/05 12:04:26 jlec Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-libs/openssl >=dev-lang/luajit-2.0.2"
+DEPEND="dev-libs/openssl:0 >=dev-lang/luajit-2.0.2"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -25,7 +25,7 @@ src_prepare() {
 
 src_compile() {
 	tc-export CC
-	emake || die
+	emake
 }
 
 src_install() {

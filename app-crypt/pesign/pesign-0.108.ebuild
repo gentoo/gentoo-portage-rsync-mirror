@@ -1,8 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/pesign-0.108.ebuild,v 1.5 2015/06/04 15:13:46 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pesign/pesign-0.108.ebuild,v 1.6 2015/06/05 12:08:31 jlec Exp $
 
 EAPI=5
+
 inherit eutils multilib
 
 DESCRIPTION="Tools for manipulating signed PE-COFF binaries"
@@ -30,17 +31,13 @@ src_prepare() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install
-	dodoc README COPYING TODO
+	default
 
 	# remove some files that don't make sense for Gentoo installs
-	rm -rf "${D}/etc/"
-	rm -rf "${D}/usr/share/doc/pesign/"
+	rm -rf "${ED}/etc/" "${ED}/usr/share/doc/pesign/" || die
 
 	# create .so symlink
-	cd "${D}/usr/$(get_libdir)/"
-	#cd ${D}/lib64/
-	ln -s libdpe.so libdpe.so.0
+	ln -s libdpe.so "${ED}/usr/$(get_libdir)/libdpe.so.0"
 }
 #
 #src_prepare() {

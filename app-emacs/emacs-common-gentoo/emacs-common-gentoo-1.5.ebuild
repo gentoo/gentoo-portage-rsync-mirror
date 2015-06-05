@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.5.ebuild,v 1.10 2015/04/17 10:40:33 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-common-gentoo/emacs-common-gentoo-1.5.ebuild,v 1.11 2015/06/05 12:07:06 ulm Exp $
 
 EAPI=5
 
@@ -69,20 +69,6 @@ src_install() {
 	readme.gentoo_create_doc
 }
 
-site-start-modified-p() {
-	case $(cksum <"${EROOT}${SITELISP}/site-start.el") in
-		# checksums of auto-generated site-start.el files
-		"2098727038 349") return 1 ;;	# elisp-common.eclass
-		"3626264063 355") return 1 ;;	# emacs-common-gentoo-1.0 (cvs rev 1.1)
-		"3738455534 394") return 1 ;;	# emacs-common-gentoo-1.0 (cvs rev 1.6)
-		"4199862847 394") return 1 ;;	# emacs-common-gentoo-1.1
-		"2547348044 394") return 1 ;;	# emacs-common-gentoo-1.2
-		"2214952934 397") return 1 ;;	# emacs-common-gentoo-1.2-r1
-		"3917799317 397") return 1 ;;	# emacs-common-gentoo-1.2-r2
-		*) return 0 ;;
-	esac
-}
-
 pkg_preinst() {
 	# make sure that site-gentoo.el exists since site-start.el requires it
 	if [[ ! -d ${EROOT}${SITELISP} ]]; then
@@ -117,21 +103,6 @@ pkg_preinst() {
 			elog "Updating owner and permissions of score file directory."
 			chown 0:gamestat "${EROOT}"/var/games/emacs || die
 			chmod 775 "${EROOT}"/var/games/emacs || die
-		fi
-	fi
-
-	if [[ -e ${EROOT}${SITELISP}/site-start.el ]]; then
-		ewarn "The location of the site startup file for Emacs has changed to"
-		ewarn "/etc/emacs/site-start.el."
-		if site-start-modified-p; then
-			eerror "Locally modified ${SITELISP}/site-start.el file found."
-			eerror "If this file contains your own customisation, you should"
-			eerror "move it to /etc/emacs/. In any case, you must remove the"
-			eerror "file from the old location."
-			die "Cannot continue unless ${SITELISP}/site-start.el is removed."
-		else
-			ewarn "Removing the old ${SITELISP}/site-start.el file."
-			rm -f "${EROOT}${SITELISP}/site-start.el"
 		fi
 	fi
 }

@@ -3,8 +3,11 @@
 <pkgmetadata>
   <herd>crypto</herd>
   <use>
-    <flag name='openssl'>
+    <flag name="openssl">
       Use openssl crypto backend.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="github">bwalex/tc-play</remote-id>
+  </upstream>
 </pkgmetadata>

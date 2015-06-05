@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/leo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.35 2015/04/24 02:33:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/leo/ChangeLog,v 1.36 2015/06/05 12:12:40 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *leo-5.1 (24 Apr 2015)
 
