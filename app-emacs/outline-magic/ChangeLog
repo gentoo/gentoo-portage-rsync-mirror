@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/outline-magic
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/outline-magic/ChangeLog,v 1.5 2014/02/20 00:09:53 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/outline-magic/ChangeLog,v 1.6 2015/06/05 12:34:11 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   20 Feb 2014; Ulrich Müller <ulm@gentoo.org> outline-magic-0.9.ebuild:
   Update ebuild to EAPI 5. Update HOMEPAGE. Specify LICENSE more precisely.
@@ -22,4 +25,3 @@
   +outline-magic-0.9.ebuild:
   initial commit, taken from Emacs overlay, provided by flameeyes, massaged by
   ulm
-

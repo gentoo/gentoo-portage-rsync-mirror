@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/open-vm-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.89 2015/06/03 16:13:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/open-vm-tools/ChangeLog,v 1.90 2015/06/05 12:44:39 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 Jun 2015; Mike Frysinger <vapier@gentoo.org>
   open-vm-tools-2013.09.16.1328054-r2.ebuild,

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/openstack-guest-agents-unix
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.6 2014/11/09 03:46:59 alunduil Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/openstack-guest-agents-unix/ChangeLog,v 1.7 2015/06/05 12:43:35 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *openstack-guest-agents-unix-1.39.1 (09 Nov 2014)
 

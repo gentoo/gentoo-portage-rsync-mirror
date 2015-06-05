@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/popwin
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/popwin/ChangeLog,v 1.7 2014/06/07 11:34:58 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/popwin/ChangeLog,v 1.8 2015/06/05 12:34:29 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   07 Jun 2014; Ulrich Müller <ulm@gentoo.org> -popwin-0.5.1.ebuild,
   popwin-0.6.2.ebuild:
@@ -36,4 +39,3 @@
   01 Oct 2011; Naohiro Aota <naota@gentoo.org> +files/50popwin-gentoo.el,
   +popwin-0.3.ebuild, +metadata.xml:
   New package app-emacs/popwin
-

@@ -1,6 +1,12 @@
 # ChangeLog for app-emacs/wanderlust
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.97 2015/03/02 12:32:28 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.99 2015/06/05 12:41:43 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> -wanderlust-2.14.0-r6.ebuild:
+  Drop old; deprecated EAPI
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   02 Mar 2015; Ulrich Müller <ulm@gentoo.org>
   -wanderlust-2.15.9_pre20120923.ebuild:
