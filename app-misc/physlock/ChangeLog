@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/physlock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/physlock/ChangeLog,v 1.4 2015/01/10 07:03:14 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/physlock/ChangeLog,v 1.5 2015/06/05 14:50:30 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *physlock-0.4.5 (10 Jan 2015)
 

@@ -4,4 +4,7 @@
   <maintainer>
     <email>rich0@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">rich0/cfg-update</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/carbon-c-relay-0.40.ebuild,v 1.2 2015/05/15 13:32:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/carbon-c-relay-0.40.ebuild,v 1.3 2015/06/05 14:47:58 jlec Exp $
 
 EAPI=5
 
@@ -15,9 +15,9 @@ SLOT="0"
 KEYWORDS="~amd64 ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 IUSE=""
 
-RDEPEND="dev-libs/openssl"
-DEPEND="virtual/pkgconfig
-	${RDEPEND}"
+RDEPEND="dev-libs/openssl:0"
+DEPEND="${RDEPEND}
+	virtual/pkgconfig"
 
 pkg_preinst() {
 	enewgroup carbon

@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/carbon-c-relay
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/ChangeLog,v 1.7 2015/05/15 13:32:18 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/carbon-c-relay/ChangeLog,v 1.9 2015/06/05 14:47:58 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> carbon-c-relay-0.39-r1.ebuild,
+  carbon-c-relay-0.40.ebuild:
+  Add slot operators
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   15 May 2015; Fabian Groffen <grobian@gentoo.org>
   carbon-c-relay-0.39-r1.ebuild, carbon-c-relay-0.40.ebuild:

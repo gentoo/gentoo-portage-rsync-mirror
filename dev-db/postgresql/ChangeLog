@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.433 2015/06/05 09:00:25 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.434 2015/06/05 15:00:27 zlogene Exp $
+
+  05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> postgresql-9.0.21.ebuild,
+  postgresql-9.1.17.ebuild, postgresql-9.2.12.ebuild, postgresql-9.3.8.ebuild,
+  postgresql-9.4.3.ebuild:
+  arm stable wrt bug #550172
 
   05 Jun 2015; Agostino Sarubbo <ago@gentoo.org> postgresql-9.0.21.ebuild,
   postgresql-9.1.17.ebuild, postgresql-9.2.12.ebuild, postgresql-9.3.8.ebuild,

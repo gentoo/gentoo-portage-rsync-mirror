@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.295 2015/06/04 18:58:16 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.296 2015/06/05 14:52:05 zlogene Exp $
+
+  05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> k3b-2.0.3-r2.ebuild:
+  amd64 stable wrt bug #509332
 
   04 Jun 2015; Michael Palimaka <kensington@gentoo.org> k3b-2.0.3-r1.ebuild,
   k3b-2.0.3-r2.ebuild:

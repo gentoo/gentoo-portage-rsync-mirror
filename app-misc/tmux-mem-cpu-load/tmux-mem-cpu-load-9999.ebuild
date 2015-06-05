@@ -1,14 +1,14 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/tmux-mem-cpu-load-9999.ebuild,v 1.1 2013/11/15 13:19:13 wired Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/tmux-mem-cpu-load-9999.ebuild,v 1.2 2015/06/05 14:57:31 jlec Exp $
 
-EAPI="3"
+EAPI=5
 
 inherit cmake-utils
 
 IUSE=""
 if [[ ${PV} == *9999* ]]; then
-	inherit git-2
+	inherit git-r3
 	EGIT_REPO_URI=${EGIT_REPO_URI:-"git://github.com/thewtex/tmux-mem-cpu-load.git"}
 	KEYWORDS=""
 	SRC_URI=""
@@ -23,7 +23,4 @@ HOMEPAGE="http://github.com/thewtex/tmux-mem-cpu-load/"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-src_install() {
-	cmake-utils_src_install
-	dodoc README.rst || die
-}
+DOCS=( README.rst )

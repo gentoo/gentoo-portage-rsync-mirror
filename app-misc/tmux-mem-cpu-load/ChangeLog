@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/tmux-mem-cpu-load
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/ChangeLog,v 1.6 2013/11/15 13:19:12 wired Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tmux-mem-cpu-load/ChangeLog,v 1.8 2015/06/05 14:57:31 jlec Exp $
+
+*tmux-mem-cpu-load-2.2.1-r1 (05 Jun 2015)
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +tmux-mem-cpu-load-2.2.1-r1.ebuild, tmux-mem-cpu-load-2.2.1.ebuild,
+  tmux-mem-cpu-load-9999.ebuild:
+  Bump to EAPI=5 and git-r3
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *tmux-mem-cpu-load-9999 (15 Nov 2013)
 
@@ -30,4 +40,3 @@
   18 Nov 2010; Alex Alexander <wired@gentoo.org>
   +tmux-mem-cpu-load-2.1.0.ebuild, +metadata.xml:
   new ebuild
-

@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/gentoo-bashcomp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.72 2014/09/11 14:27:04 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/gentoo-bashcomp/ChangeLog,v 1.73 2015/06/05 14:41:40 zlogene Exp $
+
+  05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  gentoo-bashcomp-20140911.ebuild:
+  amd64 stable wrt bug #530236
 
 *gentoo-bashcomp-20140911 (11 Sep 2014)
 

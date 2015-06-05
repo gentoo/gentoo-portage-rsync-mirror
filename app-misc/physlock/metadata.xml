@@ -1,11 +1,11 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-	<maintainer>
-		<email>radhermit@gentoo.org</email>
-		<name>Tim Harder</name>
-	</maintainer>
-	<longdescription lang="en">
+  <maintainer>
+    <email>radhermit@gentoo.org</email>
+    <name>Tim Harder</name>
+  </maintainer>
+  <longdescription lang="en">
 	Control physical access to a linux computer by locking all of its virtual
 	terminals / consoles.
 
@@ -15,4 +15,7 @@
 	designed to be more lightweight, it does not have a plugin interface and it is
 	not started using a shell script wrapper.
 	</longdescription>
+  <upstream>
+    <remote-id type="github">muennich/physlock</remote-id>
+  </upstream>
 </pkgmetadata>

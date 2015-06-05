@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/xtscal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtscal/ChangeLog,v 1.9 2014/11/07 15:01:56 chithanh Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xtscal/ChangeLog,v 1.10 2015/06/05 14:48:57 chithanh Exp $
+
+*xtscal-0.6.3-r1 (05 Jun 2015)
+
+  05 Jun 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +xtscal-0.6.3-r1.ebuild, xtscal-0.6.3.ebuild:
+  Fix underlinking against libXrender, bug #370017.
 
   07 Nov 2014; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
   xtscal-0.6.3.ebuild:

@@ -1,6 +1,13 @@
 # ChangeLog for app-office/QtBitcoinTrader
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/ChangeLog,v 1.7 2014/10/14 19:34:24 alexxy Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/QtBitcoinTrader/ChangeLog,v 1.9 2015/06/05 15:00:22 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> QtBitcoinTrader-1.08.01.ebuild,
+  QtBitcoinTrader-9999.ebuild:
+  Add slot operators
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *QtBitcoinTrader-1.08.01 (14 Oct 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/dynamite
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.15 2012/12/28 02:31:47 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/dynamite/ChangeLog,v 1.16 2015/06/05 14:59:25 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   28 Dec 2012; Samuli Suominen <ssuominen@gentoo.org> -dynamite-0.1.1.ebuild:
   old
