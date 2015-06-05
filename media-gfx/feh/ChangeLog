@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/feh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.148 2015/04/24 20:45:15 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/ChangeLog,v 1.149 2015/06/05 20:18:59 hwoarang Exp $
+
+*feh-2.13.1 (05 Jun 2015)
+
+  05 Jun 2015; Markos Chandras <hwoarang@gentoo.org> +feh-2.13.1.ebuild:
+  Version bump. Bug #550494
 
 *feh-2.12.1 (24 Apr 2015)
 

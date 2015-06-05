@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/perl-ExtUtils-Manifest-1.700.0.ebuild,v 1.1 2015/02/27 23:37:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-MakeMaker/perl-ExtUtils-MakeMaker-7.40.100_rc.ebuild,v 1.1 2015/06/05 20:18:51 dilfridge Exp $
 
 EAPI=5
 
@@ -14,5 +14,7 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE=""
 
 RDEPEND="
-	~perl-core/${PN#perl-}-${PV}
+	|| ( =dev-lang/perl-5.22* ~perl-core/${PN#perl-}-${PV} )
+	!<perl-core/${PN#perl-}-${PV}
+	!>perl-core/${PN#perl-}-${PV}-r999
 "

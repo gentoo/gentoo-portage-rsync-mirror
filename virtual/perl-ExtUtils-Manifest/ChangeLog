@@ -1,6 +1,16 @@
 # ChangeLog for virtual/perl-ExtUtils-Manifest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.55 2015/02/27 23:37:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-ExtUtils-Manifest/ChangeLog,v 1.56 2015/06/05 20:22:45 dilfridge Exp $
+
+*perl-ExtUtils-Manifest-1.700.0-r1 (05 Jun 2015)
+*perl-ExtUtils-Manifest-1.630.0-r2 (05 Jun 2015)
+
+  05 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-ExtUtils-Manifest-1.630.0-r1.ebuild,
+  +perl-ExtUtils-Manifest-1.630.0-r2.ebuild,
+  -perl-ExtUtils-Manifest-1.700.0.ebuild,
+  +perl-ExtUtils-Manifest-1.700.0-r1.ebuild:
+  Add Perl 5.22 as provider, remove Perl 5.18 as provider
 
 *perl-ExtUtils-Manifest-1.700.0 (27 Feb 2015)
 
