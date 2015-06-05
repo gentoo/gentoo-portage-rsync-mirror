@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fakefs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.63 2015/04/27 08:57:15 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fakefs/ChangeLog,v 1.64 2015/06/05 15:29:27 zlogene Exp $
+
+  05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> fakefs-0.6.0.ebuild:
+  arm stable wrt bug #546484
 
   27 Apr 2015; Agostino Sarubbo <ago@gentoo.org> fakefs-0.6.0.ebuild:
   Stable for ppc64, wrt bug #546484

@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.6.4.ebuild,v 1.2 2015/04/08 07:30:30 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/elogv/elogv-0.7.6.4.ebuild,v 1.3 2015/06/05 15:08:15 jlec Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=( python2_7 )
 PYTHON_REQ_USE="ncurses"
-inherit distutils-r1 prefix
+inherit distutils-r1
 
 DESCRIPTION="Curses based utility to parse the contents of elogs created by Portage"
 HOMEPAGE="https://github.com/gentoo/elogv"

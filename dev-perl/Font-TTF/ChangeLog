@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Font-TTF
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.38 2014/08/22 16:13:30 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Font-TTF/ChangeLog,v 1.39 2015/06/05 15:14:05 zlogene Exp $
+
+  05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> Font-TTF-1.20.0-r1.ebuild:
+  Stable for all wrt bug #535180
 
 *Font-TTF-1.20.0-r1 (22 Aug 2014)
 *Font-TTF-0.480.0-r1 (22 Aug 2014)

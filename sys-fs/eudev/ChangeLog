@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/eudev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.160 2015/05/30 13:53:27 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/ChangeLog,v 1.161 2015/06/05 15:20:59 blueness Exp $
+
+*eudev-3.1.1 (05 Jun 2015)
+
+  05 Jun 2015; Anthony G. Basile <blueness@gentoo.org> +eudev-3.1.1.ebuild,
+  -eudev-3.1.ebuild:
+  Version bump. Fixes upstream issue #117.
 
 *eudev-3.1 (30 May 2015)
 

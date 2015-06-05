@@ -1,6 +1,10 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.183 2015/06/03 05:30:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.184 2015/06/05 15:03:21 zlogene Exp $
+
+  05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  ghostscript-gpl-9.15-r1.ebuild:
+  arm stable wrt bug #546632
 
   03 Jun 2015; Jeroen Roovers <jer@gentoo.org> ghostscript-gpl-9.15-r1.ebuild:
   Stable for HPPA (bug #546632).
