@@ -1,6 +1,15 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.459 2015/06/01 06:50:40 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.460 2015/06/05 08:01:17 haubi Exp $
+
+  05 Jun 2015; Michael Haubenwallner <haubi@gentoo.org>
+  +windows/cygwin/2.0/eapi, +windows/cygwin/2.0/package.provided,
+  +windows/cygwin/2.0/parent, +windows/cygwin/2.0/x64/eapi,
+  +windows/cygwin/2.0/x64/make.defaults, +windows/cygwin/2.0/x64/parent,
+  +windows/cygwin/2.0/x86/eapi, +windows/cygwin/2.0/x86/make.defaults,
+  +windows/cygwin/2.0/x86/parent:
+  add cygwin/2.0 profiles x86 and x64, see
+  https://sourceware.org/ml/cygwin/2015-04/msg00595.html
 
   01 Jun 2015; Fabian Groffen <grobian@gentoo.org> package.mask:
   Drop mask for pkgconfig since the cycle was fixed

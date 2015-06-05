@@ -1,6 +1,13 @@
 # ChangeLog for games-strategy/seven-kingdoms
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/ChangeLog,v 1.9 2015/05/27 11:00:56 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/seven-kingdoms/ChangeLog,v 1.10 2015/06/05 08:25:24 pinkbyte Exp $
+
+*seven-kingdoms-2.14.5 (05 Jun 2015)
+
+  05 Jun 2015; Sergey Popov <pinkbyte@gentoo.org>
+  +seven-kingdoms-2.14.5.ebuild:
+  Version bump, wrt bug #551234. Thanks to Martin Walch <walch.martin AT
+  web.de> for discovering this issue
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> seven-kingdoms-2.14.4.ebuild:
   Stable for x86, wrt bug #550450
