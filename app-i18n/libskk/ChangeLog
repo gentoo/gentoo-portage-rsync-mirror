@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/libskk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/ChangeLog,v 1.8 2014/07/06 13:15:18 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/libskk/ChangeLog,v 1.9 2015/06/05 14:22:28 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> libskk-1.0.1.ebuild:
   Replace obsolete mirror://bitbucket with the real URI.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.1.ebuild,v 1.6 2013/05/03 08:15:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/afflib/afflib-3.7.1.ebuild,v 1.7 2015/06/05 14:13:45 jlec Exp $
 
 EAPI="4"
 PYTHON_DEPEND="python? 2"
@@ -18,11 +18,11 @@ KEYWORDS="amd64 hppa ppc x86"
 IUSE="fuse ncurses python qemu readline s3 static-libs threads"
 
 RDEPEND="dev-libs/expat
-	dev-libs/openssl
+	dev-libs/openssl:0
 	sys-libs/zlib
 	fuse? ( sys-fs/fuse )
 	ncurses? ( sys-libs/ncurses )
-	readline? ( sys-libs/readline )
+	readline? ( sys-libs/readline:0 )
 	s3? ( net-misc/curl )"
 DEPEND="${RDEPEND}"
 

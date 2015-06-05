@@ -1,15 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.15.9_p20130619.ebuild,v 1.8 2015/06/05 14:18:56 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.14.0-r6.ebuild,v 1.11 2015/06/05 14:18:56 ulm Exp $
 
 EAPI=5
 
 inherit elisp
 
+MY_P="wl-${PV/_/}"
 DESCRIPTION="Yet Another Message Interface on Emacsen"
-HOMEPAGE="https://github.com/wanderlust/wanderlust
-	http://emacswiki.org/emacs/WanderLust"
-SRC_URI="http://dev.gentoo.org/~ulm/distfiles/${P}.tar.xz"
+HOMEPAGE="http://www.gohome.org/wl/"
+SRC_URI="ftp://ftp.gohome.org/wl/stable/${MY_P}.tar.gz
+	ftp://ftp.gohome.org/wl/beta/${MY_P}.tar.gz
+	mirror://gentoo/${P}-20050405.patch.gz"
 
 LICENSE="GPL-2+"
 SLOT="0"
@@ -22,7 +24,10 @@ DEPEND=">=app-emacs/apel-10.6
 	bbdb? ( app-emacs/bbdb )"
 RDEPEND="${DEPEND}"
 
-S="${WORKDIR}/${PN}"
+S="${WORKDIR}/${MY_P}"
+ELISP_PATCHES="${P}-20050405.patch
+	${P}-smtp-end-of-line.patch
+	${P}-texinfo-garbage.patch"
 SITEFILE="50${PN}-gentoo.el"
 
 src_configure() {
@@ -48,7 +53,7 @@ src_install() {
 	insinto "${SITEETC}/wl/samples/en"
 	doins samples/en/*
 	doinfo doc/wl*.info
-	dodoc BUGS ChangeLog INSTALL NEWS README.md
+	dodoc BUGS ChangeLog INSTALL NEWS README
 
 	if use linguas_ja; then
 		insinto "${SITEETC}/wl/samples/ja"

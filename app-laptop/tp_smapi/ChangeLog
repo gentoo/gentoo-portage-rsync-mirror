@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/tp_smapi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.47 2014/03/22 18:35:18 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tp_smapi/ChangeLog,v 1.48 2015/06/05 14:27:57 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   22 Mar 2014; Michael Palimaka <kensington@gentoo.org>
   -files/fix_header_check.patch, -files/tp_smapi-0.40-2.6.37.patch,

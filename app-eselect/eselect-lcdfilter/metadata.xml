@@ -5,4 +5,7 @@
     <email>yngwin@gentoo.org</email>
   </maintainer>
   <herd>fonts</herd>
+  <upstream>
+    <remote-id type="github">yngwin/eselect-lcdfilter</remote-id>
+  </upstream>
 </pkgmetadata>

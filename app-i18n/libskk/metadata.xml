@@ -3,6 +3,9 @@
 <pkgmetadata>
   <herd>cjk</herd>
   <use>
-    <flag name='introspection'>Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
+    <flag name="introspection">Use <pkg>dev-libs/gobject-introspection</pkg> for introspection</flag>
   </use>
+  <upstream>
+    <remote-id type="github">ueno/libskk</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/nvidiabl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.24 2014/12/31 16:15:29 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/nvidiabl/ChangeLog,v 1.25 2015/06/05 14:26:48 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   31 Dec 2014; Michael Palimaka <kensington@gentoo.org> -nvidiabl-0.81.ebuild:
   Remove old.

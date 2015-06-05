@@ -1,6 +1,9 @@
 # ChangeLog for app-laptop/hdapsd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.32 2015/01/26 10:11:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/hdapsd/ChangeLog,v 1.33 2015/06/05 14:26:28 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> hdapsd-20141203.ebuild:
   Stable for x86, wrt bug #536336
