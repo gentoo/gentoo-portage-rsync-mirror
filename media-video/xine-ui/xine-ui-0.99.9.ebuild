@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.9.ebuild,v 1.5 2015/05/29 04:49:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.99.9.ebuild,v 1.6 2015/06/05 17:41:36 zlogene Exp $
 
 EAPI=5
 inherit fdo-mime gnome2-utils
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/xine/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 hppa ~ppc ppc64 x86 ~x86-fbsd"
+KEYWORDS="amd64 hppa ~ppc ppc64 x86 ~x86-fbsd"
 IUSE="aalib curl debug libcaca lirc nls readline vdr X xinerama"
 
 RDEPEND="|| ( app-arch/tar app-arch/libarchive )
