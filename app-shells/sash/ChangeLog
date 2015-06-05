@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.54 2015/02/10 12:09:31 dastergon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.55 2015/06/05 05:25:20 jer Exp $
+
+  05 Jun 2015; Jeroen Roovers <jer@gentoo.org> sash-3.8.ebuild:
+  Do not strip.
 
   10 Feb 2015; Pavlos Ratis <dastergon@gentoo.org> metadata.xml:
   Drop myself from metadata, add maintainer-needed

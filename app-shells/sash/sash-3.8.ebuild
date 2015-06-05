@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.8.ebuild,v 1.1 2014/06/09 06:03:17 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.8.ebuild,v 1.2 2015/06/05 05:25:20 jer Exp $
 
 EAPI=4
 
@@ -25,6 +25,7 @@ src_prepare() {
 
 	sed \
 		-e "s:-O3:${CFLAGS}:" \
+		-e '/strip/d' \
 		-i Makefile || die
 	sed \
 		-e 's:linux/ext2_fs.h:ext2fs/ext2_fs.h:g' \
