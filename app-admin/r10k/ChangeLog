@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/r10k
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.10 2015/05/24 22:58:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/r10k/ChangeLog,v 1.11 2015/06/05 11:42:43 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *r10k-1.5.1 (24 May 2015)
 

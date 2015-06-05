@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/clsync
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/clsync/ChangeLog,v 1.6 2015/05/25 00:20:54 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/clsync/ChangeLog,v 1.7 2015/06/05 11:35:57 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   25 May 2015; Andrew Savchenko <bircoph@gentoo.org> -clsync-0.4-r1.ebuild,
   -files/clsync-0.4-direct_mode.patch, -files/clsync-0.4-gio.patch,
@@ -39,4 +42,3 @@
   +files/clsync-0.4-version.patch, +files/clsync.conf, +files/clsync.confd,
   +files/clsync.initd, +metadata.xml:
   Initial version ported from bircoph overlay
-

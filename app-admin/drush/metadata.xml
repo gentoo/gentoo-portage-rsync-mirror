@@ -11,5 +11,7 @@
     those of us who spend some of our working hours hacking away at
     the command prompt.
   </longdescription>
+  <upstream>
+    <remote-id type="github">drush-ops/drush</remote-id>
+  </upstream>
 </pkgmetadata>
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ngxtop
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ngxtop/ChangeLog,v 1.6 2014/12/01 15:52:10 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ngxtop/ChangeLog,v 1.7 2015/06/05 11:40:08 jlec Exp $
+
+  05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *ngxtop-0.0.3_pre141201 (01 Dec 2014)
 
@@ -28,4 +31,3 @@
   04 Jun 2014; Justin Lecher <jlec@gentoo.org> +ngxtop-0.0.2.ebuild,
   +metadata.xml:
   New addition written by me
-

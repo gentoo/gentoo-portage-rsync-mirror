@@ -9,5 +9,6 @@
 </longdescription>
   <upstream>
     <remote-id type="pypi">bloscpack</remote-id>
+    <remote-id type="github">Blosc/bloscpack</remote-id>
   </upstream>
 </pkgmetadata>

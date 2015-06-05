@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14-r1.ebuild,v 1.1 2014/12/15 05:26:43 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/syslog-summary-1.14-r1.ebuild,v 1.2 2015/06/05 11:46:39 jlec Exp $
 
 EAPI=5
 
@@ -17,8 +17,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~sparc ~x86"
 IUSE=""
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
 DEPEND=""
-RDEPEND=""
+RDEPEND="${PYTHON_DEPS}"
 
 src_prepare() {
 	python_fix_shebang -f syslog-summary
@@ -28,10 +30,10 @@ src_prepare() {
 }
 
 src_install() {
-	dobin syslog-summary || die
-	dodoc AUTHORS ChangeLog NEWS README || die
-	doman syslog-summary.1 || die
+	dobin syslog-summary
+	dodoc AUTHORS ChangeLog NEWS README
+	doman syslog-summary.1
 
 	insinto /etc/syslog-summary
-	doins ignore.rules || die
+	doins ignore.rules
 }

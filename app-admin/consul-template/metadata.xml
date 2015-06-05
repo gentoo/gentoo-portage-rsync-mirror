@@ -4,4 +4,7 @@
   <maintainer>
     <email>zmedico@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">hashicorp/consul-template</remote-id>
+  </upstream>
 </pkgmetadata>
