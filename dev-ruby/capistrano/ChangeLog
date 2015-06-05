@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/capistrano
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.110 2015/06/04 06:03:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/ChangeLog,v 1.111 2015/06/05 05:49:10 graaff Exp $
+
+  05 Jun 2015; Hans de Graaff <graaff@gentoo.org> capistrano-2.15.5-r2.ebuild:
+  Add ruby21, ruby22.
 
   04 Jun 2015; Hans de Graaff <graaff@gentoo.org> capistrano-3.3.5.ebuild,
   capistrano-3.4.0.ebuild:

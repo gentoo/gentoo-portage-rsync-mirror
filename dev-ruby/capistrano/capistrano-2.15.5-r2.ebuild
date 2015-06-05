@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.15.5-r2.ebuild,v 1.1 2014/12/31 07:36:03 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/capistrano/capistrano-2.15.5-r2.ebuild,v 1.2 2015/06/05 05:49:10 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
 RUBY_FAKEGEM_TASK_DOC=""
 RUBY_FAKEGEM_EXTRADOC="CHANGELOG README.md"
@@ -27,14 +27,14 @@ ruby_add_rdepend "
 	>=dev-ruby/net-ssh-gateway-1.1.0
 	>=dev-ruby/highline-1.2.7"
 ruby_add_bdepend "
-	test? (	dev-ruby/mocha:0.12 )"
+	test? (	dev-ruby/mocha:0.14 )"
 
 RUBY_PATCHES=( ${P}-sudo-cleanup.patch )
 
 all_ruby_prepare() {
 	rm Gemfile || die
 	sed -i -e '/[Bb]undler/d' Rakefile test/utils.rb || die
-	sed -i -e '/pry/ s:^:#:' -e '4igem "mocha", "~>0.12.0"' test/utils.rb || die
+	sed -i -e '/pry/ s:^:#:' -e '4igem "mocha", "~>0.14.0"' test/utils.rb || die
 
 	# Avoid copy strategy tests since these fail in some cases due to
 	# complicated (aka unknown) interactions with other parts of the
