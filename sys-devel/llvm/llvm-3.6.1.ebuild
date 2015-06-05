@@ -160,6 +160,9 @@ src_prepare() {
 		eprefixify tools/clang/lib/Frontend/InitHeaderSearch.cpp
 	fi
 
+	# Fix build fails with using gcc-4.9 on Gentoo/FreeBSD, bug #548444
+	use clang && epatch "${FILESDIR}"/clang-3.6-fbsd-gcc49.patch
+
 	if use prefix && use clang; then
 		sed -i -e "/^CFLAGS /s@-Werror@-I${EPREFIX}/usr/include@" \
 			projects/compiler-rt/make/platform/clang_*.mk || die
