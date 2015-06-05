@@ -4,8 +4,6 @@ Date:   Tue Nov 26 22:13:21 2013 +0100
 
     fix icon install dest
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 1f51a30..9c07659 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -304,7 +304,9 @@ endif()

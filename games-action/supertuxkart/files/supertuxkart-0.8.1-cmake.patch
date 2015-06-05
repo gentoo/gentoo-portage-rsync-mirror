@@ -1,0 +1,12 @@
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -128,6 +128,9 @@
+ find_package(OpenGL REQUIRED)
+ include_directories(${OPENGL_INCLUDE_DIR})
+ 
++find_package(X11 REQUIRED)
++include_directories(${X11_INCLUDE_DIR})
++
+ if(UNIX AND NOT APPLE)
+     find_library(IRRLICHT_XF86VM_LIBRARY Xxf86vm)
+     mark_as_advanced(IRRLICHT_XF86VM_LIBRARY)

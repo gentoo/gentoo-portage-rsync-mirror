@@ -1,6 +1,15 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.45 2015/06/01 22:10:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.46 2015/06/05 07:08:00 mr_bones_ Exp $
+
+  05 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  +files/supertuxkart-0.8.1-cmake.patch,
+  files/supertuxkart-0.8.1-desktopfile.patch,
+  files/supertuxkart-0.8.1-gentoo.patch,
+  files/supertuxkart-0.8.1-icon-dest.patch,
+  files/supertuxkart-0.8.1-irrlicht.patch, files/supertuxkart-0.8.1-jpeg9.patch,
+  files/supertuxkart-0.8.1-mesa-10.x.patch, supertuxkart-0.8.1.ebuild:
+  add patch to work with newer cmake (bug #551260)
 
   01 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
   supertuxkart-0.8.1.ebuild:

@@ -1,8 +1,6 @@
 gentoo specific hacks because we unbundle the
 deps of irrlicht
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 09edd58..1f51a30 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -45,7 +45,6 @@ add_subdirectory("${PROJECT_SOURCE_DIR}/lib/enet")
