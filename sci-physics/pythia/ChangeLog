@@ -1,6 +1,14 @@
 # ChangeLog for sci-physics/pythia
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.63 2015/05/27 17:53:32 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/pythia/ChangeLog,v 1.64 2015/06/05 08:40:17 bircoph Exp $
+
+*pythia-8.2.09-r1 (05 Jun 2015)
+
+  05 Jun 2015; Andrew Savchenko <bircoph@gentoo.org> +pythia-8.2.09-r1.ebuild,
+  +files/pythia8209-root-noninteractive.patch,
+  +files/pythia8209-run-tests.patch, metadata.xml:
+  Version bump. Add new deps. Fix tests, they can be run in parallel
+  now using standard emake. Imported from the science overlay.
 
 *pythia-8.1.86-r1 (27 May 2015)
 
