@@ -16,6 +16,7 @@ IUSE="+jemalloc tcmalloc test"
 SLOT="0"
 
 RDEPEND=">=dev-lang/lua-5.1:=
+	>=dev-libs/hiredis-0.13.1
 	tcmalloc? ( dev-util/google-perftools )
 	jemalloc? ( >=dev-libs/jemalloc-3.2 )"
 DEPEND="virtual/pkgconfig
@@ -35,6 +36,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.3-shared.patch
 	epatch "${FILESDIR}"/${PN}-2.8.17-config.patch
 	epatch "${FILESDIR}"/${PN}-3.0.0-sharedlua.patch
+	epatch "${FILESDIR}"/${P}-sharedhiredis.patch
 
 	# Copy lua modules into build dir
 	cp "${S}"/deps/lua/src/{fpconv,lua_bit,lua_cjson,lua_cmsgpack,lua_struct,strbuf}.c "${S}"/src || die
@@ -107,10 +109,6 @@ src_install() {
 	fperms 0750 /usr/sbin/redis-benchmark
 	dosym /usr/sbin/redis-server /usr/sbin/redis-sentinel
 
-	if use prefix; then
-		diropts -m0750
-	else
-		diropts -m0750 -o redis -g redis
-	fi
+	diropts -m0750 -o redis -g redis
 	keepdir /var/{log,lib}/redis
 }

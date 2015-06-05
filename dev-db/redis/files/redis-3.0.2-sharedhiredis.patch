@@ -1,0 +1,57 @@
+diff --git src/Makefile src/Makefile
+index f71e7b5..f2b657b 100644
+--- src/Makefile
++++ src/Makefile
+@@ -15,7 +15,7 @@
+ release_hdr := $(shell sh -c './mkreleasehdr.sh')
+ uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
+ OPTIMIZATION?=-O2
+-DEPENDENCY_TARGETS=hiredis linenoise
++DEPENDENCY_TARGETS=linenoise
+ 
+ # Default settings
+ STD=-std=c99 -pedantic
+@@ -45,9 +45,11 @@ endif
+ -include .make-settings
+ 
+ FINAL_CFLAGS=$(STD) $(WARN) $(OPT) $(DEBUG) $(CFLAGS) $(REDIS_CFLAGS)
++FINAL_CFLAGS+=$(shell pkg-config --cflags hiredis)
+ FINAL_LDFLAGS=$(LDFLAGS) $(REDIS_LDFLAGS) $(DEBUG)
+ FINAL_LIBS=-lm
+ FINAL_LIBS+=$(shell pkg-config --libs lua)
++FINAL_LIBS+=$(shell pkg-config --libs hiredis)
+ DEBUG=-g -ggdb
+ 
+ ifeq ($(uname_S),SunOS)
+@@ -72,7 +74,7 @@ endif
+ endif
+ endif
+ # Include paths to dependencies
+-FINAL_CFLAGS+= -I../deps/hiredis -I../deps/linenoise -I../deps/lua/src
++FINAL_CFLAGS+= -I../deps/linenoise -I../deps/lua/src
+ 
+ ifeq ($(MALLOC),tcmalloc)
+ 	FINAL_CFLAGS+= -DUSE_TCMALLOC
+@@ -164,7 +166,7 @@ endif
+ 
+ # redis-server
+ $(REDIS_SERVER_NAME): $(REDIS_SERVER_OBJ)
+-	$(REDIS_LD) -o $@ $^ ../deps/hiredis/libhiredis.a $(FINAL_LIBS)
++	$(REDIS_LD) -o $@ $^ $(FINAL_LIBS)
+ 
+ # redis-sentinel
+ $(REDIS_SENTINEL_NAME): $(REDIS_SERVER_NAME)
+@@ -172,11 +174,11 @@ $(REDIS_SENTINEL_NAME): $(REDIS_SERVER_NAME)
+ 
+ # redis-cli
+ $(REDIS_CLI_NAME): $(REDIS_CLI_OBJ)
+-	$(REDIS_LD) -o $@ $^ ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o $(FINAL_LIBS)
++	$(REDIS_LD) -o $@ $^ ../deps/linenoise/linenoise.o $(FINAL_LIBS)
+ 
+ # redis-benchmark
+ $(REDIS_BENCHMARK_NAME): $(REDIS_BENCHMARK_OBJ)
+-	$(REDIS_LD) -o $@ $^ ../deps/hiredis/libhiredis.a $(FINAL_LIBS)
++	$(REDIS_LD) -o $@ $^ $(FINAL_LIBS)
+ 
+ # redis-check-dump
+ $(REDIS_CHECK_DUMP_NAME): $(REDIS_CHECK_DUMP_OBJ)
