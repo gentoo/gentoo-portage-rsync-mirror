@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/kde4-l10n/kde4-l10n-4.14.3.ebuild,v 1.1 2015/06/04 18:44:51 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/kde4-l10n/kde4-l10n-4.14.3.ebuild,v 1.2 2015/06/05 16:05:37 kensington Exp $
 
 EAPI=5
 
@@ -52,7 +52,7 @@ src_unpack() {
 	# add all linguas to cmake
 	if [[ -n ${A} ]]; then
 		for LNG in ${LINGUAS}; do
-			DIR="${PN}-${LNG}-${PV}"
+			DIR="kde-l10n-${LNG}-${PV}"
 			if [[ -d "${DIR}" ]] ; then
 				echo "add_subdirectory( ${DIR} )" >> "${S}"/CMakeLists.txt
 			fi
