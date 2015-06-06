@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.161 2015/05/19 17:39:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.162 2015/06/06 06:21:55 vapier Exp $
+
+*portage-utils-0.56 (06 Jun 2015)
+
+  06 Jun 2015; Mike Frysinger <vapier@gentoo.org> +portage-utils-0.56.ebuild:
+  Version bump.
 
 *portage-utils-0.55 (19 May 2015)
 
