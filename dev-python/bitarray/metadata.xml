@@ -16,5 +16,6 @@ you may find this module useful.
 </longdescription>
   <upstream>
     <remote-id type="pypi">bitarray</remote-id>
+    <remote-id type="github">ilanschnell/bitarray</remote-id>
   </upstream>
 </pkgmetadata>

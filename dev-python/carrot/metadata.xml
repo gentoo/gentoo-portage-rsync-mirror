@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">carrot</remote-id>
+    <remote-id type="github">ask/carrot</remote-id>
   </upstream>
 </pkgmetadata>

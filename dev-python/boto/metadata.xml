@@ -8,5 +8,6 @@
   <upstream>
     <remote-id type="google-code">boto</remote-id>
     <remote-id type="pypi">boto</remote-id>
+    <remote-id type="github">boto/boto</remote-id>
   </upstream>
 </pkgmetadata>

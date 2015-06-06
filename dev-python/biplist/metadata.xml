@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">biplist</remote-id>
+    <remote-id type="github">wooster/biplist</remote-id>
   </upstream>
 </pkgmetadata>
