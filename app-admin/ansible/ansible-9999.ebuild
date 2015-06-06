@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.24 2015/03/28 10:50:44 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ansible/ansible-9999.ebuild,v 1.25 2015/06/06 09:50:13 jlec Exp $
 
 EAPI=5
 
@@ -58,5 +58,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	optfeatures "Alternative ssh transport" dev-python/paramiko
+	optfeature "Alternative ssh transport" dev-python/paramiko
 }

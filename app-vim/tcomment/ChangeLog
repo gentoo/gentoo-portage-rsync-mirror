@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tcomment
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tcomment/ChangeLog,v 1.8 2015/03/06 23:04:28 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tcomment/ChangeLog,v 1.9 2015/06/06 09:47:33 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   06 Mar 2015; Tim Harder <radhermit@gentoo.org> -tcomment-2.08.ebuild,
   -tcomment-2.09.ebuild, -tcomment-3.00.ebuild, -tcomment-3.01.ebuild,
@@ -42,4 +45,3 @@
   26 Sep 2013; Tim Harder <radhermit@gentoo.org> +tcomment-2.08.ebuild,
   +metadata.xml:
   Initial import.
-

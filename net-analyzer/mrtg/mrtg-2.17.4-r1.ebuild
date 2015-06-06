@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.11 2015/05/05 09:07:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/mrtg-2.17.4-r1.ebuild,v 1.12 2015/06/06 09:48:43 perfinion Exp $
 
 EAPI=5
 inherit eutils
@@ -12,6 +12,7 @@ SRC_URI="http://oss.oetiker.ch/mrtg/pub/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 ~arm hppa ppc ppc64 sparc x86"
+IUSE="selinux"
 
 DEPEND="
 	>=dev-perl/SNMP_Session-1.13-r2
@@ -19,7 +20,8 @@ DEPEND="
 	dev-lang/perl
 	media-libs/gd[png]
 "
-RDEPEND="${DEPEND}"
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-mrtg )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-socket6.patch

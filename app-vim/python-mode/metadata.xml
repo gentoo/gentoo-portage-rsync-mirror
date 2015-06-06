@@ -12,4 +12,7 @@
 		python code looking for bugs, refactoring and some other useful
 		things.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">klen/python-mode</remote-id>
+	</upstream>
 </pkgmetadata>

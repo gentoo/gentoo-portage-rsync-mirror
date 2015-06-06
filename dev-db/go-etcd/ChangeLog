@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/go-etcd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/go-etcd/ChangeLog,v 1.4 2015/05/01 08:39:28 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/go-etcd/ChangeLog,v 1.5 2015/06/06 09:51:19 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *go-etcd-2.0.0 (01 May 2015)
 

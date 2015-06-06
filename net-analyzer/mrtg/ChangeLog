@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/mrtg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.126 2015/05/05 09:07:23 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mrtg/ChangeLog,v 1.127 2015/06/06 09:48:43 perfinion Exp $
+
+  06 Jun 2015; Jason Zaman <perfinion@gentoo.org> mrtg-2.17.4-r1.ebuild:
+  RDEPEND on SELinux policy, bug 537018
 
   05 May 2015; Jeroen Roovers <jer@gentoo.org> -mrtg-2.16.4-r1.ebuild,
   mrtg-2.17.4-r1.ebuild, -files/mrtg-2.16.4-disable-static.patch,

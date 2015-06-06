@@ -8,5 +8,7 @@
 		more heavily restricted modeline parser that permits only user-specified
 		options to be set.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ciaranm/securemodelines</remote-id>
+	</upstream>
 </pkgmetadata>
-

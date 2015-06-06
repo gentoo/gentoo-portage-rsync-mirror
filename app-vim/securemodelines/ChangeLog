@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/securemodelines
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.20 2014/12/11 07:41:10 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/securemodelines/ChangeLog,v 1.21 2015/06/06 09:45:23 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   11 Dec 2014; Tim Harder <radhermit@gentoo.org>
   -securemodelines-20080424.ebuild:

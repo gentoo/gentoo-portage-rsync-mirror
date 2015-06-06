@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/coloredlogs/coloredlogs-1.0.ebuild,v 1.1 2015/05/29 11:13:37 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/coloredlogs/coloredlogs-1.0.1-r1.ebuild,v 1.1 2015/06/06 09:43:42 jlec Exp $
 
 EAPI=5
 
@@ -17,12 +17,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-RDEPEND=">=dev-python/humanfriendly-1.24[${PYTHON_USEDEP}]"
+RDEPEND=">=dev-python/humanfriendly-1.25.1[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	test? (	dev-python/verboselogs[${PYTHON_USEDEP}] )"
 
 DOCS=( README.rst )
+
+PATCHES=( "${FILESDIR}"/${P}-ansi2html.patch )
 
 python_test() {
 	esetup.py test
