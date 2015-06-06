@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pysnmp-apps
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-apps/ChangeLog,v 1.13 2015/06/03 21:11:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pysnmp-apps/ChangeLog,v 1.14 2015/06/06 05:16:11 jer Exp $
+
+*pysnmp-apps-0.3.4 (06 Jun 2015)
+
+  06 Jun 2015; Jeroen Roovers <jer@gentoo.org> +pysnmp-apps-0.3.4.ebuild:
+  Version bump.
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

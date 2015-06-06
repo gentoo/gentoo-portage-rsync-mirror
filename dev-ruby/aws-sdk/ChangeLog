@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/aws-sdk
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.23 2014/12/01 22:40:48 p8952 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.24 2015/06/06 05:23:33 graaff Exp $
+
+  06 Jun 2015; Hans de Graaff <graaff@gentoo.org> -aws-sdk-1.8.3.1.ebuild:
+  Cleanup.
 
 *aws-sdk-1.8.4 (01 Dec 2014)
 
