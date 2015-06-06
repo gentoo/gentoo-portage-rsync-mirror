@@ -11,8 +11,8 @@ restarting=no
 
 # The binary locations
 exportfs=/usr/sbin/exportfs
-  mountd=/usr/sbin/rpc.mountd
-    nfsd=/usr/sbin/rpc.nfsd
+mountd=/usr/sbin/rpc.mountd
+nfsd=/usr/sbin/rpc.nfsd
 smnotify=/usr/sbin/sm-notify
 
 depend() {
