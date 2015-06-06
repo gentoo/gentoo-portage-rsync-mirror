@@ -9,4 +9,7 @@
 		computing minima/maxima using arbitrary procedures to compare
 		or score the elements.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">mokus0/monad-loops</remote-id>
+	</upstream>
 </pkgmetadata>

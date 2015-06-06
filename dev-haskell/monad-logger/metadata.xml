@@ -8,4 +8,7 @@
 	<longdescription>
 		This package uses template-haskell for determining source code locations of messages.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">kazu-yamamoto/logger</remote-id>
+	</upstream>
 </pkgmetadata>

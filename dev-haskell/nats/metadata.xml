@@ -11,4 +11,7 @@
                 useful for accelerating builds in sandboxes for expert users. If set we will
                 not supply an instance of `Hashable`.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">ekmett/nats</remote-id>
+	</upstream>
 </pkgmetadata>

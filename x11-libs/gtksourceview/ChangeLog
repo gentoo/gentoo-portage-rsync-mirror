@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtksourceview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.286 2015/04/12 22:05:20 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtksourceview/ChangeLog,v 1.287 2015/06/06 12:59:24 pacho Exp $
+
+*gtksourceview-2.10.5-r3 (06 Jun 2015)
+
+  06 Jun 2015; Pacho Ramos <pacho@gentoo.org> +gtksourceview-2.10.5-r3.ebuild:
+  Drop obsolete glade support (#551290)
 
 *gtksourceview-3.14.4 (12 Apr 2015)
 

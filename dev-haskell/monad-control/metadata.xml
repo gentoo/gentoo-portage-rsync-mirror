@@ -11,7 +11,7 @@
 		provides a wrapped version of @Control.Exception@ with types
 		generalized from @IO@ to all monads in @MonadControlIO@.
 		
-		Note that this package is a rewrite of Anders Kaseorg&#39;s @monad-peel@ library.
+		Note that this package is a rewrite of Anders Kaseorg's @monad-peel@ library.
 		The main difference is that this package provides CPS style
 		operators and exploits the @RankNTypes@ language extension to
 		simplify most definitions.
@@ -25,10 +25,13 @@
 		&lt;https://github.com/basvandijk/bench-monad-peel-control&gt;
 	</longdescription>
 	<use>
-                <flag name="instancest">If enabled this package will export
+		<flag name="instancest">If enabled this package will export
                 MonadBaseControl instances for the lazy and strict ST monad. If disabled these
-                instances are only exported when base >= 4.4. If enabled it is required that
+                instances are only exported when base &gt;= 4.4. If enabled it is required that
                 the transformer-base package exports MonadBase instances for ST. It will do
                 this by default.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">basvandijk/monad-control</remote-id>
+	</upstream>
 </pkgmetadata>

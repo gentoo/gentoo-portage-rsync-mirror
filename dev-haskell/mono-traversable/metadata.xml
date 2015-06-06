@@ -5,4 +5,7 @@
 	<longdescription>
 		Monomorphic variants of the Functor, Foldable, and Traversable typeclasses. Contains even more experimental code for abstracting containers and sequences.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/mono-traversable</remote-id>
+	</upstream>
 </pkgmetadata>

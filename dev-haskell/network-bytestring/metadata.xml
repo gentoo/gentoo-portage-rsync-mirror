@@ -4,6 +4,9 @@
 	<herd>haskell</herd>
 	<longdescription>
 		Fast, memory-efficient, low-level socket functions
-		that use &#39;Data.ByteString&#39;s instead of &#39;String&#39;s.
+		that use 'Data.ByteString's instead of 'String's.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">tibbe/network-bytestring</remote-id>
+	</upstream>
 </pkgmetadata>

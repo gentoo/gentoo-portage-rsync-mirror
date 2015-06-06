@@ -5,8 +5,11 @@
 	<longdescription>
 		The modules below provide additional
 		data structures, and other added capabilities
-		layered on top of the &#39;Par&#39; monad.
+		layered on top of the 'Par' monad.
 		* Finish These
 		* Module Descriptions
 	</longdescription>
+	<upstream>
+		<remote-id type="github">simonmar/monad-par</remote-id>
+	</upstream>
 </pkgmetadata>
