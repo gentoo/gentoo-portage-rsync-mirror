@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/XML-Schema-learner-1.0.1.ebuild,v 1.3 2014/12/28 10:21:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/XML-Schema-learner-1.0.1.ebuild,v 1.4 2015/06/06 09:21:05 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ IUSE="test"
 #
 # See bug #497606.
 #
-RDEPEND="dev-lang/php[cli,xml,xmlreader]"
+RDEPEND="dev-lang/php:*[cli,xml,xmlreader]"
 DEPEND="test? ( ${RDEPEND}
 				dev-php/phpunit )"
 

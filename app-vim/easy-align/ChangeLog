@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/easy-align
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/easy-align/ChangeLog,v 1.10 2014/10/18 04:05:59 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/easy-align/ChangeLog,v 1.11 2015/06/06 09:22:08 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   18 Oct 2014; Tim Harder <radhermit@gentoo.org> -easy-align-2.5.1.ebuild,
   -easy-align-2.6.0.ebuild, -easy-align-2.6.1.ebuild, -easy-align-2.7.0.ebuild,
@@ -52,4 +55,3 @@
   28 Sep 2013; Tim Harder <radhermit@gentoo.org> +easy-align-2.5.1.ebuild,
   +metadata.xml:
   Initial import.
-

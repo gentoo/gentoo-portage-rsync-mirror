@@ -7,4 +7,7 @@
 		files, and automatic filetype detection for these files based upon
 		filename.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">neilhwatson/vim_cf3</remote-id>
+	</upstream>
 </pkgmetadata>

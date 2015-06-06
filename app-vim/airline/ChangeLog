@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/airline
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/airline/ChangeLog,v 1.5 2015/02/24 02:12:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/airline/ChangeLog,v 1.6 2015/06/06 09:20:55 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *airline-0.7 (24 Feb 2015)
 
@@ -29,4 +32,3 @@
   26 Aug 2013; Tim Harder <radhermit@gentoo.org> +airline-0.4.ebuild,
   +metadata.xml:
   Initial import.
-

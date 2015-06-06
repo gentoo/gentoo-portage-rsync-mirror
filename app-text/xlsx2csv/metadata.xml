@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">xlsx2csv</remote-id>
+    <remote-id type="github">dilshod/xlsx2csv</remote-id>
   </upstream>
 </pkgmetadata>

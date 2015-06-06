@@ -7,6 +7,9 @@
     <name>Ben de Groot</name>
   </maintainer>
   <use>
-    <flag name='ignore-glep31'>Remove GLEP 31 (UTF-8 file encodings) settings</flag>
+    <flag name="ignore-glep31">Remove GLEP 31 (UTF-8 file encodings) settings</flag>
   </use>
+  <upstream>
+    <remote-id type="github">gentoo/gentoo-syntax</remote-id>
+  </upstream>
 </pkgmetadata>

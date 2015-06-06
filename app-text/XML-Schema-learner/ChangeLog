@@ -1,6 +1,13 @@
 # ChangeLog for app-text/XML-Schema-learner
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/ChangeLog,v 1.7 2014/12/28 10:21:48 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/XML-Schema-learner/ChangeLog,v 1.9 2015/06/06 09:21:05 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> XML-Schema-learner-1.0.0.ebuild,
+  XML-Schema-learner-1.0.1.ebuild:
+  Add SLOT operators
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   28 Dec 2014; Agostino Sarubbo <ago@gentoo.org>
   XML-Schema-learner-1.0.1.ebuild:

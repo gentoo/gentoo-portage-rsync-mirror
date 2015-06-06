@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/cfengine-syntax
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.18 2015/02/09 00:36:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cfengine-syntax/ChangeLog,v 1.19 2015/06/06 09:21:24 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   09 Feb 2015; Tim Harder <radhermit@gentoo.org>
   -cfengine-syntax-20050105.ebuild, -cfengine-syntax-20140713.ebuild:
@@ -76,4 +79,3 @@
   05 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
   +cfengine-syntax-20050105.ebuild:
   New package, bug #76711
-

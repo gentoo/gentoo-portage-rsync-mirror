@@ -18,4 +18,7 @@
     data," available at
     http://kore-nordmann.de/talks/11_03_learning_xml_schema_definitions_from_xml_data.pdf.
   </longdescription>
+  <upstream>
+    <remote-id type="github">kore/XML-Schema-learner</remote-id>
+  </upstream>
 </pkgmetadata>
