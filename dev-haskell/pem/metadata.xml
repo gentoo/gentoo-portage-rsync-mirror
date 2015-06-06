@@ -5,4 +5,7 @@
 	<longdescription>
 		Privacy Enhanced Mail (PEM) format reader and writer.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-pem</remote-id>
+	</upstream>
 </pkgmetadata>

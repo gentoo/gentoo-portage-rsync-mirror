@@ -7,4 +7,7 @@
 		
 		See &lt;http://flint.cs.yale.edu/trifonov/papers/sqcc.pdf&gt; for further discussion of the approach taken here.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/prelude-extras</remote-id>
+	</upstream>
 </pkgmetadata>

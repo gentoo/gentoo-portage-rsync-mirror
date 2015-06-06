@@ -5,4 +5,7 @@
 	<longdescription>
 		Haskell 98 pointed and copointed data
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/pointed</remote-id>
+	</upstream>
 </pkgmetadata>

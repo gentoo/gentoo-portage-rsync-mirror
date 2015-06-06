@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/pem
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pem/ChangeLog,v 1.12 2015/01/26 09:54:17 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/pem/ChangeLog,v 1.13 2015/06/06 15:16:11 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> pem-0.2.2.ebuild:
   Stable for x86, wrt bug #535000

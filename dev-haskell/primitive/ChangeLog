@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/primitive
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.26 2014/12/14 05:35:23 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/primitive/ChangeLog,v 1.27 2015/06/06 15:24:24 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *primitive-0.5.4.0 (14 Dec 2014)
 
