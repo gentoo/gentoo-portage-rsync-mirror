@@ -9,4 +9,7 @@
 		helpful displays of running progress in both HUnit and QuickCheck, additional
 		generators for other types for QuickCheck, and shortcuts for quickly defining new.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">jgoerzen/testpack</remote-id>
+	</upstream>
 </pkgmetadata>

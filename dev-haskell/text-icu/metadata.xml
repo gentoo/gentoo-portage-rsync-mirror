@@ -29,4 +29,7 @@
 		
 		* Regular expression search and replace.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/text-icu</remote-id>
+	</upstream>
 </pkgmetadata>

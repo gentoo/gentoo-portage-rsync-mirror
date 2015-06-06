@@ -5,4 +5,7 @@
 	<longdescription>
 		A fork of of test-framework-th modified to use tasty instead of test-framework.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bennofs/tasty-th</remote-id>
+	</upstream>
 </pkgmetadata>

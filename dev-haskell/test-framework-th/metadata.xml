@@ -37,7 +37,7 @@
 		&gt; -- observe this line!
 		&gt; main =
 		&gt;   defaultMain [
-		&gt;     testGroup &quot;SomeModule&quot; [ testCase &quot;1&quot; case_1, testCase &quot;2&quot; case_2, testProperty &quot;reverse&quot; prop_reverse]
+		&gt;     testGroup "SomeModule" [ testCase "1" case_1, testCase "2" case_2, testProperty "reverse" prop_reverse]
 		&gt;     ]
 		&gt;
 		&gt; case_1 = do 1 @=? 1
@@ -48,4 +48,7 @@
 		@testGroupGenerator@ is like @defaultMainGenerator@ but without @defaultMain@. It is useful if you need a function for the testgroup
 		(e.g. if you want to be able to call the testgroup from another module).
 	</longdescription>
+	<upstream>
+		<remote-id type="github">finnsson/test-generator</remote-id>
+	</upstream>
 </pkgmetadata>

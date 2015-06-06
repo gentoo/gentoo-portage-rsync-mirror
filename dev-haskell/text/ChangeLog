@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/text
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.47 2015/03/11 11:53:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/text/ChangeLog,v 1.48 2015/06/06 17:52:10 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *text-1.2.0.4 (11 Mar 2015)
 
