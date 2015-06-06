@@ -1,6 +1,9 @@
 # ChangeLog for app-text/paperwork
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.8 2015/05/16 19:29:45 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/paperwork/ChangeLog,v 1.9 2015/06/06 08:05:54 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *paperwork-0.2.4 (16 May 2015)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/peg-markdown/peg-markdown-0.4.14.ebuild,v 1.1 2013/02/24 04:26:36 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/peg-markdown/peg-markdown-0.4.14.ebuild,v 1.2 2015/06/06 08:14:24 jlec Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE="test"
 
-RDEPEND="dev-libs/glib"
+RDEPEND="dev-libs/glib:2"
 DEPEND="${RDEPEND}
 	dev-util/peg
 	test? (

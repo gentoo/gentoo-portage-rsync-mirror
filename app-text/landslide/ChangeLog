@@ -1,6 +1,15 @@
 # ChangeLog for app-text/landslide
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/landslide/ChangeLog,v 1.6 2015/05/23 12:37:04 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/landslide/ChangeLog,v 1.8 2015/06/06 08:13:23 jlec Exp $
+
+*landslide-1.1.3 (06 Jun 2015)
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> +landslide-1.1.3.ebuild,
+  metadata.xml:
+  Version Bump; use new python eclasses
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   23 May 2015; Manuel Rüger <mrueg@gentoo.org> -landslide-1.0.0.ebuild,
   -landslide-1.0.1.ebuild:

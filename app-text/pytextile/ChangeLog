@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pytextile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.44 2015/05/17 07:52:30 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pytextile/ChangeLog,v 1.45 2015/06/06 08:14:17 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   17 May 2015; Jeroen Roovers <jer@gentoo.org> pytextile-2.2.1.ebuild,
   pytextile-2.2.2.ebuild:
