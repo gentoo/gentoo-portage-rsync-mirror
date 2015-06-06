@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-octave
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.10 2014/12/04 06:22:33 rafaelmartins Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-octave/ChangeLog,v 1.11 2015/06/06 07:43:35 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   04 Dec 2014; Rafael G. Martins <rafaelmartins@gentoo.org>
   g-octave-0.4.1-r4.ebuild:

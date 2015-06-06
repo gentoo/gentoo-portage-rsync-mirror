@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/tatt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.10 2015/01/07 14:17:58 tomka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/tatt/ChangeLog,v 1.11 2015/06/06 07:48:11 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   07 Jan 2015; Thomas Kahle <tomka@gentoo.org> tatt-0.2.ebuild:
   Install manpages also in non-live ebuild

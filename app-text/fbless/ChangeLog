@@ -1,6 +1,9 @@
 # ChangeLog for app-text/fbless
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/fbless/ChangeLog,v 1.4 2013/04/09 12:30:11 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/fbless/ChangeLog,v 1.5 2015/06/06 07:56:46 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *fbless-0.2.2-r1 (09 Apr 2013)
 

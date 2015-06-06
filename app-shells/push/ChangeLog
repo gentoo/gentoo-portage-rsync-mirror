@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/push
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.25 2014/08/10 18:22:49 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/push/ChangeLog,v 1.26 2015/06/06 07:51:55 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> push-1.5-r1.ebuild,
   push-1.5.ebuild, push-1.6.ebuild:

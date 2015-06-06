@@ -16,4 +16,7 @@
 Tatt arch testing tool can be use to automatically generate scripts for various boring tasks during arch work.  
 It aims at developers. If you are a normal user you will not need tatt.
 </longdescription>
+  <upstream>
+    <remote-id type="github">tom111/tatt</remote-id>
+  </upstream>
 </pkgmetadata>

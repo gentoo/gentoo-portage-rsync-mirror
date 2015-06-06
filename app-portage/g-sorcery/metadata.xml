@@ -8,4 +8,7 @@
   <use>
     <flag name="bson">Support BSON file format for package DB</flag>
   </use>
+  <upstream>
+    <remote-id type="github">jauhien/g-sorcery</remote-id>
+  </upstream>
 </pkgmetadata>
