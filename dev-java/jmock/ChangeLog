@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.29 2015/04/22 10:18:39 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.30 2015/06/06 22:51:50 monsieurp Exp $
+
+  06 Jun 2015; Patrice Clement <monsieurp@gentoo.org> jmock-1.2.0.ebuild:
+  Remove useless dependency on dev-java/cglib:2.2. See bug 546288.
 
   22 Apr 2015; Patrice Clement <monsieurp@gentoo.org> jmock-2.6.1.ebuild:
   Remove hard SLOTs depends on virtual/{jdk-jre} in favour of normal deps. Fix
