@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <maintainer>
-    <email>mrueg@gentoo.org</email>
-    <name>Manuel Rüger</name>
-  </maintainer>
-  <longdescription>
+	<maintainer>
+		<email>mrueg@gentoo.org</email>
+		<name>Manuel Rüger</name>
+	</maintainer>
+	<longdescription>
 		NaCl (pronounced "salt") is a new easy-to-use high-speed software
 		library for network communication, encryption, decryption,
 		signatures, etc. NaCl's goal is to provide all of the core
@@ -13,8 +13,11 @@
 		Sodium is a portable, cross-compilable, installable,
 		packageable fork of NaCl, with a compatible API.
 	</longdescription>
-  <use>
-    <flag name="asm">Enables assembly implementations</flag>
-    <flag name="urandom">Use /dev/urandom instead of /dev/random</flag>
-  </use>
+	<use>
+		<flag name="asm">Enables assembly implementations</flag>
+		<flag name="urandom">Use /dev/urandom instead of /dev/random</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">jedisct1/libsodium</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -15,4 +15,7 @@
   <use>
     <flag name="cuda">Enable NVIDIA CUDA toolkit support</flag>
   </use>
+  <upstream>
+    <remote-id type="github">ContinuumIO/libdynd</remote-id>
+  </upstream>
 </pkgmetadata>

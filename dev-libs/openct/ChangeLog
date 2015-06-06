@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openct
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.115 2015/04/02 18:21:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openct/ChangeLog,v 1.116 2015/06/06 19:23:47 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> openct-0.6.20-r3.ebuild,
   openct-0.6.20-r4.ebuild:

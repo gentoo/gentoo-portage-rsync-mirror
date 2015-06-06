@@ -2,8 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-          <email>jdhore@gentoo.org</email>
-          <name>Jeff Horelick</name>
+    <email>jdhore@gentoo.org</email>
+    <name>Jeff Horelick</name>
   </maintainer>
-  <longdescription></longdescription>
+  <longdescription/>
+  <upstream>
+    <remote-id type="github">nenolod/libmowgli-glib</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -12,5 +12,7 @@
 	</maintainer>
 	<longdescription lang="en">
 	</longdescription>
+	<upstream>
+		<remote-id type="github">mongodb/mongo-c-driver</remote-id>
+	</upstream>
 </pkgmetadata>
-

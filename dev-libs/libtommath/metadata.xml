@@ -28,7 +28,7 @@
             o Division 
       * Digit Manipulation
             o Shift left/right whole digits (mult by 2b by moving digits)
-            o Fast multiplication/division by 2 and 2k for k>1
+            o Fast multiplication/division by 2 and 2k for k&gt;1
             o Binary AND, OR and XOR gates 
       * Modular Reductions
             o Barrett Reduction (fast for any p)
@@ -57,4 +57,7 @@
             o Karatsuba and Toom-Cook multiplication algorithms.
             o Many pointer aliasing optimiztions throughout the entire library. 
   </longdescription>
+  <upstream>
+    <remote-id type="github">libtom/libtommath</remote-id>
+  </upstream>
 </pkgmetadata>

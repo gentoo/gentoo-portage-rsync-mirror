@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.71 2015/01/05 20:28:08 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.73 2015/06/06 19:17:36 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> libp11-0.2.8-r1.ebuild,
+  libp11-0.2.8-r2.ebuild, libp11-0.2.8-r3.ebuild, libp11-0.2.8.ebuild:
+  Add SLOT operators; add missing eclass
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *libp11-0.2.8-r3 (05 Jan 2015)
 

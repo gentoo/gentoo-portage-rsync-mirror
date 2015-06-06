@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsecp256k1/libsecp256k1-0.0.0_pre20141212.ebuild,v 1.1 2015/02/23 21:46:44 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsecp256k1/libsecp256k1-0.0.0_pre20141212.ebuild,v 1.2 2015/06/06 19:19:03 jlec Exp $
 
 EAPI=5
 
@@ -21,12 +21,12 @@ REQUIRED_USE="
 	asm? ( amd64 )
 "
 RDEPEND="
-	gmp? ( dev-libs/gmp )
+	gmp? ( dev-libs/gmp:0 )
 "
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	>=sys-devel/gcc-4.7
-	test? ( dev-libs/openssl )
+	test? ( dev-libs/openssl:0 )
 "
 
 S="${WORKDIR}/${MyPN}-${COMMITHASH}"
