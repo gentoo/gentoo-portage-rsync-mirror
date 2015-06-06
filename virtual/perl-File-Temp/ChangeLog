@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-File-Temp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.104 2015/03/21 17:13:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-File-Temp/ChangeLog,v 1.105 2015/06/05 23:13:48 dilfridge Exp $
+
+*perl-File-Temp-0.230.400-r3 (05 Jun 2015)
+
+  05 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-File-Temp-0.230.0-r1.ebuild, -perl-File-Temp-0.230.400-r2.ebuild,
+  +perl-File-Temp-0.230.400-r3.ebuild:
+  Remove old
 
   21 Mar 2015; Mike Frysinger <vapier@gentoo.org>
   perl-File-Temp-0.230.400-r2.ebuild:
