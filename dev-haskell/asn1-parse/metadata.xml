@@ -5,4 +5,7 @@
 	<longdescription>
 		Simple monadic parser for ASN1 stream types, when ASN1 pattern matching is not convenient.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-asn1</remote-id>
+	</upstream>
 </pkgmetadata>

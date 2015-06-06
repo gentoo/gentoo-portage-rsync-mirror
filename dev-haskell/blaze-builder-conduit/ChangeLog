@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/blaze-builder-conduit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder-conduit/ChangeLog,v 1.6 2014/07/25 09:16:46 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/blaze-builder-conduit/ChangeLog,v 1.7 2015/06/06 10:26:40 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   blaze-builder-conduit-1.0.0.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/aeson-pretty
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson-pretty/ChangeLog,v 1.5 2014/12/14 04:42:37 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/aeson-pretty/ChangeLog,v 1.6 2015/06/06 10:10:32 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *aeson-pretty-0.7.2 (14 Dec 2014)
 

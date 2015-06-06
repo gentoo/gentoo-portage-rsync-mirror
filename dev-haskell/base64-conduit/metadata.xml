@@ -5,4 +5,7 @@
 	<longdescription>
 		Base64-encode and decode streams of bytes.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/conduit</remote-id>
+	</upstream>
 </pkgmetadata>

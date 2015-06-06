@@ -12,7 +12,7 @@
 		&lt;https://github.com/mailrank/aeson#readme&gt;
 		
 		Parsing performance on a late 2010 MacBook Pro (2.66GHz Core i7),
-		for mostly-English tweets from Twitter&#39;s JSON search API:
+		for mostly-English tweets from Twitter's JSON search API:
 		
 		* 0.8 KB, 32-bit GHC 6.12.3: 30538 msg\/sec (24.9 MB\/sec)
 		
@@ -64,7 +64,10 @@
 		
 		(A note on naming: in Greek mythology, Aeson was the father of Jason.)
 	</longdescription>
-        <use>
-          <flag name='developer'>Operate in developer mode.'</flag>
-        </use>
+	<use>
+		<flag name="developer">Operate in developer mode.'</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">bos/aeson</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/bloomfilter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.11 2015/04/05 05:21:29 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/bloomfilter/ChangeLog,v 1.12 2015/06/06 10:29:09 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   05 Apr 2015; Mark Wright <gienah@gentoo.org> bloomfilter-2.0.0.0.ebuild:
   Patch bloomfilter-2.0.0.0 for ghc 7.10.1

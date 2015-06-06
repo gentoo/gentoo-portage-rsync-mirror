@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.18 2014/08/01 09:48:10 armin76 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alut/ChangeLog,v 1.19 2015/06/06 10:11:37 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   01 Aug 2014; Raúl Porcel <armin76@gentoo.org> alut-2.1.0.0.ebuild,
   alut-2.2.0.0.ebuild, alut-2.3.0.1.ebuild:

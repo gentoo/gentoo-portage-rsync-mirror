@@ -5,4 +5,7 @@
 	<longdescription>
 		Adjunctions
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/adjunctions</remote-id>
+	</upstream>
 </pkgmetadata>

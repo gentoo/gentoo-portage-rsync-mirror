@@ -17,4 +17,7 @@
 		
 		[0.1] Initial version, code taken from @classy-prelude@ with a few minor tweaks.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/basic-prelude</remote-id>
+	</upstream>
 </pkgmetadata>

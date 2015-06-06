@@ -5,4 +5,7 @@
 	<longdescription>
 		Turn attoparsec parsers into sinks.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/conduit</remote-id>
+	</upstream>
 </pkgmetadata>

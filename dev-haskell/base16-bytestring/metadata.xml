@@ -5,4 +5,7 @@
 	<longdescription>
 		Fast base16 (hex) encoding and decoding for ByteStrings
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/base16-bytestring</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription>
 		Pure and impure Bloom Filter implementations.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/bloomfilter</remote-id>
+	</upstream>
 </pkgmetadata>

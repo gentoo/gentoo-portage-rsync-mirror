@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/alsa-mixer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-mixer/ChangeLog,v 1.8 2014/07/25 09:16:21 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/alsa-mixer/ChangeLog,v 1.9 2015/06/06 10:11:14 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   alsa-mixer-0.1.2-r2.ebuild, alsa-mixer-0.2.0.1.ebuild,

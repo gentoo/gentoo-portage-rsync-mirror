@@ -8,4 +8,7 @@
 		incrementally executing builders and pass the filled chunks to a bytestring
 		iteratee.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">meiersi/blaze-builder-enumerator</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -6,4 +6,7 @@
 		This package provides tests that can be used with any queue implementation
 		that satisfies the `abstract-deque` interface.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">rrnewton/haskell-lockfree/wiki</remote-id>
+	</upstream>
 </pkgmetadata>

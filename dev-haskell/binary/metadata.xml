@@ -10,4 +10,7 @@
 		so this library should be suitable for high performance
 		scenarios.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">kolmodin/binary</remote-id>
+	</upstream>
 </pkgmetadata>

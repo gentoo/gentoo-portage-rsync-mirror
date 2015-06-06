@@ -13,4 +13,7 @@
 		when writing the resulting lazy bytestring to a file or
 		sending it over the network.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">meiersi/blaze-builder</remote-id>
+	</upstream>
 </pkgmetadata>

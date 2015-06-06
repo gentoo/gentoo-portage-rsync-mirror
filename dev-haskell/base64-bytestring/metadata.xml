@@ -5,4 +5,7 @@
 	<longdescription>
 		Fast base64 encoding and deconding for ByteStrings
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/base64-bytestring</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/async
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.9 2014/12/23 03:56:43 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/async/ChangeLog,v 1.10 2015/06/06 10:14:36 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *async-2.0.2 (23 Dec 2014)
 

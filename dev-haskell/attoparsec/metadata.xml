@@ -7,4 +7,7 @@
 		efficiently with network protocols and complicated text/binary
 		file formats.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/attoparsec</remote-id>
+	</upstream>
 </pkgmetadata>

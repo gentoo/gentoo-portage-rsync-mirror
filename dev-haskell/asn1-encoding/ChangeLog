@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/asn1-encoding
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-encoding/ChangeLog,v 1.4 2014/12/13 13:21:24 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/asn1-encoding/ChangeLog,v 1.5 2015/06/06 10:13:05 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *asn1-encoding-0.9.0 (13 Dec 2014)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r9.ebuild,v 1.11 2015/04/09 23:39:04 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.26-r9.ebuild,v 1.12 2015/06/06 10:09:52 perfinion Exp $
 
 EAPI=5
 
@@ -15,22 +15,23 @@ SRC_URI="ftp://ftp.cyrusimap.org/cyrus-sasl/${P}.tar.gz"
 LICENSE="BSD-with-attribution"
 SLOT="2"
 KEYWORDS="alpha amd64 arm ~arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd"
-IUSE="authdaemond berkdb gdbm kerberos ldapdb openldap mysql pam postgres sample sqlite
+IUSE="authdaemond berkdb gdbm kerberos ldapdb openldap mysql pam postgres sample selinux sqlite
 srp ssl static-libs urandom"
 
 DEPEND="net-mail/mailbase
 	authdaemond? ( || ( net-mail/courier-imap mail-mta/courier ) )
-	berkdb? ( >=sys-libs/db-4.8.30-r1[${MULTILIB_USEDEP}] )
+	berkdb? ( >=sys-libs/db-4.8.30-r1:=[${MULTILIB_USEDEP}] )
 	gdbm? ( >=sys-libs/gdbm-1.10-r1[${MULTILIB_USEDEP}] )
 	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )
 	openldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 	mysql? ( virtual/mysql )
 	pam? ( >=virtual/pam-0-r1[${MULTILIB_USEDEP}] )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	sqlite? ( >=dev-db/sqlite-3.8.2:3[${MULTILIB_USEDEP}] )
 	ssl? ( >=dev-libs/openssl-1.0.1h-r2[${MULTILIB_USEDEP}] )
-	java? ( >=virtual/jdk-1.4 )"
-RDEPEND="${DEPEND}"
+	java? ( >=virtual/jdk-1.4:= )"
+RDEPEND="${DEPEND}
+	selinux? ( sec-policy/selinux-sasl )"
 
 MULTILIB_WRAPPED_HEADERS=(
 	/usr/include/sasl/md5global.h

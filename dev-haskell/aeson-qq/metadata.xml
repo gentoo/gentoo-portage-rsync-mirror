@@ -14,4 +14,7 @@
 		Consult the @README@ for documentation:
 		&lt;https://github.com/zalora/aeson-qq#readme&gt;
 	</longdescription>
+	<upstream>
+		<remote-id type="github">zalora/aeson-qq</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription>
 		ASN.1 standard types
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-asn1-types</remote-id>
+	</upstream>
 </pkgmetadata>
