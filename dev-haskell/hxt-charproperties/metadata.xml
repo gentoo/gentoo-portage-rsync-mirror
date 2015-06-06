@@ -8,4 +8,7 @@
 		and character predicates defined by XML.
 		Supported Unicode version is 5.2.0.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">UweSchmidt/hxt</remote-id>
+	</upstream>
 </pkgmetadata>

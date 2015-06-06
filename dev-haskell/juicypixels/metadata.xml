@@ -8,4 +8,7 @@
 		This library can load and store images in PNG,Bitmap, Jpeg, Radiance and
 		read Gif images.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">Twinside/Juicy.Pixels</remote-id>
+	</upstream>
 </pkgmetadata>

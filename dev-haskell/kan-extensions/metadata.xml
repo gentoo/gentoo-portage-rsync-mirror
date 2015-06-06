@@ -5,4 +5,7 @@
 	<longdescription>
 		Kan extensions, the Yoneda lemma, and (co)density (co)monads
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/kan-extensions</remote-id>
+	</upstream>
 </pkgmetadata>

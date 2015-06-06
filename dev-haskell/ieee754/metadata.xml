@@ -7,6 +7,9 @@
 	math library; approximate and exact equality comparisons for general types. 
 	</longdescription>
 	<use>
-		<flag name='big_endian'>Build for a big endian machine. Beware that only little endian machines have been tested.</flag>
+		<flag name="big_endian">Build for a big endian machine. Beware that only little endian machines have been tested.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">patperry/hs-ieee754</remote-id>
+	</upstream>
 </pkgmetadata>

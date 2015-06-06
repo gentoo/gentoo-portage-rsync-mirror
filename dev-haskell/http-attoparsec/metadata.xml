@@ -5,4 +5,7 @@
 	<longdescription>
 		Attoparsec parsers for http-types.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">tlaitinen/http-attoparsec</remote-id>
+	</upstream>
 </pkgmetadata>

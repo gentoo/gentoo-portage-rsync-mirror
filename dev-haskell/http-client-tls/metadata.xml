@@ -5,4 +5,7 @@
 	<longdescription>
 		Intended for use by higher-level libraries, such as http-conduit.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/http-client</remote-id>
+	</upstream>
 </pkgmetadata>

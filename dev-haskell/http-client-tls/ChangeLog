@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/http-client-tls
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client-tls/ChangeLog,v 1.6 2014/12/13 14:27:47 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/http-client-tls/ChangeLog,v 1.7 2015/06/06 11:44:47 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *http-client-tls-0.2.2 (13 Dec 2014)
 

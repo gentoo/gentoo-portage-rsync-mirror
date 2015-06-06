@@ -5,4 +5,7 @@
 	<longdescription>
 		Generate multipart uploads for http-client.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/http-client</remote-id>
+	</upstream>
 </pkgmetadata>
