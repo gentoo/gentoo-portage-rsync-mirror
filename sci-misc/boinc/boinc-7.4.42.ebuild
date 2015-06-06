@@ -25,7 +25,7 @@ RDEPEND="
 	!sci-misc/boinc-bin
 	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20080809
-	dev-libs/openssl:*
+	dev-libs/openssl:=
 	net-misc/curl[ssl,-gnutls(-),-nss(-),curl_ssl_openssl(+)]
 	sys-apps/util-linux
 	sys-libs/zlib
@@ -37,7 +37,7 @@ RDEPEND="
 		dev-db/sqlite:3
 		media-libs/freeglut
 		sys-libs/glibc:2.2
-		virtual/jpeg:*
+		virtual/jpeg:=
 		x11-libs/gtk+:2
 		>=x11-libs/libnotify-0.7
 		x11-libs/wxGTK:2.8[X,opengl]
@@ -105,36 +105,36 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
-	use systemd && systemd_dounit "${FILESDIR}"/${PN}.service
+	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
 pkg_preinst() {
 	enewgroup ${PN}
 	# note this works only for first install so we have to
 	# elog user about the need of being in video group
+	local groups="${PN}"
 	if use cuda; then
-		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN},video"
-	else
-		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN}"
+		group+=",video"
 	fi
+	enewuser ${PN} -1 -1 /var/lib/${PN} "${groups}"
 }
 
 pkg_postinst() {
 	echo
-	elog "You are using the source compiled version of ${PN}."
-	use X && elog "The graphical manager can be found at /usr/bin/${PN}mgr"
+	elog "You are using the source compiled version of boinc."
+	use X && elog "The graphical manager can be found at /usr/bin/boincmgr"
 	elog
-	elog "You need to attach to a project to do anything useful with ${PN}."
-	elog "You can do this by running /etc/init.d/${PN} attach"
+	elog "You need to attach to a project to do anything useful with boinc."
+	elog "You can do this by running /etc/init.d/boinc attach"
 	elog "The howto for configuration is located at:"
 	elog "http://boinc.berkeley.edu/wiki/Anonymous_platform"
 	elog
 	# Add warning about the new password for the client, bug 121896.
 	if use X; then
 		elog "If you need to use the graphical manager the password is in:"
-		elog "/var/lib/${PN}/gui_rpc_auth.cfg"
+		elog "/var/lib/boinc/gui_rpc_auth.cfg"
 		elog "Where /var/lib/ is default RUNTIMEDIR, that can be changed in:"
-		elog "/etc/conf.d/${PN}"
+		elog "/etc/conf.d/boinc"
 		elog "You should change this password to something more memorable (can be even blank)."
 		elog "Remember to launch init script before using manager. Or changing the password."
 		elog
