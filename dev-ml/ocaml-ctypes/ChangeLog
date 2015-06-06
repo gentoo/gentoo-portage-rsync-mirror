@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ocaml-ctypes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ctypes/ChangeLog,v 1.7 2015/05/21 07:27:10 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-ctypes/ChangeLog,v 1.8 2015/06/06 19:45:50 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   21 May 2015; Alexis Ballier <aballier@gentoo.org> ocaml-ctypes-0.4.1.ebuild:
   ocamlopt is needed for ctypes, bug #550014
@@ -27,4 +30,3 @@
   16 Mar 2015; Alexis Ballier <aballier@gentoo.org> +ocaml-ctypes-0.4.0.ebuild,
   +metadata.xml:
   initial import, ebuild by me, needed by llvm, bug #543422
-

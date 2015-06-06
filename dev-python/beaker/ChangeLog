@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/beaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.63 2015/03/19 15:47:36 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/beaker/ChangeLog,v 1.64 2015/06/06 20:00:57 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *beaker-1.7.0-r1 (19 Mar 2015)
 

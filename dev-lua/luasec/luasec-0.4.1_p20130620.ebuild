@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.1_p20130620.ebuild,v 1.3 2014/11/14 21:21:16 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/luasec-0.4.1_p20130620.ebuild,v 1.4 2015/06/06 19:43:42 jlec Exp $
 
 EAPI=5
 
@@ -16,9 +16,10 @@ SLOT="0"
 KEYWORDS="~amd64 arm ~x86"
 IUSE=""
 
-RDEPEND=">=dev-lang/lua-5.1[deprecated]
-		dev-lua/luasocket
-		dev-libs/openssl"
+RDEPEND="
+	>=dev-lang/lua-5.1:0[deprecated]
+	dev-lua/luasocket
+	dev-libs/openssl:0"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 
@@ -33,8 +34,4 @@ src_compile() {
 		CC="$(tc-getCC)" \
 		LD="$(tc-getCC)" \
 		linux
-}
-
-src_install() {
-	emake DESTDIR="${D}" install
 }

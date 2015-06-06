@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">atom</remote-id>
+    <remote-id type="github">nucleic/atom</remote-id>
   </upstream>
 </pkgmetadata>

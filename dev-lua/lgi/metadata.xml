@@ -4,4 +4,7 @@
   <maintainer>
     <email>robbat2@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">pavouk/lgi</remote-id>
+  </upstream>
 </pkgmetadata>

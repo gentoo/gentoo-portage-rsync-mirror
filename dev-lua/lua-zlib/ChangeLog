@@ -1,6 +1,13 @@
 # ChangeLog for dev-lua/lua-zlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lua-zlib/ChangeLog,v 1.13 2015/01/03 12:26:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lua-zlib/ChangeLog,v 1.15 2015/06/06 19:41:11 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> lua-zlib-0.3.ebuild,
+  lua-zlib-0.4.ebuild:
+  Add SLOT operators
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *lua-zlib-0.4 (03 Jan 2015)
 

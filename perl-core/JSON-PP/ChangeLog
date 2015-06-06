@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/JSON-PP
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.28 2014/11/08 15:48:15 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/JSON-PP/ChangeLog,v 1.29 2015/06/06 19:42:24 dilfridge Exp $
+
+  06 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  JSON-PP-2.272.20.ebuild:
+  Drop keywords
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -JSON-PP-2.272.0-r1.ebuild:

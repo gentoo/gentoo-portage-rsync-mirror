@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">bcolz</remote-id>
+    <remote-id type="github">Blosc/bcolz</remote-id>
   </upstream>
 </pkgmetadata>

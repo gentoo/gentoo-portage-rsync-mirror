@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-openid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.7 2015/04/18 13:01:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-openid/ChangeLog,v 1.8 2015/06/06 19:52:49 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   18 Apr 2015; Sven Wegener <swegener@gentoo.org>
   php-openid-2.2.3_pre20140423.ebuild:

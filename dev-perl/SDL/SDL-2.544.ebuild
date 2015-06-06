@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.544.ebuild,v 1.1 2014/07/29 11:39:50 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL/SDL-2.544.ebuild,v 1.2 2015/06/06 19:51:39 jlec Exp $
 
 EAPI=5
 MODULE_AUTHOR=FROGGS
@@ -29,7 +29,7 @@ RDEPEND=">=dev-perl/Alien-SDL-1.434
 	media-libs/smpeg
 	media-libs/tiff:0
 	virtual/glu
-	virtual/jpeg
+	virtual/jpeg:0
 	virtual/opengl
 	virtual/perl-ExtUtils-CBuilder
 	>=virtual/perl-Module-Build-0.400.0

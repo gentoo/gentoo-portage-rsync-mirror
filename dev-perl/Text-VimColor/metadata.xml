@@ -3,10 +3,11 @@
 <pkgmetadata>
   <herd>perl</herd>
   <maintainer>
-	  <email>monsieurp@gentoo.org</email>
+    <email>monsieurp@gentoo.org</email>
   </maintainer>
   <upstream>
     <remote-id type="cpan">Text-VimColor</remote-id>
     <remote-id type="cpan-module">Text::VimColor</remote-id>
+    <remote-id type="github">rwstauner/Text-VimColor</remote-id>
   </upstream>
 </pkgmetadata>

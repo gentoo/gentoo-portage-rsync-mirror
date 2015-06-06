@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/qrosscore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.14 2015/04/19 15:34:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qrosscore/ChangeLog,v 1.15 2015/06/06 19:36:36 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   19 Apr 2015; Michael Palimaka <kensington@gentoo.org> -qrosscore-0.2.2.ebuild:
   Remove old.

@@ -12,5 +12,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">amodem</remote-id>
+    <remote-id type="github">romanz/amodem</remote-id>
   </upstream>
 </pkgmetadata>

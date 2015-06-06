@@ -5,5 +5,7 @@
 	<longdescription lang="en">
 		Qross is a KDE-free version of Kross.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">0xd34df00d/Qross</remote-id>
+	</upstream>
 </pkgmetadata>
-

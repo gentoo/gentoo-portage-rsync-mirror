@@ -1,6 +1,13 @@
 # ChangeLog for dev-lua/luasec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.13 2014/12/24 10:42:19 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/luasec/ChangeLog,v 1.15 2015/06/06 19:43:42 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> luasec-0.4.1.ebuild,
+  luasec-0.4.1_p20130620.ebuild, luasec-0.5.ebuild:
+  Add SLOT operators
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   24 Dec 2014; Manuel Rüger <mrueg@gentoo.org> -luasec-0.4.ebuild:
   Cleanup old.

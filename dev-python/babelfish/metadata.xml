@@ -7,5 +7,6 @@
   <herd>proxy-maintainers</herd>
   <upstream>
     <remote-id type="pypi">babelfish</remote-id>
+    <remote-id type="github">Diaoul/babelfish</remote-id>
   </upstream>
 </pkgmetadata>

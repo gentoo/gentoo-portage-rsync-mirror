@@ -11,5 +11,6 @@ reference implementation of PEP 3156
 </longdescription>
   <upstream>
     <remote-id type="pypi">asyncio</remote-id>
+    <remote-id type="github">python/asyncio</remote-id>
   </upstream>
 </pkgmetadata>

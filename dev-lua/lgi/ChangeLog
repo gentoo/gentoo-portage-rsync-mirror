@@ -1,6 +1,9 @@
 # ChangeLog for dev-lua/lgi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.9 2015/04/02 18:22:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lua/lgi/ChangeLog,v 1.10 2015/06/06 19:38:58 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   02 Apr 2015; Michael Sterrett <mr_bones_@gentoo.org> lgi-0.6.2-r1.ebuild,
   lgi-0.7.2.ebuild:

@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">aiohttp</remote-id>
+    <remote-id type="github">KeepSafe/aiohttp</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">alabaster</remote-id>
+    <remote-id type="github">bitprophet/alabaster</remote-id>
   </upstream>
 </pkgmetadata>

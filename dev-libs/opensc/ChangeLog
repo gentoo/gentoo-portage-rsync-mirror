@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/opensc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.139 2014/11/06 05:38:04 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.141 2015/06/06 19:36:30 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> opensc-0.12.2-r2.ebuild,
+  opensc-0.13.0.ebuild, opensc-0.14.0.ebuild:
+  Add SLOT operators
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   06 Nov 2014; Mike Frysinger <vapier@gentoo.org> opensc-0.12.2-r2.ebuild:
   Require libltdl:0 specifically, and allow older libtool for stable ebuilds

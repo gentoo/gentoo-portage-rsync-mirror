@@ -9,5 +9,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">Flask-KVSession</remote-id>
+    <remote-id type="github">mbr/flask-kvsession</remote-id>
   </upstream>
 </pkgmetadata>
