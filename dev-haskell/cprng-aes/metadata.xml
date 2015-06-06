@@ -19,4 +19,7 @@
 		Arithmetic mean value of data bytes is 127.6347 (127.5 = random).
 		Monte Carlo value for Pi is 3.132465868 (error 0.29 percent).
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-cprng-aes</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription>
 		Symmetrical Block, Stream and PubKey Ciphers
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-crypto-cipher</remote-id>
+	</upstream>
 </pkgmetadata>

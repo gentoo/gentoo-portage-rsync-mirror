@@ -6,4 +6,7 @@
 		A CSV parsing and encoding library optimized for ease of use and high
 		performance.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">tibbe/cassava</remote-id>
+	</upstream>
 </pkgmetadata>

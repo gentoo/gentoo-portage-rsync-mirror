@@ -5,4 +5,7 @@
 	<longdescription>
 		Generic cryptography public keys algorithm types
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-crypto-pubkey-types</remote-id>
+	</upstream>
 </pkgmetadata>

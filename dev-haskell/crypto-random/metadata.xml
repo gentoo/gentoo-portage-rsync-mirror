@@ -5,4 +5,7 @@
 	<longdescription>
 		Simple cryptographic random related types
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-crypto-random</remote-id>
+	</upstream>
 </pkgmetadata>

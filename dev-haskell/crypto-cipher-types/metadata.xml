@@ -5,4 +5,7 @@
 	<longdescription>
 		Generic cryptography cipher types
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-crypto-cipher</remote-id>
+	</upstream>
 </pkgmetadata>

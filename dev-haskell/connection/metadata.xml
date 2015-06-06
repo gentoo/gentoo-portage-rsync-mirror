@@ -10,4 +10,7 @@
 		This library provides a very simple api to create sockets
 		to a destination with the choice of SSL/TLS, and SOCKS.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-connection</remote-id>
+	</upstream>
 </pkgmetadata>

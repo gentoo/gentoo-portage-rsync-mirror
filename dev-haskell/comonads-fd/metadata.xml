@@ -5,4 +5,7 @@
 	<longdescription>
 		Comonad transformers using functional dependencies
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/comonads-fd</remote-id>
+	</upstream>
 </pkgmetadata>

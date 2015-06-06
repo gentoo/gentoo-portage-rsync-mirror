@@ -5,4 +5,7 @@
 	<longdescription>
 		Fast AES cipher implementation with advanced mode of operations
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-cipher-aes</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription>
 		Fast RC4 cipher implementation
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-cipher-rc4</remote-id>
+	</upstream>
 </pkgmetadata>

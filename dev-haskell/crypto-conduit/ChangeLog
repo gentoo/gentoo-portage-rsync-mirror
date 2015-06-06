@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/crypto-conduit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-conduit/ChangeLog,v 1.7 2014/12/14 10:52:01 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-conduit/ChangeLog,v 1.8 2015/06/06 10:52:57 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *crypto-conduit-0.5.5 (14 Dec 2014)
 

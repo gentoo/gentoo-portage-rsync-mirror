@@ -5,4 +5,7 @@
 	<longdescription>
 		Comonad transformers
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/comonad-transformers</remote-id>
+	</upstream>
 </pkgmetadata>

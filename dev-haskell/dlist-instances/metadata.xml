@@ -7,4 +7,7 @@
 		This package is the canonical source for some orphan instances.
 		Orphan instances are placed here to avoid dependencies elsewhere.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">gregwebs/dlist-instances</remote-id>
+	</upstream>
 </pkgmetadata>

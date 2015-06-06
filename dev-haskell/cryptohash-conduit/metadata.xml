@@ -6,4 +6,7 @@
 		Support all the @cryptohash@ package using conduits from
 		the @conduit@ package.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-cryptohash-conduit</remote-id>
+	</upstream>
 </pkgmetadata>

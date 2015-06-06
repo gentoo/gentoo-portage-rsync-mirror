@@ -10,4 +10,7 @@
 		Documentation is at
 		&lt;https://github.com/sol/doctest-haskell#readme&gt;.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">sol/doctest-haskell#readme</remote-id>
+	</upstream>
 </pkgmetadata>

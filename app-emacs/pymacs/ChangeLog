@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/pymacs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.67 2015/03/31 06:10:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/pymacs/ChangeLog,v 1.68 2015/06/06 10:33:06 idella4 Exp $
+
+  06 Jun 2015; Ian Delaney <idella4@gentoo.org> pymacs-0.25-r1.ebuild:
+  reset HOMEPAGE wrt bug 503240
 
   31 Mar 2015; Ian Delaney <idella4@gentoo.org> pymacs-0.25-r1.ebuild:
   Clean old python impls, add py3.4 support and correction to install phase

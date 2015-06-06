@@ -7,7 +7,10 @@
 		cryptographic package that supports the @crypto-api@ package
 		using conduits from the @conduit@ package.
 	</longdescription>
-<use>
-  <flag name='conduit11'>Use conduit >= 1.1.</flag>
-</use>
+	<use>
+		<flag name="conduit11">Use conduit &gt;= 1.1.</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">prowdsponsor/crypto-conduit</remote-id>
+	</upstream>
 </pkgmetadata>

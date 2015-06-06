@@ -16,4 +16,7 @@
 	<use>
 		<flag name="all_cpolys">Build all the CMAC polynomes up to 10000 bits instead of just the usual ones</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">TomMD/crypto-api</remote-id>
+	</upstream>
 </pkgmetadata>

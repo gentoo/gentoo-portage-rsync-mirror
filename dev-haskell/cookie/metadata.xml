@@ -5,4 +5,7 @@
 	<longdescription>
 		HTTP cookie parsing and rendering
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/cookie</remote-id>
+	</upstream>
 </pkgmetadata>

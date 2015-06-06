@@ -5,4 +5,7 @@
 	<longdescription>
 		DES and 3DES primitives
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-crypto-cipher</remote-id>
+	</upstream>
 </pkgmetadata>

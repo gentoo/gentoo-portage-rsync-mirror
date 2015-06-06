@@ -5,4 +5,7 @@
 	<longdescription>
 		This package will soon contain much more functionality. This is a placeholder until the next release is ready.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/conduit</remote-id>
+	</upstream>
 </pkgmetadata>

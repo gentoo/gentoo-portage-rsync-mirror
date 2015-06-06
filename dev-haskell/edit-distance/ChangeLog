@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/edit-distance
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/ChangeLog,v 1.7 2015/04/05 05:12:24 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/edit-distance/ChangeLog,v 1.8 2015/06/06 10:59:31 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   05 Apr 2015; Mark Wright <gienah@gentoo.org> edit-distance-0.2.1.2.ebuild:
   Patch edit-distance-0.2.1.2 for ghc 7.10.1

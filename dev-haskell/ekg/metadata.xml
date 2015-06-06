@@ -7,4 +7,7 @@
 		It provides a simple way to integrate a monitoring server into any
 		application.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">tibbe/ekg</remote-id>
+	</upstream>
 </pkgmetadata>

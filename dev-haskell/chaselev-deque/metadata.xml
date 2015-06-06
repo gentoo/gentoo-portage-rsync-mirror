@@ -5,4 +5,7 @@
 	<longdescription>
 		Chase &amp; Lev work-stealing lock-free double-ended queues (deques).
 	</longdescription>
+	<upstream>
+		<remote-id type="github">rrnewton/haskell-lockfree/wiki</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -11,4 +11,7 @@
 		
 		Usual definition is of the form: newtype MyType = MyType ByteString
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-byteable</remote-id>
+	</upstream>
 </pkgmetadata>

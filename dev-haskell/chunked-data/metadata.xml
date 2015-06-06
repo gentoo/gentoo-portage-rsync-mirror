@@ -5,4 +5,7 @@
 	<longdescription>
 		Originally present in classy-prelude.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">fpco/chunked-data</remote-id>
+	</upstream>
 </pkgmetadata>

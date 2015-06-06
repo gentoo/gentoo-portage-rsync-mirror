@@ -29,4 +29,7 @@
 		This package was inspired by the concurrency libraries of Java and
 		Python.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">basvandijk/concurrent-extra</remote-id>
+	</upstream>
 </pkgmetadata>

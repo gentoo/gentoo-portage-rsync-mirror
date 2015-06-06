@@ -5,4 +5,7 @@
 	<longdescription>
 		Cross-platform File handling for Unix/Mac/Windows
 	</longdescription>
+	<upstream>
+		<remote-id type="github">kazu-yamamoto/easy-file</remote-id>
+	</upstream>
 </pkgmetadata>

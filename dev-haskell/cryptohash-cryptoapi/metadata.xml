@@ -5,4 +5,7 @@
 	<longdescription>
 		Crypto-api interfaces for cryptohash
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-cryptohash-cryptoapi</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription>
 		This package provides helpers for converting endian-sensitive data.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">mvv/data-endian</remote-id>
+	</upstream>
 </pkgmetadata>

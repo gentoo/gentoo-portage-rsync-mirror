@@ -5,4 +5,7 @@
 	<longdescription>
 		Constraint manipulation
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/constraints</remote-id>
+	</upstream>
 </pkgmetadata>

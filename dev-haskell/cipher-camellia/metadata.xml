@@ -5,4 +5,7 @@
 	<longdescription>
 		Camellia block cipher primitives
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-crypto-cipher</remote-id>
+	</upstream>
 </pkgmetadata>
