@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/openscenegraph
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.61 2015/02/21 12:02:44 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/openscenegraph/ChangeLog,v 1.62 2015/06/06 03:28:39 reavertm Exp $
+
+  06 Jun 2015; Maciej Mrozowski <reavertm@gentoo.org>
+  files/openscenegraph-3.2.1-cmake.patch, openscenegraph-3.2.1.ebuild:
+  Properly handle USE=qt4, fixes bug 550206.
 
   21 Feb 2015; Agostino Sarubbo <ago@gentoo.org> openscenegraph-3.2.1.ebuild:
   Stable for ppc, wrt bug #526372

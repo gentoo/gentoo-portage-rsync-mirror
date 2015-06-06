@@ -70,48 +70,6 @@ diff -ruN OpenSceneGraph-3.2.1/CMakeLists.txt new/CMakeLists.txt
  ENDIF()
  
  # Include macro utilities here
-@@ -560,16 +561,16 @@
- 
-     IF  (DESIRED_QT_VERSION)
-         IF  (DESIRED_QT_VERSION MATCHES 5)
--              FIND_PACKAGE(Qt5Widgets)
-+              MACRO_OPTIONAL_FIND_PACKAGE(Qt5Widgets)
-         ELSEIF (DESIRED_QT_VERSION MATCHES 4)
--              FIND_PACKAGE(Qt4)
-+              MACRO_OPTIONAL_FIND_PACKAGE(Qt4)
-         ELSE()
--              FIND_PACKAGE(Qt3)
-+              MACRO_OPTIONAL_FIND_PACKAGE(Qt3)
-         ENDIF()
- 
-     ELSE()
- 
--        FIND_PACKAGE(Qt5Widgets QUIET)
-+        MACRO_OPTIONAL_FIND_PACKAGE(Qt5Widgets QUIET)
- 
-         IF ( Qt5Widgets_FOUND )
-             # CMake 2.8.8 or greater required
-@@ -585,17 +586,17 @@
-         ENDIF( )
- 
-         IF ( NOT Qt5Widgets_FOUND )
--            FIND_PACKAGE(Qt4)
-+            MACRO_OPTIONAL_FIND_PACKAGE(Qt4)
- 
-             IF (NOT QT4_FOUND)
--                FIND_PACKAGE(Qt3)
-+                MACRO_OPTIONAL_FIND_PACKAGE(Qt3)
-             ENDIF()
-         ENDIF()
-     ENDIF()
- 
-     #If we have found Qt5, let's try to top off by getting the webkit as well
-     IF ( Qt5Widgets_FOUND )
--        FIND_PACKAGE(Qt5WebKitWidgets QUIET)
-+        MACRO_OPTIONAL_FIND_PACKAGE(Qt5WebKitWidgets QUIET)
-     ENDIF()
- 
- ENDIF()
 @@ -604,12 +605,12 @@
  IF   (BUILD_OSG_EXAMPLES AND NOT ANDROID)
  
