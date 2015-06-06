@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/objectname
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/ChangeLog,v 1.7 2014/12/14 11:40:51 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/objectname/ChangeLog,v 1.8 2015/06/06 14:54:58 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *objectname-1.0.1.0 (14 Dec 2014)
 
