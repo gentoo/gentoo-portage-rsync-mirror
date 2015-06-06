@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/soya
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.39 2015/05/15 12:02:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soya/ChangeLog,v 1.40 2015/06/06 16:47:38 floppym Exp $
+
+  06 Jun 2015; Mike Gilbert <floppym@gentoo.org> -soya-0.14.ebuild,
+  soya-0.14-r1.ebuild:
+  Stable on amd64 and x86, bug 512858.
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> soya-0.14-r1.ebuild:
   ppc stable wrt bug #512858

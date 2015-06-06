@@ -5,4 +5,7 @@
 	<longdescription>
 		Prevent or capture writing to stdout and other handles.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">trystan/silently</remote-id>
+	</upstream>
 </pkgmetadata>

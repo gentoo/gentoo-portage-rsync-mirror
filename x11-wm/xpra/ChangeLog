@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.117 2015/04/08 17:29:19 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.118 2015/06/06 16:42:58 floppym Exp $
+
+  06 Jun 2015; Mike Gilbert <floppym@gentoo.org> -xpra-0.8.8.ebuild:
+  Remove old version depending on dev-python/imaging, bug 471566.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> xpra-0.8.8.ebuild:
   Drop old Python implementations

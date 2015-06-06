@@ -8,4 +8,7 @@
 		tests properties for all the finitely many values up to some depth,
 		progressively increasing the depth used.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">feuerbach/smallcheck</remote-id>
+	</upstream>
 </pkgmetadata>

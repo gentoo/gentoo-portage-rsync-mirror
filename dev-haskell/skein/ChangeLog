@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/skein
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/skein/ChangeLog,v 1.8 2015/02/07 21:37:15 qnikst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/skein/ChangeLog,v 1.9 2015/06/06 16:37:37 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   07 Feb 2015; Alexander Vershilov <qnikst@gentoo.org> -skein-1.0.3.ebuild,
   -skein-1.0.6-r1.ebuild, -skein-1.0.8.ebuild, -skein-1.0.9.ebuild:
