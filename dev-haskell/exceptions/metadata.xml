@@ -5,4 +5,7 @@
 	<longdescription>
 		Extensible optionally-pure exceptions
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/exceptions</remote-id>
+	</upstream>
 </pkgmetadata>

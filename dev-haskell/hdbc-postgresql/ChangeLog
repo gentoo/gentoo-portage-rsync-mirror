@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hdbc-postgresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.28 2015/04/04 06:45:00 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdbc-postgresql/ChangeLog,v 1.29 2015/06/06 11:23:02 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *hdbc-postgresql-2.3.2.3 (04 Apr 2015)
 

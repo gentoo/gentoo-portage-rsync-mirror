@@ -5,4 +5,7 @@
 	<longdescription>
 		Bindings to libintl.h (gettext, bindtextdomain)
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vasylp/hgettext</remote-id>
+	</upstream>
 </pkgmetadata>

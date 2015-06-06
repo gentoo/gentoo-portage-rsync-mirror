@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>haskell</herd>
 	<use>
-		<flag name='fast-bignum'>Enable fast moving of bignums between OpenSSL and GMP (GHC Only)</flag>
+		<flag name="fast-bignum">Enable fast moving of bignums between OpenSSL and GMP (GHC Only)</flag>
 	</use>
 	<longdescription>
 		
@@ -21,4 +21,7 @@
 		as possible.
 		
 	</longdescription>
+	<upstream>
+		<remote-id type="github">phonohawk/HsOpenSSL</remote-id>
+	</upstream>
 </pkgmetadata>

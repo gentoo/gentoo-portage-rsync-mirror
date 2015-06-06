@@ -5,4 +5,7 @@
 	<longdescription>
 		Catchy combinators for HUnit: &lt;https://github.com/sol/hspec-expectations#readme&gt;
 	</longdescription>
+	<upstream>
+		<remote-id type="github">sol/hspec-expectations#readme</remote-id>
+	</upstream>
 </pkgmetadata>

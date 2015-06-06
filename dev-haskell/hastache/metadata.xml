@@ -7,4 +7,7 @@
 		
 		See homepage for examples of usage: &lt;http://github.com/lymar/hastache&gt;
 	</longdescription>
+	<upstream>
+		<remote-id type="github">lymar/hastache</remote-id>
+	</upstream>
 </pkgmetadata>

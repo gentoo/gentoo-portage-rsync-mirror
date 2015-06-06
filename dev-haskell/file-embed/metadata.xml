@@ -5,4 +5,7 @@
 	<longdescription>
 		Use Template Haskell to embed file contents directly.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/file-embed</remote-id>
+	</upstream>
 </pkgmetadata>

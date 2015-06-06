@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/ekg-core
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg-core/ChangeLog,v 1.3 2014/12/14 10:55:06 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/ekg-core/ChangeLog,v 1.4 2015/06/06 11:01:30 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *ekg-core-0.1.0.2 (14 Dec 2014)
 

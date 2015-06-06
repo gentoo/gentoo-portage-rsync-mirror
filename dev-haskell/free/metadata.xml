@@ -5,4 +5,7 @@
 	<longdescription>
 		Monads for free
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/free</remote-id>
+	</upstream>
 </pkgmetadata>

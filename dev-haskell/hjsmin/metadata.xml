@@ -6,4 +6,7 @@
 		Reduces size of javascript files by stripping out extraneous whitespace and
 		other syntactic elements, without changing the semantics.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">alanz/hjsmin</remote-id>
+	</upstream>
 </pkgmetadata>

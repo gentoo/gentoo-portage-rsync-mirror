@@ -13,4 +13,7 @@
 		
 		* github oauth: &lt;http://developer.github.com/v3/oauth/&gt;
 	</longdescription>
+	<upstream>
+		<remote-id type="github">freizl/hoauth2</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription>
 		Provides ability to traverse a folder structure efficiently, as well as convenience wrappers for reading from and writing to files.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/conduit</remote-id>
+	</upstream>
 </pkgmetadata>

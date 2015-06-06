@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/highlighting-kate
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.21 2015/04/04 06:36:10 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/highlighting-kate/ChangeLog,v 1.22 2015/06/06 11:24:55 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *highlighting-kate-0.5.14 (04 Apr 2015)
 

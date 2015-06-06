@@ -10,4 +10,7 @@
 		Each Timeable instances can be converted to type that has a Time instances,
 		and thus are different representations of current time.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-hourglass</remote-id>
+	</upstream>
 </pkgmetadata>

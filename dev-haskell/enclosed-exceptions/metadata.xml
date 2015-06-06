@@ -6,4 +6,7 @@
 		Catching all exceptions raised within an enclosed computation,
 		while remaining responsive to (external) asynchronous exceptions.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">jcristovao/enclosed-exceptions</remote-id>
+	</upstream>
 </pkgmetadata>

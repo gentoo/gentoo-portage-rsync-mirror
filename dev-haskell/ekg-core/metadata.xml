@@ -5,4 +5,7 @@
 	<longdescription>
 		This library lets you defined and track system metrics.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">tibbe/ekg-core</remote-id>
+	</upstream>
 </pkgmetadata>
