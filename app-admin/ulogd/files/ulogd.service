@@ -4,8 +4,9 @@ Before=iptables.service ip6tables.service
 After=mysql.service postgresql.service
 
 [Service]
-Type=simple
-ExecStart=/usr/sbin/ulogd --uid ulogd --pidfile /run/ulogd.pid
+Type=forking
+PIDFile=/run/ulogd.pid
+ExecStart=/usr/sbin/ulogd --daemon --uid ulogd --pidfile /run/ulogd.pid
 ExecReload=/bin/kill -USR1 $MAINPID
 
 [Install]

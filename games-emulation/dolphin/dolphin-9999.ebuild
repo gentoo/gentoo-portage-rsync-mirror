@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.25 2015/04/30 22:42:32 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.26 2015/06/06 03:31:28 twitch153 Exp $
 
 EAPI=5
 
@@ -49,13 +49,13 @@ DEPEND="${RDEPEND}
 	media-gfx/nvidia-cg-toolkit
 	media-libs/freetype
 	media-libs/libsoundtouch
-	>=sys-devel/gcc-4.6.0
+	>=sys-devel/gcc-4.9.0
 	x11-libs/wxGTK:${WX_GTK_VER}
 	"
 
 pkg_pretend() {
 
-	local ver=4.6.0
+	local ver=4.9.0
 	local msg="${PN} needs at least GCC ${ver} set to compile."
 
 	if [[ ${MERGE_TYPE} != binary ]]; then
