@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>haskell</herd>
 	<longdescription>
-		Orphan Instances for &#39;Data.Vector&#39;
+		Orphan Instances for 'Data.Vector'
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/vector-instances</remote-id>
+	</upstream>
 </pkgmetadata>

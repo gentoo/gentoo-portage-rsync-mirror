@@ -5,4 +5,7 @@
 	<longdescription>
 		X509 reader and writer
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-certificate</remote-id>
+	</upstream>
 </pkgmetadata>

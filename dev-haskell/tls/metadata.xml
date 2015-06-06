@@ -19,4 +19,7 @@
 	<use>
 		<flag name="compat"> Accept SSLv2 compatible handshake</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-tls</remote-id>
+	</upstream>
 </pkgmetadata>

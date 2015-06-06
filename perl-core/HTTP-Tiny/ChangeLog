@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/HTTP-Tiny
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/HTTP-Tiny/ChangeLog,v 1.3 2014/11/13 16:45:31 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/HTTP-Tiny/ChangeLog,v 1.4 2015/06/06 18:08:29 dilfridge Exp $
+
+  06 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -HTTP-Tiny-0.29.0.ebuild:
+  Remove old
 
 *HTTP-Tiny-0.43.0 (13 Nov 2014)
 

@@ -8,4 +8,7 @@
 	<use>
 		<flag name="safe">dissable effective but unsafe coersions</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">ekmett/void</remote-id>
+	</upstream>
 </pkgmetadata>

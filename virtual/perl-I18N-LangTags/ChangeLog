@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-I18N-LangTags
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-I18N-LangTags/ChangeLog,v 1.21 2015/02/18 08:37:38 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-I18N-LangTags/ChangeLog,v 1.22 2015/06/06 18:14:02 dilfridge Exp $
+
+*perl-I18N-LangTags-0.400.0-r1 (06 Jun 2015)
+
+  06 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-I18N-LangTags-0.390.0.ebuild, -perl-I18N-LangTags-0.400.0.ebuild,
+  +perl-I18N-LangTags-0.400.0-r1.ebuild:
+  Add Perl 5.22 as provider, remove old
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-I18N-LangTags-0.400.0.ebuild:

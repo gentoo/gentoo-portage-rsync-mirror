@@ -15,11 +15,14 @@
 		&gt; *Data.Vector.Binary&gt; v
 		&gt; fromList [1,2,3,4,5,6,7,8,9,10] :: Data.Vector.Vector
 		&gt; *Data.Vector.Binary&gt; encode v
-		&gt; Chunk &quot;\NUL\NUL\NUL\NUL\NUL...\NUL\NUL\NUL\t\NUL\NUL\NUL\NUL\n&quot; Empty
+		&gt; Chunk "\NUL\NUL\NUL\NUL\NUL...\NUL\NUL\NUL\t\NUL\NUL\NUL\NUL\n" Empty
 		
 		Which you can in turn compress before writing to disk:
 		
 		&gt; compress . encode $ v
-		&gt; Chunk &quot;\US\139\b\NUL\NUL\N...\229\240,\254:\NUL\NUL\NUL&quot; Empty
+		&gt; Chunk "\US\139\b\NUL\NUL\N...\229\240,\254:\NUL\NUL\NUL" Empty
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/vector-binary-instances</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>haskell</herd>
 	<longdescription>
-		Derive Template Haskell&#39;s Lift class for datatypes.
+		Derive Template Haskell's Lift class for datatypes.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">mboes/th-lift</remote-id>
+	</upstream>
 </pkgmetadata>

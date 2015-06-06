@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/wai-conduit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-conduit/ChangeLog,v 1.4 2014/12/22 08:18:47 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wai-conduit/ChangeLog,v 1.5 2015/06/06 18:27:32 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *wai-conduit-3.0.0.2 (22 Dec 2014)
 

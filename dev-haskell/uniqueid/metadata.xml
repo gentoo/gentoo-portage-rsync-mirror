@@ -9,4 +9,7 @@
 		the same purpose. After improvements of the value-supply
 		package it is now deprecated.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">sebfisch/uniqueid/wikis</remote-id>
+	</upstream>
 </pkgmetadata>

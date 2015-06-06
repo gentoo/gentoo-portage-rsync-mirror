@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/musl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.60 2015/06/05 08:11:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/ChangeLog,v 1.61 2015/06/06 18:15:26 blueness Exp $
+
+*musl-1.1.10-r1 (06 Jun 2015)
+
+  06 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  +files/musl-1.1.10-uselocale-0-fix.diff, +musl-1.1.10-r1.ebuild,
+  -musl-1.1.10.ebuild:
+  Add patch to fix uselocale regresson.
 
 *musl-1.1.10 (05 Jun 2015)
 

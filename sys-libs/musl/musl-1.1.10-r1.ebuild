@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.10.ebuild,v 1.1 2015/06/05 08:11:12 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/musl/musl-1.1.10-r1.ebuild,v 1.1 2015/06/06 18:15:26 blueness Exp $
 
 EAPI=5
 
@@ -60,6 +60,10 @@ pkg_setup() {
 	fi
 
 	epatch_user
+}
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-uselocale-0-fix.diff 
 }
 
 src_configure() {

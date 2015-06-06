@@ -7,4 +7,7 @@
 		printing Universally Unique Identifiers.
 		See &lt;http://en.wikipedia.org/wiki/UUID&gt; for the general idea.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">aslatter/uuid</remote-id>
+	</upstream>
 </pkgmetadata>

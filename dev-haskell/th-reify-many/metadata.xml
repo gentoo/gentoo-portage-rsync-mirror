@@ -8,4 +8,7 @@
 		the names of datatypes reachable from an initial datatype, and
 		passing these names to some function which generates instances.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">mgsloan/th-reify-many</remote-id>
+	</upstream>
 </pkgmetadata>

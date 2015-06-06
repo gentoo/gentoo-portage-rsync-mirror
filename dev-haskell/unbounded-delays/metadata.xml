@@ -8,4 +8,7 @@
 		period. This packages provides alternatives which use the
 		unbounded @Integer@ type.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">basvandijk/unbounded-delays</remote-id>
+	</upstream>
 </pkgmetadata>
