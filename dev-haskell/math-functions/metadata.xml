@@ -7,4 +7,7 @@
 		functions and Chebyshev polynomials.  These functions are often
 		useful in statistical and numerical computing.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/math-functions</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -4,7 +4,7 @@
 	<herd>haskell</herd>
 	<longdescription>
 		@lifted-base@ exports IO operations from the base library lifted to
-		any instance of &#39;MonadBase&#39; or &#39;MonadBaseControl&#39;.
+		any instance of 'MonadBase' or 'MonadBaseControl'.
 		
 		Note that not all modules from @base@ are converted yet. If
 		you need a lifted version of a function from @base@, just
@@ -13,4 +13,7 @@
 		The package includes a copy of the @monad-peel@ testsuite written
 		by Anders Kaseorg The tests can be performed using @cabal test@.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">basvandijk/lifted-base</remote-id>
+	</upstream>
 </pkgmetadata>

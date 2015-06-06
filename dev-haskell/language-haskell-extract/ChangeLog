@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/language-haskell-extract
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-haskell-extract/ChangeLog,v 1.3 2014/07/25 09:16:46 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/language-haskell-extract/ChangeLog,v 1.4 2015/06/06 12:06:55 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org>
   language-haskell-extract-0.2.4.ebuild:

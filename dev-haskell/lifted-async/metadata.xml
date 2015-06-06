@@ -4,9 +4,12 @@
 	<herd>haskell</herd>
 	<longdescription>
 		This package provides IO operations from @async@ package lifted to any
-		instance of &#39;MonadBase&#39; or &#39;MonadBaseControl&#39;.
+		instance of 'MonadBase' or 'MonadBaseControl'.
 	</longdescription>
 	<use>
 		<flag name="monad-control-1">Use moand-control == 1.*</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">maoe/lifted-async</remote-id>
+	</upstream>
 </pkgmetadata>

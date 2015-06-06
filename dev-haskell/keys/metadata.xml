@@ -5,4 +5,7 @@
 	<longdescription>
 		Keyed functors and containers
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/keys</remote-id>
+	</upstream>
 </pkgmetadata>
