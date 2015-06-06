@@ -6,4 +6,7 @@
 		Generator and shrink functions for testing
 		Unicode-related software.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/quickcheck-unicode</remote-id>
+	</upstream>
 </pkgmetadata>

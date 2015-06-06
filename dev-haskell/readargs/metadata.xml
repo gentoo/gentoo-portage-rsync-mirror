@@ -55,7 +55,7 @@
 		@
 		
 		Note that both optional and variadic parsers are greedy by default
-		(so @Example 1 2 3 4@ was parsed as @(1, &quot;2&quot;, [3.0,4.0])@.  They
+		(so @Example 1 2 3 4@ was parsed as @(1, "2", [3.0,4.0])@.  They
 		may both be made non-greedy through use of the @NonGreedy@ constructor:
 		
 		@
@@ -65,4 +65,7 @@
 		) &lt;- readArgs
 		@
 	</longdescription>
+	<upstream>
+		<remote-id type="github">rampion/ReadArgs</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/project-template
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/project-template/ChangeLog,v 1.5 2015/01/10 18:01:23 mjo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/project-template/ChangeLog,v 1.6 2015/06/06 15:42:56 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 Jan 2015; Michael Orlitzky <mjo@gentoo.org> -project-template-0.1.3.ebuild:
   Remove unbuildable version, bug #514408.

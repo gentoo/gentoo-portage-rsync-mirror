@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/readargs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readargs/ChangeLog,v 1.4 2014/12/22 05:37:15 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/readargs/ChangeLog,v 1.5 2015/06/06 15:55:11 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   22 Dec 2014; Mark Wright <gienah@gentoo.org> readargs-1.2.2.ebuild:
   Loosen FEATURES=test hspec dependency in readargs-1.2.2

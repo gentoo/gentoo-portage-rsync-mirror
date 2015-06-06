@@ -12,4 +12,7 @@
 		about 25 times slower than this package, but still
 		quite usable.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">PeterScott/pwstore</remote-id>
+	</upstream>
 </pkgmetadata>

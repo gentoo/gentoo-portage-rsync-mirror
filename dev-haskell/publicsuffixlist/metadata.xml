@@ -5,4 +5,7 @@
 	<longdescription>
 		Is a given string a domain suffix?
 	</longdescription>
+	<upstream>
+		<remote-id type="github">litherum/publicsuffixlist</remote-id>
+	</upstream>
 </pkgmetadata>

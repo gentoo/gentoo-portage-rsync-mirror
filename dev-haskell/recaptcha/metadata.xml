@@ -9,6 +9,9 @@
 		web applications.
 	</longdescription>
 	<use>
-		<flag name='network-uri'>Get Network.URI from the network-uri package.</flag>
+		<flag name="network-uri">Get Network.URI from the network-uri package.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">jgm/recaptcha/tree/master</remote-id>
+	</upstream>
 </pkgmetadata>

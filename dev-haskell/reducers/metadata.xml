@@ -5,4 +5,7 @@
 	<longdescription>
 		Semigroups, specialized containers and a general map/reduce framework
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/reducers</remote-id>
+	</upstream>
 </pkgmetadata>

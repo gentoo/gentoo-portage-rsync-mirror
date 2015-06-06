@@ -19,4 +19,7 @@
 		the distribution of test data, and define test
 		data generators.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">nick8325/quickcheck</remote-id>
+	</upstream>
 </pkgmetadata>

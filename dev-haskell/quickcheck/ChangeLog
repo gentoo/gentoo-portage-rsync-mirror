@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/quickcheck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.75 2015/05/03 09:07:20 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/quickcheck/ChangeLog,v 1.76 2015/06/06 15:48:33 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 May 2015; Sergei Trofimovich <slyfox@gentoo.org>
   -files/quickcheck-2.1.1.1-ghc-7.patch:
