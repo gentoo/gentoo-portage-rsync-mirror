@@ -5,4 +5,7 @@
 	<longdescription>
 		Semigroupoids and semigroupoid operations requiring Haskell extensions
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ekmett/semigroupoid-extras</remote-id>
+	</upstream>
 </pkgmetadata>

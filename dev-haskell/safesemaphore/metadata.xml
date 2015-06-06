@@ -7,4 +7,7 @@
 		Those base modules are not exception safe and can be broken by killThread.
 		See &lt;https://github.com/ChrisKuklewicz/SafeSemaphore&gt; for more details.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ChrisKuklewicz/SafeSemaphore</remote-id>
+	</upstream>
 </pkgmetadata>

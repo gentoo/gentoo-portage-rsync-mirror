@@ -7,4 +7,7 @@
 		flexibly-sized collections of resources such as database
 		connections.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/pool</remote-id>
+	</upstream>
 </pkgmetadata>
