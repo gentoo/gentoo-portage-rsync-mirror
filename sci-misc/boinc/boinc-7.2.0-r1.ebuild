@@ -23,7 +23,7 @@ RDEPEND="
 	!sci-misc/boinc-bin
 	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20080809
-	dev-libs/openssl:*
+	dev-libs/openssl:=
 	net-misc/curl[ssl,-gnutls(-),-nss(-),curl_ssl_openssl(+)]
 	sys-apps/util-linux
 	sys-libs/zlib
@@ -35,7 +35,7 @@ RDEPEND="
 		dev-db/sqlite:3
 		media-libs/freeglut
 		sys-libs/glibc:2.2
-		virtual/jpeg:*
+		virtual/jpeg:=
 		x11-libs/gtk+:2
 		>=x11-libs/libnotify-0.7
 		x11-libs/wxGTK:2.8[X,opengl]
