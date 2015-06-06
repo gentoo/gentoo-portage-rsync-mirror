@@ -9,7 +9,7 @@
 		have been added since tests were last ran.
 		
 		This ingredient is specifically an ingredient *transformer* - given a list of
-		&#39;Tasty.Ingredient&#39;s, &#39;rerunningTests&#39; adds the ability for all of these
+		'Tasty.Ingredient's, 'rerunningTests' adds the ability for all of these
 		ingredients to run against a filtered test tree. This transformer can be
 		applied as follows:
 		
@@ -37,7 +37,7 @@
 		information from, and where to write new information to (if @--rerun-update@
 		is specified). This option defaults to @.tasty-rerun-log@.
 		
-		[@--rerun-filter@] Which filters to apply to the &#39;Tasty.TestTree&#39; based on
+		[@--rerun-filter@] Which filters to apply to the 'Tasty.TestTree' based on
 		previous test runs. The value of this option is a comma separated list of the
 		following options:
 		
@@ -55,4 +55,7 @@
 		
 		Defaults to all filters, which means all tests will be ran.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">ocharles/tasty-rerun</remote-id>
+	</upstream>
 </pkgmetadata>

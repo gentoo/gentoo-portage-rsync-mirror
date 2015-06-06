@@ -8,4 +8,7 @@
 		It also provides an Enumeratee which can parse streamline html, which means it consumes constant memory.
 		You can start from the `tests/Tests.hs` module to see what it can do.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">yihuang/tagstream-conduit</remote-id>
+	</upstream>
 </pkgmetadata>

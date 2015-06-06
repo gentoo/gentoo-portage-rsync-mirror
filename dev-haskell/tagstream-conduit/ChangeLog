@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/tagstream-conduit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagstream-conduit/ChangeLog,v 1.6 2014/12/14 05:55:55 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/tagstream-conduit/ChangeLog,v 1.7 2015/06/06 17:24:21 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *tagstream-conduit-0.5.5.3 (14 Dec 2014)
 

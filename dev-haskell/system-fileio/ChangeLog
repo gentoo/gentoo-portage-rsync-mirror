@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/system-fileio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-fileio/ChangeLog,v 1.7 2015/04/04 10:31:17 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/system-fileio/ChangeLog,v 1.8 2015/06/06 17:22:39 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *system-fileio-0.3.16.2 (04 Apr 2015)
 

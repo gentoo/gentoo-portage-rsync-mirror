@@ -8,4 +8,7 @@
 		To pass the test, this output file should be identical to the corresponding
 		'golden' file, which contains the correct result for the test.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">feuerbach/tasty-golden</remote-id>
+	</upstream>
 </pkgmetadata>

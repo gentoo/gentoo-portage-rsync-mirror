@@ -8,7 +8,7 @@
 		and use of good algorithms.  Where possible, we provide
 		references to the statistical literature.
 		
-		The library&#39;s facilities can be divided into four broad categories:
+		The library's facilities can be divided into four broad categories:
 		
 		* Working with widely used discrete and continuous probability
 		distributions.  (There are dozens of exotic distributions in use;
@@ -96,4 +96,7 @@
 		* Regularized incomplete beta function and its inverse are added to
 		@S.Function@.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bos/statistics</remote-id>
+	</upstream>
 </pkgmetadata>

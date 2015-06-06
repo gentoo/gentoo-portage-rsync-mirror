@@ -5,4 +5,7 @@
 	<longdescription>
 		Socks proxy (version 5) implementation.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-socks</remote-id>
+	</upstream>
 </pkgmetadata>

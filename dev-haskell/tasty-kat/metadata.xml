@@ -5,4 +5,7 @@
 	<longdescription>
 		Tests running from simple KATs file (different formats/helper supported)
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/tasty-kat</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1108 2015/06/05 19:29:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1109 2015/06/06 17:29:39 williamh Exp $
+
+*udev-220-r1 (06 Jun 2015)
+
+  06 Jun 2015; William Hubbs <williamh@gentoo.org> +udev-220-r1.ebuild:
+  rev bump to re-install udev.pc, thanks to iamben for catching this.
 
 *udev-220 (05 Jun 2015)
 
