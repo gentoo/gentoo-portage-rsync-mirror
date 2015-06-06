@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnr-constants
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/ChangeLog,v 1.13 2015/03/21 23:16:56 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-constants/ChangeLog,v 1.14 2015/06/06 18:46:00 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   21 Mar 2015; Patrice Clement <monsieurp@gentoo.org>
   jnr-constants-0.8.6.ebuild:

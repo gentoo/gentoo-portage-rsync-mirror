@@ -5,4 +5,7 @@
 	<longdescription>
 		Low-level bindings to the zlib package.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">snoyberg/zlib-bindings</remote-id>
+	</upstream>
 </pkgmetadata>

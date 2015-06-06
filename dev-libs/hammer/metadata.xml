@@ -13,4 +13,7 @@
 	character-oriented, making it ideal for parsing binary data such as 
 	images, network packets, audio, and executables.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">UpstandingHackers/hammer</remote-id>
+	</upstream>
 </pkgmetadata>

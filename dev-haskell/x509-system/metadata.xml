@@ -5,4 +5,7 @@
 	<longdescription>
 		System X.509 handling
 	</longdescription>
+	<upstream>
+		<remote-id type="github">vincenthz/hs-certificate</remote-id>
+	</upstream>
 </pkgmetadata>

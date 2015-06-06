@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/invokebinder
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/invokebinder/ChangeLog,v 1.3 2014/08/10 20:15:16 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/invokebinder/ChangeLog,v 1.4 2015/06/06 18:39:44 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> invokebinder-1.2.ebuild:
   QA: drop trailing '.' from DESCRIPTION

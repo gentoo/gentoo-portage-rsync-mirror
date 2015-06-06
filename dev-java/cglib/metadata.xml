@@ -7,4 +7,7 @@
 		Library, It is used to extend JAVA classes and implements interfaces
 		at runtime.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">cglib/cglib</remote-id>
+	</upstream>
 </pkgmetadata>

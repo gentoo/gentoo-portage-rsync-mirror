@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/antlr-c
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/ChangeLog,v 1.7 2015/05/14 07:21:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/antlr-c/ChangeLog,v 1.9 2015/06/06 18:55:13 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Fix GH project
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -antlr-c-3.3_pre20110403.ebuild, -antlr-c-3.4.ebuild,

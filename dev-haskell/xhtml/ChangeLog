@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/xhtml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.46 2015/04/03 05:45:41 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/xhtml/ChangeLog,v 1.47 2015/06/06 18:32:44 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 Apr 2015; Mark Wright <gienah@gentoo.org> xhtml-3000.2.1-r1.ebuild:
   Update the ghc core libs in xhtml-3000.2.1-r1 for ghc 7.10.1

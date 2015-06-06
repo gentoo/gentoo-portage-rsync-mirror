@@ -7,6 +7,9 @@
 		and extracting files from zip archives.
 	</longdescription>
 	<use>
-                <flag name="executable">Build the Zip executable.</flag>
+		<flag name="executable">Build the Zip executable.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">jgm/zip-archive</remote-id>
+	</upstream>
 </pkgmetadata>

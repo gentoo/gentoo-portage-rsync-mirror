@@ -11,5 +11,7 @@
 		environments
 		where neither native code, nor filesystem access is possible.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">jnr/jnr-netdb</remote-id>
+	</upstream>
 </pkgmetadata>
-

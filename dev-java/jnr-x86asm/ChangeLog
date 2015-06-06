@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jnr-x86asm
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/ChangeLog,v 1.12 2014/08/10 20:19:04 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-x86asm/ChangeLog,v 1.13 2015/06/06 18:49:06 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jnr-x86asm-0.1.ebuild,
   jnr-x86asm-1.0.1.ebuild, jnr-x86asm-1.0.2.ebuild:

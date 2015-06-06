@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/hiredis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.20 2015/04/03 08:12:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.21 2015/06/06 18:59:32 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 Apr 2015; Markus Meier <maekke@gentoo.org> hiredis-0.11.0-r1.ebuild:
   arm stable, bug #543234

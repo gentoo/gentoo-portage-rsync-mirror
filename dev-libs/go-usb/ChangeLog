@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/go-usb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-usb/ChangeLog,v 1.1 2015/05/11 16:25:31 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-usb/ChangeLog,v 1.2 2015/06/06 18:57:50 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *go-usb-9999 (11 May 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/zlib-bindings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.8 2015/01/26 09:56:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/zlib-bindings/ChangeLog,v 1.9 2015/06/06 18:36:05 jlec Exp $
+
+  06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   26 Jan 2015; Agostino Sarubbo <ago@gentoo.org> zlib-bindings-0.1.1.5.ebuild:
   Stable for x86, wrt bug #535026
