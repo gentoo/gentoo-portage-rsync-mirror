@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.36.4.ebuild,v 1.1 2015/05/17 09:20:04 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/vte-0.36.4.ebuild,v 1.2 2015/06/06 14:29:23 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -59,7 +59,8 @@ src_configure() {
 		--disable-static \
 		$(use_enable debug) \
 		$(use_enable glade glade-catalogue) \
-		$(use_enable introspection)
+		$(use_enable introspection) \
+		${myconf}
 }
 
 src_install() {
