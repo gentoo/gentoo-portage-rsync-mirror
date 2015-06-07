@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.7.1.ebuild,v 1.8 2015/05/14 14:51:15 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mdbtools/mdbtools-0.7.1.ebuild,v 1.9 2015/06/07 08:11:23 jlec Exp $
 
 EAPI="5"
 
@@ -18,9 +18,10 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~x86-fbsd"
 
 IUSE="gnome odbc static-libs"
 
-RDEPEND="dev-libs/glib:2
+RDEPEND="
+	dev-libs/glib:2
 	sys-libs/ncurses
-	sys-libs/readline
+	sys-libs/readline:0
 	gnome? (
 		gnome-base/libglade:2.0
 		gnome-base/libgnomeui

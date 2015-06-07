@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/unfoo
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.40 2015/04/07 14:06:57 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/unfoo/ChangeLog,v 1.41 2015/06/07 08:06:38 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   15 Sep 2014; Justin Lecher <jlec@gentoo.org> -unfoo-1.0.6.ebuild,
   -unfoo-1.0.7.ebuild:

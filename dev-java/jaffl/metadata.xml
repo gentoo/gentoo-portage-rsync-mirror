@@ -6,5 +6,7 @@
 		A native function invocation interface that can have multiple different
 		low level implementations (e.g. JNA, JFFI or Maxine)
 	</longdescription>
+	<upstream>
+		<remote-id type="github">wmeissner/jaffl</remote-id>
+	</upstream>
 </pkgmetadata>
-

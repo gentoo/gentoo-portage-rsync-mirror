@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bytelist
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.22 2014/06/17 10:46:10 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bytelist/ChangeLog,v 1.23 2015/06/07 08:30:38 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -bytelist-1.0.6.ebuild,
   -bytelist-1.0.9.ebuild:

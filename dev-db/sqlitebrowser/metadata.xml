@@ -12,4 +12,7 @@ meant to be used for users and developers that want to create databases, edit
 and search data using a familiar spreadsheet-like interface, without the need to
 learn complicated SQL commands.
 </longdescription>
+  <upstream>
+    <remote-id type="github">sqlitebrowser/sqlitebrowser</remote-id>
+  </upstream>
 </pkgmetadata>

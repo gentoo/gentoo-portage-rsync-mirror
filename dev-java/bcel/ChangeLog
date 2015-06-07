@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.67 2015/03/14 14:51:12 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.68 2015/06/07 08:28:57 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *bcel-6.0_rc3 (14 Mar 2015)
 

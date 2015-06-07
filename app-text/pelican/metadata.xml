@@ -7,6 +7,7 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">pelican</remote-id>
+    <remote-id type="github">getpelican/pelican</remote-id>
   </upstream>
   <use>
     <flag name="markdown">Markdown support</flag>

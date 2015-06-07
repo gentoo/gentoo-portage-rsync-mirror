@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libiodbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.69 2015/02/20 09:29:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libiodbc/ChangeLog,v 1.70 2015/06/07 08:21:09 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   20 Feb 2015; Mikle Kolyada <zlogene@gentoo.org> -libiodbc-3.52.7-r1.ebuild,
   -libiodbc-3.52.7.ebuild, libiodbc-3.52.8-r2.ebuild:

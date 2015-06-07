@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3-r1.ebuild,v 1.6 2012/06/06 17:35:03 darkside Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ledger/ledger-2.6.3-r1.ebuild,v 1.7 2015/06/07 08:09:57 jlec Exp $
 
 EAPI=4
 
@@ -15,7 +15,8 @@ KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x64-macos"
 SLOT="0"
 IUSE="emacs debug gnuplot ofx static-libs xml vim-syntax"
 
-DEPEND="dev-libs/gmp
+DEPEND="
+	dev-libs/gmp:0
 	dev-libs/libpcre
 	ofx? ( >=dev-libs/libofx-0.9 )
 	xml? ( dev-libs/expat )

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/deltup
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.32 2015/03/13 02:02:33 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/deltup/ChangeLog,v 1.33 2015/06/07 08:10:47 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   13 Mar 2015; Yixun Lan <dlan@gentoo.org> deltup-0.4.6.ebuild,
   -files/deltup-0.4.4-CFLAGS.patch, -files/deltup-0.4.6-fix-prefix.patch:

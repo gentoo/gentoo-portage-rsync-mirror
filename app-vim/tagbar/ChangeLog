@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/tagbar
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.10 2014/04/26 18:53:13 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tagbar/ChangeLog,v 1.11 2015/06/07 08:17:29 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   26 Apr 2014; Agostino Sarubbo <ago@gentoo.org> tagbar-2.6.1.ebuild:
   Stable for x86, wrt bug #502642

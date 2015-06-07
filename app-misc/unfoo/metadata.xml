@@ -5,4 +5,7 @@
   <use>
     <flag name="minimal">Do not install all support archive binaries</flag>
   </use>
+  <upstream>
+    <remote-id type="github">jlec/unfoo</remote-id>
+  </upstream>
 </pkgmetadata>
