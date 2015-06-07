@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/perl-Memoize-1.30.0-r1.ebuild,v 1.2 2014/09/21 11:10:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Memoize/perl-Memoize-1.30.0-r2.ebuild,v 1.1 2015/06/07 22:22:23 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86
 IUSE=""
 
 RDEPEND="
-	|| ( =dev-lang/perl-5.20* =dev-lang/perl-5.18* ~perl-core/${PN#perl-}-${PV} )
+	|| ( =dev-lang/perl-5.22* =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
 	!<perl-core/${PN#perl-}-${PV}
 	!>perl-core/${PN#perl-}-${PV}-r999
 "
