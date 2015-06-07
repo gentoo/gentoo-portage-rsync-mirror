@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyalsaaudio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.43 2015/04/08 08:05:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyalsaaudio/ChangeLog,v 1.44 2015/06/07 09:34:23 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> pyalsaaudio-0.7-r2.ebuild:
+  arm stable, bug #540290
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyalsaaudio-0.7-r1.ebuild,
   pyalsaaudio-0.7-r2.ebuild:

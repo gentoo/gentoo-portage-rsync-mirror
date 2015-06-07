@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyqwt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.28 2015/04/14 12:50:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqwt/ChangeLog,v 1.29 2015/06/07 09:47:12 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> pyqwt-5.2.0-r1.ebuild:
+  arm stable, bug #540290
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> pyqwt-5.2.0-r1.ebuild:
   Stable for ia64, wrt bug #540290

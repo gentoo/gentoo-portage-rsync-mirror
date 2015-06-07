@@ -9,4 +9,7 @@
   process is carried out internally by Blosc, a high-performance
   compressor that is optimized for binary data.
 </longdescription>
+  <upstream>
+    <remote-id type="github">ContinuumIO/blz</remote-id>
+  </upstream>
 </pkgmetadata>

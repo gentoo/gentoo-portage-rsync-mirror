@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/selenium
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.14 2015/06/03 21:42:34 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/selenium/ChangeLog,v 1.15 2015/06/07 09:56:27 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> selenium-2.42.1.ebuild:
+  arm stable, bug #540290
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/bluelet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bluelet/ChangeLog,v 1.8 2015/04/08 08:05:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bluelet/ChangeLog,v 1.9 2015/06/07 09:42:29 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> bluelet-0.2.0.ebuild:
   Drop old Python implementations

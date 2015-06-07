@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyev/pyev-0.8.1.ebuild,v 1.8 2015/04/08 08:05:18 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyev/pyev-0.8.1.ebuild,v 1.9 2015/06/07 09:34:50 maekke Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://pypi/p/pyev/${MY_P}.tar.gz"
 
 LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
-KEYWORDS="amd64 ~arm x86"
+KEYWORDS="amd64 arm x86"
 IUSE=""
 
 RDEPEND="dev-libs/libev

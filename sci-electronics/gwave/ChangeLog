@@ -1,6 +1,9 @@
 # ChangeLog for sci-electronics/gwave
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.32 2013/10/17 18:26:26 tomjbe Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gwave/ChangeLog,v 1.33 2015/06/07 09:56:50 tomjbe Exp $
+
+  07 Jun 2015; Thomas Beierlein <tomjbe@gentoo.org> gwave-20090213-r1.ebuild:
+  Drop 'nonfatal dodoc' (Bug #551188)
 
   17 Oct 2013; Thomas Beierlein <tomjbe@gentoo.org> gwave-20090213-r1.ebuild:
   Fix missing -lX11 (bug #487934). Thanks M. Rowell for reporting

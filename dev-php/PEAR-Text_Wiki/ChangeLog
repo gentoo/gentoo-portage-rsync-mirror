@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-Text_Wiki
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.53 2015/04/20 14:43:21 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Text_Wiki/ChangeLog,v 1.54 2015/06/07 09:36:58 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   20 Apr 2015; Brian Evans <grknight@gentoo.org> -PEAR-Text_Wiki-1.2.0.ebuild:
   Drop old

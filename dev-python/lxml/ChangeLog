@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lxml
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.224 2015/06/03 20:09:24 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lxml/ChangeLog,v 1.225 2015/06/07 09:32:38 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> lxml-3.4.1.ebuild:
+  arm stable, bug #540290
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> lxml-3.4.4.ebuild:
   Add missing eutils.eclass

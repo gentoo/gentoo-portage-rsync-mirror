@@ -14,5 +14,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">bokeh</remote-id>
+    <remote-id type="github">ContinuumIO/bokeh</remote-id>
   </upstream>
 </pkgmetadata>

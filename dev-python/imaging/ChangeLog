@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.105 2015/06/02 05:10:58 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.106 2015/06/07 09:31:36 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> imaging-1.1.7-r5.ebuild:
+  arm stable, bug #540290
 
   02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> imaging-1.1.7-r5.ebuild:
   sparc stable wrt bug #540290

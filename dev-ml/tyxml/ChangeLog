@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/tyxml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.15 2014/12/16 08:59:37 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/tyxml/ChangeLog,v 1.16 2015/06/07 09:34:36 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *tyxml-3.4.0 (16 Dec 2014)
 

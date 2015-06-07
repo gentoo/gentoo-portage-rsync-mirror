@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpDocumentor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpDocumentor/ChangeLog,v 1.5 2015/05/05 00:11:36 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpDocumentor/ChangeLog,v 1.6 2015/06/07 09:37:45 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *phpDocumentor-2.8.2 (05 May 2015)
 
