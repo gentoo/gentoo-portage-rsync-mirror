@@ -11,5 +11,6 @@ Cloud middleware for in application use
 </longdescription>
   <upstream>
     <remote-id type="pypi">cloudlib</remote-id>
+    <remote-id type="github">cloudnull/cloudlib</remote-id>
   </upstream>
 </pkgmetadata>

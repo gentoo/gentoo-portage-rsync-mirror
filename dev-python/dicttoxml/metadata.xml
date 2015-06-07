@@ -8,5 +8,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">dicttoxml</remote-id>
+    <remote-id type="github">quandyfactory/dicttoxml</remote-id>
   </upstream>
 </pkgmetadata>

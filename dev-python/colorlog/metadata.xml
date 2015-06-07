@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">colorlog</remote-id>
+    <remote-id type="github">borntyping/python-colorlog</remote-id>
   </upstream>
 </pkgmetadata>

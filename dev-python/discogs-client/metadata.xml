@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">discogs-client</remote-id>
+    <remote-id type="github">discogs/discogs_client</remote-id>
   </upstream>
 </pkgmetadata>

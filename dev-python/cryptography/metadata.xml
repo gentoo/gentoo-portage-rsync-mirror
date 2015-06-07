@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">cryptography</remote-id>
+    <remote-id type="github">pyca/cryptography</remote-id>
   </upstream>
 </pkgmetadata>

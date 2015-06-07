@@ -12,5 +12,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">colorama</remote-id>
+    <remote-id type="github">tartley/colorama</remote-id>
   </upstream>
 </pkgmetadata>

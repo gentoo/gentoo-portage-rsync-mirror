@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">coloredlogs</remote-id>
+    <remote-id type="github">xolox/python-coloredlogs</remote-id>
   </upstream>
 </pkgmetadata>
