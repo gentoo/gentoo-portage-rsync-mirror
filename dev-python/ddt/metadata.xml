@@ -12,5 +12,6 @@ Data-Driven/Decorated Tests - long_description='A library to multiply test cases
 </longdescription>
   <upstream>
     <remote-id type="pypi">ddt</remote-id>
+    <remote-id type="github">txels/ddt</remote-id>
   </upstream>
 </pkgmetadata>

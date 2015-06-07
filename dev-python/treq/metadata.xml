@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">treq</remote-id>
+    <remote-id type="github">dreid/treq</remote-id>
   </upstream>
 </pkgmetadata>

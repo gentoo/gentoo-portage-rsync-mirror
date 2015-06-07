@@ -4,5 +4,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="pypi">sure</remote-id>
+    <remote-id type="github">gabrielfalcao/sure</remote-id>
   </upstream>
 </pkgmetadata>

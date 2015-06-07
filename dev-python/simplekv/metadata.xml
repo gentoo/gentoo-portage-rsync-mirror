@@ -9,5 +9,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">simplekv</remote-id>
+    <remote-id type="github">mbr/simplekv</remote-id>
   </upstream>
 </pkgmetadata>

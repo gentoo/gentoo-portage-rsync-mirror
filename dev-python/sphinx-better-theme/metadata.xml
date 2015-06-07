@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">sphinx-better-theme</remote-id>
+    <remote-id type="github">irskep/sphinx-better-theme</remote-id>
   </upstream>
 </pkgmetadata>

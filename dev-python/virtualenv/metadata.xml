@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">virtualenv</remote-id>
+    <remote-id type="github">pypa/virtualenv</remote-id>
   </upstream>
 </pkgmetadata>

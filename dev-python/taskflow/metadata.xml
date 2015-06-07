@@ -12,5 +12,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">taskflow</remote-id>
+    <remote-id type="github">openstack/taskflow</remote-id>
   </upstream>
 </pkgmetadata>

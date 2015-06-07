@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.491 2015/06/05 15:02:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.492 2015/06/07 16:19:38 sping Exp $
+
+*eix-0.30.10 (07 Jun 2015)
+
+  07 Jun 2015; Sebastian Pipping <sping@gentoo.org> +eix-0.30.10.ebuild:
+  Dare to copy-bump myself, looked trivial
 
   05 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

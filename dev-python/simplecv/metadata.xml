@@ -7,4 +7,7 @@
   <use>
     <flag name="shell">Enable the iPython SimpleCV shell</flag>
   </use>
+  <upstream>
+    <remote-id type="github">sightmachine/SimpleCV</remote-id>
+  </upstream>
 </pkgmetadata>

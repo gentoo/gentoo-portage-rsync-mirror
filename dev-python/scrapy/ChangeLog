@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/scrapy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.29 2015/05/29 21:40:54 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/scrapy/ChangeLog,v 1.30 2015/06/07 16:04:21 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   29 May 2015; Manuel Rüger <mrueg@gentoo.org> -scrapy-0.24.2.ebuild,
   scrapy-0.25.1.ebuild:

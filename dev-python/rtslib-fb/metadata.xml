@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">rtslib-fb</remote-id>
+    <remote-id type="github">agrover/rtslib-fb</remote-id>
   </upstream>
 </pkgmetadata>

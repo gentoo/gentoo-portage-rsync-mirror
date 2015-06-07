@@ -5,4 +5,7 @@
   <maintainer>
     <email>yngwin@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">miracle2k/webassets</remote-id>
+  </upstream>
 </pkgmetadata>

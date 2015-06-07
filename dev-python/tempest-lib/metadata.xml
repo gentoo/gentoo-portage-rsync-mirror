@@ -12,5 +12,6 @@ tempest-lib is a library of common functionality that was originally in tempest 
 </longdescription>
   <upstream>
     <remote-id type="pypi">tempest-lib</remote-id>
+    <remote-id type="github">openstack/tempest-lib</remote-id>
   </upstream>
 </pkgmetadata>

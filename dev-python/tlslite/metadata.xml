@@ -11,4 +11,7 @@
 		with httplib, xmlrpclib, poplib, imaplib, smtplib, SocketServer,
 		asyncore, and Twisted.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">trevp/tlslite</remote-id>
+	</upstream>
 </pkgmetadata>

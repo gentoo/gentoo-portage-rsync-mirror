@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">tmdb3</remote-id>
+    <remote-id type="github">wagnerrp/pytmdb3</remote-id>
   </upstream>
 </pkgmetadata>

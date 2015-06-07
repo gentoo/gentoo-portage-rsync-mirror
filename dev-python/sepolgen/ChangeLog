@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.51 2015/05/10 09:02:56 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.52 2015/06/07 16:04:55 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 May 2015; Jason Zaman <perfinion@gentoo.org> sepolgen-1.2.2.ebuild:
   stabilize selinux 2.4 userland

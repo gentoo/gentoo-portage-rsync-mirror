@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">wcwidth</remote-id>
+    <remote-id type="github">jquast/wcwidth</remote-id>
   </upstream>
 </pkgmetadata>

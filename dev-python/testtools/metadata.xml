@@ -6,5 +6,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="pypi">testtools</remote-id>
+    <remote-id type="github">testing-cabal/testtools</remote-id>
   </upstream>
 </pkgmetadata>

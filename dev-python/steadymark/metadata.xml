@@ -4,5 +4,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="pypi">steadymark</remote-id>
+    <remote-id type="github">gabrielfalcao/steadymark</remote-id>
   </upstream>
 </pkgmetadata>

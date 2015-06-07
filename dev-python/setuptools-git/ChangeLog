@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/setuptools-git
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools-git/ChangeLog,v 1.10 2015/06/03 21:47:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/setuptools-git/ChangeLog,v 1.11 2015/06/07 16:05:57 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> -setuptools-git-1.0_beta1.ebuild:
   Drop old

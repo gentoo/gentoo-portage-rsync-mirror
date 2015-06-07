@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">snowballstemmer</remote-id>
+    <remote-id type="github">shibukawa/snowball_py</remote-id>
   </upstream>
 </pkgmetadata>

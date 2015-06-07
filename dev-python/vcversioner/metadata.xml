@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">vcversioner</remote-id>
+    <remote-id type="github">habnabit/vcversioner</remote-id>
   </upstream>
 </pkgmetadata>
