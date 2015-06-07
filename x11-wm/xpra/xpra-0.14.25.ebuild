@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.14.25.ebuild,v 1.1 2015/06/07 15:51:11 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.14.25.ebuild,v 1.2 2015/06/07 21:30:32 xmw Exp $
 EAPI=5
 
 # PyCObject_Check and PyCObject_AsVoidPtr vanished with python 3.3, and setup.py not python3.2 copmat
@@ -14,7 +14,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.xz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+client +clipboard csc dec_av dec_av2 libav opengl pulseaudio +rencode server sound vpx webp x264"
+IUSE="+client +clipboard csc dec_av dec_av2 libav opengl pulseaudio +rencode server sound vpx webp x264 x265"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	clipboard? ( || ( server client ) )
@@ -40,6 +40,10 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 		!libav? ( >=media-video/ffmpeg-1.2.2:0= )
 		libav? ( media-video/libav:0= )
 	)
+	dec_av2? (
+		!libav? ( >=media-video/ffmpeg-2:0= )
+		libav? ( media-video/libav:0= )
+	)
 	opengl? ( dev-python/pygtkglext )
 	pulseaudio? ( media-sound/pulseaudio )
 	sound? ( media-libs/gstreamer:0.10
@@ -49,6 +53,10 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 	webp? ( media-libs/libwebp )
 	x264? ( media-libs/x264
 		!libav? ( >=media-video/ffmpeg-1.0.4:0= )
+		libav? ( media-video/libav:0= )
+	)
+	x265? ( media-libs/x265
+		!libav? ( >=media-video/ffmpeg-2:0= )
 		libav? ( media-video/libav:0= )
 	)"
 
@@ -98,6 +106,7 @@ python_configure_all() {
 		$(use_with vpx)
 		$(use_with webp)
 		$(use_with x264 enc_x264)
+		$(use_with x265 enc_x265)
 		--with-Xdummy
 		--with-argb
 		--with-cyxor
