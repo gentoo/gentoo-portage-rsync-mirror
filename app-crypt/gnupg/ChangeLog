@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.605 2015/06/01 19:10:08 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.606 2015/06/07 10:59:50 k_f Exp $
+
+*gnupg-2.0.28 (07 Jun 2015)
+
+  07 Jun 2015; Kristian Fiskerstrand <k_f@gentoo.org> +gnupg-2.0.28.ebuild:
+  New upstream version 2.0.28
 
   01 Jun 2015; Fabian Groffen <grobian@gentoo.org> gnupg-2.0.27-r1.ebuild,
   gnupg-2.1.4.ebuild:

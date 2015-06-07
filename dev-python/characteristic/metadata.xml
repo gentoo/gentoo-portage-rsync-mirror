@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">characteristic</remote-id>
+    <remote-id type="github">hynek/characteristic</remote-id>
   </upstream>
 </pkgmetadata>

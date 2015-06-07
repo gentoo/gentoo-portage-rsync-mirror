@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-taglib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.154 2015/03/29 11:09:46 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-taglib/ChangeLog,v 1.155 2015/06/07 10:53:28 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org>
+  gst-plugins-taglib-1.4.5.ebuild:
+  arm stable, bug #534012
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gst-plugins-taglib-1.4.5.ebuild:
   Stable for HPPA (bug #534012).

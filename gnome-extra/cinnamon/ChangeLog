@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/cinnamon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.57 2015/03/20 07:49:55 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/ChangeLog,v 1.58 2015/06/07 11:00:12 pacho Exp $
+
+*cinnamon-2.4.7 (07 Jun 2015)
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org> +cinnamon-2.4.7.ebuild:
+  Version bump
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org>
   files/polkit-cinnamon-authentication-agent-1.desktop:

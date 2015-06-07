@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/python-slip-0.4.0.ebuild,v 1.5 2015/04/08 08:04:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-slip/python-slip-0.6.1.ebuild,v 1.1 2015/06/07 10:34:33 pacho Exp $
 
 EAPI=5
 
 PYTHON_REQ_USE="xml"
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 inherit distutils-r1 eutils
 
@@ -15,31 +15,30 @@ SRC_URI="https://fedorahosted.org/released/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="amd64 x86"
-IUSE="dbus gtk selinux"
+KEYWORDS="~amd64 ~x86"
+IUSE="dbus selinux"
 
 RDEPEND="
 	dbus? (
 		dev-python/dbus-python[${PYTHON_USEDEP}]
-		|| (
-			dev-python/pygobject:3[${PYTHON_USEDEP}]
-			dev-python/pygobject:2[${PYTHON_USEDEP}] )
+		dev-python/pygobject:3[${PYTHON_USEDEP}]
+		dev-python/six[${PYTHON_USEDEP}]
 		sys-auth/polkit )
-	gtk? ( dev-python/pygtk:2[${PYTHON_USEDEP}] )
 "
 DEPEND=""
 
 python_prepare_all() {
 	use selinux || epatch "${FILESDIR}/${PN}-0.4.0-no-selinux.patch"
-	sed -e "s:@VERSION@:${PV}:" setup.py.in > setup.py || die "sed failed"
+
+	# hard-disable slip.gtk since it did not get ported to gtk3+ and the only user
+	# of slip (firewalld) does not use it (upstream disables it for py3 already)
+	sed \
+		-e 's|sys.version_info.major == 2|False|' \
+		-e "s:@VERSION@:${PV}:" setup.py.in > setup.py || die "sed failed"
 
 	if ! use dbus; then
 		sed -e '/name="slip.dbus"/ s/\(.*\)/if 0:\n    \1/' \
 			-i setup.py || die "sed 2 failed"
-	fi
-	if ! use gtk; then
-		sed -e '/name="slip.gtk"/ s/\(.*\)/if 0:\n    \1/' \
-			-i setup.py || die "sed 3 failed"
 	fi
 
 	distutils-r1_python_prepare_all
