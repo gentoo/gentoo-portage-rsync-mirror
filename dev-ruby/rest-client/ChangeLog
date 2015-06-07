@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rest-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.33 2015/04/25 09:02:52 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rest-client/ChangeLog,v 1.34 2015/06/07 19:23:48 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   25 Apr 2015; Hans de Graaff <graaff@gentoo.org> -rest-client-1.6.7-r1.ebuild:
   Remove masked app-admin/chef packages.

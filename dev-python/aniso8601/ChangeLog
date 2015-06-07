@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/aniso8601
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/aniso8601/ChangeLog,v 1.8 2015/06/01 07:08:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/aniso8601/ChangeLog,v 1.9 2015/06/07 19:16:45 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
 *aniso8601-1.0.0 (01 Jun 2015)
 

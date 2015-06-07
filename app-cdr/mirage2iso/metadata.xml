@@ -6,7 +6,7 @@
 		<name>Michał Górny</name>
 	</maintainer>
 	<use>
-		<flag name='pinentry'>Support <pkg>app-crypt/pinentry</pkg> password
+		<flag name="pinentry">Support <pkg>app-crypt/pinentry</pkg> password
 			input backend.</flag>
 	</use>
 	<upstream>
@@ -15,5 +15,6 @@
 			<name>Michał Górny</name>
 		</maintainer>
 		<bugs-to>https://bitbucket.org/mgorny/mirage2iso/issues/</bugs-to>
+		<remote-id type="bitbucket">mgorny/mirage2iso</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -8,5 +8,6 @@
 		etc.</longdescription>
 	<upstream>
 		<remote-id type="pypi">hachoir-core</remote-id>
+		<remote-id type="bitbucket">haypo/hachoir</remote-id>
 	</upstream>
 </pkgmetadata>

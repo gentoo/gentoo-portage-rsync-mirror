@@ -8,5 +8,6 @@
 	</longdescription>
 	<upstream>
 		<remote-id type="pypi">irc</remote-id>
+		<remote-id type="bitbucket">jaraco/irc</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/install-mask
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.25 2015/04/08 07:30:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/install-mask/ChangeLog,v 1.26 2015/06/07 19:07:19 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> install-mask-0.0.2-r3.ebuild,
   install-mask-0.1.1.ebuild, install-mask-9999.ebuild:

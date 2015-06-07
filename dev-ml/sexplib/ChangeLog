@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/sexplib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.36 2015/03/18 17:05:11 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/sexplib/ChangeLog,v 1.37 2015/06/07 19:14:59 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
 *sexplib-112.24.00 (18 Mar 2015)
 
@@ -170,4 +173,3 @@
   +metadata.xml:
   Initial import, ebuild by Guillaume Horel <guillaume.horel@gmail.com>, bug
   #281274
-

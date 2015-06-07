@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/pe-format
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.49 2014/07/06 13:17:51 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pe-format/ChangeLog,v 1.50 2015/06/07 19:09:51 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> pe-format-2.1.2.ebuild,
   pe-format-2.9999.ebuild:

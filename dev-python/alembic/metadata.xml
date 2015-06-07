@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">alembic</remote-id>
+    <remote-id type="bitbucket">zzzeek/alembic</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,12 +1,11 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.10.ebuild,v 1.6 2014/08/10 20:17:04 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-2.10.ebuild,v 1.7 2015/06/07 19:15:21 pacho Exp $
 
-EAPI=2
+EAPI=5
 
-# DRAGONS: Watch the order of these.
-
-inherit apache-module multilib eutils go-mono mono
+# Watch the order of these!
+inherit autotools apache-module multilib eutils go-mono mono
 
 KEYWORDS="amd64 ppc x86"
 
@@ -24,11 +23,15 @@ APACHE2_MOD_DEFINE="MONO"
 
 DOCFILES="AUTHORS ChangeLog COPYING INSTALL NEWS README"
 
-need_apache2_2
+need_apache2
 
 src_prepare() {
 	sed -e "s:@LIBDIR@:$(get_libdir):" "${FILESDIR}/${APACHE2_MOD_CONF}.conf" \
 		> "${WORKDIR}/${APACHE2_MOD_CONF##*/}.conf" || die
+
+	epatch "${FILESDIR}"/${PN}-2.10-apache-2.4.patch
+
+	eautoreconf
 	go-mono_src_prepare
 }
 
@@ -38,8 +41,7 @@ src_configure() {
 		$(use_enable debug) \
 		--with-apxs="${APXS}" \
 		--with-apr-config="/usr/bin/apr-1-config" \
-		--with-apu-config="/usr/bin/apu-1-config" \
-		|| die "econf failed"
+		--with-apu-config="/usr/bin/apu-1-config"
 }
 src_compile() {
 	go-mono_src_compile

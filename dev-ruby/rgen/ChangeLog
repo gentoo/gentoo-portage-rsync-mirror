@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rgen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.10 2015/04/26 17:21:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rgen/ChangeLog,v 1.11 2015/06/07 19:25:07 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   26 Apr 2015; Pacho Ramos <pacho@gentoo.org> rgen-0.6.6.ebuild:
   ppc stable wrt bug #536168

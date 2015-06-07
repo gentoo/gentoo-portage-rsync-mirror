@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rack-mount
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.34 2015/03/25 06:43:59 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack-mount/ChangeLog,v 1.35 2015/06/07 19:06:48 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   25 Mar 2015; Hans de Graaff <graaff@gentoo.org> rack-mount-0.8.3-r2.ebuild:
   Add ruby22.

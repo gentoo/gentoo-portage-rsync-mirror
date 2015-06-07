@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.12-r1.ebuild,v 1.1 2015/06/01 06:08:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/apache/apache-2.4.12-r1.ebuild,v 1.2 2015/06/07 19:25:58 pacho Exp $
 
 EAPI=5
 
@@ -37,7 +37,7 @@ authz_dbd authz_dbm authz_groupfile authz_host authz_owner authz_user autoindex
 cache cache_disk cern_meta charset_lite cgi cgid dav dav_fs dav_lock dbd deflate
 dir dumpio env expires ext_filter file_cache filter headers ident imagemap
 include info lbmethod_byrequests lbmethod_bytraffic lbmethod_bybusyness
-lbmethod_heartbeat log_config log_forensic logio mime mime_magic negotiation
+lbmethod_heartbeat log_config log_forensic logio macro mime mime_magic negotiation
 proxy proxy_ajp proxy_balancer proxy_connect proxy_ftp proxy_http proxy_scgi
 proxy_fcgi  proxy_wstunnel rewrite ratelimit remoteip reqtimeout setenvif
 slotmem_shm speling socache_shmcb status substitute unique_id userdir usertrack

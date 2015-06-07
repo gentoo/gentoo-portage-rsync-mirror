@@ -1,6 +1,10 @@
 # ChangeLog for www-apache/mod_mono
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.82 2014/08/10 20:17:04 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/ChangeLog,v 1.83 2015/06/07 19:15:21 pacho Exp $
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/mod_mono-2.10-apache-2.4.patch, mod_mono-2.10.ebuild:
+  Support apache 2.4 (#532842)
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> mod_mono-2.10.ebuild:
   QA: drop trailing '.' from DESCRIPTION

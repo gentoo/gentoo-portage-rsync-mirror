@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">flake8</remote-id>
+    <remote-id type="bitbucket">tarek/flake8</remote-id>
   </upstream>
 </pkgmetadata>

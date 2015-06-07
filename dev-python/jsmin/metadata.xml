@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">jsmin</remote-id>
+    <remote-id type="bitbucket">dcs/jsmin</remote-id>
   </upstream>
 </pkgmetadata>

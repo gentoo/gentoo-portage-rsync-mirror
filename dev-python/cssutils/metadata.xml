@@ -12,5 +12,6 @@ A Python package to parse and build CSS Cascading Style Sheets.
   <upstream>
     <remote-id type="google-code">cssutils</remote-id>
     <remote-id type="pypi">cssutils</remote-id>
+    <remote-id type="bitbucket">cthedot/cssutils</remote-id>
   </upstream>
 </pkgmetadata>

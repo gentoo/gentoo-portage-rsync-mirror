@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.40 2015/05/30 14:11:49 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/apache-2.eclass,v 1.41 2015/06/07 19:22:36 pacho Exp $
 
 # @ECLASS: apache-2.eclass
 # @MAINTAINER:
@@ -25,7 +25,8 @@ esac
 case $(get_version_component_range 1-2) in
 	2.4)
 		DEFAULT_MPM_THREADED="event" #509922
-		RDEPEND=">=dev-libs/apr-1.5.1" #492578
+		RDEPEND=">=dev-libs/apr-1.5.1
+			!www-apache/mod_macro" #492578 #477702
 	;;
 	*)
 		DEFAULT_MPM_THREADED="worker"

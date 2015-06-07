@@ -8,5 +8,6 @@
   </use>
   <upstream>
     <remote-id type="github">equalsraf/vim-qt</remote-id>
+    <remote-id type="bitbucket">equalsraf/vim-qt</remote-id>
   </upstream>
 </pkgmetadata>

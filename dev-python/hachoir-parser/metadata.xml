@@ -7,5 +7,6 @@
 		(they only parse the first level of the tree for example).</longdescription>
 	<upstream>
 		<remote-id type="pypi">hachoir-parser</remote-id>
+		<remote-id type="bitbucket">haypo/hachoir</remote-id>
 	</upstream>
 </pkgmetadata>

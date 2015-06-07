@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/liberasurecode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/liberasurecode/ChangeLog,v 1.1 2015/04/30 19:34:46 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/liberasurecode/ChangeLog,v 1.2 2015/06/07 19:11:44 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
 *liberasurecode-1.0.7 (30 Apr 2015)
 

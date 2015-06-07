@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-inspector
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.18 2015/05/12 05:40:39 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-inspector/ChangeLog,v 1.19 2015/06/07 19:01:35 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   12 May 2015; Hans de Graaff <graaff@gentoo.org> pdf-inspector-1.2.0.ebuild:
   Add ruby22.

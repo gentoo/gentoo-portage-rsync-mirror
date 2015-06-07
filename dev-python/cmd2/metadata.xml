@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">cmd2</remote-id>
+    <remote-id type="bitbucket">catherinedevlin/cmd2</remote-id>
   </upstream>
 </pkgmetadata>

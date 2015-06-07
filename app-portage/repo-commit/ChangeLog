@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/repo-commit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/repo-commit/ChangeLog,v 1.8 2014/07/06 13:16:36 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/repo-commit/ChangeLog,v 1.9 2015/06/07 19:08:21 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
   06 Jul 2014; Michał Górny <mgorny@gentoo.org> repo-commit-0.4.1.ebuild,
   repo-commit-0.4.ebuild, repo-commit-9999.ebuild:
