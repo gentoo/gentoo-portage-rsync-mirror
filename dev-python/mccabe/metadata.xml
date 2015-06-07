@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">mccabe</remote-id>
+    <remote-id type="github">flintwork/mccabe</remote-id>
   </upstream>
 </pkgmetadata>

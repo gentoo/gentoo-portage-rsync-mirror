@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">keepassx</remote-id>
+    <remote-id type="github">jamesls/python-keepassx</remote-id>
   </upstream>
 </pkgmetadata>

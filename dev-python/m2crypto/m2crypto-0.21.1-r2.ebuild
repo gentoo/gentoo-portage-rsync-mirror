@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.21.1-r2.ebuild,v 1.4 2015/05/15 09:03:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.21.1-r2.ebuild,v 1.5 2015/06/07 13:50:17 jlec Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~amd64-fbs
 IUSE="doc examples"
 
 # swig-3.0.5 results in broken constants, #538920
-RDEPEND=">=dev-libs/openssl-0.9.8"
+RDEPEND=">=dev-libs/openssl-0.9.8:0"
 DEPEND="${RDEPEND}
 	<dev-lang/swig-3.0.5
 	>=dev-lang/swig-1.3.28
@@ -33,13 +33,13 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 # Tests access network, and fail randomly. Bug #431458.
 RESTRICT=test
 
+PATCHES=( "${FILESDIR}"/${P}-cross-compile.patch )
+
 python_prepare_all() {
-	epatch "${FILESDIR}"/${P}-cross-compile.patch
+	distutils-r1_python_prepare_all
 
 	# use pre-swigged sources
 	sed -i -e '/sources/s:\.i:_wrap.c:' setup.py || die
-
-	distutils-r1_python_prepare_all
 }
 
 python_configure_all() {

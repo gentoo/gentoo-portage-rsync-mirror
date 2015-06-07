@@ -12,6 +12,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">jsonpatch</remote-id>
+    <remote-id type="github">stefankoegl/python-json-patch</remote-id>
   </upstream>
 </pkgmetadata>
-

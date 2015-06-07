@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">jedi</remote-id>
+    <remote-id type="github">davidhalter/jedi</remote-id>
   </upstream>
 </pkgmetadata>

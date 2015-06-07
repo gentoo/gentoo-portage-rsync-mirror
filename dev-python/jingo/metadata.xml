@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">jingo</remote-id>
+    <remote-id type="github">jbalogh/jingo</remote-id>
   </upstream>
 </pkgmetadata>

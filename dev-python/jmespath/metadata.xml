@@ -9,5 +9,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">jmespath</remote-id>
+    <remote-id type="github">boto/jmespath</remote-id>
   </upstream>
 </pkgmetadata>

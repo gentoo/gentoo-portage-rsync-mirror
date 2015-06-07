@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">jsonpickle</remote-id>
+    <remote-id type="github">jsonpickle/jsonpickle</remote-id>
   </upstream>
 </pkgmetadata>

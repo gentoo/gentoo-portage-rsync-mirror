@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">idna</remote-id>
+    <remote-id type="github">kjd/idna</remote-id>
   </upstream>
 </pkgmetadata>

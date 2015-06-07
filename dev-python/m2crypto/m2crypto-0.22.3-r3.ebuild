@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r3.ebuild,v 1.4 2015/05/25 17:41:50 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/m2crypto-0.22.3-r3.ebuild,v 1.5 2015/06/07 13:50:17 jlec Exp $
 
 EAPI=5
 
@@ -33,13 +33,13 @@ S="${WORKDIR}/${MY_PN}-${PV}"
 # Tests access network, and fail randomly. Bug #431458.
 RESTRICT=test
 
+PATCHES=( "${FILESDIR}"/${P}-cross-compile.patch )
+
 python_prepare_all() {
-	epatch "${FILESDIR}"/${P}-cross-compile.patch
+	distutils-r1_python_prepare_all
 
 	# use pre-swigged sources
 	sed -i -e '/sources/s:\.i:_wrap.c:' setup.py || die
-
-	distutils-r1_python_prepare_all
 }
 
 python_configure_all() {

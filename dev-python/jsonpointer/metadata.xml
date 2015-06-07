@@ -12,6 +12,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">jsonpointer</remote-id>
+    <remote-id type="github">stefankoegl/python-json-pointer</remote-id>
   </upstream>
 </pkgmetadata>
-

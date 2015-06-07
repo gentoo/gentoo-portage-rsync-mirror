@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">python-mimeparse</remote-id>
+    <remote-id type="github">dbtsai/python-mimeparse</remote-id>
   </upstream>
 </pkgmetadata>

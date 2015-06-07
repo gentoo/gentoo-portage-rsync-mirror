@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/lz4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/lz4/ChangeLog,v 1.11 2015/06/07 09:14:48 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/lz4/ChangeLog,v 1.12 2015/06/07 13:45:27 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   07 Jun 2015; Markus Meier <maekke@gentoo.org> lz4-0.6.1.ebuild:
   arm stable, bug #540290

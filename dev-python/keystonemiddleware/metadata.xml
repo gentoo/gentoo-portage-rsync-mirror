@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">keystonemiddleware</remote-id>
+    <remote-id type="github">openstack/keystonemiddleware</remote-id>
   </upstream>
 </pkgmetadata>

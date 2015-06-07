@@ -8,5 +8,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">moto</remote-id>
+    <remote-id type="github">spulec/moto</remote-id>
   </upstream>
 </pkgmetadata>

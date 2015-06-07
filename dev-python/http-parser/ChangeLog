@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/http-parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.30 2015/05/31 11:05:50 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/http-parser/ChangeLog,v 1.31 2015/06/07 13:32:30 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   31 May 2015; Markus Meier <maekke@gentoo.org> http-parser-0.8.3.ebuild:
   arm stable, bug #530622

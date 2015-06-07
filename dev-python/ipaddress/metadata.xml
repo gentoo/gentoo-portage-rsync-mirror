@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">ipaddress</remote-id>
+    <remote-id type="github">phihag/ipaddress</remote-id>
   </upstream>
 </pkgmetadata>

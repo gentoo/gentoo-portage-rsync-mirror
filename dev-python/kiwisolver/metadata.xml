@@ -11,5 +11,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">kiwisolver</remote-id>
+    <remote-id type="github">nucleic/kiwi</remote-id>
   </upstream>
 </pkgmetadata>

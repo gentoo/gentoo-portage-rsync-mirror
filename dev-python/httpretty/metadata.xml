@@ -4,5 +4,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="pypi">httpretty</remote-id>
+    <remote-id type="github">gabrielfalcao/httpretty</remote-id>
   </upstream>
 </pkgmetadata>
