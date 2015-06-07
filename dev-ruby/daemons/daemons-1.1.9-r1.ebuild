@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/daemons-1.1.9-r1.ebuild,v 1.5 2015/01/29 13:16:28 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/daemons-1.1.9-r1.ebuild,v 1.6 2015/06/07 06:27:38 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20 ruby21 ruby22"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_EXTRADOC="Releases README TODO"
 RUBY_FAKEGEM_DOCDIR="html"
