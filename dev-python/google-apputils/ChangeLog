@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/google-apputils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.10 2015/05/20 10:45:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/google-apputils/ChangeLog,v 1.11 2015/06/07 09:30:31 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> google-apputils-0.4.0.ebuild:
+  arm stable, bug #540290
 
 *google-apputils-0.4.2 (20 May 2015)
 

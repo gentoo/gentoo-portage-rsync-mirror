@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubyzip
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.55 2015/05/31 10:51:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/ChangeLog,v 1.56 2015/06/07 09:12:15 graaff Exp $
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> rubyzip-1.1.7.ebuild,
+  rubyzip-1.1.7-r1.ebuild:
+  Unbreak test suite by fixing hardcoded /tmp path. Relax minitest dependency
+  for bug 550514.
 
   31 May 2015; Markus Meier <maekke@gentoo.org> rubyzip-0.9.9-r1.ebuild:
   arm stable, bug #542574

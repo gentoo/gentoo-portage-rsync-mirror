@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/patchutils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.73 2014/02/07 08:01:30 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.74 2015/06/07 09:27:23 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> patchutils-0.3.3.ebuild:
+  arm stable, bug #530906
 
   07 Feb 2014; Mike Frysinger <vapier@gentoo.org> patchutils-0.3.2.ebuild,
   patchutils-0.3.3.ebuild:

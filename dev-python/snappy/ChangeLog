@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/snappy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snappy/ChangeLog,v 1.14 2015/03/16 03:34:35 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snappy/ChangeLog,v 1.15 2015/06/07 09:14:21 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> snappy-0.5-r2.ebuild:
+  arm stable, bug #540290
 
   16 Mar 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself as maintainer.

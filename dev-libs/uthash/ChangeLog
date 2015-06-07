@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uthash
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/ChangeLog,v 1.13 2014/07/02 07:23:20 dlan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uthash/ChangeLog,v 1.14 2015/06/07 09:05:40 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   02 Jul 2014; Yixun Lan <dlan@gentoo.org> -uthash-1.9.4.ebuild,
   -uthash-1.9.5.ebuild, -uthash-1.9.6.ebuild:

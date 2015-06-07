@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.1.7.ebuild,v 1.2 2015/05/27 06:50:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubyzip/rubyzip-1.1.7.ebuild,v 1.3 2015/06/07 09:12:15 graaff Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ IUSE=""
 RDEPEND=""
 DEPEND="${DEPEND} test? ( app-arch/zip )"
 
-ruby_add_bdepend "test? ( >=dev-ruby/minitest-5.4:5 )"
+ruby_add_bdepend "test? ( dev-ruby/minitest:5 )"
 
 all_ruby_install() {
 	all_fakegem_install
@@ -39,4 +39,7 @@ all_ruby_prepare() {
 
 	# Avoid dependency on bundler
 	sed -i -e '/bundler/ s:^:#:' Rakefile || die
+
+	# Fix hardcoded path to /tmp
+	sed -i -e 's:/tmp/:'${T}'/:g' test/entry_test.rb || die
 }

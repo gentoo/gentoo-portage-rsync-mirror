@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/js_of_ocaml
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/js_of_ocaml/ChangeLog,v 1.8 2014/12/01 10:25:33 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/js_of_ocaml/ChangeLog,v 1.9 2015/06/07 09:13:33 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *js_of_ocaml-2.5-r1 (01 Dec 2014)
 
@@ -38,4 +41,3 @@
   +metadata.xml:
   Initial import, ebuild by Jacques-Pascal Deplaix and Guillaume Horel, bug
   #410257
-

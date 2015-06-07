@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/rsa
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.13 2015/01/26 11:12:03 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/rsa/ChangeLog,v 1.14 2015/06/07 09:23:22 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> rsa-3.1.4-r1.ebuild:
+  arm stable, bug #540290
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -rsa-3.1.1.ebuild:
   Remove old.
