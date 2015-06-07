@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+  <herd>proxy-maint</herd>
+  <maintainer>
+    <email>jan.breuer@jaybee.cz</email>
+	<name>Jan Breuer</name>
+  </maintainer>
   <use>
     <flag name="daemon">Enable background (daemon) mode</flag>
     <flag name="debug">Enable debugging informations</flag>
