@@ -15,5 +15,6 @@
 </longdescription>
   <upstream>
     <remote-id type="pypi">networkx</remote-id>
+    <remote-id type="github">networkx/networkx</remote-id>
   </upstream>
 </pkgmetadata>

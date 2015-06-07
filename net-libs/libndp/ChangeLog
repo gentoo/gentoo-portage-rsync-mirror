@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libndp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/ChangeLog,v 1.15 2015/06/07 13:58:17 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libndp/ChangeLog,v 1.16 2015/06/07 14:02:18 pacho Exp $
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org> libndp-1.4.ebuild:
+  Move to testing on arches that not need this stable
 
 *libndp-1.5 (07 Jun 2015)
 

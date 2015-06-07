@@ -14,5 +14,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">netaddr</remote-id>
+    <remote-id type="github">drkjam/netaddr</remote-id>
   </upstream>
 </pkgmetadata>

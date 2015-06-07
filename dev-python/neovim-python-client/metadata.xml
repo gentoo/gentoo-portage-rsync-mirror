@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>vim</herd>
   <herd>python</herd>
+  <upstream>
+    <remote-id type="github">neovim/python-client</remote-id>
+  </upstream>
 </pkgmetadata>

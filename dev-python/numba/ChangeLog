@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/numba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.16 2015/06/02 15:27:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/numba/ChangeLog,v 1.17 2015/06/07 14:22:05 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   02 Jun 2015; Ian Delaney <idella4@gentoo.org> -numba-0.12.1.ebuild,
   -numba-0.12.2.ebuild, -numba-0.13.0.ebuild, -numba-0.13.2.ebuild,

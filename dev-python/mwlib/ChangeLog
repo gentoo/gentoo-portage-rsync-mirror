@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/mwlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.36 2015/04/08 08:05:29 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mwlib/ChangeLog,v 1.37 2015/06/07 14:02:20 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> mwlib-0.15.15.ebuild:
   Drop old Python implementations

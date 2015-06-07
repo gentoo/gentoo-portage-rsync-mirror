@@ -1,6 +1,6 @@
 # ChangeLog for dev-python/blaze
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.20 2015/06/07 09:38:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/blaze/ChangeLog,v 1.21 2015/06/07 14:03:56 idella4 Exp $
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
@@ -9,7 +9,7 @@
 
   06 Jun 2015; Ian Delaney <idella4@gentoo.org> +blaze-0.8.0.ebuild,
   -blaze-0.7.2-r1.ebuild:
-  bump one remove
+  bump one remove one
 
 *blaze-0.7.3 (17 Mar 2015)
 

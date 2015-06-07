@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16577 2015/06/06 19:40:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16579 2015/06/07 14:29:25 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -61,6 +61,8 @@
 =virtual/perl-IO-Compress-2.68.0
 =virtual/perl-IO-Socket-IP-0.370.0
 =virtual/perl-JSON-PP-2.273.0
+=virtual/perl-Locale-Maketext-1.260.0
+=virtual/perl-MIME-Base64-3.150.0
 
 # Michał Górny <mgorny@gentoo.org> (04 Jun 2015)
 # New version of PyPy. Masked for testing and binary package build.

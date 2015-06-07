@@ -18,5 +18,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">numexpr</remote-id>
+    <remote-id type="github">pydata/numexpr</remote-id>
   </upstream>
 </pkgmetadata>
