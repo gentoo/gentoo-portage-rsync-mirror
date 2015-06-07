@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/connection_pool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/ChangeLog,v 1.10 2015/04/25 06:10:26 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/connection_pool/ChangeLog,v 1.11 2015/06/07 17:32:02 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *connection_pool-2.2.0 (25 Apr 2015)
 

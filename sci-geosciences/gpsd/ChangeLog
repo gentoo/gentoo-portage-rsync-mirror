@@ -1,6 +1,13 @@
 # ChangeLog for sci-geosciences/gpsd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.128 2015/04/08 18:49:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-geosciences/gpsd/ChangeLog,v 1.129 2015/06/07 17:53:38 vapier Exp $
+
+*gpsd-3.15 (07 Jun 2015)
+
+  07 Jun 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/gpsd-3.15-broken-install.patch, +files/gpsd-3.15-dynamic-libs.patch,
+  +files/gpsd-3.15-libgpsd.patch, +gpsd-3.15.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> gpsd-3.10.ebuild,
   gpsd-3.11.ebuild, gpsd-3.13.ebuild, gpsd-9999.ebuild:

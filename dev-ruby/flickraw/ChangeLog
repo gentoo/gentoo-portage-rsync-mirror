@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/flickraw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickraw/ChangeLog,v 1.6 2015/02/01 13:53:45 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/flickraw/ChangeLog,v 1.7 2015/06/07 17:49:56 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   01 Feb 2015; Hans de Graaff <graaff@gentoo.org> flickraw-0.9.8.ebuild:
   Add ruby22.

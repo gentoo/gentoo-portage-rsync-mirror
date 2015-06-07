@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/equalizer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.8 2015/04/07 05:41:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/equalizer/ChangeLog,v 1.9 2015/06/07 17:41:17 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *equalizer-0.0.11 (07 Apr 2015)
 

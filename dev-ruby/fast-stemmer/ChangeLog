@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fast-stemmer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast-stemmer/ChangeLog,v 1.7 2015/01/05 14:48:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fast-stemmer/ChangeLog,v 1.8 2015/06/07 17:46:00 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   05 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -fast-stemmer-1.0.2-r1.ebuild,
   fast-stemmer-1.0.2-r2.ebuild:

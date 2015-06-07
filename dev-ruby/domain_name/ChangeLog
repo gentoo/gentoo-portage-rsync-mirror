@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/domain_name
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.34 2015/04/18 15:37:25 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/domain_name/ChangeLog,v 1.35 2015/06/07 17:40:19 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *domain_name-0.5.24 (18 Apr 2015)
 

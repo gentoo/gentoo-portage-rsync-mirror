@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/configliere
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.9 2015/05/03 07:06:08 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/configliere/ChangeLog,v 1.10 2015/06/07 17:31:33 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 May 2015; Hans de Graaff <graaff@gentoo.org> configliere-0.4.22.ebuild:
   Update dependency to the version in the gemspec.

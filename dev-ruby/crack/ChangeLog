@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/crack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.46 2015/02/05 18:13:50 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/crack/ChangeLog,v 1.47 2015/06/07 17:33:06 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   05 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -crack-0.3.2.ebuild:
   Remove old.
