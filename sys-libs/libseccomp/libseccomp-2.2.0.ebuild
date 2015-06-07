@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/libseccomp-2.2.0.ebuild,v 1.1 2015/04/09 17:59:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libseccomp/libseccomp-2.2.0.ebuild,v 1.2 2015/06/07 04:38:28 vapier Exp $
 
 # TODO: Add python support.
 
@@ -16,6 +16,10 @@ LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~arm ~arm64 ~mips ~x86"
 IUSE="static-libs"
+
+# We need newer kernel headers; we don't keep strict control of the exact
+# version here, just be safe and pull in the latest stable ones. #551248
+DEPEND=">=sys-kernel/linux-headers-3.18"
 
 src_prepare() {
 	sed -i \
