@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/charlock_holmes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/charlock_holmes/ChangeLog,v 1.8 2015/03/20 13:33:02 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/charlock_holmes/ChangeLog,v 1.9 2015/06/07 17:20:07 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> charlock_holmes-0.7.3.ebuild:
   Add ruby22.

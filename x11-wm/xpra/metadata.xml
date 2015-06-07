@@ -18,5 +18,6 @@
 	<flag name='csc'>Enable csc softscaler support</flag>
 	<flag name='dec_av'>Enable dec_avcodec support</flag>
 	<flag name='dec_av2'>Enable dec_avcodec2 support</flag>
+	<flag name='x265'>Enable x265 support</flag>
 </use>
 </pkgmetadata>

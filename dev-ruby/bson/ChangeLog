@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/bson
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.18 2015/05/02 06:13:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/bson/ChangeLog,v 1.19 2015/06/07 17:16:59 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   02 May 2015; Hans de Graaff <graaff@gentoo.org> bson-2.3.0.ebuild:
   Add ruby22.
