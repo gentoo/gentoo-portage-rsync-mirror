@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-2.4.3.ebuild,v 1.1 2015/02/12 11:54:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/muffin/muffin-2.4.5.ebuild,v 1.1 2015/06/07 14:31:22 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -22,7 +22,7 @@ COMMON_DEPEND="
 	>=x11-libs/cairo-1.10:=[X]
 	x11-libs/gdk-pixbuf:2[introspection?]
 	>=x11-libs/gtk+-3.3.7:3[X,introspection?]
-	>=dev-libs/glib-2.25.10:2
+	>=dev-libs/glib-2.25.10:2[dbus]
 	>=gnome-extra/cinnamon-desktop-2.3:0=[introspection?]
 	>=gnome-base/gsettings-desktop-schemas-3.3.0[introspection?]
 	>=media-libs/clutter-1.9.10:1.0=[introspection?]
@@ -45,7 +45,7 @@ COMMON_DEPEND="
 
 	gnome-extra/zenity
 
-	introspection? ( >=dev-libs/gobject-introspection-0.9.5 )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.5:= )
 	xinerama? ( x11-libs/libXinerama )
 "
 DEPEND="${COMMON_DEPEND}

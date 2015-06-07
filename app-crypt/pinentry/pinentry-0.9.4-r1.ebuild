@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.1.ebuild,v 1.2 2015/05/05 16:24:05 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pinentry/pinentry-0.9.4-r1.ebuild,v 1.1 2015/06/07 14:39:23 k_f Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnupg/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~amd64-fbsd ~x86-fbsd ~x64-freebsd ~x86-freebsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris"
-IUSE="clipboard gtk ncurses qt4 caps static"
+IUSE="clipboard gtk ncurses qt4 caps gnome-keyring static"
 
 RDEPEND="
 	app-eselect/eselect-pinentry
@@ -27,6 +27,7 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	gtk? ( virtual/pkgconfig )
 	qt4? ( virtual/pkgconfig )
+	gnome-keyring? ( app-crypt/libsecret )
 "
 REQUIRED_USE="
 	|| ( ncurses gtk qt4 )
@@ -39,8 +40,7 @@ DOCS=( AUTHORS ChangeLog NEWS README THANKS TODO )
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-0.8.2-ncurses.patch"
-	epatch "${FILESDIR}/${P}-memleak.patch"
-	eautoreconf
+	epatch "${FILESDIR}/${P}-actually_respect_users_pm.patch"
 }
 
 src_configure() {
@@ -58,6 +58,8 @@ src_configure() {
 		$(use_enable qt4 pinentry-qt4) \
 		$(use qt4 && use_enable clipboard pinentry-qt4-clipboard) \
 		$(use_with caps libcap) \
+		$(use_enable gnome-keyring libsecret) \
+		$(use_enable gnome-keyring pinentry-gnome3) \
 		MOC="$(qt4_get_bindir)"/moc
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Math-BigInt-FastCalc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/ChangeLog,v 1.36 2014/07/26 14:02:04 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Math-BigInt-FastCalc/ChangeLog,v 1.37 2015/06/07 14:43:01 dilfridge Exp $
+
+  07 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Math-BigInt-FastCalc-0.300.0-r1.ebuild:
+  Drop keywords
 
 *Math-BigInt-FastCalc-0.300.0-r1 (26 Jul 2014)
 

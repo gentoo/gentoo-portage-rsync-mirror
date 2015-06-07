@@ -1,6 +1,12 @@
 # ChangeLog for app-office/gnucash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.291 2015/05/17 09:12:55 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.292 2015/06/07 14:52:36 pacho Exp $
+
+*gnucash-2.6.6 (07 Jun 2015)
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org> +gnucash-2.6.6.ebuild,
+  -files/gnucash-2.6.4-guile1.patch:
+  Version bump
 
   17 May 2015; Pacho Ramos <pacho@gentoo.org> -gnucash-2.6.3.ebuild,
   -gnucash-2.6.4.ebuild:

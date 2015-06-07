@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">os_virtual_interfacesv2_python_novaclient_ext</remote-id>
+    <remote-id type="github">cerberus98/os_virtual_interfacesv2_ext</remote-id>
   </upstream>
 </pkgmetadata>

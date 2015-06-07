@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">path.py</remote-id>
+    <remote-id type="github">jaraco/path.py</remote-id>
   </upstream>
 </pkgmetadata>

@@ -13,5 +13,6 @@ It also provides custom formatters, handlers and support for context specific lo
 </longdescription>
   <upstream>
     <remote-id type="pypi">oslo.log</remote-id>
+    <remote-id type="github">openstack/oslo.log</remote-id>
   </upstream>
 </pkgmetadata>

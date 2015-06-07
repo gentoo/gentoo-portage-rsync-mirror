@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/minitest
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.178 2015/05/07 05:39:35 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/minitest/ChangeLog,v 1.180 2015/06/07 14:43:43 graaff Exp $
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> minitest-5.3.3-r1.ebuild:
+  Remove accidental stable keywords.
+
+*minitest-4.7.5-r2 (07 Jun 2015)
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> minitest-4.7.5-r1.ebuild,
+  +minitest-4.7.5-r2.ebuild, minitest-5.3.3-r1.ebuild:
+  Create stable candidate.
 
 *minitest-5.6.1 (07 May 2015)
 
