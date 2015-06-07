@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.116 2015/06/02 09:27:06 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.117 2015/06/07 07:16:28 jer Exp $
+
+  07 Jun 2015; Jeroen Roovers <jer@gentoo.org> ethtool-3.18.ebuild:
+  Stable for HPPA PPC64 (bug #536740).
 
 *ethtool-4.0 (02 Jun 2015)
 

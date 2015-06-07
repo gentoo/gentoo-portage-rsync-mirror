@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr-util
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.213 2014/12/28 15:28:44 titanofold Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr-util/ChangeLog,v 1.214 2015/06/07 07:25:00 jer Exp $
+
+  07 Jun 2015; Jeroen Roovers <jer@gentoo.org> apr-util-1.5.4.ebuild:
+  Stable for HPPA (bug #551068).
 
   28 Dec 2014; Aaron W. Swenson <titanofold@gentoo.org> apr-util-1.5.2.ebuild,
   apr-util-1.5.3-r2.ebuild, apr-util-1.5.4.ebuild:

@@ -5,4 +5,7 @@
     <email>djc@gentoo.org</email>
     <name>Dirkjan Ochtman</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">OpenVPN/easy-rsa</remote-id>
+  </upstream>
 </pkgmetadata>

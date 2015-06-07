@@ -14,4 +14,7 @@
 	<longdescription lang="en">
 	MongoDB operation tools such as mongodump, mongoexport, mongorestore, bsondump...
 	</longdescription>
+	<upstream>
+		<remote-id type="github">mongodb/mongo-tools</remote-id>
+	</upstream>
 </pkgmetadata>

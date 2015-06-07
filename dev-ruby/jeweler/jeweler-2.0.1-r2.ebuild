@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-2.0.1-r2.ebuild,v 1.1 2015/06/07 06:50:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/jeweler-2.0.1-r2.ebuild,v 1.2 2015/06/07 07:09:46 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos 
 IUSE=""
 
 ruby_add_bdepend "doc? ( dev-ruby/yard )
-	test? ( dev-ruby/shoulda dev-ruby/rr dev-ruby/test_construct )"
+	test? ( dev-ruby/shoulda dev-ruby/rr dev-ruby/test_construct dev-ruby/test-unit:0 )"
 
 ruby_add_rdepend "
 	dev-ruby/rake
@@ -36,7 +36,7 @@ ruby_add_rdepend "
 	>=dev-ruby/highline-1.6.15
 	>=dev-ruby/bundler-1.0
 	dev-ruby/rdoc
-	dev-ruby/builder
+	dev-ruby/builder:*
 "
 
 all_ruby_prepare() {
@@ -44,7 +44,8 @@ all_ruby_prepare() {
 	rm Gemfile || die
 	sed -i -e '/bundler/d' -e '/Bundler.setup/d' Rakefile test/test_helper.rb features/support/env.rb || die
 
-	sed -i -e '/coverall/I s:^:#:' test/test_helper.rb || die
+	sed -i -e '/coverall/I s:^:#:' \
+		-e '1i gem "test-unit", "~> 1.0"' test/test_helper.rb || die
 
 	# Avoid a test that only passes in the git repository.
 	sed -i -e '/find the base repo/,/^  end/ s:^:#:' test/test_jeweler.rb || die

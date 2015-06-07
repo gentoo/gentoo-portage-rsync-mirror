@@ -17,5 +17,7 @@
 		decodes and logs recoverable Machine Check Exception events to the
 		kernel log on its own.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">andikleen/mcelog</remote-id>
+	</upstream>
 </pkgmetadata>
-

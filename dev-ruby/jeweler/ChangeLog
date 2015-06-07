@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/jeweler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.34 2015/06/07 06:50:29 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jeweler/ChangeLog,v 1.35 2015/06/07 07:09:46 graaff Exp $
+
+  07 Jun 2015; Hans de Graaff <graaff@gentoo.org> jeweler-2.0.1-r1.ebuild,
+  jeweler-2.0.1-r2.ebuild:
+  Use a gem-based test-unit version for consistency accross ruby versions to
+  fix the tests.
 
 *jeweler-2.0.1-r2 (07 Jun 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/mongo-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mongo-tools/ChangeLog,v 1.5 2015/05/13 08:24:58 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mongo-tools/ChangeLog,v 1.6 2015/06/07 07:19:27 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *mongo-tools-3.0.3 (13 May 2015)
 
@@ -25,4 +28,3 @@
   17 Mar 2015; Ultrabug <ultrabug@gentoo.org> +mongo-tools-3.0.1.ebuild,
   +files/mongo-tools-3.0.0-build.patch, +metadata.xml:
   app-admin/mongo-tools ebuild
-
