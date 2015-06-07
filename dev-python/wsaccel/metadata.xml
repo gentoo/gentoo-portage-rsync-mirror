@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">wsaccel</remote-id>
+    <remote-id type="github">methane/wsaccel</remote-id>
   </upstream>
 </pkgmetadata>

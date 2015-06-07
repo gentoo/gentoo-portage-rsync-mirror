@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">Whirlpool</remote-id>
+    <remote-id type="github">radiosilence/python-whirlpool</remote-id>
   </upstream>
 </pkgmetadata>

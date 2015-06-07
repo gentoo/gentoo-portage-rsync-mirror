@@ -9,5 +9,7 @@
   <longdescription lang="en">
     WebSockets support for any application/server
   </longdescription>
+  <upstream>
+    <remote-id type="github">kanaka/websockify</remote-id>
+  </upstream>
 </pkgmetadata>
-

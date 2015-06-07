@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/dracut
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.194 2015/06/04 18:46:41 aidecoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/dracut/ChangeLog,v 1.195 2015/06/07 16:39:50 aidecoe Exp $
+
+  07 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> -dracut-041-r2.ebuild,
+  +dracut-041-r3.ebuild,
+  +files/041-0005-base-dracut-lib.sh-remove-bashism.patch:
+  Remove bashism. Fix bug #541216 on behalf of Alexander Tsoy
+  <alexander@tsoy.me>.
 
   04 Jun 2015; Amadeusz Żołnowski <aidecoe@gentoo.org> dracut-041-r2.ebuild,
   +files/041-0001-Use-the-same-paths-in-dracut.sh-as-tho.patch,

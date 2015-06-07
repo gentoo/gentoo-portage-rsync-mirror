@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">zake</remote-id>
+    <remote-id type="github">yahoo/Zake</remote-id>
   </upstream>
 </pkgmetadata>

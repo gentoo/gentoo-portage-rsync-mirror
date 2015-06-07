@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">XlsxWriter</remote-id>
+    <remote-id type="github">jmcnamara/XlsxWriter</remote-id>
   </upstream>
 </pkgmetadata>

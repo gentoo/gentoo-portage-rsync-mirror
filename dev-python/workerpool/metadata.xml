@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">workerpool</remote-id>
+    <remote-id type="github">shazow/workerpool</remote-id>
   </upstream>
 </pkgmetadata>

@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>ruby</herd>
   <herd>sci-geosciences</herd>
+  <upstream>
+    <remote-id type="github">nofxx/georuby</remote-id>
+  </upstream>
 </pkgmetadata>

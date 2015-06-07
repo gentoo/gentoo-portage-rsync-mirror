@@ -15,5 +15,6 @@ avoid spawning multiple processes or threads to test your Web app.
   <upstream>
     <remote-id type="pypi">wsgi_intercept</remote-id>
     <bugs-to>https://code.google.com/p/wsgi-intercept/issues/list</bugs-to>
+    <remote-id type="github">cdent/python3-wsgi-intercept</remote-id>
   </upstream>
 </pkgmetadata>

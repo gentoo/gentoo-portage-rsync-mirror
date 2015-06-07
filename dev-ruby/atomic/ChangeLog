@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/atomic
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.17 2015/01/27 06:42:12 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/atomic/ChangeLog,v 1.18 2015/06/07 16:48:35 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *atomic-1.1.99 (27 Jan 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/aws-sdk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.24 2015/06/06 05:23:33 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/aws-sdk/ChangeLog,v 1.25 2015/06/07 16:49:24 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   06 Jun 2015; Hans de Graaff <graaff@gentoo.org> -aws-sdk-1.8.3.1.ebuild:
   Cleanup.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/activeldap
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.16 2015/03/20 10:56:56 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activeldap/ChangeLog,v 1.17 2015/06/07 16:39:46 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   20 Mar 2015; Hans de Graaff <graaff@gentoo.org> activeldap-3.2.2.ebuild:
   Add ruby21.
