@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/prompt_toolkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/prompt_toolkit/ChangeLog,v 1.6 2015/06/03 20:50:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/prompt_toolkit/ChangeLog,v 1.7 2015/06/07 12:01:15 jlec Exp $
+
+*prompt_toolkit-0.39 (07 Jun 2015)
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> +prompt_toolkit-0.39.ebuild:
+  Version Bump
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

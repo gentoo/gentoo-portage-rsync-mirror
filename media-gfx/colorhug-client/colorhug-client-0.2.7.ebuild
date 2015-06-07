@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.6.ebuild,v 1.1 2015/04/11 10:29:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/colorhug-client/colorhug-client-0.2.7.ebuild,v 1.1 2015/06/07 12:07:42 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -15,6 +15,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
+
+# Tests need valgrind, that needs glibc with debugging symbols
+RESTRICT="test"
 
 RDEPEND="
 	dev-db/sqlite:3
@@ -36,13 +39,6 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 "
 # docbook stuff needed for man pages
-
-src_prepare() {
-	# Fix .desktop
-	sed -e '/Terminal=/ d' -i data/colorhug-docs.desktop || die
-
-	gnome2_src_prepare
-}
 
 src_configure() {
 	# introspection checked but not needed by anything

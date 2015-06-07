@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.4.14.ebuild,v 1.7 2015/06/07 12:02:58 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/balsa-2.5.2.ebuild,v 1.1 2015/06/07 12:02:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,60 +13,57 @@ SRC_URI="http://pawsa.fedorapeople.org/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~ppc ~sparc x86"
-# Doesn't currently build with -gnome
-IUSE="crypt gnome +gtkspell kerberos ldap libnotify networkmanager rubrica sqlite ssl webkit xface"
+KEYWORDS="~alpha ~amd64 ~ppc ~sparc ~x86"
 
-# TODO: esmtp can be optional
+IUSE="crypt gnome gtkhtml gnome-keyring +gtkspell kerberos ldap libnotify rubrica sqlite ssl webkit xface"
+REQUIRED_USE="gtkhtml? ( !webkit )"
+
+# TODO: esmtp can be optional, do we want it?
 RDEPEND="
-	>=dev-libs/glib-2.16:2
-	>=x11-libs/gtk+-2.18:2
+	>=dev-libs/glib-2.32:2
+	>=x11-libs/gtk+-3.4.0:3
 	dev-libs/gmime:2.6
-	dev-libs/libunique:1
 	>=net-libs/libesmtp-1.0.3:=
 	net-mail/mailbase
-	media-libs/libcanberra:=[gtk]
+	media-libs/libcanberra:=[gtk3]
 	x11-themes/hicolor-icon-theme
+	x11-themes/gnome-icon-theme
 	crypt? ( >=app-crypt/gpgme-1.0:= )
-	gnome? (
-		>=gnome-base/orbit-2
-		>=gnome-base/libbonobo-2.0
-		>=gnome-base/libgnome-2.0
-		>=gnome-base/libgnomeui-2.0
-		>=gnome-base/gconf-2.0:2
-		>=gnome-base/gnome-keyring-2.20
-		>=x11-libs/gtksourceview-2.10:2.0 )
+	gnome? ( >=x11-libs/gtksourceview-3.2.0:3.0 )
+	gnome-keyring? ( app-crypt/libsecret )
+	gtkhtml? ( gnome-extra/gtkhtml:4.0 )
 	sqlite? ( >=dev-db/sqlite-2.8:= )
 	libnotify? ( >=x11-libs/libnotify-0.7:= )
-	gtkspell? (
-		app-text/gtkspell:2
-		app-text/enchant )
-	!gtkspell? ( app-text/aspell )
+	gtkspell? ( >=app-text/gtkspell-3.0.3:3 )
+	!gtkspell? ( app-text/enchant )
 	kerberos? ( app-crypt/mit-krb5 )
 	ldap? ( net-nds/openldap )
-	networkmanager? ( >=net-misc/networkmanager-0.7 )
 	rubrica? ( dev-libs/libxml2:2 )
 	ssl? ( dev-libs/openssl:= )
-	webkit? ( >=net-libs/webkit-gtk-1.5.1:2 )
+	webkit? ( net-libs/webkit-gtk:3 )
 	xface? ( >=media-libs/compface-1.5.1:= )
 "
 DEPEND="${RDEPEND}
+	app-text/yelp-tools
 	dev-util/intltool
 	virtual/pkgconfig
 	sys-devel/gettext
-	>=app-text/scrollkeeper-0.1.4
-	app-text/gnome-doc-utils
 "
 
 src_prepare() {
-	# Fix documentation
-	epatch "${FILESDIR}/${PN}-2.4.11-doc-fixes.patch"
+	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO docs/*"
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=750516
+	sed -i -e 's/@TOOLKIT_CATEGORIES@//' balsa-mailto-handler.desktop.in.in || die
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=750515
+	echo "src/balsa-print-object.c" >> po/POTFILES.in || die
+
 	gnome2_src_prepare
 }
 
 src_configure() {
 	local myconf
-	DOCS="AUTHORS ChangeLog HACKING NEWS README TODO docs/*"
 
 	if use crypt ; then
 		myconf+=" --with-gpgme=gpgme-config"
@@ -74,8 +71,12 @@ src_configure() {
 		myconf+=" --without-gpgme"
 	fi
 
-	if use webkit; then
-		myconf+=" --with-html-widget=webkit"
+	if use webkit || use gtkhtml; then
+		if use gtkhtml ; then
+			myconf+=" --with-html-widget=gtkhtml4"
+		else
+			myconf+=" --with-html-widget=webkit2"
+		fi
 	else
 		myconf+=" --with-html-widget=no"
 	fi
@@ -85,15 +86,14 @@ src_configure() {
 		--enable-gregex \
 		--enable-threads \
 		--with-gmime=2.6 \
-		--with-unique \
 		--with-canberra \
 		$(use_with gnome) \
 		$(use_with gnome gtksourceview) \
+		$(use_with gnome-keyring libsecret) \
 		$(use_with gtkspell) \
 		$(use_with kerberos gss) \
 		$(use_with ldap) \
 		$(use_with libnotify) \
-		$(use_with networkmanager nm) \
 		$(use_with rubrica) \
 		$(use_with sqlite) \
 		$(use_with ssl) \

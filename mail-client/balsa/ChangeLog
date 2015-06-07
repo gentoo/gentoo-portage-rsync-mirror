@@ -1,6 +1,14 @@
 # ChangeLog for mail-client/balsa
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.133 2014/11/13 12:58:36 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/balsa/ChangeLog,v 1.135 2015/06/07 12:02:58 pacho Exp $
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org> balsa-2.4.14.ebuild:
+  Move to testing for all but amd64/x86 arches
+
+*balsa-2.5.2 (07 Jun 2015)
+
+  07 Jun 2015; Pacho Ramos <pacho@gentoo.org> +balsa-2.5.2.ebuild, metadata.xml:
+  Version bump
 
   13 Nov 2014; Pacho Ramos <pacho@gentoo.org> -balsa-2.4.13.ebuild:
   Drop old (#508854)
