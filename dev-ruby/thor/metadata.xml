@@ -9,4 +9,7 @@
 		alternative to the Rake build tool. The syntax is Rake-like, so it
 		should be familiar to most Rake users.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">erikhuda/thor</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/slop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.36 2015/05/14 08:20:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slop/ChangeLog,v 1.37 2015/06/07 19:50:17 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   14 May 2015; Hans de Graaff <graaff@gentoo.org> -slop-2.4.4-r1.ebuild:
   Cleanup.

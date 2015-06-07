@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">python-digest</remote-id>
+    <remote-id type="bitbucket">akoha/python-digest</remote-id>
   </upstream>
 </pkgmetadata>

@@ -9,5 +9,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">sphinxcontrib-doxylink</remote-id>
+    <remote-id type="bitbucket">birkenfeld/sphinx-contrib</remote-id>
   </upstream>
 </pkgmetadata>

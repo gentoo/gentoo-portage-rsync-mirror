@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/sphinxcontrib-googleanalytics
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.7 2015/03/08 23:59:30 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sphinxcontrib-googleanalytics/ChangeLog,v 1.8 2015/06/07 19:37:00 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org>
   sphinxcontrib-googleanalytics-0.1-r1.ebuild:

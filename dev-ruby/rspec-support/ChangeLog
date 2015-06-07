@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspec-support
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-support/ChangeLog,v 1.4 2015/02/21 09:34:22 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspec-support/ChangeLog,v 1.5 2015/06/07 19:33:52 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   21 Feb 2015; Hans de Graaff <graaff@gentoo.org> rspec-support-3.2.1.ebuild:
   Add ruby22.
@@ -18,4 +21,3 @@
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> +rspec-support-3.1.2.ebuild,
   +metadata.xml:
   Initial import. New dependency for rspec:3.
-

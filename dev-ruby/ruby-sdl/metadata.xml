@@ -3,8 +3,11 @@
 <pkgmetadata>
   <herd>ruby</herd>
   <use>
-    <flag name='image'>Enable <pkg>media-libs/sdl-image</pkg> support</flag>
-    <flag name='mixer'>Enable <pkg>media-libs/sdl-mixer</pkg> support</flag>
-    <flag name='sge'>Enable sdl-sge support</flag>
+    <flag name="image">Enable <pkg>media-libs/sdl-image</pkg> support</flag>
+    <flag name="mixer">Enable <pkg>media-libs/sdl-mixer</pkg> support</flag>
+    <flag name="sge">Enable sdl-sge support</flag>
   </use>
+  <upstream>
+    <remote-id type="github">ohai/rubysdl</remote-id>
+  </upstream>
 </pkgmetadata>

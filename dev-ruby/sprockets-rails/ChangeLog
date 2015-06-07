@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/sprockets-rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/ChangeLog,v 1.14 2015/05/14 07:28:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sprockets-rails/ChangeLog,v 1.15 2015/06/07 19:52:40 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *sprockets-rails-2.3.1 (14 May 2015)
 

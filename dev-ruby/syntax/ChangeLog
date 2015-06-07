@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/syntax
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.63 2014/12/28 08:05:11 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syntax/ChangeLog,v 1.64 2015/06/07 19:55:35 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> syntax-1.2.0-r1.ebuild:
   Actually apply the patch.

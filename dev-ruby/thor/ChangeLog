@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/thor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.24 2014/12/28 08:53:21 graaff Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/thor/ChangeLog,v 1.25 2015/06/07 19:59:21 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   28 Dec 2014; Hans de Graaff <graaff@gentoo.org> -thor-0.14.6.ebuild,
   -thor-0.15.2.ebuild, -thor-0.18.1.ebuild:

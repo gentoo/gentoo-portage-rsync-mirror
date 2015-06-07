@@ -4,5 +4,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="pypi">nose-testconfig</remote-id>
+    <remote-id type="bitbucket">jnoller/nose-testconfig</remote-id>
   </upstream>
 </pkgmetadata>

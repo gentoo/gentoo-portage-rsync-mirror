@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">six</remote-id>
+    <remote-id type="bitbucket">gutworth/six</remote-id>
   </upstream>
 </pkgmetadata>

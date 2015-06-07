@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/stringex
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.24 2015/03/18 19:12:13 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/stringex/ChangeLog,v 1.25 2015/06/07 19:54:32 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   18 Mar 2015; Hans de Graaff <graaff@gentoo.org> -stringex-1.5.1.ebuild,
   -stringex-2.0.8.ebuild, -stringex-2.4.2.ebuild, -stringex-2.5.1.ebuild:

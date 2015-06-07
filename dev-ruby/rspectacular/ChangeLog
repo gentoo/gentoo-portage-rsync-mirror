@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/rspectacular
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspectacular/ChangeLog,v 1.8 2015/04/08 17:54:47 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rspectacular/ChangeLog,v 1.9 2015/06/07 19:34:11 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *rspectacular-0.62.1 (08 Apr 2015)
 

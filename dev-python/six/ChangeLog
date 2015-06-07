@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/six
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.68 2015/05/06 11:57:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/six/ChangeLog,v 1.69 2015/06/07 19:35:48 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add bitbucket to remote-id in metadata.xml
 
 *six-1.9.0-r1 (06 May 2015)
 

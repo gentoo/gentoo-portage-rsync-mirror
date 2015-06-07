@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-openid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.44 2015/05/28 10:29:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-openid/ChangeLog,v 1.45 2015/06/07 19:37:13 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   28 May 2015; Agostino Sarubbo <ago@gentoo.org> ruby-openid-2.6.0.ebuild:
   Stable for amd64, wrt bug #550614

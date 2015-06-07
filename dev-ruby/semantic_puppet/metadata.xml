@@ -9,4 +9,7 @@
 	<longdescription lang="en">
 		Library of useful tools for working with Semantic Versions and module dependencies.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">puppetlabs/semantic_puppet</remote-id>
+	</upstream>
 </pkgmetadata>
