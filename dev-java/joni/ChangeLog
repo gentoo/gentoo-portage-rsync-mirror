@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/joni
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/ChangeLog,v 1.12 2014/05/03 20:45:45 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/joni/ChangeLog,v 1.13 2015/06/07 08:32:43 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *joni-2.1.0 (03 May 2014)
 

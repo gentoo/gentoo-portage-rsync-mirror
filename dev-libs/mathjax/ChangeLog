@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/mathjax
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/ChangeLog,v 1.11 2014/11/26 05:25:16 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mathjax/ChangeLog,v 1.12 2015/06/07 08:49:43 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *mathjax-2.4 (26 Nov 2014)
 

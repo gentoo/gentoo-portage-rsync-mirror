@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>gienah@gentoo.org</email>
-	<name>Mark Wright</name>
-</maintainer>
-<longdescription lang='en'>
+  <maintainer>
+    <email>gienah@gentoo.org</email>
+    <name>Mark Wright</name>
+  </maintainer>
+  <longdescription lang="en">
   MathJax is an open-source JavaScript display engine for LaTeX and
   MathML that works in all modern browsers. It was designed with the
   goal of consolidating the recent advances in web technologies into a
@@ -17,4 +17,7 @@
   easily. One simply includes MathJax and some mathematics in a web
   page, and MathJax does the rest.
 </longdescription>
+  <upstream>
+    <remote-id type="github">mathjax/MathJax</remote-id>
+  </upstream>
 </pkgmetadata>

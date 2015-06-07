@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>patrick@gentoo.org</email>
-  <name>Patrick Lauer</name>
-</maintainer>
-<herd>sci</herd>
-<longdescription lang="en">
+  <maintainer>
+    <email>patrick@gentoo.org</email>
+    <name>Patrick Lauer</name>
+  </maintainer>
+  <herd>sci</herd>
+  <longdescription lang="en">
   Julia is a high-level, high-performance dynamic programming language for
   technical computing, with syntax that is familiar to users of other
   technical computing environments. It provides a sophisticated
@@ -18,4 +18,7 @@
   functions, and overloading them for different combinations of
   argument types (which can also be user-defined).
 </longdescription>
+  <upstream>
+    <remote-id type="github">JuliaLang/julia</remote-id>
+  </upstream>
 </pkgmetadata>

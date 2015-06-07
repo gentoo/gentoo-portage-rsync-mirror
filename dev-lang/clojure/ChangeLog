@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/clojure
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.21 2015/03/30 19:38:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clojure/ChangeLog,v 1.22 2015/06/07 08:44:05 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   30 Mar 2015; Michael Sterrett <mr_bones_@gentoo.org> clojure-1.5.1.ebuild:
   EAPI=5

@@ -8,4 +8,7 @@
 	JRobin, you will get exactly the same results and graphs. All standard
 	RRDTool operations are supported.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">OpenNMS/jrobin</remote-id>
+	</upstream>
 </pkgmetadata>
