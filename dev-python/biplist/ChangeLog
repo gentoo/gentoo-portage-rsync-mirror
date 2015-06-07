@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/biplist
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/biplist/ChangeLog,v 1.10 2015/06/06 20:04:38 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/biplist/ChangeLog,v 1.11 2015/06/07 06:48:19 idella4 Exp $
+
+*biplist-0.9 (07 Jun 2015)
+
+  07 Jun 2015; Ian Delaney <idella4@gentoo.org> +biplist-0.9.ebuild:
+  bump
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
