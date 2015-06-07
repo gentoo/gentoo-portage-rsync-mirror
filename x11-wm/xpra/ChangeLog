@@ -1,6 +1,17 @@
 # ChangeLog for x11-wm/xpra
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.118 2015/06/06 16:42:58 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/ChangeLog,v 1.120 2015/06/07 15:51:11 xmw Exp $
+
+*xpra-0.14.25 (07 Jun 2015)
+
+  07 Jun 2015; Michael Weber <xmw@gentoo.org> +xpra-0.14.25.ebuild:
+  Version bump.
+
+  07 Jun 2015; Michael Weber <xmw@gentoo.org> -files/xpra-0.7.4-prefix.patch,
+  -files/xpra-0.8.0-prefix.patch, -files/xpra-0.9.5-PIL.patch,
+  -files/xpra-0.9.5-opengl-auto.patch, -xpra-0.10.12-r1.ebuild,
+  -xpra-0.14.12-r1.ebuild, -xpra-0.14.12.ebuild, -xpra-0.9.8.ebuild:
+  Drop old versions
 
   06 Jun 2015; Mike Gilbert <floppym@gentoo.org> -xpra-0.8.8.ebuild:
   Remove old version depending on dev-python/imaging, bug 471566.

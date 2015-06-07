@@ -8,5 +8,6 @@
   <upstream>
     <remote-id type="google-code">python-sqlparse</remote-id>
     <remote-id type="pypi">python-sqlparse</remote-id>
+    <remote-id type="github">andialbrecht/sqlparse</remote-id>
   </upstream>
 </pkgmetadata>

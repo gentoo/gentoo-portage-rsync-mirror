@@ -7,4 +7,7 @@
 	<longdescription lang="en">
 This library implements webservice bindings for the Musicbrainz NGS site, also known as /ws/2.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">alastair/python-musicbrainz-ngs</remote-id>
+	</upstream>
 </pkgmetadata>

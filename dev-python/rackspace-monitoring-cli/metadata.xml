@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">rackspace-monitoring-cli</remote-id>
+    <remote-id type="github">racker/rackspace-monitoring-cli</remote-id>
   </upstream>
 </pkgmetadata>

@@ -7,5 +7,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">rdflib</remote-id>
+    <remote-id type="github">RDFLib/rdflib</remote-id>
   </upstream>
 </pkgmetadata>

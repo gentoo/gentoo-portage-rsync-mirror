@@ -14,5 +14,6 @@
 			<name>Rafael G. Martins</name>
 		</maintainer>
 		<remote-id type="pypi">pyoembed</remote-id>
+		<remote-id type="github">rafaelmartins/pyoembed</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyqtgraph
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqtgraph/ChangeLog,v 1.4 2015/01/19 15:53:32 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyqtgraph/ChangeLog,v 1.5 2015/06/07 15:33:00 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself from metadata.

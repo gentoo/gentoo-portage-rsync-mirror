@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/redis-py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.56 2015/05/05 09:03:09 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/redis-py/ChangeLog,v 1.57 2015/06/07 15:59:18 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   05 May 2015; Jeroen Roovers <jer@gentoo.org> redis-py-2.9.1.ebuild,
   redis-py-2.10.1.ebuild, redis-py-2.10.3.ebuild:

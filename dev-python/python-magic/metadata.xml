@@ -8,5 +8,6 @@
   <longdescription>Python interface to the libmagic file type identification library.</longdescription>
   <upstream>
     <remote-id type="pypi">python-magic</remote-id>
+    <remote-id type="github">ahupp/python-magic</remote-id>
   </upstream>
 </pkgmetadata>

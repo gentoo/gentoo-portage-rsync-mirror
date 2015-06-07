@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pymysql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pymysql/ChangeLog,v 1.8 2015/03/22 05:57:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pymysql/ChangeLog,v 1.9 2015/06/07 15:31:20 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   22 Mar 2015; Ian Delaney <idella4@gentoo.org> -pymysql-0.6.2.ebuild,
   -pymysql-0.6.4.ebuild:

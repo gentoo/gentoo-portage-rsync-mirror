@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">redis</remote-id>
+    <remote-id type="github">andymccurdy/redis-py</remote-id>
   </upstream>
 </pkgmetadata>

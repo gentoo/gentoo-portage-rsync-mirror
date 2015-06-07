@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">pysolr</remote-id>
+    <remote-id type="github">toastdriven/pysolr</remote-id>
   </upstream>
 </pkgmetadata>

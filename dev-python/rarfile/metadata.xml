@@ -11,5 +11,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">rarfile</remote-id>
+    <remote-id type="github">markokr/rarfile</remote-id>
   </upstream>
 </pkgmetadata>

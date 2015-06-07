@@ -9,5 +9,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">qserve</remote-id>
+    <remote-id type="github">pediapress/qserve</remote-id>
   </upstream>
 </pkgmetadata>

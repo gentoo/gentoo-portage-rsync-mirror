@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyoembed
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyoembed/ChangeLog,v 1.3 2014/08/10 21:17:17 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyoembed/ChangeLog,v 1.4 2015/06/07 15:32:12 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> pyoembed-0.1.1.ebuild,
   pyoembed-9999.ebuild:

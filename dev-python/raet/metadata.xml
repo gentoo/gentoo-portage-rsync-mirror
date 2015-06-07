@@ -8,5 +8,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">raet</remote-id>
+    <remote-id type="github">saltstack/raet</remote-id>
   </upstream>
 </pkgmetadata>

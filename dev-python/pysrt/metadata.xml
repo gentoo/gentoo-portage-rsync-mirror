@@ -7,5 +7,6 @@
   <herd>proxy-maintainers</herd>
   <upstream>
     <remote-id type="pypi">pysrt</remote-id>
+    <remote-id type="github">byroot/pysrt</remote-id>
   </upstream>
 </pkgmetadata>

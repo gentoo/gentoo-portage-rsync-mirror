@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">rackspace-novaclient</remote-id>
+    <remote-id type="github">rackerlabs/rackspace-novaclient</remote-id>
   </upstream>
 </pkgmetadata>

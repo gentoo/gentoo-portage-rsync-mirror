@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>python</herd>
-  <longdescription lang="en">
+	<herd>python</herd>
+	<longdescription lang="en">
 		Python Bindings for IPtables: Iptables is the tool that is used to manage netfilter,
 		the standard packet filtering and manipulation framework under Linux. As the iptables
 		manpage puts it: Iptables is used to set up, maintain, and inspect the tables of IPv4
@@ -15,7 +15,8 @@
 		using the iptables C libraries (libiptc, libxtables, and the iptables extensions), not
 		calling the iptables binary and parsing its output.
 	</longdescription>
-  <upstream>
-    <remote-id type="pypi">python-iptables</remote-id>
-  </upstream>
+	<upstream>
+		<remote-id type="pypi">python-iptables</remote-id>
+		<remote-id type="github">ldx/python-iptables</remote-id>
+	</upstream>
 </pkgmetadata>
