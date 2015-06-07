@@ -1,6 +1,11 @@
 # ChangeLog for perl-core/Module-Load-Conditional
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/ChangeLog,v 1.42 2014/07/10 22:41:05 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Load-Conditional/ChangeLog,v 1.43 2015/06/07 22:39:28 dilfridge Exp $
+
+  07 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -Module-Load-Conditional-0.540.0.ebuild,
+  Module-Load-Conditional-0.580.0.ebuild:
+  Remove old, drop keywords
 
   10 Jul 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Module-Load-Conditional-0.400.ebuild,

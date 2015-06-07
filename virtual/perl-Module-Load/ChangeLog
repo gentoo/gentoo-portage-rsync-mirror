@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Module-Load
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.49 2015/04/05 02:17:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Module-Load/ChangeLog,v 1.50 2015/06/07 22:34:38 dilfridge Exp $
+
+*perl-Module-Load-0.320.0-r1 (07 Jun 2015)
+
+  07 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Module-Load-0.240.0-r1.ebuild, -perl-Module-Load-0.320.0.ebuild,
+  +perl-Module-Load-0.320.0-r1.ebuild:
+  Add Perl 5.22 as provider, remove old
 
   05 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   perl-Module-Load-0.320.0.ebuild:
