@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/extras
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.28 2015/06/03 18:09:17 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/extras/ChangeLog,v 1.29 2015/06/07 13:18:04 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

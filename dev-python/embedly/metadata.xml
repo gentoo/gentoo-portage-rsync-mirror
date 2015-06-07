@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">Embedly</remote-id>
+    <remote-id type="github">embedly/embedly-python</remote-id>
   </upstream>
 </pkgmetadata>

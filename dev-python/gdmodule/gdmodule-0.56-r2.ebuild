@@ -1,8 +1,9 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/gdmodule-0.56-r2.ebuild,v 1.6 2013/09/03 21:14:16 bicatali Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gdmodule/gdmodule-0.56-r2.ebuild,v 1.7 2015/06/07 13:23:07 jlec Exp $
 
 EAPI=5
+
 PYTHON_COMPAT=( python2_7 )
 
 inherit distutils-r1 flag-o-matic
@@ -19,8 +20,8 @@ IUSE="jpeg png truetype xpm"
 RDEPEND="
 	media-libs/gd[jpeg?,png?,truetype?,xpm?]
 	media-libs/giflib
-	jpeg? ( virtual/jpeg )
-	png? ( media-libs/libpng )
+	jpeg? ( virtual/jpeg:0 )
+	png? ( media-libs/libpng:0 )
 	truetype? ( media-libs/freetype:2 )
 	xpm? ( x11-libs/libXpm )"
 DEPEND="${RDEPEND}"

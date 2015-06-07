@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">django-ldapdb</remote-id>
+    <remote-id type="github">jlaine/django-ldapdb</remote-id>
   </upstream>
 </pkgmetadata>

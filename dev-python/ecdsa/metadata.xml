@@ -16,5 +16,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">ecdsa</remote-id>
+    <remote-id type="github">warner/python-ecdsa</remote-id>
   </upstream>
 </pkgmetadata>

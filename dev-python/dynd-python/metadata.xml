@@ -7,4 +7,7 @@
   DyND-Python, a component of the Blaze project, is the Python
   exposure of the DyND dynamic multi-dimensional array library.
 </longdescription>
+  <upstream>
+    <remote-id type="github">ContinuumIO/dynd-python</remote-id>
+  </upstream>
 </pkgmetadata>

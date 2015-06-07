@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">guessit</remote-id>
+    <remote-id type="github">wackou/guessit</remote-id>
   </upstream>
 </pkgmetadata>

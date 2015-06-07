@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">django-crispy-forms</remote-id>
+    <remote-id type="github">maraujop/django-crispy-forms</remote-id>
   </upstream>
 </pkgmetadata>

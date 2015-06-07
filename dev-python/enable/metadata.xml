@@ -9,4 +9,7 @@
       event notification.
     * Kiva: A multi-platform DisplayPDF vector drawing engine.
   </longdescription>
+  <upstream>
+    <remote-id type="github">enthought/enable</remote-id>
+  </upstream>
 </pkgmetadata>

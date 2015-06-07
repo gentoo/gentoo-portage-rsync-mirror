@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">dulwich</remote-id>
+    <remote-id type="github">jelmer/dulwich</remote-id>
   </upstream>
 </pkgmetadata>

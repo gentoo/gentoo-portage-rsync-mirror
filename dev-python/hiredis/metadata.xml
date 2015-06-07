@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">hiredis</remote-id>
+    <remote-id type="github">pietern/hiredis-py</remote-id>
   </upstream>
 </pkgmetadata>

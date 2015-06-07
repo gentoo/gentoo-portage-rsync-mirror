@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">enzyme</remote-id>
+    <remote-id type="github">Diaoul/enzyme</remote-id>
   </upstream>
 </pkgmetadata>

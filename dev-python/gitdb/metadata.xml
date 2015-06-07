@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">gitdb</remote-id>
+    <remote-id type="github">gitpython-developers/gitdb</remote-id>
   </upstream>
 </pkgmetadata>

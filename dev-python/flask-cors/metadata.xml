@@ -12,5 +12,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">Flask-Cors</remote-id>
+    <remote-id type="github">wcdolphin/flask-cors</remote-id>
   </upstream>
 </pkgmetadata>

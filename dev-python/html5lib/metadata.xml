@@ -9,5 +9,6 @@
 </longdescription>
   <upstream>
     <remote-id type="pypi">html5lib</remote-id>
+    <remote-id type="github">html5lib/html5lib-python</remote-id>
   </upstream>
 </pkgmetadata>
