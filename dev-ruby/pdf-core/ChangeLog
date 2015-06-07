@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/pdf-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/ChangeLog,v 1.13 2015/03/13 06:29:51 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/pdf-core/ChangeLog,v 1.14 2015/06/07 19:00:46 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *pdf-core-0.5.1 (13 Mar 2015)
 

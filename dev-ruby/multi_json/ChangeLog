@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/multi_json
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.59 2015/05/31 10:49:02 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/multi_json/ChangeLog,v 1.60 2015/06/07 18:42:52 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   31 May 2015; Markus Meier <maekke@gentoo.org> multi_json-1.9.3.ebuild:
   arm stable, bug #542574

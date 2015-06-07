@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/org-ruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/ChangeLog,v 1.8 2015/05/20 05:31:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/org-ruby/ChangeLog,v 1.9 2015/06/07 18:56:28 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *org-ruby-0.9.12 (20 May 2015)
 
