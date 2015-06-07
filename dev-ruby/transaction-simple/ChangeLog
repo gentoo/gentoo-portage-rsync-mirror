@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/transaction-simple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.37 2015/04/14 23:18:09 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/transaction-simple/ChangeLog,v 1.38 2015/06/07 20:03:29 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   14 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
   -transaction-simple-1.4.0.2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ttfunk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.22 2015/04/28 19:07:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ttfunk/ChangeLog,v 1.23 2015/06/07 20:04:39 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   28 Apr 2015; Hans de Graaff <graaff@gentoo.org> ttfunk-1.2.1.ebuild:
   Add ruby22.

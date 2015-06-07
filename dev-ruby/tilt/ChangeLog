@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/tilt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.43 2015/04/27 13:15:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/tilt/ChangeLog,v 1.44 2015/06/07 20:01:23 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   27 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
   -files/tilt-1.3.3-yajl-test.patch, -tilt-1.3.3.ebuild:
