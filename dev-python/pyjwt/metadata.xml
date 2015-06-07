@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">PyJWT</remote-id>
+    <remote-id type="github">progrium/pyjwt</remote-id>
   </upstream>
 </pkgmetadata>

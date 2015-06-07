@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">placefinder-py</remote-id>
+    <remote-id type="github">adampresley/placefinder-py</remote-id>
   </upstream>
 </pkgmetadata>

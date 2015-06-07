@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.8.ebuild,v 1.5 2014/08/14 16:59:01 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/tpm-tools/tpm-tools-1.3.8.ebuild,v 1.6 2015/06/07 15:16:11 alonbl Exp $
 
 EAPI=4
 inherit autotools eutils flag-o-matic
@@ -29,6 +29,7 @@ src_prepare() {
 		-e '/CFLAGS/s/ -(Werror|m64)//' \
 		configure.in || die
 	epatch "${FILESDIR}/${P}-gold.patch"
+	epatch "${FILESDIR}/${P}-build.patch"
 
 	eautoreconf
 }

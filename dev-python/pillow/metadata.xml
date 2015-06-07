@@ -7,5 +7,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">Pillow</remote-id>
+    <remote-id type="github">python-imaging/Pillow</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="pypi">pydiff</remote-id>
+    <remote-id type="github">myint/pydiff</remote-id>
   </upstream>
 </pkgmetadata>

@@ -24,5 +24,7 @@
 					  tempo, time signature along with detailed track info
 					  including timbre, pitch, rhythm and loudness information.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">echonest/pyechonest</remote-id>
+	</upstream>
 </pkgmetadata>
-

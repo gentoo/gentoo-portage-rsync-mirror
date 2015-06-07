@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/plyr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/plyr/ChangeLog,v 1.7 2015/03/08 23:55:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/plyr/ChangeLog,v 1.8 2015/06/07 15:16:50 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   08 Mar 2015; Pacho Ramos <pacho@gentoo.org> plyr-1.0.6.ebuild:
   x86 stable, bug 540290

@@ -14,5 +14,6 @@ memory bloat and other "pymples" can easily be identified.
 </longdescription>
   <upstream>
     <remote-id type="pypi">Pympler</remote-id>
+    <remote-id type="github">pympler/pympler</remote-id>
   </upstream>
 </pkgmetadata>

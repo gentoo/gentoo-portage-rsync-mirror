@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.3.0-r1.ebuild,v 1.3 2013/05/14 18:14:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyface/pyface-4.3.0-r1.ebuild,v 1.4 2015/06/07 15:27:50 jlec Exp $
 
 EAPI=5
 
@@ -18,9 +18,13 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="doc examples test"
 
-RDEPEND=">=dev-python/traits-4.1[${PYTHON_USEDEP}]
-		|| ( dev-python/wxpython[${PYTHON_USEDEP}] dev-python/PyQt4 \
-			dev-python/pyside[${PYTHON_USEDEP}] )"
+RDEPEND="
+	>=dev-python/traits-4.1[${PYTHON_USEDEP}]
+	|| (
+		dev-python/wxpython:*[${PYTHON_USEDEP}]
+		dev-python/PyQt4[${PYTHON_USEDEP}]
+		dev-python/pyside[${PYTHON_USEDEP}]
+	)"
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
 	test? (

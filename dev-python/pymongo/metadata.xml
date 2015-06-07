@@ -25,5 +25,6 @@
 	</use>
 	<upstream>
 		<remote-id type="pypi">pymongo</remote-id>
+		<remote-id type="github">mongodb/mongo-python-driver</remote-id>
 	</upstream>
 </pkgmetadata>

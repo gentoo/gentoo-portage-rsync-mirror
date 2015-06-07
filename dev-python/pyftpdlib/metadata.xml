@@ -9,5 +9,6 @@
   <upstream>
     <remote-id type="google-code">pyftpdlib</remote-id>
     <remote-id type="pypi">pyftpdlib</remote-id>
+    <remote-id type="github">giampaolo/pyftpdlib</remote-id>
   </upstream>
 </pkgmetadata>

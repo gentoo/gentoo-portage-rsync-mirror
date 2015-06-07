@@ -11,5 +11,6 @@
   </longdescription>
   <upstream>
     <remote-id type="pypi">PyChef</remote-id>
+    <remote-id type="github">coderanger/pychef</remote-id>
   </upstream>
 </pkgmetadata>
