@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>emacs</herd>
-<herd>common-lisp</herd>
-<longdescription>
+  <herd>emacs</herd>
+  <herd>common-lisp</herd>
+  <longdescription>
 SLIME: The Superior Lisp Interaction Mode for Emacs.  SLIME is a
 fresh, new Emacs mode for Common Lisp development inspired by existing
 systems such Emacs Lisp and ILISP. Feature highlights include:
@@ -28,7 +28,10 @@ systems such Emacs Lisp and ILISP. Feature highlights include:
 
   * Inspector: Interactive object-inspector in an Emacs buffer.
 </longdescription>
-<use>
-  <flag name='xref'>Install xref.lisp cross-referencing tool</flag>
-</use>
+  <use>
+    <flag name="xref">Install xref.lisp cross-referencing tool</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">slime/slime</remote-id>
+  </upstream>
 </pkgmetadata>

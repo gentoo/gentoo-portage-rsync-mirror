@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnuplot-mode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.25 2014/09/19 09:28:00 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.26 2015/06/07 07:49:53 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   19 Sep 2014; Agostino Sarubbo <ago@gentoo.org> gnuplot-mode-0.7.0.ebuild:
   Stable for ppc64, wrt bug #508216

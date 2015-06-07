@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>emacs</herd>
-<longdescription>
+  <herd>emacs</herd>
+  <longdescription>
   Magit is an interface to the version control system Git, implemented as an
   extension to Emacs.
 
@@ -12,7 +12,10 @@
   support for cherry picking, reverting, merging, rebasing, and other common
   Git operations.
 </longdescription>
-<use>
-  <flag name='contrib'>Install user-contributed files</flag>
-</use>
+  <use>
+    <flag name="contrib">Install user-contributed files</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">magit/magit</remote-id>
+  </upstream>
 </pkgmetadata>

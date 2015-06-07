@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/vmware-workstation
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.261 2014/10/16 21:50:33 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.262 2015/06/07 07:55:11 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *vmware-workstation-10.0.3.1895310 (16 Oct 2014)
 

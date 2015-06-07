@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/distel
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.6 2014/02/25 23:25:00 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/distel/ChangeLog,v 1.7 2015/06/07 07:49:18 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *distel-4.0.6 (25 Feb 2014)
 
@@ -32,4 +35,3 @@
   +files/50distel-gentoo.el, +metadata.xml, +distel-3.2_p20071103.ebuild:
   initial import for bug 183482, based on work of Justin <justin-gentoo AT
   openaether DOT org>, massaged by ulm
-

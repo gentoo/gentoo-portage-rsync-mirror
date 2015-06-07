@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/icicles
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.7 2015/01/27 18:14:43 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/icicles/ChangeLog,v 1.8 2015/06/07 07:50:40 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   27 Jan 2015; Ulrich Müller <ulm@gentoo.org> icicles-2013.04.23.23400.ebuild:
   Update HOMEPAGE, bug 537928.
@@ -34,4 +37,3 @@
   +files/icicles-byte-compile-without-x.patch, +metadata.xml,
   +icicles-20071205.ebuild:
   Initial import. Ebuild contributed by me.
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.1.ebuild,v 1.1 2015/05/08 17:26:21 xarthisius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.6.1.ebuild,v 1.2 2015/06/07 07:54:35 jlec Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ else
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 fi
 
-inherit bash-completion-r1 linux-info multilib systemd udev user
+inherit bash-completion-r1 eutils linux-info multilib systemd udev user
 
 LICENSE="Apache-2.0"
 SLOT="0"

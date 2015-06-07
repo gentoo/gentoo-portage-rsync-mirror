@@ -7,4 +7,7 @@
 	<longdescription>
 		Utility to switch OpenCL implementations between various providers.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">anyc/opencl-headers</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -16,5 +16,6 @@ developers to develop input method easily.
   </use>
   <upstream>
     <remote-id type="cpe">cpe:/a:ibus_project:ibus</remote-id>
+    <remote-id type="github">ibus/ibus</remote-id>
   </upstream>
 </pkgmetadata>

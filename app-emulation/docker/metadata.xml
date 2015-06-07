@@ -41,4 +41,7 @@
 			Enables dependencies for the "lxc" execution driver.
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">docker/docker</remote-id>
+	</upstream>
 </pkgmetadata>

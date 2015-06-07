@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/lua-mode
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.56 2014/02/14 08:01:23 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lua-mode/ChangeLog,v 1.57 2015/06/07 07:51:32 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   14 Feb 2014; Ulrich Müller <ulm@gentoo.org> -lua-mode-20100617-r1.ebuild:
   Remove old.

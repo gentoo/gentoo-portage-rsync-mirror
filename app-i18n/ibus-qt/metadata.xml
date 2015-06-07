@@ -7,5 +7,6 @@ full featured and user friendly input method user interface. It also may help
 developers to develop input method easily.</longdescription>
   <upstream>
     <remote-id type="google-code">ibus</remote-id>
+    <remote-id type="github">ibus/ibus-qt</remote-id>
   </upstream>
 </pkgmetadata>

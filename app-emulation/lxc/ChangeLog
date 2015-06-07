@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.76 2015/04/23 16:31:44 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.77 2015/06/07 07:54:26 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
 *lxc-1.1.2 (23 Apr 2015)
 

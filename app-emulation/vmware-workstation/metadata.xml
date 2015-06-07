@@ -7,12 +7,15 @@
 		other operating systems in a virtual environment to run on top of Gentoo.
 	</longdescription>
 	<use>
-		<flag name='ovftool'>Install OVF tool.</flag>
-		<flag name='server'>Install VMware Workstation Server component.</flag>
-		<flag name='vix'>Install VIX. The VIX API allows you to write programs and scripts
+		<flag name="ovftool">Install OVF tool.</flag>
+		<flag name="server">Install VMware Workstation Server component.</flag>
+		<flag name="vix">Install VIX. The VIX API allows you to write programs and scripts
 		that automate virtual machine operations, and run programs or manipulate
 		files within guest operating systems.
 		</flag>
 		<flag name="vmware-tools">Install VMware Tools images</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">akhuettel/systemd-vmware</remote-id>
+	</upstream>
 </pkgmetadata>

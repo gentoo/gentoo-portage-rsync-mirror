@@ -1,11 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>calchan@gentoo.org</email>
-	<name>Denis Dupeyron</name>
-</maintainer>
-<longdescription>
+  <maintainer>
+    <email>calchan@gentoo.org</email>
+    <name>Denis Dupeyron</name>
+  </maintainer>
+  <longdescription>
 Tagaini Jisho is a free, open-source Japanese dictionary and kanji lookup tool
 that is available for Windows, MacOS X and Linux and aims at becoming your
 Japanese study assistant. It allows you to quickly search for entries and mark
@@ -17,4 +17,7 @@ listing them on screen or printing them on a small booklet.
 Tagaini Jisho also features complete stroke order animations for more than 6000
 kanji.
 </longdescription>
+  <upstream>
+    <remote-id type="github">Gnurou/tagainijisho</remote-id>
+  </upstream>
 </pkgmetadata>
