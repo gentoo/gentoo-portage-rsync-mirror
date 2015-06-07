@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-6.2.ebuild,v 1.3 2013/11/30 01:15:13 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/smartmontools-6.4.ebuild,v 1.1 2015/06/07 11:15:17 polynomial-c Exp $
 
 EAPI="4"
 
@@ -28,10 +28,11 @@ DEPEND="
 	)
 	selinux? (
 		sys-libs/libselinux
-		sec-policy/selinux-smartmon
 	)"
 RDEPEND="${DEPEND}
-	!minimal? ( virtual/mailx )"
+	!minimal? ( virtual/mailx )
+	selinux? ( sec-policy/selinux-smartmon )
+"
 
 src_prepare() {
 	if [[ ${PV} == "9999" ]] ; then
@@ -46,7 +47,7 @@ src_configure() {
 	# The build installs /etc/init.d/smartd, but we clobber it
 	# in our src_install, so no need to manually delete it.
 	econf \
-		--with-docdir="${EPREFIX}/usr/share/doc/${PF}" \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--with-initscriptdir="${EPREFIX}/etc/init.d" \
 		$(use_with caps libcap-ng) \
 		$(use_with selinux) \
@@ -59,7 +60,7 @@ src_install() {
 		doman smartctl.8
 	else
 		default
-		newinitd "${FILESDIR}"/smartd.rc smartd
+		newinitd "${FILESDIR}"/smartd-r1.rc smartd
 		newconfd "${FILESDIR}"/smartd.confd smartd
 	fi
 }

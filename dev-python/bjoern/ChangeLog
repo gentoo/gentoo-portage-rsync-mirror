@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bjoern
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bjoern/ChangeLog,v 1.7 2015/06/06 20:10:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bjoern/ChangeLog,v 1.8 2015/06/07 11:09:27 idella4 Exp $
+
+*bjoern-1.4.2 (07 Jun 2015)
+
+  07 Jun 2015; Ian Delaney <idella4@gentoo.org> +bjoern-1.4.2.ebuild:
+  bump
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

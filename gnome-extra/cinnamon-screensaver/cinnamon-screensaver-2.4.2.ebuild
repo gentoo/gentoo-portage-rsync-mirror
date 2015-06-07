@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/cinnamon-screensaver-2.4.0.ebuild,v 1.2 2015/01/20 11:59:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/cinnamon-screensaver-2.4.2.ebuild,v 1.1 2015/06/07 11:12:20 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -13,11 +13,11 @@ SRC_URI="https://github.com/linuxmint/cinnamon-screensaver/archive/${PV}.tar.gz 
 
 LICENSE="GPL-2+"
 SLOT="0"
-IUSE="debug doc pam systemd"
+IUSE="doc pam systemd"
 KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.25.6:2
+	>=dev-libs/glib-2.25.6:2[dbus]
 	>=x11-libs/gtk+-2.99.3:3
 	>=gnome-extra/cinnamon-desktop-2.4:0=
 	>=gnome-base/gsettings-desktop-schemas-0.1.7
@@ -58,9 +58,6 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	# https://github.com/linuxmint/cinnamon-screensaver/issues/80
-	sed -i -e 's/X-Cinnamon/X-Cinnamon;/' src/cinnamon-screensaver.desktop.in.in || die
-
 	epatch_user
 	eautoreconf
 	gnome2_src_prepare

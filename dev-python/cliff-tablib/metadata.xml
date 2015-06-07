@@ -4,5 +4,6 @@
   <herd>openstack</herd>
   <upstream>
     <remote-id type="pypi">cliff-tablib</remote-id>
+    <remote-id type="github">dreamhost/cliff-tablib</remote-id>
   </upstream>
 </pkgmetadata>
