@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/iobuffer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.16 2015/03/22 16:17:49 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/iobuffer/ChangeLog,v 1.17 2015/06/07 18:02:41 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   22 Mar 2015; Hans de Graaff <graaff@gentoo.org> iobuffer-1.1.2-r3.ebuild:
   Add ruby22.

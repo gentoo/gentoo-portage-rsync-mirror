@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mab/ChangeLog,v 1.9 2015/02/01 15:48:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mab/ChangeLog,v 1.10 2015/06/07 18:13:49 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   01 Feb 2015; Hans de Graaff <graaff@gentoo.org> mab-0.0.3.ebuild:
   Add ruby22.

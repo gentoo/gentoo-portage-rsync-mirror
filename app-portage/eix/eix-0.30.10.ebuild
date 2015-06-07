@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.30.10.ebuild,v 1.1 2015/06/07 16:19:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/eix-0.30.10.ebuild,v 1.2 2015/06/07 18:05:19 sping Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ PLOCALES="de ru"
 inherit bash-completion-r1 eutils l10n
 
 DESCRIPTION="Search and query ebuilds, portage incl. local settings, ext. overlays, version changes, and more"
-HOMEPAGE="http://github.com/vaeth/eix/"
+HOMEPAGE="https://github.com/vaeth/eix/"
 SRC_URI="https://github.com/vaeth/eix/releases/download/v${PV}/${P}.tar.bz2"
 
 LICENSE="GPL-2"

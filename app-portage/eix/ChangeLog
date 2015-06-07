@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/eix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.492 2015/06/07 16:19:38 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/eix/ChangeLog,v 1.493 2015/06/07 18:05:19 sping Exp $
+
+  07 Jun 2015; Sebastian Pipping <sping@gentoo.org> eix-0.30.4.ebuild,
+  eix-0.30.7.ebuild, eix-0.30.8.ebuild, eix-0.30.10.ebuild:
+  Move HOMEPAGE from http:// to https:// as suggested by upstream
 
 *eix-0.30.10 (07 Jun 2015)
 

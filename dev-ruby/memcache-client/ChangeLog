@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/memcache-client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.25 2015/04/26 16:32:30 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/memcache-client/ChangeLog,v 1.26 2015/06/07 18:25:05 jlec Exp $
+
+  07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Add github to remote-id in metadata.xml
 
   26 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -memcache-client-1.8.5.ebuild:
   Remove old.
