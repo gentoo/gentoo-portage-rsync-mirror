@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-0.9.04.ebuild,v 1.2 2015/02/04 12:37:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/otter/otter-0.9.06.ebuild,v 1.1 2015/06/07 10:01:44 jer Exp $
 
 EAPI=5
 WANT_CMAKE="always"
@@ -17,6 +17,7 @@ KEYWORDS="~amd64"
 DEPEND="
 	dev-qt/qtconcurrent:5
 	dev-qt/qtcore:5
+	dev-qt/qtdbus:5
 	dev-qt/qtgui:5
 	dev-qt/qtmultimedia:5
 	dev-qt/qtnetwork:5
@@ -29,7 +30,9 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 "
-DOCS=( CHANGELOG HACKING TODO )
+
+S=${WORKDIR}/${PN}-browser-${PV}
+DOCS=( CHANGELOG CONTRIBUTING.md TODO )
 
 src_prepare() {
 	if [[ -n ${LINGUAS} ]]; then

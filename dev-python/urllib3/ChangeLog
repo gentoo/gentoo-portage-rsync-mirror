@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/urllib3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.41 2015/06/04 10:05:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/ChangeLog,v 1.42 2015/06/07 10:03:44 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> urllib3-1.9.1.ebuild:
+  arm stable, bug #540290
 
 *urllib3-1.10.4 (04 Jun 2015)
 

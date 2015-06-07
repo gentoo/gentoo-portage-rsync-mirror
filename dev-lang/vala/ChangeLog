@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/vala
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.193 2015/03/29 10:28:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/vala/ChangeLog,v 1.194 2015/06/07 10:24:32 maekke Exp $
+
+  07 Jun 2015; Markus Meier <maekke@gentoo.org> vala-0.26.2.ebuild:
+  arm stable, bug #534012
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> vala-0.26.2.ebuild:
   Stable for HPPA (bug #534012).

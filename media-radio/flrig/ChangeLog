@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/flrig
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.42 2015/05/02 06:35:11 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/ChangeLog,v 1.43 2015/06/07 10:08:56 tomjbe Exp $
+
+  07 Jun 2015; Thomas Beierlein <tomjbe@gentoo.org> -flrig-1.3.14.ebuild,
+  -flrig-1.3.16.ebuild, -flrig-1.3.18.ebuild, flrig-1.3.19.ebuild,
+  flrig-1.3.21.ebuild, flrig-1.3.22.ebuild:
+  Drop 'nonfatal dodoc' (bug #551182). Drop old.
 
 *flrig-1.3.22 (02 May 2015)
 

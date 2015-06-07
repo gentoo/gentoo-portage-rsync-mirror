@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/flrig-1.3.22.ebuild,v 1.1 2015/05/02 06:35:11 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/flrig/flrig-1.3.22.ebuild,v 1.2 2015/06/07 10:08:56 tomjbe Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -28,5 +28,5 @@ src_prepare() {
 
 src_install() {
 	emake DESTDIR="${D}" install
-	nonfatal dodoc AUTHORS ChangeLog README
+	dodoc AUTHORS ChangeLog README
 }
