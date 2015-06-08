@@ -1,15 +1,16 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-9999.ebuild,v 1.4 2015/06/08 19:34:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150604.ebuild,v 1.1 2015/06/08 19:34:50 zmedico Exp $
 
 EAPI=5
-inherit git-r3
 
-KEYWORDS=""
+KEYWORDS="~amd64"
 DESCRIPTION="Go supplementary network libraries"
-GO_PN=golang.org/x/${PN##*-}
+MY_PN=${PN##*-}
+GO_PN=golang.org/x/${MY_PN}
 HOMEPAGE="https://godoc.org/${GO_PN}"
-EGIT_REPO_URI="https://go.googlesource.com/${PN##*-}"
+EGIT_COMMIT="dfe268fd2bb5c793f4c083803609fce9806c6f80"
+SRC_URI="https://github.com/golang/${MY_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
@@ -20,12 +21,16 @@ S="${WORKDIR}/src/${GO_PN}"
 EGIT_CHECKOUT_DIR="${S}"
 STRIP_MASK="*.a"
 
+src_unpack() {
+	default
+	mkdir -p src/${GO_PN%/*} || die
+	mv ${MY_PN}-${EGIT_COMMIT} src/${GO_PN} || die
+}
+
 src_prepare() {
 	# disable broken tests
 	sed -e 's:TestReadProppatch(:_\0:' -i webdav/xml_test.go || die
-	sed -e 's:TestPingGoogle(:_\0:' \
-		-e 's:TestNonPrivilegedPing(:_\0:' \
-		-i icmp/ping_test.go || die
+	sed -e 's:TestPingGoogle(:_\0:' -i icmp/ping_test.go || die
 }
 
 src_compile() {
