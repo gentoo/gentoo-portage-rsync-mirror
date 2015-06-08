@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.5.11.ebuild,v 1.2 2013/07/23 17:23:33 vincent Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jaffl/jaffl-0.5.11.ebuild,v 1.3 2015/06/08 12:53:18 monsieurp Exp $
 
 EAPI="5"
 
@@ -18,19 +18,19 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 
-CDEPEND="dev-java/jffi:0.4
+CDEPEND="dev-java/jffi:1.2
 	dev-java/jnr-x86asm:0
 	dev-java/asm:3"
 
-RDEPEND=">=virtual/jre-1.5
+RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
 
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	app-arch/unzip
 	${CDEPEND}
 	test? (
 		dev-java/junit:4
-		dev-java/ant-junit4:0
+		dev-java/ant-junit:0
 		dev-java/hamcrest-core:0
 	)"
 
@@ -45,9 +45,10 @@ src_unpack() {
 java_prepare() {
 	rm -vf lib/{.,junit*}/*.jar
 
-	epatch "${FILESDIR}/library-path-0.5.9.patch"
+	epatch "${FILESDIR}"/${P}-library-path.patch
+	epatch "${FILESDIR}"/${P}-GNUmakefile.patch
 
-	java-pkg_jar-from --into lib jffi-0.4
+	java-pkg_jar-from --into lib jffi-1.2
 	java-pkg_jar-from --into lib jnr-x86asm
 	java-pkg_jar-from --into lib asm-3 asm.jar asm-3.2.jar
 	java-pkg_jar-from --into lib asm-3 asm-analysis.jar asm-analysis-3.2.jar
@@ -64,9 +65,9 @@ EANT_EXTRA_ARGS="-Dreference.jffi.jar=lib/jffi.jar \
 	-D\"already.built.${S}\"=true"
 
 src_test() {
-	local paths="$(java-config -di jnr-x86asm,jffi-0.4):${S}/build"
+	local paths="$(java-config -di jnr-x86asm,jffi-1.2):${S}/build"
 
-	ANT_TASKS="ant-junit4 ant-nodeps" eant test \
+	ANT_TASKS="ant-junit ant-nodeps" eant test \
 		-Drun.jvmargs="-Djava.library.path=${paths}" \
 		-Dlibs.junit_4.classpath="$(java-pkg_getjars junit-4,hamcrest-core)" ${EANT_EXTRA_ARGS}
 }

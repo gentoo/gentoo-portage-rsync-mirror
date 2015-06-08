@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/zeromq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.68 2015/06/04 12:29:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/zeromq/ChangeLog,v 1.69 2015/06/08 12:49:28 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> zeromq-4.1.1.ebuild:
+  Stable for amd64, wrt bug #551214
 
   04 Jun 2015; Justin Lecher <jlec@gentoo.org> -zeromq-4.0.5.ebuild:
   Drop vulnerable version, bug #549182

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/builder
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.116 2015/06/07 06:20:44 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/builder/ChangeLog,v 1.117 2015/06/08 12:34:35 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> builder-3.0.4-r1.ebuild:
+  Stable for amd64, wrt bug #551414
 
 *builder-3.0.4-r2 (07 Jun 2015)
 

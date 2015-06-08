@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/klavaro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.25 2015/05/14 07:35:20 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.26 2015/06/08 12:49:48 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> klavaro-3.0.1.ebuild:
+  Stable for amd64, wrt bug #551286
 
   14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -files/klavaro-3.0.0-out-of-source.patch, -files/klavaro-3.0.0-static.patch,

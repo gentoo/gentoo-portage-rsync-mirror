@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.27 2015/06/07 06:36:55 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.28 2015/06/08 12:34:30 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> eventmachine-1.0.3-r1.ebuild:
+  Stable for amd64, wrt bug #551420
 
 *eventmachine-1.0.3-r2 (07 Jun 2015)
 

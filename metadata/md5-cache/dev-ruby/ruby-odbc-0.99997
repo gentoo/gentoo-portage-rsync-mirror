@@ -4,7 +4,7 @@ DESCRIPTION=RubyODBC - For accessing ODBC data sources from the Ruby language
 EAPI=5
 HOMEPAGE=http://www.ch-werner.de/rubyodbc/
 IUSE=elibc_FreeBSD ruby_targets_ruby19 ruby_targets_ruby20 test
-KEYWORDS=~amd64 ~ppc ~x86
+KEYWORDS=amd64 ~ppc ~x86
 LICENSE=|| ( GPL-2 Ruby )
 RDEPEND=>=dev-db/unixODBC-2.0.6 ruby_targets_ruby19? ( dev-lang/ruby:1.9 ) ruby_targets_ruby20? ( dev-lang/ruby:2.0 ) ruby_targets_ruby19? ( virtual/rubygems[ruby_targets_ruby19] ) ruby_targets_ruby20? ( virtual/rubygems[ruby_targets_ruby20] )
 REQUIRED_USE=|| ( ruby_targets_ruby19 ruby_targets_ruby20 )
@@ -12,4 +12,4 @@ RESTRICT=test
 SLOT=0
 SRC_URI=http://www.ch-werner.de/rubyodbc/ruby-odbc-0.99997.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-utils-2	4a7c80c1feba48616b58c79d977e084c	multilib	62927b3db3a589b0806255f3a002d5d3	ruby-fakegem	d4f8591e9b20b106327e9d143eb13da5	ruby-ng	a23e4bd47d827c96336af5ad0fe254cf	ruby-utils	a74e21a353442acf697b6c82e7df6df8	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=13ce31fae999dce1b91f0a25d3b1085e
+_md5_=cf0e9137ed1b5fa2b1c40a4fe62284a1

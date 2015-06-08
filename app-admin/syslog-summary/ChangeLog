@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-summary
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/ChangeLog,v 1.9 2015/06/05 11:46:39 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-summary/ChangeLog,v 1.10 2015/06/08 12:49:07 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> syslog-summary-1.14-r1.ebuild:
+  Stable for amd64, wrt bug #551302
 
   05 Jun 2015; Justin Lecher <jlec@gentoo.org> syslog-summary-1.14-r1.ebuild:
   Fix python eclass usage; drop unnecessary die

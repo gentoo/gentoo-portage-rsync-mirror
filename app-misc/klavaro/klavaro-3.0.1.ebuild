@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-3.0.1.ebuild,v 1.1 2015/01/09 02:02:49 nixphoeni Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/klavaro-3.0.1.ebuild,v 1.2 2015/06/08 12:49:48 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/project/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="+static-libs"
 
 RDEPEND="
