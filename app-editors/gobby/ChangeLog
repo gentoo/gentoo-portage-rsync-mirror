@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/gobby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.53 2015/03/29 03:57:40 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/ChangeLog,v 1.54 2015/06/08 18:03:03 pacho Exp $
+
+  08 Jun 2015; Pacho Ramos <pacho@gentoo.org> gobby-0.4.13.ebuild:
+  Move to ~ppc
 
   29 Mar 2015; Manuel Rüger <mrueg@gentoo.org> -gobby-0.4.11.ebuild,
   -gobby-0.4.8.ebuild:

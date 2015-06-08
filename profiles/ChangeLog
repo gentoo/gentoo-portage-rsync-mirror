@@ -1,10 +1,15 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10078 2015/06/08 17:48:53 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10079 2015/06/08 18:13:49 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  arch/powerpc/package.use.stable.mask:
+  Update package.use.stable.mask to try to move more gnome-mm stuff to testing
+  in less common arches
 
   08 Jun 2015; Aaron W. Swenson <titanofold@gentoo.org> updates/2Q-2015:
   Move dev-db/pygresql to dev-python/pygresql as it is a Python specifc driver.

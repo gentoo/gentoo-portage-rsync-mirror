@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libofx
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.81 2014/12/26 18:50:02 kensington Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libofx/ChangeLog,v 1.82 2015/06/08 18:14:23 pacho Exp $
+
+  08 Jun 2015; Pacho Ramos <pacho@gentoo.org> libofx-0.9.5.ebuild:
+  Move to testing in arches that don't need it stable
 
 *libofx-0.9.10 (26 Dec 2014)
 

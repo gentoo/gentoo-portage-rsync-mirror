@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.13.ebuild,v 1.5 2012/06/08 11:50:03 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gobby/gobby-0.4.13.ebuild,v 1.6 2015/06/08 18:03:03 pacho Exp $
 
 EAPI=4
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://gobby.0x539.de/"
 SRC_URI="http://releases.0x539.de/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="avahi gnome"
 
 RDEPEND="dev-cpp/glibmm:2
