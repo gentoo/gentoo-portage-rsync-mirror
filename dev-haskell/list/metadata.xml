@@ -7,6 +7,6 @@
 		With standard list operations for Lists
 	</longdescription>
 	<upstream>
-		<remote-id type="github">yairchu/generator/tree</remote-id>
+		<remote-id type="github">yairchu/generator</remote-id>
 	</upstream>
 </pkgmetadata>

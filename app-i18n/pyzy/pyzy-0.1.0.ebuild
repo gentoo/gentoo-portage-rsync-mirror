@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/pyzy/pyzy-0.1.0.ebuild,v 1.2 2014/11/15 23:20:39 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/pyzy/pyzy-0.1.0.ebuild,v 1.3 2015/06/08 15:44:47 jlec Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils python autotools
 
 PY_DATABASE=${PN}-database-1.0.0
 DESCRIPTION="The Chinese PinYin and Bopomofo conversion library"
-HOMEPAGE="https://github.com/pyzy"
+HOMEPAGE="https://github.com/pyzy/pyzy"
 SRC_URI="https://pyzy.googlecode.com/files/${P}.tar.gz
 	https://pyzy.googlecode.com/files/${PY_DATABASE}.tar.bz2"
 

@@ -15,6 +15,6 @@
     </flag>
   </use>
   <upstream>
-    <remote-id type="github">OpenSC/openct/wiki</remote-id>
+    <remote-id type="github">OpenSC/openct</remote-id>
   </upstream>
 </pkgmetadata>

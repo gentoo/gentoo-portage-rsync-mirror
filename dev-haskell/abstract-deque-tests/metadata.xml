@@ -7,6 +7,6 @@
 		that satisfies the `abstract-deque` interface.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">rrnewton/haskell-lockfree/wiki</remote-id>
+		<remote-id type="github">rrnewton/haskell-lockfree</remote-id>
 	</upstream>
 </pkgmetadata>

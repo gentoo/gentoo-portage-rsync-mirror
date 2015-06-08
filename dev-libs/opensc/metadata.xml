@@ -33,6 +33,6 @@
     </flag>
   </use>
   <upstream>
-    <remote-id type="github">OpenSC/OpenSC/wiki</remote-id>
+    <remote-id type="github">OpenSC/OpenSC</remote-id>
   </upstream>
 </pkgmetadata>

@@ -6,6 +6,6 @@
     <name>Patrick Lauer</name>
   </maintainer>
   <upstream>
-    <remote-id type="github">zdia/gorilla/wiki</remote-id>
+    <remote-id type="github">zdia/gorilla</remote-id>
   </upstream>
 </pkgmetadata>

@@ -4,6 +4,6 @@
   <herd>selinux</herd>
   <longdescription>Python module needed for audit2allow</longdescription>
   <upstream>
-    <remote-id type="github">SELinuxProject/selinux/wiki</remote-id>
+    <remote-id type="github">SELinuxProject/selinux</remote-id>
   </upstream>
 </pkgmetadata>

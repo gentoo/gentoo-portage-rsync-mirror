@@ -8,6 +8,6 @@
 		encoding to avoid any issues with characters.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">yesodweb/clientsession/tree/master</remote-id>
+		<remote-id type="github">yesodweb/clientsession</remote-id>
 	</upstream>
 </pkgmetadata>

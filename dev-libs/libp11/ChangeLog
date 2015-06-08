@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.73 2015/06/06 19:17:36 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.74 2015/06/08 15:38:45 jlec Exp $
+
+  08 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Correct remote id
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> libp11-0.2.8-r1.ebuild,
   libp11-0.2.8-r2.ebuild, libp11-0.2.8-r3.ebuild, libp11-0.2.8.ebuild:

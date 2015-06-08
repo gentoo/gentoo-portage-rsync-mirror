@@ -12,6 +12,6 @@
     </flag>
   </use>
   <upstream>
-    <remote-id type="github">opensc/libp11/wiki</remote-id>
+    <remote-id type="github">opensc/libp11</remote-id>
   </upstream>
 </pkgmetadata>

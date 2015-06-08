@@ -3,6 +3,6 @@
 <pkgmetadata>
   <herd>ml</herd>
   <upstream>
-    <remote-id type="github">yoriyuki/Camomile/wiki</remote-id>
+    <remote-id type="github">yoriyuki/Camomile</remote-id>
   </upstream>
 </pkgmetadata>

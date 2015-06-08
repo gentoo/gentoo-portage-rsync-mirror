@@ -10,6 +10,6 @@
 		package it is now deprecated.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">sebfisch/uniqueid/wikis</remote-id>
+		<remote-id type="github">sebfisch/uniqueid</remote-id>
 	</upstream>
 </pkgmetadata>

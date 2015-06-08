@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/udev-init-scripts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.121 2015/06/01 16:47:35 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev-init-scripts/ChangeLog,v 1.122 2015/06/08 15:32:54 williamh Exp $
+
+*udev-init-scripts-28 (08 Jun 2015)
+
+  08 Jun 2015; William Hubbs <williamh@gentoo.org> +udev-init-scripts-28.ebuild:
+  version bump
 
   01 Jun 2015; William Hubbs <williamh@gentoo.org>
   udev-init-scripts-9999.ebuild:

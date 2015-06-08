@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/opensc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.141 2015/06/06 19:36:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/ChangeLog,v 1.142 2015/06/08 15:37:55 jlec Exp $
+
+  08 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Correct remote id
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> opensc-0.12.2-r2.ebuild,
   opensc-0.13.0.ebuild, opensc-0.14.0.ebuild:

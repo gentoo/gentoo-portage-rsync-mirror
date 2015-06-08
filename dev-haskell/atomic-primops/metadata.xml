@@ -13,6 +13,6 @@
 		interest, specifically, compare and swap inside an array.
 	</longdescription>
 	<upstream>
-		<remote-id type="github">rrnewton/haskell-lockfree/wiki</remote-id>
+		<remote-id type="github">rrnewton/haskell-lockfree</remote-id>
 	</upstream>
 </pkgmetadata>

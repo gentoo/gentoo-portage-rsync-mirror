@@ -12,6 +12,6 @@
     <flag name="opencc">Use <pkg>app-i18n/opencc</pkg> for input</flag>
   </use>
   <upstream>
-    <remote-id type="github">pyzy</remote-id>
+    <remote-id type="github">pyzy/pyzy</remote-id>
   </upstream>
 </pkgmetadata>

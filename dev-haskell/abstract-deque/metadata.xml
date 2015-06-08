@@ -26,6 +26,6 @@
 		<flag name="usecas"> Enable the reference implementation to use hardware compare-and-swap.</flag>
 	</use>
 	<upstream>
-		<remote-id type="github">rrnewton/haskell-lockfree/wiki</remote-id>
+		<remote-id type="github">rrnewton/haskell-lockfree</remote-id>
 	</upstream>
 </pkgmetadata>
