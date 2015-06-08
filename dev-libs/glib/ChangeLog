@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/glib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.649 2015/06/07 10:16:37 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.650 2015/06/08 22:45:27 eva Exp $
+
+*glib-2.44.1 (08 Jun 2015)
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +glib-2.44.1.ebuild:
+  Version bump for Gnome 3.16.
 
   07 Jun 2015; Markus Meier <maekke@gentoo.org> glib-2.42.2.ebuild:
   arm stable, bug #534012
