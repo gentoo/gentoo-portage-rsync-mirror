@@ -1,6 +1,13 @@
 # ChangeLog for app-backup/backintime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.29 2015/06/04 18:57:25 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/ChangeLog,v 1.30 2015/06/08 10:27:57 xmw Exp $
+
+*backintime-1.0.40 (08 Jun 2015)
+*backintime-1.1.4 (08 Jun 2015)
+
+  08 Jun 2015; Michael Weber <xmw@gentoo.org> +backintime-1.0.40.ebuild,
+  +backintime-1.1.4.ebuild:
+  Version bump (thanks Christian Strahl, bug 534440).
 
   04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
   backintime-1.0.24-r2.ebuild, backintime-1.0.36-r2.ebuild:
