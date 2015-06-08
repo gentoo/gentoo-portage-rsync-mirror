@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/oslo-vmware
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-vmware/ChangeLog,v 1.5 2015/06/03 20:40:29 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-vmware/ChangeLog,v 1.6 2015/06/08 11:59:55 mrueg Exp $
+
+  08 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -oslo-vmware-0.3.ebuild:
+  Remove old.
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

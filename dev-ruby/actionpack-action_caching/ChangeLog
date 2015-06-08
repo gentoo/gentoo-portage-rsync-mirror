@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/actionpack-action_caching
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack-action_caching/ChangeLog,v 1.1 2015/06/08 11:47:23 mrueg Exp $
+
+*actionpack-action_caching-1.1.1 (08 Jun 2015)
+
+  08 Jun 2015; Manuel Rüger <mrueg@gentoo.org>
+  +actionpack-action_caching-1.1.1.ebuild, +metadata.xml:
+  Initial version.
