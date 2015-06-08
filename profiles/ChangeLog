@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10082 2015/06/08 21:20:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10083 2015/06/08 21:58:09 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> updates/2Q-2015:
+  Slot moves for phodav.
 
   08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Add mask for Gnome 3.16.
