@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-ejb-api/glassfish-ejb-api-3.2.ebuild,v 1.3 2015/04/02 18:07:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/glassfish-ejb-api/glassfish-ejb-api-3.2.ebuild,v 1.4 2015/06/08 21:30:26 monsieurp Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://dev.gentoo.org/~tomwij/files/dist/${P}.tar.xz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~x86"
 
 CDEPEND="java-virtuals/xmlrpc-api:0
 	java-virtuals/transaction-api:0"
