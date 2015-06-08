@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/haskell-src-exts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.26 2015/06/06 11:10:49 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haskell-src-exts/ChangeLog,v 1.27 2015/06/08 16:08:22 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> haskell-src-exts-1.13.5.ebuild:
+  Stable for amd64, wrt bug #550416
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

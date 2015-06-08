@@ -1,6 +1,9 @@
 # ChangeLog for sci-astronomy/pyephem
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.26 2015/04/08 18:20:00 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/ChangeLog,v 1.27 2015/06/08 16:08:06 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pyephem-3.7.5.3.ebuild:
+  Stable for amd64, wrt bug #548074
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyephem-3.7.5.1.ebuild,
   pyephem-3.7.5.2.ebuild:

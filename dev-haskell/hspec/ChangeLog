@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/hspec
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec/ChangeLog,v 1.9 2014/12/13 14:14:33 gienah Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hspec/ChangeLog,v 1.10 2015/06/08 16:07:19 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> hspec-1.8.1.1.ebuild:
+  Stable for amd64, wrt bug #550402
 
 *hspec-2.1.2 (13 Dec 2014)
 

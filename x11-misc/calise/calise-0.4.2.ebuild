@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/calise/calise-0.4.2.ebuild,v 1.2 2015/04/08 17:27:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/calise/calise-0.4.2.ebuild,v 1.3 2015/06/08 16:08:00 ago Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ SRC_URI="http://sourceforge.net/projects/${PN}/files/${PN}-beta/${PV}/${P}.tar.g
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 IUSE=""
 
 CDEPEND="${RDEPEND}
