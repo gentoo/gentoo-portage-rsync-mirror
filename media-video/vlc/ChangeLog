@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vlc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.959 2015/05/18 05:17:03 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.960 2015/06/08 18:43:38 pacho Exp $
+
+  08 Jun 2015; Pacho Ramos <pacho@gentoo.org> vlc-2.2.1.ebuild, vlc-9999.ebuild:
+  Rename 'avahi' to 'zeroconf' (#477620)
 
   18 May 2015; Ian Delaney <idella4@gentoo.org> vlc-2.2.0.ebuild,
   vlc-2.2.1.ebuild:

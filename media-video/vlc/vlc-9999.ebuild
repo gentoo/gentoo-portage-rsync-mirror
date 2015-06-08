@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.239 2015/04/24 05:48:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-9999.ebuild,v 1.240 2015/06/08 18:43:38 pacho Exp $
 
 EAPI="5"
 
@@ -40,7 +40,7 @@ else
 	KEYWORDS=""
 fi
 
-IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
+IUSE="a52 aalib alsa altivec atmo +audioqueue +avcodec
 	+avformat bidi bluray cdda cddb chromaprint dbus dc1394 debug
 	directfb directx dts dvb +dvbpsi dvd dxva2 elibc_glibc +encode faad fdk
 	fluidsynth +ffmpeg flac fontconfig +gcrypt gme gnome gnutls
@@ -52,7 +52,7 @@ IUSE="a52 aalib alsa altivec atmo +audioqueue avahi +avcodec
 	png +postproc projectm pulseaudio +qt4 qt5 rdp rtsp run-as-root samba
 	schroedinger sdl sdl-image sftp shout sid skins speex cpu_flags_x86_sse svg +swscale
 	taglib theora tremor truetype twolame udev upnp vaapi v4l vcdx vdpau
-	vlm vnc vorbis vpx wma-fixed +X x264 x265 +xcb xml xv zvbi"
+	vlm vnc vorbis vpx wma-fixed +X x264 x265 +xcb xml xv zvbi zeroconf"
 
 RDEPEND="
 		!<media-video/ffmpeg-1.2:0
@@ -63,7 +63,6 @@ RDEPEND="
 		a52? ( >=media-libs/a52dec-0.7.4-r3:0 )
 		aalib? ( media-libs/aalib:0 )
 		alsa? ( >=media-libs/alsa-lib-1.0.24:0 )
-		avahi? ( >=net-dns/avahi-0.6:0[dbus] )
 		avcodec? (
 			!libav? ( media-video/ffmpeg:0= )
 			libav? ( media-video/libav:0= )
@@ -155,7 +154,9 @@ RDEPEND="
 			!libav? ( media-video/ffmpeg:0=[vaapi] )
 			libav? ( media-video/libav:0=[vaapi] )
 		)
-		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )"
+		vcdx? ( >=dev-libs/libcdio-0.78.2:0 >=media-video/vcdimager-0.7.22:0 )
+		zeroconf? ( >=net-dns/avahi-0.6:0[dbus] )
+"
 
 # Temporarily block non-live FFMPEG versions as they break vdpau, 9999 works;
 # thus we'll have to wait for a new release there.
@@ -318,7 +319,6 @@ src_configure() {
 		$(use_enable altivec) \
 		$(use_enable atmo) \
 		$(use_enable audioqueue) \
-		$(use_enable avahi bonjour) \
 		$(use_enable avcodec) \
 		$(use_enable avformat) \
 		$(use_enable bidi fribidi) \
@@ -425,6 +425,7 @@ src_configure() {
 		$(use_enable xml libxml2) \
 		$(use_enable xv xvideo) \
 		$(use_enable x265) \
+		$(use_enable zeroconf bonjour) \
 		$(use_enable zvbi) $(use_enable !zvbi telx) \
 		--disable-asdcp \
 		--disable-coverage \

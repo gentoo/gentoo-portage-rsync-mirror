@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/musca
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.26 2015/01/19 11:03:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/musca/ChangeLog,v 1.27 2015/06/08 18:39:40 jer Exp $
+
+*musca-0.9.24_p20100226-r4 (08 Jun 2015)
+
+  08 Jun 2015; Jeroen Roovers <jer@gentoo.org>
+  +musca-0.9.24_p20100226-r4.ebuild,
+  +files/musca-0.9.24_p20100226-fix-cycle.patch,
+  +files/musca-0.9.24_p20100226-fix-pad.patch:
+  Add two more patches from Arch.
 
   19 Jan 2015; Jeroen Roovers <jer@gentoo.org>
   musca-0.9.24_p20100226-r3.ebuild:
