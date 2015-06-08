@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.59.ebuild,v 1.3 2015/06/05 09:00:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.59.ebuild,v 1.4 2015/06/08 22:28:50 monsieurp Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://apache/${PN}/tomcat-7/v${PV}/src/${MY_P}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="7"
-KEYWORDS="amd64 x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 x86 ~ppc ~ppc64 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="extra-webapps websockets"
 
 RESTRICT="test" # can we run them on a production system?
@@ -29,11 +29,11 @@ COMMON_DEP="
 	~dev-java/tomcat-servlet-api-${PV}
 	extra-webapps? ( dev-java/jakarta-jstl:0 )"
 RDEPEND="${COMMON_DEP}
-	websockets? ( >=virtual/jre-1.7 )
+	websockets? ( >=virtual/jre-1.6 )
 	!websockets? ( >=virtual/jre-1.6 )
 	!<dev-java/tomcat-native-1.1.24"
 DEPEND="${COMMON_DEP}
-	websockets? ( >=virtual/jdk-1.7 )
+	websockets? ( >=virtual/jdk-1.6 )
 	!websockets? ( >=virtual/jdk-1.6 )
 	>=dev-java/ant-core-1.8.1:0
 	test? (

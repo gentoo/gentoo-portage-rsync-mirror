@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25-r1.ebuild,v 1.10 2015/05/15 12:54:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/spice-gtk-0.25-r1.ebuild,v 1.11 2015/06/08 22:05:24 eva Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -59,7 +59,7 @@ RDEPEND="${PYTHON_DEPS}
 			>=sys-auth/polkit-0.110-r1
 			!~sys-auth/polkit-0.111 )
 		)
-	webdav? ( net-libs/phodav )"
+	webdav? ( net-libs/phodav:1.0 )"
 DEPEND="${RDEPEND}
 	dev-lang/python
 	dev-python/pyparsing

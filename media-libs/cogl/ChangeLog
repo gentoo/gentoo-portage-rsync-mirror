@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/cogl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.56 2015/03/31 17:56:31 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/cogl/ChangeLog,v 1.57 2015/06/08 22:21:49 eva Exp $
+
+*cogl-1.20.0 (08 Jun 2015)
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +cogl-1.20.0.ebuild:
+  Version bump for Gnome 3.16.
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org> cogl-1.18.2.ebuild,
   cogl-1.18.2-r1.ebuild:

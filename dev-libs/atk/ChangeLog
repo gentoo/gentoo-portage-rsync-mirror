@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/atk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.305 2015/06/07 10:26:22 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.306 2015/06/08 22:22:15 eva Exp $
+
+*atk-2.16.0 (08 Jun 2015)
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +atk-2.16.0.ebuild:
+  Version bump for Gnome 3.16.
 
   07 Jun 2015; Markus Meier <maekke@gentoo.org> atk-2.14.0.ebuild:
   arm stable, bug #534012

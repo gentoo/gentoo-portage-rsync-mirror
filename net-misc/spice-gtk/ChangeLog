@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/spice-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.96 2015/05/15 12:54:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/spice-gtk/ChangeLog,v 1.97 2015/06/08 22:05:24 eva Exp $
+
+  08 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> spice-gtk-0.25-r1.ebuild:
+  Pin phodav to 1.0 slot, bug #551460.
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> spice-gtk-0.25-r1.ebuild:
   ppc stable wrt bug #542890
