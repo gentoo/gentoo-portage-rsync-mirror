@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/xml-simple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.46 2015/02/21 05:07:46 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/xml-simple/ChangeLog,v 1.47 2015/06/08 06:34:56 jlec Exp $
+
+  08 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *xml-simple-1.1.5 (21 Feb 2015)
 

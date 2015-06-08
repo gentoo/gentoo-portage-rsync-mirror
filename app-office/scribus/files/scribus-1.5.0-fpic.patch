@@ -1,24 +1,31 @@
- CMakeLists.txt                              | 8 ++++++++
- scribus/colormgmt/CMakeLists.txt            | 2 ++
- scribus/desaxe/CMakeLists.txt               | 1 +
- scribus/fonts/CMakeLists.txt                | 1 +
- scribus/styles/CMakeLists.txt               | 2 ++
- scribus/text/CMakeLists.txt                 | 1 +
- scribus/third_party/lib2geom/CMakeLists.txt | 8 +-------
- scribus/third_party/pgf/CMakeLists.txt      | 2 ++
- scribus/third_party/prc/CMakeLists.txt      | 2 ++
- scribus/third_party/wpg/CMakeLists.txt      | 7 ++++---
- scribus/third_party/zip/CMakeLists.txt      | 2 ++
- 11 files changed, 26 insertions(+), 10 deletions(-)
+ CMakeLists.txt                              | 15 +++++++++++++++
+ scribus/colormgmt/CMakeLists.txt            |  2 ++
+ scribus/desaxe/CMakeLists.txt               |  1 +
+ scribus/fonts/CMakeLists.txt                |  1 +
+ scribus/styles/CMakeLists.txt               |  2 ++
+ scribus/text/CMakeLists.txt                 |  1 +
+ scribus/third_party/lib2geom/CMakeLists.txt |  8 +-------
+ scribus/third_party/pgf/CMakeLists.txt      |  2 ++
+ scribus/third_party/prc/CMakeLists.txt      |  2 ++
+ scribus/third_party/wpg/CMakeLists.txt      |  7 ++++---
+ scribus/third_party/zip/CMakeLists.txt      |  2 ++
+ 11 files changed, 33 insertions(+), 10 deletions(-)
 
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 29d66f3..62d145f 100644
+index 29d66f3..a92da7e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -131,6 +131,14 @@ IF (_machine_sparc64)
+@@ -131,6 +131,21 @@ IF (_machine_sparc64)
  	SET(ARCH64BIT 1)
  ENDIF (_machine_sparc64)
  
++STRING(REGEX MATCH "(hppa*)" _machine_hppa "${MACHINE}")
++IF (_machine_hppa)
++	MESSAGE(STATUS "Found target Hppa")
++	SET(ARCH_HPPA 1)
++ENDIF (_machine_hppa)
++
++
 +# We need to pass -fPIC to lib2geom on amd64, mips, mipsel, and hppa. See:
 +# http://www.gentoo.org/proj/en/base/amd64/howtos/index.xml?part=1&chap=3 and
 +# http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=559133
