@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.5 2015/05/31 10:59:31 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.3.ebuild,v 1.6 2015/06/08 07:26:04 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -24,8 +24,9 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		${RDEPEND}
 		~www-servers/tornado-3.1.1[${PYTHON_USEDEP}]
 		$(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7 pypy)
-		dev-python/nose[${PYTHON_USEDEP}]
-	)"
+		dev-python/nose[${PYTHON_USEDEP}] )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	"
 
 python_prepare_all() {
 	# Replace bundled copy of dev-python/six

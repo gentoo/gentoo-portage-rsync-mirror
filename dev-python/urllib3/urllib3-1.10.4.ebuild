@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.4.ebuild,v 1.1 2015/06/04 10:05:57 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/urllib3/urllib3-1.10.4.ebuild,v 1.2 2015/06/08 07:26:04 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -24,8 +24,10 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 		${RDEPEND}
 		>=www-servers/tornado-4.1[${PYTHON_USEDEP}]
 		dev-python/mock[${PYTHON_USEDEP}]
-		dev-python/nose[${PYTHON_USEDEP}]
-	)"
+		dev-python/nose[${PYTHON_USEDEP}] )
+	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
+	"
+
 # Testsuite written requiring mock to be installed under all Cpythons
 
 python_prepare_all() {
