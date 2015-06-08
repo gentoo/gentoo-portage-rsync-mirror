@@ -1,6 +1,11 @@
 # ChangeLog for dev-ml/ocaml-re
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-re/ChangeLog,v 1.8 2015/06/06 19:46:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-re/ChangeLog,v 1.9 2015/06/08 08:22:41 aballier Exp $
+
+*ocaml-re-1.4.1 (08 Jun 2015)
+
+  08 Jun 2015; Alexis Ballier <aballier@gentoo.org> +ocaml-re-1.4.1.ebuild:
+  version bump
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
