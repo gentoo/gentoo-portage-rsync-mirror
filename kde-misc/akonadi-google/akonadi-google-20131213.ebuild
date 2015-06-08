@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/akonadi-google-20131213.ebuild,v 1.3 2013/12/30 11:13:38 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/akonadi-google/akonadi-google-20131213.ebuild,v 1.4 2015/06/08 20:34:12 johu Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ DEPEND="
 	$(add_kdebase_dep kdepimlibs 'semantic-desktop(+)')
 	dev-libs/libxslt
 	dev-libs/qjson
-	>=net-libs/libkgapi-2
+	>=net-libs/libkgapi-2:4
 	!>=kde-base/kdepim-runtime-4.8.50
 "
 RDEPEND=${DEPEND}

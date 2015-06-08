@@ -1,6 +1,15 @@
 # ChangeLog for virtual/perl-Parse-CPAN-Meta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Parse-CPAN-Meta/ChangeLog,v 1.67 2015/04/04 23:48:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Parse-CPAN-Meta/ChangeLog,v 1.68 2015/06/08 20:41:02 dilfridge Exp $
+
+*perl-Parse-CPAN-Meta-1.441.400-r1 (08 Jun 2015)
+
+  08 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Parse-CPAN-Meta-1.440.400-r1.ebuild,
+  -perl-Parse-CPAN-Meta-1.440.900.ebuild,
+  -perl-Parse-CPAN-Meta-1.441.400.ebuild,
+  +perl-Parse-CPAN-Meta-1.441.400-r1.ebuild:
+  Add Perl 5.22 as provider, remove old
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   perl-Parse-CPAN-Meta-1.440.400-r1.ebuild,

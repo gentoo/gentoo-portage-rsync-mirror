@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Perl-OSType
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.23 2014/11/08 16:29:23 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Perl-OSType/ChangeLog,v 1.24 2015/06/08 20:46:57 dilfridge Exp $
+
+  08 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Perl-OSType-1.3.0.ebuild:
+  Drop keywords
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Perl-OSType-1.2.0-r1.ebuild:

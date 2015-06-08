@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-jstl-compat/tomcat-jstl-compat-1.2.5.ebuild,v 1.1 2015/06/03 07:53:38 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tomcat-jstl-compat/tomcat-jstl-compat-1.2.5.ebuild,v 1.2 2015/06/08 21:00:35 monsieurp Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc source"
@@ -20,9 +20,9 @@ SLOT="1.2.5"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-CDEPEND="dev-java/tomcat-jstl-impl:1.2.5
+CDEPEND="java-virtuals/servlet-api:3.0
 	dev-java/tomcat-jstl-spec:1.2.5
-	dev-java/tomcat-servlet-api:3.1"
+	dev-java/tomcat-jstl-impl:1.2.5"
 RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
 DEPEND=">=virtual/jdk-1.6
@@ -35,7 +35,7 @@ DEPEND=">=virtual/jdk-1.6
 S="${WORKDIR}/${MY_P}"
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
-EANT_GENTOO_CLASSPATH="tomcat-servlet-api-3.1,tomcat-jstl-spec-1.2.5,tomcat-jstl-impl-1.2.5"
+EANT_GENTOO_CLASSPATH="servlet-api-3.0,tomcat-jstl-spec-1.2.5,tomcat-jstl-impl-1.2.5"
 EANT_BUILD_TARGET="package"
 EANT_BUILD_XML="compat/build.xml"
 
