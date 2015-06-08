@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Net-Ping
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Net-Ping/ChangeLog,v 1.3 2014/11/08 16:24:24 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Net-Ping/ChangeLog,v 1.4 2015/06/08 20:21:14 dilfridge Exp $
+
+  08 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Net-Ping-2.41-r1.ebuild:
+  Drop keywords
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Net-Ping-2.36-r1.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/blogilo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.197 2015/05/15 16:30:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/ChangeLog,v 1.198 2015/06/08 20:30:51 johu Exp $
+
+  08 Jun 2015; Johannes Huber <johu@gentoo.org> blogilo-4.14.3.ebuild,
+  blogilo-4.14.6.ebuild, blogilo-4.14.8.ebuild:
+  Pin net-libs/libkgapi to slot 4.
 
 *blogilo-4.14.8 (15 May 2015)
 

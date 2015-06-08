@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Net-Ping
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Net-Ping/ChangeLog,v 1.18 2015/02/18 08:38:09 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Net-Ping/ChangeLog,v 1.19 2015/06/08 20:21:24 dilfridge Exp $
+
+*perl-Net-Ping-2.430.0-r1 (08 Jun 2015)
+
+  08 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Net-Ping-2.41-r1.ebuild, -perl-Net-Ping-2.430.0.ebuild,
+  +perl-Net-Ping-2.430.0-r1.ebuild:
+  Add Perl 5.22 as provider, remove old
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Net-Ping-2.430.0.ebuild:
   Stable for alpha, wrt bug #536790

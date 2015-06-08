@@ -1,7 +1,0 @@
-DEFINED_PHASES=-
-DESCRIPTION=Virtual for Net-Ping
-EAPI=5
-KEYWORDS=alpha amd64 hppa ia64 ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~x86-macos
-RDEPEND=|| ( =dev-lang/perl-5.18* ~perl-core/Net-Ping-2.41 ) !<perl-core/Net-Ping-2.41 !>perl-core/Net-Ping-2.41-r999
-SLOT=0
-_md5_=f454fa1fd064cefc395205edcdc3cf9f

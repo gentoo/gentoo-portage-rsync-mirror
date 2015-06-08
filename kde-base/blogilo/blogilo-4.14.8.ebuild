@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/blogilo-4.14.8.ebuild,v 1.1 2015/05/15 16:30:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/blogilo/blogilo-4.14.8.ebuild,v 1.2 2015/06/08 20:30:51 johu Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="debug"
 DEPEND="
 	$(add_kdebase_dep kdepim-common-libs)
 	$(add_kdebase_dep kdepimlibs)
-	>=net-libs/libkgapi-2.2.0
+	>=net-libs/libkgapi-2.2.0:4
 "
 RDEPEND="${DEPEND}"
 
