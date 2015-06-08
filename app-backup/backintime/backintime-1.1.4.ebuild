@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.1.4.ebuild,v 1.1 2015/06/08 10:27:57 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/backintime/backintime-1.1.4.ebuild,v 1.2 2015/06/08 13:40:28 mrueg Exp $
 
 EAPI=5
 
@@ -71,6 +71,6 @@ src_install() {
 		cd "${S}"/qt4 || die
 		emake DESTDIR="${D}" install
 	fi
-	
+
 	python_optimize "${D}"
 }
