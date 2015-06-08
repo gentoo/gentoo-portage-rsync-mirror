@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/kmod
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.199 2015/06/06 19:37:09 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kmod/ChangeLog,v 1.200 2015/06/08 03:39:57 vapier Exp $
+
+  08 Jun 2015; Mike Frysinger <vapier@gentoo.org> kmod-20.ebuild,
+  kmod-9999.ebuild:
+  Mark arm64/m68k/s390/sh stable.
 
   06 Jun 2015; William Hubbs <williamh@gentoo.org>
   -files/kmod-15-dynamic-kmod.patch,
