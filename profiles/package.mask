@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16582 2015/06/07 22:38:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16583 2015/06/08 07:33:00 grobian Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,10 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Fabian Groffen <grobian@gentoo.org> (08 Jun 2015)
+# Release candidates for 4.86, feel free to test
+=mail-mta/exim-4.86_rc1
 
 # Andreas K. Huettel <dilfridge@gentoo.org> (04 Jun 2015)
 # Perl 5.22 version bump in progress. Mask until everything is finishehd.
