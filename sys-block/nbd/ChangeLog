@@ -1,6 +1,9 @@
 # ChangeLog for sys-block/nbd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.97 2015/06/08 05:14:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/nbd/ChangeLog,v 1.98 2015/06/08 10:44:29 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> nbd-3.11.ebuild:
+  Stable for amd64, wrt bug #550996
 
   08 Jun 2015; Jeroen Roovers <jer@gentoo.org> nbd-3.11.ebuild:
   Stable for HPPA too.

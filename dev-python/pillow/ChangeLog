@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pillow
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.56 2015/06/07 15:15:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/ChangeLog,v 1.57 2015/06/08 10:44:35 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pillow-2.8.1.ebuild:
+  Stable for amd64, wrt bug #534748
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
