@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pygresql/pygresql-4.1.1-r2.ebuild,v 1.2 2015/04/08 18:45:26 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygresql/pygresql-4.1.1-r2.ebuild,v 1.1 2015/06/08 17:46:15 titanofold Exp $
 
 EAPI=5
 

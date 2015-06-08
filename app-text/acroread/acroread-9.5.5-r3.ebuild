@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r3.ebuild,v 1.1 2015/05/09 12:32:16 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r3.ebuild,v 1.2 2015/06/08 17:41:59 pacho Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ SRC_URI="http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/${PV}/enu/AdbeRdr
 HOMEPAGE="http://www.adobe.com/products/reader/"
 
 LICENSE="Adobe"
-KEYWORDS="-* ~amd64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="-* amd64 x86 ~amd64-linux ~x86-linux"
 SLOT="0"
 IUSE="html ldap nsplugin"
 # asian fonts from separate package:
