@@ -1,6 +1,9 @@
 # ChangeLog for kde-misc/tellico
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.135 2015/06/04 18:57:32 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/tellico/ChangeLog,v 1.136 2015/06/08 14:10:03 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> tellico-2.3.10.ebuild:
+  Stable for amd64, wrt bug #550750
 
   04 Jun 2015; Michael Palimaka <kensington@gentoo.org> tellico-2.3.10.ebuild,
   tellico-2.3.9.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/android-studio
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.16 2015/06/01 15:30:53 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-studio/ChangeLog,v 1.17 2015/06/08 14:08:48 ago Exp $
+
+  08 Jun 2015; Agostino Sarubbo <ago@gentoo.org>
+  android-studio-1.2.0.12.141.1890965.ebuild:
+  Stable for amd64, wrt bug #550918
 
 *android-studio-1.2.1.1.141.1903250 (01 Jun 2015)
 

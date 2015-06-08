@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.9.ebuild,v 1.1 2014/05/28 19:07:34 ssuominen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gmtk/gmtk-1.0.9.ebuild,v 1.2 2015/06/08 14:09:29 ago Exp $
 
 EAPI=5
 inherit eutils
@@ -11,7 +11,7 @@ SRC_URI="http://${PN}.googlecode.com/svn/packages/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~alpha amd64 ~ppc ~ppc64 ~x86"
 IUSE="alsa +dconf pulseaudio"
 
 COMMON_DEPEND=">=dev-libs/glib-2.30

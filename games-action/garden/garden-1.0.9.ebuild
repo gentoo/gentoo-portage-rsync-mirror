@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/garden/garden-1.0.9.ebuild,v 1.1 2015/05/04 21:32:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/garden/garden-1.0.9.ebuild,v 1.2 2015/06/08 14:09:08 ago Exp $
 
 EAPI=5
 inherit eutils gnome2-utils autotools games
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND="<media-libs/allegro-5"
