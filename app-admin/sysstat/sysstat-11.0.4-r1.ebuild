@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-11.1.4.ebuild,v 1.1 2015/04/14 04:49:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/sysstat-11.0.4-r1.ebuild,v 1.1 2015/06/08 04:45:43 jer Exp $
 
 EAPI=5
 inherit eutils multilib systemd toolchain-funcs
@@ -11,13 +11,12 @@ SRC_URI="${HOMEPAGE}${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
-IUSE="cron debug +doc isag nls lm_sensors selinux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+IUSE="debug +doc isag nls lm_sensors selinux"
 
 CDEPEND="
-	cron? ( sys-process/cronbase )
 	isag? (
-		dev-lang/tk
+		dev-lang/tk:*
 		dev-vcs/rcs
 		sci-visualization/gnuplot
 	)
@@ -45,7 +44,9 @@ src_prepare() {
 			fi
 		done
 	fi
-	epatch "${FILESDIR}"/${PN}-10.0.4-flags.patch
+	epatch \
+		"${FILESDIR}"/${PN}-10.0.4-flags.patch \
+		"${FILESDIR}"/${PN}-11.0.4-cron.patch
 }
 
 src_configure() {
@@ -56,12 +57,12 @@ src_configure() {
 		econf \
 			--enable-copy-only \
 			--with-systemdsystemunitdir=$(systemd_get_unitdir) \
-			$(use_enable cron install-cron) \
 			$(use_enable debug debuginfo) \
 			$(use_enable doc documentation ) \
 			$(use_enable isag install-isag) \
 			$(use_enable lm_sensors sensors) \
-			$(use_enable nls)
+			$(use_enable nls) \
+			--enable-install-cron
 }
 
 src_compile() {
@@ -70,8 +71,6 @@ src_compile() {
 
 src_install() {
 	keepdir /var/log/sa
-
-	use cron && dodir /etc/cron.d
 
 	emake \
 		DESTDIR="${D}" \

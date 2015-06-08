@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/sysstat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.289 2015/04/14 04:49:29 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysstat/ChangeLog,v 1.290 2015/06/08 04:45:43 jer Exp $
+
+*sysstat-11.1.4-r1 (08 Jun 2015)
+*sysstat-11.0.4-r1 (08 Jun 2015)
+
+  08 Jun 2015; Jeroen Roovers <jer@gentoo.org> -sysstat-11.0.4.ebuild,
+  +sysstat-11.0.4-r1.ebuild, -sysstat-11.1.4.ebuild, +sysstat-11.1.4-r1.ebuild,
+  +files/sysstat-11.0.4-cron.patch:
+  Always install cron file (bug #547846).
 
 *sysstat-11.1.4 (14 Apr 2015)
 *sysstat-11.0.4 (14 Apr 2015)
