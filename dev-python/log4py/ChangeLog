@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/log4py
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.25 2015/06/02 05:11:09 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/log4py/ChangeLog,v 1.26 2015/06/08 12:04:29 mrueg Exp $
+
+  08 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -log4py-1.3.ebuild:
+  Remove old.
 
   02 Jun 2015; Jack Morgan <jmorgan@gentoo.org> log4py-1.3-r1.ebuild:
   sparc stable wrt bug #540290

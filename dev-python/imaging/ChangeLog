@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/imaging
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.106 2015/06/07 09:31:36 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.107 2015/06/08 12:03:57 mrueg Exp $
+
+  08 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -imaging-1.1.7-r1.ebuild,
+  -imaging-1.1.7-r2.ebuild:
+  Remove old.
 
   07 Jun 2015; Markus Meier <maekke@gentoo.org> imaging-1.1.7-r5.ebuild:
   arm stable, bug #540290

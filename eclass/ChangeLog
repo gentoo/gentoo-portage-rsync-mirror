@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1643 2015/06/07 19:22:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1644 2015/06/08 12:27:32 mrueg Exp $
+
+  08 Jun 2015; Manuel Rüger <mrueg@gentoo.org> kde5-functions.eclass:
+  Sync with kde overlay. Raise minimal Plasma version and minimal KDE
+  Frameworks version.
 
   07 Jun 2015; Pacho Ramos <pacho@gentoo.org> apache-2.eclass:
   mod_macro is now provided by apache itself (#477702)

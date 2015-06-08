@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/iconvcodec
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.17 2015/04/14 12:49:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/iconvcodec/ChangeLog,v 1.18 2015/06/08 12:02:54 mrueg Exp $
+
+  08 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -iconvcodec-1.1.2.ebuild:
+  Remove old.
 
   14 Apr 2015; Agostino Sarubbo <ago@gentoo.org> iconvcodec-1.1.2-r1.ebuild:
   Stable for ia64, wrt bug #540290
