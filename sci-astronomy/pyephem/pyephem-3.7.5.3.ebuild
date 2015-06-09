@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.5.3.ebuild,v 1.4 2015/06/08 16:08:06 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-astronomy/pyephem/pyephem-3.7.5.3.ebuild,v 1.5 2015/06/09 07:05:06 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="doc test"
 
 DEPEND="

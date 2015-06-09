@@ -1,6 +1,10 @@
 # ChangeLog for sci-physics/cernlib-montecarlo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.23 2015/05/28 10:29:36 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-physics/cernlib-montecarlo/ChangeLog,v 1.24 2015/06/09 07:20:54 ago Exp $
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org>
+  cernlib-montecarlo-2006-r3.ebuild:
+  Stable for x86, wrt bug #550568
 
   28 May 2015; Agostino Sarubbo <ago@gentoo.org>
   cernlib-montecarlo-2006-r3.ebuild:

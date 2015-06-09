@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/apr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.231 2015/06/08 14:08:54 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/ChangeLog,v 1.232 2015/06/09 07:23:38 ago Exp $
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> apr-1.5.2.ebuild:
+  Stable for x86, wrt bug #551068
 
   08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> apr-1.5.2.ebuild:
   Stable for amd64, wrt bug #551068

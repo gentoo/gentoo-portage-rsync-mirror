@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-9.45.ebuild,v 1.5 2015/06/08 05:09:56 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/hdparm-9.45.ebuild,v 1.6 2015/06/09 07:06:05 ago Exp $
 
 EAPI="4"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/hdparm/${P}.tar.gz"
 
 LICENSE="BSD GPL-2" # GPL-2 only
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~arm-linux ~x86-linux"
+KEYWORDS="~alpha amd64 arm hppa ~ia64 ~m68k ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-linux ~arm-linux ~x86-linux"
 IUSE="static"
 
 src_prepare() {

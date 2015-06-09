@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/m2crypto
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.100 2015/06/08 16:07:34 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/m2crypto/ChangeLog,v 1.101 2015/06/09 07:17:23 ago Exp $
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> m2crypto-0.22.3-r4.ebuild:
+  Stable for x86, wrt bug #545606
 
   08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> m2crypto-0.22.3-r4.ebuild:
   Stable for amd64, wrt bug #545606

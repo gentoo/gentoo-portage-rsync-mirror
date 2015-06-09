@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/taglib-extras
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.16 2015/06/08 14:09:51 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib-extras/ChangeLog,v 1.17 2015/06/09 07:12:50 ago Exp $
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> taglib-extras-1.0.1-r1.ebuild:
+  Stable for x86, wrt bug #550748
 
   08 Jun 2015; Agostino Sarubbo <ago@gentoo.org> taglib-extras-1.0.1-r1.ebuild:
   Stable for amd64, wrt bug #550748

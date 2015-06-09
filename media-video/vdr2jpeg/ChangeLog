@@ -1,6 +1,9 @@
 # ChangeLog for media-video/vdr2jpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.33 2015/06/05 16:32:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr2jpeg/ChangeLog,v 1.34 2015/06/09 07:11:42 ago Exp $
+
+  09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> vdr2jpeg-0.2.0.ebuild:
+  Stable for x86, wrt bug #549056
 
   05 Jun 2015; Pacho Ramos <pacho@gentoo.org> vdr2jpeg-0.2.0.ebuild:
   amd64 stable, bug #549056

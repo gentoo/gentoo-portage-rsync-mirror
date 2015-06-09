@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.2-r1.ebuild,v 1.2 2015/06/08 16:08:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/ssh-multiadd/ssh-multiadd-1.3.2-r1.ebuild,v 1.3 2015/06/09 07:12:01 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://code.fluffytapeworm.com/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="X"
 
 DEPEND=""
