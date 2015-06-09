@@ -9,4 +9,7 @@
 		configurable logfile timestamps, and a configurable prefix to log
 		messages.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">dclog</remote-id>
+	</upstream>
 </pkgmetadata>

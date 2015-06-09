@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.26 2015/06/02 15:37:10 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/go/go-9999.ebuild,v 1.27 2015/06/09 14:06:27 williamh Exp $
 
 EAPI=5
 
@@ -26,6 +26,11 @@ IUSE=""
 
 DEPEND=">=dev-lang/go-bootstrap-1.4.1"
 RDEPEND=""
+
+# These test data objects have writable/executable stacks.
+QA_EXECSTACK="
+	usr/lib/go/src/debug/elf/testdata/go-relocation-test-gcc482-aarch64.obj
+	usr/lib/go/src/debug/elf/testdata/gcc-amd64-openbsd-debug-with-rela.obj"
 
 # The tools in /usr/lib/go should not cause the multilib-strict check to fail.
 QA_MULTILIB_PATHS="usr/lib/go/pkg/tool/.*/.*"

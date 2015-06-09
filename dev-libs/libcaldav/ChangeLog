@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libcaldav
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcaldav/ChangeLog,v 1.4 2012/09/11 10:46:17 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcaldav/ChangeLog,v 1.5 2015/06/09 14:19:43 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   11 Sep 2012; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Drop maintainership
@@ -18,4 +21,3 @@
   08 Nov 2010; Andreas K. Huettel <dilfridge@gentoo.org>
   +libcaldav-0.6.2.ebuild, +metadata.xml:
   New library
-

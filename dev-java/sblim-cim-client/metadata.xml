@@ -11,5 +11,7 @@
 		An implementation of a WBEM services client that includes an IETF RFC
 		2614 compliant SLP client for CIM service discovery.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">sblim</remote-id>
+	</upstream>
 </pkgmetadata>
-

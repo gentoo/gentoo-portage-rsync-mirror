@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/judy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.39 2015/01/22 18:43:58 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/judy/ChangeLog,v 1.40 2015/06/09 14:18:55 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   22 Jan 2015; Markus Meier <maekke@gentoo.org> judy-1.0.5.ebuild:
   arm stable, bug #525296

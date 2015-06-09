@@ -10,4 +10,7 @@ GTX is a small collection of convenience functions intended to enhance the GLib
 testing framework. With specific emphasis on easing the pain of writing test
 cases for asynchronous interactions.
 </longdescription>
+	<upstream>
+		<remote-id type="launchpad">gtx</remote-id>
+	</upstream>
 </pkgmetadata>

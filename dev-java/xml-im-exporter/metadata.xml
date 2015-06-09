@@ -7,4 +7,7 @@
 		straight forward process of importing and exporting XML from
 		and to your Java classes.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">xml-im-exporter</remote-id>
+	</upstream>
 </pkgmetadata>

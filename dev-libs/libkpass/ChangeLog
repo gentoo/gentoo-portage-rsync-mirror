@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libkpass
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/ChangeLog,v 1.7 2013/10/23 14:09:45 joker Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libkpass/ChangeLog,v 1.8 2015/06/09 14:30:56 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   23 Oct 2013; Christian Birchinger <joker@gentoo.org> libkpass-6.ebuild:
   Change dependency from openssl to nettle

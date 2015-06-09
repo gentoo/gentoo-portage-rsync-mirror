@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/asyncresolv
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/ChangeLog,v 1.7 2009/03/09 20:16:45 halcy0n Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/asyncresolv/ChangeLog,v 1.8 2015/06/09 14:11:42 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 Mar 2009; Mark Loeser <halcy0n@gentoo.org> asyncresolv-0.0.3.ebuild:
   Remove -Werror, thanks to Diego E. 'Flameeyes' Pettenò <flameeyes AT
@@ -25,4 +28,3 @@
 
   14 Jul 2004; Jared Hudson <jhhudso@gentoo.org> +asyncresolv-0.0.3.ebuild:
   Initial import.
-

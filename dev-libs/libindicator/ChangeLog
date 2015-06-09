@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libindicator
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.17 2015/05/07 18:32:21 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libindicator/ChangeLog,v 1.18 2015/06/09 14:30:44 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *libindicator-12.10.1-r301 (07 May 2015)
 *libindicator-12.10.1-r201 (07 May 2015)

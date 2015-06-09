@@ -23,4 +23,7 @@ trampoline
 callback
 - closures with variable arguments as first-class C functions (a reentrant combination of vacall and trampoline) 
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">clisp</remote-id>
+	</upstream>
 </pkgmetadata>
