@@ -1,10 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnome-dictionary/gnome-dictionary-3.10.0.ebuild,v 1.5 2014/03/09 11:53:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gnome-dictionary/gnome-dictionary-3.16.2.ebuild,v 1.1 2015/06/09 10:03:46 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
-GNOME2_LA_PUNT="yes"
 
 inherit gnome2
 
@@ -12,15 +11,16 @@ DESCRIPTION="Dictionary utility for GNOME"
 HOMEPAGE="https://live.gnome.org/GnomeUtils"
 
 LICENSE="GPL-2+ LGPL-2.1+ FDL-1.1+"
-SLOT="0/6" # subslot = suffix of libgdict-1.0.so
-IUSE="ipv6"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+SLOT="0/8" # subslot = suffix of libgdict-1.0.so
+IUSE="+introspection ipv6"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 
 COMMON_DEPEND="
-	>=dev-libs/glib-2.28:2
+	>=dev-libs/glib-2.39:2
 	x11-libs/cairo:=
-	>=x11-libs/gtk+-3:3
+	>=x11-libs/gtk+-3.14:3
 	x11-libs/pango
+	introspection? ( >=dev-libs/gobject-introspection-1.42 )
 "
 RDEPEND="${COMMON_DEPEND}
 	gnome-base/gsettings-desktop-schemas
@@ -36,6 +36,7 @@ DEPEND="${COMMON_DEPEND}
 
 src_configure() {
 	gnome2_src_configure \
+		$(use_enable introspection) \
 		$(use_enable ipv6) \
 		ITSTOOL=$(type -P true)
 }

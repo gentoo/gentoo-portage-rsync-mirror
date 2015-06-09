@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1644 2015/06/08 12:27:32 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1645 2015/06/09 10:18:38 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> gnome2.eclass,
+  vala.eclass:
+  Add support for newer vala slot.
 
   08 Jun 2015; Manuel Rüger <mrueg@gentoo.org> kde5-functions.eclass:
   Sync with kde overlay. Raise minimal Plasma version and minimal KDE

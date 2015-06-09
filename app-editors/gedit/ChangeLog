@@ -1,6 +1,15 @@
 # ChangeLog for app-editors/gedit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.382 2015/03/15 13:14:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/ChangeLog,v 1.384 2015/06/09 10:11:03 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> metadata.xml:
+  Clean up unused description.
+
+*gedit-3.16.2 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -gedit-3.12.2-r1.ebuild,
+  -gedit-3.14.2.ebuild, +gedit-3.16.2.ebuild:
+  Version bump for Gnome 3.16. Clean up old revisions.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gedit-3.14.3.ebuild:
   x86 stable, bug 534012

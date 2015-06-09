@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.192 2015/05/13 16:54:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.193 2015/06/09 10:04:01 eva Exp $
+
+*seahorse-3.16.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +seahorse-3.16.0.ebuild:
+  Version bump for Gnome 3.16.
 
   13 May 2015; Pacho Ramos <pacho@gentoo.org> -seahorse-3.12.2.ebuild,
   -seahorse-3.14.0.ebuild, seahorse-3.14.1.ebuild:
