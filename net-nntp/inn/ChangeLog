@@ -1,6 +1,11 @@
 # ChangeLog for net-nntp/inn
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.57 2015/04/08 18:17:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/inn/ChangeLog,v 1.58 2015/06/09 05:32:30 jer Exp $
+
+*inn-2.5.5 (09 Jun 2015)
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> +inn-2.5.5.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> inn-2.5.3-r1.ebuild,
   inn-2.5.3-r2.ebuild, inn-2.5.4.ebuild:
