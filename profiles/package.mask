@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16586 2015/06/08 21:20:07 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16587 2015/06/09 02:56:55 tetromino Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -60,9 +60,9 @@
 >=dev-libs/gobject-introspection-common-1.43
 >=dev-libs/libgdata-0.17
 >=dev-libs/libgweather-3.15
->=dev-libs/libpeas-1.11
+>=dev-libs/libpeas-1.13
 >=dev-libs/libunistring-0.9.5
->=dev-libs/vala-common-0.25
+>=dev-libs/vala-common-0.27
 >=dev-python/pyatspi-2.15
 >=dev-python/pygobject-3.15
 >=dev-util/anjuta-3.15
@@ -91,7 +91,7 @@
 >=games-puzzle/lightsoff-3.15
 >=games-puzzle/quadrapassel-3.15
 >=games-puzzle/swell-foop-3.15
->=gnome-base/dconf-0.21
+>=gnome-base/dconf-0.23
 >=gnome-base/dconf-editor-3.15
 >=gnome-base/gdm-3.15
 >=gnome-base/gnome-3.15
@@ -140,9 +140,9 @@
 >=media-gfx/gnome-font-viewer-3.15
 >=media-gfx/gnome-photos-3.15
 >=media-gfx/gnome-screenshot-3.15
->=media-libs/clutter-1.19
+>=media-libs/clutter-1.21
 >=media-libs/clutter-gst-2.90
->=media-libs/cogl-1.19
+>=media-libs/cogl-1.21
 >=media-libs/grilo-0.2.12
 >=media-plugins/grilo-plugins-0.2.14
 >=media-sound/gnome-music-3.15
