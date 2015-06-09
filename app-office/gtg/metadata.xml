@@ -23,4 +23,7 @@
 		The task editor can automatically recognize metadata such as tags and subtasks
 		only by the use of a very simple syntax.
 	</longdescription>
+	<upstream>
+		<remote-id type="launchpad">gtg</remote-id>
+	</upstream>
 </pkgmetadata>

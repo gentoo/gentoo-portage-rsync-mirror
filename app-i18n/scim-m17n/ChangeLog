@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-m17n
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.41 2012/05/03 19:24:30 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-m17n/ChangeLog,v 1.42 2015/06/09 11:31:27 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-m17n-0.2.3.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -156,4 +159,3 @@
   15 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
   +scim-m17n-0.0.1_pre20040614.ebuild:
   Initial import.
-

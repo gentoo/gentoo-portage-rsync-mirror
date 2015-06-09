@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>fauli@gentoo.org</email>
-  <name>Christian Faulhammer</name>
-</maintainer>
-<longdescription lang="en">
+	<maintainer>
+		<email>fauli@gentoo.org</email>
+		<name>Christian Faulhammer</name>
+	</maintainer>
+	<longdescription lang="en">
 GRAMPS helps you track your family tree. It allows you to store, edit,
 and research genealogical data. GRAMPS attempts to provide all of the
 common capabilities of other genealogical programs, but, more
@@ -16,7 +16,7 @@ any/all data events in the entire data base (in any order or sequence)
 to assist the user in doing research, analysis and correlation with
 the potential of filling relationship gaps.
 </longdescription>
-<longdescription lang="cs">
+	<longdescription lang="cs">
 GRAMPS Vám pomůže sledovat Váš rodokmen. Dovolí Vám využít počítač pro
 ukládání, úpravy a zkoumání genealogických dat.
 
@@ -28,7 +28,7 @@ přeskupit/manipulovat jednotlivými/všemi událostmi v celé
 databázi. Tím pomáhá badateli při výzkumu, analýze a korelacích s
 potenciálem zaplnění mezer ve vztazích mezi subjekty.
 </longdescription>
-<longdescription lang="de">
+	<longdescription lang="de">
 GRAMPS hilft dir, deinen Familienstammbaum zurückzuverfolgen. Es
 erlaubt dir das Speichern, Bearbeiten, und Erforschen genealogischer
 Daten mit deinem Computer. GRAMPS versucht alle möglichen Funktionen,
@@ -40,7 +40,7 @@ gesamten Datenbank neu zu ordnen oder zu manipulieren um die Arbeit
 für den Benutzer zu erleichtern. So können jederzeit potentielle
 Lücken in jeglichen Beziehungen gefüllt werden.
 </longdescription>
-<longdescription lang="fr">
+	<longdescription lang="fr">
 GRAMPS vous aide à suivre votre lignée. Il vous permet de stocker,
 éditer, ainsi que rechercher des données généalogiques avec votre
 ordinateur. GRAMPS tente de fournir toutes les capacités communes aux
@@ -52,7 +52,7 @@ la base de données (dans n'importe quel ordre ou séquence) pour
 assiter l'utilisateur dans ses recherches, analyse et corrélation avec
 les relations possibles.
 </longdescription>
-<longdescription lang="nl">
+	<longdescription lang="nl">
 GRAMPS laat je toe je familiestamboom op te stellen. Het programma
 laat je toe om je genealogische gegevens op te slaan, te wijzigen en
 genealogisch onderzoek te doen met je computer. GRAMPS probeert om
@@ -65,7 +65,7 @@ volledige gegevensbestand( in gelijkwelke volgorde). Zo wordt de
 gebruiker ondersteund in zijn onderzoeken biedt dit een hulp bij
 analyse en de correlatie om zo relatieleemten te kunnen opvullen.
 </longdescription>
-<longdescription lang="pl">
+	<longdescription lang="pl">
 GRAMPS pomaga Ci śledzić Twoje drzewo rodzinne. Pozwala Ci wprowadzać,
 edytować i analizować informacje genealogiczne za pomocą
 komputera. GRAMPS próbuje zapewnić wszystkie wspólne cechy innych
@@ -76,7 +76,7 @@ i zmianę zdarzeń czy pojedynczo, czy grupowo (w dowolnej kolejności) w
 celu pomocy użytkownikowi w analizie, badaniu i korelowaniu
 potencjalnych luk w relacjach w rodzinie.
 </longdescription>
-<longdescription lang="sl">
+	<longdescription lang="sl">
 GRAMPS vam pomaga voditi svoj rodovnik. Z njim lahko shranjujete,
 urejate in raziskujete rodoslovne podatke na svojem
 računalniku. Pogram GRAMPS vključuje večino skupnih elementov drugih
@@ -87,10 +87,13 @@ spreminjanje vseh zapisov dogodkov v celotni bazi podatkov (ne glede
 na vrstni red), kar vam bo v pomoč pri vaših raziskavah, analizah in
 zapolnjevanju vrzeli v rodoslovnih podatkih.
 </longdescription>
-<use>
-  <flag name='reports'>All external software that is needed for graphical
+	<use>
+		<flag name="reports">All external software that is needed for graphical
     reports will be installed</flag>
-  <flag name='webkit'>Use Webkit-based rendering for geographical
+		<flag name="webkit">Use Webkit-based rendering for geographical
   data view.</flag>
-</use>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">gramps</remote-id>
+	</upstream>
 </pkgmetadata>

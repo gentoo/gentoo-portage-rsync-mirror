@@ -19,4 +19,7 @@
 		programs that use libspnav, that doesn't require an X server, as the
 		original protocol does. 
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">spacenav</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/ifp-line
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ChangeLog,v 1.23 2011/03/20 18:21:53 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ifp-line/ChangeLog,v 1.24 2015/06/09 11:44:43 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   20 Mar 2011; Samuli Suominen <ssuominen@gentoo.org> ifp-line-0.3.ebuild:
   Fix libusb depend to correct SLOT and remove any reference to libifp-module.
@@ -88,4 +91,3 @@
   14 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ifp-line-0.2.3.ebuild, metadata.xml:
   Tool for connecting to iRiver IFP devices.
-

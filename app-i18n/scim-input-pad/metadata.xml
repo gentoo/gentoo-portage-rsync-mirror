@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
-
 <pkgmetadata>
 	<herd>cjk</herd>
 	<longdescription lang="EN">
@@ -28,4 +27,7 @@
 		comme des flèches, des éléments de boîtes, etc. Vous pouvez
 		également rajouter de nouveaux caractères (cf. documentation).
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">scim</remote-id>
+	</upstream>
 </pkgmetadata>

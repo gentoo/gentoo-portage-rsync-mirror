@@ -10,4 +10,7 @@
 	that works with most Fronius IG and IG Plus inverters. It supports both
 	human-readable output and delimited (CSV-style) output.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">fslurp</remote-id>
+	</upstream>
 </pkgmetadata>

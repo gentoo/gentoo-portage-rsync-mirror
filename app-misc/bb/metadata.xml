@@ -5,4 +5,7 @@
 		<email>slyfox@gentoo.org</email>
 		<name>Sergei Trofimovich</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">aa-project</remote-id>
+	</upstream>
 </pkgmetadata>

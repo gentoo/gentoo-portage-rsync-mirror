@@ -9,4 +9,7 @@
 	</longdescription>
 	<use>
 	</use>
+	<upstream>
+		<remote-id type="launchpad">basenji</remote-id>
+	</upstream>
 </pkgmetadata>

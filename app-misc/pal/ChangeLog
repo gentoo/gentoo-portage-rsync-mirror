@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pal
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.38 2014/10/28 22:11:40 jer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pal/ChangeLog,v 1.39 2015/06/09 11:49:14 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   28 Oct 2014; Jeroen Roovers <jer@gentoo.org> pal-0.4.3-r1.ebuild,
   files/0.4.3-ldflags.patch, +files/pal-0.4.3-pkg_config.patch,

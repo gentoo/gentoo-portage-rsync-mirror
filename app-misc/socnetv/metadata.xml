@@ -13,5 +13,7 @@
 		to suit your needs. SocNetV also offers a built-in web crawler, allowing you to 
 		automatically create networks from all links found in a given initial URL.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">socnetv</remote-id>
+	</upstream>
 </pkgmetadata>
-

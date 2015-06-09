@@ -1,6 +1,9 @@
 # ChangeLog for app-office/ooextras
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.14 2015/02/15 21:20:14 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooextras/ChangeLog,v 1.15 2015/06/09 11:58:00 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   15 Feb 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   ooextras-20060909.ebuild:

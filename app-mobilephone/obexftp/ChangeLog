@@ -1,6 +1,9 @@
 # ChangeLog for app-mobilephone/obexftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.80 2015/04/26 17:53:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/obexftp/ChangeLog,v 1.81 2015/06/09 11:54:21 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   26 Apr 2015; Hans de Graaff <graaff@gentoo.org> obexftp-0.24.ebuild:
   Drop unused USE_RUBY variable. Update ruby dependency to supported slots

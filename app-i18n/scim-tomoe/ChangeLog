@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-tomoe
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.13 2012/05/03 19:24:28 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tomoe/ChangeLog,v 1.14 2015/06/09 11:32:35 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> scim-tomoe-0.6.0-r2.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -71,4 +74,3 @@
 
   12 Aug 2006; MATSUU Takuto <matsuu@gentoo.org> +scim-tomoe-0.2.0.ebuild:
   Initial ebuild submitted by Olof <olofshopping@hotmail.com>. bug 140122.
-

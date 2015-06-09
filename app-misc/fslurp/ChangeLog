@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/fslurp
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fslurp/ChangeLog,v 1.8 2013/12/23 17:48:15 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fslurp/ChangeLog,v 1.9 2015/06/09 11:40:35 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *fslurp-2.1.4 (23 Dec 2013)
 
@@ -42,4 +45,3 @@
   11 Aug 2011; Tim Harder <radhermit@gentoo.org> +fslurp-0.7.ebuild,
   +files/fslurp-0.7-makefile.patch, +metadata.xml:
   Initial import.
-

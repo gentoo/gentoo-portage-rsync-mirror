@@ -8,4 +8,7 @@
 		<name>Sergey Starikoff</name>
 		<description>Proxied maintainer. Assign bugs on him</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">fbtools</remote-id>
+	</upstream>
 </pkgmetadata>

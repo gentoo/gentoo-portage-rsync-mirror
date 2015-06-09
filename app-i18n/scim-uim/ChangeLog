@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/scim-uim
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.39 2013/05/10 07:25:32 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-uim/ChangeLog,v 1.40 2015/06/09 11:32:51 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   10 May 2013; Patrick Lauer <patrick@gentoo.org> -scim-uim-0.2.0-r1.ebuild:
   Remove version with unsatisfiable deps

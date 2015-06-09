@@ -1,6 +1,9 @@
 # ChangeLog for app-office/hourglass
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/ChangeLog,v 1.9 2014/07/26 18:51:36 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/hourglass/ChangeLog,v 1.10 2015/06/09 11:56:53 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   26 Jul 2014; Manuel Rüger <mrueg@gentoo.org>
   -files/hourglass-0.7.1-build.xml.patch, -hourglass-0.7.1.ebuild,

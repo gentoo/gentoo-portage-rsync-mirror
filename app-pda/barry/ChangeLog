@@ -1,6 +1,9 @@
 # ChangeLog for app-pda/barry
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.32 2014/03/09 03:42:32 rhill Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/barry/ChangeLog,v 1.33 2015/06/09 12:00:44 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 Mar 2014; Ryan Hill <rhill@gentoo.org> metadata.xml:
   Change my email.
@@ -141,4 +144,3 @@
   +barry-0.8.ebuild:
   This is a version bump to the 0.6 version in sunrise.  Thanks to Kevin
   Fullerton for maintaining this package in sunrise.  Bug #154795
-
