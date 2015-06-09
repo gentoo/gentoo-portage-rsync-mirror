@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.56 2015/06/07 10:24:49 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.57 2015/06/09 04:52:07 jer Exp $
+
+  09 Jun 2015; Jeroen Roovers <jer@gentoo.org> sash-3.8.ebuild:
+  Stable for HPPA PPC64 (bug #534898).
 
   07 Jun 2015; Markus Meier <maekke@gentoo.org> sash-3.8.ebuild:
   arm stable, bug #534898
