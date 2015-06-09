@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.35.2.ebuild,v 1.1 2015/06/06 06:33:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/tovid-0.35.2.ebuild,v 1.3 2015/06/09 01:39:16 idella4 Exp $
 
 EAPI=5
 
@@ -51,12 +51,12 @@ pkg_preinst() {
 pkg_postinst() {
 	gnome2_icon_cache_update
 	elog "######################################################################"
-	elog "You can install transcode for additional functionality - it will "
-	elog "speed up the creation of animated submenus with faster seeking."
-	elog "Other wise ffmpeg will be used."
+	elog "You can install media-video/transcode for additional functionality. It"
+	elog "will speed up the creation of animated submenus with faster seeking."
+	elog "Otherwise FFmpeg/Libav will be used."
 	elog "######################################################################"
 	elog""
-    gnome2_icon_cache_update
+	gnome2_icon_cache_update
 }
 pkg_postinst() {
 	gnome2_icon_cache_update
@@ -65,4 +65,3 @@ pkg_postinst() {
 pkg_postrm() {
 	gnome2_icon_cache_update
 }
-

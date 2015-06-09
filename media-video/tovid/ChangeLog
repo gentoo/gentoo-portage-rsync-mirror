@@ -1,11 +1,17 @@
 # ChangeLog for media-video/tovid
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.33 2015/06/06 06:33:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tovid/ChangeLog,v 1.36 2015/06/09 01:52:58 idella4 Exp $
+
+  09 Jun 2015; Ian Delaney <idella4@gentoo.org> tovid-0.35.2.ebuild:
+  correct, syntax, whitepace, typo
+
+  09 Jun 2015; Ian Delaney <idella4@gentoo.org> tovid-0.35.2.ebuild:
+  tidy to msg output in pkg_postinst provided by "BT" in bug #541964
 
 *tovid-0.35.2 (06 Jun 2015)
 
   06 Jun 2015; Ian Delaney <idella4@gentoo.org> +tovid-0.35.2.ebuild:
-  bump; ebuild based on submission by the upsrteam author of tovid from bug
+  bump; ebuild based on submission by the upstream author of tovid from bug
   #541964; converted to distutils-r1 and deps edited by author
 
   09 Sep 2013; Mike Gilbert <floppym@gentoo.org> tovid-0.34.ebuild,

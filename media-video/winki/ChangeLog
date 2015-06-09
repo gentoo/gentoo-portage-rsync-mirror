@@ -1,6 +1,11 @@
 # ChangeLog for media-video/winki
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.24 2014/08/10 21:01:16 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/winki/ChangeLog,v 1.25 2015/06/09 01:46:23 idella4 Exp $
+
+*winki-0.4.5-r1 (09 Jun 2015)
+
+  09 Jun 2015; Ian Delaney <idella4@gentoo.org> +winki-0.4.5-r1.ebuild:
+  revbump to distutils-r1, fixes bug #541964
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> winki-0.4.5.ebuild:
   QA: drop trailing '.' from DESCRIPTION
