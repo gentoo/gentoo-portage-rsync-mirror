@@ -1,6 +1,13 @@
 # ChangeLog for net-dns/pdns
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.106 2015/05/18 19:14:14 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdns/ChangeLog,v 1.107 2015/06/09 20:25:55 swegener Exp $
+
+*pdns-3.4.5 (09 Jun 2015)
+*pdns-3.3.3 (09 Jun 2015)
+
+  09 Jun 2015; Sven Wegener <swegener@gentoo.org> +pdns-3.3.3.ebuild,
+  +pdns-3.4.5.ebuild:
+  Version bump.
 
   18 May 2015; Sven Wegener <swegener@gentoo.org> pdns-3.4.4.ebuild:
   Switch to tinycdb as the cdb implementation, bug #540378.

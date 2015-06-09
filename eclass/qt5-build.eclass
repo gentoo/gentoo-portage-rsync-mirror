@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.18 2015/06/09 19:37:45 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.19 2015/06/09 20:16:59 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -23,7 +23,7 @@ QT5_MINOR_VERSION=${PV#*.}
 QT5_MINOR_VERSION=${QT5_MINOR_VERSION%%.*}
 
 HOMEPAGE="https://www.qt.io/"
-LICENSE="|| ( LGPL-2.1 LGPL-3 )"
+LICENSE="|| ( LGPL-2.1 LGPL-3 ) FDL-1.3"
 SLOT="5"
 
 # @ECLASS-VARIABLE: QT5_MODULE

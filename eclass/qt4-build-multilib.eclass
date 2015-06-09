@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.17 2015/06/09 18:13:42 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.18 2015/06/09 20:16:59 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -20,7 +20,7 @@ esac
 inherit eutils flag-o-matic multilib multilib-minimal toolchain-funcs
 
 HOMEPAGE="https://www.qt.io/"
-LICENSE="|| ( LGPL-2.1 GPL-3 )"
+LICENSE="|| ( LGPL-2.1 LGPL-3 GPL-3 ) FDL-1.3"
 SLOT="4"
 
 case ${PV} in
