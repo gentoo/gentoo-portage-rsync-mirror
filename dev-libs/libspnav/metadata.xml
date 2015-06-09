@@ -19,4 +19,7 @@
 		spacenavd driver or the official 3dxserv, as if they were using the
 		magellan SDK.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">spacenav</remote-id>
+	</upstream>
 </pkgmetadata>

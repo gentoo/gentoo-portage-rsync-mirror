@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/socketstream
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.16 2013/03/03 06:30:56 dirtyepic Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/socketstream/ChangeLog,v 1.17 2015/06/09 14:51:50 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 Mar 2013; Ryan Hill <dirtyepic@gentoo.org> socketstream-0.7.0-r1.ebuild,
   +files/socketstream-0.7.0-gcc47.patch:
@@ -62,4 +65,3 @@
 
   13 Oct 2003; Markus Nigbur <pyrania@gentoo.org> socketstream-0.3.0.ebuild:
   Initial import.
-

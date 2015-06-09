@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>crypto</herd>
-  <longdescription>
+	<herd>crypto</herd>
+	<longdescription>
     OpenSC is a library for accessing SmartCard devices. It is also
     the core library of the OpenSC project.
 
@@ -12,27 +12,28 @@
     compatible cards, such as the FINEID (Finnish Electronic IDentity)
     card.
   </longdescription>
-  <use>
-    <flag name="libtool">
+	<use>
+		<flag name="libtool">
       Use <pkg>sys-devel/libtool</pkg> for dynamically loading libraries
       rather than the host libdl/dlopen helpers.
     </flag>
-    <flag name="openct">
+		<flag name="openct">
       Use <pkg>dev-libs/openct</pkg> (and CT-API) for accessing
       Smartcard hardware.
     </flag>
-    <flag name="ctapi">
+		<flag name="ctapi">
       Use CT-API for accessing Smartcard hardware.
     </flag>
-    <flag name="pcsc-lite">
+		<flag name="pcsc-lite">
       Use <pkg>sys-apps/pcsc-lite</pkg> (and PC/SC API) for accessing
       Smartcard hardware.
     </flag>
-    <flag name="secure-messaging">
+		<flag name="secure-messaging">
       Enable secure messaging.
     </flag>
-  </use>
-  <upstream>
-    <remote-id type="github">OpenSC/OpenSC</remote-id>
-  </upstream>
+	</use>
+	<upstream>
+		<remote-id type="github">OpenSC/OpenSC</remote-id>
+		<remote-id type="sourceforge">opensc</remote-id>
+	</upstream>
 </pkgmetadata>

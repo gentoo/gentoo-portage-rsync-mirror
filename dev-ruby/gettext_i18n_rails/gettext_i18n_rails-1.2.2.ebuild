@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-1.2.2.ebuild,v 1.1 2015/04/03 14:19:24 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gettext_i18n_rails/gettext_i18n_rails-1.2.2.ebuild,v 1.2 2015/06/09 14:39:38 mrueg Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-ruby_add_bdepend "test? ( dev-ruby/activerecord:4.0[sqlite3] dev-ruby/temple )"
+ruby_add_bdepend "test? ( dev-ruby/activerecord:4.0[sqlite] dev-ruby/temple )"
 ruby_add_rdepend ">=dev-ruby/fast_gettext-0.9.0"
 
 all_ruby_prepare() {

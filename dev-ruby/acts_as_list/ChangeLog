@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/acts_as_list
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/ChangeLog,v 1.14 2015/06/07 16:43:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/acts_as_list/ChangeLog,v 1.15 2015/06/09 14:39:26 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> acts_as_list-0.6.0.ebuild,
+  acts_as_list-0.7.0.ebuild, acts_as_list-0.7.2.ebuild:
+  Adjust activerecord dependency according to bug #548654.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

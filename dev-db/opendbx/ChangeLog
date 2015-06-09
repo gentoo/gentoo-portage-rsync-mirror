@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/opendbx
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.47 2015/05/23 10:28:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/opendbx/ChangeLog,v 1.48 2015/06/09 14:47:22 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -opendbx-1.5.0.ebuild:
+  Remove old.
 
   23 May 2015; Pacho Ramos <pacho@gentoo.org> -opendbx-1.4.5.ebuild,
   -opendbx-1.4.6.ebuild:

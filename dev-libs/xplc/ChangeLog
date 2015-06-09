@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xplc
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.40 2012/05/04 18:35:48 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.41 2015/06/09 14:55:31 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   04 May 2012; Jeff Horelick <jdhore@gentoo.org> xplc-0.3.13-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig
@@ -136,4 +139,3 @@
   05 Dec 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
   +xplc-0.3.10.ebuild:
   Initial import from #70419, thanks to Peter Colijn <sirjoltalot@yahoo.com>.
-

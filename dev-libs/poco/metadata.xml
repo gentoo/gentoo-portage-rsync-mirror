@@ -5,8 +5,8 @@
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau (Tommy[D])</name>
 	</maintainer>
-<herd>cpp</herd>
-<longdescription>
+	<herd>cpp</herd>
+	<longdescription>
 POCO, the C++ Portable Components, is a collection of open source
 C++ class libraries that simplify and accelerate the development of
 network-centric, portable applications in C++. The libraries integrate
@@ -22,4 +22,7 @@ The POCO libraries free developers from re-inventing the wheel, and allow
 them to spend their time on more worthwhile areas, such as getting things
 done quickly and working on the features that make their application unique.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">poco</remote-id>
+	</upstream>
 </pkgmetadata>

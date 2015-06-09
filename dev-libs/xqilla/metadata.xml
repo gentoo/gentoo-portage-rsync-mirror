@@ -8,4 +8,7 @@
 		<flag name="htmltidy">Use <pkg>app-text/htmltidy</pkg> when parsing
 			HTML</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">xqilla</remote-id>
+	</upstream>
 </pkgmetadata>

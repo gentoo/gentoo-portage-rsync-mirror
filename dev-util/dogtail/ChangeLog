@@ -1,0 +1,11 @@
+# ChangeLog for dev-util/dogtail
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dogtail/ChangeLog,v 1.1 2015/06/09 14:47:49 eva Exp $
+
+*dogtail-0.9.0-r2 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +dogtail-0.9.0-r2.ebuild,
+  +files/dogtail-0.9.0-gentoo-paths.patch, +files/dogtail-0.9.0-get-user.patch,
+  +metadata.xml:
+  Imported from gnome-overlay, needed for GUI unitests in Gnome packages.
+

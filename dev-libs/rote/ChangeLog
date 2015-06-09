@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/rote
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rote/ChangeLog,v 1.5 2012/10/18 19:10:13 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rote/ChangeLog,v 1.6 2015/06/09 14:50:25 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   18 Oct 2012; Michael Weber <xmw@gentoo.org> rote-0.2.8.ebuild, metadata.xml:
   EAPI-4, taking maint.
@@ -18,4 +21,3 @@
 
   23 Jan 2006; Tom Payne <twp@gentoo.org> +metadata.xml, +rote-0.2.8.ebuild:
   Initial version. Bug # 98647.
-

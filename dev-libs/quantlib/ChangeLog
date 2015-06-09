@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/quantlib
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.37 2012/03/17 08:54:35 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.38 2015/06/09 14:49:18 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   17 Mar 2012; Samuli Suominen <ssuominen@gentoo.org> quantlib-1.2.ebuild:
   Revert all keywording back to ~arch only and for amd64/x86. This package has

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.225 2015/05/30 06:41:01 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.226 2015/06/09 14:57:47 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   30 May 2015; Jack Morgan <jmorgan@gentoo.org> sbcl-1.1.18.ebuild:
   ppc stable wrt bug #511170

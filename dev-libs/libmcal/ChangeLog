@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.43 2015/05/05 19:22:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcal/ChangeLog,v 1.44 2015/06/09 14:32:56 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   05 May 2015; Manuel Rüger <mrueg@gentoo.org> -libmcal-0.7-r1.ebuild,
   -libmcal-0.7-r2.ebuild, -libmcal-0.7-r3.ebuild, -libmcal-0.7.ebuild:

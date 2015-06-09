@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>common-lisp</herd>
-<longdescription>
+	<herd>common-lisp</herd>
+	<longdescription>
 CLISP is a Common Lisp implementation. It mostly supports the Lisp
 described in the ANSI Common Lisp standard.  It includes an
 interpreter, a compiler, almost all of CLOS, a foreign language
@@ -15,12 +15,14 @@ others) and needs only 2 MB of RAM.  The user interface comes in
 German, English, French, Spanish, Dutch and Russian, and can be
 changed at run time.
 </longdescription>
-<use>
-<flag name='hyperspec'>Use local hyperspec instead of online version</flag>
-<flag name='new-clx'>Build CLISP with support for the NEW-CLX module which is a
+	<use>
+		<flag name="hyperspec">Use local hyperspec instead of online version</flag>
+		<flag name="new-clx">Build CLISP with support for the NEW-CLX module which is a
 C binding to the Xorg libraries</flag>
-<flag name='pari'>Build CLISP with support for the PARI Computer Algebra System</flag>
-<flag name='svm'>Build CLISP with support for the Support Vector Machine module</flag>
-</use>
+		<flag name="pari">Build CLISP with support for the PARI Computer Algebra System</flag>
+		<flag name="svm">Build CLISP with support for the Support Vector Machine module</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">clisp</remote-id>
+	</upstream>
 </pkgmetadata>
-

@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/gnote
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.55 2015/06/07 08:04:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gnote/ChangeLog,v 1.56 2015/06/09 14:57:51 eva Exp $
+
+*gnote-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -gnote-3.12.0.ebuild,
+  +gnote-3.16.1.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

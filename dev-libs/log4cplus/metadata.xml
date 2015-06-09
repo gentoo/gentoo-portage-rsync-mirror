@@ -10,4 +10,7 @@
 		<flag name="working-c-locale">Use the C99 locale facilities for wchar_t &lt;-&gt; char conversions. See also log4cplus's unicode.txt documentation </flag>
 		<flag name="iconv">Use inconv for wchar_t &lt;-&gt; char conversions. See also log4cplus's unicode.txt documentation</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">log4cplus</remote-id>
+	</upstream>
 </pkgmetadata>

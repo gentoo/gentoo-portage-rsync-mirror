@@ -1,6 +1,24 @@
 # ChangeLog for app-text/evince
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.286 2015/03/22 19:47:18 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/evince/ChangeLog,v 1.287 2015/06/09 15:00:29 eva Exp $
+
+*evince-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -evince-3.12.2.ebuild,
+  -evince-3.12.2-r1.ebuild, -evince-3.14.1-r1.ebuild, +evince-3.16.1.ebuild,
+  -files/evince-3.12.2-memory-leak.patch,
+  -files/evince-3.12.2-print-center.patch,
+  -files/evince-3.12.2-scroll-search-1.patch,
+  -files/evince-3.12.2-scroll-search-2.patch,
+  -files/evince-3.14.0-non-bash-support.patch,
+  -files/evince-3.14.1-critical-warning.patch,
+  -files/evince-3.14.1-disable-toggle-find.patch,
+  -files/evince-3.14.1-gnome-desktop.patch,
+  -files/evince-3.14.1-incorrect-resolution.patch,
+  -files/evince-3.14.1-scroll-search.patch,
+  -files/evince-3.14.1-show-correct.patch,
+  -files/evince-3.14.1-thumbnail-size.patch:
+  Version bump for Gnome 3.16. Clean up old revisions.
 
 *evince-3.14.2-r1 (22 Mar 2015)
 
