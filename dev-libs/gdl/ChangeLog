@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/gdl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.112 2015/03/29 10:30:20 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdl/ChangeLog,v 1.113 2015/06/09 10:45:31 eva Exp $
+
+*gdl-3.16.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -gdl-3.12.0.ebuild,
+  +gdl-3.16.0.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
 
   29 Mar 2015; Jeroen Roovers <jer@gentoo.org> gdl-3.14.0.ebuild:
   Stable for HPPA (bug #534012).

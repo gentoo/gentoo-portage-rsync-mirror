@@ -9,4 +9,7 @@
     <name>Manuel Rüger</name>
     <description>CC him on bugs</description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">retext</remote-id>
+  </upstream>
 </pkgmetadata>

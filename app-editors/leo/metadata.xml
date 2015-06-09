@@ -4,5 +4,6 @@
   <herd>python</herd>
   <upstream>
     <remote-id type="github">leo-editor/leo-editor</remote-id>
+    <remote-id type="sourceforge">leo</remote-id>
   </upstream>
 </pkgmetadata>

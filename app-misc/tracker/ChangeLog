@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/tracker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.186 2015/05/02 13:23:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tracker/ChangeLog,v 1.187 2015/06/09 10:41:22 eva Exp $
+
+*tracker-1.4.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +tracker-1.4.0.ebuild,
+  +files/tracker-1.4.0-have-gstreamer-fix.patch, metadata.xml:
+  Version bump for Gnome 3.16.
 
   02 May 2015; Gilles Dartiguelongue <eva@gentoo.org> tracker-1.2.5.ebuild,
   tracker-1.2.6.ebuild:

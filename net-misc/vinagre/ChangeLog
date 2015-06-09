@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/vinagre
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.116 2015/05/16 12:16:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vinagre/ChangeLog,v 1.117 2015/06/09 10:32:26 eva Exp $
+
+*vinagre-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +vinagre-3.16.1.ebuild,
+  +files/vinagre-3.16.1-freerdp.patch:
+  Version bump for Gnome 3.16.
 
 *vinagre-3.14.3-r1 (16 May 2015)
 

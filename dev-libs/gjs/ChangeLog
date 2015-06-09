@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/gjs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.68 2015/06/07 10:29:17 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/ChangeLog,v 1.69 2015/06/09 10:42:42 eva Exp $
+
+*gjs-1.43.3 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -gjs-1.40.1.ebuild,
+  +gjs-1.43.3.ebuild, +files/gjs-1.43.3-disable-unittest-1.patch,
+  +files/gjs-1.43.3-disable-unittest-2.patch:
+  Version bump for Gnome 3.16. Clean up old revision.
 
   07 Jun 2015; Markus Meier <maekke@gentoo.org> gjs-1.42.0.ebuild:
   arm stable, bug #534012

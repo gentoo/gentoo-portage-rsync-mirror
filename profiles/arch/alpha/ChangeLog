@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.223 2015/05/24 18:41:01 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.224 2015/06/09 11:00:24 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add dev-libs/libpeas USE mask, bug #551540.
 
   24 May 2015; Matt Turner <mattst88@gentoo.org> use.mask:
   Remove audit from use.mask.

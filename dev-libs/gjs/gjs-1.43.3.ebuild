@@ -1,28 +1,28 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.40.1.ebuild,v 1.10 2014/10/11 11:44:12 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gjs/gjs-1.43.3.ebuild,v 1.1 2015/06/09 10:42:42 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2 pax-utils virtualx
+inherit eutils gnome2 pax-utils virtualx
 
 DESCRIPTION="Javascript bindings for GNOME"
-HOMEPAGE="http://live.gnome.org/Gjs"
+HOMEPAGE="https://wiki.gnome.org/Projects/Gjs"
 
 LICENSE="MIT || ( MPL-1.1 LGPL-2+ GPL-2+ )"
 SLOT="0"
 IUSE="+cairo examples gtk test"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
 	>=dev-libs/glib-2.36:2
-	>=dev-libs/gobject-introspection-1.39.3
+	>=dev-libs/gobject-introspection-1.41.4
 
 	sys-libs/readline:0
 	dev-lang/spidermonkey:24
 	virtual/libffi
-	cairo? ( x11-libs/cairo )
+	cairo? ( x11-libs/cairo[X] )
 	gtk? ( x11-libs/gtk+:3 )
 "
 DEPEND="${RDEPEND}
@@ -32,8 +32,12 @@ DEPEND="${RDEPEND}
 	test? ( sys-apps/dbus )
 "
 
-# Large amount of tests are broken even in master.
-RESTRICT="test"
+src_prepare() {
+	# Disable broken unittests
+	epatch "${FILESDIR}"/${PN}-1.43.3-disable-unittest-*.patch
+
+	gnome2_src_prepare
+}
 
 src_configure() {
 	# FIXME: add systemtap/dtrace support, like in glib:2

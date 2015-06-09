@@ -1,13 +1,13 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.12.3.ebuild,v 1.3 2014/12/19 13:35:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgweather/libgweather-3.16.1.ebuild,v 1.1 2015/06/09 10:49:45 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 VALA_MIN_API_VERSION="0.18"
 VALA_USE_DEPEND="vapigen"
 
-inherit eutils gnome2 vala
+inherit gnome2 vala
 
 DESCRIPTION="Library to access weather information from online services"
 HOMEPAGE="https://wiki.gnome.org/Projects/LibGWeather"
@@ -17,13 +17,14 @@ SLOT="2/3-6" # subslot = 3-(libgweather-3 soname suffix)
 IUSE="glade +introspection vala"
 REQUIRED_USE="vala? ( introspection )"
 
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~x86-solaris"
 
 COMMON_DEPEND="
-	>=x11-libs/gtk+-3.5.6:3[introspection?]
+	>=x11-libs/gtk+-3.13.5:3[introspection?]
 	>=dev-libs/glib-2.35.1:2
 	>=net-libs/libsoup-2.34:2.4
 	>=dev-libs/libxml2-2.6.0
+	sci-geosciences/geocode-glib
 	>=sys-libs/timezone-data-2010k
 
 	glade? ( >=dev-util/glade-3.16:3.10 )
@@ -46,7 +47,7 @@ src_prepare() {
 }
 
 src_configure() {
-	DOCS="AUTHORS ChangeLog MAINTAINERS NEWS"
+	DOCS="AUTHORS MAINTAINERS NEWS README"
 	gnome2_src_configure \
 		--disable-static \
 		$(use_enable glade glade-catalog) \

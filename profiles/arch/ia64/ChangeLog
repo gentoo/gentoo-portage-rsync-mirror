@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.230 2015/05/24 04:32:45 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.231 2015/06/09 11:01:05 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add dev-libs/libpeas USE mask, bug #551540.
 
   24 May 2015; Matt Turner <mattst88@gentoo.org> package.use.mask:
   Drop dead r600-llvm-compiler USE flag from package.use.mask.

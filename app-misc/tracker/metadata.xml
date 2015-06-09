@@ -18,6 +18,7 @@
     <pkg>gnome-base/nautilus</pkg> by providing entries in its context menu
   </flag>
   <flag name="playlist">Add support for playlists</flag>
+  <flag name="stemmer">Add word stemming via <pkg>dev-libs/snowball-stemmer</pkg>.</flag>
   <flag name="thunderbird">Install email data miner plugin for
     <pkg>mail-client/thunderbird</pkg> and
 	<pkg>mail-client/thunderbird-bin</pkg></flag>

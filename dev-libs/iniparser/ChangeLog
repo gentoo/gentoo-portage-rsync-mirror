@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/iniparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.45 2015/06/03 14:45:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/iniparser/ChangeLog,v 1.46 2015/06/09 10:46:25 grobian Exp $
+
+  09 Jun 2015; Fabian Groffen <grobian@gentoo.org> iniparser-3.1-r1.ebuild:
+  Add Prefix keywords to unbreak the Prefix bootstrap
 
   03 Jun 2015; Mike Frysinger <vapier@gentoo.org> iniparser-3.1-r1.ebuild:
   Mark arm64/m68k/s390/sh stable.

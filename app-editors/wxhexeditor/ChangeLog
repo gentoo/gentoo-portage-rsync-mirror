@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/wxhexeditor
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.7 2014/08/10 17:42:44 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/wxhexeditor/ChangeLog,v 1.8 2015/06/09 10:53:41 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> wxhexeditor-0.20.ebuild,
   wxhexeditor-0.21.ebuild, wxhexeditor-0.22.ebuild:
