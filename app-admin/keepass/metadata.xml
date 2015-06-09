@@ -15,6 +15,6 @@
 	</use>
 	<upstream>
 		<remote-id type="sourceforge">keepass</remote-id>
-		<bugs-to>http://sourceforge.net/tracker/?group_id=95013</bugs-to>
+		<bugs-to>http://sourceforge.net/p/keepass/bugs/</bugs-to>
 	</upstream>
 </pkgmetadata>
