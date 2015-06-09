@@ -10,4 +10,7 @@
 		library, offering both an error-checked procedural interface and an
 		object-oriented resource interface with RAII semantics.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">lmdbxx</remote-id>
+	</upstream>
 </pkgmetadata>

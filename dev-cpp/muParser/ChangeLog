@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/muParser
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.28 2013/06/17 16:16:00 bicatali Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/muParser/ChangeLog,v 1.29 2015/06/09 13:06:32 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *muParser-2.2.3 (17 Jun 2013)
 

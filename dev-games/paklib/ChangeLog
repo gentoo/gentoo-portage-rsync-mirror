@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/paklib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/paklib/ChangeLog,v 1.4 2015/02/19 09:42:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/paklib/ChangeLog,v 1.5 2015/06/09 13:27:46 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   19 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org> paklib-0.3.ebuild:
   EAPI=5

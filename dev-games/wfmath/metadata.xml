@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription lang="en">
+	<herd>games</herd>
+	<longdescription lang="en">
 The primary focus of WFMath is geometric objects. Thus, it includes several
 shapes (boxes, balls, lines), in addition to the basic math objects that are
 used to build these shapes (points, vectors, matricies).
@@ -11,4 +11,7 @@ basic mathematical objects, whose members are all fundamental types. The second
 kind are shapes, which implement the shape class interface described in
 doc/shape.h.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">worldforge</remote-id>
+	</upstream>
 </pkgmetadata>

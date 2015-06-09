@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/tclap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.19 2014/12/26 17:53:50 maekke Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tclap/ChangeLog,v 1.20 2015/06/09 13:07:14 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   26 Dec 2014; Markus Meier <maekke@gentoo.org> tclap-1.2.1.ebuild:
   add ~arm, bug #529028

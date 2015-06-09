@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/libdbi-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.71 2015/03/15 17:50:39 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi-drivers/ChangeLog,v 1.72 2015/06/09 13:12:00 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   15 Mar 2015; Ulrich Müller <ulm@gentoo.org> libdbi-drivers-0.9.0.ebuild:
   Add conditional bindist restriction and remove bindist USE flag, bug 541482.

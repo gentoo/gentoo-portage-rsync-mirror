@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/dbmodel
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/ChangeLog,v 1.9 2013/03/02 19:49:31 hwoarang Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/dbmodel/ChangeLog,v 1.10 2015/06/09 13:08:07 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   02 Mar 2013; Markos Chandras <hwoarang@gentoo.org> dbmodel-0.3.ebuild:
   Move Qt dependencies to the new category

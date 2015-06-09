@@ -11,4 +11,7 @@
 		<flag name="postgres_internal">Don't build a separate odbc loadable module but rather build it into the cppdb library itself</flag>
 		<flag name="sqlite_internal">Don't build a separate sqlite3 loadable module but rather build it into the cppdb library itself</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">cppcms</remote-id>
+	</upstream>
 </pkgmetadata>

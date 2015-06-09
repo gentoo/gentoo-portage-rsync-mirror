@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/backport-util-concurrent
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.32 2010/06/30 20:37:54 caster Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/backport-util-concurrent/ChangeLog,v 1.33 2015/06/09 13:29:46 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   30 Jun 2010; Vlastimil Babka <caster@gentoo.org>
   -backport-util-concurrent-3.0-r1.ebuild:
@@ -153,4 +156,3 @@
   29 Jun 2005; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
   +backport-util-concurrent-1.1.01.ebuild:
   new packages, ebuild contributed by Josh Nichols <nichoj@alum.rpi.edu>
-

@@ -5,4 +5,7 @@
 	<longdescription>
 		Library for working with URIs, including parsing, rendering, merging, escaping
 	</longdescription>
+	<upstream>
+		<remote-id type="gitorious">uri</remote-id>
+	</upstream>
 </pkgmetadata>

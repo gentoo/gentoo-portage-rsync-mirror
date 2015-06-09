@@ -8,4 +8,7 @@
 		directing the browser to a supplied url. In most cases the browser
 		opened will be the user's default browser.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">browserlaunch2</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<longdescription lang="en">
 		A .NET configuration library
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">nini</remote-id>
+	</upstream>
 </pkgmetadata>

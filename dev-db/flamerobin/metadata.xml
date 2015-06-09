@@ -9,4 +9,7 @@
 	FlameRobin is lightweight (small footprint, fast execution) and
 	dependent only on other Open Source software
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">flamerobin</remote-id>
+	</upstream>
 </pkgmetadata>

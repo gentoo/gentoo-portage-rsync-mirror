@@ -1,8 +1,10 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.3.3.ebuild,v 1.1 2013/12/06 12:25:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/cbflib/cbflib-0.9.3.3.ebuild,v 1.2 2015/06/09 13:09:06 jlec Exp $
 
 EAPI=5
+
+CMAKE_MAKEFILE_GENERATOR=emake
 
 inherit cmake-utils eutils flag-o-matic fortran-2 toolchain-funcs
 
@@ -40,7 +42,7 @@ src_prepare(){
 
 	append-fflags -fno-range-check
 
-	tc-export CC CXX AR RANLIB
+	tc-export CC CXX AR RANLIB FC F77
 	cmake-utils_src_prepare
 }
 

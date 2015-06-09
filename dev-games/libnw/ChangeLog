@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/libnw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/ChangeLog,v 1.14 2015/03/12 10:06:24 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/libnw/ChangeLog,v 1.15 2015/06/09 13:26:25 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   12 Mar 2015; Agostino Sarubbo <ago@gentoo.org> libnw-1.30.02.ebuild:
   Stable for amd64, wrt bug #542740

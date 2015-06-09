@@ -8,4 +8,7 @@
 		used as a proxy for gdb or as an independent debugger with support for
 		programming, disassembly, and reverse engineering.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">mspdebug</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -4,4 +4,7 @@
 	<maintainer>
 		<email>jlec@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="launchpad">zeitgeist-sharp</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription lang="en">
+	<herd>games</herd>
+	<longdescription lang="en">
 Mercator is primarily aimed at terrain for multiplayer online games and forms
 one of the WorldForge core libraries. It is intended to be used as a terrain
 library on the client, while a subset of features are useful on the server.
@@ -19,4 +19,7 @@ of the shape of the terrain. Finer control is implemented by allowing geometric
 modifications - for example, a polygonal area might be flattened, or a crater
 could be applied. 
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">worldforge</remote-id>
+	</upstream>
 </pkgmetadata>

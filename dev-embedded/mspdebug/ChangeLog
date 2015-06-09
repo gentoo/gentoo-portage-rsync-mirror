@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/mspdebug
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/ChangeLog,v 1.18 2015/01/19 18:12:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/mspdebug/ChangeLog,v 1.19 2015/06/09 13:22:21 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   19 Jan 2015; Tim Harder <radhermit@gentoo.org> metadata.xml:
   Drop myself from metadata.
