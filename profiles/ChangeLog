@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10084 2015/06/09 02:56:55 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10085 2015/06/09 05:27:37 graaff Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> updates/2Q-2015:
+  Move dev-ruby/temple versions into the correct slot.
 
   09 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Fix gnome-3.16 overmasking, thanks to floppym for noticing

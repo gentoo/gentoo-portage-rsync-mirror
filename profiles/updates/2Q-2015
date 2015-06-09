@@ -231,3 +231,4 @@ move kde-base/zeroconf-ioslave kde-apps/zeroconf-ioslave
 move dev-db/pygresql dev-python/pygresql
 slotmove =net-libs/phodav-0.4* 0 1.0
 slotmove =net-libs/phodav-2.0* 0 2.0
+slotmove =dev-ruby/temple-0.7.5 0 0.7

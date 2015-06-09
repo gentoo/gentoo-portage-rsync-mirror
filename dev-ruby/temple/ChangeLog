@@ -1,6 +1,17 @@
 # ChangeLog for dev-ruby/temple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.25 2015/06/07 19:56:45 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/temple/ChangeLog,v 1.28 2015/06/09 05:25:19 graaff Exp $
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> temple-0.7.5.ebuild:
+  Update SLOT.
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> -temple-0.7.4.ebuild:
+  Cleanup.
+
+*temple-0.7.6 (09 Jun 2015)
+
+  09 Jun 2015; Hans de Graaff <graaff@gentoo.org> +temple-0.7.6.ebuild:
+  Version bump. Use slot 0.7 to match dev-ruby/slim expectations.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
