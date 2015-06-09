@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/storm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.19 2015/02/21 09:21:42 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/storm/ChangeLog,v 1.20 2015/06/09 17:09:42 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   21 Feb 2015; Ian Delaney <idella4@gentoo.org>
   -files/storm-0.20-exclude-tests.patch, storm-0.20-r1.ebuild:

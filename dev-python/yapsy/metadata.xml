@@ -6,4 +6,7 @@
 		<email>pinkbyte@gentoo.org</email>
 		<name>Sergey Popov</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">yapsy</remote-id>
+	</upstream>
 </pkgmetadata>

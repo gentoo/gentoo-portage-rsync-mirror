@@ -12,4 +12,7 @@
 		completely different architecture and primarily aims to work with jabberd2 -
 		the new Open Source Jabber Server.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">xmpppy</remote-id>
+	</upstream>
 </pkgmetadata>

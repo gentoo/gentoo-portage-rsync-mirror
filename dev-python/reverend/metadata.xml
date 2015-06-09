@@ -8,5 +8,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">Reverend</remote-id>
+		<remote-id type="sourceforge">reverend</remote-id>
 	</upstream>
 </pkgmetadata>
