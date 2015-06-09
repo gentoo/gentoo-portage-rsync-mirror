@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150604.ebuild,v 1.1 2015/06/08 19:34:50 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-net/go-net-1.4.2_p20150604.ebuild,v 1.2 2015/06/09 06:52:46 zmedico Exp $
 
 EAPI=5
 
@@ -30,7 +30,9 @@ src_unpack() {
 src_prepare() {
 	# disable broken tests
 	sed -e 's:TestReadProppatch(:_\0:' -i webdav/xml_test.go || die
-	sed -e 's:TestPingGoogle(:_\0:' -i icmp/ping_test.go || die
+	sed -e 's:TestPingGoogle(:_\0:' \
+		-e 's:TestNonPrivilegedPing(:_\0:' \
+		-i icmp/ping_test.go || die
 }
 
 src_compile() {
