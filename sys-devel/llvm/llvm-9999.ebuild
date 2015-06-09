@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.111 2015/06/09 16:54:50 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.112 2015/06/09 21:17:33 mgorny Exp $
 
 EAPI=5
 
@@ -215,6 +215,8 @@ multilib_src_configure() {
 		-DLLVM_ENABLE_FFI=$(usex libffi)
 		-DLLVM_ENABLE_TERMINFO=$(usex ncurses)
 		-DLLVM_ENABLE_ASSERTIONS=$(usex debug)
+		-DLLVM_ENABLE_EH=ON
+		-DLLVM_ENABLE_RTTI=ON
 
 		-DWITH_POLLY=OFF # TODO
 

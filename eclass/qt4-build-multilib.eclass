@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.18 2015/06/09 20:16:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.19 2015/06/09 21:12:50 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -107,6 +107,9 @@ multilib_src_install_all()	{ qt4_multilib_src_install_all; }
 # @DEFAULT_UNSET
 # @DESCRIPTION:
 # List of macros that must be defined in QtCore/qconfig.h
+
+
+######  Phase functions  ######
 
 # @FUNCTION: qt4-build-multilib_src_unpack
 # @DESCRIPTION:
@@ -459,16 +462,18 @@ qt4_multilib_src_install() {
 		fi
 	fi
 
-	# move pkgconfig files to the correct directory
+	# move pkgconfig files to the correct location
+	eshopts_push -s nullglob
 	local pcfile
 	for pcfile in "${D}/${QT4_LIBDIR}"/pkgconfig/*.pc; do
 		dodir /usr/$(get_libdir)/pkgconfig
 		mv "${pcfile}" "${ED}"/usr/$(get_libdir)/pkgconfig || die
 	done
+	eshopts_pop
 	rmdir "${D}/${QT4_LIBDIR}"/pkgconfig || die
 
-	install_qconfigs
-	fix_includes
+	qt4_install_module_qconfigs
+	qt4_symlink_framework_headers
 }
 
 qt4_multilib_src_install_all() {
@@ -510,15 +515,18 @@ qt4_multilib_src_install_all() {
 # Regenerate configuration, plus throw a message about possible
 # breakages and proposed solutions.
 qt4-build-multilib_pkg_postinst() {
-	generate_qconfigs
+	qt4_regenerate_global_qconfigs
 }
 
 # @FUNCTION: qt4-build-multilib_pkg_postrm
 # @DESCRIPTION:
 # Regenerate configuration when the package is completely removed.
 qt4-build-multilib_pkg_postrm() {
-	generate_qconfigs
+	qt4_regenerate_global_qconfigs
 }
+
+
+######  Public helpers  ######
 
 # @FUNCTION: qt_use
 # @USAGE: <flag> [feature] [enableval]
@@ -622,11 +630,11 @@ qt4_qmake() {
 		|| die "qmake failed (${projectdir})"
 }
 
-# @FUNCTION: install_qconfigs
+# @FUNCTION: qt4_install_module_qconfigs
 # @INTERNAL
 # @DESCRIPTION:
-# Install gentoo-specific mkspecs configurations.
-install_qconfigs() {
+# Creates and installs gentoo-specific ${PN}-qconfig.{h,pri} files.
+qt4_install_module_qconfigs() {
 	local x
 	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} ]]; then
 		for x in QCONFIG_ADD QCONFIG_REMOVE; do
@@ -645,11 +653,12 @@ install_qconfigs() {
 	fi
 }
 
-# @FUNCTION: generate_qconfigs
+# @FUNCTION: qt4_regenerate_global_qconfigs
 # @INTERNAL
 # @DESCRIPTION:
-# Generates gentoo-specific qconfig.{h,pri}.
-generate_qconfigs() {
+# Generates Gentoo-specific qconfig.{h,pri} according to the build configuration.
+# Don't call die here because dying in pkg_post{inst,rm} only makes things worse.
+qt4_regenerate_global_qconfigs() {
 	if [[ -n ${QCONFIG_ADD} || -n ${QCONFIG_REMOVE} || -n ${QCONFIG_DEFINE} || ${PN} == qtcore ]]; then
 		local x qconfig_add qconfig_remove qconfig_new
 		for x in "${ROOT}${QT4_DATADIR}"/mkspecs/gentoo/*-qconfig.pri; do
@@ -658,8 +667,6 @@ generate_qconfigs() {
 			qconfig_remove+=" $(sed -n 's/^QCONFIG_REMOVE=//p' "${x}")"
 		done
 
-		# these error checks do not use die because dying in pkg_post{inst,rm}
-		# just makes things worse.
 		if [[ -e "${ROOT}${QT4_DATADIR}"/mkspecs/gentoo/qconfig.pri ]]; then
 			# start with the qconfig.pri that qtcore installed
 			if ! cp "${ROOT}${QT4_DATADIR}"/mkspecs/gentoo/qconfig.pri \
@@ -705,11 +712,11 @@ generate_qconfigs() {
 	fi
 }
 
-# @FUNCTION: fix_includes
+# @FUNCTION: qt4_symlink_framework_headers
 # @DESCRIPTION:
-# For MacOS X we need to add some symlinks when frameworks are
-# being used, to avoid complications with some more or less stupid packages.
-fix_includes() {
+# On OS X we need to add some symlinks when frameworks are being
+# used, to avoid complications with some more or less stupid packages.
+qt4_symlink_framework_headers() {
 	if use_if_iuse aqua && [[ ${CHOST##*-darwin} -ge 9 ]]; then
 		local frw dest f h rdir
 		# Some packages tend to include <Qt/...>
