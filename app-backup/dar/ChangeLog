@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/dar
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.58 2015/02/08 15:18:15 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/dar/ChangeLog,v 1.59 2015/06/09 09:02:37 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *dar-2.4.17 (08 Feb 2015)
 

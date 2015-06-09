@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>media-optical</herd>
+	<upstream>
+		<remote-id type="sourceforge">mp3burn</remote-id>
+	</upstream>
 </pkgmetadata>

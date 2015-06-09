@@ -8,4 +8,7 @@
   <use>
     <flag name="nautilus">Build gnome-base/nautilus extension</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">deja-dup</remote-id>
+  </upstream>
 </pkgmetadata>

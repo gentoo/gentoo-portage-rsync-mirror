@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/sarab
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/ChangeLog,v 1.16 2015/04/19 22:44:55 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/sarab/ChangeLog,v 1.17 2015/06/09 09:05:34 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   19 Apr 2015; Manuel Rüger <mrueg@gentoo.org>
   -files/0.2.4-better-defaults-gentoo.patch,

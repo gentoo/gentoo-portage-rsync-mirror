@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xcdroast
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.72 2012/05/03 07:51:50 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.73 2015/06/09 09:29:04 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> xcdroast-0.98_alpha16.ebuild,
   xcdroast-0.98_alpha16-r1.ebuild:

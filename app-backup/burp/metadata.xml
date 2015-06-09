@@ -11,4 +11,7 @@
 		by each backup. It also uses VSS (Volume Shadow Copy Service) to make
 		snapshots when backing up Windows computers.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">burp</remote-id>
+	</upstream>
 </pkgmetadata>

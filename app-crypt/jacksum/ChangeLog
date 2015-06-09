@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/jacksum
-# Copyright 2000-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.30 2007/10/30 21:07:42 betelgeuse Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/jacksum/ChangeLog,v 1.31 2015/06/09 09:30:33 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   30 Oct 2007; Petteri Räty <betelgeuse@gentoo.org> -jacksum-1.6.0.ebuild:
   Delete generation 1 ebuild.
@@ -103,4 +106,3 @@
   metadata.xml:
   Initial Import. Closes #46458.
   Thanks to Alexandru Toma <flash3001@yahoo.com> for the initial ebuild.
-

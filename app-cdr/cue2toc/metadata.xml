@@ -10,4 +10,7 @@
 		of session type and conversion of data files by user configurable commands
 		based on file name extension matching.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">cue2toc</remote-id>
+	</upstream>
 </pkgmetadata>

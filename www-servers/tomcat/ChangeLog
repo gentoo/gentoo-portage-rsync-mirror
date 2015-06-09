@@ -1,6 +1,14 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.355 2015/06/08 22:28:50 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.356 2015/06/09 09:24:32 monsieurp Exp $
+
+*tomcat-8.0.22-r1 (09 Jun 2015)
+*tomcat-7.0.59-r1 (09 Jun 2015)
+*tomcat-8.0.23-r1 (09 Jun 2015)
+
+  09 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +tomcat-7.0.59-r1.ebuild,
+  +tomcat-8.0.22-r1.ebuild, +tomcat-8.0.23-r1.ebuild:
+  Remove jakarta-jstl dependency. Fix bug 551032.
 
   08 Jun 2015; Patrice Clement <monsieurp@gentoo.org> tomcat-7.0.59.ebuild:
   Add back ~ppc and ~ppc64 keywords to make repoman happy.

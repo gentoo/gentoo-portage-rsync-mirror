@@ -10,4 +10,7 @@
 		can be extended via plugins. There is plugins to fill CD-TEXT blocks
 		and perform audio file conversion.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">mkcdtoc</remote-id>
+	</upstream>
 </pkgmetadata>

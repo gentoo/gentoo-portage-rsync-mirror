@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/xbiso
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.19 2015/01/10 06:01:22 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xbiso/ChangeLog,v 1.20 2015/06/09 09:28:41 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *xbiso-0.6.1-r2 (10 Jan 2015)
 

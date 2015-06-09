@@ -7,10 +7,13 @@
 		<name>Thomas Beierlein</name>
 	</maintainer>
 	<use>
-		<flag name='bacula-clientonly'>Disable DB support, and just build a
+		<flag name="bacula-clientonly">Disable DB support, and just build a
 			client</flag>
-		<flag name='bacula-nodir'>Disable building of director</flag>
-		<flag name='bacula-nosd'>Disable building of storage daemon</flag>
-		<flag name='logwatch'>Install support files for logwatch</flag>
+		<flag name="bacula-nodir">Disable building of director</flag>
+		<flag name="bacula-nosd">Disable building of storage daemon</flag>
+		<flag name="logwatch">Install support files for logwatch</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">bacula</remote-id>
+	</upstream>
 </pkgmetadata>

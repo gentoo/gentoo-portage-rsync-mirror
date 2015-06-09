@@ -1,6 +1,9 @@
 # ChangeLog for app-backup/bacula
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.178 2015/05/06 05:38:52 tomjbe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-backup/bacula/ChangeLog,v 1.179 2015/06/09 09:01:25 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   06 May 2015; Thomas Beierlein <tomjbe@gentoo.org> bacula-5.0.3-r4.ebuild,
   bacula-5.2.13-r3.ebuild, -bacula-7.0.5.ebuild, bacula-7.0.5-r1.ebuild:

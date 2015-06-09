@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>xbox</herd>
   <longdescription>Tool for extracting and creating optimised Xbox ISO images</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">extract-xiso</remote-id>
+  </upstream>
 </pkgmetadata>

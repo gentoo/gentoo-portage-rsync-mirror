@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/extract-xiso
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.16 2008/10/25 20:55:24 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/ChangeLog,v 1.17 2015/06/09 09:25:24 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   25 Oct 2008; Mike Frysinger <vapier@gentoo.org> extract-xiso-2.5.ebuild:
   Redo building so we respect user settings #243530.
@@ -66,4 +69,3 @@
   30 Jun 2004; Chris Bainbridge <chrb@gentoo.org> +metadata.xml,
   +extract-xiso-2.4_beta2.ebuild:
   This package was submitted by Trejkaz Xaoza in bug #44693
-

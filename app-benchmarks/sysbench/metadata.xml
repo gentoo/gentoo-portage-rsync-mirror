@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>benchmarks</herd>
 	<use>
-	<flag name='aio'>Enable libaio support</flag>
+		<flag name="aio">Enable libaio support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">sysbench</remote-id>
+	</upstream>
 </pkgmetadata>

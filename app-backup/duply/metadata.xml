@@ -12,4 +12,7 @@
   </maintainer>
   <longdescription lang="en">
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">ftplicity</remote-id>
+  </upstream>
 </pkgmetadata>

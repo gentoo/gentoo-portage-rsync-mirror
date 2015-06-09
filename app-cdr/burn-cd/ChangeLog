@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/burn-cd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/burn-cd/ChangeLog,v 1.4 2014/12/26 19:51:34 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/burn-cd/ChangeLog,v 1.5 2015/06/09 09:08:20 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *burn-cd-1.8.0-r1 (26 Dec 2014)
 
