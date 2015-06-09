@@ -5,5 +5,7 @@
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau (Tommy[D])</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">bitcollider</remote-id>
+	</upstream>
 </pkgmetadata>
-

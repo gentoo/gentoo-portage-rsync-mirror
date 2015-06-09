@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>java</herd>
-<longdescription>
+	<herd>java</herd>
+	<longdescription>
 The Tcl/Java project's goal is to make integrating the Java platform and the
 Tcl scripting language as easy as possible. The project actually consists of
 two distinct packages, called Tcl Blend and Jacl. It is important to
@@ -32,4 +32,7 @@ procedure from a Java method or implement Tcl procudures in Java. The flexible
 API and wealth of implementation options provided by the Tcl/Java project make
 integrating Tcl and Java easy.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">tcljava</remote-id>
+	</upstream>
 </pkgmetadata>

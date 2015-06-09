@@ -9,4 +9,7 @@
 		to examine returned pages either as text, an XML DOM, or containers
 		of forms, tables, and links.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">httpunit</remote-id>
+	</upstream>
 </pkgmetadata>

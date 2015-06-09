@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jclasslib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.12 2014/08/10 20:17:37 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jclasslib/ChangeLog,v 1.13 2015/06/09 13:42:26 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> jclasslib-3.0-r1.ebuild:
   QA: drop trailing '.' from DESCRIPTION

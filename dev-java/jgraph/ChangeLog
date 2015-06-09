@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgraph
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.35 2014/08/03 15:53:41 sera Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.36 2015/06/09 13:45:47 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -jgraph-5.10.1.2.ebuild:
   Remove old
@@ -125,4 +128,3 @@
   15 Feb 2004; Chris Aniszczyk <zx@gentoo.org> jgraph-3.1.ebuild:
   Initial Import.
   Thanks to Stanislas Nanchen <stan@hood.ch> for the suggestion. Bug #30578
-

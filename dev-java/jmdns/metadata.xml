@@ -6,5 +6,8 @@
 		It supports service discovery and service registration.
 		It is fully interoperable with Apple's Rendezvous.
 	</longdescription>
-<herd>java</herd>
+	<herd>java</herd>
+	<upstream>
+		<remote-id type="sourceforge">jmdns</remote-id>
+	</upstream>
 </pkgmetadata>

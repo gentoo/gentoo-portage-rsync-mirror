@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sablecc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.24 2013/05/09 13:23:22 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.25 2015/06/09 14:00:52 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 May 2013; Tom Wijsman <TomWij@gentoo.org> sablecc-3.7.ebuild:
   Drop deprecated Java 1.4 filter, drop src_unpack and make use of java_prepare.

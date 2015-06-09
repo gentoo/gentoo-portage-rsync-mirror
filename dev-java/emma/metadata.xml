@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>java</herd>
-  <longdescription lang="en">
+	<herd>java</herd>
+	<longdescription lang="en">
 		EMMA is an open-source toolkit for measuring and reporting Java code
 		coverage. EMMA distinguishes itself from other tools by going after
 		a unique feature combination: support for large-scale enterprise
@@ -10,7 +10,10 @@
 		and iterative. Every developer on your team can now get code coverage
 		for free and they can get it fast
 	</longdescription>
-  <use>
-    <flag name="launcher">Install /usr/bin/emma. Collides with <pkg>sci-biology/emboss</pkg>.</flag>
-  </use>
+	<use>
+		<flag name="launcher">Install /usr/bin/emma. Collides with <pkg>sci-biology/emboss</pkg>.</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">emma</remote-id>
+	</upstream>
 </pkgmetadata>

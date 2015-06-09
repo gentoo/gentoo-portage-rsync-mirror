@@ -6,4 +6,7 @@
 		User interface toolkit for building highly interactive visualizations
 		of structured and unstructured data.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">prefuse</remote-id>
+	</upstream>
 </pkgmetadata>

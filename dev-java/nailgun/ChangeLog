@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/nailgun
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.13 2014/06/17 11:24:08 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nailgun/ChangeLog,v 1.14 2015/06/09 13:57:02 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -files/0.7.1-Makefile.patch,
   -nailgun-0.7.1.ebuild:

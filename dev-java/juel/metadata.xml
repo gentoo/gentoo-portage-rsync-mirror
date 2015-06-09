@@ -4,5 +4,7 @@
 	<herd>java</herd>
 	<longdescription lang="en">
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">juel</remote-id>
+	</upstream>
 </pkgmetadata>
-

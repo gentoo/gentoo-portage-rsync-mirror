@@ -6,4 +6,7 @@
 		DBUnit is a JUnit extension targeted for database-driven projects
 		that, puts your database into a known state between test runs.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">dbunit</remote-id>
+	</upstream>
 </pkgmetadata>

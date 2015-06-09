@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jazzy
-# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jazzy/ChangeLog,v 1.3 2009/03/20 18:54:58 josejx Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jazzy/ChangeLog,v 1.4 2015/06/09 13:41:15 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   20 Mar 2009; Joseph Jezak <josejx@gentoo.org> jazzy-0.5.2.ebuild:
   Marked ~ppc for bug #215151.
@@ -13,4 +16,3 @@
   28 Mar 2008; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
   +jazzy-0.5.2.ebuild:
   Initial addition. Ebuild written by me. Fixes bug #215185.
-

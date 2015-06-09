@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/byaccj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.16 2014/08/03 10:26:35 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/byaccj/ChangeLog,v 1.17 2015/06/09 13:31:13 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 Aug 2014; Ralph Sennhauser <sera@gentoo.org> -byaccj-1.15.ebuild:
   Remove old

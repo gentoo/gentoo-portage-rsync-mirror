@@ -6,4 +6,7 @@
 		SSHTools is a suite of Java SSH applications providing a Java SSH API,
 		SSH Terminal, SSH secured VNC client, SFTP client and SSH Daemon.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">sshtools</remote-id>
+	</upstream>
 </pkgmetadata>

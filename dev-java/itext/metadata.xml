@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>java</herd>
-  <longdescription>
+	<herd>java</herd>
+	<longdescription>
 		iText is a library that allows you to generate PDF files on
 		the fly. The iText classes are very useful for people who need
 		to generate read-only, platform independent documents
@@ -12,8 +12,11 @@
 		iText and PDF you can control exactly how your servlet's output
 		will look.
 	</longdescription>
-  <use>
-    <flag name="rtf">Build and provide libraries for rich text format</flag>
-    <flag name="rups">Build and provide GUI for Reading/Updating PDF Syntax</flag>
-  </use>
+	<use>
+		<flag name="rtf">Build and provide libraries for rich text format</flag>
+		<flag name="rups">Build and provide GUI for Reading/Updating PDF Syntax</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">itext</remote-id>
+	</upstream>
 </pkgmetadata>

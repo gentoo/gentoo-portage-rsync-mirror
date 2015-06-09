@@ -6,4 +6,7 @@
 		JUnit-addons is a collection of helper classes for JUnit.
 		This library can be used with both JUnit 3.7 and JUnit 3.8.x
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">junit-addons</remote-id>
+	</upstream>
 </pkgmetadata>

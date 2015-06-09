@@ -7,5 +7,7 @@
 		the modeling, analysis, and visualization of data that can be
 		represented as a graph or network.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">jung</remote-id>
+	</upstream>
 </pkgmetadata>
-

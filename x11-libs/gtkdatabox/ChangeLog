@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkdatabox
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.12 2013/06/29 09:37:06 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkdatabox/ChangeLog,v 1.13 2015/06/09 13:33:34 xmw Exp $
+
+  09 Jun 2015; Michael Weber <xmw@gentoo.org> gtkdatabox-0.9.2.0.ebuild:
+  Drop wrong dependency on glade:3 (bug 551288).
 
   29 Jun 2013; Agostino Sarubbo <ago@gentoo.org> gtkdatabox-0.9.2.0.ebuild:
   Stable for x86, wrt bug #474832

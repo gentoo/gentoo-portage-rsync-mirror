@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/emma
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.21 2010/01/20 02:37:10 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/emma/ChangeLog,v 1.22 2015/06/09 13:35:55 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   20 Jan 2010; Brent Baude <ranger@gentoo.org> emma-2.0.5312-r2.ebuild:
   Marking emma-2.0.5312-r2 ppc64 for bug 281006
@@ -85,4 +88,3 @@
   12 Jan 2007; Petteri Räty <betelgeuse@gentoo.org> +metadata.xml,
   +emma-2.0.5312.ebuild:
   Initial addition for emma (a Java code coverage tool). Fixes bug #157478.
-

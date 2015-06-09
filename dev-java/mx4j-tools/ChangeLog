@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/mx4j-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/ChangeLog,v 1.16 2012/12/02 08:31:21 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-tools/ChangeLog,v 1.17 2015/06/09 13:56:25 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   02 Dec 2012; Ulrich Müller <ulm@gentoo.org> mx4j-tools-3.0.1-r2.ebuild,
   mx4j-tools-3.0.2.ebuild:
@@ -73,4 +76,3 @@
   +mx4j-tools-3.0.1.ebuild:
   New split mx4j. Resolves bug #152924. Thanks to Alex Tarkovsky
   <alextarkovsky@gmail.com>.
-

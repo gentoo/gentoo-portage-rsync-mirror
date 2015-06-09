@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jusb
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.7 2011/11/25 02:01:58 robbat2 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jusb/ChangeLog,v 1.8 2015/06/09 13:54:05 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   25 Nov 2011; Robin H. Johnson <robbat2@gentoo.org> jusb-0.4.4-r1.ebuild:
   Make CONFIG_CHECK non-fatal in case there are no sources/config to validate
@@ -32,4 +35,3 @@
   +jusb-0.4.4.ebuild:
   Initial import, ebuild and patches contributed by Petteri Räty
   <petteri.raty@welho.com>. Fixes #89487
-

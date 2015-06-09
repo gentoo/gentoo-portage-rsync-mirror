@@ -5,4 +5,7 @@
 	<longdescription>
 	Java Interface to Tobias Oetiker's RRDtool
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">opennms</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jformatstring
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jformatstring/ChangeLog,v 1.4 2015/03/14 14:58:54 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jformatstring/ChangeLog,v 1.5 2015/06/09 13:45:02 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *jformatstring-2.0.3 (14 Mar 2015)
 

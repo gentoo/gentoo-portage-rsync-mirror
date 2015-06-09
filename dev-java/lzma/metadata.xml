@@ -6,5 +6,7 @@
 		<name>Thomas Sachau (Tommy[D])</name>
 	</maintainer>
 	<herd>java</herd>
+	<upstream>
+		<remote-id type="sourceforge">sevenzip</remote-id>
+	</upstream>
 </pkgmetadata>
-

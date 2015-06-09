@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jibx
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/ChangeLog,v 1.15 2012/10/19 08:28:54 ottxor Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jibx/ChangeLog,v 1.16 2015/06/09 13:46:50 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   19 Oct 2012; Christoph Junghans <ottxor@gentoo.org> jibx-1.1.5-r1.ebuild:
   added prefix support (bug #435576)

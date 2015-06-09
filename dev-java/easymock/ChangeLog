@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/easymock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/ChangeLog,v 1.5 2015/06/09 12:23:56 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/easymock/ChangeLog,v 1.6 2015/06/09 13:34:35 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 Jun 2015; Patrice Clement <monsieurp@gentoo.org> easymock-3.2-r1.ebuild:
   Revert previous commit wrt marking the package stable.
