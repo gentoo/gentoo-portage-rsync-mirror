@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.12.2.ebuild,v 1.3 2014/07/23 15:17:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-3.16.2.ebuild,v 1.1 2015/06/09 15:38:45 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,8 +15,8 @@ LICENSE="GPL-2+ LGPL-2+ FDL-1.1"
 SLOT="0"
 
 # profiling?
-IUSE="debug exif gnome +introspection packagekit +previewer sendto tracker xmp"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
+IUSE="exif gnome +introspection packagekit +previewer sendto tracker xmp"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sh ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~arm-linux ~x86-linux"
 
 # FIXME: tests fails under Xvfb, but pass when building manually
 # "FAIL: check failed in nautilus-file.c, line 8307"
@@ -26,15 +26,14 @@ RESTRICT="test"
 # Require {glib,gdbus-codegen}-2.30.0 due to GDBus API changes between 2.29.92
 # and 2.30.0
 COMMON_DEPEND="
-	>=dev-libs/glib-2.35.3:2
+	>=dev-libs/glib-2.43.4:2[dbus]
 	>=x11-libs/pango-1.28.3
-	>=x11-libs/gtk+-3.11.6:3[introspection?]
+	>=x11-libs/gtk+-3.15.2:3[introspection?]
 	>=dev-libs/libxml2-2.7.8:2
 	>=gnome-base/gnome-desktop-3:3=
 
 	gnome-base/dconf
 	>=gnome-base/gsettings-desktop-schemas-3.8.0
-	>=x11-libs/libnotify-0.7:=
 	x11-libs/libX11
 	x11-libs/libXext
 	x11-libs/libXrender
@@ -80,13 +79,10 @@ src_prepare() {
 			close the previewer, press space again."
 	fi
 
-	# Restore the nautilus-2.x Delete shortcut (Ctrl+Delete will still work);
-	# bug #393663
-	epatch "${FILESDIR}/${PN}-3.5.91-delete.patch"
-
 	# Remove -D*DEPRECATED flags. Don't leave this for eclass! (bug #448822)
 	sed -e 's/DISABLE_DEPRECATED_CFLAGS=.*/DISABLE_DEPRECATED_CFLAGS=/' \
 		-i configure || die "sed failed"
+
 	gnome2_src_prepare
 }
 
@@ -95,7 +91,6 @@ src_configure() {
 	gnome2_src_configure \
 		--disable-profiling \
 		--disable-update-mimedb \
-		$(use_enable debug) \
 		$(use_enable exif libexif) \
 		$(use_enable introspection) \
 		$(use_enable packagekit) \

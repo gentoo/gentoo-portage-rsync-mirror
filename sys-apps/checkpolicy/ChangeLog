@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/checkpolicy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.87 2015/05/10 09:07:48 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkpolicy/ChangeLog,v 1.88 2015/06/09 15:46:14 swift Exp $
+
+*checkpolicy-9999 (09 Jun 2015)
+
+  09 Jun 2015; Sven Vermeulen <swift@gentoo.org> +checkpolicy-9999.ebuild:
+  Adding checkpolicy-9999 to better support upstream integrations
 
   10 May 2015; Jason Zaman <perfinion@gentoo.org> checkpolicy-2.4.ebuild:
   stabilize selinux 2.4 userland

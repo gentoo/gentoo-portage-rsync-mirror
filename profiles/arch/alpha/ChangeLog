@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/Alpha profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.224 2015/06/09 11:00:24 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/alpha/ChangeLog,v 1.225 2015/06/09 15:35:00 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
+  Add gnome-base/gvfs nfs USE mask, bug #551576 ChangeLog package.use.mask
 
   09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   Add dev-libs/libpeas USE mask, bug #551540.

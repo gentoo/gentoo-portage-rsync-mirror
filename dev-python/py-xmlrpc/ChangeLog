@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/py-xmlrpc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.29 2014/10/17 11:42:06 idella4 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/py-xmlrpc/ChangeLog,v 1.30 2015/06/09 15:53:53 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *py-xmlrpc-0.9 (17 Oct 2014)
 

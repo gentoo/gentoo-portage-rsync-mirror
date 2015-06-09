@@ -5,4 +5,7 @@
 	<longdescription>
 		Kaa-Imlib2 is a python module for Imlib2.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">freevo</remote-id>
+	</upstream>
 </pkgmetadata>

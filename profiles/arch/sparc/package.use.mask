@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.196 2015/06/09 11:03:18 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.197 2015/06/09 15:36:10 eva Exp $
+
+# Gilles Dartiguelongue <eva@gentoo.org> (09 Jun 2015)
+# net-fs/libnfs lacks sparc keyword, bug #551576
+gnome-base/gvfs nfs
 
 # Gilles Dartiguelongue <eva@gentoo.org> (09 Jun 2015)
 # dev-lang/luajit and dev-lua/lgi and lack sparc keyword, bug #551540

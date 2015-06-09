@@ -8,4 +8,7 @@
 		media files. Attributes like codec, length, resolution,
 		audio/video/subtitle tracks, and chapters are also returned.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">freevo</remote-id>
+	</upstream>
 </pkgmetadata>

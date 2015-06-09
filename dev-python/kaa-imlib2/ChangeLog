@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/kaa-imlib2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.20 2015/04/08 08:05:22 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kaa-imlib2/ChangeLog,v 1.21 2015/06/09 15:31:50 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> kaa-imlib2-0.2.3-r2.ebuild:
   Drop old Python implementations

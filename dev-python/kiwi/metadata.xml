@@ -4,5 +4,6 @@
 	<herd>python</herd>
 	<upstream>
 		<remote-id type="pypi">kiwi-gtk</remote-id>
+		<remote-id type="launchpad">kiwi</remote-id>
 	</upstream>
 </pkgmetadata>

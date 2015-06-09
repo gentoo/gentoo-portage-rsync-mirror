@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libselinux
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.143 2015/05/10 09:01:52 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libselinux/ChangeLog,v 1.144 2015/06/09 15:35:39 swift Exp $
+
+*libselinux-9999 (09 Jun 2015)
+
+  09 Jun 2015; Sven Vermeulen <swift@gentoo.org> +libselinux-9999.ebuild:
+  Adding libselinux-9999 to better support upstream integrations
 
   10 May 2015; Jason Zaman <perfinion@gentoo.org> libselinux-2.4.ebuild:
   stabilize selinux 2.4 userland

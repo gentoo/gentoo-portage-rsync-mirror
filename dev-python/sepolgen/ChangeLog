@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/sepolgen
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.53 2015/06/08 15:36:16 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/sepolgen/ChangeLog,v 1.54 2015/06/09 15:39:57 swift Exp $
+
+*sepolgen-9999 (09 Jun 2015)
+
+  09 Jun 2015; Sven Vermeulen <swift@gentoo.org> +sepolgen-9999.ebuild:
+  Adding sepolgen-9999 to better support upstream integrations
 
   08 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Correct remote id

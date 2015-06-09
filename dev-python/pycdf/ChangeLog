@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycdf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.15 2015/01/02 03:23:38 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycdf/ChangeLog,v 1.16 2015/06/09 15:56:29 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *pycdf-0.6.3-r1 (02 Jan 2015)
 

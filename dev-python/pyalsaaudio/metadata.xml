@@ -4,5 +4,6 @@
 	<herd>python</herd>
 	<upstream>
 		<remote-id type="pypi">pyalsaaudio</remote-id>
+		<remote-id type="sourceforge">pyalsaaudio</remote-id>
 	</upstream>
 </pkgmetadata>

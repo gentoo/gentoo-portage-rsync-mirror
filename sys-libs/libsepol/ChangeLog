@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/libsepol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.75 2015/05/10 09:01:24 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsepol/ChangeLog,v 1.76 2015/06/09 15:34:29 swift Exp $
+
+*libsepol-9999 (09 Jun 2015)
+
+  09 Jun 2015; Sven Vermeulen <swift@gentoo.org> +libsepol-9999.ebuild:
+  Adding libsepol-9999 to better support upstream integrations
 
   10 May 2015; Jason Zaman <perfinion@gentoo.org> libsepol-2.4.ebuild:
   stabilize selinux 2.4 userland
