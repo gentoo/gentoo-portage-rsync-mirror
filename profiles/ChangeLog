@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10086 2015/06/09 13:40:13 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10087 2015/06/09 22:57:57 eva Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> base/package.use.force,
+  base/package.use.mask:
+  Add package.use tweaks for net-libs/webkit-gtk-2.8.
 
   09 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org> package.mask:
   Fix cogl mask, thanks to Gilles for noticing

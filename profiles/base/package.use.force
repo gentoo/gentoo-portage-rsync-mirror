@@ -1,6 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.55 2015/06/02 09:15:35 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.force,v 1.56 2015/06/09 22:57:57 eva Exp $
+
+# Gilles Dartiguelongue <eva@gentoo.org> (25 May 2015)
+# webkit fails to build with USE=wayland, bug #549228
+# https://bugs.webkit.org/show_bug.cgi?id=142879
+# https://bugs.webkit.org/show_bug.cgi?id=136831
+>=net-libs/webkit-gtk-2.8 X
 
 # Alexnader Vershilov <qnikst@gentoo.org) (04 Nov 2014)
 # Due to bug #490604: version without oracle is not supported
