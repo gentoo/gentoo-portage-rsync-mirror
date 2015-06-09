@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0-r1.ebuild,v 1.1 2014/08/21 17:45:59 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.460.0-r1.ebuild,v 1.2 2015/06/09 18:33:52 maekke Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ DESCRIPTION="interface to Thomas Boutell's gd library"
 
 LICENSE="|| ( Artistic-2 GPL-1 GPL-2 GPL-3 )" # Artistic-2 or GPL1+
 SLOT="0"
-KEYWORDS="alpha amd64 ~arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="alpha amd64 arm arm64 hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE="animgif gif jpeg png truetype xpm"
 
 RDEPEND=">=media-libs/gd-2.0.33

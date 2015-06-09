@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/klavaro
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.28 2015/06/09 11:46:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/klavaro/ChangeLog,v 1.29 2015/06/09 18:54:10 kensington Exp $
+
+  09 Jun 2015; Michael Palimaka <kensington@gentoo.org>
+  -files/klavaro-1.9.5-gold.patch, -klavaro-1.9.7.ebuild:
+  Remove old.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

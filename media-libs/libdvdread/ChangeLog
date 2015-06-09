@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libdvdread
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.106 2015/04/08 07:25:01 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdread/ChangeLog,v 1.107 2015/06/09 18:35:35 maekke Exp $
+
+  09 Jun 2015; Markus Meier <maekke@gentoo.org> libdvdread-5.0.3.ebuild:
+  arm stable, bug #535458
 
 *libdvdread-5.0.3 (08 Apr 2015)
 
