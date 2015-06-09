@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/PPC profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.334 2015/06/09 04:28:31 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ChangeLog,v 1.335 2015/06/09 11:02:33 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> ppc64/package.use.mask:
+  Add dev-libs/libpeas USE mask, bug #551540.
 
   09 Jun 2015; Jeroen Roovers <jer@gentoo.org> package.use.stable.mask,
   ppc32/package.use.stable.mask:

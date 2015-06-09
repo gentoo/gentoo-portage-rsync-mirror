@@ -36,5 +36,6 @@ Think of Wine as a compatibility layer for running Windows programs. Wine does n
 	</use>
 	<upstream>
 		<remote-id type="github">wine-compholio/wine-staging</remote-id>
+		<remote-id type="sourceforge">wine</remote-id>
 	</upstream>
 </pkgmetadata>

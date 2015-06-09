@@ -12,4 +12,7 @@
 		<name>Jesus Rivero</name>
 		<description>Proxy Maintainer. Please CC on bugs</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">fuse-emulator</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -13,7 +13,10 @@
 		<name>José Manuel Ferrer Ortiz</name>
 	</maintainer>
 	<use>
-		<flag name='gcrypt'>Use <pkg>dev-libs/libgcrypt</pkg> for low-level crypto of some
+		<flag name="gcrypt">Use <pkg>dev-libs/libgcrypt</pkg> for low-level crypto of some
 		features, including logfiles.</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">fuse-emulator</remote-id>
+	</upstream>
 </pkgmetadata>

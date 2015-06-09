@@ -1,4 +1,7 @@
 
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
+
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> unhide-20121229.ebuild,
   unhide-20130526.ebuild:
   QA: drop trailing '.' from DESCRIPTION

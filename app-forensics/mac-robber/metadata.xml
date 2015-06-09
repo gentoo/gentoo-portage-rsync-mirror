@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>forensics</herd>
-<longdescription>
+	<herd>forensics</herd>
+	<longdescription>
 mac-robber is a digital forensics and incident response tool that collects data from allocated files in a mounted file system. 
 The data can be used by the mactime tool in The Sleuth Kit to make a timeline of file activity. The mac-robber tool is based on 
 the grave-robber tool from TCT and is written in C instead of Perl. 
@@ -17,4 +17,7 @@ Sleuth Kit or other forensic tools. mac-robber is very basic C and should compil
 mac-robber on an obscure, suspect UNIX file system that has been mounted read-only on a trusted system. I have also used 
 mac-robber during investigations of common UNIX systems such as AIX.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">mac-robber</remote-id>
+	</upstream>
 </pkgmetadata>

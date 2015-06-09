@@ -16,4 +16,7 @@
   <use>
     <flag name="readline">Enables support for libreadline</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">x48.berlios</remote-id>
+  </upstream>
 </pkgmetadata>

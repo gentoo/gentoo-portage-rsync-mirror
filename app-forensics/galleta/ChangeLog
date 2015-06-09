@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/galleta
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.9 2012/11/25 09:48:01 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/galleta/ChangeLog,v 1.10 2015/06/09 11:14:54 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   25 Nov 2012; Tim Harder <radhermit@gentoo.org> galleta-20040505_p1.ebuild:
   Fix LICENSE (bug #444476 by ulm).
@@ -30,4 +33,3 @@
   13 Dec 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +galleta-20040505_p1.ebuild:
   Initial import as per bug #73300
-

@@ -9,4 +9,7 @@
 		ix86 architecture, and it will works on other architectures such as
 		linux/ppc.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge-jp">jfbterm</remote-id>
+	</upstream>
 </pkgmetadata>

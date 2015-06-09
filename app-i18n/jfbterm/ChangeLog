@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/jfbterm
-# Copyright 2000-2009 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.52 2009/02/11 04:31:00 flameeyes Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jfbterm/ChangeLog,v 1.53 2015/06/09 11:19:40 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   11 Feb 2009; Diego E. Pettenò <flameeyes@gentoo.org>
   jfbterm-0.4.7-r4.ebuild:
@@ -223,4 +226,3 @@
   31 May 2003; Masatomo Nakano <nakano@gentoo.org> jfbterm-0.3.12.ebuild,
   files/jfbterm.conf.extra, files/jfbterm.conf.xfree:
   Initial import. #20538 Thanks to Mamoru KOMACHI.
-

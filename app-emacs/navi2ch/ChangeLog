@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/navi2ch
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.73 2013/05/09 10:34:45 fauli Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/navi2ch/ChangeLog,v 1.74 2015/06/09 11:02:37 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 May 2013; Christian Faulhammer <fauli@gentoo.org> navi2ch-1.8.3-r1.ebuild,
   navi2ch-1.8.4.ebuild:
@@ -268,4 +271,3 @@
   files/50navi2ch-gentoo.el:
   Initial import, based on the ebuild submitted by Masatomo Nakano
   <nakano@gentoo.org> at GentooJP BugTrack
-

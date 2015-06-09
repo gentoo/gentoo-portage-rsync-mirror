@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.68 2015/06/04 18:47:17 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/ppc64/package.use.mask,v 1.69 2015/06/09 11:02:33 eva Exp $
+
+# Gilles Dartiguelongue <eva@gentoo.org> (09 Jun 2015)
+# dev-lang/luajit lack ppc64 keyword, bug #551540
+dev-libs/libpeas jit
 
 # James Le Cuirot <chewi@gentoo.org> (21 May 2015)
 # Mask rdeps of icedtea-web to deal with bug #549134. I had hoped to

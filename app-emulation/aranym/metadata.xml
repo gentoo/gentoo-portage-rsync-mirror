@@ -18,4 +18,7 @@
 		<flag name="lilo">Enable Linux-m68k loader</flag>
 		<flag name="usbhost">Enable NatFeat USB</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">aranym</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/gxemul
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.17 2012/11/15 21:36:08 calchan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gxemul/ChangeLog,v 1.18 2015/06/09 11:09:08 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *gxemul-0.6.0-r1 (15 Nov 2012)
 
@@ -86,4 +89,3 @@
   +files/gxemul-0.3.1-mips64-crosscc-check.patch, +gxemul-0.3.1.ebuild:
   Package Move: formerly mips64emul; now gxemul. Bump to 0.3.1, and comment
   ebuild a little more.
-

@@ -5,7 +5,6 @@
   <maintainer>
     <email>hattya@gentoo.org</email>
   </maintainer>
-
   <longdescription>
     Anthy is a free and secure Japanese kana-kanji server.  This ebuild
     includes cannadic as a server-side dictionary, so you don't need any
@@ -13,4 +12,7 @@
     app-i18n/uim(XIM, GTK+ immodule) and emacs (to enable Anthy support
     for emacs, build this package with emacs USE flag).
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge-jp">anthy</remote-id>
+  </upstream>
 </pkgmetadata>

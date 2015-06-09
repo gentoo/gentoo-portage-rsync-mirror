@@ -11,5 +11,7 @@
 		for Linux on x86 hardware containing virtualization extensions (Intel VT
 		or AMD-V).  This package contains kernel modules for kvm.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">kvm</remote-id>
+	</upstream>
 </pkgmetadata>
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.143 2015/04/20 19:17:21 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.144 2015/06/09 11:17:46 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   20 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -anthy-9100h.ebuild:
   Remove old.

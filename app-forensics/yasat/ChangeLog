@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/yasat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.13 2015/04/23 20:50:11 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/yasat/ChangeLog,v 1.14 2015/06/09 11:17:21 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *yasat-839 (23 Apr 2015)
 

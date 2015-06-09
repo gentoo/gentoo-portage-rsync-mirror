@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/fuse-utils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.16 2014/07/23 23:21:11 neurogeek Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse-utils/ChangeLog,v 1.17 2015/06/09 11:08:49 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *fuse-utils-1.1.1 (23 Jul 2014)
 

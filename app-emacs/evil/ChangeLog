@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/evil
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/ChangeLog,v 1.8 2014/03/23 11:50:20 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/evil/ChangeLog,v 1.9 2015/06/09 11:01:22 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   23 Mar 2014; Ulrich Müller <ulm@gentoo.org> -evil-1.0.5.ebuild:
   Remove old.

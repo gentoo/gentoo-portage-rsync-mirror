@@ -1,6 +1,9 @@
 # ChangeLog for app-forensics/ovaldi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.7 2014/11/02 08:08:56 swift Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/ovaldi/ChangeLog,v 1.8 2015/06/09 11:15:26 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   02 Nov 2014; Sven Vermeulen <swift@gentoo.org> ovaldi-5.10.1.2.ebuild,
   ovaldi-5.10.1.4.ebuild:

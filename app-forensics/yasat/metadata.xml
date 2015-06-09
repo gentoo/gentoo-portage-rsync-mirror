@@ -7,4 +7,7 @@
 		<name>LABBE Corentin</name>
 		<description>Upstream and Maintainer. Assign bugs to him</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">yasat</remote-id>
+	</upstream>
 </pkgmetadata>

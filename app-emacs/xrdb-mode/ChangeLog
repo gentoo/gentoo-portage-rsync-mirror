@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/xrdb-mode
-# Copyright 2000-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.14 2014/03/24 19:00:17 ulm Exp $
+# Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.15 2015/06/09 11:05:43 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   24 Mar 2014; Ulrich Müller <ulm@gentoo.org> -xrdb-mode-2.31.ebuild,
   -files/70xrdb-mode-gentoo.el:
