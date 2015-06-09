@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-dsv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.10 2015/02/01 17:26:44 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-dsv/ChangeLog,v 1.11 2015/06/09 16:44:58 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -python-dsv-1.4.1.ebuild:
   Remove old.

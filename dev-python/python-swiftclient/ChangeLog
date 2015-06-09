@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-swiftclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/ChangeLog,v 1.19 2015/06/03 21:27:07 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-swiftclient/ChangeLog,v 1.20 2015/06/09 16:52:35 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

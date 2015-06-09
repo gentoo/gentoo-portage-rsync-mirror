@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.244 2015/06/05 14:48:25 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.245 2015/06/09 16:54:50 mgorny Exp $
+
+  09 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +files/cmake/0002-cmake-Support-overriding-Sphinx-HTML-doc-install-dir.patch,
+  +files/cmake/0003-cmake-Add-an-ordering-dep-between-HTML-man-Sphinx-ta.patch,
+  +files/cmake/0004-cmake-Do-not-install-libgtest.patch, +files/cmake/clang-0001
+  -Install-clang-runtime-into-usr-lib-without-suffix.patch,
+  +files/cmake/clang-0002-cmake-Make-CLANG_LIBDIR_SUFFIX-overridable.patch, +fil
+  es/cmake/compiler-rt-0001-cmake-Install-compiler-rt-into-usr-lib-without-suffi
+  .patch, llvm-9999.ebuild:
+  Switch the live ebuild to CMake, and few more improvements. Covered by bug
+  #456322.
 
   05 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-3.6.1.ebuild,
   llvm-9999.ebuild:

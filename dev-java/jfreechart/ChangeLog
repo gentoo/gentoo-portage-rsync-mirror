@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/jfreechart
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.54 2015/06/09 13:45:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/ChangeLog,v 1.55 2015/06/09 16:45:10 monsieurp Exp $
+
+*jfreechart-1.0.19 (09 Jun 2015)
+
+  09 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +files/jfreechart-1.0.19-build.xml.patch,
+  +files/jfreechart-1.0.19-fix-TimeSeriesCollectionTest.patch,
+  +jfreechart-1.0.19.ebuild:
+  Version bump. Fix bug 528402.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

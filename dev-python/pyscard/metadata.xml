@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>crypto</herd>
 	<herd>python</herd>
+	<upstream>
+		<remote-id type="sourceforge">pyscard</remote-id>
+	</upstream>
 </pkgmetadata>

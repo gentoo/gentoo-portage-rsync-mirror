@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pypgsql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.29 2015/01/04 22:27:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypgsql/ChangeLog,v 1.30 2015/06/09 16:33:31 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   04 Jan 2015; Ian Delaney <idella4@gentoo.org> pypgsql-2.5.1-r1.ebuild:
   revbump; conversion -> distutils-r1

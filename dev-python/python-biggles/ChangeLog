@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/python-biggles
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.26 2015/04/08 08:05:01 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-biggles/ChangeLog,v 1.27 2015/06/09 16:41:06 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> python-biggles-1.6.6-r1.ebuild:
   Drop old Python implementations

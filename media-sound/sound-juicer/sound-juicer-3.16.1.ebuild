@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-3.12.0.ebuild,v 1.4 2015/03/07 03:08:30 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-3.16.1.ebuild,v 1.1 2015/06/09 16:35:45 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -12,13 +12,13 @@ HOMEPAGE="https://wiki.gnome.org/Apps/SoundJuicer"
 
 LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 IUSE="flac test vorbis"
 
 COMMON_DEPEND="
 	app-text/iso-codes
-	>=dev-libs/glib-2.32:2
-	>=x11-libs/gtk+-3.2:3
+	>=dev-libs/glib-2.38:2
+	>=x11-libs/gtk+-3.4:3
 	media-libs/libcanberra[gtk3]
 	>=app-cdr/brasero-2.90
 	sys-apps/dbus
@@ -39,11 +39,12 @@ RDEPEND="${COMMON_DEPEND}
 	media-plugins/gst-plugins-meta:1.0
 "
 DEPEND="${COMMON_DEPEND}
+	dev-libs/appstream-glib
 	>=dev-util/intltool-0.50
-	>=app-text/scrollkeeper-0.3.5
 	virtual/pkgconfig
 	test? ( ~app-text/docbook-xml-dtd-4.3 )
 "
+# eautoreconf needs gnome-common
 
 src_prepare() {
 	gnome2_src_prepare

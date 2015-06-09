@@ -1,0 +1,9 @@
+# ChangeLog for dev-java/jfreesvg
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreesvg/ChangeLog,v 1.1 2015/06/09 16:38:14 monsieurp Exp $
+
+*jfreesvg-2.1 (09 Jun 2015)
+
+  09 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +jfreesvg-2.1.ebuild,
+  +metadata.xml:
+  Initial commit. New dependency for dev-java/jfreechart-1.0.19. Fix bug 528400.

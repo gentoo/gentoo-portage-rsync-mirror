@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/elektra
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.20 2014/07/30 22:49:14 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/elektra/ChangeLog,v 1.21 2015/06/09 16:45:41 xmw Exp $
+
+*elektra-0.8.7 (09 Jun 2015)
+
+  09 Jun 2015; Michael Weber <xmw@gentoo.org> +elektra-0.8.7.ebuild,
+  +files/elektra-0.8.7-conditional-glob-tests.patch, metadata.xml:
+  Version bump (thanks Andreas Sturmlechner, bug 520288).
 
 *elektra-0.8.6 (30 Jul 2014)
 
