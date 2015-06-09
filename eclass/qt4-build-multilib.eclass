@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.16 2015/05/31 13:56:53 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.17 2015/06/09 18:13:42 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -459,8 +459,15 @@ qt4_multilib_src_install() {
 		fi
 	fi
 
+	# move pkgconfig files to the correct directory
+	local pcfile
+	for pcfile in "${D}/${QT4_LIBDIR}"/pkgconfig/*.pc; do
+		dodir /usr/$(get_libdir)/pkgconfig
+		mv "${pcfile}" "${ED}"/usr/$(get_libdir)/pkgconfig || die
+	done
+	rmdir "${D}/${QT4_LIBDIR}"/pkgconfig || die
+
 	install_qconfigs
-	fix_library_files
 	fix_includes
 }
 
@@ -547,7 +554,6 @@ qt4_prepare_env() {
 	QT4_PREFIX=${EPREFIX}/usr
 	QT4_HEADERDIR=${QT4_PREFIX}/include/qt4
 	QT4_LIBDIR=${QT4_PREFIX}/$(get_libdir)/qt4
-	QT4_PCDIR=${QT4_PREFIX}/$(get_libdir)/pkgconfig
 	QT4_BINDIR=${QT4_LIBDIR}/bin
 	QT4_PLUGINDIR=${QT4_LIBDIR}/plugins
 	QT4_IMPORTDIR=${QT4_LIBDIR}/imports
@@ -697,34 +703,6 @@ generate_qconfigs() {
 				"${ROOT}${QT4_HEADERDIR}" 2>/dev/null
 		fi
 	fi
-}
-
-# @FUNCTION: fix_library_files
-# @INTERNAL
-# @DESCRIPTION:
-# Fixes the paths in *.prl and *.pc, as they are wrong due to sandbox, and
-# moves the *.pc files into the pkgconfig directory.
-fix_library_files() {
-	local libfile
-	for libfile in "${D}"/${QT4_LIBDIR}/{*.prl,pkgconfig/*.pc}; do
-		if [[ -e ${libfile} ]]; then
-			sed -i -e "s:${S}/lib:${QT4_LIBDIR}:g" ${libfile} || die "sed on ${libfile} failed"
-		fi
-	done
-
-	# pkgconfig files refer to WORKDIR/bin as the moc and uic locations
-	for libfile in "${D}"/${QT4_LIBDIR}/pkgconfig/*.pc; do
-		if [[ -e ${libfile} ]]; then
-			sed -i -e "s:${S}/bin:${QT4_BINDIR}:g" ${libfile} || die "sed on ${libfile} failed"
-
-		# Move .pc files into the pkgconfig directory
-		dodir ${QT4_PCDIR#${EPREFIX}}
-		mv ${libfile} "${D}"/${QT4_PCDIR}/ || die "moving ${libfile} to ${D}/${QT4_PCDIR}/ failed"
-		fi
-	done
-
-	# Don't install an empty directory
-	rmdir "${D}"/${QT4_LIBDIR}/pkgconfig
 }
 
 # @FUNCTION: fix_includes

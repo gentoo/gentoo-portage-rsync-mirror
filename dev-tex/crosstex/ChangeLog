@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/crosstex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/crosstex/ChangeLog,v 1.6 2010/06/12 20:25:13 arfrever Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/crosstex/ChangeLog,v 1.7 2015/06/09 18:22:06 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   12 Jun 2010; Arfrever Frehtes Taifersar Arahesis <arfrever@gentoo.org>
   crosstex-0.6.ebuild:
@@ -27,4 +30,3 @@
   +crosstex-0.5.6.ebuild:
   Initial import, ebuild by Christian Kotz and Andreas Niederl, bug #202526
   with small modifications by me
-

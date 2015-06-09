@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/unf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/ChangeLog,v 1.23 2015/06/08 06:07:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/unf/ChangeLog,v 1.24 2015/06/09 18:30:23 maekke Exp $
+
+  09 Jun 2015; Markus Meier <maekke@gentoo.org> unf-0.1.4.ebuild:
+  add ~arm, bug #545592
 
   08 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

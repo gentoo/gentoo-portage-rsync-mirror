@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/togl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.30 2014/07/06 11:27:10 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/togl/ChangeLog,v 1.31 2015/06/09 18:13:26 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   06 Jul 2014; Justin Lecher <jlec@gentoo.org> togl-2.0-r2.ebuild,
   metadata.xml:
@@ -96,4 +99,3 @@
 
   10 May 2009; Federico Ferri <mescalinum@gentoo.org> +togl-2.0.ebuild:
   initial ebuild. closes bug #149789
-

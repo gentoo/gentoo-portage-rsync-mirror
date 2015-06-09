@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>tcltk</herd>
-  <longdescription>
+	<herd>tcltk</herd>
+	<longdescription>
 Togl is a Tk widget for OpenGL rendering. Togl was originally based on
 OGLTK, written by Benjamin Bederson at the University of New Mexico. Togl's
 main features are:
@@ -22,4 +22,7 @@ drawing by calling various Tcl commands (a.k.a., callback functions). Those
 commands can be C functions that call OpenGL (in)directly or another Tcl
 package (e.g., Tcl3D).
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">togl</remote-id>
+	</upstream>
 </pkgmetadata>

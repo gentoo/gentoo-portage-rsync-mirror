@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libp11
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.75 2015/06/09 14:41:14 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libp11/ChangeLog,v 1.76 2015/06/09 18:30:01 maekke Exp $
+
+  09 Jun 2015; Markus Meier <maekke@gentoo.org> libp11-0.2.8-r3.ebuild:
+  arm stable, bug #535116
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

@@ -7,4 +7,7 @@
 		<name>Manuel Rüger</name>
 		<description>CC me on bugs. Assign to herd</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">plk/biblatex</remote-id>
+	</upstream>
 </pkgmetadata>

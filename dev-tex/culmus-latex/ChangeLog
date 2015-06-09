@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/culmus-latex
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/culmus-latex/ChangeLog,v 1.15 2010/12/29 09:10:33 pva Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/culmus-latex/ChangeLog,v 1.16 2015/06/09 18:23:28 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   29 Dec 2010; Peter Volkov <pva@gentoo.org> culmus-latex-0.7.ebuild:
   Update dependency for culmus font, bug #349472, thank David Abbott for tests.
@@ -50,4 +53,3 @@
   26 Oct 2008; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +culmus-latex-0.7.ebuild:
   Initial import for bug #168331
-

@@ -8,4 +8,7 @@
 	<use>
 		<flag name="shellicon">shellicon  extension</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">tktreectrl</remote-id>
+	</upstream>
 </pkgmetadata>

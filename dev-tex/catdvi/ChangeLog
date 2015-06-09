@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/catdvi
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.11 2011/12/04 20:59:27 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/catdvi/ChangeLog,v 1.12 2015/06/09 18:20:52 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   04 Dec 2011; Ulrich Mueller <ulm@gentoo.org> -catdvi-0.14.ebuild:
   Remove old.
@@ -43,4 +46,3 @@
   20 May 2007; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +catdvi-0.14.ebuild:
   Initial import, fixes bug #107248.
-

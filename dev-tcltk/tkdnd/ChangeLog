@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkdnd
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/ChangeLog,v 1.5 2015/04/07 14:22:44 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkdnd/ChangeLog,v 1.6 2015/06/09 18:05:34 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *tkdnd-2.6 (14 Aug 2014)
 
