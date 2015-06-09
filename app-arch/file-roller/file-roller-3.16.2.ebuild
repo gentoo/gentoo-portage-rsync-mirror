@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.12.2.ebuild,v 1.3 2014/07/23 15:12:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-3.16.2.ebuild,v 1.1 2015/06/09 09:57:41 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -14,7 +14,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/ https://wiki.gnome.org/Apps/FileRol
 LICENSE="GPL-2+ CC-BY-SA-3.0"
 SLOT="0"
 IUSE="nautilus packagekit"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-freebsd ~amd64-linux ~x86-linux"
 
 # gdk-pixbuf used extensively in the source
 # cairo used in eggtreemultidnd.c
@@ -23,13 +23,11 @@ RDEPEND="
 	>=app-arch/libarchive-3:=
 	>=dev-libs/glib-2.36:2
 	>=dev-libs/json-glib-0.14
-	>=x11-libs/gtk+-3.9.3:3
+	>=x11-libs/gtk+-3.13.2:3
 	>=x11-libs/libnotify-0.4.3:=
 	sys-apps/file
 	x11-libs/cairo
 	x11-libs/gdk-pixbuf:2
-	x11-libs/libICE
-	x11-libs/libSM
 	x11-libs/pango
 	nautilus? ( >=gnome-base/nautilus-3 )
 	packagekit? ( app-admin/packagekit-base )
@@ -68,7 +66,7 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.10.3-use_bin_tar.patch
 
 	# File providing Gentoo package names for various archivers
-	cp -f "${FILESDIR}/3.6.0-packages.match" data/packages.match || die
+	cp -f "${FILESDIR}"/3.6.0-packages.match data/packages.match || die
 
 	gnome2_src_prepare
 }
@@ -82,7 +80,6 @@ src_configure() {
 		--disable-debug \
 		--enable-magic \
 		--enable-libarchive \
-		--with-smclient=xsmp \
 		$(use_enable nautilus nautilus-actions) \
 		$(use_enable packagekit) \
 		ITSTOOL=$(type -P true)

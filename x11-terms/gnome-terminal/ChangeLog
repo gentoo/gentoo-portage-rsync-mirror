@@ -1,6 +1,14 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.299 2015/05/19 14:10:09 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.300 2015/06/09 09:43:38 eva Exp $
+
+*gnome-terminal-3.16.2-r2 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-terminal-3.16.2-r2.ebuild,
+  +files/gnome-terminal-3.16.2-restore-dark.patch,
+  +files/gnome-terminal-3.16.2-restore-transparency.patch:
+  Version bump for Gnome 3.16.
 
   19 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-terminal-3.14.2-r2.ebuild, gnome-terminal-3.14.3.ebuild:

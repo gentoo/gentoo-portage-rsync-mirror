@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/pius
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.7 2015/05/17 13:50:51 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/pius/ChangeLog,v 1.8 2015/06/09 09:34:03 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   17 May 2015; Manuel Rüger <mrueg@gentoo.org> -pius-2.0.8.ebuild:
   Remove old.

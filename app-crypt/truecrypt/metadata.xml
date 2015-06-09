@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>crypto</herd>
 	<use>
-		<flag name='asm'>Enable assembly for optimization</flag>
+		<flag name="asm">Enable assembly for optimization</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">truecrypt</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/emact
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.25 2014/09/29 20:48:26 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emact/ChangeLog,v 1.26 2015/06/09 09:49:04 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   29 Sep 2014; Ulrich Müller <ulm@gentoo.org> emact-2.56.0.ebuild:
   Clean up unused dependencies.
@@ -94,4 +97,3 @@
   01 Jul 2007; Ulrich Mueller <ulm@gentoo.org> +metadata.xml,
   +emact-2.50.0.ebuild:
   Initial import.
-

@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/amyedit
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.30 2012/09/18 00:02:28 blueness Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.31 2015/06/09 09:47:35 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   18 Sep 2012; Anthony G. Basile <blueness@gentoo.org> amyedit-1.0-r2.ebuild:
   stable ppc, bug #435234
@@ -110,4 +113,3 @@
 
   15 Mar 2005; <pclouds@gentoo.org> +metadata.xml:
   Initial ebuild by Robert Paskowitz <rpaskowitz@confucius.ca> #81048
-

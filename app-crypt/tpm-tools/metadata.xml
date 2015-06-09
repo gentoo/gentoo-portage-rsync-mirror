@@ -3,9 +3,12 @@
 <pkgmetadata>
   <herd>crypto</herd>
   <use>
-    <flag name='pkcs11'>
+    <flag name="pkcs11">
       Build Token data management utilities based on OpenCryptoki's
       (<pkg>dev-libs/opencryptoki</pkg>) PKCS#11 implementation.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">trousers</remote-id>
+  </upstream>
 </pkgmetadata>

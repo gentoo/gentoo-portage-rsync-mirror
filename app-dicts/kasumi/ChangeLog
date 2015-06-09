@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/kasumi
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.51 2014/10/10 13:29:28 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/kasumi/ChangeLog,v 1.52 2015/06/09 09:38:54 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   10 Oct 2014; Manuel Rüger <mrueg@gentoo.org> -files/kasumi-2.3-gcc43.patch,
   -kasumi-2.5.ebuild:

@@ -7,4 +7,7 @@
 	<longdescription>
 		A doxygen-style documentation tool for makefiles (requires doxygen).
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">mkdoxy</remote-id>
+	</upstream>
 </pkgmetadata>

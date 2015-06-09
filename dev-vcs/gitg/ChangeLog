@@ -1,6 +1,11 @@
 # ChangeLog for dev-vcs/gitg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.36 2015/05/15 06:41:28 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/gitg/ChangeLog,v 1.37 2015/06/09 09:33:46 eva Exp $
+
+*gitg-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> +gitg-3.16.1.ebuild:
+  Version bump for Gnome 3.16.
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> gitg-3.14.0.ebuild:
   amd64/x86 stable, bug #530272

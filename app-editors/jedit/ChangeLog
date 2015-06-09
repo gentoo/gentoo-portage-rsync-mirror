@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jedit
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.110 2014/01/20 20:26:18 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.111 2015/06/09 09:49:51 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   20 Jan 2014; Ralph Sennhauser <sera@gentoo.org> -jedit-4.3.2.ebuild,
   -jedit-4.4.2.ebuild, -jedit-4.4.2-r1.ebuild, -jedit-4.5.2.ebuild:

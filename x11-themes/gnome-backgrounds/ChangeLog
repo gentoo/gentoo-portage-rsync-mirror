@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gnome-backgrounds
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.165 2015/03/15 13:34:38 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-backgrounds/ChangeLog,v 1.166 2015/06/09 09:36:51 eva Exp $
+
+*gnome-backgrounds-3.16.0 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-backgrounds-3.12.2.ebuild, +gnome-backgrounds-3.16.0.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-backgrounds-3.14.1.ebuild:
   x86 stable, bug 534012

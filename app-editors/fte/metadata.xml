@@ -5,4 +5,7 @@
     <email>maintainer-needed@gentoo.org</email>
   </maintainer>
   <longdescription>Lightweight text-mode editor.</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">fte</remote-id>
+  </upstream>
 </pkgmetadata>

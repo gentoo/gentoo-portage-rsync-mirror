@@ -5,4 +5,7 @@
 	<use>
 		<flag name="html">Install HTML documentation</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">csound</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/edox-data
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.20 2012/03/08 23:06:26 ranger Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/edox-data/ChangeLog,v 1.21 2015/06/09 09:45:21 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   08 Mar 2012; Brent Baude <ranger@gentoo.org> edox-data-0.16.8.0.2.ebuild:
   Marking edox-data-0.16.8.0.2 ppc64 for bug 393927

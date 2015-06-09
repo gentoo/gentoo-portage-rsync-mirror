@@ -12,4 +12,7 @@
 		one to it's respective email address. This drastically reduces the time
 		and errors involved in signing keys after a keysigning party.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">pgpius</remote-id>
+	</upstream>
 </pkgmetadata>

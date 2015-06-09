@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/edictionary
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.16 2014/01/05 11:13:54 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/edictionary/ChangeLog,v 1.17 2015/06/09 09:37:53 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   05 Jan 2014; Pacho Ramos <pacho@gentoo.org> -edictionary-2.2.ebuild,
   metadata.xml:
