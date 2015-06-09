@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/docutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.213 2015/04/08 08:05:08 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/docutils/ChangeLog,v 1.214 2015/06/09 15:11:51 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> docutils-0.10.ebuild,
   docutils-0.11.ebuild, docutils-0.9.1-r1.ebuild:

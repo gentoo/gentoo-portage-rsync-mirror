@@ -8,5 +8,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="github">ryanmcgrath/twython</remote-id>
+		<remote-id type="launchpad">django-openid-auth</remote-id>
 	</upstream>
 </pkgmetadata>

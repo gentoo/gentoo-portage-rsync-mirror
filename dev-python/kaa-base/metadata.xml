@@ -11,6 +11,9 @@
 		rich, practically magical API for asynchronous programming.
 	</longdescription>
 	<use>
-		<flag name='tls'>SSL/TLS support via <pkg>dev-python/tlslite</pkg></flag>
-        </use>
+		<flag name="tls">SSL/TLS support via <pkg>dev-python/tlslite</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">freevo</remote-id>
+	</upstream>
 </pkgmetadata>

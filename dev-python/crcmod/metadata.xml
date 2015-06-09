@@ -8,4 +8,7 @@
 		C extension for fast calculation, as well as a pure Python
 		implementation.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">crcmod</remote-id>
+	</upstream>
 </pkgmetadata>

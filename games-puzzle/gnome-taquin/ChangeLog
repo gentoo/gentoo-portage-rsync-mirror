@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/gnome-taquin
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/gnome-taquin/ChangeLog,v 1.1 2015/06/09 15:19:05 eva Exp $
+
+*gnome-taquin-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-taquin-3.16.1.ebuild, +metadata.xml:
+  Initial ebuild from gnome-overlay for Gnome 3.16.
+

@@ -31,5 +31,6 @@
 		</maintainer>
 		<bugs-to>mailto:pyqt@riverbankcomputing.com</bugs-to>
 		<remote-id type="pypi">PyQt5</remote-id>
+		<remote-id type="sourceforge">pyqt</remote-id>
 	</upstream>
 </pkgmetadata>

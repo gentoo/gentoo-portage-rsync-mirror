@@ -1,6 +1,12 @@
 # ChangeLog for games-board/iagno
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.21 2015/03/15 13:20:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/iagno/ChangeLog,v 1.22 2015/06/09 15:13:59 eva Exp $
+
+*iagno-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -iagno-3.12.2.ebuild,
+  +iagno-3.16.1.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> iagno-3.14.2.ebuild:
   x86 stable, bug 534012
