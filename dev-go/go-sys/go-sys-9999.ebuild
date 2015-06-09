@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-sys/go-sys-9999.ebuild,v 1.1 2015/05/19 07:24:08 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-sys/go-sys-9999.ebuild,v 1.2 2015/06/09 03:28:08 zmedico Exp $
 
 EAPI=5
 inherit git-r3
@@ -40,5 +40,6 @@ src_install() {
 	insinto /usr/lib/go/src/${GO_PN}
 	find "${WORKDIR}"/src/${GO_PN} -name '.git*' -exec \
 		rm -rf {} \; 2>/dev/null
+	insopts -m0644 -p # preserve timestamps for bug 551486
 	doins -r "${WORKDIR}"/src/${GO_PN}/unix
 }

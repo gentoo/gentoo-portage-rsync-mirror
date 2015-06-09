@@ -6,4 +6,4 @@ HOMEPAGE=https://godoc.org/golang.org/x/sys
 LICENSE=BSD
 SLOT=0
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=d9f1dfb2aab07a7f96c4d58f8ea7dede
+_md5_=c585081108cb76cbbd5bd2d69fa9c4aa

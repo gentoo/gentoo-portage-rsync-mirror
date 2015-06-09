@@ -1,15 +1,16 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/go-text-9999.ebuild,v 1.5 2015/06/09 03:07:26 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-text/go-text-1.4.2_p20150604.ebuild,v 1.1 2015/06/09 03:07:26 zmedico Exp $
 
 EAPI=5
-inherit git-r3
 
-KEYWORDS=""
+KEYWORDS="~amd64"
 DESCRIPTION="Go text processing support"
-GO_PN=golang.org/x/${PN##*-}
+MY_PN=${PN##*-}
+GO_PN=golang.org/x/${MY_PN}
 HOMEPAGE="https://godoc.org/${GO_PN}"
-EGIT_REPO_URI="https://go.googlesource.com/${PN##*-}"
+EGIT_COMMIT="df923bbb63f8ea3a26bb743e2a497abd0ab585f7"
+SRC_URI="https://github.com/golang/${MY_PN}/archive/${EGIT_COMMIT}.tar.gz -> ${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 IUSE=""
@@ -18,6 +19,12 @@ RDEPEND=""
 S="${WORKDIR}/src/${GO_PN}"
 EGIT_CHECKOUT_DIR="${S}"
 STRIP_MASK="*.a"
+
+src_unpack() {
+	default
+	mkdir -p src/${GO_PN%/*} || die
+	mv ${MY_PN}-${EGIT_COMMIT} src/${GO_PN} || die
+}
 
 src_compile() {
 	# Create a writable GOROOT in order to avoid sandbox violations.

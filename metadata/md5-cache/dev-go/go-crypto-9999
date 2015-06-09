@@ -6,4 +6,4 @@ HOMEPAGE=https://godoc.org/golang.org/x/crypto
 LICENSE=BSD
 SLOT=0
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	3a2bd0ae504c33a50061885480f3def3	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=14173d4f181e833ae3cd341c1a8d46d7
+_md5_=081672d9b82db2a468afaf8e84a52542

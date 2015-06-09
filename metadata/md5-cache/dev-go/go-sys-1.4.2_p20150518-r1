@@ -7,4 +7,4 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=https://github.com/golang/sys/archive/58e109635f5d754f4b3a8a0172db65a52fcab866.tar.gz -> go-sys-1.4.2_p20150518.tar.gz
-_md5_=bfc585cf43a72fdc081236651ed45348
+_md5_=12ae6315667f2d229f5fb05bd7ebfba5
