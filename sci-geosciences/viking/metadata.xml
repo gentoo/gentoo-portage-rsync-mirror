@@ -15,7 +15,7 @@
     <flag name="mapnik">
       Enable a layer based on <pkg>sci-geosciences/mapnik</pkg>
     </flag>
-    <flag name="sqlite3">
+    <flag name="sqlite">
       Enable MBTiles support based on <pkg>dev-db/sqlite</pkg>
     </flag>
   </use>

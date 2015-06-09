@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-gtk
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.15 2012/05/03 02:46:49 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.16 2015/06/09 17:35:23 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> gauche-gtk-0.4.1.ebuild,
   gauche-gtk-0.6_pre1.ebuild:

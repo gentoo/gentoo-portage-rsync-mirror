@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tcl-sql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.9 2015/03/20 10:41:03 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tcl-sql/ChangeLog,v 1.10 2015/06/09 17:54:52 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   20 Mar 2015; Justin Lecher <jlec@gentoo.org> tcl-sql-20000114-r2.ebuild:
   Fix tcl/tk slotting; Bump to EAPI=5

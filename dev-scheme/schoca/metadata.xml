@@ -8,4 +8,7 @@
 		purpose of Schoca is the use as an embedded extension language 
 		in OCaml applications (e.g. the ibgsclient). 
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">chesslib</remote-id>
+	</upstream>
 </pkgmetadata>

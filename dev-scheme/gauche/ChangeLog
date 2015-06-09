@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.45 2014/09/07 03:29:55 hattya Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche/ChangeLog,v 1.46 2015/06/09 17:31:40 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   07 Sep 2014; Akinori Hattori <hattya@gentoo.org> gauche-0.9.3.3.ebuild:
   update to EAPI 5

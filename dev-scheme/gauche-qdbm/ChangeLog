@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-qdbm
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/ChangeLog,v 1.12 2012/07/10 13:03:26 hattya Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/ChangeLog,v 1.13 2015/06/09 17:37:46 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   10 Jul 2012; Akinori Hattori <hattya@gentoo.org>
   -files/gauche-qdbm-0.2-gpd.diff, -gauche-qdbm-0.2.ebuild:
@@ -48,4 +51,3 @@
   26 Jul 2004; Akinori Hattori <hattya@gentoo.org> +metadata.xml,
   +files/gauche-qdbm-0.2-gpd.diff, +gauche-qdbm-0.2.ebuild:
   Initial revision.
-

@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-cdb
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.14 2012/07/08 07:02:50 hattya Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-cdb/ChangeLog,v 1.15 2015/06/09 17:32:52 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   08 Jul 2012; Akinori Hattori <hattya@gentoo.org>
   -files/gauche-cdb-0.3.1-gpd.diff, -files/gauche-cdb-0.3.1-segv.diff,
@@ -58,4 +61,3 @@
   +files/gauche-cdb-0.3.1-gpd.diff, +files/gauche-cdb-0.3.1-tinycdb.diff,
   +gauche-cdb-0.3.1.ebuild:
   Initial revision.
-
