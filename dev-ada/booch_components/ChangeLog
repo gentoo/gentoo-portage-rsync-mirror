@@ -1,6 +1,9 @@
 # ChangeLog for dev-ada/booch_components
 # Copyright 2000-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.19 2015/03/31 18:34:59 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/booch_components/ChangeLog,v 1.20 2015/06/09 12:48:51 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   31 Mar 2015; Ulrich Müller <ulm@gentoo.org>
   booch_components-20051222-r1.ebuild:
@@ -83,4 +86,3 @@
   metadata.xml:
   This ebuild was provided by George Shapovalov <george@gentoo.org>. It provides
   a set of reusable components for use in Ada applications.
-

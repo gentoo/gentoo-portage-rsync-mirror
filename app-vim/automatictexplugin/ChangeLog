@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/automatictexplugin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.52 2015/02/09 00:31:23 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/automatictexplugin/ChangeLog,v 1.53 2015/06/09 12:47:28 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 Feb 2015; Tim Harder <radhermit@gentoo.org>
   -automatictexplugin-12.3.ebuild, -automatictexplugin-12.4.ebuild,

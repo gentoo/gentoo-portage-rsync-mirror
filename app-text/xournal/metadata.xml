@@ -11,4 +11,7 @@
 		platforms. It is similar to Microsoft Windows Journal or to
 		other alternatives such as Jarnal, Gournal, and NoteLab.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">xournal</remote-id>
+	</upstream>
 </pkgmetadata>

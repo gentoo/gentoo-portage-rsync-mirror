@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/enet
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.36 2015/04/19 09:37:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.37 2015/06/09 12:38:15 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -enet-1.0.ebuild,
+  -enet-1.3.6.ebuild:
+  Remove old.
 
   19 Apr 2015; Pacho Ramos <pacho@gentoo.org> enet-1.3.7.ebuild:
   x86 stable wrt bug #535574

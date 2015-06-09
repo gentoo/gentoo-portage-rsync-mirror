@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pastebinit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/ChangeLog,v 1.11 2015/05/15 06:31:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pastebinit/ChangeLog,v 1.12 2015/06/09 12:33:23 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   15 May 2015; Pacho Ramos <pacho@gentoo.org> pastebinit-1.4.1.ebuild:
   amd64/x86 stable, bug #509522

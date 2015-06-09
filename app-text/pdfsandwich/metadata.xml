@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>tomka@gentoo.org</email>
-</maintainer>
-<longdescription>
+	<maintainer>
+		<email>tomka@gentoo.org</email>
+	</maintainer>
+	<longdescription>
 pdfsandwich generates "sandwich" OCR pdf files, i.e. pdf files which
 contain only images (no text) will be processed by optical character
 recognition (OCR) and the text will be added to each page invisibly
@@ -19,4 +19,7 @@ binaries: convert, cuneiform, gs, and hocr2pdf. It is known to run on
 Unix systems and has been tested on Linux and MacOS X. It supports
 parallel processing on multiprocessor systems.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">pdfsandwich</remote-id>
+	</upstream>
 </pkgmetadata>

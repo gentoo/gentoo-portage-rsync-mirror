@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/bcfg2
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.33 2014/12/15 05:15:53 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bcfg2/ChangeLog,v 1.34 2015/06/09 12:51:46 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -bcfg2-1.2.3-r1.ebuild,
+  -bcfg2-1.2.3.ebuild, -bcfg2-1.2.4.ebuild:
+  Remove old.
 
 *bcfg2-1.2.4-r1 (15 Dec 2014)
 

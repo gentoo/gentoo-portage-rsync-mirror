@@ -1,8 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=relatively thin, simple and robust network communication layer on top of UDP
-HOMEPAGE=http://enet.bespin.org/
-KEYWORDS=ppc
-LICENSE=MIT
-SLOT=0
-SRC_URI=http://enet.bespin.org/download/enet-1.0.tar.gz
-_md5_=ec9c022659d780c0241ca42ed65417b0

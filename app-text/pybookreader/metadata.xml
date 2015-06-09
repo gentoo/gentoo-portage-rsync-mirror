@@ -6,4 +6,7 @@
 		<name>Andrey Grozin</name>
 	</maintainer>
 	<longdescription>A book reader for .fb2 .html and plain text (possibly gzipped)</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">pybookreader</remote-id>
+	</upstream>
 </pkgmetadata>

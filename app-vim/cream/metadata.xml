@@ -8,4 +8,7 @@
 			developer) on any bugs, as he knows lots about the package and I'd
 			like his opinion before I make any big changes.</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">cream</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>emacs</herd>
-  <longdescription>
+<herd>emacs</herd>
+<longdescription>
   This product is an original development made to provide an emacs-like editor
   on the PC for the purpose of writing Lisp code with the same features found
   on other Lisp development systems. In 1985, with about 512 Ko of memory, it
@@ -18,7 +18,7 @@
   and it runs of course on all Intel based system in text or graphic mode
   (MSDOS, OS/2, Windows 3.x, Windows NT/2000/XP and Windows 95/98/Me).
 </longdescription>
-  <upstream>
-    <remote-id type="sourceforge">emact</remote-id>
-  </upstream>
+<upstream>
+  <remote-id type="sourceforge">emact</remote-id>
+</upstream>
 </pkgmetadata>

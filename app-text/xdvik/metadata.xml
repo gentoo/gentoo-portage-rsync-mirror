@@ -7,4 +7,7 @@
 		XDVIK is a dvi previewer on X with kpathsea support.  It also supports
 		multibyte character rendering via Xft2 (or VFlib2).
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">xdvi</remote-id>
+	</upstream>
 </pkgmetadata>

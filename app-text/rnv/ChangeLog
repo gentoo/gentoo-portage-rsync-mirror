@@ -1,6 +1,9 @@
 # ChangeLog for app-text/rnv
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.19 2012/11/27 11:08:45 pinkbyte Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/rnv/ChangeLog,v 1.20 2015/06/09 12:39:18 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   27 Nov 2012; Sergey Popov <pinkbyte@gentoo.org> -rnv-1.7.8-r2.ebuild,
   -rnv-1.7.10-r1.ebuild, rnv-1.7.11.ebuild:

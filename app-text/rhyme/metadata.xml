@@ -12,4 +12,7 @@
 		can get a syllable count of a certain word ("whitening" has 2-3
 		syllables, etc.).
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">rhyme</remote-id>
+	</upstream>
 </pkgmetadata>

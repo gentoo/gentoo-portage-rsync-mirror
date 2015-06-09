@@ -1,6 +1,9 @@
 # ChangeLog for app-text/refbase
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.9 2010/04/30 20:52:51 mabi Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/refbase/ChangeLog,v 1.10 2015/06/09 12:37:51 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   30 Apr 2010; <mabi@gentoo.org> refbase-0.9.5.ebuild:
   fix depend for upcoming php-5.3 (done by Tsisaruk V
@@ -44,4 +47,3 @@
   +files/postinstall-en.txt, +metadata.xml, +refbase-0.8.0.ebuild:
   (#111476) New package: Web-based solution for managing scientific
   literature, references and citations (Urs Joss).
-
