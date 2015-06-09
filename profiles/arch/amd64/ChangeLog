@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.324 2015/05/31 21:55:12 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.325 2015/06/09 22:21:20 xmw Exp $
+
+  09 Jun 2015; Michael Weber <xmw@gentoo.org> package.use.mask:
+  Drop mask www-client/netsurf[abi_x86_32].
 
   31 May 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
   Revert mask kde-plasma/plasma-workspace[prison], will be handled in base for

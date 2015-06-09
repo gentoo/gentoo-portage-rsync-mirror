@@ -1,6 +1,12 @@
 # ChangeLog for www-client/netsurf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.19 2015/06/08 12:44:19 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/netsurf/ChangeLog,v 1.20 2015/06/09 22:12:42 xmw Exp $
+
+*netsurf-3.3-r1 (09 Jun 2015)
+
+  09 Jun 2015; Michael Weber <xmw@gentoo.org> +netsurf-3.3-r1.ebuild,
+  -netsurf-3.3.ebuild:
+  Revbump fo multilib fix (bug 545758, thanks Kobboi), fix multilib bin install.
 
 *netsurf-3.3 (08 Jun 2015)
 

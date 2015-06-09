@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/libhubbub-0.3.1.ebuild,v 1.1 2015/03/21 23:51:10 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libhubbub/libhubbub-0.3.1-r1.ebuild,v 1.1 2015/06/09 22:03:39 xmw Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~m68k-mint"
 IUSE="doc test"
 
-RDEPEND=">=dev-libs/libparserutils-0.2.1[static-libs?,${MULTILIB_USEDEP}]
+RDEPEND=">=dev-libs/libparserutils-0.2.1-r1[static-libs?,${MULTILIB_USEDEP}]
 	!net-libs/hubbub"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig

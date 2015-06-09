@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.809 2015/06/05 07:59:18 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.810 2015/06/09 22:19:59 xmw Exp $
+
+  09 Jun 2015; Michael Weber <xmw@gentoo.org> package.use.mask:
+  Drop old masks on netsurf.
 
   05 Jun 2015; Michael Haubenwallner <haubi@gentoo.org> make.defaults:
   add USE_EXPAND_VALUES_ARCH x64-cygwin, as Cygwin 2.0 supports 64-bits:
