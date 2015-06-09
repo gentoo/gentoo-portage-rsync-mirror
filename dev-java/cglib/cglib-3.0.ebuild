@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-3.0.ebuild,v 1.4 2015/03/27 10:20:10 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-3.0.ebuild,v 1.5 2015/06/08 23:28:00 monsieurp Exp $
 
 EAPI="5"
 
@@ -14,15 +14,15 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.jar"
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~ppc ~ppc64"
 
 IUSE=""
 
 COMMON_DEP="dev-java/asm:4
-	>=dev-java/ant-core-1.7.0"
-RDEPEND=">=virtual/jre-1.5
+	dev-java/ant-core:0"
+RDEPEND=">=virtual/jre-1.6
 	${COMMON_DEP}"
-DEPEND=">=virtual/jdk-1.5
+DEPEND=">=virtual/jdk-1.6
 	test? ( dev-java/junit:4 )
 	${COMMON_DEP}"
 
