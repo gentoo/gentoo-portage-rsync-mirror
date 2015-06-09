@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libwpg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.34 2015/02/15 14:58:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libwpg/ChangeLog,v 1.35 2015/06/09 12:29:03 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   15 Feb 2015; Agostino Sarubbo <ago@gentoo.org> libwpg-0.3.0.ebuild:
   Stable for x86, wrt bug #534684

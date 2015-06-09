@@ -1,6 +1,9 @@
 # ChangeLog for app-text/libmwaw
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.18 2015/05/22 22:53:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libmwaw/ChangeLog,v 1.19 2015/06/09 12:27:30 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *libmwaw-0.3.5 (22 May 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/docx2txt
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docx2txt/ChangeLog,v 1.6 2014/05/18 09:40:49 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docx2txt/ChangeLog,v 1.7 2015/06/09 12:18:57 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *docx2txt-1.4 (18 May 2014)
 
@@ -32,4 +35,3 @@
   06 Feb 2011; Tim Harder <radhermit@gentoo.org> +docx2txt-1.0.ebuild,
   +files/docx2txt-1.0-paragraph-newline.patch, +metadata.xml:
   Initial import.
-

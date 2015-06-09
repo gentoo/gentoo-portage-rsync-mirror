@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-  <herd>tex</herd>
-  <longdescription>
+	<herd>tex</herd>
+	<longdescription>
 DjVu is a web-centric format and software platform for distributing documents
 and images. DjVu can advantageously replace PDF, PS, TIFF, JPEG, and GIF for
 distributing scanned documents, digital documents, or high-resolution pictures.
@@ -12,4 +12,7 @@ display instantly and can be smoothly zoomed and panned with no lengthy
 re-rendering. DjVu is used by hundreds of academic, commercial, governmental,
 and non-commercial web sites around the world.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">djvu</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-3.1.201502222102.ebuild,v 1.1 2015/02/23 20:01:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm/gradm-3.1.201506081912.ebuild,v 1.1 2015/06/09 12:09:55 blueness Exp $
 
 EAPI="5"
 inherit flag-o-matic toolchain-funcs versionator eutils udev

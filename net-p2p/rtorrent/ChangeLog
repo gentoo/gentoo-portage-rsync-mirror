@@ -1,6 +1,13 @@
 # ChangeLog for net-p2p/rtorrent
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.197 2015/05/08 14:31:42 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/rtorrent/ChangeLog,v 1.199 2015/06/09 12:29:08 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> metadata.xml:
+  Drop unused USEflag description.
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -rtorrent-0.8.9.ebuild,
+  -rtorrent-0.9.4.ebuild:
+  Remove old.
 
   08 May 2015; Justin Lecher <jlec@gentoo.org>
   +files/rtorrent-0.9.4-tinfo.patch, metadata.xml, rtorrent-0.9.4-r1.ebuild:

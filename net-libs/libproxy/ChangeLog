@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/libproxy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.123 2015/04/08 18:04:58 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libproxy/ChangeLog,v 1.124 2015/06/09 12:25:43 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/libproxy-0.4.10-cmake-2.8.10.patch,
+  -files/libproxy-0.4.10-mozjs185.pc.patch, -libproxy-0.4.10-r1.ebuild,
+  -libproxy-0.4.11-r1.ebuild, -libproxy-0.4.11.ebuild:
+  Remove old.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> libproxy-0.4.11-r1.ebuild,
   libproxy-0.4.11-r2.ebuild:

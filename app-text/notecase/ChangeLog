@@ -1,6 +1,9 @@
 # ChangeLog for app-text/notecase
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.30 2014/05/14 16:36:35 tomwij Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/notecase/ChangeLog,v 1.31 2015/06/09 12:30:56 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *notecase-1.9.8-r1 (14 May 2014)
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/bashdb
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bashdb/ChangeLog,v 1.9 2013/05/05 23:23:05 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bashdb/ChangeLog,v 1.10 2015/06/09 12:05:59 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   05 May 2013; Mike Frysinger <vapier@gentoo.org> bashdb-4.2.0.8.ebuild:
   Skip running texinfo tools as we do not install the output #468044 by Jason

@@ -12,4 +12,7 @@
 		your PDF, to encrypt and sign your PDFs, to change metadata (like 
 		author or keywords), and much more.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">jpdftweak</remote-id>
+	</upstream>
 </pkgmetadata>

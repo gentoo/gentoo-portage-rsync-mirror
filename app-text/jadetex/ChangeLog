@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.76 2014/04/06 15:18:27 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.77 2015/06/09 12:26:19 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   06 Apr 2014; Mike Frysinger <vapier@gentoo.org> jadetex-3.13-r6.ebuild:
   Mark arm64/m68k/s390/sh stable.

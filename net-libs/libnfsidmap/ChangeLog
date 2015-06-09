@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libnfsidmap
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.45 2014/03/15 16:20:45 vapier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnfsidmap/ChangeLog,v 1.46 2015/06/09 12:26:58 mrueg Exp $
+
+  09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -libnfsidmap-0.21-r1.ebuild,
+  -libnfsidmap-0.23-r1.ebuild:
+  Remove old.
 
 *libnfsidmap-0.25-r1 (15 Mar 2014)
 

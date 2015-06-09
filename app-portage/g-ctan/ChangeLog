@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/g-ctan
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.22 2012/05/07 12:54:43 aballier Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/g-ctan/ChangeLog,v 1.23 2015/06/09 12:03:24 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   07 May 2012; Alexis Ballier <aballier@gentoo.org> -g-ctan-2010.1.ebuild,
   -g-ctan-2010.2.ebuild:
@@ -104,4 +107,3 @@
   02 Sep 2009; Christian Faulhammer <fauli@gentoo.org> +g-ctan-9999.ebuild,
   +metadata.xml:
   inital ebuild, live from repository, no releases yet
-

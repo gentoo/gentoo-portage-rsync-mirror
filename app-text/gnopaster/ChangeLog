@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnopaster
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnopaster/ChangeLog,v 1.10 2007/06/27 16:07:13 opfer Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnopaster/ChangeLog,v 1.11 2015/06/09 12:23:29 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   27 Jun 2007; Christian Faulhammer <opfer@gentoo.org>
   gnopaster-0.0.9.ebuild:
@@ -43,4 +46,3 @@
   24 Apr 2007; Jurek Bartuszek <jurek@gentoo.org> +metadata.xml,
   +gnopaster-0.0.6.ebuild:
   Initial version (fixes bug #101417).
-

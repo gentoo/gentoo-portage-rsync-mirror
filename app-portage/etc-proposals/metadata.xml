@@ -6,4 +6,7 @@
 		<email>dolsen@gentoo.org</email>
 		<name>Brian Dolbec</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">etc-proposals.berlios</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>kde</herd>
 	<herd>openoffice</herd>
+	<upstream>
+		<remote-id type="sourceforge">libwps</remote-id>
+	</upstream>
 </pkgmetadata>

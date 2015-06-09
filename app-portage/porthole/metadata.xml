@@ -7,4 +7,7 @@
 		<name>Brian Dolbec</name>
 		<description>Upstream Maintainer (please CC on bugs)</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">porthole</remote-id>
+	</upstream>
 </pkgmetadata>
