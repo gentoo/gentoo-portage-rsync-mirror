@@ -1,22 +1,23 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.11 2015/05/25 23:49:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/gegl-9999.ebuild,v 1.12 2015/06/09 01:19:26 tetromino Exp $
 
 EAPI=5
+
+PYTHON_COMPAT=( python2_7 )
 
 # vala and introspection support is broken, bug #468208
 VALA_MIN_API_VERSION=0.20
 VALA_USE_DEPEND=vapigen
 
-inherit versionator gnome2-utils eutils autotools vala
+inherit versionator gnome2-utils eutils autotools python-any-r1 vala
 
 if [[ ${PV} == *9999* ]]; then
 	inherit autotools git-r3
 	EGIT_REPO_URI="git://git.gnome.org/gegl"
 	SRC_URI=""
 else
-	SRC_URI="http://dev.gentoo.org/~eva/distfiles/${PN}/${PN}-0.3.0-c9bbc81.tar.bz2 -> ${P}.tar.bz2"
-	# ftp://ftp.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.bz2"
+	SRC_URI="http://download.gimp.org/pub/${PN}/${PV:0:3}/${P}.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~amd64-linux ~arm-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos ~x64-solaris ~x86-solaris"
 fi
 
@@ -26,7 +27,7 @@ HOMEPAGE="http://www.gegl.org/"
 LICENSE="|| ( GPL-3 LGPL-3 )"
 SLOT="0.3"
 
-IUSE="cairo cpu_flags_x86_mmx cpu_flags_x86_sse debug ffmpeg +introspection jpeg jpeg2k lcms lensfun libav openexr png raw sdl svg umfpack vala v4l webp"
+IUSE="cairo cpu_flags_x86_mmx cpu_flags_x86_sse debug ffmpeg +introspection jpeg jpeg2k lcms lensfun libav openexr png raw sdl svg test umfpack vala v4l webp"
 REQUIRED_IUSE="vala? ( introspection )"
 
 RDEPEND="
@@ -42,9 +43,7 @@ RDEPEND="
 		libav? ( media-video/libav:0= )
 		!libav? ( media-video/ffmpeg:0= )
 	)
-	introspection? (
-		>=dev-libs/gobject-introspection-1.32
-		>=dev-python/pygobject-3.2:3 )
+	introspection? ( >=dev-libs/gobject-introspection-1.32 )
 	jpeg? ( virtual/jpeg:0= )
 	jpeg2k? ( >=media-libs/jasper-1.900.1 )
 	lcms? ( >=media-libs/lcms-2.2:2 )
@@ -64,8 +63,14 @@ DEPEND="${RDEPEND}
 	dev-lang/perl
 	virtual/pkgconfig
 	>=sys-devel/libtool-2.2
+	test? ( introspection? (
+		$(python_gen_any_dep '>=dev-python/pygobject-3.2[${PYTHON_USEDEP}]') ) )
 	vala? ( $(vala_depend) )
 "
+
+pkg_setup() {
+	use test && use introspection && python-any-r1_pkg_setup
+}
 
 src_prepare() {
 	# FIXME: the following should be proper patch sent to upstream
@@ -78,10 +83,15 @@ src_prepare() {
 
 	#epatch "${FILESDIR}"/${P}-g_log_domain.patch
 
-	# gegl test fail on 64bits and a later commit switch the break to 32bits
-	sed -e '/gegl.xml/d' \
-		-e '/contrast-curve.xml/d' \
+	# commit 7c78497b : tests that use gegl.png are broken on non-amd64
+	sed -e '/clones.xml/d' \
+		-e '/composite-transform.xml/d' \
 		-i tests/compositions/Makefile.am || die
+
+	# commit 11a283ab : test-image-compare needs >=babl-0.1.13 (not released yet)
+	# for the new CIE conversions
+	sed -e '/test-image-compare/d' \
+		-i tests/simple/Makefile.am || die
 
 	# Skip broken test with >=dev-python/pygobject-3.14
 	sed -e '/test_buffer/ i\    @unittest.skip("broken")\' \

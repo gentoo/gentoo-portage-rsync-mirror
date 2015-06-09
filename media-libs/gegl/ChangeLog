@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/gegl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.109 2015/05/25 23:49:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gegl/ChangeLog,v 1.110 2015/06/09 01:19:26 tetromino Exp $
+
+*gegl-0.3.0 (09 Jun 2015)
+
+  09 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gegl-0.3.0_pre20150304.ebuild, +gegl-0.3.0.ebuild, gegl-9999.ebuild:
+  Bump for the 0.3.0 official release, punt pre-release. See
+  http://permalink.gmane.org/gmane.comp.video.gegl.devel/1521 for the
+  announcement. Acked by sping.
 
 *gegl-0.3.0_pre20150304 (25 May 2015)
 
