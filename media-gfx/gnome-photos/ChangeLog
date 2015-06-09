@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gnome-photos
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/ChangeLog,v 1.18 2015/05/25 22:55:05 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-photos/ChangeLog,v 1.19 2015/06/09 16:28:32 eva Exp $
+
+*gnome-photos-3.16.2 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +gnome-photos-3.16.2.ebuild:
+  Version bump for Gnome 3.16.
 
   25 May 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
   gnome-photos-3.14.2.ebuild, gnome-photos-3.14.3.ebuild:

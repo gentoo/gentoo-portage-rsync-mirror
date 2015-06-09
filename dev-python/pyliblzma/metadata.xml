@@ -4,5 +4,6 @@
 	<herd>python</herd>
 	<upstream>
 		<remote-id type="pypi">pyliblzma</remote-id>
+		<remote-id type="launchpad">pyliblzma</remote-id>
 	</upstream>
 </pkgmetadata>

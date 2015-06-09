@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>sci-chemistry</herd>
 	<herd>python</herd>
+	<upstream>
+		<remote-id type="freecode">gelemental</remote-id>
+	</upstream>
 </pkgmetadata>

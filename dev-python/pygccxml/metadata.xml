@@ -6,4 +6,7 @@
 		<name>Benda Xu</name>
 	</maintainer>
 	<longdescription>pygccxml is an object oriented framework for reading C++ declarations.</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">pygccxml</remote-id>
+	</upstream>
 </pkgmetadata>

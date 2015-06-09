@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pydb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.8 2015/02/01 21:32:56 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydb/ChangeLog,v 1.9 2015/06/09 16:02:59 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   01 Feb 2015; Manuel Rüger <mrueg@gentoo.org> -pydb-1.26.ebuild:
   Remove old.

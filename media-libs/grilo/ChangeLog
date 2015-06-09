@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/grilo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.45 2015/04/08 17:59:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/grilo/ChangeLog,v 1.46 2015/06/09 16:30:22 eva Exp $
+
+*grilo-0.2.12 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> -grilo-0.2.10.ebuild,
+  +grilo-0.2.12.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> grilo-0.2.10.ebuild,
   grilo-0.2.11.ebuild:

@@ -1,7 +1,7 @@
 #!/sbin/openrc-run
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-s6,v 1.2 2015/05/27 21:01:03 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-init-scripts/files/init.d-s6,v 1.3 2015/06/09 16:16:26 grknight Exp $
 
 depend() {
 	use net.lo
@@ -16,11 +16,11 @@ get_config() {
 
 mysql_svcname() {
 	local ebextra=
-	case "${SVCNAME}" in
+	case "${svc_name}" in
 		mysql*) ;;
 		*) ebextra=" (mysql)" ;;
 	esac
-	echo "${SVCNAME}${ebextra}"
+	echo "${svc_name}${ebextra}"
 }
 
 extra_commands="checkconfig"
@@ -28,12 +28,14 @@ supervisor=s6
 name=$(mysql_svcname)
 s6_service_timeout_stop="$((1000*${STOP_TIMEOUT:-120}))"
 #s6_svwait_options_start="-U -t $((1000*${STARTUP_EARLY_TIMEOUT:-1000}))"
+svc_name=${RC_SVCNAME%-s6}
+s6_service_path=/var/svc.d/${svc_name}
 
 start_pre() {
 	# Check the config or die
 	checkconfig || return 1
 
-	MY_CNF="${MY_CNF:-/etc/${SVCNAME}/my.cnf}"
+	MY_CNF="${MY_CNF:-/etc/${svc_name}/my.cnf}"
 
 	if [ ! -r "${MY_CNF}" ] ; then
 		eerror "Cannot read the configuration file \`${MY_CNF}'"
@@ -80,12 +82,13 @@ start_pre() {
 	fi
 
 	# Prepare env files to source
-	mkdir -p "/var/svc.d/${SVCNAME}"
-	echo "MY_CNF=\"${MY_CNF}\"" > "/var/svc.d/${SVCNAME}/env"
-	echo "MY_ARGS=\"${MY_ARGS}\"" >> "/var/svc.d/${SVCNAME}/env"
-	echo "basedir=\"${basedir}\"" >> "/var/svc.d/${SVCNAME}/env"
-	mkdir -p "/var/svc.d/${SVCNAME}/log"
-	echo "SVCNAME=\"${SVCNAME}\"" > "/var/svc.d/${SVCNAME}/log/env"
+	mkdir -p "/var/svc.d/${svc_name}"
+	echo "MY_CNF=\"${MY_CNF}\"" > "/var/svc.d/${svc_name}/env"
+	echo "MY_ARGS=\"${MY_ARGS}\"" >> "/var/svc.d/${svc_name}/env"
+	echo "basedir=\"${basedir}\"" >> "/var/svc.d/${svc_name}/env"
+	mkdir -p "/var/svc.d/${svc_name}/log"
+	echo "SVCNAME=\"${svc_name}\"" > "/var/svc.d/${svc_name}/log/env"
+	echo "S6_LOG_OPTIONS=\"${S6_LOG_OPTIONS}\"" > "/var/svc.d/${svc_name}/log/env"
 }
 
 start_post() {
@@ -100,7 +103,7 @@ start_post() {
 }
 
 checkconfig() {
-	local my_cnf="${MY_CNF:-/etc/${SVCNAME}/my.cnf}"
+	local my_cnf="${MY_CNF:-/etc/${svc_name}/my.cnf}"
 	local basedir=$(get_config "${my_cnf}" basedir | tail -n1)
 	local svc_name=$(mysql_svcname)
 	ebegin "Checking mysqld configuration for ${svc_name}"

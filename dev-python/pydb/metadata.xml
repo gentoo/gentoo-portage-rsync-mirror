@@ -7,4 +7,7 @@
 		<name>Andrey Grozin</name>
 	</maintainer>
 	<longdescription>Extended python debugger</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">bashdb</remote-id>
+	</upstream>
 </pkgmetadata>

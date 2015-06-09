@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/gnome-power-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.201 2015/03/15 13:25:49 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-power-manager/ChangeLog,v 1.202 2015/06/09 16:09:50 eva Exp $
+
+*gnome-power-manager-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  -gnome-power-manager-3.12.2.ebuild, +gnome-power-manager-3.16.1.ebuild:
+  Version bump for Gnome 3.16. Clean up old revision. Lost alpha and sparc
+  keywords due to bug #523924.
 
   15 Mar 2015; Pacho Ramos <pacho@gentoo.org> gnome-power-manager-3.14.1.ebuild:
   x86 stable, bug 534012

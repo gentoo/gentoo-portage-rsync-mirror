@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyid3lib
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.22 2014/12/26 00:01:20 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyid3lib/ChangeLog,v 1.23 2015/06/09 16:17:35 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
 *pyid3lib-0.5.1-r2 (25 Dec 2014)
 
