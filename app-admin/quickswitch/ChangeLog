@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/quickswitch
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.27 2010/01/19 11:38:21 cla Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/quickswitch/ChangeLog,v 1.28 2015/06/09 08:44:25 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   19 Jan 2010; Dawid Węgliński <cla@gentoo.org> quickswitch-1.05.ebuild:
   Remove dosed call on missing file, #299637

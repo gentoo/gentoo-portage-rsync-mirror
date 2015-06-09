@@ -9,4 +9,7 @@
 		AdvanceCOMP is a set of recompression utilities for .PNG, .MNG, .ZIP
 		and .GZ files
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">advancemame</remote-id>
+	</upstream>
 </pkgmetadata>

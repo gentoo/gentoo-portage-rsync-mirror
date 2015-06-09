@@ -5,4 +5,7 @@
 		<email>nullishzero@gentoo.org</email>
 		<name>Pavel Kazakov</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">limitcpu</remote-id>
+	</upstream>
 </pkgmetadata>

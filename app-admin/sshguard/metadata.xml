@@ -5,4 +5,7 @@
   <use>
     <flag name="ipfilter">Enable ipfilter firewall support (only for *bsd)</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">sshguard</remote-id>
+  </upstream>
 </pkgmetadata>

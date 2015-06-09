@@ -8,4 +8,7 @@
   <use>
     <flag name="rar">Enable support for non-free rar decoder</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">p7zip</remote-id>
+  </upstream>
 </pkgmetadata>

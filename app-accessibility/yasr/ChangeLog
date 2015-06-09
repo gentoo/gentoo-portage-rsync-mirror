@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/yasr
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.28 2013/08/15 05:21:58 teiresias Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.29 2015/06/09 08:37:00 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   15 Aug 2013; Christopher Brannon <teiresias@gentoo.org> yasr-0.6.9-r1.ebuild,
   +files/yasr-0.6.9-automake113.patch, +files/yasr-0.6.9-gettext018.patch:
@@ -106,4 +109,3 @@
 
   16 Mar 2004; <dmwaters@gentoo.org> metadata.xml, yasr-0.6.5.ebuild:
   New package. Yasr is a screenreader for linux and other unix based os's.
-

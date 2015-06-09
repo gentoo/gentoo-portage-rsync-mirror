@@ -13,7 +13,9 @@
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 	<use>
-		<flag name='c++0x'>Compile innoextract using the C++11 standard.</flag>
+		<flag name="c++0x">Compile innoextract using the C++11 standard.</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">innoextract</remote-id>
+	</upstream>
 </pkgmetadata>
-

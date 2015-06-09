@@ -4,4 +4,7 @@
   <maintainer>
     <email>mjo@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">unofficial-sigs</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dump
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.71 2012/05/03 01:58:54 jdhore Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/ChangeLog,v 1.72 2015/06/09 08:51:43 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   03 May 2012; Jeff Horelick <jdhore@gentoo.org> dump-0.4.44-r1.ebuild:
   dev-util/pkgconfig -> virtual/pkgconfig

@@ -9,4 +9,7 @@
 	<longdescription lang="en">
 		A utility for creating and opening lzh archives.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge-jp">lha</remote-id>
+	</upstream>
 </pkgmetadata>

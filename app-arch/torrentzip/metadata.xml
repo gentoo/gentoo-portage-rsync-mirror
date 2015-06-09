@@ -8,4 +8,7 @@
 		multiple systems. It has the ability to create a torrentzip format 
 		from a zip file.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">trrntzip</remote-id>
+	</upstream>
 </pkgmetadata>

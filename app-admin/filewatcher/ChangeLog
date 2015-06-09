@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/filewatcher
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.12 2012/05/09 20:00:47 ago Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/filewatcher/ChangeLog,v 1.13 2015/06/09 08:39:45 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   09 May 2012; Agostino Sarubbo <ago@gentoo.org> -filewatcher-2.4.0.ebuild,
   -filewatcher-2.4.3.ebuild:
@@ -52,4 +55,3 @@
   28 Apr 2005; Elfyn McBratney <beu@gentoo.org> +files/filewatcher.conf,
   +metadata.xml, +filewatcher-2.4.0.ebuild:
   Initial ebuild, thanks to Andrew D Kirch.
-

@@ -28,4 +28,7 @@
 		<flag name="ssl">Adds support for Secure Socket Layer connections</flag>
 		<flag name="static">Builds the package statically</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">tripwire</remote-id>
+	</upstream>
 </pkgmetadata>

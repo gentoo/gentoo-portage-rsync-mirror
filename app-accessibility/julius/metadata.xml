@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>accessibility</herd>
+	<upstream>
+		<remote-id type="sourceforge-jp">julius</remote-id>
+	</upstream>
 </pkgmetadata>
-

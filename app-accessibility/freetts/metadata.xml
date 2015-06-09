@@ -4,7 +4,10 @@
 	<herd>accessibility</herd>
 	<herd>java</herd>
 	<use>
-		<flag name='jsapi'>build Java Speech API (JSAPI)</flag>
-		<flag name='mbrola'>Adds support for mbrola voices</flag>
+		<flag name="jsapi">build Java Speech API (JSAPI)</flag>
+		<flag name="mbrola">Adds support for mbrola voices</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">freetts</remote-id>
+	</upstream>
 </pkgmetadata>

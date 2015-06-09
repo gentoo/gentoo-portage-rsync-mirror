@@ -14,6 +14,7 @@
 		<changelog>https://sourceforge.net/p/mktwpol/code/ci/master/tree/CHANGES</changelog>
 		<doc>https://sourceforge.net/p/mktwpol/code/ci/master/tree/README</doc>
 		<bugs-to>https://sourceforge.net/p/mktwpol/discussion/bugs/</bugs-to>
+		<remote-id type="sourceforge">mktwpol</remote-id>
 	</upstream>
 	<longdescription lang="en">
 		mktwpol is a tool that aids system administrators in the 

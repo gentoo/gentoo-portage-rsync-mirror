@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/festival-it
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/ChangeLog,v 1.5 2014/08/06 06:24:38 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/festival-it/ChangeLog,v 1.6 2015/06/09 08:34:08 jlec Exp $
+
+  09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
+  Updating remote-id in metadata.xml
 
   06 Aug 2014; Patrick Lauer <patrick@gentoo.org> festival-it-1.0-r2.ebuild:
   Make description more repoman-happy

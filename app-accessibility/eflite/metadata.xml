@@ -21,4 +21,7 @@
 	Festivalのようにスピーチにテキストを変わるエンジン。)と
 	インタフェスすることが出来る。
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">eflite</remote-id>
+	</upstream>
 </pkgmetadata>

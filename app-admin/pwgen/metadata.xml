@@ -8,4 +8,7 @@
   <use>
     <flag name="livecd">Install init script for root password scrambling on boot</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">pwgen</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jsr101
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.11 2008/06/16 19:37:00 serkan Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/ChangeLog,v 1.12 2015/06/09 08:59:41 monsieurp Exp $
+
+*jsr101-1.4-r2 (09 Jun 2015)
+
+  09 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +jsr101-1.4-r2.ebuild:
+  EAPI 5 bump.
 
   16 Jun 2008; Serkan Kaba <serkan@gentoo.org> -jsr101-1.1.ebuild,
   -jsr101-1.4.ebuild:
@@ -43,4 +48,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +jsr101-1.1.ebuild:
   Initial commit of jsr101.
-

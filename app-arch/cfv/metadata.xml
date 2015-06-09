@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>
 		cfv is a utility to both test and create .sfv, .csv, .crc,
@@ -11,6 +11,9 @@
 		data.
 	</longdescription>
 	<use>
-		<flag name='bittorrent'>Enable support for checking .torrent files</flag>
+		<flag name="bittorrent">Enable support for checking .torrent files</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">cfv</remote-id>
+	</upstream>
 </pkgmetadata>

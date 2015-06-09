@@ -7,6 +7,9 @@
 		<email>neurogeek@gentoo.org</email>
 	</maintainer>
 	<use>
-		<flag name='mbrola'>Adds support for mbrola voices</flag>
+		<flag name="mbrola">Adds support for mbrola voices</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">it-festival</remote-id>
+	</upstream>
 </pkgmetadata>
