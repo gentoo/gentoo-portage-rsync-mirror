@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/matchbox-desktop
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-desktop/ChangeLog,v 1.11 2012/06/04 00:31:01 xmw Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-desktop/ChangeLog,v 1.12 2015/06/09 19:43:10 grknight Exp $
+
+  09 Jun 2015; Brian Evans <grknight@gentoo.org>
+  +files/matchbox-desktop-0.9.1-dlopen.patch, matchbox-desktop-0.9.1.ebuild:
+  Non-maintainer commit: Fix build missing link to dlopen; Patch by me; wrt bug
+  512476
 
   04 Jun 2012; Michael Weber <xmw@gentoo.org> matchbox-desktop-0.9.1.ebuild:
   ppc stable (bug 309407)
@@ -42,4 +47,3 @@
   +matchbox-desktop-0.9.1.ebuild:
   - Initial import. Original ebuild by Priit Laes, modifications by Björn
   Ruberg and Yuri Vasilevski.
-

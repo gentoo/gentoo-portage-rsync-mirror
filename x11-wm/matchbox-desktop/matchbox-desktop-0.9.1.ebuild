@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-desktop/matchbox-desktop-0.9.1.ebuild,v 1.9 2012/06/04 00:31:01 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/matchbox-desktop/matchbox-desktop-0.9.1.ebuild,v 1.10 2015/06/09 19:43:10 grknight Exp $
 
-inherit versionator
+inherit versionator autotools eutils
 
 DESCRIPTION="The Matchbox Desktop"
 HOMEPAGE="http://matchbox-project.org/"
@@ -18,6 +18,13 @@ DEPEND=">=x11-libs/libmatchbox-1.5
 
 RDEPEND="${DEPEND}
 	x11-wm/matchbox-common"
+
+src_unpack() {
+	unpack ${A} || die "Failed to unpack"
+	cd "${S}" || die
+	epatch "${FILESDIR}/${P}-dlopen.patch" || die "Patch failed"
+	eautoreconf || die
+}
 
 src_compile() {
 	econf	$(use_enable debug) \
