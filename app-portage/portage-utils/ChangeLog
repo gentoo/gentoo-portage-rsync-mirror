@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.162 2015/06/06 06:21:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.163 2015/06/10 18:54:21 blueness Exp $
+
+  10 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  portage-utils-0.56.ebuild:
+  Stable for ppc and ppc64. Bug #551682.
 
 *portage-utils-0.56 (06 Jun 2015)
 
