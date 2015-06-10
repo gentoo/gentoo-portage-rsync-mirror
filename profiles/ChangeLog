@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10088 2015/06/10 00:02:29 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10089 2015/06/10 02:24:39 floppym Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org>
+  targets/systemd/package.use.mask:
+  Mask dev-libs/libgudev[static-libs]
 
   10 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.mask:
   Drop Gnome 3.16 mask.
