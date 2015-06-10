@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/eventmachine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.30 2015/06/09 10:37:36 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/eventmachine/ChangeLog,v 1.31 2015/06/10 10:03:43 mrueg Exp $
+
+*eventmachine-1.0.7 (10 Jun 2015)
+
+  10 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +eventmachine-1.0.7.ebuild:
+  Version bump. Add ruby22.
 
   09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -eventmachine-0.12.10-r2.ebuild:
   Remove old.
