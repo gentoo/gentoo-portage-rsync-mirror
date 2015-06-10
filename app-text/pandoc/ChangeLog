@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.38 2015/04/03 09:46:57 gienah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.39 2015/06/10 21:12:10 slyfox Exp $
+
+*pandoc-1.13.2.1 (10 Jun 2015)
+
+  10 Jun 2015; Sergei Trofimovich <slyfox@gentoo.org> +pandoc-1.13.2.1.ebuild:
+  Version bump, added manpagefrom bug #551492 by jeremi.piotrowski@gmail.com.
 
   03 Apr 2015; Mark Wright <gienah@gentoo.org> pandoc-1.13.2-r1.ebuild:
   Loosen filepath and QuickCheck dependencies in pandoc-1.13.2-r1
