@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.330 2015/05/28 09:21:32 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.331 2015/06/10 01:29:55 anarchy Exp $
+
+  10 Jun 2015;  <anarchy@gentoo.org> +files/thunderbird-31.7.0-gcc5-1.patch,
+  thunderbird-31.7.0-r1.ebuild:
+  Fix >=sys-devel/gcc-5 compilation
 
   28 May 2015; Patrick Lauer <patrick@gentoo.org> metadata.xml:
   Remove unneeded useflag description from metadata.xml

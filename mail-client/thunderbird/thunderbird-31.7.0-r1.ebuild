@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.7.0-r1.ebuild,v 1.1 2015/05/27 19:17:56 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-31.7.0-r1.ebuild,v 1.2 2015/06/10 01:29:55 anarchy Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -145,6 +145,9 @@ src_prepare() {
 	EPATCH_SUFFIX="patch" \
 	EPATCH_FORCE="yes" \
 	epatch "${WORKDIR}/firefox"
+	if [[ $(gcc-major-version) -ge 5 ]]; then
+		epatch "${FILESDIR}/thunderbird-31.7.0-gcc5-1.patch"
+	fi
 	popd &>/dev/null || die
 
 	# Ensure that are plugins dir is enabled as default
