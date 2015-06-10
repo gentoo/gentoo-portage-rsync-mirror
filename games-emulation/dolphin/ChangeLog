@@ -1,6 +1,13 @@
 # ChangeLog for games-emulation/dolphin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.39 2015/06/06 04:39:21 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/ChangeLog,v 1.41 2015/06/10 23:00:19 twitch153 Exp $
+
+  10 Jun 2015; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild,
+  metadata.xml:
+  Adds lto USE flag for optional link-time optimizations
+
+  10 Jun 2015; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
+  Enables looking for shared enet
 
   06 Jun 2015; Devan Franchini <twitch153@gentoo.org> dolphin-9999.ebuild:
   Adds >net-libs/enet-1.3.7 as a dependency, bug #550850

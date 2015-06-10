@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.27 2015/06/06 04:39:21 twitch153 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dolphin/dolphin-9999.ebuild,v 1.29 2015/06/10 23:00:19 twitch153 Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ HOMEPAGE="https://www.dolphin-emu.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="alsa ao bluetooth doc ffmpeg +lzo openal opengl openmp portaudio pulseaudio"
+IUSE="alsa ao bluetooth doc ffmpeg lto +lzo openal opengl openmp portaudio pulseaudio"
 
 RDEPEND=">=media-libs/glew-1.10
 	>=media-libs/libsfml-2.1
@@ -117,7 +117,9 @@ src_configure() {
 		"-Dprefix=${GAMES_PREFIX}"
 		"-Ddatadir=${GAMES_DATADIR}/${PN}"
 		"-Dplugindir=$(games_get_libdir)/${PN}"
+		"-DUSE_SHARED_ENET=ON"
 		$( cmake-utils_use ffmpeg ENCODE_FRAMEDUMPS )
+		$( cmake-utils_use_enable lto LTO )
 		$( cmake-utils_use openmp OPENMP )
 	)
 

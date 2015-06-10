@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-Pod-Simple
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.80 2014/11/08 16:37:43 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Pod-Simple/ChangeLog,v 1.81 2015/06/10 22:57:47 dilfridge Exp $
+
+*perl-Pod-Simple-3.290.0 (10 Jun 2015)
+*perl-Pod-Simple-3.280.0-r2 (10 Jun 2015)
+
+  10 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Pod-Simple-3.280.0-r1.ebuild, +perl-Pod-Simple-3.280.0-r2.ebuild,
+  +perl-Pod-Simple-3.290.0.ebuild:
+  Add Perl 5.22 version, remove Perl 5.18 as provider
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-Pod-Simple-3.230.0.ebuild, perl-Pod-Simple-3.280.0-r1.ebuild:
