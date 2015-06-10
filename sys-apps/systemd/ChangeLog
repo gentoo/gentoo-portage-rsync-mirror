@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/systemd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.375 2015/05/30 18:08:36 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/ChangeLog,v 1.376 2015/06/10 01:40:59 floppym Exp $
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
+  Drop references to gudev, gtk-doc, and gobject-introspection.
 
   30 May 2015; Mike Gilbert <floppym@gentoo.org> systemd-9999.ebuild:
   Depend on >=sys-apps/util-linux-2.26, bug 550832 by Elias Probst.

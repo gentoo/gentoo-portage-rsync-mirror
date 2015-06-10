@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.16.0.ebuild,v 1.1 2015/06/09 23:36:08 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-extra-apps/gnome-extra-apps-3.16.0.ebuild,v 1.2 2015/06/10 01:57:50 tetromino Exp $
 
 EAPI="5"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Sub-meta package for the applications of GNOME 3"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="metapackage"
 SLOT="3.0"
-IUSE="+games +shotwell +tracker"
+IUSE="+games +share +shotwell +tracker"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
@@ -31,7 +31,6 @@ RDEPEND="
 	>=gnome-extra/gnome-system-monitor-${PV}
 	>=gnome-extra/gnome-tweak-tool-${PV}
 	>=gnome-extra/gnome-weather-${PV}
-	>=gnome-extra/gnome-user-share-3.14
 	>=gnome-extra/gucharmap-${PV}:2.90
 	>=gnome-extra/nautilus-sendto-3.8.2
 	>=gnome-extra/sushi-${PV}
@@ -65,6 +64,7 @@ RDEPEND="
 		>=games-puzzle/lightsoff-${PV}
 		>=games-puzzle/quadrapassel-${PV}
 		>=games-puzzle/swell-foop-${PV} )
+	share? ( >=gnome-extra/gnome-user-share-3.14 )
 	shotwell? ( >=media-gfx/shotwell-0.22 )
 	tracker? (
 		>=app-misc/tracker-1.4

@@ -2975,6 +2975,7 @@ gnome-base/gnome-control-center:gnome-online-accounts - Enable configuration pan
 gnome-base/gnome-control-center:i18n - Enable support for enhanced input methods through app-i18n/ibus
 gnome-base/gnome-desktop:license-docs - Install help files documenting GNOME's licenses
 gnome-base/gnome-extra-apps:games - Install Gnome Games
+gnome-base/gnome-extra-apps:share - Install the gnome-extra/gnome-user-share personal file sharing tool
 gnome-base/gnome-extra-apps:shotwell - Install the media-gfx/shotwell photo manager
 gnome-base/gnome-extra-apps:tracker - Install the app-misc/tracker indexer and the GNOME packages that require it
 gnome-base/gnome-keyring:ssh-agent - Use GNOME Keyring to unlock SSH keys. Recommended unless you are using ECDSA or Ed25519 keys.
