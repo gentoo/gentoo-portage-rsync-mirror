@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowmaker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.153 2015/05/27 20:24:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/ChangeLog,v 1.154 2015/06/10 15:25:30 voyageur Exp $
+
+*windowmaker-9999 (10 Jun 2015)
+
+  10 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org>
+  +windowmaker-9999.ebuild:
+  Move live ebuild from gnustep overlay
 
   27 May 2015; Pacho Ramos <pacho@gentoo.org> windowmaker-0.92.0-r11.ebuild,
   windowmaker-0.95.5-r1.ebuild, windowmaker-0.95.6.ebuild:

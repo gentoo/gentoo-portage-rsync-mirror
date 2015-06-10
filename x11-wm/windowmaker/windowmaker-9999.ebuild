@@ -1,24 +1,24 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.95.6.ebuild,v 1.6 2015/06/10 15:25:30 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-9999.ebuild,v 1.1 2015/06/10 15:25:30 voyageur Exp $
 
 EAPI=5
-inherit autotools eutils
+inherit autotools eutils git-r3
 
 DESCRIPTION="The fast and light GNUstep window manager"
 HOMEPAGE="http://www.windowmaker.org/"
-SRC_URI=" http://windowmaker.org/pub/source/release/${P/windowm/WindowM}.tar.gz
-	http://www.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz"
+SRC_URI="http://www.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.gz"
+EGIT_REPO_URI="git://repo.or.cz/wmaker-crm.git"
+EGIT_BRANCH="next"
 
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="gif imagemagick jpeg modelock nls png tiff webp xinerama +xpm xrandr"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~ppc64 ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x64-solaris ~x86-solaris"
+KEYWORDS=""
 
 DEPEND="media-libs/fontconfig
 	>=x11-libs/libXft-2.1.0
 	x11-libs/libXmu
-	x11-libs/libXpm
 	x11-libs/libXt
 	x11-libs/libXv
 	gif? ( >=media-libs/giflib-4.1.0-r3 )
@@ -31,10 +31,14 @@ DEPEND="media-libs/fontconfig
 	xrandr? ( x11-libs/libXrandr )"
 RDEPEND="${DEPEND}
 	nls? ( >=sys-devel/gettext-0.10.39 )
-	!app-i18n/scim-anthy[gtk3]
-"
+	!app-i18n/scim-anthy[gtk3]"
 
-S=${WORKDIR}/${P/windowm/WindowM}
+src_unpack() {
+	# wm-extras
+	unpack ${A}
+
+	git-r3_src_unpack
+}
 
 src_prepare() {
 	# Fix some paths
@@ -45,9 +49,6 @@ src_prepare() {
 			sed -i -e "s:/opt/share/WindowMaker:${EPREFIX}/usr/share/WindowMaker:g;" "$file" || die
 		fi;
 	done;
-
-	epatch "${FILESDIR}"/${PN}-0.95.3-fix_underlinking.patch
-	epatch "${FILESDIR}"/${P}-webp_detection.patch
 
 	eautoreconf
 }
@@ -73,7 +74,7 @@ src_configure() {
 		--with-x \
 		--enable-usermenu \
 		--with-pixmapdir="${EPREFIX}"/usr/share/pixmaps \
-		--with-nlsdir="${EPREFIX}"/usr/share/locale \
+		--localedir="${EPREFIX}"/usr/share/locale \
 		${myconf}
 
 	cd ../WindowMaker-extra-0.1
