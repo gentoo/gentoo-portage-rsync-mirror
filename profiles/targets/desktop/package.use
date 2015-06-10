@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.44 2015/06/02 09:15:36 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/targets/desktop/package.use,v 1.45 2015/06/10 12:40:51 floppym Exp $
 
 # Alexandre Rostovtsev <tetromino@gentoo.org> (19 Feb 2015)
 # Set reasonable default toolkit for all desktops to prevent emerge error
@@ -57,6 +57,7 @@ media-libs/libpng apng
 # Samuli Suominen <ssuominen@gentoo.org> (19 Dec 2010)
 # gudev, required by freedesktop.org udev helpers like udisks and upower
 # introspection, exception, enabled from here instead of ebuild to skip extra deps for a system package
+dev-libs/libgudev introspection
 sys-apps/systemd gudev introspection
 sys-fs/eudev gudev introspection
 sys-fs/udev gudev introspection
