@@ -43,4 +43,5 @@ sparc64-solaris
 x64-solaris
 x86-solaris
 x86-winnt
+x64-cygwin
 x86-cygwin

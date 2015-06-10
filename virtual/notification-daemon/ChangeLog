@@ -1,6 +1,11 @@
 # ChangeLog for virtual/notification-daemon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.17 2015/06/07 11:03:31 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/notification-daemon/ChangeLog,v 1.18 2015/06/10 14:04:14 tetromino Exp $
+
+  10 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  notification-daemon-0.ebuild:
+  Make x11-misc/notification-daemon the default non-gnome provider (suggested
+  by angry_vincent and floppym).
 
   07 Jun 2015; Pacho Ramos <pacho@gentoo.org> notification-daemon-0.ebuild:
   gnome-extra/cinnamon also provides notification-daemon (#545102 by Marc
