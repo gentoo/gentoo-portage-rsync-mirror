@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.9-r2.ebuild,v 1.5 2014/08/01 19:54:55 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.9-r2.ebuild,v 1.6 2015/06/10 02:33:47 floppym Exp $
 
 EAPI="5"
 
@@ -53,7 +53,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
 	!<sec-policy/selinux-base-2.20120725-r10
 	!sys-fs/udev
-	!sys-apps/systemd"
+	!sys-apps/systemd
+	gudev? ( !dev-libs/libgudev )"
 
 PDEPEND="hwdb? ( >=sys-apps/hwids-20140304[udev] )
 	keymap? ( >=sys-apps/hwids-20140304[udev] )

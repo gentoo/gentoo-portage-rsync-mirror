@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208-r1.ebuild,v 1.4 2014/06/24 22:17:35 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-208-r1.ebuild,v 1.5 2015/06/10 02:40:27 floppym Exp $
 
 EAPI=5
 
@@ -63,7 +63,8 @@ RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/udev-init-scripts-22
 	!<sys-kernel/dracut-017-r1
 	!<sys-kernel/genkernel-3.4.25
-	!<sec-policy/selinux-base-2.20120725-r10"
+	!<sec-policy/selinux-base-2.20120725-r10
+	gudev? ( !dev-libs/libgudev )"
 PDEPEND=">=sys-apps/hwids-20130717-r1[udev]
 	>=sys-fs/udev-init-scripts-25"
 

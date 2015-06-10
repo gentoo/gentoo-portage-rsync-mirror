@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.18 2014/07/25 12:22:39 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/eudev/eudev-1.3.ebuild,v 1.19 2015/06/10 02:33:47 floppym Exp $
 
 EAPI="5"
 
@@ -52,7 +52,8 @@ RDEPEND="${COMMON_DEPEND}
 	!sys-apps/systemd
 	!<sys-fs/lvm2-2.02.97
 	!sys-fs/device-mapper
-	!<sys-fs/udev-init-scripts-18"
+	!<sys-fs/udev-init-scripts-18
+	gudev? ( !dev-libs/libgudev )"
 
 PDEPEND="hwdb? ( >=sys-apps/hwids-20130717-r1[udev] )
 	keymap? ( >=sys-apps/hwids-20130717-r1[udev] )

@@ -1,6 +1,14 @@
 # ChangeLog for sys-fs/udev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1110 2015/06/06 17:42:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.1112 2015/06/10 02:40:27 floppym Exp $
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> udev-208-r1.ebuild,
+  udev-216.ebuild, udev-217.ebuild, udev-218.ebuild, udev-219.ebuild,
+  udev-220-r1.ebuild:
+  Add blocker on dev-libs/libgudev.
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> udev-9999.ebuild:
+  Remove references to gudev, gtk-doc, and gobject-introspection.
 
   06 Jun 2015; William Hubbs <williamh@gentoo.org> -udev-220.ebuild,
   udev-9999.ebuild:

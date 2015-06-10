@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.327 2015/06/06 17:42:24 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.328 2015/06/10 02:37:44 floppym Exp $
 
 EAPI=5
 
@@ -26,14 +26,12 @@ HOMEPAGE="http://www.freedesktop.org/wiki/Software/systemd"
 
 LICENSE="LGPL-2.1 MIT GPL-2"
 SLOT="0"
-IUSE="acl doc gudev introspection +kmod selinux static-libs"
+IUSE="acl doc +kmod selinux static-libs"
 
 RESTRICT="test"
 
 COMMON_DEPEND=">=sys-apps/util-linux-2.20
 	acl? ( sys-apps/acl )
-	gudev? ( >=dev-libs/glib-2.34.3[${MULTILIB_USEDEP}] )
-	introspection? ( >=dev-libs/gobject-introspection-1.38 )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
 	!<sys-libs/glibc-2.11
@@ -51,8 +49,7 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	virtual/pkgconfig
 	>=sys-devel/make-3.82-r4
-	>=sys-kernel/linux-headers-3.9
-	doc? ( >=dev-util/gtk-doc-1.18 )"
+	>=sys-kernel/linux-headers-3.9"
 # Try with `emerge -C docbook-xml-dtd` to see the build failure without DTDs
 if [[ ${PV} = 9999* ]]; then
 	DEPEND="${DEPEND}
@@ -135,11 +132,6 @@ src_prepare() {
 	epatch_user
 
 	if [[ ! -e configure ]]; then
-		if use doc; then
-			gtkdocize --docdir docs || die "gtkdocize failed"
-		else
-			echo 'EXTRA_DIST =' > docs/gtk-doc.make
-		fi
 		eautoreconf
 	else
 		check_default_rules
@@ -171,7 +163,6 @@ multilib_src_configure() {
 		$(multilib_native_use_enable static-libs static)
 		--disable-nls
 		$(multilib_native_use_enable doc gtk-doc)
-		$(multilib_native_use_enable introspection)
 		--disable-python-devel
 		--disable-dbus
 		$(multilib_native_use_enable kmod)
@@ -195,7 +186,6 @@ multilib_src_configure() {
 		--disable-polkit
 		--disable-terminal
 		--disable-myhostname
-		$(use_enable gudev)
 		$(multilib_is_native_abi || echo "--disable-manpages")
 		--enable-split-usr
 		--with-html-dir=/usr/share/doc/${PF}/html
@@ -227,7 +217,6 @@ multilib_src_compile() {
 	# early enough, like eg. libsystemd-shared.la
 	if multilib_is_native_abi; then
 		local lib_targets=( libudev.la )
-		use gudev && lib_targets+=( libgudev-1.0.la )
 		emake "${lib_targets[@]}"
 
 		local exec_targets=(
@@ -260,11 +249,9 @@ multilib_src_compile() {
 
 		if use doc; then
 			emake -C docs/libudev
-			use gudev && emake -C docs/gudev
 		fi
 	else
 		local lib_targets=( libudev.la )
-		use gudev && lib_targets+=( libgudev-1.0.la )
 		emake "${lib_targets[@]}"
 	fi
 }
@@ -277,7 +264,6 @@ multilib_src_install() {
 		local targets=(
 			install-libLTLIBRARIES
 			install-includeHEADERS
-			install-libgudev_includeHEADERS
 			install-rootbinPROGRAMS
 			install-rootlibexecPROGRAMS
 			install-udevlibexecPROGRAMS
@@ -293,11 +279,6 @@ multilib_src_install() {
 			install-dist_bashcompletionDATA
 			install-dist_networkDATA
 		)
-
-		if use gudev; then
-			lib_LTLIBRARIES+=" libgudev-1.0.la"
-			pkgconfiglib_DATA+=" src/gudev/gudev-1.0.pc"
-		fi
 
 		# add final values of variables:
 		targets+=(
@@ -316,7 +297,6 @@ multilib_src_install() {
 
 		if use doc; then
 			emake -C docs/libudev DESTDIR="${D}" install
-			use gudev && emake -C docs/gudev DESTDIR="${D}" install
 		fi
 
 		if [[ ${PV} = 9999* ]]; then
@@ -334,11 +314,6 @@ multilib_src_install() {
 			install-includeHEADERS
 			install-pkgconfiglibDATA
 		)
-
-		if use gudev; then
-			lib_LTLIBRARIES+=" libgudev-1.0.la"
-			pkgconfiglib_DATA+=" src/gudev/gudev-1.0.pc"
-		fi
 
 		targets+=(
 			lib_LTLIBRARIES="${lib_LTLIBRARIES}"
@@ -366,9 +341,6 @@ multilib_src_install_all() {
 	mv "${D}"/usr/share/man/man8/systemd-udevd{.service,}.8
 
 	if ! [[ ${PV} = 9999* ]]; then
-		insinto /usr/share/doc/${PF}/html/gudev
-		doins "${S}"/docs/gudev/html/*
-
 		insinto /usr/share/doc/${PF}/html/libudev
 		doins "${S}"/docs/libudev/html/*
 	fi
@@ -376,7 +348,7 @@ multilib_src_install_all() {
 
 pkg_preinst() {
 	local htmldir
-	for htmldir in gudev libudev; do
+	for htmldir in libudev; do
 		if [[ -d ${ROOT%/}/usr/share/gtk-doc/html/${htmldir} ]]; then
 			rm -rf "${ROOT%/}"/usr/share/gtk-doc/html/${htmldir}
 		fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-218.ebuild,v 1.2 2015/05/01 18:31:06 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-218.ebuild,v 1.3 2015/06/10 02:40:27 floppym Exp $
 
 EAPI=5
 
@@ -63,7 +63,8 @@ if [[ ${PV} = 9999* ]]; then
 fi
 RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
-	!<sec-policy/selinux-base-2.20120725-r10"
+	!<sec-policy/selinux-base-2.20120725-r10
+	gudev? ( !dev-libs/libgudev )"
 PDEPEND=">=sys-apps/hwids-20140304[udev]
 	>=sys-fs/udev-init-scripts-26"
 

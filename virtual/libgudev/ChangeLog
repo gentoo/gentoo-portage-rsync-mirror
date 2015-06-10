@@ -1,6 +1,14 @@
 # ChangeLog for virtual/libgudev
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/ChangeLog,v 1.14 2014/08/06 18:32:09 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/libgudev/ChangeLog,v 1.16 2015/06/10 02:45:13 floppym Exp $
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> libgudev-215-r2.ebuild:
+  Add slot to dev-libs/libgudev.
+
+*libgudev-215-r2 (10 Jun 2015)
+
+  10 Jun 2015; Mike Gilbert <floppym@gentoo.org> +libgudev-215-r2.ebuild:
+  Add dev-libs/libgudev
 
 *libgudev-215-r1 (06 Aug 2014)
 
