@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.14.2.ebuild,v 1.1 2014/12/22 21:42:06 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-boxes/gnome-boxes-3.16.2.ebuild,v 1.1 2015/06/09 23:34:39 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -15,7 +15,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Boxes"
 LICENSE="LGPL-2"
 SLOT="0"
 
-# We force 'bindist' due licenses from gnome-boxes-nonfree
+# We force 'bindist' due to licenses from gnome-boxes-nonfree
 IUSE="smartcard usbredir" #bindist
 KEYWORDS="~amd64" # qemu-kvm[spice] is 64bit-only
 
@@ -32,10 +32,11 @@ RDEPEND="
 	>=sys-libs/libosinfo-0.2.11
 	>=app-emulation/qemu-1.3.1[spice,smartcard?,usbredir?]
 	>=app-emulation/libvirt-0.9.3[libvirtd,qemu]
-	>=app-emulation/libvirt-glib-0.1.9
+	>=app-emulation/libvirt-glib-0.2
 	>=x11-libs/gtk+-3.13.2:3
 	>=net-libs/gtk-vnc-0.4.4[gtk3]
-	>=net-misc/spice-gtk-0.16[gtk3,smartcard?,usbredir?]
+	>=net-misc/spice-gtk-0.27[gtk3,smartcard?,usbredir?]
+	virtual/libusb:1
 
 	>=app-misc/tracker-0.16:0=[iso]
 
