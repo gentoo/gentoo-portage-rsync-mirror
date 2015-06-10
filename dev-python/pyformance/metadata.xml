@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<herd>python</herd>
+	<upstream>
+		<remote-id type="pypi">pyformance</remote-id>
+	</upstream>
 	<maintainer>
-		<email>floppym@gentoo.org</email>
-		<name>Mike Gilbert</name>
+		<email>zmedico@gentoo.org</email>
 	</maintainer>
-	<herd>gnome</herd>
 </pkgmetadata>
