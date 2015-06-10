@@ -1,6 +1,16 @@
 # ChangeLog for x11-misc/notification-daemon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.108 2015/05/27 13:57:42 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/notification-daemon/ChangeLog,v 1.109 2015/06/09 23:08:38 eva Exp $
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +notification-daemon-3.16.1.ebuild:
+  Version bump for Gnome 3.16.
+
+*notification-daemon-3.16.1 (09 Jun 2015)
+
+  09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  +notification-daemon-3.16.1.ebuild:
+  Version bump for Gnome 3.16.
 
   27 May 2015; Mikle Kolyada <zlogene@gentoo.org>
   notification-daemon-3.14.1.ebuild:
