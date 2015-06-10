@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/go-fuse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.12 2015/06/06 18:55:57 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/go-fuse/ChangeLog,v 1.13 2015/06/10 08:09:56 zmedico Exp $
+
+  10 Jun 2015; Zac Medico <zmedico@gentoo.org> go-fuse-0_p20140812-r1.ebuild,
+  go-fuse-0_p20150422.ebuild:
+  Use insopts -p to preserve timestamps for bug 551486.
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
