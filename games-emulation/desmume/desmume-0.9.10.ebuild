@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.9.10.ebuild,v 1.1 2014/12/06 20:12:54 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/desmume/desmume-0.9.10.ebuild,v 1.2 2015/06/10 13:59:51 nimiux Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/desmume/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.8.0:2
