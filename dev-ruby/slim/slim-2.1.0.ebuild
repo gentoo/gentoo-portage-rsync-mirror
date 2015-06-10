@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slim/slim-2.0.3.ebuild,v 1.2 2015/06/10 05:41:36 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/slim/slim-2.1.0.ebuild,v 1.1 2015/06/10 05:45:13 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -28,6 +28,8 @@ ruby_add_bdepend "doc? ( dev-ruby/yard dev-ruby/redcarpet )"
 ruby_add_bdepend "test? ( dev-ruby/sass )"
 
 all_ruby_prepare() {
+	sed -i -e '/bundler/I s:^:#:' Rakefile || die
+
 	# This sinatra code expects tests to be installed but we strip those.
 	sed -i -e "s/require 'sinatra'/require 'bogussinatra'/" Rakefile || die
 
