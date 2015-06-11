@@ -1,9 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/dfarc/dfarc-3.12.ebuild,v 1.1 2014/11/12 15:58:23 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/dfarc/dfarc-3.12.ebuild,v 1.2 2015/06/11 07:41:53 mr_bones_ Exp $
 
 EAPI=5
-
 WX_GTK_VER="3.0"
 inherit gnome2-utils fdo-mime wxwidgets games
 
