@@ -1,6 +1,9 @@
 # ChangeLog for kde-frameworks/plasma
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/plasma/ChangeLog,v 1.16 2015/05/23 01:33:53 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/plasma/ChangeLog,v 1.17 2015/06/11 16:09:40 johu Exp $
+
+  11 Jun 2015; Johannes Huber <johu@gentoo.org> plasma-5.10.0.ebuild:
+  Adjust dev-qt/qtgui USE dependencies, bug #551772.
 
   23 May 2015; Manuel Rüger <mrueg@gentoo.org> -plasma-5.9.0.ebuild:
   Remove old.

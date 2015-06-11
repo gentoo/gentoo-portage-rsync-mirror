@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/plasma/plasma-5.10.0.ebuild,v 1.1 2015/05/09 10:36:08 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/plasma/plasma-5.10.0.ebuild,v 1.2 2015/06/11 16:09:40 johu Exp $
 
 EAPI=5
 
@@ -42,7 +42,7 @@ RDEPEND="
 	dev-qt/qtxml:5
 	egl? ( media-libs/mesa[egl] )
 	opengl? (
-		dev-qt/qtgui:5[opengl,-gles2]
+		dev-qt/qtgui:5[opengl(+),-gles2]
 		virtual/opengl
 	)
 	X? (
