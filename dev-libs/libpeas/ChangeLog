@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libpeas
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.46 2015/06/09 11:04:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpeas/ChangeLog,v 1.47 2015/06/11 01:45:08 tetromino Exp $
+
+*libpeas-1.14.0-r1 (11 Jun 2015)
+
+  11 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +libpeas-1.14.0-r1.ebuild, +files/libpeas-1.14.0-lua.pc.patch:
+  Fix build and dependencies with USE="lua -jit" (bug #551704, thanks to tman
+  and Ulrich Müller). Really build luajit support if USE="lua jit". Punt .la
+  files.
 
 *libpeas-1.14.0 (09 Jun 2015)
 
