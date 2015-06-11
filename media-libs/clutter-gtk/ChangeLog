@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/clutter-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.60 2015/02/07 12:24:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter-gtk/ChangeLog,v 1.61 2015/06/11 00:35:05 tetromino Exp $
+
+*clutter-gtk-1.6.0-r1 (11 Jun 2015)
+
+  11 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +clutter-gtk-1.6.0-r1.ebuild,
+  +files/clutter-gtk-1.6.0-clutter_gdk_get_visual.patch:
+  Add upstream patch to fix totem crashes with nvidia-drivers (bug #549036,
+  thanks to Harris Landgarten and Pacho Ramos).
 
   07 Feb 2015; Pacho Ramos <pacho@gentoo.org> -clutter-gtk-1.5.2.ebuild:
   Drop old

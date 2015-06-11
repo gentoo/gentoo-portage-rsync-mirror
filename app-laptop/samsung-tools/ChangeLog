@@ -1,6 +1,11 @@
 # ChangeLog for app-laptop/samsung-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/ChangeLog,v 1.9 2015/06/09 11:35:52 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/samsung-tools/ChangeLog,v 1.10 2015/06/11 00:45:02 idella4 Exp $
+
+*samsung-tools-2.3.1 (11 Jun 2015)
+
+  11 Jun 2015; Ian Delaney <idella4@gentoo.org> +samsung-tools-2.3.1.ebuild:
+  bump ebuild based on ebuild supplied by July Tikhonov in bug #484034
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml
