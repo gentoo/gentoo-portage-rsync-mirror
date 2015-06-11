@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.461 2015/06/05 15:06:18 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.462 2015/06/11 04:27:22 jer Exp $
+
+  11 Jun 2015; Jeroen Roovers <jer@gentoo.org> dhcpcd-6.9.0.ebuild:
+  Stable for HPPA PPC64 (bug #551010).
 
   05 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> dhcpcd-6.9.0.ebuild:
   arm stable wrt bug #551010
