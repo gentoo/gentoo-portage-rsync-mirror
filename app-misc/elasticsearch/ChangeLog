@@ -1,6 +1,17 @@
 # ChangeLog for app-misc/elasticsearch
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.12 2015/04/01 17:33:46 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/elasticsearch/ChangeLog,v 1.13 2015/06/11 15:36:30 chainsaw Exp $
+
+*elasticsearch-1.6.0 (11 Jun 2015)
+
+  11 Jun 2015; Tony Vroon <chainsaw@gentoo.org> -elasticsearch-1.4.4.ebuild,
+  -elasticsearch-1.5.0.ebuild, +elasticsearch-1.6.0.ebuild,
+  +files/elasticsearch.init4, +files/elasticsearch.service3, metadata.xml:
+  Security fix relating to an unspecified arbitrary file modification
+  vulnerability. Ebuild, init script and systemd service file by Ferenc Erki.
+  Closes bug #537314 by Austin M. Matherne and bug #547964 by Tomas Mozes.
+  Adding Ferenc Erki as proxy maintainer. Removing all vulnerable ebuilds for
+  security bug #551776.
 
 *elasticsearch-1.5.0 (01 Apr 2015)
 
