@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/pathfinder-1.7.49.ebuild,v 1.3 2015/05/27 11:25:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pathfinder/pathfinder-1.7.49.ebuild,v 1.4 2015/06/11 14:16:46 ago Exp $
 
 EAPI="5"
 
@@ -10,7 +10,7 @@ DESCRIPTION="File manager based on the FOX Toolkit"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~hppa ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~hppa ppc ~ppc64 ~sparc x86"
 IUSE="+jpeg +png +tiff"
 
 DEPEND="

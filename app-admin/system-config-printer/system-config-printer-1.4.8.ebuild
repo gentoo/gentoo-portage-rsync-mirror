@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-1.4.8.ebuild,v 1.4 2015/05/23 18:56:36 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/system-config-printer/system-config-printer-1.4.8.ebuild,v 1.5 2015/06/11 14:21:20 ago Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -16,7 +16,7 @@ HOMEPAGE="http://cyberelk.net/tim/software/system-config-printer/"
 SRC_URI="http://cyberelk.net/tim/data/system-config-printer/${MY_V}/${P}.tar.xz"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ppc64 ~sh ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~ia64 ppc ppc64 ~sh ~sparc x86"
 SLOT="0"
 
 IUSE="doc gnome-keyring policykit"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/hdparm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.248 2015/06/09 07:06:05 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/ChangeLog,v 1.249 2015/06/11 14:14:55 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> hdparm-9.45.ebuild:
+  Stable for ppc, wrt bug #528772
 
   09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> hdparm-9.45.ebuild:
   Stable for x86, wrt bug #528772

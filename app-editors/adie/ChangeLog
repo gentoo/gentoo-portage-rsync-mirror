@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/adie
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.58 2015/06/09 07:13:52 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/adie/ChangeLog,v 1.59 2015/06/11 14:16:41 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> adie-1.7.49.ebuild:
+  Stable for ppc, wrt bug #535832
 
   09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> adie-1.7.49.ebuild:
   Stable for x86, wrt bug #535832

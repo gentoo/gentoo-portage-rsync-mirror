@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluedevil
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.70 2015/06/09 12:21:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluedevil/ChangeLog,v 1.71 2015/06/11 14:28:15 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> bluedevil-2.1.1.ebuild:
+  Stable for ppc, wrt bug #550746
 
   09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> -bluedevil-2.0.ebuild,
   -bluedevil-2.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.16.3.ebuild,v 1.1 2015/06/09 16:24:05 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-3.16.3.ebuild,v 1.2 2015/06/11 14:13:48 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,6 +23,7 @@ KEYWORDS="~amd64 ~x86 ~x86-fbsd"
 # password from inside evolution, bug 160302
 PINENTRY_DEPEND="|| ( app-crypt/pinentry[gtk] app-crypt/pinentry[qt4] )"
 
+# gtk+-3.16 needed for gtk_drag_cancel
 # glade-3 support is for maintainers only per configure.ac
 # pst is not mature enough and changes API/ABI frequently
 # dconf explicitely needed for backup plugin
@@ -43,7 +44,7 @@ COMMON_DEPEND="
 	>=net-libs/webkit-gtk-2.2:3
 	>=x11-libs/cairo-1.9.15:=[glib]
 	>=x11-libs/gdk-pixbuf-2.24:2
-	>=x11-libs/gtk+-3.10:3
+	>=x11-libs/gtk+-3.16:3
 	>=x11-libs/libnotify-0.7:=
 	>=x11-misc/shared-mime-info-0.22
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript-gpl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.186 2015/06/09 12:22:58 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript-gpl/ChangeLog,v 1.187 2015/06/11 14:20:02 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ghostscript-gpl-9.15-r1.ebuild:
+  Stable for ppc, wrt bug #546632
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

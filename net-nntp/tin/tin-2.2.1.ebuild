@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.2.1.ebuild,v 1.4 2015/06/09 18:38:03 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-2.2.1.ebuild,v 1.5 2015/06/11 14:15:54 ago Exp $
 
 EAPI=5
 inherit eutils toolchain-funcs versionator
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v${TIN_PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm ~ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
+KEYWORDS="amd64 arm ppc x86 ~amd64-linux ~x86-linux ~ppc-macos"
 IUSE="cancel-locks debug doc +etiquette evil forgery gpg idn ipv6 mime nls sasl socks5 spell unicode"
 
 RDEPEND="

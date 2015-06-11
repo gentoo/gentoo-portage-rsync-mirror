@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.49.ebuild,v 1.3 2015/05/27 11:25:12 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fox/fox-1.7.49.ebuild,v 1.4 2015/06/11 14:16:57 ago Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit fox
 
 LICENSE="LGPL-2.1"
 SLOT="1.7"
-KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ppc ~ppc64 ~sparc x86"
 IUSE="+bzip2 +jpeg +opengl +png tiff +truetype +zlib"
 
 # newish autoconf needed for working mmap check

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/camlp5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.85 2015/05/27 11:27:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/camlp5/ChangeLog,v 1.86 2015/06/11 14:15:15 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> camlp5-6.12.ebuild:
+  Stable for ppc, wrt bug #535126
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> camlp5-6.12.ebuild:
   Stable for x86, wrt bug #535126
