@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.3.0.ebuild,v 1.11 2015/06/11 02:50:12 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/cherrypy-3.7.0.ebuild,v 1.1 2015/06/11 02:50:12 idella4 Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy pypy3 )
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/C/CherryPy/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 arm ia64 ppc x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="test"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -23,9 +23,8 @@ DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
 RDEPEND=""
 S="${WORKDIR}/${MY_P}"
 
-DISTUTILS_IN_SOURCE_BUILD=1
-
-PATCHES=( "${FILESDIR}/${PN}-3.3.0-test_config.patch" )
+# testsuite predominantly connects to the network
+RESTRICT="test"
 
 python_prepare_all() {
 	# Prevent interactive failures (hangs) in the test suite
@@ -45,9 +44,9 @@ python_test() {
 	# This really doesn't sit well with multiprocessing
 	# The issue 1306 tells us some tests are subject to the deleterious effects of
 	# the 'race condition'.  Both the issues are unresolved / open
-	if [[ "${EPYTHON}" == pypy ]]; then
-		nosetests "${exclude[@]}" -I test_logging.py < /dev/tty || die "Testing failed with${EPYTHON}"
-	else
-		nosetests "${exclude[@]}" < /dev/tty || die "Testing failed with ${EPYTHON}"
-	fi
+#	if [[ "${EPYTHON}" == pypy ]]; then
+		nosetests "${exclude[@]}" -I test_logging.py || die "Testing failed with ${EPYTHON}"
+#	else
+#		nosetests "${exclude[@]}" < /dev/tty || die "Testing failed with ${EPYTHON}"
+#	fi
 }
