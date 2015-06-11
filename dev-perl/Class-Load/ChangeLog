@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Load
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.49 2015/05/20 04:52:05 mattst88 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Load/ChangeLog,v 1.50 2015/06/11 19:08:17 maekke Exp $
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> Class-Load-0.220.0.ebuild:
+  add ~arm, bug #548352
 
   20 May 2015; Matt Turner <mattst88@gentoo.org> Class-Load-0.220.0.ebuild:
   Added ~alpha, bug 548352.

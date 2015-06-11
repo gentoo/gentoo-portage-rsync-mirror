@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libqmi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.26 2015/04/19 09:57:31 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libqmi/ChangeLog,v 1.27 2015/06/11 19:20:06 maekke Exp $
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> libqmi-1.12.6.ebuild:
+  arm stable, bug #546186
 
   19 Apr 2015; Agostino Sarubbo <ago@gentoo.org> libqmi-1.12.6.ebuild:
   Stable for x86, wrt bug #546186

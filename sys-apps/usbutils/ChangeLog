@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/usbutils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.200 2015/06/11 14:18:18 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/usbutils/ChangeLog,v 1.201 2015/06/11 19:15:36 maekke Exp $
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> usbutils-008-r1.ebuild:
+  arm stable, bug #541040
 
   11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> usbutils-008-r1.ebuild:
   Stable for ppc, wrt bug #541040

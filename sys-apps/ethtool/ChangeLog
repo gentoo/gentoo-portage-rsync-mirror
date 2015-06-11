@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/ethtool
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.117 2015/06/07 07:16:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ethtool/ChangeLog,v 1.118 2015/06/11 19:04:53 maekke Exp $
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> ethtool-3.18.ebuild:
+  arm stable, bug #536740
 
   07 Jun 2015; Jeroen Roovers <jer@gentoo.org> ethtool-3.18.ebuild:
   Stable for HPPA PPC64 (bug #536740).

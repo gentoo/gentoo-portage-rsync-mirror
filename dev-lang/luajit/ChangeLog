@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/luajit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.26 2015/05/21 09:01:30 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/luajit/ChangeLog,v 1.27 2015/06/11 19:17:08 maekke Exp $
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> luajit-2.0.3-r1.ebuild:
+  arm stable, bug #537370
 
 *luajit-2.0.4 (21 May 2015)
 

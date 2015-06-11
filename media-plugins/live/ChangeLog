@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/live
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.165 2014/05/06 02:47:21 patrick Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/ChangeLog,v 1.166 2015/06/11 19:16:25 maekke Exp $
+
+  11 Jun 2015; Markus Meier <maekke@gentoo.org> live-2013.02.11.ebuild:
+  arm stable, bug #539222
 
   06 May 2014; Patrick Lauer <patrick@gentoo.org> live-2012.01.07.ebuild,
   live-2012.09.13.ebuild, live-2013.02.11.ebuild:
