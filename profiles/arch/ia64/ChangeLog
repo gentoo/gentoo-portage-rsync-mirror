@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/ia64 profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.232 2015/06/09 15:35:37 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/ChangeLog,v 1.233 2015/06/11 10:52:54 chewi Exp $
+
+  11 Jun 2015; <chewi@gentoo.org> package.use.mask:
+  Temporarily mask rdeps of rhino, which has EAPI 1, until I have a chance to
+  drop Java support on ia64 entirely.
 
   09 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org> package.use.mask:
   Add gnome-base/gvfs nfs USE mask, bug #551576

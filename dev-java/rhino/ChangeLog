@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/rhino
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.76 2014/08/10 20:22:50 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.77 2015/06/11 10:55:06 chewi Exp $
+
+  11 Jun 2015;  <chewi@gentoo.org> rhino-1.7.2-r2.ebuild:
+  Drop ia64 keyword before the EAPI 1 banhammer hits.
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org> rhino-1.5.5-r4.ebuild,
   rhino-1.5.5-r5.ebuild, rhino-1.6.5.ebuild, rhino-1.7.2-r2.ebuild:
