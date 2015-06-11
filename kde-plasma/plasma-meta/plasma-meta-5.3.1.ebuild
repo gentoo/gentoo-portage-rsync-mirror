@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/plasma-meta/plasma-meta-5.3.1.ebuild,v 1.1 2015/05/31 22:06:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/plasma-meta/plasma-meta-5.3.1.ebuild,v 1.2 2015/06/11 20:00:24 johu Exp $
 
 EAPI=5
 
@@ -12,13 +12,12 @@ HOMEPAGE="http://www.kde.org/workspaces/plasmadesktop/"
 LICENSE="metapackage"
 SLOT="5"
 KEYWORDS="~amd64"
-IUSE="bluetooth +display-manager +sddm networkmanager +wallpapers"
+IUSE="bluetooth +display-manager gtk +sddm networkmanager +wallpapers"
 
 RDEPEND="
 	$(add_plasma_dep baloo)
 	$(add_plasma_dep breeze)
 	$(add_plasma_dep kde-cli-tools)
-	$(add_plasma_dep kde-gtk-config)
 	$(add_plasma_dep kdecoration)
 	$(add_plasma_dep kfilemetadata)
 	$(add_plasma_dep khelpcenter)
@@ -45,6 +44,7 @@ RDEPEND="
 		$(add_plasma_dep bluedevil)
 		$(add_plasma_dep bluez-qt)
 	)
+	gtk? ( $(add_plasma_dep kde-gtk-config) )
 	display-manager? (
 		sddm? ( x11-misc/sddm )
 		!sddm? ( x11-misc/lightdm )
