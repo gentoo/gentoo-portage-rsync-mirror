@@ -4,10 +4,10 @@ DESCRIPTION=Userland client/server for kernel network block device
 EAPI=4
 HOMEPAGE=http://nbd.sourceforge.net/
 IUSE=debug zlib
-KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sparc ~x86
+KEYWORDS=~alpha amd64 ~arm hppa ~ia64 ~ppc ppc64 ~sparc x86
 LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.0 zlib? ( sys-libs/zlib )
 SLOT=0
 SRC_URI=mirror://sourceforge/nbd/nbd-3.11.tar.xz
 _eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=6b50b807d9aa1edbee71d7edc6c17065
+_md5_=9d2c1a096d03a1bcdaf62477583f808f
