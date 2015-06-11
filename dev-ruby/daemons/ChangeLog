@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/daemons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.96 2015/06/09 07:19:57 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/daemons/ChangeLog,v 1.97 2015/06/11 14:32:10 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> daemons-1.1.9-r1.ebuild:
+  Stable for ppc, wrt bug #551418
 
   09 Jun 2015; Agostino Sarubbo <ago@gentoo.org> daemons-1.1.9-r1.ebuild:
   Stable for x86, wrt bug #551418
