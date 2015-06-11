@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/freetype
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.426 2015/02/27 06:19:31 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.427 2015/06/11 13:32:18 polynomial-c Exp $
+
+*freetype-2.6 (11 Jun 2015)
+
+  11 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> +freetype-2.6.ebuild:
+  Version bump. Removed auto-hinter USE flag as an attempt to fix bug #547870.
 
   27 Feb 2015; Ben de Groot <yngwin@gentoo.org> freetype-2.5.5.ebuild:
   Restrict binary distribution (bug #541492)
