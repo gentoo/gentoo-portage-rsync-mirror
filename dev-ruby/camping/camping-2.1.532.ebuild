@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-2.1.532.ebuild,v 1.8 2015/04/03 08:01:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/camping-2.1.532.ebuild,v 1.9 2015/06/11 05:51:32 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21"
@@ -18,14 +18,14 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
 IUSE="test"
 
-ruby_add_bdepend "test? ( dev-ruby/rack-test >=dev-ruby/minitest-4:0 dev-ruby/tilt )"
+ruby_add_bdepend "test? ( dev-ruby/rack-test >=dev-ruby/minitest-4:0 dev-ruby/tilt:0 )"
 
 ruby_add_rdepend "
 	>=dev-ruby/mab-0.0.3
-	>=dev-ruby/rack-1.0"
+	>=dev-ruby/rack-1.0:*"
 
 all_ruby_prepare() {
-	sed -i -e '1igem "minitest", "~> 4.0"' test/test_helper.rb || die
+	sed -i -e '1igem "minitest", "~> 4.0"; gem "tilt", "~>1.0"' test/test_helper.rb || die
 }
 
 each_ruby_test() {

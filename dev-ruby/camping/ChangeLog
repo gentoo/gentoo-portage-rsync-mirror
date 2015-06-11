@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/camping
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.37 2015/04/03 08:01:11 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/camping/ChangeLog,v 1.38 2015/06/11 05:51:32 graaff Exp $
+
+  11 Jun 2015; Hans de Graaff <graaff@gentoo.org> camping-2.1.532.ebuild:
+  Use compatible version of tilt.
 
   03 Apr 2015; Hans de Graaff <graaff@gentoo.org> camping-2.1.532.ebuild:
   Add missing test dependency on dev-ruby/tilt.
