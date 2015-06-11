@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/lxc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.77 2015/06/07 07:54:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/lxc/ChangeLog,v 1.78 2015/06/11 17:06:21 hwoarang Exp $
+
+*lxc-1.1.2-r1 (11 Jun 2015)
+
+  11 Jun 2015; Markos Chandras <hwoarang@gentoo.org>
+  +files/lxc-1.1.2-fix-gentoo-moresecure-template.patch, +lxc-1.1.2-r1.ebuild:
+  Version bump to apply upstream patch for the gentoo-moresecure template. Bug
+  #551096
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

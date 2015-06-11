@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.112 2015/06/09 21:17:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.113 2015/06/11 17:05:20 voyageur Exp $
 
 EAPI=5
 
@@ -43,7 +43,6 @@ COMMON_DEPEND="
 # configparser-3.2 breaks the build (3.3 or none at all are fine)
 DEPEND="${COMMON_DEPEND}
 	dev-lang/perl
-	dev-python/sphinx
 	>=sys-devel/make-3.81
 	>=sys-devel/flex-2.5.4
 	>=sys-devel/bison-1.875d
@@ -53,6 +52,7 @@ DEPEND="${COMMON_DEPEND}
 	|| ( >=sys-devel/binutils-2.18 >=sys-devel/binutils-apple-5.1 )
 	kernel_Darwin? ( sys-libs/libcxx )
 	clang? ( xml? ( virtual/pkgconfig ) )
+	doc? ( dev-python/sphinx )
 	libffi? ( virtual/pkgconfig )
 	!!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
@@ -243,11 +243,10 @@ multilib_src_configure() {
 
 	if multilib_is_native_abi; then
 		mycmakeargs+=(
-			-DLLVM_BUILD_DOCS=ON
+			$(cmake-utils_use doc LLVM_BUILD_DOCS)
+			$(cmake-utils_use doc LLVM_ENABLE_SPHINX)
+			$(cmake-utils_use doc SPHINX_OUTPUT_HTML)
 			-DLLVM_ENABLE_DOXYGEN=OFF
-			-DLLVM_ENABLE_SPHINX=ON
-			-DSPHINX_OUTPUT_HTML=$(usex doc)
-
 			-DLLVM_INSTALL_HTML="${EPREFIX}/usr/share/doc/${PF}/html"
 		)
 
@@ -296,6 +295,10 @@ multilib_src_configure() {
 multilib_src_compile() {
 	cmake-utils_src_compile
 
+	pax-mark m "${BUILD_DIR}"/bin/llvm-rtdyld
+	pax-mark m "${BUILD_DIR}"/bin/lli
+	pax-mark m "${BUILD_DIR}"/bin/lli-child-target
+
 	if use test; then
 		pax-mark m "${BUILD_DIR}"/unittests/ExecutionEngine/Orc/OrcJITTests
 		pax-mark m "${BUILD_DIR}"/unittests/ExecutionEngine/MCJIT/MCJITTests
@@ -339,7 +342,6 @@ src_install() {
 			/usr/include/clang/Config/config.h
 		)
 	fi
-
 
 	multilib-minimal_src_install
 }
