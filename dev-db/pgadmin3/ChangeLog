@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgadmin3
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.104 2015/05/20 19:48:25 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgadmin3/ChangeLog,v 1.105 2015/06/11 12:17:02 titanofold Exp $
+
+  11 Jun 2015; Aaron W. Swenson <titanofold@gentoo.org>
+  files/pgadmin3-desktop.patch:
+  Fix bug 338843. Patch now modifies icon path.
 
 *pgadmin3-1.20.0-r1 (20 May 2015)
 
