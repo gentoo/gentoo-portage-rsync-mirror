@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/kwin/kwin-5.3.1.ebuild,v 1.2 2015/06/11 16:10:34 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/kwin/kwin-5.3.1-r1.ebuild,v 1.1 2015/06/11 20:55:29 johu Exp $
 
 EAPI=5
 
@@ -72,6 +72,8 @@ DEPEND="${COMMON_DEPEND}
 	x11-proto/xproto
 	test? (	x11-libs/xcb-util-wm )
 "
+
+PATCHES=( "${FILESDIR}/${P}-gles2.patch" )
 
 src_configure() {
 	local mycmakeargs=(
