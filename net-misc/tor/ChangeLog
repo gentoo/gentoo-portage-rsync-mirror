@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/tor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.479 2015/05/21 11:49:52 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/ChangeLog,v 1.481 2015/06/11 18:44:09 blueness Exp $
+
+  11 Jun 2015; Anthony G. Basile <blueness@gentoo.org> -tor-0.2.5.12.ebuild:
+  Remove older 2.5 series.
+
+*tor-0.2.6.9 (11 Jun 2015)
+
+  11 Jun 2015; Anthony G. Basile <blueness@gentoo.org> +tor-0.2.6.9.ebuild,
+  -tor-0.2.6.8.ebuild, tor-0.2.7.1_alpha.ebuild:
+  Version bump, remove unstabilized 2.6 series.
 
 *tor-0.2.6.8 (21 May 2015)
 

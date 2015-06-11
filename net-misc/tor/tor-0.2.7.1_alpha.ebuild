@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.7.1_alpha.ebuild,v 1.1 2015/05/13 11:24:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tor/tor-0.2.7.1_alpha.ebuild,v 1.2 2015/06/11 18:42:10 blueness Exp $
 
 EAPI="5"
 
@@ -19,7 +19,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~mips ~ppc ~ppc64 ~sparc ~x86"
 IUSE="-bufferevents nat-pmp scrypt seccomp selinux stats systemd tor-hardening transparent-proxy test upnp web"
 
-DEPEND="dev-libs/openssl
+DEPEND="dev-libs/openssl:=
 	sys-libs/zlib
 	dev-libs/libevent
 	bufferevents? ( dev-libs/libevent[ssl] )

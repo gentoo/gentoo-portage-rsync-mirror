@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.19 2015/06/09 21:12:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.20 2015/06/11 18:33:54 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -368,7 +368,7 @@ qt4_multilib_src_configure() {
 		-nomake demos
 
 		# disable rpath on non-prefix (bugs 380415 and 417169)
-		$(use prefix || echo -no-rpath)
+		$(usex prefix '' -no-rpath)
 
 		# verbosity of the configure and build phases
 		-verbose $(${QT4_VERBOSE_BUILD} || echo -silent)
@@ -531,22 +531,30 @@ qt4-build-multilib_pkg_postrm() {
 # @FUNCTION: qt_use
 # @USAGE: <flag> [feature] [enableval]
 # @DESCRIPTION:
+# <flag> is the name of a flag in IUSE.
+#
 # Outputs "-${enableval}-${feature}" if <flag> is enabled, "-no-${feature}"
 # otherwise. If [feature] is not specified, <flag> is used in its place.
 # If [enableval] is not specified, the "-${enableval}" prefix is omitted.
 qt_use() {
-	use "$1" && echo "${3:+-$3}-${2:-$1}" || echo "-no-${2:-$1}"
+	[[ $# -ge 1 ]] || die "${FUNCNAME}() requires at least one argument"
+
+	usex "$1" "${3:+-$3}-${2:-$1}" "-no-${2:-$1}"
 }
 
 # @FUNCTION: qt_native_use
 # @USAGE: <flag> [feature] [enableval]
 # @DESCRIPTION:
+# <flag> is the name of a flag in IUSE.
+#
 # Outputs "-${enableval}-${feature}" if <flag> is enabled and we are currently
 # building for the native ABI, "-no-${feature}" otherwise. If [feature] is not
 # specified, <flag> is used in its place. If [enableval] is not specified,
 # the "-${enableval}" prefix is omitted.
 qt_native_use() {
-	multilib_is_native_abi && use "$1" && echo "${3:+-$3}-${2:-$1}" || echo "-no-${2:-$1}"
+	[[ $# -ge 1 ]] || die "${FUNCNAME}() requires at least one argument"
+
+	multilib_is_native_abi && qt_use "$@" || echo "-no-${2:-$1}"
 }
 
 

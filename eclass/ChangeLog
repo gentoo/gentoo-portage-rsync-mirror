@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1651 2015/06/10 18:08:02 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1652 2015/06/11 18:33:54 pesa Exp $
+
+  11 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Use usex().
 
   10 Jun 2015; <grknight@gentoo.org> mysql-multilib.eclass:
   Resolve cirucular dependency for bug 551686; Make USE=cluster die early for
