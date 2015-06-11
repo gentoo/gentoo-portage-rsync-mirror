@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/glut
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.25 2014/07/25 08:58:10 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/glut/ChangeLog,v 1.26 2015/06/11 15:06:09 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> glut-2.5.1.1.ebuild:
+  Stable for amd64, wrt bug #534974
 
   25 Jul 2014; Sergei Trofimovich <slyfox@gentoo.org> metadata.xml:
   Drop redundant '<maintainer>' field, leave only '<herd>'.

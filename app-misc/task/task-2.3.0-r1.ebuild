@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-2.3.0-r1.ebuild,v 1.1 2014/11/28 18:00:46 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/task/task-2.3.0-r1.ebuild,v 1.2 2015/06/11 15:08:04 ago Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ SRC_URI="http://taskwarrior.org/download/${P}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
+KEYWORDS="amd64 ~arm ~x86 ~x64-macos"
 IUSE="gnutls vim-syntax zsh-completion"
 
 DEPEND="gnutls? ( net-libs/gnutls )

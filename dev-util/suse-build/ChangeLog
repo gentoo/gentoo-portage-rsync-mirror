@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/suse-build
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.28 2015/04/07 14:23:24 jlec Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/suse-build/ChangeLog,v 1.29 2015/06/11 15:05:29 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> suse-build-2014.09.18.ebuild:
+  Stable for amd64, wrt bug #535410
 
   09 Oct 2014; Justin Lecher <jlec@gentoo.org>
   files/suse-build-2014.09.18-libexec-paths.patch:

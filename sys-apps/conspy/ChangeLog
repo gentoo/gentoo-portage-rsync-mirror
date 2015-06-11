@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/conspy
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/conspy/ChangeLog,v 1.12 2015/05/26 23:03:38 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/conspy/ChangeLog,v 1.13 2015/06/11 15:07:49 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> conspy-1.10.ebuild:
+  Stable for amd64, wrt bug #535642
 
   26 May 2015; Matthias Maier <tamiko@gentoo.org> metadata.xml:
   drop maintainership

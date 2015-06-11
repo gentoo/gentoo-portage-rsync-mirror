@@ -1,6 +1,9 @@
 # ChangeLog for net-nntp/nzbget
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.97 2015/04/22 21:50:56 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/nzbget/ChangeLog,v 1.98 2015/06/11 15:03:58 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> nzbget-14.1.ebuild:
+  Stable for amd64, wrt bug #535622
 
   22 Apr 2015; Sven Wegener <swegener@gentoo.org> files/nzbget.initd:
   Use ${NZBGET_USER}:${NZBGET_GROUP} for setting permissions on /run/nzbget

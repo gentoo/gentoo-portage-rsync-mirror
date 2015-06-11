@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libesmtp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.58 2015/06/09 18:37:14 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libesmtp/ChangeLog,v 1.59 2015/06/11 15:04:24 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> libesmtp-1.0.6-r1.ebuild:
+  Stable for amd64, wrt bug #535576
 
   09 Jun 2015; Markus Meier <maekke@gentoo.org> libesmtp-1.0.6-r1.ebuild:
   arm stable, bug #535576

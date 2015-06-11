@@ -1,6 +1,10 @@
 # ChangeLog for dev-haskell/crypto-cipher-tests
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-cipher-tests/ChangeLog,v 1.7 2015/06/06 10:51:22 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/crypto-cipher-tests/ChangeLog,v 1.8 2015/06/11 15:05:24 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org>
+  crypto-cipher-tests-0.0.11-r1.ebuild:
+  Stable for amd64, wrt bug #534954
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.85 2014/07/15 01:56:49 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.86 2015/06/11 15:06:59 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ncmpc-0.24.ebuild:
+  Stable for amd64, wrt bug #535502
 
 *ncmpc-0.24 (15 Jul 2014)
 

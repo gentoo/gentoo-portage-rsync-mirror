@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/tnef
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.73 2014/10/10 04:03:44 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.74 2015/06/11 15:07:14 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> tnef-1.4.12.ebuild:
+  Stable for amd64, wrt bug #535594
 
 *tnef-1.4.12 (10 Oct 2014)
 

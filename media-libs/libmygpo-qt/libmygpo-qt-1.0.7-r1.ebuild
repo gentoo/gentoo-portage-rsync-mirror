@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmygpo-qt/libmygpo-qt-1.0.7-r1.ebuild,v 1.1 2014/07/04 20:40:11 hasufell Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmygpo-qt/libmygpo-qt-1.0.7-r1.ebuild,v 1.2 2015/06/11 15:05:19 ago Exp $
 
 EAPI=5
 inherit cmake-utils
@@ -14,7 +14,7 @@ if [[ ${PV} == *9999* ]]; then
 	SRC_URI=""
 	inherit git-2
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	SRC_URI="https://github.com/gpodder/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 fi
 

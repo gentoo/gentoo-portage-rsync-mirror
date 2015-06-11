@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gaupol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.20 2015/05/27 13:21:38 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/ChangeLog,v 1.21 2015/06/11 15:07:39 ago Exp $
+
+  11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> gaupol-0.19.2-r1.ebuild:
+  Stable for amd64, wrt bug #535512
 
   27 May 2015; Patrick Lauer <patrick@gentoo.org> gaupol-0.28.2.ebuild:
   Fix header

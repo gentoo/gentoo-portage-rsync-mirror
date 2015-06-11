@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.19.2-r1.ebuild,v 1.1 2014/05/22 21:16:49 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gaupol/gaupol-0.19.2-r1.ebuild,v 1.2 2015/06/11 15:07:39 ago Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.gna.org/${PN}/${MAJOR_MINOR_VERSION}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ~x86"
 IUSE="spell"
 
 RDEPEND="dev-python/chardet[${PYTHON_USEDEP}]
