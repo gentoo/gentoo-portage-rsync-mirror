@@ -3,7 +3,7 @@
 @@ -10,7 +10,7 @@
  AC_LANG(C)
  
- AM_INIT_AUTOMAKE(spine, 0.8.8b)
+ AM_INIT_AUTOMAKE(spine, 0.8.8d)
 -AM_CONFIG_HEADER(config/config.h)
 +AC_CONFIG_HEADERS(config/config.h)
  
