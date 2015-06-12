@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10100 2015/06/12 18:31:55 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10101 2015/06/12 21:59:50 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Scalar::List::Utils to Perl 5.22 mask
 
   12 Jun 2015; Ole Markus With <olemarkus@gentoo.org> package.mask:
   Mask pre release versions of PHP 7
