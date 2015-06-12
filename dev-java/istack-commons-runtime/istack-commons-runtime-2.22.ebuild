@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/istack-commons-runtime-2.22.ebuild,v 1.1 2015/06/12 13:59:48 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/istack-commons-runtime-2.22.ebuild,v 1.2 2015/06/12 16:36:46 monsieurp Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ HOMEPAGE="https://istack-commons.java.net"
 SRC_URI="https://maven.java.net/content/repositories/releases/com/sun/${MY_PN}/${PN}/${PV}/${P}-sources.jar"
 
 LICENSE="CDDL"
-SLOT="${PV}"
+SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-extpack-oracle
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/ChangeLog,v 1.76 2015/05/17 21:21:25 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-extpack-oracle/ChangeLog,v 1.77 2015/06/12 16:37:04 zlogene Exp $
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  virtualbox-extpack-oracle-4.3.28.100309.ebuild:
+  amd64 stable wrt bug 51866
 
 *virtualbox-extpack-oracle-4.3.28.100309 (17 May 2015)
 

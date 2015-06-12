@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/istack-commons-runtime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.15 2015/06/12 13:59:48 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-runtime/ChangeLog,v 1.16 2015/06/12 16:36:46 monsieurp Exp $
+
+  12 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  istack-commons-runtime-2.22.ebuild:
+  Soften SLOT and change it to 0 after checking compatibility with apicheck.
 
 *istack-commons-runtime-2.22 (12 Jun 2015)
 

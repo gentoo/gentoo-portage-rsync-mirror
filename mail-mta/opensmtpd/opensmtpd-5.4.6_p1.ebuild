@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.5_p2.ebuild,v 1.1 2015/05/27 12:39:40 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/opensmtpd/opensmtpd-5.4.6_p1.ebuild,v 1.1 2015/06/12 16:44:40 zx2c4 Exp $
 
 EAPI=5
 
@@ -17,16 +17,12 @@ SRC_URI="https://www.opensmtpd.org/archives/${MY_P/_}.tar.gz"
 LICENSE="ISC BSD BSD-1 BSD-2 BSD-4"
 SLOT="0"
 KEYWORDS="amd64 x86"
-IUSE="pam ldap mysql postgres sqlite redis socketmap +mta"
+IUSE="pam +mta"
 
 DEPEND="dev-libs/openssl
 		sys-libs/zlib
 		pam? ( virtual/pam )
 		sys-libs/db
-		sqlite? ( dev-db/sqlite:3 )
-		mysql? ( virtual/mysql )
-		postgres? ( dev-db/postgresql )
-		redis? ( dev-libs/hiredis )
 		dev-libs/libevent
 		app-misc/ca-certificates
 		net-mail/mailbase
@@ -48,8 +44,8 @@ RDEPEND="${DEPEND}"
 S=${WORKDIR}/${MY_P/_}
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-libevent-version-macro.patch"
-	epatch "${FILESDIR}/${P}-setgroups-header.patch"
+	epatch "${FILESDIR}/${PN}-5.4.5_p2-libevent-version-macro.patch"
+	epatch "${FILESDIR}/${PN}-5.4.5_p2-setgroups-header.patch"
 	epatch_user
 	eautoreconf
 }
@@ -63,12 +59,6 @@ src_configure() {
 		--with-sock-dir=/var/run \
 		--sysconfdir=/etc/opensmtpd \
 		--with-ca-file=/etc/ssl/certs/ca-certificates.crt \
-		$(use_with ldap experimental-ldap) \
-		$(use_with mysql experimental-mysql) \
-		$(use_with postgres experimental-postgres) \
-		$(use_with sqlite experimental-sqlite) \
-		$(use_with redis experimental-redis) \
-		$(use_with socketmap experimental-socketmap) \
 		$(use_with pam)
 }
 

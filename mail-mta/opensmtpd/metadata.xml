@@ -10,8 +10,6 @@ OpenSMTPD is an implementation of the server-side SMTP protocol as defined by RF
 </maintainer>
 <use>
 <flag name='mta'>Enable this to install as system-wide MTA</flag>
-<flag name='redis'>Enable redis support</flag>
-<flag name='socketmap'>Enable socketmap support</flag>
 </use>
 </pkgmetadata>
 

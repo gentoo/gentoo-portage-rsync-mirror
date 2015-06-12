@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/istack-commons-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.14 2015/06/12 14:10:07 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.15 2015/06/12 16:31:55 monsieurp Exp $
+
+  12 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  istack-commons-tools-2.22.ebuild:
+  Soften SLOT and change it to 0 after checking compatibility with apicheck.
 
 *istack-commons-tools-2.22 (12 Jun 2015)
 
