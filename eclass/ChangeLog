@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1653 2015/06/12 01:44:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1654 2015/06/12 19:23:14 floppym Exp $
+
+  12 Jun 2015; Mike Gilbert <floppym@gentoo.org> -zproduct.eclass:
+  Remove obsolete/broken eclass, bug 551918.
 
   12 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Don't die when trying to rmdir non-existent directory (bug 551676).
