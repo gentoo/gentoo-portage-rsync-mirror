@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktimetracker
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.236 2015/05/15 16:30:23 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktimetracker/ChangeLog,v 1.237 2015/06/12 17:15:48 zlogene Exp $
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> ktimetracker-4.14.8.ebuild:
+  amd64 stable wrt bug #550740
 
 *ktimetracker-4.14.8 (15 May 2015)
 

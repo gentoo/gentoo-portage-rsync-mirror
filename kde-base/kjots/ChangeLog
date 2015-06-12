@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kjots
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.334 2015/05/15 16:30:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kjots/ChangeLog,v 1.335 2015/06/12 17:15:49 zlogene Exp $
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kjots-4.14.8.ebuild:
+  amd64 stable wrt bug #550740
 
 *kjots-4.14.8 (15 May 2015)
 

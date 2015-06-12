@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/plasma-workspace
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.299 2015/06/04 18:45:04 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/plasma-workspace/ChangeLog,v 1.300 2015/06/12 17:15:48 zlogene Exp $
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  plasma-workspace-4.11.19.ebuild:
+  amd64 stable wrt bug #550740
 
   04 Jun 2015; Michael Palimaka <kensington@gentoo.org>
   plasma-workspace-4.11.14.ebuild, plasma-workspace-4.11.17.ebuild,

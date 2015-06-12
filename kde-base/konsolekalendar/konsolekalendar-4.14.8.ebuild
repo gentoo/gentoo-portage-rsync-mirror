@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/konsolekalendar-4.14.8.ebuild,v 1.1 2015/05/15 16:30:22 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/konsolekalendar/konsolekalendar-4.14.8.ebuild,v 1.2 2015/06/12 17:15:49 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit kde4-meta
 
 DESCRIPTION="A command line interface to KDE calendars"
 HOMEPAGE+=" http://userbase.kde.org/KonsoleKalendar"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

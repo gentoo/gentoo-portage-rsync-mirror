@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.14.8.ebuild,v 1.2 2015/06/08 20:36:03 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-runtime/kdepim-runtime-4.14.8.ebuild,v 1.3 2015/06/12 17:15:50 zlogene Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ EGIT_BRANCH="KDE/4.14"
 inherit kde4-base
 
 DESCRIPTION="KDE PIM runtime plugin collection"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug facebook google kolab"
 
 RESTRICT="test"

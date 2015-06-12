@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-4.11.19.ebuild,v 1.1 2015/05/15 15:53:06 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ksysguard/ksysguard-4.11.19.ebuild,v 1.2 2015/06/12 17:15:47 zlogene Exp $
 
 EAPI=5
 
@@ -12,7 +12,7 @@ inherit kde4-meta
 
 DESCRIPTION="KSysguard is a network enabled task manager and system monitor application"
 HOMEPAGE+=" http://userbase.kde.org/KSysGuard"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug lm_sensors test"
 
 DEPEND="

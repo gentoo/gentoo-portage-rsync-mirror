@@ -1,6 +1,9 @@
-# ChangeLog for kde-base/kopete
+# ChangeLog for kde-apps/kopete
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/kopete/ChangeLog,v 1.1 2015/06/04 18:44:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/kopete/ChangeLog,v 1.2 2015/06/12 17:17:36 zlogene Exp $
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kopete-4.14.3-r1.ebuild:
+  amd64 stable wrt bug #550740
 
   22 Feb 2015; Michał Górny <mgorny@gentoo.org> kopete-4.14.3-r1.ebuild,
   kopete-4.14.3.ebuild:

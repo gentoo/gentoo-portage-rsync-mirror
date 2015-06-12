@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.11.19.ebuild,v 1.1 2015/05/15 15:53:08 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/krunner/krunner-4.11.19.ebuild,v 1.2 2015/06/12 17:15:50 zlogene Exp $
 
 EAPI=5
 
@@ -11,7 +11,7 @@ inherit kde4-meta
 DESCRIPTION="KDE Command Runner"
 HOMEPAGE+=" http://userbase.kde.org/Plasma/Krunner"
 IUSE="debug"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
 
 DEPEND="
 	$(add_kdebase_dep kcheckpass)

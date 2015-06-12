@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.357 2015/06/08 20:26:55 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.358 2015/06/12 17:15:48 zlogene Exp $
+
+  12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kdepim-meta-4.14.8.ebuild:
+  amd64 stable wrt bug #550740
 
   08 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   kdepim-meta-4.4.11.1-r1.ebuild:

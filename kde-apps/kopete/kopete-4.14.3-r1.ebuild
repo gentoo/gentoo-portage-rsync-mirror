@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/kopete/kopete-4.14.3-r1.ebuild,v 1.1 2015/06/04 18:44:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/kopete/kopete-4.14.3-r1.ebuild,v 1.2 2015/06/12 17:17:36 zlogene Exp $
 
 EAPI=5
 
@@ -9,7 +9,7 @@ inherit kde4-base
 
 DESCRIPTION="KDE multi-protocol IM client"
 HOMEPAGE="http://kopete.kde.org http://www.kde.org/applications/internet/kopete"
-KEYWORDS="~amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~arm ~x86 ~amd64-linux ~x86-linux"
 IUSE="debug ssl v4l"
 
 # tests hang, last checked for 4.2.96
