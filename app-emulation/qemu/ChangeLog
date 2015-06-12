@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.330 2015/05/16 04:40:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.331 2015/06/12 14:19:29 vapier Exp $
+
+*qemu-2.3.0-r2 (12 Jun 2015)
+
+  12 Jun 2015; Mike Frysinger <vapier@gentoo.org>
+  +files/qemu-2.3.0-CVE-2015-3209.patch, +qemu-2.3.0-r2.ebuild:
+  Add fix from upstream for CVE-2015-3209 #551752 by Agostino Sarubbo.
 
   16 May 2015; Mike Frysinger <vapier@gentoo.org> qemu-9999.ebuild:
   Require mesa[gles2] for USE=opengl to match upstream #549558 by Michal

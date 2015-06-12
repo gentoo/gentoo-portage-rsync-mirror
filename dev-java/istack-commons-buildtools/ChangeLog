@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/istack-commons-buildtools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-buildtools/ChangeLog,v 1.2 2012/04/13 18:07:27 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-buildtools/ChangeLog,v 1.3 2015/06/12 14:18:32 monsieurp Exp $
+
+*istack-commons-buildtools-2.22 (12 Jun 2015)
+
+  12 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +istack-commons-buildtools-2.22.ebuild:
+  Version bump. Fix bug 188015.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org>
   istack-commons-buildtools-20090620.ebuild:
@@ -13,4 +19,3 @@
   +files/istack-commons-20090620-less-maven.patch, +metadata.xml:
   Part of new istack-commons (upstream pom.xml tag is 1.1-SNAPSHOT) in a new
   slot, needed for jersey. buildtools portion was not packaged before.
-

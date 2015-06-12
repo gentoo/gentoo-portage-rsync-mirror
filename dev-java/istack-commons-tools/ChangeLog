@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/istack-commons-tools
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.13 2012/04/13 18:09:46 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/istack-commons-tools/ChangeLog,v 1.14 2015/06/12 14:10:07 monsieurp Exp $
+
+*istack-commons-tools-2.22 (12 Jun 2015)
+
+  12 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +istack-commons-tools-2.22.ebuild:
+  Version bump. Fix bug 188015.
 
   13 Apr 2012; Ulrich Müller <ulm@gentoo.org>
   istack-commons-tools-20090620.ebuild:
@@ -59,4 +65,3 @@
   01 May 2007; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +istack-commons-tools-20070122.ebuild:
   Initial commit of istack-commons-tools.
-
