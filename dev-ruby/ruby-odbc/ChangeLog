@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-odbc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.49 2015/06/11 14:31:08 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-odbc/ChangeLog,v 1.50 2015/06/12 04:45:42 graaff Exp $
+
+  12 Jun 2015; Hans de Graaff <graaff@gentoo.org> -ruby-odbc-0.99995.ebuild:
+  Cleanup.
 
   11 Jun 2015; Agostino Sarubbo <ago@gentoo.org> ruby-odbc-0.99997.ebuild:
   Stable for ppc, wrt bug #551254
