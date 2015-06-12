@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pathlib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pathlib/ChangeLog,v 1.10 2015/01/26 11:13:15 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pathlib/ChangeLog,v 1.11 2015/06/12 08:17:17 idella4 Exp $
+
+  12 Jun 2015; Ian Delaney <idella4@gentoo.org> pathlib-1.0.1.ebuild:
+  add pypy support
 
   26 Jan 2015; Manuel Rüger <mrueg@gentoo.org> -pathlib-1.0.ebuild:
   Remove old.
