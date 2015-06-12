@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Time-Local
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.74 2014/07/15 18:14:26 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Time-Local/ChangeLog,v 1.75 2015/06/12 22:56:33 dilfridge Exp $
+
+*perl-Time-Local-1.230.0-r2 (12 Jun 2015)
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Time-Local-1.230.0-r1.ebuild, +perl-Time-Local-1.230.0-r2.ebuild:
+  Add Perl 5.22 as provider, remove Perl 5.18 as provider
 
 *perl-Time-Local-1.230.0-r1 (15 Jul 2014)
 

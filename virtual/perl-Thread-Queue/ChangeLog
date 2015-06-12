@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-Thread-Queue
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.25 2015/02/18 08:38:41 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Thread-Queue/ChangeLog,v 1.26 2015/06/12 22:45:16 dilfridge Exp $
+
+*perl-Thread-Queue-3.50.0-r1 (12 Jun 2015)
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Thread-Queue-3.20.0-r1.ebuild, -perl-Thread-Queue-3.50.0.ebuild,
+  +perl-Thread-Queue-3.50.0-r1.ebuild:
+  Add Perl 5.22 as provider, remove old
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org>
   perl-Thread-Queue-3.50.0.ebuild:

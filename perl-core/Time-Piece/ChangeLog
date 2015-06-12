@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Time-Piece
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Piece/ChangeLog,v 1.30 2014/07/25 21:09:50 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Time-Piece/ChangeLog,v 1.31 2015/06/12 23:00:31 dilfridge Exp $
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Time-Piece-1.20-r1.ebuild:
+  Drop keywords
 
 *Time-Piece-1.20-r1 (25 Jul 2014)
 

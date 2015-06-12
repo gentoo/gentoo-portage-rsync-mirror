@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/Thread-Queue
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Queue/ChangeLog,v 1.9 2014/11/08 16:53:31 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/Thread-Queue/ChangeLog,v 1.10 2015/06/12 22:45:09 dilfridge Exp $
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Thread-Queue-3.20.0.ebuild:
+  Drop keywords
 
   08 Nov 2014; Andreas K. Huettel <dilfridge@gentoo.org>
   -Thread-Queue-2.120.0.ebuild:

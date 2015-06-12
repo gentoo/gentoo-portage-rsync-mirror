@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-Text-Balanced
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.46 2014/11/08 16:50:14 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Text-Balanced/ChangeLog,v 1.47 2015/06/12 22:36:42 dilfridge Exp $
+
+*perl-Text-Balanced-2.30.0 (12 Jun 2015)
+*perl-Text-Balanced-2.20.0-r6 (12 Jun 2015)
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Text-Balanced-2.20.0-r5.ebuild, +perl-Text-Balanced-2.20.0-r6.ebuild,
+  +perl-Text-Balanced-2.30.0.ebuild:
+  Add Perl 5.22 version, remove Perl 5.18 as provider
 
 *perl-Text-Balanced-2.20.0-r5 (08 Nov 2014)
 
