@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jsr250
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr250/ChangeLog,v 1.9 2008/03/28 17:57:29 nixnut Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr250/ChangeLog,v 1.10 2015/06/11 23:35:09 monsieurp Exp $
+
+  11 Jun 2015; Patrice Clement <monsieurp@gentoo.org> jsr250-1.0.ebuild:
+  Rewrote package from scratch. Fix bug 428340.
 
   28 Mar 2008; nixnut <nixnut@gentoo.org> jsr250-1.0.ebuild:
   Stable on ppc wrt bug 214778
@@ -32,4 +35,3 @@
   11 Sep 2006; Krzysiek Pawlik <nelchael@gentoo.org> +metadata.xml,
   +jsr250-1.0.ebuild:
   Initial version.
-
