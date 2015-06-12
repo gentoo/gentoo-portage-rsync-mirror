@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.56.ebuild,v 1.8 2015/06/12 04:53:53 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/portage-utils-0.56.ebuild,v 1.9 2015/06/12 09:12:44 vapier Exp $
 
 EAPI="4"
 
@@ -22,6 +22,7 @@ RDEPEND="!static? ( dev-libs/iniparser )"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-qcheck-tz.patch #551718
+	epatch "${FILESDIR}"/${P}-qlop-tz.patch #551806
 	epatch_user
 }
 
