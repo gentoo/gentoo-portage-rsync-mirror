@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-45.0.2414.0.ebuild,v 1.2 2015/06/04 19:06:10 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-45.0.2427.7.ebuild,v 1.1 2015/06/12 15:28:33 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -283,7 +283,6 @@ src_prepare() {
 		'third_party/zlib/google' \
 		'url/third_party/mozilla' \
 		'v8/src/third_party/fdlibm' \
-		'v8/src/third_party/kernel' \
 		'v8/src/third_party/valgrind' \
 		--do-remove || die
 }
