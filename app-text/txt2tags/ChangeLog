@@ -1,6 +1,11 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.51 2015/03/09 19:15:33 rafaelmartins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.52 2015/06/12 20:30:10 mgorny Exp $
+
+*txt2tags-2.6-r1 (12 Jun 2015)
+
+  12 Jun 2015; Michał Górny <mgorny@gentoo.org> +txt2tags-2.6-r1.ebuild:
+  Bump to EAPI=5. python-single-r1 to the rescue.
 
   09 Mar 2015; Rafael G. Martins <rafaelmartins@gentoo.org> metadata.xml:
   adopted package.

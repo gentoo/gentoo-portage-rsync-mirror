@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/slv2
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/ChangeLog,v 1.22 2012/06/27 19:46:57 ssuominen Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/slv2/ChangeLog,v 1.23 2015/06/12 20:07:21 mgorny Exp $
+
+*slv2-0.6.6-r1 (12 Jun 2015)
+
+  12 Jun 2015; Michał Górny <mgorny@gentoo.org> +slv2-0.6.6-r1.ebuild:
+  python-any-r1 & waf-utils to the rescue.
 
   27 Jun 2012; Samuli Suominen <ssuominen@gentoo.org> slv2-0.6.6.ebuild:
   Pass LDFLAGS to LINKFLAGS for ./waf wrt #330197 by Gavin Pryke and Kacper
@@ -86,4 +91,3 @@
   10 Dec 2007; Alexis Ballier <aballier@gentoo.org> +metadata.xml,
   +slv2-0.3.2.ebuild:
   initial import: a library to use ladspa v2 plugins easily
-
