@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.247 2015/06/09 23:58:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/powerpc/package.use.mask,v 1.248 2015/06/12 10:56:52 mgorny Exp $
 
 # Gilles Dartiguelongue <eva@gentoo.org> (10 Jun 2015)
 # net-libs/dleyna-connector-dbus lack ppc/ppc64 keyword, bug #551634
@@ -69,7 +69,7 @@ x11-drivers/xf86-video-nouveau glamor
 
 # Anthony G. Basile <blueness@gentoo.org> (17 Aug 2014)
 # This pulls in qemu[smartcard] which is masked
-=net-misc/spice-gtk-0.25-r1 smartcard
+net-misc/spice-gtk smartcard
 
 # Anthony G. Basile <blueness@gentoo.org> (16 Aug 2014)
 # Ultimately pulls in nodejs which is broken.

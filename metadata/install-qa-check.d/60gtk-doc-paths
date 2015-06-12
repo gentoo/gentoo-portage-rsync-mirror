@@ -5,10 +5,12 @@
 # Maintainer: GNOME team <gnome@gentoo.org>
 
 gtk_doc_path_check() {
+	[[ -d ${ED}usr/share/doc ]] || return
+
 	local found=() f
 	while read -d '' -r f; do
 		found+=( "${f%/*}" )
-	done < <(find "${ED}"usr/share/doc -name '*.devhelp*' -print0)
+	done < <(find "${ED}"usr/share/doc -name '*.devhelp*' -print0 || die)
 
 	if [[ ${found[@]} ]]; then
 		eqawarn
