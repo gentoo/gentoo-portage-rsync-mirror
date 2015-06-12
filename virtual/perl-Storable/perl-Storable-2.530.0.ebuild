@@ -1,6 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/perl-Storable-2.450.0.ebuild,v 1.2 2014/01/20 23:09:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Storable/perl-Storable-2.530.0.ebuild,v 1.1 2015/06/12 22:09:04 dilfridge Exp $
+
+EAPI=5
 
 DESCRIPTION="Virtual for ${PN#perl-}"
 HOMEPAGE=""
@@ -12,4 +14,8 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~spa
 IUSE=""
 
 DEPEND=""
-RDEPEND="~perl-core/${PN#perl-}-${PV}"
+RDEPEND="
+	|| ( =dev-lang/perl-5.22* ~perl-core/${PN#perl-}-${PV} )
+	!<perl-core/${PN#perl-}-${PV}
+	!>perl-core/${PN#perl-}-${PV}-r999
+"

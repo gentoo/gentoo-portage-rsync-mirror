@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Test
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.24 2014/07/21 19:37:38 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Test/ChangeLog,v 1.25 2015/06/12 22:20:39 dilfridge Exp $
+
+*perl-Test-1.260.0-r3 (12 Jun 2015)
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Test-1.260.0-r2.ebuild, +perl-Test-1.260.0-r3.ebuild:
+  Add Perl 5.22 as provider, remove Perl 5.18 as provider
 
 *perl-Test-1.260.0-r2 (21 Jul 2014)
 

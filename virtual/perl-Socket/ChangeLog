@@ -1,6 +1,12 @@
 # ChangeLog for virtual/perl-Socket
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.28 2015/02/18 08:38:27 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Socket/ChangeLog,v 1.29 2015/06/12 22:04:17 dilfridge Exp $
+
+*perl-Socket-2.18.0 (12 Jun 2015)
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-Socket-2.9.0-r2.ebuild, +perl-Socket-2.18.0.ebuild:
+  Add Perl 5.22 version, remove old
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-Socket-2.13.0.ebuild:
   Stable for alpha, wrt bug #536790

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/perl-Sys-Syslog-0.330.0-r1.ebuild,v 1.12 2015/04/05 01:08:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-Sys-Syslog/perl-Sys-Syslog-0.330.0-r2.ebuild,v 1.1 2015/06/12 22:11:12 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ KEYWORDS="alpha amd64 arm arm64 hppa ia64 ~mips ppc ppc64 s390 sh sparc x86 ~ppc
 IUSE=""
 
 RDEPEND="
-	|| ( =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
+	|| ( =dev-lang/perl-5.22* =dev-lang/perl-5.20* ~perl-core/${PN#perl-}-${PV} )
 	!<perl-core/${PN#perl-}-${PV}
 	!>perl-core/${PN#perl-}-${PV}-r999
 "

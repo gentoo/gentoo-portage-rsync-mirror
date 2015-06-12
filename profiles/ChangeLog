@@ -1,10 +1,28 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10101 2015/06/12 21:59:50 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10107 2015/06/12 22:29:36 dilfridge Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Test::Simple to Perl 5.22 mask
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Test::Harness to Perl 5.22 mask
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Term::ReadLine to Perl 5.22 mask
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Term::ANSIColor to Perl 5.22 mask
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Storable to Perl 5.22 mask
+
+  12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
+  Add Socket to Perl 5.22 mask
 
   12 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> package.mask:
   Add Scalar::List::Utils to Perl 5.22 mask
