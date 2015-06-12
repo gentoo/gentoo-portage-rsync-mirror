@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/openrc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.347 2015/06/09 08:57:51 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openrc/ChangeLog,v 1.348 2015/06/12 05:18:01 jer Exp $
+
+  12 Jun 2015; Jeroen Roovers <jer@gentoo.org> openrc-0.16.4.ebuild:
+  Stable for HPPA (bug #551508).
 
   09 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> openrc-0.16.4.ebuild:
   amd64 stable wrt bug #551508

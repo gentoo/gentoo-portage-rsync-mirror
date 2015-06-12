@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/jsoncpp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.21 2015/06/06 19:00:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/jsoncpp/ChangeLog,v 1.22 2015/06/12 05:20:04 jer Exp $
+
+  12 Jun 2015; Jeroen Roovers <jer@gentoo.org> jsoncpp-0.10.2-r1.ebuild:
+  Stable for PPC64 (bug #551320).
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

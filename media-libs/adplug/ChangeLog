@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/adplug
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.44 2015/05/06 09:58:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/adplug/ChangeLog,v 1.45 2015/06/12 05:09:31 jer Exp $
+
+  12 Jun 2015; Jeroen Roovers <jer@gentoo.org> adplug-2.2.1.ebuild:
+  Stable for PPC64 (bug #548842).
 
   06 May 2015; Manuel Rüger <mrueg@gentoo.org> -adplug-2.1.ebuild,
   -adplug-2.2.ebuild, -files/adplug-2.1-gcc43.patch:
