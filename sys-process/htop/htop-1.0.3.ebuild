@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.3.ebuild,v 1.11 2015/04/08 18:27:48 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-1.0.3.ebuild,v 1.12 2015/06/12 18:53:03 chutzpah Exp $
 
 EAPI=5
 
@@ -21,6 +21,7 @@ IUSE="kernel_FreeBSD kernel_linux oom openvz unicode vserver"
 
 RDEPEND="sys-libs/ncurses[unicode?]"
 DEPEND="${RDEPEND}
+	${PYTHON_DEPS}
 	virtual/pkgconfig"
 
 DOCS=( ChangeLog README )
