@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.20 2015/06/11 18:33:54 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.21 2015/06/12 01:44:17 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -470,7 +470,7 @@ qt4_multilib_src_install() {
 		mv "${pcfile}" "${ED}"/usr/$(get_libdir)/pkgconfig || die
 	done
 	eshopts_pop
-	rmdir "${D}/${QT4_LIBDIR}"/pkgconfig || die
+	rmdir "${D}/${QT4_LIBDIR}"/pkgconfig
 
 	qt4_install_module_qconfigs
 	qt4_symlink_framework_headers
