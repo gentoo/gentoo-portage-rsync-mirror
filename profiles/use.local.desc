@@ -5667,6 +5667,7 @@ net-misc/cfengine:tests - Install test files
 net-misc/cfengine:tokyocabinet - Use dev-db/tokyocabinet as database backend
 net-misc/cgminer:ants1 - Enable support for Antminer S1 Bitmain
 net-misc/cgminer:ants2 - Enable support for Antminer S2 Bitmain
+net-misc/cgminer:ants3 - Enable support for Antminer S3 Bitmain
 net-misc/cgminer:avalon - Enable support for Avalon ASICs
 net-misc/cgminer:avalon2 - Enable support for Avalon2 ASICs
 net-misc/cgminer:avalon4 - Enable support for Avalon4 ASICs
@@ -5685,6 +5686,8 @@ net-misc/cgminer:klondike - Enable support for mining with Klondik ASICs
 net-misc/cgminer:knc - Enable support for mining with KnC miners
 net-misc/cgminer:minion - Enable support for mining with BlackArrow Bitfury
 net-misc/cgminer:modminer - Enable support for mining with ModMiner FPGAs
+net-misc/cgminer:sp10 - Enable support for Spondoolies SP10
+net-misc/cgminer:sp30 - Enable support for Spondoolies SP30
 net-misc/cgminer:spondoolies - Enable support for Spondoolies
 net-misc/chrony:adns - Support for asynchronous DNS
 net-misc/chrony:cmdmon - Support for command and monitoring
