@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10097 2015/06/11 20:35:07 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10098 2015/06/12 07:15:51 williamh Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  12 Jun 2015; William Hubbs <williamh@gentoo.org> package.mask:
+  Mask udev-220-r2 temporarily while waiting for response about missing patch
+  on bug #551808
 
   11 Jun 2015; Pacho Ramos <pacho@gentoo.org>
   arch/alpha/package.use.stable.mask:
