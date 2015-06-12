@@ -7,7 +7,6 @@
 		<name>Jan Breuer</name>
 	</maintainer>
 	<use>
-		<flag name="daemon">Enable background (daemon) mode</flag>
 		<flag name="debug">Enable debugging informations</flag>
 		<flag name="experimental">Enable experimental features</flag>
 		<flag name="ntp">Enable NTPD cooperation</flag>
