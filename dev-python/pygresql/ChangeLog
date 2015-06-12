@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygresql/ChangeLog,v 1.1 2015/06/08 17:46:15 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygresql/ChangeLog,v 1.2 2015/06/12 11:06:00 ago Exp $
+
+  12 Jun 2015; Agostino Sarubbo <ago@gentoo.org> pygresql-4.1.1-r2.ebuild:
+  Stable for amd64, wrt bug #551388
 
   08 Jun 2015; Aaron W. Swenson <titanofold@gentoo.org> +pygresql-4.1.1.ebuild,
   +pygresql-4.1.1-r1.ebuild, +pygresql-4.1.1-r2.ebuild, +metadata.xml:
