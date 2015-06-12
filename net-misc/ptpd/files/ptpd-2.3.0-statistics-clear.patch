@@ -6,7 +6,7 @@ diff -urN ptpd-2.3.0.old/src/dep/statistics.c ptpd-2.3.0/src/dep/statistics.c
  clearPtpEngineSlaveStats(PtpEngineSlaveStats* stats)
  {
 -	memset(stats, 0, sizeof(stats));
-+	memset(stats, 0, sizeof(PtpEngineSlaveStats));
++	memset(stats, 0, sizeof(*stats));
  }
  
  void

@@ -9,21 +9,26 @@ inherit autotools eutils flag-o-matic systemd
 DESCRIPTION="Precision Time Protocol daemon"
 HOMEPAGE="http://ptpd.sf.net"
 
-SRC_URI="mirror://sourceforge/ptpd/${PV}/${P}.tar.gz"
+MY_PV=${PV/_rc*/}
+MY_P=${P/_rc/-rc}
+
+SRC_URI="mirror://sourceforge/ptpd/${MY_PV}/${MY_P}.tar.gz"
 KEYWORDS="~amd64 ~x86 ~arm"
 
 LICENSE="BSD"
 SLOT="0"
-IUSE="snmp +statistics ntp experimental debug"
+IUSE="snmp +statistics ntp experimental debug +pcap slave-only"
 RDEPEND="snmp? ( net-analyzer/net-snmp )
-	ntp? ( net-misc/ntp )
-	net-libs/libpcap"
+	pcap? ( net-libs/libpcap )"
 DEPEND="${RDEPEND}"
+RDEPEND="${RDEPEND}
+	ntp? ( net-misc/ntp )"
+
+S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
 	# QA
-	epatch "${FILESDIR}/${P}-statistics-clear.patch"
-	epatch "${FILESDIR}/${P}-ntpdc.patch"
+	epatch "${FILESDIR}/${P}-debug-display.patch"
 
 	eautoreconf
 }
@@ -35,8 +40,9 @@ src_configure() {
 		$(use_enable snmp) \
 		$(use_enable experimental experimental-options) \
 		$(use_enable statistics) \
-		$(use_enable ntp ntpdc) \
-		$(use_enable debug runtime-debug)
+		$(use_enable debug runtime-debug) \
+		$(use_enable pcap) \
+		$(use_enable slave-only)
 }
 
 src_install() {
@@ -44,9 +50,6 @@ src_install() {
 
 	insinto /etc
 	newins "src/ptpd2.conf.minimal" ptpd2.conf
-
-	dodoc "src/ptpd2.conf.default-full"
-	dodoc "src/ptpd2.conf.minimal"
 
 	newinitd "${FILESDIR}/ptpd2.rc" ptpd2
 	newconfd "${FILESDIR}/ptpd2.confd" ptpd2

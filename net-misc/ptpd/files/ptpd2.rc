@@ -18,13 +18,13 @@ description="Precise Time Protocol daemon"
 
 
 depend() {
-        use net dns logger
+	use net dns logger
 }
 
 checkconfig() {
 	ebegin "Checking ${SVCNAME} configuration"
-        msgout="$($command -k $command_args 2>&1)"
-        RETVAL=$?
+	msgout="$($command -k $command_args 2>&1)"
+	RETVAL=$?
 
 	# colorize output
 	echo "$msgout" | while read ln; do
@@ -39,20 +39,19 @@ checkconfig() {
 }
 
 start() {
-        checkconfig || return 1
+	checkconfig || return 1
 
 	ebegin "Starting ${SVCNAME}"
 	start-stop-daemon --start --exec ${command} \
 		--pidfile ${pidfile} \
-		-- ${command_args} 1>/dev/null 2>&1
+		-- ${command_args}
 	eend $?
 }
 
 reload() {
-        checkconfig || return 1
+	checkconfig || return 1
 
-        ebegin "Reloading ${SVCNAME} configuration"
-        start-stop-daemon --signal HUP --pidfile "${pidfile}"
-        eend $?
+	ebegin "Reloading ${SVCNAME} configuration"
+	start-stop-daemon --signal HUP --pidfile "${pidfile}"
+	eend $?
 }
-
