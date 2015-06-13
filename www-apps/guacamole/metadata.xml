@@ -13,4 +13,7 @@
 	the client requires nothing more than a web browser supporting 
 	HTML5 and AJAX.
     </longdescription>
+    <use>
+	<flag name="noauth">enable support for leaving out any authentication on the webinterface</flag>
+    </use>
 </pkgmetadata>

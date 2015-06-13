@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/guacamole-server
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guacamole-server/ChangeLog,v 1.7 2014/10/28 16:31:38 nativemad Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guacamole-server/ChangeLog,v 1.8 2015/06/13 09:15:22 nativemad Exp $
+
+*guacamole-server-0.9.7 (13 Jun 2015)
+
+  13 Jun 2015; Andreas Schuerch <nativemad@gentoo.org>
+  +guacamole-server-0.9.7.ebuild, +files/guacd, +files/guacd.service:
+  Version bump, license change, init options and lots more thanks to Malte
+  Starostik. See bug 541718
 
 *guacamole-server-0.9.3 (28 Oct 2014)
 

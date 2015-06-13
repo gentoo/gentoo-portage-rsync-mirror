@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/guacamole
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.12 2014/10/28 16:35:48 nativemad Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/guacamole/ChangeLog,v 1.13 2015/06/13 09:29:48 nativemad Exp $
+
+*guacamole-0.9.7 (13 Jun 2015)
+
+  13 Jun 2015; Andreas Schuerch <nativemad@gentoo.org> +guacamole-0.9.7.ebuild:
+  version bump, license change, postgres and noauth support
 
 *guacamole-0.9.3 (28 Oct 2014)
 

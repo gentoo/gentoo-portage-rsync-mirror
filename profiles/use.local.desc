@@ -7477,6 +7477,7 @@ www-apps/gallery:unzip - Add app-arch/unzip support for the archive upload modul
 www-apps/gallery:zip - Add app-arch/zip for the zip download module
 www-apps/gitit:network-uri - Get Network.URI from the network-uri package.
 www-apps/gitit:plugins - enables optional plugin runtime loader
+www-apps/guacamole:noauth - enable support for leaving out any authentication on the webinterface
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/ikiwiki:extras - Installs additional modules used by ikiwiki plugins
 www-apps/nikola:assets - Support web asset management through dev-python/assets

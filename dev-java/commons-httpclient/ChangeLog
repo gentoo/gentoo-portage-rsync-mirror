@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/commons-httpclient
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.64 2011/12/19 12:33:32 sera Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.65 2015/06/13 09:02:44 monsieurp Exp $
+
+*commons-httpclient-3.1-r1 (13 Jun 2015)
+
+  13 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +commons-httpclient-3.1-r1.ebuild,
+  +files/commons-httpclient-3.1-SSLProtocolSocketFactory.java.patch:
+  Add patch to mend SSLProtocolSocketFactory.java. EAPI 5 bump. Fix security bug
+  442292.
 
   19 Dec 2011; Ralph Sennhauser <sera@gentoo.org>
   commons-httpclient-2.0.2-r1.ebuild:
@@ -282,4 +290,3 @@
   22 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
   commons-httpclient-2.0_alpha3.ebuild:
   Initial import.
-
