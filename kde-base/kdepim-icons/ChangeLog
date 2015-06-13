@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdepim-icons
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.234 2015/06/12 17:15:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-icons/ChangeLog,v 1.235 2015/06/13 08:34:12 zlogene Exp $
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kdepim-icons-4.14.8.ebuild:
+  x86 stable wrt bug #550740
 
   12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> kdepim-icons-4.14.8.ebuild:
   amd64 stable wrt bug #550740

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knode
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.339 2015/06/12 17:15:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knode/ChangeLog,v 1.340 2015/06/13 08:34:10 zlogene Exp $
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> knode-4.14.8.ebuild:
+  x86 stable wrt bug #550740
 
   12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> knode-4.14.8.ebuild:
   amd64 stable wrt bug #550740
