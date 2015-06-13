@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r2.ebuild,v 1.9 2015/02/25 11:12:15 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms2/xmms2-0.8-r2.ebuild,v 1.10 2015/06/13 19:41:56 dilfridge Exp $
 
 EAPI=3
 
@@ -70,7 +70,7 @@ RDEPEND="server? (
 DEPEND="${RDEPEND}
 	dev-lang/python
 	python? ( dev-python/pyrex )
-	perl? ( virtual/perl-Module-Build )
+	perl? ( dev-perl/Module-Build )
 	virtual/pkgconfig
 	test? ( dev-util/cunit )
 	"

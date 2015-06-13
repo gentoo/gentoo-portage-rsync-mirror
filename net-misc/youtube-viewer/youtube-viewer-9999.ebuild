@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.17 2014/11/28 22:25:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/youtube-viewer/youtube-viewer-9999.ebuild,v 1.18 2015/06/13 19:39:47 dilfridge Exp $
 
 EAPI=5
 
@@ -34,7 +34,7 @@ RDEPEND="
 		virtual/freedesktop-icon-theme
 		x11-libs/gdk-pixbuf:2[X,jpeg]
 	)"
-DEPEND="virtual/perl-Module-Build"
+DEPEND="dev-perl/Module-Build"
 
 EGIT_SOURCEDIR="${WORKDIR}"
 S=${WORKDIR}/WWW-YoutubeViewer

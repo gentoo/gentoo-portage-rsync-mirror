@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Calendar-Simple
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.30 2014/08/23 21:47:26 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Calendar-Simple/ChangeLog,v 1.31 2015/06/13 19:36:19 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Calendar-Simple-1.210.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Calendar-Simple-1.210.0-r1 (23 Aug 2014)
 

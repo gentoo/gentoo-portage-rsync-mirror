@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/biber-1.9.ebuild,v 1.1 2014/05/29 12:56:31 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/biber/biber-1.9.ebuild,v 1.2 2015/06/13 19:44:08 dilfridge Exp $
 
 EAPI=5
 
@@ -47,7 +47,7 @@ RDEPEND=">=dev-lang/perl-5.16
 	virtual/perl-IPC-Cmd"
 DEPEND="${RDEPEND}
 	dev-perl/Config-AutoConf
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? ( dev-perl/File-Which
 			dev-perl/Test-Pod
 			dev-perl/Test-Pod-Coverage )"

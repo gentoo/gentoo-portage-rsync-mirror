@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.10 2013/09/18 16:53:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-2.2.1_beta1.ebuild,v 1.11 2015/06/13 19:43:23 dilfridge Exp $
 
 EAPI=5
 MY_P=${P/_/-}
@@ -36,7 +36,7 @@ DEPEND="${RDEPEND}
 	dev-perl/locale-maketext-lexicon
 	virtual/perl-ExtUtils-CBuilder
 	virtual/perl-ExtUtils-ParseXS
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"
 
 S=${WORKDIR}/${MY_P}
 

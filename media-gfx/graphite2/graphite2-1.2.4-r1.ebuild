@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.18 2015/04/08 17:58:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphite2/graphite2-1.2.4-r1.ebuild,v 1.19 2015/06/13 19:42:37 dilfridge Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	perl? (
-		virtual/perl-Module-Build
+		dev-perl/Module-Build
 		dev-perl/locale-maketext-lexicon
 		)
 	test? (

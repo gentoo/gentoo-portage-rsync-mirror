@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Graphics/Bio-Graphics-2.390.0.ebuild,v 1.1 2015/04/18 18:13:04 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bio-Graphics/Bio-Graphics-2.390.0.ebuild,v 1.2 2015/06/13 19:34:39 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.420.0
+	>=dev-perl/Module-Build-0.420.0
 "
 
 SRC_TEST=do

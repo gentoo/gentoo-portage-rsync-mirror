@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/munin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.165 2015/04/07 14:27:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/ChangeLog,v 1.166 2015/06/13 19:41:05 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> munin-2.0.19-r1.ebuild,
+  munin-2.0.19.ebuild, munin-2.0.25-r1.ebuild, munin-2.0.25.ebuild,
+  munin-2.1.9999.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *munin-2.0.25-r1 (03 Jan 2015)
 

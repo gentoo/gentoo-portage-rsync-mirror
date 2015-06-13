@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/GBrowse/GBrowse-2.48-r1.ebuild,v 1.1 2014/08/27 16:23:19 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/GBrowse/GBrowse-2.48-r1.ebuild,v 1.2 2015/06/13 19:38:55 dilfridge Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ CDEPEND="!<sci-biology/GBrowse-2.44-r1
 		dev-perl/Net-SMTP-SSL
 	)"
 #		>=dev-perl/Bio-DB-BigFile-1.00 - requires jklib to compile
-DEPEND="virtual/perl-Module-Build
+DEPEND="dev-perl/Module-Build
 	dev-perl/Capture-Tiny
 	${CDEPEND}"
 RDEPEND="${CDEPEND}"

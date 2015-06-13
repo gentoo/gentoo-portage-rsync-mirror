@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.25-r1.ebuild,v 1.1 2015/01/03 12:12:32 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/munin/munin-2.0.25-r1.ebuild,v 1.2 2015/06/13 19:41:05 dilfridge Exp $
 
 EAPI=5
 
@@ -76,7 +76,7 @@ DEPEND_COM="
 
 # Keep this seperate, as previous versions have had other deps here
 DEPEND="${DEPEND_COM}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	java? ( >=virtual/jdk-1.5 )
 	test? (
 		dev-perl/Test-Deep

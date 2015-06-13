@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.8 2014/08/10 20:43:41 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clusterssh/clusterssh-9999.ebuild,v 1.9 2015/06/13 19:40:09 dilfridge Exp $
 
 EAPI=5
 
@@ -33,7 +33,7 @@ RDEPEND="
 DEPEND="
 	${RDEPEND}
 	dev-perl/File-Which
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	dev-perl/Test-Pod
 	test? ( dev-perl/Test-Differences )"
 
