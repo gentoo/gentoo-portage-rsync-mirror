@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/rt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.95 2015/05/19 15:49:08 titanofold Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/rt/ChangeLog,v 1.96 2015/06/13 17:21:59 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> rt-4.2.11.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
 *rt-4.2.11 (19 May 2015)
 

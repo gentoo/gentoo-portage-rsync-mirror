@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI-Emulate-PSGI
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Emulate-PSGI/ChangeLog,v 1.6 2015/04/03 20:27:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Emulate-PSGI/ChangeLog,v 1.7 2015/06/13 17:13:06 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  CGI-Emulate-PSGI-0.200.0.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
 *CGI-Emulate-PSGI-0.200.0 (03 Apr 2015)
 

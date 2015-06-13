@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/ikiwiki
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.25 2015/02/08 16:00:34 alicef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ChangeLog,v 1.26 2015/06/13 17:20:27 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  ikiwiki-3.20140227.ebuild, ikiwiki-3.20140916.ebuild,
+  ikiwiki-3.20150107.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
 *ikiwiki-3.20150107 (08 Feb 2015)
 

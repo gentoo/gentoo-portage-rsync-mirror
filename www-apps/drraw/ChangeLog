@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/drraw
-# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/ChangeLog,v 1.9 2008/02/22 17:06:43 hollow Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/ChangeLog,v 1.10 2015/06/13 17:19:47 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> drraw-2.0.1.ebuild,
+  drraw-2.1.3.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
   22 Feb 2008; Benedikt Böhm <hollow@gentoo.org> drraw-2.0.1.ebuild,
   drraw-2.1.3.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/389-dsgw
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/ChangeLog,v 1.8 2014/06/22 20:37:14 lxnay Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/ChangeLog,v 1.9 2015/06/13 17:18:02 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  389-dsgw-1.1.10.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
   22 Jun 2014; Fabio Erculiani <lxnay@gentoo.org> metadata.xml:
   reset to maintainer-needed@

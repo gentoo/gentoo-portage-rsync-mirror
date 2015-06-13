@@ -1,6 +1,6 @@
-# Copyright 1999-2008 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/drraw-2.1.3.ebuild,v 1.4 2008/02/22 17:06:43 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drraw/drraw-2.1.3.ebuild,v 1.5 2015/06/13 17:19:47 dilfridge Exp $
 
 inherit webapp
 
@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.6
-	virtual/perl-CGI
+	dev-perl/CGI
 	>=net-analyzer/rrdtool-1.2.1"
 
 need_httpd_cgi

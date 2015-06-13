@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/collectd-web/collectd-web-0.4.0.ebuild,v 1.4 2014/03/02 08:04:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/collectd-web/collectd-web-0.4.0.ebuild,v 1.5 2015/06/13 17:19:27 dilfridge Exp $
 
 EAPI=3
 
@@ -21,7 +21,7 @@ S="${WORKDIR}/httpdss-collectd-web-a23c49f"
 DEPEND="dev-perl/HTML-Parser
 	net-analyzer/rrdtool[perl]
 	dev-perl/JSON
-	virtual/perl-CGI
+	dev-perl/CGI
 	dev-perl/URI
 	virtual/perl-Time-Local
 	virtual/ttf-fonts"

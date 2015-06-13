@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/xmltv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.94 2014/09/27 21:23:55 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/ChangeLog,v 1.95 2015/06/13 17:17:01 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> xmltv-0.5.57.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
   27 Sep 2014; Andreas K. Huettel <dilfridge@gentoo.org> metadata.xml:
   Clean up metadata to silence repoman

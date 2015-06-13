@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/389-dsgw-1.1.10.ebuild,v 1.2 2014/03/04 21:40:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/389-dsgw/389-dsgw-1.1.10.ebuild,v 1.3 2015/06/13 17:18:02 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ DEPEND="adminserver? ( net-nds/389-admin )
 
 RDEPEND="${DEPEND}
 	dev-perl/perl-mozldap
-	virtual/perl-CGI"
+	dev-perl/CGI"
 
 src_prepare() {
 	# as per 389 documentation, when 64bit, export USE_64

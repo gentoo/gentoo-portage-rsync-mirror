@@ -1,6 +1,10 @@
 # ChangeLog for www-misc/monitorix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.9 2015/04/06 03:19:46 reavertm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/monitorix/ChangeLog,v 1.10 2015/06/13 17:22:50 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  monitorix-3.5.1.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
   06 Apr 2015; Maciej Mrozowski <reavertm@gentoo.org> metadata.xml,
   monitorix-3.5.1.ebuild:

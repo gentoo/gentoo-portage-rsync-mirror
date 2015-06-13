@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8-r2.ebuild,v 1.1 2015/05/24 02:45:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_perl/mod_perl-2.0.8-r2.ebuild,v 1.2 2015/06/13 17:11:54 dilfridge Exp $
 
 EAPI="5"
 
@@ -22,7 +22,7 @@ IUSE="debug"
 # ithreads, bug 373943
 DEPEND="
 	>=dev-perl/Apache-Test-1.360
-	>=virtual/perl-CGI-3.08
+	>=dev-perl/CGI-3.08
 	dev-lang/perl[ithreads]
 	www-servers/apache
 "

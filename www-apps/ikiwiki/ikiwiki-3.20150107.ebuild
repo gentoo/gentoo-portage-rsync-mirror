@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ikiwiki-3.20150107.ebuild,v 1.1 2015/02/08 16:00:34 alicef Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/ikiwiki/ikiwiki-3.20150107.ebuild,v 1.2 2015/06/13 17:20:27 dilfridge Exp $
 
 EAPI=5
 
@@ -38,7 +38,7 @@ EXTRA_RDEPEND="
 "
 
 SUGGESTED_RDEPEND="
-	virtual/perl-CGI
+	dev-perl/CGI
 	>=dev-perl/CGI-FormBuilder-3.0202
 	>=dev-perl/CGI-Session-4.14
 	dev-perl/Mail-Sendmail

@@ -1,6 +1,9 @@
 # ChangeLog for www-misc/xxv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.22 2015/03/01 13:29:06 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-misc/xxv/ChangeLog,v 1.23 2015/06/13 17:23:16 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> xxv-1.6.1.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
   01 Mar 2015; Joerg Bornkessel <hd_brummy@gentoo.org> xxv-1.6.1.ebuild:
   using corefonts instead of ttf-bitstream-vera now, wrt bug 335789; eapi=5

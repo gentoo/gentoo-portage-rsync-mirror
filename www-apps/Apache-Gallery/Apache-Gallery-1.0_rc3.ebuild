@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.16 2014/08/09 23:07:13 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/Apache-Gallery/Apache-Gallery-1.0_rc3.ebuild,v 1.17 2015/06/13 17:18:27 dilfridge Exp $
 
 EAPI="5"
 
@@ -29,7 +29,7 @@ DEPEND="${DEPEND}
 	>=dev-perl/ImageInfo-1.04-r2
 	>=dev-perl/ImageSize-2.99-r1
 	dev-perl/text-template
-	>=virtual/perl-CGI-3.08
+	>=dev-perl/CGI-3.08
 	dev-perl/Image-Imlib2
 "
 

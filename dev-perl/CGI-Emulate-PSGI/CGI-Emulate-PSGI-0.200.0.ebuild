@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Emulate-PSGI/CGI-Emulate-PSGI-0.200.0.ebuild,v 1.1 2015/04/03 20:27:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Emulate-PSGI/CGI-Emulate-PSGI-0.200.0.ebuild,v 1.2 2015/06/13 17:13:06 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
 RDEPEND="
-	>=virtual/perl-CGI-3.630.0
+	>=dev-perl/CGI-3.630.0
 	dev-perl/HTTP-Message
 "
 DEPEND="${RDEPEND}

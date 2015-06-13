@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/bugzilla
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.230 2014/10/15 19:08:45 creffett Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugzilla/ChangeLog,v 1.231 2015/06/13 17:19:04 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  bugzilla-4.0.15.ebuild, bugzilla-4.2.11.ebuild, bugzilla-4.4.6.ebuild:
+  The CGI module is no longer part of core Perl and has been moved to dev-perl
 
   15 Oct 2014; Chris Reffett <creffett@gentoo.org> -bugzilla-4.2.10.ebuild,
   -bugzilla-4.4.4.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.4.ebuild,v 1.3 2014/08/10 20:15:51 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/webdavcgi/webdavcgi-0.8.4.ebuild,v 1.4 2015/06/13 17:22:20 dilfridge Exp $
 
 EAPI=5
 
@@ -40,7 +40,7 @@ RDEPEND="!www-apps/webdavcgi:0
 	rcs? ( dev-perl/Rcs )
 	samba? ( dev-perl/Filesys-SmbClient )
 	sqlite? ( dev-perl/DBD-SQLite )
-	virtual/perl-CGI
+	dev-perl/CGI
 	virtual/perl-File-Spec
 	|| ( virtual/httpd-cgi virtual/httpd-fastcgi )"
 

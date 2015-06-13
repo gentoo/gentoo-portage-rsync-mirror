@@ -1,6 +1,15 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1657 2015/06/13 16:10:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1659 2015/06/13 17:28:13 pesa Exp $
+
+  13 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Workaround gcc-4.8 ICE in qtdeclarative (bug 551560).
+
+  13 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  -gnome-python-common.eclass:
+  Punt obsolete, unused eclass; it had a fixed set of users all of which
+  have migrated to gnome-python-common-r1 (bug #551914, thanks to Michał
+  Górny).
 
   13 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Simplify move of .pc files.

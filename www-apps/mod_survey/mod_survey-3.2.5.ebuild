@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.5.ebuild,v 1.3 2014/08/10 20:13:58 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mod_survey/mod_survey-3.2.5.ebuild,v 1.4 2015/06/13 17:20:49 dilfridge Exp $
 
 inherit depend.apache webapp
 
@@ -28,7 +28,7 @@ RDEPEND="${DEPEND}
 	>=www-apache/mod_perl-1.99
 	postgres? ( >=dev-perl/DBI-1.38 dev-perl/DBD-Pg )
 	mysql? ( >=dev-perl/DBI-1.38 dev-perl/DBD-mysql )
-	>=virtual/perl-CGI-3.0.0"
+	>=dev-perl/CGI-3.0.0"
 
 S="${WORKDIR}"/${MY_PN}-${PV}
 

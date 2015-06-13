@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/expects/expects-0.6.2.ebuild,v 1.1 2014/12/14 16:12:00 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/expects/expects-0.7.1.ebuild,v 1.1 2015/06/13 17:16:40 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -19,7 +19,7 @@ IUSE="doc test"
 DEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
 	doc? ( dev-python/sphinx[${PYTHON_USEDEP}] )
-	test? ( >=dev-python/mamba-0.8.2[${PYTHON_USEDEP}] )
+	test? ( dev-python/mamba[${PYTHON_USEDEP}] )
 "
 RDEPEND=""
 
@@ -28,7 +28,7 @@ python_compile_all() {
 }
 
 python_test() {
-	mamba || die "Tests failed under ${EPYTHON}"
+	mamba || die "tests failed under ${EPYTHON}"
 }
 
 python_install_all() {

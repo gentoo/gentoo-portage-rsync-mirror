@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.22 2015/06/13 16:10:09 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.23 2015/06/13 17:28:13 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -171,9 +171,20 @@ qt4-build-multilib_src_prepare() {
 		fi
 	fi
 
+	if [[ ${PN} == qtdeclarative ]]; then
+		# Bug 551560
+		# gcc-4.8 ICE with -Os, fixed in 4.9
+		if use x86 && [[ $(gcc-version) == 4.8 ]]; then
+			replace-flags -Os -O2
+		fi
+	fi
+
 	if [[ ${PN} == qtwebkit ]]; then
 		# Bug 550780
-		filter-flags -fgraphite-identity -floop-strip-mine
+		# various ICEs with graphite-related flags, gcc-5 works
+		if [[ $(gcc-major-version) -lt 5 ]]; then
+			filter-flags -fgraphite-identity -floop-strip-mine
+		fi
 	fi
 
 	# Bug 261632
