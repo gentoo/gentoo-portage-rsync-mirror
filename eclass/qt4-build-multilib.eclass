@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.21 2015/06/12 01:44:17 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.22 2015/06/13 16:10:09 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -462,15 +462,10 @@ qt4_multilib_src_install() {
 		fi
 	fi
 
-	# move pkgconfig files to the correct location
-	eshopts_push -s nullglob
-	local pcfile
-	for pcfile in "${D}/${QT4_LIBDIR}"/pkgconfig/*.pc; do
-		dodir /usr/$(get_libdir)/pkgconfig
-		mv "${pcfile}" "${ED}"/usr/$(get_libdir)/pkgconfig || die
-	done
-	eshopts_pop
-	rmdir "${D}/${QT4_LIBDIR}"/pkgconfig
+	# move pkgconfig directory to the correct location
+	if [[ -d ${D}${QT4_LIBDIR}/pkgconfig ]]; then
+		mv "${D}${QT4_LIBDIR}"/pkgconfig "${ED}usr/$(get_libdir)" || die
+	fi
 
 	qt4_install_module_qconfigs
 	qt4_symlink_framework_headers
@@ -754,7 +749,7 @@ qt4_symlink_framework_headers() {
 			dosym "${rdir}"/${f}/Headers "${dest}"
 
 			# Link normal headers as well.
-			for hdr in "${D}/${QT4_LIBDIR}/${f}"/Headers/*; do
+			for hdr in "${D}${QT4_LIBDIR}/${f}"/Headers/*; do
 				h=$(basename ${hdr})
 				dosym "../${rdir}"/${f}/Headers/${h} \
 					"${QT4_HEADERDIR#${EPREFIX}}"/Qt/${h}
