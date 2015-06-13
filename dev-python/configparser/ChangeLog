@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/configparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/configparser/ChangeLog,v 1.6 2015/06/03 14:17:56 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/configparser/ChangeLog,v 1.7 2015/06/13 01:20:34 idella4 Exp $
+
+  13 Jun 2015; Ian Delaney <idella4@gentoo.org> configparser-3.3.0.2.ebuild:
+  add
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml
