@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/Module-Install-1.60.0-r1.ebuild,v 1.6 2014/10/01 11:36:06 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Install/Module-Install-1.60.0-r1.ebuild,v 1.7 2015/06/13 22:18:05 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ RDEPEND=">=virtual/perl-File-Spec-3.28
 	>=virtual/perl-Archive-Tar-1.44
 	>=virtual/perl-ExtUtils-MakeMaker-6.590.0
 	>=virtual/perl-ExtUtils-ParseXS-2.19
-	>=virtual/perl-Module-Build-0.33
+	>=dev-perl/Module-Build-0.33
 	>=virtual/perl-Module-CoreList-2.17
 	>=virtual/perl-Parse-CPAN-Meta-1.39
 	>=dev-perl/libwww-perl-5.812

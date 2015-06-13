@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.110.0-r2.ebuild,v 1.2 2015/03/21 22:44:13 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk2-fu/gtk2-fu-0.110.0-r2.ebuild,v 1.3 2015/06/13 22:21:28 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="test"
 
 RDEPEND="dev-perl/gtk2-perl"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage

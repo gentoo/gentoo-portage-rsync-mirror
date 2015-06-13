@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Feed
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Feed/ChangeLog,v 1.30 2015/06/13 18:54:22 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Feed/ChangeLog,v 1.31 2015/06/13 22:26:24 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  XML-Feed-0.510.0.ebuild, XML-Feed-0.520.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   XML-Feed-0.510.0.ebuild, XML-Feed-0.520.0.ebuild:

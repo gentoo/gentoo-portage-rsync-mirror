@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-6.0.1-r1.ebuild,v 1.3 2014/06/27 10:32:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SNMP/Net-SNMP-6.0.1-r1.ebuild,v 1.4 2015/06/13 22:29:16 dilfridge Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 	>=dev-perl/Digest-HMAC-1.0
 	>=virtual/perl-libnet-1.0703"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"
 
 SRC_TEST=do
 

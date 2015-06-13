@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/librg-utils-perl/librg-utils-perl-1.0.43.ebuild,v 1.2 2013/04/24 15:13:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/librg-utils-perl/librg-utils-perl-1.0.43.ebuild,v 1.3 2015/06/13 22:21:05 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	dev-perl/List-MoreUtils"
 DEPEND="${RDEPEND}
 	sci-libs/profphd-utils
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 "
 
 src_configure() {

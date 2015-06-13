@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.23 2015/06/13 17:28:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.24 2015/06/13 22:13:24 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -300,17 +300,15 @@ qt4_multilib_src_configure() {
 		STRIP=$(tc-getSTRIP)
 
 	# convert tc-arch to the values supported by Qt
-	local arch=
-	case $(tc-arch) in
-		amd64|x64-*)		  arch=x86_64 ;;
-		ppc*-macos)		  arch=ppc ;;
-		ppc*)			  arch=powerpc ;;
-		sparc*)			  arch=sparc ;;
-		x86-macos)		  arch=x86 ;;
-		x86*)			  arch=i386 ;;
-		alpha|arm|ia64|mips|s390) arch=$(tc-arch) ;;
-		arm64|hppa|sh)		  arch=generic ;;
-		*) die "qt4-build-multilib.eclass: unsupported tc-arch '$(tc-arch)'" ;;
+	local arch=$(tc-arch)
+	case ${arch} in
+		amd64|x64-*)	arch=x86_64 ;;
+		arm64|hppa)	arch=generic ;;
+		ppc*-macos)	arch=ppc ;;
+		ppc*)		arch=powerpc ;;
+		sparc*)		arch=sparc ;;
+		x86-macos)	arch=x86 ;;
+		x86*)		arch=i386 ;;
 	esac
 
 	# configure arguments

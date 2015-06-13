@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.170.230.ebuild,v 1.1 2015/05/10 18:26:34 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.170.230.ebuild,v 1.2 2015/06/13 22:14:23 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	virtual/perl-Scalar-List-Utils
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.280.801
+	>=dev-perl/Module-Build-0.280.801
 	test? (
 		>=dev-perl/Test-Pod-1.140.0
 		>=dev-perl/Test-Pod-Coverage-1.40.0

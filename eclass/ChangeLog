@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1660 2015/06/13 19:01:10 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1661 2015/06/13 22:13:24 pesa Exp $
+
+  13 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  sh is "supported", don't fallback to generic. Also, don't die when tc-arch is
+  unknown, the configure script can handle this internally.
 
   13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
   Allow dev-perl/Module-Build in QA check for Module::Build

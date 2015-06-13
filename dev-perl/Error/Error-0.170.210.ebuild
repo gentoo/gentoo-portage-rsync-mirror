@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.170.210.ebuild,v 1.13 2014/06/06 05:42:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Error/Error-0.170.210.ebuild,v 1.14 2015/06/13 22:14:23 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="test"
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.390.0
+	>=dev-perl/Module-Build-0.390.0
 	test? (
 		>=dev-perl/Test-Pod-1.140.0
 		>=dev-perl/Test-Pod-Coverage-1.40.0

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/OOTools
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/OOTools/ChangeLog,v 1.8 2014/11/01 22:36:44 monsieurp Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/OOTools/ChangeLog,v 1.9 2015/06/13 22:30:08 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  OOTools-2.300.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   01 Nov 2014; Patrice Clement <monsieurp@gentoo.org> OOTools-2.300.0-r1.ebuild:
   Removing unwanted tests. See #473436.

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/Text-Table-1.127.0-r1.ebuild,v 1.1 2014/08/26 18:15:10 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Table/Text-Table-1.127.0-r1.ebuild,v 1.2 2015/06/13 22:01:44 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="test"
 
 RDEPEND=">=dev-perl/Text-Aligner-0.50.0"
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.360.0
+	>=dev-perl/Module-Build-0.360.0
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage

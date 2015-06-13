@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Term-Shell
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.10 2014/08/26 18:33:48 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-Shell/ChangeLog,v 1.11 2015/06/13 22:06:17 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Term-Shell-0.30.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Term-Shell-0.30.0-r1 (26 Aug 2014)
 

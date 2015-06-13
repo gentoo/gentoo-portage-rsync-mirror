@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/NetPacket
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.59 2015/03/21 22:58:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/NetPacket/ChangeLog,v 1.60 2015/06/13 22:29:59 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> NetPacket-1.4.1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *NetPacket-1.6.0 (21 Mar 2015)
 *NetPacket-1.4.1 (21 Mar 2015)

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/POE-Component-PreforkDispatch
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Component-PreforkDispatch/ChangeLog,v 1.7 2014/08/26 19:20:02 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POE-Component-PreforkDispatch/ChangeLog,v 1.8 2015/06/13 22:30:44 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  POE-Component-PreforkDispatch-0.101.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *POE-Component-PreforkDispatch-0.101.0-r1 (26 Aug 2014)
 

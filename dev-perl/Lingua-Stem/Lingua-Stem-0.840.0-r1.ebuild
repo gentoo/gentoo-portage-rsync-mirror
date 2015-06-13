@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.840.0-r1.ebuild,v 1.1 2014/08/23 22:17:32 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Stem/Lingua-Stem-0.840.0-r1.ebuild,v 1.2 2015/06/13 22:11:51 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="dev-perl/Snowball-Norwegian
 	dev-perl/Lingua-Stem-Ru
 	dev-perl/Lingua-PT-Stemmer
 	dev-perl/Text-German"
-DEPEND="virtual/perl-Module-Build
+DEPEND="dev-perl/Module-Build
 	${RDEPEND}"
 
 SRC_TEST="do"

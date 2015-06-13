@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Format/Time-Format-1.120.0.ebuild,v 1.1 2014/12/06 21:42:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Format/Time-Format-1.120.0.ebuild,v 1.2 2015/06/13 22:07:44 dilfridge Exp $
 
 EAPI=5
 MODULE_AUTHOR=ROODE
@@ -19,7 +19,7 @@ RDEPEND="
 "
 
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.400.0
+	>=dev-perl/Module-Build-0.400.0
 	test? ( >=virtual/perl-Test-Simple-0.400.0 )
 "
 

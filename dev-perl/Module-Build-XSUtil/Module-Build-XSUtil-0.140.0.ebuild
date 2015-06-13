@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-XSUtil/Module-Build-XSUtil-0.140.0.ebuild,v 1.3 2014/11/29 10:10:03 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Build-XSUtil/Module-Build-XSUtil-0.140.0.ebuild,v 1.4 2015/06/13 22:16:41 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 # File::Spec::Functions -> virtual/perl-File-Spec
 # Test::More -> perl-Test-Simple
 DEPEND="
-	>=virtual/perl-Module-Build-0.400.500
+	>=dev-perl/Module-Build-0.400.500
 	${RDEPEND}
 	test? (
 		dev-perl/Capture-Tiny

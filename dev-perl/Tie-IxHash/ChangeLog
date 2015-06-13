@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.49 2015/04/03 10:16:50 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.50 2015/06/13 22:06:44 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Tie-IxHash-1.230.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   03 Apr 2015; Yixun Lan <dlan@gentoo.org> Tie-IxHash-1.230.0.ebuild:
   keyword arm64, tested on cortex-a53 hardware

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Math-Random-ISAAC-XS
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-ISAAC-XS/ChangeLog,v 1.14 2014/08/24 02:21:06 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Math-Random-ISAAC-XS/ChangeLog,v 1.15 2015/06/13 22:15:32 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Math-Random-ISAAC-XS-1.4.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Math-Random-ISAAC-XS-1.4.0-r1 (24 Aug 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Mail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/ChangeLog,v 1.26 2015/05/03 17:58:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Mail/ChangeLog,v 1.27 2015/06/13 22:25:17 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  DateTime-Format-Mail-0.300.100-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *DateTime-Format-Mail-0.401.0 (03 May 2015)
 

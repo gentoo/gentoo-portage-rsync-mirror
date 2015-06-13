@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-DesktopFiles/Linux-DesktopFiles-0.80.0.ebuild,v 1.3 2014/09/08 16:36:42 nimiux Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Linux-DesktopFiles/Linux-DesktopFiles-0.80.0.ebuild,v 1.4 2015/06/13 22:12:10 dilfridge Exp $
 
 EAPI=5
 
@@ -16,6 +16,6 @@ KEYWORDS="amd64 x86"
 IUSE=""
 
 RDEPEND=">=dev-lang/perl-5.14.0[gdbm]"
-DEPEND="virtual/perl-Module-Build"
+DEPEND="dev-perl/Module-Build"
 
 SRC_TEST="do"

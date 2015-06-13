@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=>=virtual/perl-Module-Build-0.30 test? ( >=virtual/perl-Test-Simple-0.82 dev-perl/Test-Pod dev-perl/URI ) dev-lang/perl:=[-build(-)]
+DEPEND=>=dev-perl/Module-Build-0.30 test? ( >=virtual/perl-Test-Simple-0.82 dev-perl/Test-Pod dev-perl/URI ) dev-lang/perl:=[-build(-)]
 DESCRIPTION=Find URIs in plain text
 EAPI=5
 HOMEPAGE=http://search.cpan.org/dist/URI-Find/
@@ -10,4 +10,4 @@ RDEPEND=dev-perl/URI dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://cpan/authors/id/M/MS/MSCHWERN/URI-Find-20111103.tar.gz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-module	9ff260c452d420630500e700913be8d8	toolchain-funcs	42408102d713fbad60ca21349865edb4	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=178da5984318df24463367ed26ec31e5
+_md5_=1f8175c7f7a2ed754b0ebde2c2239a09

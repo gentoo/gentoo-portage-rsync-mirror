@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/Lchown-1.10.0-r1.ebuild,v 1.7 2014/09/23 10:03:45 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lchown/Lchown-1.10.0-r1.ebuild,v 1.8 2015/06/13 22:27:29 dilfridge Exp $
 
 EAPI=5
 
@@ -17,4 +17,4 @@ IUSE=""
 RDEPEND=""
 DEPEND="
 	${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"

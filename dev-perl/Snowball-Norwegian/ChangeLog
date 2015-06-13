@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Snowball-Norwegian
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/ChangeLog,v 1.24 2014/08/23 21:42:45 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Snowball-Norwegian/ChangeLog,v 1.25 2015/06/13 22:11:40 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Snowball-Norwegian-1.200.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Snowball-Norwegian-1.200.0-r1 (23 Aug 2014)
 

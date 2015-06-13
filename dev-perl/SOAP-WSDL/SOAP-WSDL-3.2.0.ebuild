@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-WSDL/SOAP-WSDL-3.2.0.ebuild,v 1.1 2014/12/03 23:47:45 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-WSDL/SOAP-WSDL-3.2.0.ebuild,v 1.2 2015/06/13 22:22:23 dilfridge Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	virtual/perl-Getopt-Long
 	dev-perl/libwww-perl
 	virtual/perl-Scalar-List-Utils
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	virtual/perl-Storable
 	>=dev-perl/Template-Toolkit-2.180.0
 	dev-perl/TermReadKey

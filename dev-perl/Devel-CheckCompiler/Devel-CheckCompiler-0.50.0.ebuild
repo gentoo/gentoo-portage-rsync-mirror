@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-CheckCompiler/Devel-CheckCompiler-0.50.0.ebuild,v 1.3 2014/11/29 10:09:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-CheckCompiler/Devel-CheckCompiler-0.50.0.ebuild,v 1.4 2015/06/13 22:16:29 dilfridge Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ RDEPEND="
 # CPAN::Meta::Prereqs -> perl-CPAN-Meta
 DEPEND="
 	virtual/perl-CPAN-Meta
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 	>=virtual/perl-Test-Simple-0.980.0
 	dev-perl/Test-Requires
 	${RDEPEND}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.157 2015/05/03 13:32:40 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/ChangeLog,v 1.158 2015/06/13 22:25:01 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  DateTime-1.030.0.ebuild, DateTime-1.120.0.ebuild, DateTime-1.180.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *DateTime-1.180.0 (03 May 2015)
 

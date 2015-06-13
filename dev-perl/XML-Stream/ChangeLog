@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/XML-Stream
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.37 2015/03/04 13:56:00 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.38 2015/06/13 22:22:56 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  XML-Stream-1.240.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *XML-Stream-1.240.0 (04 Mar 2015)
 

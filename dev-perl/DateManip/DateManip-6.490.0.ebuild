@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-6.490.0.ebuild,v 1.1 2015/05/03 13:20:43 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateManip/DateManip-6.490.0.ebuild,v 1.2 2015/06/13 22:07:36 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 	virtual/perl-Storable
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.210.0
+	>=dev-perl/Module-Build-0.210.0
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage

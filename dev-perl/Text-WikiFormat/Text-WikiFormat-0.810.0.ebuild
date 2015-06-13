@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/Text-WikiFormat-0.810.0.ebuild,v 1.1 2015/02/25 10:54:12 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-WikiFormat/Text-WikiFormat-0.810.0.ebuild,v 1.2 2015/06/13 22:02:05 dilfridge Exp $
 
 EAPI=5
 
@@ -17,6 +17,6 @@ IUSE=""
 RDEPEND="dev-perl/URI
 	virtual/perl-Scalar-List-Utils"
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.28"
+	>=dev-perl/Module-Build-0.28"
 
 SRC_TEST="do"
