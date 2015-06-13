@@ -1,16 +1,5 @@
 --- src/java/org/apache/commons/httpclient/protocol/SSLProtocolSocketFactory.java
 +++ src/java/org/apache/commons/httpclient/protocol/SSLProtocolSocketFactory.java
-@@ -1,7 +1,7 @@
- /*
-- * $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/files/commons-httpclient-3.1-SSLProtocolSocketFactory.java.patch,v 1.1 2015/06/13 09:02:44 monsieurp Exp $
-- * $Revision: 1.1 $
-- * $Date: 2015/06/13 09:02:44 $
-+ * $HeadURL: file:///opt/j2ee/domains/atlassian.com/fisheye6/repos/asf/httpcomponents/oac.hc3x/trunk/src/java/org/apache/commons/httpclient/protocol/SSLProtocolSocketFactory.java $
-+ * $Revision: 1.1 $
-+ * $Date: 2015/06/13 09:02:44 $
-  *
-  * ====================================================================
-  *
 @@ -31,10 +31,25 @@
  package org.apache.commons.httpclient.protocol;
  
