@@ -1,6 +1,11 @@
 # ChangeLog for sys-auth/sssd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.70 2015/04/18 18:00:00 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/sssd/ChangeLog,v 1.71 2015/06/13 17:52:25 hwoarang Exp $
+
+*sssd-1.12.5 (13 Jun 2015)
+
+  13 Jun 2015; Markos Chandras <hwoarang@gentoo.org> +sssd-1.12.5.ebuild:
+  Version bump
 
   18 Apr 2015; Markos Chandras <hwoarang@gentoo.org> sssd-1.12.4.ebuild:
   Restore samba4 magic
