@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.87 2015/06/12 05:08:48 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.88 2015/06/13 06:23:39 jer Exp $
+
+*ncmpc-0.24-r1 (13 Jun 2015)
+
+  13 Jun 2015; Jeroen Roovers <jer@gentoo.org> +ncmpc-0.24-r1.ebuild,
+  +files/ncmpc-0.24-tinfo.patch:
+  Fix building against sys-libs/ncurses[tinfo] (bug #551864).
 
   12 Jun 2015; Jeroen Roovers <jer@gentoo.org> ncmpc-0.24.ebuild:
   Stable for HPPA PPC64 (bug #535502).

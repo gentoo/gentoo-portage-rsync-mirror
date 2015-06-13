@@ -1,6 +1,10 @@
 # ChangeLog for games-action/supertuxkart
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.46 2015/06/05 07:08:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/supertuxkart/ChangeLog,v 1.47 2015/06/13 06:29:32 mr_bones_ Exp $
+
+  13 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
+  files/supertuxkart-0.8.1-cmake.patch:
+  fix patch for bug #551260
 
   05 Jun 2015; Michael Sterrett <mr_bones_@gentoo.org>
   +files/supertuxkart-0.8.1-cmake.patch,
