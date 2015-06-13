@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.197 2015/06/09 15:36:10 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/sparc/package.use.mask,v 1.198 2015/06/13 16:00:51 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (13 Jun 2015)
+# Missing keywords, bug #513108
+net-misc/spice-gtk smartcard
 
 # Gilles Dartiguelongue <eva@gentoo.org> (09 Jun 2015)
 # net-fs/libnfs lacks sparc keyword, bug #551576

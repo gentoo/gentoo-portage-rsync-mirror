@@ -23,5 +23,6 @@
 		instead of bundled.</flag>
 	<flag name="system-sqlite">Use the system-wide <pkg>dev-db/sqlite</pkg>
 		installation with secure-delete enabled</flag>
+	<flag name="egl">Enable EGL provider</flag>
 </use>
 </pkgmetadata>

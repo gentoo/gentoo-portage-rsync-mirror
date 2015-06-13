@@ -1,6 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.170 2015/06/11 10:52:54 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/ia64/package.use.mask,v 1.171 2015/06/13 16:00:51 pacho Exp $
+
+# Pacho Ramos <pacho@gentoo.org> (13 Jun 2015)
+# Missing keywords, bug #513108
+net-misc/spice-gtk smartcard
 
 # James Le Cuirot <chewi@gentoo.org> (11 Jun 2015)
 # Temporarily mask rdeps of rhino, which has EAPI 1, until I have a
