@@ -1,6 +1,14 @@
 # ChangeLog for virtual/perl-CGI
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.130 2015/06/04 16:19:05 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/ChangeLog,v 1.131 2015/06/13 12:30:52 dilfridge Exp $
+
+*perl-CGI-4.90.0-r1 (13 Jun 2015)
+*perl-CGI-3.650.0-r2 (13 Jun 2015)
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-CGI-3.650.0-r1.ebuild, +perl-CGI-3.650.0-r2.ebuild,
+  -perl-CGI-4.90.0.ebuild, +perl-CGI-4.90.0-r1.ebuild:
+  CGI moves from perl-core to dev-perl
 
   04 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   -perl-CGI-3.630.0-r2.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/perl-CGI-4.90.0.ebuild,v 1.1 2014/11/16 15:57:54 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-CGI/perl-CGI-4.90.0-r1.ebuild,v 1.1 2015/06/13 12:30:52 dilfridge Exp $
 
 EAPI=5
 
@@ -14,5 +14,5 @@ KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~s
 IUSE=""
 
 RDEPEND="
-	~perl-core/${PN#perl-}-${PV}
+	~dev-perl/${PN#perl-}-${PV}
 "

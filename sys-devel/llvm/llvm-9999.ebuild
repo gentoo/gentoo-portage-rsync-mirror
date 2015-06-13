@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.114 2015/06/13 12:00:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.115 2015/06/13 12:10:52 mgorny Exp $
 
 EAPI=5
 
@@ -243,9 +243,8 @@ multilib_src_configure() {
 
 	if multilib_is_native_abi; then
 		mycmakeargs+=(
-			$(cmake-utils_use doc LLVM_BUILD_DOCS)
-			$(cmake-utils_use doc LLVM_ENABLE_SPHINX)
-			$(cmake-utils_use doc SPHINX_OUTPUT_HTML)
+			-DLLVM_BUILD_DOCS=$(usex doc)
+			-DLLVM_ENABLE_SPHINX=$(usex doc)
 			-DLLVM_ENABLE_DOXYGEN=OFF
 			-DLLVM_INSTALL_HTML="${EPREFIX}/usr/share/doc/${PF}/html"
 		)
