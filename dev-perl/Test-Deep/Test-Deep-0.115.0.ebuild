@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/Test-Deep-0.115.0.ebuild,v 1.1 2015/02/21 23:22:59 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Deep/Test-Deep-0.115.0.ebuild,v 1.2 2015/06/13 11:27:16 dilfridge Exp $
 
 EAPI=5
 
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 	test? (
 		virtual/perl-Test-Simple
 		>=dev-perl/Test-NoWarnings-0.20.0
-		>=dev-perl/Test-Tester-0.40.0
+		|| ( >=virtual/perl-Test-Simple-1.1.10 >=dev-perl/Test-Tester-0.40.0 )
 	)
 "
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-NoWarnings
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.50 2014/08/20 20:11:10 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.51 2015/06/13 11:25:15 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Test-NoWarnings-1.40.0-r1.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::Tester, bug 550990
 
 *Test-NoWarnings-1.40.0-r1 (20 Aug 2014)
 

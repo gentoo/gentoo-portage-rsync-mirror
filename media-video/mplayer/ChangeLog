@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.939 2015/05/29 04:44:15 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.940 2015/06/13 11:08:02 pacho Exp $
+
+*mplayer-1.2_pre20150214-r1 (13 Jun 2015)
+
+  13 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  +files/mplayer-1.2_pre20150214-pulseaudio-6.0.patch,
+  +mplayer-1.2_pre20150214-r1.ebuild:
+  Let it work with pulseaudio-6.0, bug #549680 by Matthew Stapleton
 
   29 May 2015; Jeroen Roovers <jer@gentoo.org> mplayer-1.2_pre20150214.ebuild:
   Stable for HPPA (bug #547668).

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Output
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/ChangeLog,v 1.28 2014/12/09 21:14:17 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Output/ChangeLog,v 1.29 2015/06/13 11:28:52 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Test-Output-1.10.0-r1.ebuild, Test-Output-1.30.0.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::Tester, bug 550990
 
 *Test-Output-1.30.0 (09 Dec 2014)
 

@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16616 2015/06/13 10:53:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16617 2015/06/13 11:16:22 dilfridge Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,60 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Andreas K. Huettel <dilfridge@gentoo.org> (13 June 2016)
+# The following perl-core packages are not required at the moment to
+# satisfy any dependencies (the bundled version of the module in
+# dev-lang/perl is always newer). They will be removed in 30days
+# (but may be re-added at a later date if needed again).
+# * If you have any of these installed, uninstall it now.
+# * If an ebuild in an overlay depends on it, that is a bug in the
+#   overlay - it should depend on the corresponding virtual instead.
+perl-core/Archive-Tar
+perl-core/Attribute-Handlers
+perl-core/AutoLoader
+perl-core/B-Debug
+perl-core/CPAN
+perl-core/CPAN-Meta-YAML
+perl-core/Compress-Raw-Bzip2
+perl-core/Compress-Raw-Zlib
+perl-core/DB_File
+perl-core/Devel-PPPort
+perl-core/Exporter
+perl-core/ExtUtils-CBuilder
+perl-core/ExtUtils-Install
+perl-core/ExtUtils-ParseXS
+perl-core/File-Spec
+perl-core/I18N-LangTags
+perl-core/IO
+perl-core/IO-Compress
+perl-core/IO-Socket-IP
+perl-core/IPC-Cmd
+perl-core/JSON-PP
+perl-core/Locale-Maketext
+perl-core/Math-BigInt-FastCalc
+perl-core/Math-BigRat
+perl-core/Module-Load
+perl-core/Module-Load-Conditional
+perl-core/Module-Metadata
+perl-core/Net-Ping
+perl-core/Parse-CPAN-Meta
+perl-core/Perl-OSType
+perl-core/Pod-Escapes
+perl-core/Pod-Parser
+perl-core/Safe
+perl-core/Scalar-List-Utils
+perl-core/Socket
+perl-core/Storable
+perl-core/Test-Harness
+perl-core/Test-Simple
+perl-core/Thread-Queue
+perl-core/Time-Piece
+perl-core/XSLoader
+perl-core/autodie
+perl-core/bignum
+perl-core/threads
+perl-core/threads-shared
 
 # Ole Markus With <olemarkus@gentoo.org> (12 Jun 2015)
 # Masking PHP 7 pre-release versions
