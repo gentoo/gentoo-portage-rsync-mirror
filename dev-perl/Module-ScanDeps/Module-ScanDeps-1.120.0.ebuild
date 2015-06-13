@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/Module-ScanDeps-1.120.0.ebuild,v 1.5 2014/08/31 16:17:02 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-ScanDeps/Module-ScanDeps-1.120.0.ebuild,v 1.6 2015/06/13 18:52:38 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/prefork
-		virtual/perl-Module-Pluggable
+		dev-perl/Module-Pluggable
 		dev-perl/Test-Requires )"
 
 SRC_TEST=do

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-1.123.ebuild,v 1.1 2015/02/22 11:20:00 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-1.123.ebuild,v 1.2 2015/06/13 18:53:52 dilfridge Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="test"
 
-RDEPEND=">=virtual/perl-Module-Pluggable-3.1
+RDEPEND=">=dev-perl/Module-Pluggable-3.1
 	>=dev-perl/Config-Tiny-2
 	>=dev-perl/Email-Address-1.88.9
 	dev-perl/List-MoreUtils

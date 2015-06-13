@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/LaTeX-Table
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/ChangeLog,v 1.4 2015/01/31 14:04:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/ChangeLog,v 1.5 2015/06/13 18:51:58 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  LaTeX-Table-1.0.6.ebuild:
+  The Module::Pluggable module is no longer part of core Perl and has been
+  moved to dev-perl
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> LaTeX-Table-1.0.6.ebuild:
   Add ~x86-fbsd keyword

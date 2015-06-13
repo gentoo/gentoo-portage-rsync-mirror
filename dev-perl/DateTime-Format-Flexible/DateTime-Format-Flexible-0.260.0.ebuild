@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Flexible/DateTime-Format-Flexible-0.260.0.ebuild,v 1.1 2015/05/03 17:43:16 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Flexible/DateTime-Format-Flexible-0.260.0.ebuild,v 1.2 2015/06/13 18:49:03 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=dev-perl/DateTime-Format-Builder-0.740.0
 	dev-perl/DateTime-TimeZone
 	dev-perl/List-MoreUtils
-	virtual/perl-Module-Pluggable
+	dev-perl/Module-Pluggable
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker

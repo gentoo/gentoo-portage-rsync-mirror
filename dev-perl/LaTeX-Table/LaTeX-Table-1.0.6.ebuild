@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/LaTeX-Table-1.0.6.ebuild,v 1.4 2015/01/31 14:04:44 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/LaTeX-Table/LaTeX-Table-1.0.6.ebuild,v 1.5 2015/06/13 18:51:58 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="test"
 
 RDEPEND="
 	virtual/perl-Carp
-	virtual/perl-Module-Pluggable
+	dev-perl/Module-Pluggable
 	dev-perl/Moose
 	dev-perl/MooseX-FollowPBP
 	virtual/perl-Scalar-List-Utils

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.670.0.ebuild,v 1.1 2015/04/12 18:19:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.670.0.ebuild,v 1.2 2015/06/13 18:46:11 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="gstreamer test"
 
 RDEPEND="
 	>=x11-libs/wxGTK-3:3.0[X,tiff,gstreamer=]
-	>=virtual/perl-Module-Pluggable-2.600.0
+	>=dev-perl/Module-Pluggable-2.600.0
 "
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-CBuilder-0.24

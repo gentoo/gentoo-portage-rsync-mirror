@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-PatchPerl/Devel-PatchPerl-1.340.0.ebuild,v 1.1 2015/05/09 19:41:26 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Devel-PatchPerl/Devel-PatchPerl-1.340.0.ebuild,v 1.2 2015/06/13 18:49:29 dilfridge Exp $
 
 EAPI=5
 MODULE_AUTHOR=BINGOS
@@ -16,7 +16,7 @@ RDEPEND="
 	>=dev-perl/File-pushd-1.0.0
 	virtual/perl-IO
 	virtual/perl-MIME-Base64
-	virtual/perl-Module-Pluggable
+	dev-perl/Module-Pluggable
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
