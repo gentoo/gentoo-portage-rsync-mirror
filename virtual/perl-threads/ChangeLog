@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-threads
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads/ChangeLog,v 1.37 2015/02/18 08:39:02 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-threads/ChangeLog,v 1.38 2015/06/13 10:26:55 dilfridge Exp $
+
+*perl-threads-2.10.0 (13 Jun 2015)
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-threads-1.860.0-r4.ebuild, -perl-threads-1.890.0-r1.ebuild,
+  +perl-threads-2.10.0.ebuild:
+  Add Perl 5.22 version, remove old
 
   18 Feb 2015; Agostino Sarubbo <ago@gentoo.org> perl-threads-1.930.0.ebuild:
   Stable for alpha, wrt bug #536790

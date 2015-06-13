@@ -1,6 +1,9 @@
 # ChangeLog for app-office/planner
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.79 2015/04/08 07:30:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.80 2015/06/13 10:05:40 pacho Exp $
+
+  13 Jun 2015; Pacho Ramos <pacho@gentoo.org> planner-0.14.6_p20130520.ebuild:
+  Needs rebuilding with eds subslot bumps
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> planner-0.14.6_p20130520.ebuild:
   Remove old Python implementations

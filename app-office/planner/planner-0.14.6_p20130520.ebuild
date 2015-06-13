@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.9 2015/04/08 07:30:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.14.6_p20130520.ebuild,v 1.10 2015/06/13 10:05:40 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ RDEPEND="
 		${PYTHON_DEPS}
 		>=dev-python/pygtk-2.6:2[${PYTHON_USEDEP}] )
 	eds? (
-		>=gnome-extra/evolution-data-server-3.6
+		>=gnome-extra/evolution-data-server-3.6:=
 		>=mail-client/evolution-3.6 )"
 
 DEPEND="${RDEPEND}

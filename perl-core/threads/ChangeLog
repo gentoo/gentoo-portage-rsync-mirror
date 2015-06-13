@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/threads
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/threads/ChangeLog,v 1.15 2014/07/26 12:45:18 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/threads/ChangeLog,v 1.16 2015/06/13 10:26:50 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -threads-1.860.0-r1.ebuild, threads-1.890.0-r1.ebuild:
+  Remove old, drop keywords
 
 *threads-1.890.0-r1 (26 Jul 2014)
 *threads-1.860.0-r1 (26 Jul 2014)

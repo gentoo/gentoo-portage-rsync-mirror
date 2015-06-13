@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.14.1.ebuild,v 1.2 2015/02/25 18:27:16 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rcairo/rcairo-1.14.1.ebuild,v 1.3 2015/06/13 10:02:23 mrueg Exp $
 
 EAPI=5
 
-USE_RUBY="ruby19 ruby20 ruby21 ruby22"
+USE_RUBY="ruby19 ruby20"
 
 RUBY_FAKEGEM_NAME="cairo"
 
@@ -48,7 +48,7 @@ each_ruby_configure() {
 }
 
 each_ruby_compile() {
-	emake V=1 -Cext/cairo || die "make failed"
+	emake V=1 -Cext/cairo
 
 	# again, try to make it more standard, to install it more easily.
 	cp ext/cairo/cairo$(get_modname) lib/ || die
@@ -65,12 +65,12 @@ each_ruby_install() {
 	each_fakegem_install
 
 	insinto $(ruby_get_hdrdir)
-	doins ext/cairo/rb_cairo.h || die "Cannot install header file."
+	doins ext/cairo/rb_cairo.h
 }
 
 all_ruby_install() {
 	all_fakegem_install
 
 	insinto /usr/share/doc/${PF}/samples
-	doins -r samples/* || die "Cannot install sample files."
+	doins -r samples/*
 }

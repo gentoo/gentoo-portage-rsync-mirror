@@ -1,6 +1,10 @@
 # ChangeLog for perl-core/parent
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.25 2014/07/26 12:18:24 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/perl-core/parent/ChangeLog,v 1.26 2015/06/13 10:19:08 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -parent-0.225.0-r1.ebuild:
+  Remove old
 
 *parent-0.225.0-r1 (26 Jul 2014)
 *parent-0.228-r1 (26 Jul 2014)
