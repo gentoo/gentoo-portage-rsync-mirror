@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-FormValidator
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-FormValidator/ChangeLog,v 1.14 2014/07/25 17:21:41 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-FormValidator/ChangeLog,v 1.15 2015/06/13 21:46:07 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Data-FormValidator-4.810.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   25 Jul 2014; Mikle Kolyada <zlogene@gentoo.org>
   Data-FormValidator-4.810.0.ebuild:

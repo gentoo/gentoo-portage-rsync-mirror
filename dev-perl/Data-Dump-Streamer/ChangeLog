@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-Dump-Streamer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/ChangeLog,v 1.30 2015/03/24 16:22:29 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dump-Streamer/ChangeLog,v 1.31 2015/06/13 21:45:41 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Data-Dump-Streamer-2.360.0-r1.ebuild, Data-Dump-Streamer-2.380.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Data-Dump-Streamer-2.380.0 (24 Mar 2015)
 

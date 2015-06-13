@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-BibTeX/Text-BibTeX-0.710.0.ebuild,v 1.1 2015/05/30 13:45:16 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-BibTeX/Text-BibTeX-0.710.0.ebuild,v 1.2 2015/06/13 21:59:21 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ IUSE=""
 DEPEND=">=dev-perl/Config-AutoConf-0.16
 	>=dev-perl/ExtUtils-LibBuilder-0.02
 	>=virtual/perl-ExtUtils-CBuilder-0.27
-	>=virtual/perl-Module-Build-0.36.03"
+	>=dev-perl/Module-Build-0.36.03"
 RDEPEND="!dev-libs/btparse
 	>=dev-perl/Capture-Tiny-0.06"
 

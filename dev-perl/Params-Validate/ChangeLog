@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Params-Validate
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.123 2014/08/21 18:37:04 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Params-Validate/ChangeLog,v 1.124 2015/06/13 21:35:33 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Params-Validate-1.70.0-r1.ebuild, Params-Validate-1.80.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Params-Validate-1.70.0-r1 (21 Aug 2014)
 

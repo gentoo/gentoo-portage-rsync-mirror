@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-Factory-Util
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.34 2014/11/30 15:17:42 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Factory-Util/ChangeLog,v 1.35 2015/06/13 21:37:53 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Class-Factory-Util-1.700.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   30 Nov 2014; Mikle Kolyada <zlogene@gentoo.org>
   Class-Factory-Util-1.700.0-r1.ebuild:

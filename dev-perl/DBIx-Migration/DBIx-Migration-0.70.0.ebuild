@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Migration/DBIx-Migration-0.70.0.ebuild,v 1.2 2014/10/19 16:10:34 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBIx-Migration/DBIx-Migration-0.70.0.ebuild,v 1.3 2015/06/13 21:45:18 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="dev-perl/File-Slurp
 	dev-perl/DBI
 	dev-perl/Class-Accessor"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		dev-perl/DBD-SQLite
 	)"

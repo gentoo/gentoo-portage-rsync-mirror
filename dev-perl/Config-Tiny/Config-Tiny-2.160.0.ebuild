@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/Config-Tiny-2.160.0.ebuild,v 1.11 2014/10/25 18:34:39 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-Tiny/Config-Tiny-2.160.0.ebuild,v 1.12 2015/06/13 21:41:50 dilfridge Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris"
 IUSE="test"
 
-DEPEND=">=virtual/perl-Module-Build-0.380.0
+DEPEND=">=dev-perl/Module-Build-0.380.0
 	test? (
 		>=virtual/perl-File-Spec-3.300.0
 		>=virtual/perl-File-Temp-0.220.0

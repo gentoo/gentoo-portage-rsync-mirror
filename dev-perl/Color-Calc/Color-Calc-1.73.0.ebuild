@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Calc/Color-Calc-1.73.0.ebuild,v 1.1 2013/03/18 11:04:34 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Color-Calc/Color-Calc-1.73.0.ebuild,v 1.2 2015/06/13 21:40:54 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-perl/Graphics-ColorNames-2.100.0
 
 DEPEND="${RDEPEND}
 	dev-perl/Test-NoWarnings
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 	virtual/perl-Test-Simple
 	test? (
 		dev-perl/Test-Pod

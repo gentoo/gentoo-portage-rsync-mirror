@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-PasswdMD5
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/ChangeLog,v 1.18 2015/01/05 19:41:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-PasswdMD5/ChangeLog,v 1.19 2015/06/13 21:43:54 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Crypt-PasswdMD5-1.400.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   05 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   Crypt-PasswdMD5-1.400.0.ebuild:

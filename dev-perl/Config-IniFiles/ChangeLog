@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Config-IniFiles
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.81 2015/05/01 20:22:44 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Config-IniFiles/ChangeLog,v 1.82 2015/06/13 21:41:21 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Config-IniFiles-2.830.0.ebuild, Config-IniFiles-2.860.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Config-IniFiles-2.860.0 (01 May 2015)
 

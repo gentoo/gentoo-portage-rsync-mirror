@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/PPIx-Utilities-1.1.0-r1.ebuild,v 1.3 2014/12/07 19:19:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Utilities/PPIx-Utilities-1.1.0-r1.ebuild,v 1.4 2015/06/13 21:55:32 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-perl/PPI-1.208
 	dev-perl/Readonly
 	virtual/perl-Scalar-List-Utils"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? ( dev-perl/Test-Deep )"
 
 SRC_TEST="do"

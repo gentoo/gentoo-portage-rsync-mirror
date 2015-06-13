@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/Test-Assert-0.50.400-r1.ebuild,v 1.1 2014/08/26 18:45:36 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Assert/Test-Assert-0.50.400-r1.ebuild,v 1.2 2015/06/13 21:49:43 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ RDEPEND="dev-perl/constant-boolean
 	>=dev-perl/Exception-Base-0.22.01
 	dev-perl/Symbol-Util"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	dev-perl/Class-Inspector
 	virtual/perl-parent
 	>=dev-perl/Test-Unit-Lite-0.12"

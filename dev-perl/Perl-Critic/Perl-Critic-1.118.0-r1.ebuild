@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-1.118.0-r1.ebuild,v 1.4 2015/06/13 18:53:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic/Perl-Critic-1.118.0-r1.ebuild,v 1.5 2015/06/13 21:57:34 dilfridge Exp $
 
 EAPI=5
 
@@ -32,7 +32,7 @@ RDEPEND=">=dev-perl/Module-Pluggable-3.1
 	dev-perl/String-Format
 	>=virtual/perl-version-0.77"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		dev-perl/Test-Deep
 		dev-perl/PadWalker

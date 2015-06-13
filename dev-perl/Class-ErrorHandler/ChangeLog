@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Class-ErrorHandler
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.36 2015/03/09 16:49:52 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-ErrorHandler/ChangeLog,v 1.37 2015/06/13 21:37:24 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Class-ErrorHandler-0.30.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   09 Mar 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   Class-ErrorHandler-0.30.0.ebuild:

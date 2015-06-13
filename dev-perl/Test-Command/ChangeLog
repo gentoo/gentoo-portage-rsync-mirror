@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Command
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.13 2014/08/23 22:07:12 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command/ChangeLog,v 1.14 2015/06/13 21:51:40 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Test-Command-0.80.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Test-Command-0.80.0-r1 (23 Aug 2014)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PPIx-Regexp
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.48 2014/12/07 19:19:16 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PPIx-Regexp/ChangeLog,v 1.49 2015/06/13 21:57:14 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  PPIx-Regexp-0.31.0.ebuild, PPIx-Regexp-0.33.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   07 Dec 2014; Mikle Kolyada <zlogene@gentoo.org> PPIx-Regexp-0.33.0.ebuild:
   Add ~ppc64 keyword

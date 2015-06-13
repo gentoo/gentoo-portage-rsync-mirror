@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/Test-Number-Delta-1.30.0-r1.ebuild,v 1.1 2014/08/23 22:09:16 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Number-Delta/Test-Number-Delta-1.30.0-r1.ebuild,v 1.2 2015/06/13 21:54:06 dilfridge Exp $
 
 EAPI=5
 
@@ -16,6 +16,6 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-		virtual/perl-Module-Build"
+		dev-perl/Module-Build"
 
 SRC_TEST="do"

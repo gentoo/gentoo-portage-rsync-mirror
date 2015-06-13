@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Most/Test-Most-0.310.0-r1.ebuild,v 1.2 2015/03/21 23:02:35 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Most/Test-Most-0.310.0-r1.ebuild,v 1.3 2015/06/13 21:53:35 dilfridge Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 	>=virtual/perl-Test-Simple-0.88
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.400.0
+	>=dev-perl/Module-Build-0.400.0
 "
 
 SRC_TEST=do

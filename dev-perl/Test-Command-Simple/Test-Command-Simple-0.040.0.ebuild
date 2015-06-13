@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command-Simple/Test-Command-Simple-0.040.0.ebuild,v 1.1 2013/04/02 08:18:01 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Command-Simple/Test-Command-Simple-0.040.0.ebuild,v 1.2 2015/06/13 21:51:58 dilfridge Exp $
 
 EAPI="5"
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="test"
 
-DEPEND="virtual/perl-Module-Build
+DEPEND="dev-perl/Module-Build
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage

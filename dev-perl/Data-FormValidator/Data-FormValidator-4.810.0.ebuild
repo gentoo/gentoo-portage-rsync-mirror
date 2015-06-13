@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-FormValidator/Data-FormValidator-4.810.0.ebuild,v 1.3 2014/07/25 17:21:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-FormValidator/Data-FormValidator-4.810.0.ebuild,v 1.4 2015/06/13 21:46:07 dilfridge Exp $
 
 EAPI=5
 
@@ -22,6 +22,6 @@ RDEPEND="dev-perl/ImageSize
 	>=dev-perl/Perl6-Junction-1.10
 	dev-perl/Email-Valid"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"
 
 SRC_TEST=do

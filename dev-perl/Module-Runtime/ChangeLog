@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Module-Runtime
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.28 2015/03/14 13:42:47 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Runtime/ChangeLog,v 1.29 2015/06/13 21:51:01 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Module-Runtime-0.13.0-r1.ebuild, Module-Runtime-0.14.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Module-Runtime-0.14.0 (14 Mar 2015)
 

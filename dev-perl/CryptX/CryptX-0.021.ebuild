@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CryptX/CryptX-0.021.ebuild,v 1.2 2015/01/05 19:41:12 hd_brummy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CryptX/CryptX-0.021.ebuild,v 1.3 2015/06/13 21:44:38 dilfridge Exp $
 
 EAPI="5"
 MODULE_AUTHOR="MIK"
@@ -14,4 +14,4 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-DEPEND="virtual/perl-Module-Build"
+DEPEND="dev-perl/Module-Build"

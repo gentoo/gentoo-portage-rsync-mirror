@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/Test-Distribution-2.0.0-r1.ebuild,v 1.3 2014/11/29 17:00:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Distribution/Test-Distribution-2.0.0-r1.ebuild,v 1.4 2015/06/13 21:52:48 dilfridge Exp $
 
 EAPI=5
 
@@ -20,6 +20,6 @@ RDEPEND=">=dev-perl/Pod-Coverage-0.20
 	>=virtual/perl-Module-CoreList-2.17
 	>=dev-perl/Test-Pod-1.26"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"
 
 SRC_TEST=do
