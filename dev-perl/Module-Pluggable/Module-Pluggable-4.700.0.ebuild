@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/perl-core/Module-Pluggable/Module-Pluggable-4.700.0.ebuild,v 1.11 2014/09/23 09:58:59 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Module-Pluggable/Module-Pluggable-4.700.0.ebuild,v 1.1 2015/06/13 12:45:04 dilfridge Exp $
 
 EAPI=5
 
