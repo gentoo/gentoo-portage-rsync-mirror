@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.250.0-r1.ebuild,v 1.1 2014/08/24 01:35:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Plucene/Plucene-1.250.0-r1.ebuild,v 1.2 2015/06/13 22:39:43 dilfridge Exp $
 
 EAPI=5
 
@@ -28,6 +28,6 @@ RDEPEND="virtual/perl-Memoize
 		dev-perl/IO-stringy"
 DEPEND="${RDEPEND}
 		>=virtual/perl-Test-Harness-2.30
-		>=virtual/perl-Module-Build-0.28"
+		>=dev-perl/Module-Build-0.28"
 
 SRC_TEST="do"

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Wx-Scintilla/Wx-Scintilla-0.390.0-r1.ebuild,v 1.1 2014/08/26 19:46:41 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Wx-Scintilla/Wx-Scintilla-0.390.0-r1.ebuild,v 1.2 2015/06/13 22:43:59 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	>=dev-perl/ExtUtils-XSpp-0.160.200
-	>=virtual/perl-Module-Build-0.360.0
+	>=dev-perl/Module-Build-0.360.0
 "
 
 PATCHES=(

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-BrowserDetect
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-BrowserDetect/ChangeLog,v 1.98 2015/03/21 23:06:19 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-BrowserDetect/ChangeLog,v 1.99 2015/06/13 22:51:27 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  HTTP-BrowserDetect-1.500.0.ebuild, HTTP-BrowserDetect-1.770.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   21 Mar 2015; Mikle Kolyada <zlogene@gentoo.org>
   HTTP-BrowserDetect-1.770.0.ebuild:

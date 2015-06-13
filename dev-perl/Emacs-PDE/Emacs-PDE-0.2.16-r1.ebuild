@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Emacs-PDE/Emacs-PDE-0.2.16-r1.ebuild,v 1.1 2013/09/04 13:28:08 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Emacs-PDE/Emacs-PDE-0.2.16-r1.ebuild,v 1.2 2015/06/13 22:37:44 dilfridge Exp $
 
 EAPI=5
 
@@ -16,6 +16,6 @@ KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE=""
 
 RDEPEND="virtual/emacs"
-DEPEND="virtual/perl-Module-Build
+DEPEND="dev-perl/Module-Build
 		${RDEPEND}"
 myconf="--elispdir=${D}${SITELISP}/pde"

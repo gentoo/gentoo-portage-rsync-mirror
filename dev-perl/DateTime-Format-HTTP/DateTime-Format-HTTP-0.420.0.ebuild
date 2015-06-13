@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-HTTP/DateTime-Format-HTTP-0.420.0.ebuild,v 1.1 2015/05/03 17:52:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-HTTP/DateTime-Format-HTTP-0.420.0.ebuild,v 1.2 2015/06/13 22:34:46 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=dev-perl/HTTP-Date-1.440.0
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 	test? ( >=virtual/perl-Test-Simple-0.470.0 )
 "
 

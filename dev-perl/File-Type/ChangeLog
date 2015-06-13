@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-Type
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.23 2014/08/23 21:54:02 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Type/ChangeLog,v 1.24 2015/06/13 22:48:51 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  File-Type-0.220.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *File-Type-0.220.0-r1 (23 Aug 2014)
 

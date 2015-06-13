@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Format-Natural
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Natural/ChangeLog,v 1.41 2014/08/26 18:16:03 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Natural/ChangeLog,v 1.42 2015/06/13 22:36:35 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  DateTime-Format-Natural-1.10.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *DateTime-Format-Natural-1.10.0-r1 (26 Aug 2014)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/HTML-TokeParser-Simple
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/ChangeLog,v 1.40 2015/01/08 19:34:16 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-TokeParser-Simple/ChangeLog,v 1.41 2015/06/13 22:51:13 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  HTML-TokeParser-Simple-3.150.0-r1.ebuild,
+  HTML-TokeParser-Simple-3.160.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   08 Jan 2015; Mikle Kolyada <zlogene@gentoo.org>
   HTML-TokeParser-Simple-3.160.0-r1.ebuild:

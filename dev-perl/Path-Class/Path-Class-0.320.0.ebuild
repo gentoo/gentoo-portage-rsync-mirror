@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/Path-Class-0.320.0.ebuild,v 1.5 2014/03/06 10:35:33 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Path-Class/Path-Class-0.320.0.ebuild,v 1.6 2015/06/13 22:31:31 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	virtual/perl-Scalar-List-Utils
 "
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		virtual/perl-Test-Simple
 	)

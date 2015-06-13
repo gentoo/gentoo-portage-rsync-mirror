@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Perl-Critic-Deprecated
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Deprecated/ChangeLog,v 1.6 2014/03/20 09:21:56 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Deprecated/ChangeLog,v 1.7 2015/06/13 22:39:05 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Perl-Critic-Deprecated-1.108.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   20 Mar 2014; Mikle Kolyada <zlogene@gentoo.org>
   Perl-Critic-Deprecated-1.108.0.ebuild:

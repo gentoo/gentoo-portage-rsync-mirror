@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/File-Map-0.610.0.ebuild,v 1.2 2014/08/04 17:40:48 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/File-Map-0.610.0.ebuild,v 1.3 2015/06/13 22:47:08 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="
 	>=dev-perl/Sub-Exporter-Progressive-0.1.5
 "
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		dev-perl/Test-Exception
 		dev-perl/Test-NoWarnings

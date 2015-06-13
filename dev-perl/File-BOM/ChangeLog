@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/File-BOM
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BOM/ChangeLog,v 1.6 2014/08/26 18:19:33 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-BOM/ChangeLog,v 1.7 2015/06/13 22:45:55 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  File-BOM-0.140.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *File-BOM-0.140.0-r1 (26 Aug 2014)
 

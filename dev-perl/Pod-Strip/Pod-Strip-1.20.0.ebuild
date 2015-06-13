@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Strip/Pod-Strip-1.20.0.ebuild,v 1.1 2015/03/22 17:36:17 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-Strip/Pod-Strip-1.20.0.ebuild,v 1.2 2015/06/13 22:40:15 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ RDEPEND="
 	>=virtual/perl-Pod-Simple-3.0.0
 "
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		virtual/perl-Test-Simple
 		dev-perl/Test-Pod

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/DateTime-Set
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Set/ChangeLog,v 1.11 2015/05/03 18:12:12 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Set/ChangeLog,v 1.12 2015/06/13 22:35:39 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  DateTime-Set-0.320.0.ebuild, DateTime-Set-0.340.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *DateTime-Set-0.340.0 (03 May 2015)
 

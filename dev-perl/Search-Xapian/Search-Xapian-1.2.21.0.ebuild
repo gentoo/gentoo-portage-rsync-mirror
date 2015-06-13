@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.21.0.ebuild,v 1.1 2015/05/23 15:07:14 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Search-Xapian/Search-Xapian-1.2.21.0.ebuild,v 1.2 2015/06/13 22:42:19 dilfridge Exp $
 
 EAPI="5"
 
@@ -20,7 +20,7 @@ IUSE="examples"
 RDEPEND="~dev-libs/xapian-${VERSION}
 	!dev-libs/xapian-bindings[perl]"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"
 
 SRC_TEST="do"
 

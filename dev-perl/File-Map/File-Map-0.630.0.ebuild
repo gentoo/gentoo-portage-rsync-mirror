@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/File-Map-0.630.0.ebuild,v 1.1 2015/05/18 21:18:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Map/File-Map-0.630.0.ebuild,v 1.2 2015/06/13 22:47:08 dilfridge Exp $
 
 EAPI=5
 
@@ -21,7 +21,7 @@ RDEPEND="
 	virtual/perl-XSLoader
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.360.100
+	>=dev-perl/Module-Build-0.360.100
 	test? (
 		virtual/perl-File-Spec
 		virtual/perl-IO

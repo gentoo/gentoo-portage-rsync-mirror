@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSpp/ExtUtils-XSpp-0.180.0.ebuild,v 1.1 2015/05/18 21:01:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-XSpp/ExtUtils-XSpp-0.180.0.ebuild,v 1.2 2015/06/13 22:43:50 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=virtual/perl-ExtUtils-ParseXS-3.70.0
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.400.0
+	>=dev-perl/Module-Build-0.400.0
 	test? (
 		dev-perl/Test-Differences
 		dev-perl/Test-Base

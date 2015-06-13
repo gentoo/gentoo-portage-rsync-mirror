@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Probe-Perl
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.19 2014/08/21 19:33:57 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Probe-Perl/ChangeLog,v 1.20 2015/06/13 22:40:51 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Probe-Perl-0.10.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Probe-Perl-0.10.0-r1 (21 Aug 2014)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.710.0-r1.ebuild,v 1.1 2014/08/23 21:57:20 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-INET6/IO-Socket-INET6-2.710.0-r1.ebuild,v 1.2 2015/06/13 22:52:24 dilfridge Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE=""
 
 RDEPEND="dev-perl/Socket6"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"
 
 # Disabling tests since they seem to be more trouble than worth, esp. in re bug
 # 115004

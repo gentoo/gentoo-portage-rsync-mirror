@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Hash-MoreUtils
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hash-MoreUtils/ChangeLog,v 1.5 2014/08/26 18:11:34 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Hash-MoreUtils/ChangeLog,v 1.6 2015/06/13 22:51:47 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Hash-MoreUtils-0.20.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *Hash-MoreUtils-0.20.0-r1 (26 Aug 2014)
 

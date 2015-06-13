@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Pastebin-PastebinCom-Create/WWW-Pastebin-PastebinCom-Create-0.4.0-r1.ebuild,v 1.1 2014/08/26 18:56:53 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Pastebin-PastebinCom-Create/WWW-Pastebin-PastebinCom-Create-0.4.0-r1.ebuild,v 1.2 2015/06/13 22:42:32 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="test"
 RDEPEND=">=dev-perl/URI-1.35
 	>=dev-perl/libwww-perl-5.807"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		virtual/perl-Test-Simple
 		dev-perl/Test-Pod

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/WebService-MusicBrainz
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WebService-MusicBrainz/ChangeLog,v 1.8 2014/08/24 02:43:33 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WebService-MusicBrainz/ChangeLog,v 1.9 2015/06/13 22:43:07 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  WebService-MusicBrainz-0.930.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
 *WebService-MusicBrainz-0.930.0-r1 (24 Aug 2014)
 

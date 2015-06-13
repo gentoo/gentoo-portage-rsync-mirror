@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/DateTime-Format-Builder-0.810.0-r1.ebuild,v 1.3 2014/11/30 15:18:23 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime-Format-Builder/DateTime-Format-Builder-0.810.0-r1.ebuild,v 1.4 2015/06/13 22:33:56 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="dev-perl/DateTime
 	>=dev-perl/Params-Validate-0.91
 	>=dev-perl/DateTime-Format-Strptime-1.0800"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? ( dev-perl/Test-Pod )"
 
 SRC_TEST=do

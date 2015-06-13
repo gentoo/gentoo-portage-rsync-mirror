@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Deprecated/Perl-Critic-Deprecated-1.108.0.ebuild,v 1.3 2014/03/20 09:21:56 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Perl-Critic-Deprecated/Perl-Critic-Deprecated-1.108.0.ebuild,v 1.4 2015/06/13 22:39:05 dilfridge Exp $
 
 EAPI=5
 
@@ -17,4 +17,4 @@ IUSE=""
 RDEPEND="dev-perl/Readonly
 	dev-perl/Perl-Critic"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build"
+	dev-perl/Module-Build"

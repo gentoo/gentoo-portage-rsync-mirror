@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/SQL-Abstract-Limit-0.141.0-r1.ebuild,v 1.1 2014/10/26 15:48:35 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SQL-Abstract-Limit/SQL-Abstract-Limit-0.141.0-r1.ebuild,v 1.2 2015/06/13 22:41:40 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE="test"
 RDEPEND="dev-perl/SQL-Abstract
 	 dev-perl/DBI"
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	test? (
 		dev-perl/Test-Deep
 		dev-perl/Test-Exception

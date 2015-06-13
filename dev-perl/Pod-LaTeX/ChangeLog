@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Pod-LaTeX
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-LaTeX/ChangeLog,v 1.4 2015/01/31 14:02:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Pod-LaTeX/ChangeLog,v 1.5 2015/06/13 22:40:01 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Pod-LaTeX-0.610.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   31 Jan 2015; Mikle Kolyada <zlogene@gentoo.org> Pod-LaTeX-0.610.0.ebuild:
   Add ~x86-fbsd keyword

@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/WWW-Pastebin-PastebinCom-Create
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Pastebin-PastebinCom-Create/ChangeLog,v 1.17 2015/04/02 10:23:31 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/WWW-Pastebin-PastebinCom-Create/ChangeLog,v 1.18 2015/06/13 22:42:32 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  WWW-Pastebin-PastebinCom-Create-0.4.0-r1.ebuild,
+  WWW-Pastebin-PastebinCom-Create-1.3.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   02 Apr 2015; Mikle Kolyada <zlogene@gentoo.org>
   WWW-Pastebin-PastebinCom-Create-1.3.0.ebuild:
