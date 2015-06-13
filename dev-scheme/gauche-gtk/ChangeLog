@@ -1,6 +1,10 @@
 # ChangeLog for dev-scheme/gauche-gtk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.16 2015/06/09 17:35:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-gtk/ChangeLog,v 1.17 2015/06/13 09:40:53 zlogene Exp $
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> -gauche-gtk-0.4.1.ebuild,
+  gauche-gtk-0.6_pre1.ebuild:
+  x86 stable wrt bug #550240; Drop old.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

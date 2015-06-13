@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.8.ebuild,v 1.1 2015/06/07 23:38:39 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.8.ebuild,v 1.2 2015/06/13 09:58:36 monsieurp Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc"
@@ -22,7 +22,7 @@ CDEPEND="dev-java/xalan:0
 	dev-java/xmlgraphics-commons:1.5
 	python? ( dev-java/jython:0 )
 	tcl? ( dev-java/jacl:0 )
-	dev-java/ant-core"
+	dev-java/ant-core:0"
 DEPEND=">=virtual/jdk-1.6
 	${CDEPEND}"
 RDEPEND=">=virtual/jre-1.6
@@ -35,6 +35,18 @@ java_prepare() {
 	# bug #318323
 	for file in build.xml contrib/rasterizertask/build.xml; do
 		java-ant_xml-rewrite -f ${file} -c -e javadoc -a failonerror -v no -a maxmemory -v 512m
+	done
+
+	# Add some missing imports to avoid a compiling issue.
+	# https://bugs.gentoo.org/show_bug.cgi?id=551952
+	# https://issues.apache.org/jira/browse/BATIK-1123
+	local imports=()
+	imports+=(sources/org/apache/batik/script/jpython/JPythonInterpreterFactory.java)
+	imports+=(sources/org/apache/batik/script/jacl/JaclInterpreterFactory.java)
+	for import in ${imports[@]}; do
+		einfo "Fixing missing import in ${import}"
+		sed -i '23i import org.apache.batik.script.ImportInfo;' ${import}
+		eend $?
 	done
 
 	cd lib

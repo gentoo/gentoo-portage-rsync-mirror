@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-7.0.0_alpha1.ebuild,v 1.1 2015/06/12 18:35:13 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-7.0.0_alpha1.ebuild,v 1.2 2015/06/13 09:33:07 olemarkus Exp $
 
 EAPI=5
 
@@ -592,7 +592,7 @@ src_install() {
 				# We're specifically not using emake install-sapi as libtool
 				# may cause unnecessary relink failures (see bug #351266)
 				insinto "${PHP_DESTDIR#${EPREFIX}}/apache2/"
-				newins ".libs/libphp5$(get_libname)" "libphp${PHP_MV}$(get_libname)"
+				newins ".libs/libphp${PHP_MV}$(get_libname)" "libphp${PHP_MV}$(get_libname)"
 				keepdir "/usr/$(get_libdir)/apache2/modules"
 			else
 				# needed each time, php_install_ini would reset it

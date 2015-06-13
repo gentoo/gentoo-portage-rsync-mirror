@@ -1,6 +1,10 @@
 # ChangeLog for app-mobilephone/gnome-phone-manager
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.58 2014/11/21 09:13:44 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-mobilephone/gnome-phone-manager/ChangeLog,v 1.59 2015/06/13 10:00:21 pacho Exp $
+
+  13 Jun 2015; Pacho Ramos <pacho@gentoo.org>
+  gnome-phone-manager-0.69-r1.ebuild:
+  Needs rebuilding with eds subslot bumps
 
   21 Nov 2014; Pacho Ramos <pacho@gentoo.org> -gnome-phone-manager-0.69.ebuild:
   Drop old

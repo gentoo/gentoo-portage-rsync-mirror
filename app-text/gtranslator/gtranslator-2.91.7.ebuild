@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.7.ebuild,v 1.1 2015/06/07 10:15:23 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-2.91.7.ebuild,v 1.2 2015/06/13 09:56:31 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -32,7 +32,7 @@ COMMON_DEPEND="
 
 	gnome? (
 		${PYTHON_DEPS}
-		app-dicts/gnome-dictionary
+		app-dicts/gnome-dictionary:=
 		x11-libs/gtk+:3[introspection] )
 	spell? ( app-text/gtkspell:3= )
 "

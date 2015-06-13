@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.79 2014/12/19 13:34:09 pacho Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.80 2015/06/13 09:59:39 pacho Exp $
+
+  13 Jun 2015; Pacho Ramos <pacho@gentoo.org> glabels-3.2.1.ebuild:
+  Needs rebuilding with eds subslot bumps
 
   19 Dec 2014; Pacho Ramos <pacho@gentoo.org> glabels-3.2.1.ebuild:
   amd64 stable, bug 529964

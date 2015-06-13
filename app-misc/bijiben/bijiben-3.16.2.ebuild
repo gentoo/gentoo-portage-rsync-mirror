@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/bijiben-3.16.2.ebuild,v 1.1 2015/06/09 14:57:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bijiben/bijiben-3.16.2.ebuild,v 1.2 2015/06/13 09:59:02 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ RDEPEND="
 	>=app-misc/tracker-1:=
 	>=dev-libs/glib-2.28:2
 	dev-libs/libxml2
-	>=gnome-extra/evolution-data-server-3.13.90
+	>=gnome-extra/evolution-data-server-3.13.90:=
 	>=mail-client/evolution-3
 	gnome-extra/zeitgeist
 	net-libs/gnome-online-accounts

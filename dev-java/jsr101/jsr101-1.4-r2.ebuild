@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/jsr101-1.4-r2.ebuild,v 1.1 2015/06/09 08:59:41 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsr101/jsr101-1.4-r2.ebuild,v 1.2 2015/06/13 09:44:33 zlogene Exp $
 
 EAPI=5
 JAVA_PKG_IUSE=""
@@ -15,7 +15,7 @@ SRC_URI="mirror://apache/ws/${MY_PN}/${MY_PV}/${MY_PN}-src-${MY_PV}.tar.gz"
 
 LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd"
+KEYWORDS="amd64 ~ppc x86 ~x86-fbsd"
 
 IUSE=""
 

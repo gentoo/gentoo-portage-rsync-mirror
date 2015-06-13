@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/batik
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.73 2015/06/07 23:38:39 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.74 2015/06/13 09:58:36 monsieurp Exp $
+
+  13 Jun 2015; Patrice Clement <monsieurp@gentoo.org> batik-1.8.ebuild:
+  Add some missing imports to avoid a compiling issue courtesy of Martin von
+  Gagern <Martin.vGagern@gmx.net>. Fix bug 551952.
 
 *batik-1.8 (07 Jun 2015)
 
