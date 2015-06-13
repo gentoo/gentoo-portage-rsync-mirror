@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.249 2015/06/13 12:10:52 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.250 2015/06/13 20:51:45 mgorny Exp $
+
+  13 Jun 2015; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
+  Clean multilib_src_install_all() up.
 
   13 Jun 2015; Michał Górny <mgorny@gentoo.org> llvm-9999.ebuild:
   Simplify doc CMake code
