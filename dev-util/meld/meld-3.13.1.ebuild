@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.12.2.ebuild,v 1.4 2015/04/29 14:54:50 leio Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.13.1.ebuild,v 1.1 2015/06/12 23:47:38 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -13,9 +13,9 @@ inherit gnome2 distutils-r1
 DESCRIPTION="A graphical diff and merge tool"
 HOMEPAGE="http://meldmerge.org/"
 
-LICENSE="GPL-2"
+LICENSE="GPL-2+"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -25,13 +25,13 @@ RDEPEND="
 	>=dev-python/pygobject-3.8:3[cairo,${PYTHON_USEDEP}]
 	gnome-base/gsettings-desktop-schemas
 	>=x11-libs/gtk+-3.6:3[introspection]
-	>=x11-libs/gtksourceview-3.6:3.0[introspection]
+	>=x11-libs/gtksourceview-3.10:3.0[introspection]
 	x11-themes/hicolor-icon-theme
 "
 DEPEND="${RDEPEND}
-	sys-devel/gettext
 	dev-util/intltool
 	dev-util/itstool
+	sys-devel/gettext
 "
 
 python_compile_all() {
