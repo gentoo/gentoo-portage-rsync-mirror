@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooseX-Types-DateTime-ButMaintained
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-ButMaintained/ChangeLog,v 1.17 2014/10/10 17:46:25 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-ButMaintained/ChangeLog,v 1.18 2015/06/13 11:36:49 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  MooseX-Types-DateTime-ButMaintained-0.160.0.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::use::ok, bug 550990
 
   10 Oct 2014; Mikle Kolyada <zlogene@gentoo.org>
   MooseX-Types-DateTime-ButMaintained-0.160.0.ebuild:

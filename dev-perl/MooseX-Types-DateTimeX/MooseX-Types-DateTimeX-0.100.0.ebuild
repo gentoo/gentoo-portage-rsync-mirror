@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTimeX/MooseX-Types-DateTimeX-0.100.0.ebuild,v 1.1 2014/12/12 21:58:20 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTimeX/MooseX-Types-DateTimeX-0.100.0.ebuild,v 1.2 2015/06/13 11:38:57 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-6.420.0
 	test? (
-		>=dev-perl/Test-use-ok-0.20.0
+		|| ( >=virtual/perl-Test-Simple-1.1.10 >=dev-perl/Test-use-ok-0.20.0 )
 		>=dev-perl/Test-Exception-0.270.0
 		virtual/perl-Test-Simple
 	)

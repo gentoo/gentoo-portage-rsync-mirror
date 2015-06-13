@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.113 2015/06/11 17:05:20 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.114 2015/06/13 12:00:15 mgorny Exp $
 
 EAPI=5
 
@@ -193,7 +193,7 @@ multilib_src_configure() {
 		targets=all
 	else
 		targets='host;CppBackend'
-		use video_cards_radeon && targets+=';R600'
+		use video_cards_radeon && targets+=';AMDGPU'
 	fi
 
 	local ffi_cflags ffi_ldflags

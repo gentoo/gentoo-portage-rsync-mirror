@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Context-Preserve
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Context-Preserve/ChangeLog,v 1.9 2014/08/26 15:06:29 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Context-Preserve/ChangeLog,v 1.10 2015/06/13 11:32:44 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Context-Preserve-0.10.0-r1.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::use::ok, bug 550990
 
 *Context-Preserve-0.10.0-r1 (26 Aug 2014)
 

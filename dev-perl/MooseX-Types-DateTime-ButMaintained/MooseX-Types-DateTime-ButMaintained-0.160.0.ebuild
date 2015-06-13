@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-ButMaintained/MooseX-Types-DateTime-ButMaintained-0.160.0.ebuild,v 1.2 2014/10/10 17:46:25 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-ButMaintained/MooseX-Types-DateTime-ButMaintained-0.160.0.ebuild,v 1.3 2015/06/13 11:36:49 dilfridge Exp $
 
 EAPI=5
 
@@ -30,7 +30,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	test? (
 		>=dev-perl/Test-Exception-0.27
-		>=dev-perl/Test-use-ok-0.02
+		|| ( >=virtual/perl-Test-Simple-1.1.10 >=dev-perl/Test-use-ok-0.02 )
 		>=dev-perl/Time-Duration-Parse-0.06
 	)"
 

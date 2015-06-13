@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.121 2015/06/12 05:15:21 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.122 2015/06/13 11:54:19 zlogene Exp $
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> fxruby-1.6.29.ebuild:
+  amd64 stable wrt bug #550618
 
   12 Jun 2015; Jeroen Roovers <jer@gentoo.org> fxruby-1.6.29.ebuild:
   Stable for HPPA PPC64 (bug #550618).

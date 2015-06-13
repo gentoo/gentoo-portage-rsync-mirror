@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Context-Preserve/Context-Preserve-0.10.0-r1.ebuild,v 1.1 2014/08/26 15:06:29 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Context-Preserve/Context-Preserve-0.10.0-r1.ebuild,v 1.2 2015/06/13 11:32:44 dilfridge Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ RDEPEND=""
 DEPEND="${RDEPEND}
 	test? (
 		dev-perl/Test-Exception
-		dev-perl/Test-use-ok
+		|| ( >=virtual/perl-Test-Simple-1.1.10 dev-perl/Test-use-ok )
 	)"
 
 SRC_TEST="do"

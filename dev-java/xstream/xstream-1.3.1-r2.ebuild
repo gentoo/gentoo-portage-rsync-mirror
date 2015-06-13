@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r2.ebuild,v 1.1 2015/04/14 20:13:59 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/xstream-1.3.1-r2.ebuild,v 1.3 2015/06/13 11:37:40 ago Exp $
 
 EAPI=5
 
@@ -14,7 +14,7 @@ SRC_URI="http://repository.codehaus.org/com/thoughtworks/${PN}/${PN}-distributio
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~sparc-solaris ~x86-solaris"
 
 IUSE=""
 

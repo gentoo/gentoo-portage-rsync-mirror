@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/MooseX-Types-DateTimeX
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTimeX/ChangeLog,v 1.7 2014/12/12 21:58:20 dilfridge Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTimeX/ChangeLog,v 1.8 2015/06/13 11:38:57 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  MooseX-Types-DateTimeX-0.60.0.ebuild, MooseX-Types-DateTimeX-0.100.0.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::use::ok, bug 550990
 
 *MooseX-Types-DateTimeX-0.100.0 (12 Dec 2014)
 

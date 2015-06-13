@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-1.1.1-r3.ebuild,v 1.2 2015/04/24 12:28:59 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/castor-1.1.1-r3.ebuild,v 1.4 2015/06/13 11:37:20 ago Exp $
 EAPI=5
 
 JAVA_PKG_IUSE="doc examples source"
@@ -22,7 +22,7 @@ SRC_URI="http://dist.codehaus.org/${PN}/${PV}/${P}-src.tgz"
 
 LICENSE="Exolab"
 SLOT="1.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 # tests and full documentation when support will be added

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Tie-ToObject
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-ToObject/ChangeLog,v 1.7 2014/08/26 14:55:50 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-ToObject/ChangeLog,v 1.8 2015/06/13 11:39:30 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Tie-ToObject-0.30.0-r1.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::use::ok, bug 550990
 
 *Tie-ToObject-0.30.0-r1 (26 Aug 2014)
 

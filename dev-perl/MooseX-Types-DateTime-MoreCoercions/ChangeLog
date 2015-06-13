@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/MooseX-Types-DateTime-MoreCoercions
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-MoreCoercions/ChangeLog,v 1.6 2014/09/03 18:41:39 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MooseX-Types-DateTime-MoreCoercions/ChangeLog,v 1.7 2015/06/13 11:38:05 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  MooseX-Types-DateTime-MoreCoercions-0.90.0.ebuild,
+  MooseX-Types-DateTime-MoreCoercions-0.110.0.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::use::ok, bug 550990
 
   03 Sep 2014; Mikle Kolyada <zlogene@gentoo.org>
   MooseX-Types-DateTime-MoreCoercions-0.110.0.ebuild,

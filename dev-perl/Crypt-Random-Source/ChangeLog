@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Crypt-Random-Source
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Random-Source/ChangeLog,v 1.9 2014/08/24 01:52:15 axs Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-Random-Source/ChangeLog,v 1.10 2015/06/13 11:33:27 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Crypt-Random-Source-0.70.0-r1.ebuild:
+  virtual/perl-Test-Simple has gobbled up Test::use::ok, bug 550990
 
 *Crypt-Random-Source-0.70.0-r1 (24 Aug 2014)
 
