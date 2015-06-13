@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.294 2015/04/08 17:29:20 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.295 2015/06/13 14:24:59 hwoarang Exp $
+
+*openbox-3.6 (13 Jun 2015)
+
+  13 Jun 2015; Markos Chandras <hwoarang@gentoo.org> +openbox-3.6.ebuild:
+  Version bump. Bug #551372
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> openbox-3.5.2-r1.ebuild,
   openbox-9999.ebuild:

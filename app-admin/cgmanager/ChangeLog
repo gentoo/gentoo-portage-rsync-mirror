@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/cgmanager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.6 2015/02/28 19:57:33 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/cgmanager/ChangeLog,v 1.7 2015/06/13 14:20:22 hwoarang Exp $
+
+*cgmanager-0.37 (13 Jun 2015)
+
+  13 Jun 2015; Markos Chandras <hwoarang@gentoo.org> +cgmanager-0.37.ebuild:
+  Version bump. Bug #551378
 
   28 Feb 2015; Markus Meier <maekke@gentoo.org> cgmanager-0.36-r1.ebuild:
   add ~arm, bug #539208

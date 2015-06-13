@@ -1,6 +1,15 @@
 # ChangeLog for dev-python/pypam
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/ChangeLog,v 1.17 2015/04/08 08:05:13 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pypam/ChangeLog,v 1.18 2015/06/13 14:13:35 mrueg Exp $
+
+*pypam-0.5.0-r3 (13 Jun 2015)
+
+  13 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +files/PyPAM-0.5.0-dealloc.patch,
+  +files/PyPAM-0.5.0-memory-errors.patch, +files/PyPAM-0.5.0-nofree.patch,
+  +files/PyPAM-0.5.0-return-value.patch, +files/PyPAM-python3-support.patch,
+  +pypam-0.5.0-r3.ebuild:
+  Apply patches from Fedora fixing security bug #407603 and add support for
+  Python3.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pypam-0.5.0-r2.ebuild:
   Drop old Python implementations
