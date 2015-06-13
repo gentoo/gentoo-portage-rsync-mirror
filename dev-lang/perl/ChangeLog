@@ -1,6 +1,14 @@
 # ChangeLog for dev-lang/perl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.483 2015/05/09 21:49:38 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.485 2015/06/13 10:52:37 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-5.18.2-r2.ebuild:
+  Remove Perl 5.18
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-5.20.1-r4.ebuild:
+  Remove Perl 5.20.1
 
 *perl-5.20.2-r1 (09 May 2015)
 

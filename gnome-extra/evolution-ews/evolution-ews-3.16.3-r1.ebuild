@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-ews/evolution-ews-3.16.3.ebuild,v 1.2 2015/06/13 10:04:03 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-ews/evolution-ews-3.16.3-r1.ebuild,v 1.1 2015/06/13 10:44:17 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="Evolution module for connecting to Microsoft Exchange Web Services"
 HOMEPAGE="https://wiki.gnome.org/Apps/Evolution"
@@ -32,6 +32,12 @@ DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( net-libs/uhttpmock )
 "
+
+src_prepare() {
+	# Install locales in proper dir (from 'master')
+	epatch "${FILESDIR}"/${PN}-3.16.3-localedir.patch
+	eautoreconf
+}
 
 src_configure() {
 	# We don't have libmspack, needing internal lzx

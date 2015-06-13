@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/gproftpd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.27 2015/05/27 11:00:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/gproftpd/ChangeLog,v 1.28 2015/06/13 10:40:23 zlogene Exp $
+
+  13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> -gproftpd-8.3.2.ebuild,
+  gproftpd-8.3.2-r1.ebuild:
+  sparc stable wrt bug #550466
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> gproftpd-8.3.2-r1.ebuild:
   Stable for x86, wrt bug #550466

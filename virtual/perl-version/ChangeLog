@@ -1,6 +1,13 @@
 # ChangeLog for virtual/perl-version
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.109 2015/04/04 23:45:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/virtual/perl-version/ChangeLog,v 1.110 2015/06/13 10:33:44 dilfridge Exp $
+
+*perl-version-0.990.900-r2 (13 Jun 2015)
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -perl-version-0.990.200-r1.ebuild, -perl-version-0.990.900-r1.ebuild,
+  +perl-version-0.990.900-r2.ebuild:
+  Add Perl 5.22 as provider, remove Perl 5.20.1 as provider
 
   04 Apr 2015; Mike Frysinger <vapier@gentoo.org>
   perl-version-0.990.200-r1.ebuild, perl-version-0.990.900-r1.ebuild:
