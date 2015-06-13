@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/gnome-online-accounts
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.50 2015/06/09 22:50:56 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnome-online-accounts/ChangeLog,v 1.51 2015/06/13 16:52:06 tetromino Exp $
+
+*gnome-online-accounts-3.16.3-r1 (13 Jun 2015)
+
+  13 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +gnome-online-accounts-3.16.3-r1.ebuild,
+  +files/gnome-online-accounts-3.16.3-parallel-make.patch:
+  Fix parallel make failure (bug #550378, thanks to Kobboi). Punt .la files.
 
 *gnome-online-accounts-3.16.3 (09 Jun 2015)
 
