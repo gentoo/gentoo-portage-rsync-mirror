@@ -1,6 +1,12 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.460 2015/06/05 08:01:17 haubi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.462 2015/06/13 05:56:19 grobian Exp $
+
+  13 Jun 2015; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Mask latest portage, bug #551678
+
+  13 Jun 2015; Fabian Groffen <grobian@gentoo.org> sunos/solaris/package.mask:
+  Mask latest portage-utils on Solaris, bug #551696
 
   05 Jun 2015; Michael Haubenwallner <haubi@gentoo.org>
   +windows/cygwin/2.0/eapi, +windows/cygwin/2.0/package.provided,
