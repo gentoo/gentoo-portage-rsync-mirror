@@ -1,6 +1,12 @@
 # ChangeLog for www-servers/axis
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.27 2010/01/22 11:32:51 caster Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.28 2015/06/13 21:24:01 monsieurp Exp $
+
+*axis-1.4-r2 (13 Jun 2015)
+
+  13 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +axis-1.4-r2.ebuild,
+  +files/axis-1.4-JSSESocketFactory.java.patch:
+  EAPI 5 bump. Add patch against CVE-2014-3596. Fix security bug 520304.
 
   22 Jan 2010; Vlastimil Babka <caster@gentoo.org> -axis-1.2_rc2-r3.ebuild,
   -files/axis-1.2-gentoo.patch, -axis-1.4.ebuild:
@@ -109,4 +115,3 @@
   22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
   +files/axis-1.2-gentoo.patch, +axis-1.2_rc2.ebuild:
   Initial import. Ebuild contributions by various people, see #38899.
-
