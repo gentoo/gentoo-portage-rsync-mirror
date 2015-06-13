@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/Astro-FITS-Header-3.70.0.ebuild,v 1.7 2013/05/16 20:09:47 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/Astro-FITS-Header-3.70.0.ebuild,v 1.8 2015/06/13 19:30:37 dilfridge Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE=""
 
 RDEPEND=""
 DEPEND="${RDEPEND}
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 "
 
 SRC_TEST="do"

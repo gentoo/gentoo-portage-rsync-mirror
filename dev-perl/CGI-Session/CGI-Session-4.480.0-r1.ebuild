@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.480.0-r1.ebuild,v 1.3 2015/06/13 17:13:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/CGI-Session-4.480.0-r1.ebuild,v 1.4 2015/06/13 19:22:11 dilfridge Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ RDEPEND="
 	>=dev-perl/CGI-3.26
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 	test? (
 		virtual/perl-Test-Simple
 		dev-perl/CGI-Simple

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-cpanminus/App-cpanminus-1.703.300.ebuild,v 1.1 2015/05/06 19:27:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/App-cpanminus/App-cpanminus-1.703.300.ebuild,v 1.2 2015/06/13 19:27:09 dilfridge Exp $
 
 EAPI=5
 MODULE_AUTHOR=MIYAGAWA
@@ -15,7 +15,7 @@ IUSE="test"
 RDEPEND="
 	>=virtual/perl-ExtUtils-Install-1.460.0
 	>=virtual/perl-ExtUtils-MakeMaker-6.580.0
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 "
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-MakeMaker-6.300.0

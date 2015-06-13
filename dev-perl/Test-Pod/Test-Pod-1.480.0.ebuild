@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/Test-Pod-1.480.0.ebuild,v 1.12 2014/06/09 23:38:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/Test-Pod-1.480.0.ebuild,v 1.13 2015/06/13 19:18:22 dilfridge Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="
 	>=virtual/perl-Test-Simple-0.620.0
 "
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.300.0
+	>=dev-perl/Module-Build-0.300.0
 "
 
 SRC_TEST="do"

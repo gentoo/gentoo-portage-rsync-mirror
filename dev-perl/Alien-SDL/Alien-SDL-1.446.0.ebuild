@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.446.0.ebuild,v 1.1 2015/04/12 18:12:07 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-SDL/Alien-SDL-1.446.0.ebuild,v 1.2 2015/06/13 19:22:44 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,7 @@ RDEPEND="
 	virtual/perl-Digest-SHA
 	virtual/perl-ExtUtils-CBuilder
 	virtual/perl-ExtUtils-MakeMaker
-	virtual/perl-Module-Build
+	dev-perl/Module-Build
 	virtual/perl-File-Spec
 	virtual/perl-File-Temp
 "

@@ -1,6 +1,11 @@
 # ChangeLog for app-text/po4a
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.89 2015/05/31 11:26:24 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/ChangeLog,v 1.90 2015/06/13 19:12:38 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> po4a-0.45-r1.ebuild,
+  po4a-0.45-r2.ebuild:
+  The Module::Build module is no longer part of core Perl and has been moved to
+  dev-perl
 
   31 May 2015; Ian Delaney <idella4@gentoo.org> metadata.xml:
   Edited metadata.xml adding proxy maintainer and proxy-maintainers herd,

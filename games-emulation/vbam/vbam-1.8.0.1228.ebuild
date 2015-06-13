@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1228.ebuild,v 1.4 2015/04/21 18:41:16 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/vbam/vbam-1.8.0.1228.ebuild,v 1.5 2015/06/13 19:29:36 mr_bones_ Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -25,7 +25,7 @@ RDEPEND=">=media-libs/libpng-1.4:0=
 	sys-libs/zlib
 	virtual/glu
 	virtual/opengl
-	ffmpeg? ( virtual/ffmpeg )
+	ffmpeg? ( virtual/ffmpeg[-libav] )
 	gtk? ( >=dev-cpp/glibmm-2.4.0:2
 		>=dev-cpp/gtkmm-2.4.0:2.4
 		>=dev-cpp/gtkglextmm-1.2.0 )

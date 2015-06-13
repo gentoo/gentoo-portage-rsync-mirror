@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-9999-r1.ebuild,v 1.3 2014/08/09 22:49:45 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-run/bioperl-run-9999-r1.ebuild,v 1.4 2015/06/13 19:15:04 dilfridge Exp $
 
 EAPI="5"
 
@@ -27,7 +27,7 @@ CDEPEND=">=sci-biology/bioperl-${PV}
 		dev-perl/IO-String
 		dev-perl/IPC-Run
 	)"
-DEPEND="virtual/perl-Module-Build
+DEPEND="dev-perl/Module-Build
 	${CDEPEND}"
 RDEPEND="${CDEPEND}"
 

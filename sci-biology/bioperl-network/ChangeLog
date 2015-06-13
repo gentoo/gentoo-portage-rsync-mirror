@@ -1,6 +1,10 @@
 # ChangeLog for sci-biology/bioperl-network
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-network/ChangeLog,v 1.13 2015/05/27 16:30:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl-network/ChangeLog,v 1.14 2015/06/13 19:15:52 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  bioperl-network-1.6.9.ebuild, bioperl-network-9999-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   27 May 2015; Justin Lecher <jlec@gentoo.org> -bioperl-network-1.6.0.ebuild:
   Drop old

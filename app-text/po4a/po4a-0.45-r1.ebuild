@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r1.ebuild,v 1.5 2014/12/12 09:31:58 armin76 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/po4a/po4a-0.45-r1.ebuild,v 1.6 2015/06/13 19:12:38 dilfridge Exp $
 
 EAPI=5
 
@@ -25,7 +25,7 @@ RDEPEND="dev-perl/SGMLSpm
 	dev-perl/TermReadKey
 	dev-perl/Text-WrapI18N"
 DEPEND="${RDEPEND}
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 	app-text/docbook-xsl-stylesheets
 	app-text/docbook-xml-dtd:4.1.2
 	test? ( app-text/docbook-sgml-dtd

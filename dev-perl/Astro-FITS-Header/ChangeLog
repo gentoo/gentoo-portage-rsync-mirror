@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Astro-FITS-Header
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.44 2014/08/28 18:14:14 zlogene Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Astro-FITS-Header/ChangeLog,v 1.45 2015/06/13 19:30:37 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Astro-FITS-Header-3.70.0.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   28 Aug 2014; Mikle Kolyada <zlogene@gentoo.org>
   -Astro-FITS-Header-3.50.0.ebuild:

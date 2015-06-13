@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/POSIX-strftime-Compiler/POSIX-strftime-Compiler-0.400.0.ebuild,v 1.1 2014/10/24 19:09:25 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/POSIX-strftime-Compiler/POSIX-strftime-Compiler-0.400.0.ebuild,v 1.2 2015/06/13 19:24:55 dilfridge Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ RDEPEND="
 
 # CPAN::Meta::Prereqs -> perl-CPAN-Meta
 DEPEND="
-	>=virtual/perl-Module-Build-0.380.0
+	>=dev-perl/Module-Build-0.380.0
 	virtual/perl-CPAN-Meta
 	${RDEPEND}
 	test? (

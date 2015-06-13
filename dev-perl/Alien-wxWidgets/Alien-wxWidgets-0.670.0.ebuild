@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.670.0.ebuild,v 1.2 2015/06/13 18:46:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Alien-wxWidgets/Alien-wxWidgets-0.670.0.ebuild,v 1.3 2015/06/13 19:24:13 dilfridge Exp $
 
 EAPI=5
 
@@ -22,7 +22,7 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	>=virtual/perl-ExtUtils-CBuilder-0.24
 	>=virtual/perl-File-Spec-1.500.0
-	>=virtual/perl-Module-Build-0.280.0
+	>=dev-perl/Module-Build-0.280.0
 	test? (
 		dev-perl/Test-Pod
 		dev-perl/Test-Pod-Coverage

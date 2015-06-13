@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999-r1.ebuild,v 1.4 2015/04/08 08:03:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/bioperl/bioperl-9999-r1.ebuild,v 1.5 2015/06/13 19:19:59 dilfridge Exp $
 
 EAPI="5"
 
@@ -50,7 +50,7 @@ CDEPEND="
 		dev-perl/SVG-Graph
 	)
 	graphviz? ( dev-perl/GraphViz )"
-DEPEND="virtual/perl-Module-Build
+DEPEND="dev-perl/Module-Build
 	${CDEPEND}"
 RDEPEND="${CDEPEND}"
 PDEPEND="!minimal? ( dev-perl/Bio-ASN1-EntrezGene )

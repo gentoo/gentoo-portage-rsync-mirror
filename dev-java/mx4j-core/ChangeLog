@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/mx4j-core
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-core/ChangeLog,v 1.13 2015/06/09 13:56:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mx4j-core/ChangeLog,v 1.14 2015/06/13 19:25:05 monsieurp Exp $
+
+*mx4j-core-3.0.2-r1 (13 Jun 2015)
+
+  13 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +mx4j-core-3.0.2-r1.ebuild, files/mx4j-core-3.0.2-split-javadoc-build.patch:
+  EAPI 5 bump. Fix bug 551988.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

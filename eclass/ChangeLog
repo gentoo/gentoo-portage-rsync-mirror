@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1659 2015/06/13 17:28:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1660 2015/06/13 19:01:10 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> perl-module.eclass:
+  Allow dev-perl/Module-Build in QA check for Module::Build
 
   13 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Workaround gcc-4.8 ICE in qtdeclarative (bug 551560).

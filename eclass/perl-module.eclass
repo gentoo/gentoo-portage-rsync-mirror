@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.165 2015/05/25 18:18:00 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.166 2015/06/13 19:01:10 dilfridge Exp $
 
 # @ECLASS: perl-module.eclass
 # @MAINTAINER:
@@ -141,9 +141,9 @@ perl-module_src_configure() {
 			fi
 		else
 			einfo "Using Module::Build"
-			if [[ ${DEPEND} != *virtual/perl-Module-Build* && ${PN} != Module-Build ]] ; then
+			if [[ ${DEPEND} != *virtual/perl-Module-Build* && ${DEPEND} != *dev-perl/Module-Build* && ${PN} != Module-Build ]] ; then
 				eqawarn "QA Notice: The ebuild uses Module::Build but doesn't depend on it."
-				eqawarn " Add virtual/perl-Module-Build to DEPEND!"
+				eqawarn " Add dev-perl/Module-Build to DEPEND!"
 				if [[ -n ${PERLQAFATAL} ]]; then
 					eerror "Bailing out due to PERLQAFATAL=1";
 					die

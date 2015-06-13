@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CGI-Session
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.52 2015/06/13 17:13:49 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI-Session/ChangeLog,v 1.53 2015/06/13 19:22:11 dilfridge Exp $
+
+  13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  CGI-Session-4.480.0-r1.ebuild:
+  Module::Build is no longer part of core Perl and has been moved to dev-perl
 
   13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   CGI-Session-4.480.0-r1.ebuild:

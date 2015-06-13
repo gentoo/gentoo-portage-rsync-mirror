@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install prepare test unpack
-DEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N >=virtual/perl-Module-Build-0.380.0 app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.1.2 test? ( app-text/docbook-sgml-dtd app-text/docbook-sgml-utils virtual/tex-base ) dev-lang/perl:=[-build(-)] dev-lang/perl:=[-build(-)]
+DEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N >=dev-perl/Module-Build-0.380.0 app-text/docbook-xsl-stylesheets app-text/docbook-xml-dtd:4.1.2 test? ( app-text/docbook-sgml-dtd app-text/docbook-sgml-utils virtual/tex-base ) dev-lang/perl:=[-build(-)] dev-lang/perl:=[-build(-)]
 DESCRIPTION=Tools for helping translation of documentation
 EAPI=5
 HOMEPAGE=http://po4a.alioth.debian.org
@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-perl/SGMLSpm >=sys-devel/gettext-0.13 app-text/openjade dev-libs/libxslt dev-perl/Locale-gettext dev-perl/TermReadKey dev-perl/Text-WrapI18N dev-lang/perl:=[-build(-)] dev-lang/perl:=[-build(-)]
 SLOT=0
 SRC_URI=mirror://debian/pool/main/p/po4a/po4a_0.45.orig.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	62927b3db3a589b0806255f3a002d5d3	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-app	8886390eb1ac390b27350184fd3eb32f	perl-module	79253b64b2972a3e513329a729242b27	toolchain-funcs	42408102d713fbad60ca21349865edb4	unpacker	f300a7ca9131b1024a79762e8edd3c52
-_md5_=7036a396f1c7bd9b9b15fe0a513abfd9
+_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	l10n	33bde4fb0cfd3a21a277b66bfd837e19	multilib	62927b3db3a589b0806255f3a002d5d3	multiprocessing	d7f2985a2c76c365ee20269db5261414	perl-app	8886390eb1ac390b27350184fd3eb32f	perl-module	9ff260c452d420630500e700913be8d8	toolchain-funcs	42408102d713fbad60ca21349865edb4	unpacker	f300a7ca9131b1024a79762e8edd3c52
+_md5_=849fb25e6c8507f30c0030d2c9f9f340
