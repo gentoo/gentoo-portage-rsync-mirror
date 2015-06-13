@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.658 2015/06/12 16:06:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.659 2015/06/13 06:32:10 jer Exp $
+
+  13 Jun 2015; Jeroen Roovers <jer@gentoo.org> openssl-1.0.1o.ebuild:
+  Stable for HPPA PPC64 (bug #551832).
 
 *openssl-1.0.1o (12 Jun 2015)
 *openssl-1.0.2c (12 Jun 2015)
