@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10125 2015/06/13 12:48:32 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10126 2015/06/13 15:06:38 olemarkus Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  13 Jun 2015; Ole Markus With <olemarkus@gentoo.org> package.mask:
+  Add =virtual/httpd-php to package.mask
 
   13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org> updates/2Q-2015:
   Move perl-core/Module-Pluggable to dev-perl
