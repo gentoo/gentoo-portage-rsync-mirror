@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.16.2.ebuild,v 1.1 2015/06/09 16:16:11 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-documents/gnome-documents-3.16.2.ebuild,v 1.2 2015/06/13 18:30:42 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 
-inherit gnome2
+inherit autotools eutils gnome2
 
 DESCRIPTION="A document manager application for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Documents"
@@ -44,7 +44,17 @@ DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt
 	>=dev-util/intltool-0.50.1
 	virtual/pkgconfig
+
+	app-text/yelp-tools
 "
+# eautoreconf requires yelp-tools
+
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=750334
+	epatch "${FILESDIR}"/${PN}-3.16.2-parallel-make.patch
+	eautoreconf
+	gnome2_src_prepare
+}
 
 src_configure() {
 	gnome2_src_configure ITSTOOL="$(type -P true)"

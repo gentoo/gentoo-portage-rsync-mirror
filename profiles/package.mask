@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16619 2015/06/13 15:06:38 olemarkus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16620 2015/06/13 18:24:51 zlogene Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -30,7 +30,7 @@
 
 #--- END OF EXAMPLES ---
 
-# Andreas K. Huettel <dilfridge@gentoo.org> (13 June 2016)
+# Andreas K. Huettel <dilfridge@gentoo.org> (13 June 2015)
 # The following perl-core packages are not required at the moment to
 # satisfy any dependencies (the bundled version of the module in
 # dev-lang/perl is always newer). They will be removed in 30days

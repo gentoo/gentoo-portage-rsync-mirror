@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7.0.ebuild,v 1.1 2015/05/13 06:03:51 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.7.0.ebuild,v 1.2 2015/06/13 18:04:56 monsieurp Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc examples source"
@@ -20,10 +20,10 @@ KEYWORDS="~amd64 ~x86 ~x86-freebsd ~amd64-linux ~x86-linux ~x86-macos"
 IUSE="+readline test"
 REQUIRED_USE="test? ( readline )"
 
-COMMON_DEP="
+CDEPEND="dev-java/ant-core:0
 	dev-java/antlr:3
 	dev-java/netty-transport:0
-	dev-java/asm:4
+	=dev-java/asm-5.0.3:4
 	dev-java/commons-compress:0
 	dev-java/guava:13
 	>=dev-java/java-config-2.1.11-r3
@@ -37,11 +37,11 @@ COMMON_DEP="
 	dev-java/stringtemplate:0
 	dev-java/xerces:2
 	java-virtuals/script-api:0
-	java-virtuals/servlet-api:2.5
+	java-virtuals/servlet-api:3.0
 	readline? ( >=dev-java/libreadline-java-0.8.0:0 )"
-RDEPEND="${COMMON_DEP}
+RDEPEND="${CDEPEND}
 	>=virtual/jre-1.7"
-DEPEND="${COMMON_DEP}
+DEPEND="${CDEPEND}
 	>=virtual/jdk-1.7
 	app-arch/unzip
 	test? (
@@ -55,7 +55,7 @@ RESTRICT="test"
 
 JAVA_ANT_REWRITE_CLASSPATH="yes"
 EANT_GENTOO_CLASSPATH="asm-4,commons-compress,guava-13,jffi-1.2,jline-2,jnr-constants"
-EANT_GENTOO_CLASSPATH+=",script-api,servlet-api-2.5,stringtemplate,xerces-2"
+EANT_GENTOO_CLASSPATH+=",script-api,servlet-api-3.0,stringtemplate,xerces-2"
 EANT_GENTOO_CLASSPATH+=",icu4j-52,netty-transport,jnr-posix-3.0"
 JAVA_ANT_CLASSPATH_TAGS+=" java"
 
@@ -63,7 +63,7 @@ EANT_BUILD_TARGET="developer-build"
 EANT_TEST_EXTRA_ARGS="-Dpython.home=dist"
 
 # jdbc-informix and jdbc-oracle-bin (requires registration) aren't exposed.
-# Uncomment and add to COMMON_DEP if you want either of them
+# Uncomment and add to CDEPEND if you want either of them
 #EANT_GENTOO_CLASSPATH+=",jdbc-informix"   EANT_EXTRA_ARGS+=" -Dinformix.present"
 #EANT_GENTOO_CLASSPATH+=",jdbc-oracle-bin" EANT_EXTRA_ARGS+=" -Doracle.present"
 
@@ -95,7 +95,7 @@ java_prepare() {
 src_compile() {
 	use readline && EANT_GENTOO_CLASSPATH+=",libreadline-java"
 
-	EANT_GENTOO_CLASSPATH_EXTRA="$(java-pkg_getjars --with-dependencies antlr-3,jnr-posix-2.1)"
+	EANT_GENTOO_CLASSPATH_EXTRA="$(java-pkg_getjars --with-dependencies antlr-3,jnr-posix-3.0)"
 	EANT_GENTOO_CLASSPATH_EXTRA+=":$(java-pkg_getjars --build-only ant-core)"
 
 	sed -i -e "1 a\

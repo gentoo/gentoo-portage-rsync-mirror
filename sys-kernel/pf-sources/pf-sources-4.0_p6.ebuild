@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-4.0_p1.ebuild,v 1.1 2015/04/17 22:20:19 hwoarang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pf-sources/pf-sources-4.0_p6.ebuild,v 1.1 2015/06/13 18:25:35 hwoarang Exp $
 
 EAPI="5"
-inherit readme.gentoo versionator
+inherit readme.gentoo toolchain-funcs versionator
 
 COMPRESSTYPE=".xz"
 K_USEPV="yes"
@@ -37,6 +37,16 @@ ${P} has the following optional runtime dependencies:
 information related to suspending and resuming process.
 - sys-power/hibernate-script or sys-power/pm-utils: runtime utilities
 for hibernating and suspending your computer."
+
+pkg_pretend() {
+	# 547868
+	if [[ $(gcc-version) < 4.9 ]]; then
+			eerror ""
+			eerror "${P} needs an active GCC 4.9+ compiler"
+			eerror ""
+			die "${P} needs an active sys-devel/gcc >= 4.9"
+	fi
+}
 
 pkg_setup(){
 	ewarn
