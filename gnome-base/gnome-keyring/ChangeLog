@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-keyring
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.272 2015/06/09 15:42:58 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-keyring/ChangeLog,v 1.273 2015/06/14 13:59:58 pacho Exp $
+
+*gnome-keyring-3.16.0-r1 (14 Jun 2015)
+
+  14 Jun 2015; Pacho Ramos <pacho@gentoo.org> +gnome-keyring-3.16.0-r1.ebuild:
+  Disable gpg-agent in favor of pinentry[gnome-keyring] (#547456)
 
 *gnome-keyring-3.16.0 (09 Jun 2015)
 
