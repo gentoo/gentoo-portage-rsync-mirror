@@ -3,8 +3,11 @@
 <pkgmetadata>
 	<herd>proxy-maintainers</herd>
 	<maintainer>
+		<email>zlg@gentoo.org</email>
+		<name>Daniel Campbell</name>
+	</maintainer>
+	<maintainer>
 		<email>ThyArmageddon+Gentoo@Gmail.com</email>
 		<name>Elijah El Lazkani</name>
-		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
 </pkgmetadata>

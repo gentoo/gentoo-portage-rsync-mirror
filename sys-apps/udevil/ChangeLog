@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/udevil
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.36 2014/11/25 22:58:21 hasufell Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/udevil/ChangeLog,v 1.38 2015/06/14 06:16:20 zlg Exp $
+
+*udevil-0.4.4 (14 Jun 2015)
+
+  14 Jun 2015; Daniel Campbell <zlg@gentoo.org> +udevil-0.4.4.ebuild:
+  Version bump
+
+  14 Jun 2015; Daniel Campbell <zlg@gentoo.org> metadata.xml:
+  Add myself to metadata.xml; proxy-maint seems unreachable
 
   25 Nov 2014; Julian Ospald <hasufell@gentoo.org> metadata.xml:
   drop maintainership
