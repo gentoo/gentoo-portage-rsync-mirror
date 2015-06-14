@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.331 2015/06/10 01:29:55 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.332 2015/06/14 00:34:15 anarchy Exp $
+
+*thunderbird-38.0.1 (14 Jun 2015)
+
+  14 Jun 2015;  <anarchy@gentoo.org> +thunderbird-38.0.1.ebuild, metadata.xml:
+  initial 38.0.1esr release, lightning now built automatically by default
 
   10 Jun 2015;  <anarchy@gentoo.org> +files/thunderbird-31.7.0-gcc5-1.patch,
   thunderbird-31.7.0-r1.ebuild:

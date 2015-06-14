@@ -10,6 +10,7 @@
 	<flag name='lightning'>Enable calendar support</flag>
 	<flag name='custom-optimization'>Fine-tune custom compiler optimizations
 		(-Os, -O0, -O1, -O2, -O3)</flag>
+	<flag name="jemalloc3">Enable or disable jemalloc3 (forced-on when supported prior to 38.0)</flag>
 	<flag name="system-cairo">Use the system-wide <pkg>x11-libs/cairo</pkg>
 		instead of bundled.</flag>
 	<flag name="system-icu">Use the system-wide <pkg>dev-libs/icu</pkg>
