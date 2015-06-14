@@ -58,7 +58,7 @@ IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
 	build crosscompile_opts_headers-only zfs
 	userland_GNU userland_BSD"
 
-QA_DT_NEEDED="lib/libc.so.7"
+QA_DT_NEEDED="lib/libc.so.7 usr/lib32/libc.so.7"
 
 pkg_setup() {
 	[ -c /dev/zero ] || \
