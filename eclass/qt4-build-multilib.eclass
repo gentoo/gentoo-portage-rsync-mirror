@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.25 2015/06/13 22:57:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.26 2015/06/13 23:05:46 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -209,8 +209,8 @@ qt4-build-multilib_src_prepare() {
 
 	# Drop -nocache from qmake invocation in all configure tests, to ensure that the
 	# correct toolchain and build flags are picked up from config.tests/.qmake.cache
-	find config.tests/unix -name '*.test' -type f -print0 | xargs -0 \
-		sed -i -e '/bin\/qmake/s/ -nocache//' || die "sed -nocache failed"
+	find config.tests/unix -name '*.test' -type f -execdir \
+		sed -i -e '/bin\/qmake/s/-nocache//' '{}' + || die "sed -nocache failed"
 
 	# compile.test needs additional patching so that it doesn't create another cache file
 	# inside the test subdir, which would incorrectly override config.tests/.qmake.cache
