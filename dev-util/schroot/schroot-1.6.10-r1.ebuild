@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.6.10.ebuild,v 1.1 2015/06/12 02:50:26 jcallen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/schroot/schroot-1.6.10-r1.ebuild,v 1.1 2015/06/14 02:41:01 jcallen Exp $
 
 EAPI="5"
 
@@ -53,7 +53,8 @@ src_unpack() {
 }
 
 src_prepare() {
-	sed -i -e 's/warn(/message(WARNING /' man/CMakeLists.txt
+	sed -i -e 's/warn(/message(WARNING /' man/CMakeLists.txt || die
+	sed -i -e '/^have schroot/d' etc/bash_completion/schroot || die
 
 	cmake-utils_src_prepare
 }
@@ -79,6 +80,10 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
+src_compile() {
+	cmake-utils_src_compile all $(usev doc)
+}
+
 src_test() {
 	if [[ $EUID -ne 0 ]]; then
 		ewarn "Disabling tests because you are not root"
@@ -101,9 +106,9 @@ src_install() {
 
 	if use doc; then
 		docinto html/sbuild
-		dohtml doc/sbuild/html/*
+		dohtml "${BUILD_DIR}"/doc/sbuild/html/*
 		docinto html/schroot
-		dohtml doc/schroot/html/*
+		dohtml "${BUILD_DIR}"/doc/schroot/html/*
 	fi
 
 	if use pam; then
