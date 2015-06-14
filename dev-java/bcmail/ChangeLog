@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.46 2015/05/19 09:27:13 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcmail/ChangeLog,v 1.47 2015/06/14 17:52:47 monsieurp Exp $
+
+  14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> bcmail-1.50.ebuild:
+  Stable for x86 via ALLARCHES. Fix bug 481960.
 
   19 May 2015; Agostino Sarubbo <ago@gentoo.org> bcmail-1.50.ebuild:
   Stable for amd64, wrt bug #481960

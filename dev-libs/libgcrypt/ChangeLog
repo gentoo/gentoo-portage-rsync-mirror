@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.235 2015/06/13 14:59:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.236 2015/06/14 18:00:36 mgorny Exp $
+
+  14 Jun 2015; Michał Górny <mgorny@gentoo.org> libgcrypt-1.6.3-r2.ebuild:
+  Build the PDF only for native ABI, bug #552110.
 
 *libgcrypt-1.6.3-r2 (13 Jun 2015)
 

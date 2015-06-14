@@ -1,6 +1,9 @@
 # ChangeLog for media-video/tsmuxer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.15 2014/06/25 06:32:41 mgorny Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/ChangeLog,v 1.16 2015/06/14 17:37:18 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   25 Jun 2014; Michał Górny <mgorny@gentoo.org> tsmuxer-1.10.6-r1.ebuild:
   Lower dev-libs/glib dep to first known EAPI=5 version, requested by Funtoo for

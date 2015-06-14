@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.6.3-r2.ebuild,v 1.1 2015/06/13 14:59:49 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.6.3-r2.ebuild,v 1.2 2015/06/14 18:00:36 mgorny Exp $
 
 EAPI=5
 AUTOTOOLS_AUTORECONF=1
@@ -64,10 +64,10 @@ multilib_src_configure() {
 
 multilib_src_compile() {
 	emake
-	use doc && emake -C doc gcrypt.pdf
+	multilib_is_native_abi && use doc && emake -C doc gcrypt.pdf
 }
 
 multilib_src_install() {
 	emake DESTDIR="${D}" install
-	use doc && dodoc doc/gcrypt.pdf
+	multilib_is_native_abi && use doc && dodoc doc/gcrypt.pdf
 }

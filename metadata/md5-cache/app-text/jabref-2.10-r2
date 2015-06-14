@@ -4,10 +4,10 @@ DESCRIPTION=Java GUI for managing BibTeX and other bibliographies
 EAPI=5
 HOMEPAGE=http://jabref.sourceforge.net/
 IUSE=doc elibc_FreeBSD elibc_FreeBSD elibc_FreeBSD
-KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+KEYWORDS=amd64 x86 ~amd64-linux ~x86-linux
 LICENSE=GPL-2
 RDEPEND=>=virtual/jre-1.6 dev-java/antlr:3 dev-java/fontbox:1.7 dev-java/jempbox:1.7 dev-java/log4j:0 dev-java/spin:0 dev-java/microba:0 >=dev-java/glazedlists-1.8.0 >=dev-java/java-config-2.2.0
 SLOT=0
 SRC_URI=mirror://sourceforge/jabref/JabRef-2.10-src.tar.bz2
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	java-ant-2	1091461b8b02f54fabcfbf159164ff15	java-pkg-2	d562d1b6cbce43112feccc8b7632f1bf	java-utils-2	4a7c80c1feba48616b58c79d977e084c	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=a7553463da5b6b9208e13c2c7ea90746
+_md5_=d05200b3f34f3105d3346ca649e10cb8

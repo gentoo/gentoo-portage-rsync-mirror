@@ -1,6 +1,10 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.85 2015/05/19 22:45:54 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.86 2015/06/14 18:00:41 blueness Exp $
+
+  14 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  +linux/musl/ppc/package.mask:
+  Mask >sys-devel/gcc-4.8 on ppc musl.
 
   19 May 2015; Anthony G. Basile <blueness@gentoo.org>
   linux/musl/mips/package.mask, linux/musl/package.mask:

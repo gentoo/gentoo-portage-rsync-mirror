@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1079 2015/06/01 14:48:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.1080 2015/06/14 17:58:37 mgorny Exp $
+
+  14 Jun 2015; Michał Górny <mgorny@gentoo.org> gcc-4.9.2.ebuild:
+  Keyword ~amd64-fbsd ~x86-fbsd, https://github.com/gentoo/gentoo-portage-rsync-
+  mirror/pull/146 by nigoro.
 
   01 Jun 2015; Mike Frysinger <vapier@gentoo.org> gcc-4.3.6-r1.ebuild,
   gcc-4.4.7.ebuild, gcc-4.5.4.ebuild:

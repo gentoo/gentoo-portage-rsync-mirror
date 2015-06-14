@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.6.7.ebuild,v 1.1 2015/06/14 01:59:41 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.6.7.ebuild,v 1.2 2015/06/14 17:39:40 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -83,7 +83,7 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
-	sys-power/upower[introspection]
+	|| ( sys-power/upower[introspection] sys-power/upower-pm-utils[introspection] )
 
 	>=gnome-extra/cinnamon-session-2.4
 	>=gnome-extra/cinnamon-settings-daemon-2.4

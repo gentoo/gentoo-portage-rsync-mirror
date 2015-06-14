@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20141019.3.19.ebuild,v 1.1 2015/05/12 07:01:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ca-certificates/ca-certificates-20141019.3.19.ebuild,v 1.2 2015/06/14 17:45:23 grobian Exp $
 
 # The Debian ca-certificates package merely takes the CA database as it exists
 # in the nss package and repackages it for use by openssl.
@@ -171,7 +171,7 @@ pkg_postinst() {
 		# to include their stuff in the db.
 		# However it's too overzealous when the user has custom certs in place.
 		# --fresh is to clean up dangling symlinks
-		"${EROOT}"/usr/sbin/update-ca-certificates --root "${EROOT}"
+		"${EROOT}"/usr/sbin/update-ca-certificates --root "${ROOT}"
 	fi
 
 	local c badcerts=0
