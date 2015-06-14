@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.7 2015/03/16 21:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.97-r14.ebuild,v 1.8 2015/06/14 20:36:32 ulm Exp $
 
 # XXX: we need to review menu.lst vs grub.conf handling.  We've been converting
 #      all systems to grub.conf (and symlinking menu.lst to grub.conf), but
@@ -35,10 +35,7 @@ IUSE="custom-cflags ncurses netboot static"
 
 LIB_DEPEND="ncurses? (
 		>=sys-libs/ncurses-5.9-r3[static-libs(+)]
-		amd64? ( || (
-			>=sys-libs/ncurses-5.9-r3[abi_x86_32(-)]
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-		) )
+		amd64? ( >=sys-libs/ncurses-5.9-r3[abi_x86_32(-)] )
 	)"
 RDEPEND="!static? ( ${LIB_DEPEND//\[static-libs(+)\]/} )"
 DEPEND="${RDEPEND}
@@ -103,16 +100,12 @@ src_configure() {
 	export grub_cv_prog_objcopy_absolute=yes #79734
 	use static && append-ldflags -static
 
-	# Per bug 216625, the emul packages do not provide .a libs for performing
-	# suitable static linking
 	if use amd64 && use static ; then
 		if [[ -n ${GRUB_STATIC_PACKAGE_BUILDING} ]] ; then
 			eerror "You have set GRUB_STATIC_PACKAGE_BUILDING. This"
 			eerror "is specifically intended for building the tarballs for the"
 			eerror "grub-static package via USE='static -ncurses'."
 			eerror "All bets are now off."
-		elif use ncurses && ! has_version ">=sys-libs/ncurses-5.9-r3[abi_x86_32,static-libs]"; then
-			die "You must use the grub-static package if you want a static Grub on amd64!"
 		fi
 	fi
 

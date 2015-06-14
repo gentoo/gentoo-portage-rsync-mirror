@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/grub
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.353 2015/03/25 01:58:00 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/ChangeLog,v 1.354 2015/06/14 20:36:32 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> grub-0.97-r14.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   25 Mar 2015; Mike Gilbert <floppym@gentoo.org> files/grub.default-3:
   Document options to disable the submenu and play a tone on startup. Bug
