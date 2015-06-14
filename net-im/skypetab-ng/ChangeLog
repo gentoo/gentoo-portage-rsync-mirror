@@ -1,6 +1,10 @@
 # ChangeLog for net-im/skypetab-ng
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/ChangeLog,v 1.16 2015/04/07 20:12:21 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skypetab-ng/ChangeLog,v 1.17 2015/06/14 17:29:40 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> skypetab-ng-0.5.2.ebuild,
+  skypetab-ng-9999.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   07 Apr 2015; Sergei Trofimovich <slyfox@gentoo.org> skypetab-ng-0.5.2.ebuild,
   skypetab-ng-9999.ebuild:

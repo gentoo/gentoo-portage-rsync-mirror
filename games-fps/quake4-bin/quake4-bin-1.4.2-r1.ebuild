@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2-r1.ebuild,v 1.2 2015/04/02 16:12:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake4-bin/quake4-bin-1.4.2-r1.ebuild,v 1.3 2015/06/14 17:01:51 ulm Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -22,10 +22,7 @@ RESTRICT="strip"
 
 RDEPEND="sys-libs/glibc
 	amd64? ( sys-libs/glibc[multilib] )
-	|| (
-		sys-libs/zlib[abi_x86_32(-)]
-		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-	)
+	sys-libs/zlib[abi_x86_32(-)]
 	dedicated? ( app-misc/screen )
 	!dedicated? (
 		|| (
@@ -33,18 +30,9 @@ RDEPEND="sys-libs/glibc
 			x11-drivers/nvidia-drivers
 			>=x11-drivers/ati-drivers-8.8.25-r1
 		)
-		|| (
-			(
-				>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-				>=media-libs/libsdl-1.2.15-r4[X,opengl,sound,abi_x86_32(-)]
-			)
-			(
-				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			)
-		)
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+		>=media-libs/libsdl-1.2.15-r4[X,opengl,sound,abi_x86_32(-)]
 	)
 	cdinstall? ( games-fps/quake4-data )"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.17 2014/10/15 11:42:52 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament-goty/unreal-tournament-goty-436.ebuild,v 1.18 2015/06/14 17:25:09 ulm Exp $
 
 EAPI=5
 
@@ -21,19 +21,11 @@ DEPEND="!games-fps/unreal-tournament
 	app-arch/unzip
 "
 RDEPEND="
-	|| (
-		(
-			opengl? ( virtual/opengl[abi_x86_32(-)] )
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-		)
-		amd64? (
-			opengl? ( app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)] )
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	opengl? ( virtual/opengl[abi_x86_32(-)] )
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
 "
 
 S=${WORKDIR}
