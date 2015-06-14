@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.325 2015/06/09 22:21:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/arch/amd64/ChangeLog,v 1.326 2015/06/14 14:12:55 zlogene Exp $
+
+  14 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> package.use.stable.mask:
+  Mask app-emulation/docker[lxc] for bug #550894
 
   09 Jun 2015; Michael Weber <xmw@gentoo.org> package.use.mask:
   Drop mask www-client/netsurf[abi_x86_32].

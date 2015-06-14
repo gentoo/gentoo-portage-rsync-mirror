@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/PyQt4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.289 2015/06/14 13:52:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/ChangeLog,v 1.290 2015/06/14 14:07:15 pesa Exp $
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.4.ebuild:
+  Use the new --no-python-dbus configure option.
 
   14 Jun 2015; Davide Pesavento <pesa@gentoo.org> PyQt4-4.11.4.ebuild:
   PyQt4 became GPL-3 only.

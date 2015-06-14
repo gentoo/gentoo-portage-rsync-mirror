@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.4.ebuild,v 1.2 2015/06/14 13:52:01 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt4/PyQt4-4.11.4.ebuild,v 1.3 2015/06/14 14:07:15 pesa Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} )
@@ -72,9 +72,6 @@ src_prepare() {
 
 	# Allow building against KDE's phonon (bug 525354).
 	epatch "${FILESDIR}/${PN}-4.11.2-phonon.patch"
-
-	# Avoid automagic dependency.
-	use dbus || rm -fr dbus
 }
 
 pyqt_use_enable() {
@@ -97,6 +94,7 @@ src_configure() {
 			--enable=QtXml
 			$(pyqt_use_enable X QtGui)
 			$(pyqt_use_enable dbus QtDBus)
+			$(usex dbus '' --no-python-dbus)
 			$(pyqt_use_enable declarative)
 			$(pyqt_use_enable designer)
 			$(usex designer '' --no-designer-plugin)
@@ -144,7 +142,7 @@ src_install() {
 	}
 	python_foreach_impl run_in_build_dir installation
 
-	dodoc NEWS THANKS
+	dodoc ChangeLog NEWS THANKS
 
 	if use doc; then
 		dodoc -r doc/html
