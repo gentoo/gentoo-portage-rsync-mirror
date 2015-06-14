@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r3.ebuild,v 1.2 2015/06/05 16:43:55 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r3.ebuild,v 1.3 2015/06/14 18:04:33 mgorny Exp $
 
 EAPI=5
 
@@ -40,7 +40,6 @@ RDEPEND="dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
 	!<sys-freebsd/freebsd-sources-9.2_beta1"
 DEPEND="build-kernel? (
 		dtrace? ( >=sys-freebsd/freebsd-cddl-9.2_rc1 )
-		!sparc-fbsd? ( sys-devel/clang )
 		>=sys-freebsd/freebsd-usbin-9.1
 		=sys-freebsd/freebsd-mk-defs-${RV}*
 	)"
@@ -58,11 +57,12 @@ PATCHES=( "${FILESDIR}/${PN}-9.0-disable-optimization.patch"
 	"${FILESDIR}/${PN}-8.0-subnet-route-pr40133.patch"
 	"${FILESDIR}/${PN}-7.1-includes.patch"
 	"${FILESDIR}/${PN}-9.0-sysctluint.patch"
-	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch" )
+	"${FILESDIR}/${PN}-9.2-gentoo-gcc.patch"
+	"${FILESDIR}/${PN}-10.1-gcc48.patch" )
 
 pkg_setup() {
-	# Force set CC=clang. when using gcc, aesni fails to build.
-	use sparc-fbsd || export CC=clang
+	# WITHOUT_SSP= is required to boot kernel that compiled with newer gcc, bug #477914
+	[[ $(tc-getCC) == *gcc* ]] && mymakeopts="${mymakeopts} WITHOUT_SSP="
 	use zfs || mymakeopts="${mymakeopts} WITHOUT_CDDL="
 }
 

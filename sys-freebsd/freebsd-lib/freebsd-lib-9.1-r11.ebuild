@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r11.ebuild,v 1.4 2015/02/18 17:09:17 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-lib/freebsd-lib-9.1-r11.ebuild,v 1.5 2015/06/14 18:05:45 mgorny Exp $
 
 EAPI=5
 
@@ -58,7 +58,7 @@ IUSE="atm bluetooth ssl hesiod ipv6 kerberos usb netware
 	build crosscompile_opts_headers-only zfs
 	userland_GNU userland_BSD"
 
-QA_DT_NEEDED="lib/libc.so.7"
+QA_DT_NEEDED="lib/libc.so.7 usr/lib32/libc.so.7"
 
 pkg_setup() {
 	[ -c /dev/zero ] || \

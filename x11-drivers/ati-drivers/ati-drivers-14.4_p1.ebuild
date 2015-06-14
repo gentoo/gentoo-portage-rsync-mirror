@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.4_p1.ebuild,v 1.4 2015/03/31 18:10:48 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ati-drivers-14.4_p1.ebuild,v 1.5 2015/06/14 18:12:07 ulm Exp $
 
 EAPI=5
 
@@ -36,20 +36,12 @@ RDEPEND="
 	x11-libs/libXrender
 	virtual/glu
 	multilib? (
-			|| (
-				>=virtual/glu-9.0-r1[abi_x86_32]
-				app-emulation/emul-linux-x86-opengl
-			)
-			|| (
-				(
-					>=x11-libs/libX11-1.6.2[abi_x86_32]
-					>=x11-libs/libXext-1.3.2[abi_x86_32]
-					>=x11-libs/libXinerama-1.1.3[abi_x86_32]
-					>=x11-libs/libXrandr-1.4.2[abi_x86_32]
-					>=x11-libs/libXrender-0.9.8[abi_x86_32]
-				)
-				app-emulation/emul-linux-x86-xlibs
-			)
+			>=virtual/glu-9.0-r1[abi_x86_32]
+			>=x11-libs/libX11-1.6.2[abi_x86_32]
+			>=x11-libs/libXext-1.3.2[abi_x86_32]
+			>=x11-libs/libXinerama-1.1.3[abi_x86_32]
+			>=x11-libs/libXrandr-1.4.2[abi_x86_32]
+			>=x11-libs/libXrender-0.9.8[abi_x86_32]
 	)
 	qt4? (
 			x11-libs/libICE

@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.17 2014/10/15 11:34:01 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r4.ebuild,v 1.18 2015/06/14 18:15:46 ulm Exp $
 
 EAPI=5
 
@@ -19,16 +19,7 @@ RESTRICT="strip"
 RDEPEND="
 	games-fps/ut2003-data
 	dedicated? ( games-server/ut2003-ded )
-	!dedicated? (
-		|| (
-			(
-				 virtual/opengl[abi_x86_32(-)]
-			)
-			amd64? (
-				app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			)
-		)
-	)
+	!dedicated? ( virtual/opengl[abi_x86_32(-)] )
 "
 DEPEND=""
 

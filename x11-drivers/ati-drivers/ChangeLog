@@ -1,6 +1,11 @@
 # ChangeLog for x11-drivers/ati-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.379 2015/06/01 16:09:39 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/ati-drivers/ChangeLog,v 1.380 2015/06/14 18:12:07 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> ati-drivers-14.4_p1.ebuild,
+  ati-drivers-14.6_beta2.ebuild, ati-drivers-14.9-r2.ebuild,
+  ati-drivers-14.12-r2.ebuild, ati-drivers-14.12-r3.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   01 Jun 2015; Michał Górny <mgorny@gentoo.org> -ati-drivers-13.12.ebuild,
   -ati-drivers-13.1_pre897.ebuild, -ati-drivers-13.4.ebuild,

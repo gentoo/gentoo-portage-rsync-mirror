@@ -1,6 +1,14 @@
 # ChangeLog for Gentoo/AMD64 profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.86 2015/06/14 18:00:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/ChangeLog,v 1.88 2015/06/14 18:15:38 blueness Exp $
+
+  14 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  +linux/musl/mips/package.use.force:
+  The only working option is USE=pkg-config for dev-util/pkgconf on mips musl.
+
+  14 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  linux/musl/package.use.mask:
+  Mask USE=nls for packages causing collisions with <libintl.h> on musl.
 
   14 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
   +linux/musl/ppc/package.mask:
