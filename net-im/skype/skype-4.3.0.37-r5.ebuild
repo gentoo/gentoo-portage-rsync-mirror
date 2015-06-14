@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r5.ebuild,v 1.2 2014/12/14 10:30:17 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-4.3.0.37-r5.ebuild,v 1.3 2015/06/14 11:22:59 amynka Exp $
 
 EAPI=5
 
@@ -24,32 +24,16 @@ EMUL_X86_VER=20120520
 RDEPEND="
 	virtual/ttf-fonts
 	amd64? (
-		|| (
-			(
-				dev-qt/qtcore:4[abi_x86_32(-)]
-				dev-qt/qtdbus:4[abi_x86_32(-)]
-				dev-qt/qtgui:4[accessibility,abi_x86_32(-)]
-				dev-qt/qtwebkit:4[abi_x86_32(-)]
-			)
-			>=app-emulation/emul-linux-x86-qtlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
-		)
-		|| (
-			media-libs/alsa-lib[abi_x86_32(-)]
-			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
-		)
-		|| (
-			(
-				x11-libs/libX11[abi_x86_32(-)]
-				x11-libs/libXext[abi_x86_32(-)]
-				x11-libs/libXScrnSaver[abi_x86_32(-)]
-				x11-libs/libXv[abi_x86_32(-)]
-			)
-			>=app-emulation/emul-linux-x86-xlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
-		)
-		pulseaudio? ( || (
-			media-sound/pulseaudio[abi_x86_32(-)]
-			>=app-emulation/emul-linux-x86-soundlibs-${EMUL_X86_VER}[-abi_x86_32(-)]
-		) )
+		dev-qt/qtcore:4[abi_x86_32(-)]
+		dev-qt/qtdbus:4[abi_x86_32(-)]
+		dev-qt/qtgui:4[accessibility,abi_x86_32(-)]
+		dev-qt/qtwebkit:4[abi_x86_32(-)]
+		media-libs/alsa-lib[abi_x86_32(-)]
+		x11-libs/libX11[abi_x86_32(-)]
+		x11-libs/libXext[abi_x86_32(-)]
+		x11-libs/libXScrnSaver[abi_x86_32(-)]
+		x11-libs/libXv[abi_x86_32(-)]
+		pulseaudio? ( media-sound/pulseaudio[abi_x86_32(-)] )
 		apulse? ( media-sound/apulse[abi_x86_32(-)] )
 	)
 	x86? (
@@ -136,7 +120,7 @@ pkg_postinst() {
 	elog "For webcam support, see \"LD_PRELOAD\" section of \"README.lib\" document provided by"
 	elog "media-libs/libv4l package and \"README\" document of this package."
 	if use amd64; then
-		elog "You can install app-emulation/emul-linux-x86-medialibs package for the 32bit"
+		elog "You can't install app-emulation/emul-linux-x86-medialibs package for the 32bit"
 		elog "libraries from the media-libs/libv4l package."
 	fi
 

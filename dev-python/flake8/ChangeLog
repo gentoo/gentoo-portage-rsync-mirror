@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/flake8
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.39 2015/06/07 19:27:26 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/flake8/ChangeLog,v 1.40 2015/06/14 11:28:00 idella4 Exp $
+
+*flake8-2.4.1 (14 Jun 2015)
+
+  14 Jun 2015; Ian Delaney <idella4@gentoo.org> +flake8-2.4.1.ebuild:
+  bump
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add bitbucket to remote-id in metadata.xml
