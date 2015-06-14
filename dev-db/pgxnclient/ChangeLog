@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/pgxnclient
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgxnclient/ChangeLog,v 1.5 2015/06/03 11:43:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgxnclient/ChangeLog,v 1.6 2015/06/14 15:30:05 patrick Exp $
+
+*pgxnclient-1.2.1 (14 Jun 2015)
+
+  14 Jun 2015; Patrick Lauer <patrick@gentoo.org> +pgxnclient-1.2.1.ebuild:
+  Bump
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

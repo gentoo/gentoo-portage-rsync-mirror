@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jackson-databind/jackson-databind-2.5.1.ebuild,v 1.2 2015/03/05 21:47:19 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jackson-databind/jackson-databind-2.5.1-r1.ebuild,v 1.1 2015/06/14 15:30:26 monsieurp Exp $
 
 EAPI="5"
 
@@ -25,7 +25,7 @@ RDEPEND=">=virtual/jre-1.5
 DEPEND=">=virtual/jdk-1.5
 	${CDEPEND}
 	test? (
-		dev-java/cglib:2.2
+		dev-java/cglib:3
 		dev-java/groovy:0
 		dev-java/junit:4
 	)"

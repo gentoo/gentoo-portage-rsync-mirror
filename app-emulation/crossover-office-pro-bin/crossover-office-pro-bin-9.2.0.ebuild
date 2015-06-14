@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-9.2.0.ebuild,v 1.6 2014/10/15 12:42:18 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-pro-bin/crossover-office-pro-bin-9.2.0.ebuild,v 1.7 2015/06/14 15:16:14 ulm Exp $
 
 EAPI=5
 
@@ -19,22 +19,14 @@ RESTRICT="fetch strip"
 RDEPEND="
 	dev-util/desktop-file-utils
 	sys-libs/glibc
-	|| (
-		(
-			x11-libs/libXrandr[abi_x86_32(-)]
-			x11-libs/libXi[abi_x86_32(-)]
-			x11-libs/libXmu[abi_x86_32(-)]
-			x11-libs/libXxf86dga[abi_x86_32(-)]
-			x11-libs/libXxf86vm[abi_x86_32(-)]
-			|| ( virtual/jpeg:62[abi_x86_32(-)] media-libs/jpeg:62[abi_x86_32(-)] )
-			media-libs/libpng:1.2[abi_x86_32(-)]
-			nas? ( media-libs/nas[abi_x86_32(-)] )
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	x11-libs/libXrandr[abi_x86_32(-)]
+	x11-libs/libXi[abi_x86_32(-)]
+	x11-libs/libXmu[abi_x86_32(-)]
+	x11-libs/libXxf86dga[abi_x86_32(-)]
+	x11-libs/libXxf86vm[abi_x86_32(-)]
+	|| ( virtual/jpeg:62[abi_x86_32(-)] media-libs/jpeg:62[abi_x86_32(-)] )
+	media-libs/libpng:1.2[abi_x86_32(-)]
+	nas? ( media-libs/nas[abi_x86_32(-)] )
 "
 DEPEND=""
 
