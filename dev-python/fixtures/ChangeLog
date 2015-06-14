@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/fixtures
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.29 2015/06/09 15:16:04 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/ChangeLog,v 1.31 2015/06/14 08:44:16 idella4 Exp $
+
+*fixtures-1.2.0 (14 Jun 2015)
+
+  14 Jun 2015; Ian Delaney <idella4@gentoo.org> +fixtures-1.2.0.ebuild,
+  -fixtures-0.3.12-r1.ebuild, -fixtures-0.3.14-r1.ebuild,
+  -fixtures-0.3.14.ebuild:
+  bump reset test phase as it was intended, rm old
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml
