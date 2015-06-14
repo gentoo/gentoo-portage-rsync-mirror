@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/virtualbox-guest-additions
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.162 2015/06/12 16:37:04 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/virtualbox-guest-additions/ChangeLog,v 1.163 2015/06/14 11:53:19 zlogene Exp $
+
+  14 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
+  virtualbox-guest-additions-4.3.28.ebuild:
+  x86 stable wrt bug #551866
 
   12 Jun 2015; Mikle Kolyada <zlogene@gentoo.org>
   virtualbox-guest-additions-4.3.28.ebuild:
