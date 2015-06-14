@@ -1,6 +1,13 @@
 # ChangeLog for gnome-extra/cinnamon-screensaver
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/ChangeLog,v 1.13 2015/06/07 11:12:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon-screensaver/ChangeLog,v 1.14 2015/06/14 01:56:46 tetromino Exp $
+
+*cinnamon-screensaver-2.6.3 (13 Jun 2015)
+
+  13 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +cinnamon-screensaver-2.6.3.ebuild,
+  +files/cinnamon-screensaver-2.6.3-automagic-logind.patch:
+  Version bump for Cinnamon 2.6
 
 *cinnamon-screensaver-2.4.2 (07 Jun 2015)
 

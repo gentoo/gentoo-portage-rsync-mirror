@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.4.4.ebuild,v 1.1 2015/01/11 17:29:15 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/nemo/nemo-2.6.5.ebuild,v 1.1 2015/06/14 01:58:28 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -20,7 +20,7 @@ IUSE="exif +introspection +l10n packagekit tracker xmp"
 
 COMMON_DEPEND="
 	>=dev-libs/glib-2.34:2
-	>=gnome-extra/cinnamon-desktop-1.0:0=
+	>=gnome-extra/cinnamon-desktop-2.6.1:0=
 	>=x11-libs/pango-1.28.3
 	>=x11-libs/gtk+-3.3.17:3[introspection?]
 	>=dev-libs/libxml2-2.7.8:2
@@ -64,7 +64,7 @@ PDEPEND=">=gnome-base/gvfs-0.1.2"
 
 src_prepare() {
 	epatch_user
-	eautoreconf # no configure in tarball
+	eautoreconf
 	gnome2_src_prepare
 }
 

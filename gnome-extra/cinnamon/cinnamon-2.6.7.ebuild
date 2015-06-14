@@ -1,14 +1,14 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.2.16-r2.ebuild,v 1.3 2014/12/19 13:38:02 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.6.7.ebuild,v 1.1 2015/06/14 01:59:41 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 PYTHON_REQ_USE="xml"
 
-inherit autotools eutils gnome2 multilib pax-utils python-single-r1
+inherit autotools eutils flag-o-matic gnome2 multilib pax-utils python-r1
 
 DESCRIPTION="A fork of GNOME Shell with layout similar to GNOME 2"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
@@ -21,40 +21,44 @@ SRC_URI="https://github.com/linuxmint/Cinnamon/archive/${MY_PV}.tar.gz -> ${MY_P
 LICENSE="GPL-2+"
 SLOT="0"
 # bluetooth support dropped due bug #511648
-IUSE="+l10n +networkmanager" #+bluetooth
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+IUSE="+nls +networkmanager" #+bluetooth
+# We need *both* python 2.7 and 3.x
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
+	python_targets_python2_7
+	|| ( python_targets_python3_3 python_targets_python3_4 )
+	"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
+	app-accessibility/at-spi2-atk:2
 	app-misc/ca-certificates
 	dev-libs/dbus-glib
-	>=dev-libs/glib-2.29.10:2
+	>=dev-libs/glib-2.29.10:2[dbus]
 	>=dev-libs/gobject-introspection-0.10.1
 	>=dev-libs/json-glib-0.13.2
 	>=dev-libs/libcroco-0.6.2:0.6
 	dev-libs/libxml2:2
 	gnome-base/gconf:2[introspection]
 	gnome-base/librsvg
-	>=gnome-extra/cinnamon-desktop-1.0:0=[introspection]
+	>=gnome-extra/cinnamon-desktop-2.4:0=[introspection]
 	gnome-extra/cinnamon-menus[introspection]
-	>=gnome-extra/cjs-1.9.0
-	>=media-libs/clutter-1.7.5:1.0[introspection]
+	>=gnome-extra/cjs-2.4
+	>=media-libs/clutter-1.10:1.0[introspection]
 	media-libs/cogl:1.0=[introspection]
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
 	media-libs/gstreamer:1.0
 	media-libs/gst-plugins-base:1.0
-	media-libs/libcanberra
 	media-sound/pulseaudio:0=[glib]
 	net-libs/libsoup:2.4[introspection]
 	>=sys-auth/polkit-0.100[introspection]
 	x11-libs/gdk-pixbuf:2[introspection]
-	>=x11-libs/gtk+-3.0.0:3[introspection]
+	>=x11-libs/gtk+-3.9.12:3[introspection]
 	x11-libs/pango[introspection]
 	>=x11-libs/startup-notification-0.11
 	x11-libs/libX11
 	>=x11-libs/libXfixes-5.0
-	>=x11-wm/muffin-1.9.1[introspection]
+	>=x11-wm/muffin-2.4[introspection]
 	${PYTHON_DEPS}
 	networkmanager? (
 		gnome-base/libgnome-keyring
@@ -79,11 +83,10 @@ COMMON_DEPEND="
 RDEPEND="${COMMON_DEPEND}
 	>=gnome-base/dconf-0.4.1
 	>=gnome-base/libgnomekbd-2.91.4[introspection]
-	|| ( sys-power/upower[introspection] sys-power/upower-pm-utils[introspection] )
+	sys-power/upower[introspection]
 
-	gnome-extra/cinnamon-session
-
-	gnome-extra/cinnamon-settings-daemon
+	>=gnome-extra/cinnamon-session-2.4
+	>=gnome-extra/cinnamon-settings-daemon-2.4
 
 	>=sys-apps/accountsservice-0.6.14[introspection]
 
@@ -91,33 +94,33 @@ RDEPEND="${COMMON_DEPEND}
 
 	x11-misc/xdg-utils
 
-	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/gconf-python:2
-	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pexpect[${PYTHON_USEDEP}]
-	dev-python/pycairo[${PYTHON_USEDEP}]
+	dev-python/dbus-python[python_targets_python2_7]
+	dev-python/gconf-python:2[python_targets_python2_7]
+	dev-python/lxml[python_targets_python2_7]
+	dev-python/pexpect[python_targets_python2_7]
+	dev-python/pycairo[python_targets_python2_7]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
-	dev-python/pyinotify[${PYTHON_USEDEP}]
-	dev-python/pypam[${PYTHON_USEDEP}]
-	virtual/python-imaging[${PYTHON_USEDEP}]
+	dev-python/pyinotify[python_targets_python2_7]
+	dev-python/pypam[python_targets_python2_7]
+	virtual/python-imaging[python_targets_python2_7]
 
 	x11-themes/gnome-themes-standard[gtk]
 	x11-themes/gnome-icon-theme-symbolic
 
-	gnome-extra/nemo
-	gnome-extra/cinnamon-control-center
-	gnome-extra/cinnamon-screensaver
+	>=gnome-extra/nemo-2.4
+	>=gnome-extra/cinnamon-control-center-2.4
+	>=gnome-extra/cinnamon-screensaver-2.4
 
-	l10n? ( >=gnome-extra/cinnamon-translations-2.2 )
 	networkmanager? (
 		gnome-extra/nm-applet
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
+	nls? ( >=gnome-extra/cinnamon-translations-2.4 )
 "
 #bluetooth? ( net-wireless/cinnamon-bluetooth )
 
 DEPEND="${COMMON_DEPEND}
-	dev-python/polib[${PYTHON_USEDEP}]
+	dev-python/polib[python_targets_python2_7]
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40
@@ -130,38 +133,27 @@ DEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/Cinnamon-${PV}"
 
 pkg_setup() {
-	python-single-r1_pkg_setup
+	python_setup
 }
 
 src_prepare() {
 	# Fix backgrounds path as cinnamon doesn't provide them
 	# https://github.com/linuxmint/Cinnamon/issues/3575
-	epatch "${FILESDIR}/background.patch"
+	epatch "${FILESDIR}"/${PN}-2.4.5-background.patch
 
 	# Fix automagic gnome-bluetooth dep, bug #398145
-	epatch "${FILESDIR}/${PN}-2.2.6-automagic-gnome-bluetooth.patch"
+	epatch "${FILESDIR}"/${PN}-2.2.6-automagic-gnome-bluetooth.patch
 
 	# Optional NetworkManager, bug #488684
-	epatch "${FILESDIR}/${PN}-2.2.6-optional-networkmanager.patch"
-
-	# Fix lspci path, https://github.com/linuxmint/Cinnamon/issues/3548
-	epatch "${FILESDIR}/${PN}-2.2.16-sbin-lspci.patch"
-
-	# Fix calendar with latest upower, https://github.com/linuxmint/Cinnamon/issues/2913
-	epatch "${FILESDIR}/${PN}-2.2.16-calendar-upower.patch"
+	epatch "${FILESDIR}"/${PN}-2.6.7-optional-networkmanager.patch
 
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
-	epatch "${FILESDIR}/${PN}-2.2.16-set-wheel.patch"
+	epatch "${FILESDIR}"/${PN}-2.6.7-set-wheel.patch
 
 	# Fix GNOME 3.14 support (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3577
-	epatch "${FILESDIR}/${PN}-2.2.16-gnome-3.14.patch"
-
-	# Check for the cc-panel path, not for the unneeded binary (from Arch)
-	# https://github.com/linuxmint/Cinnamon/issues/3578
-	sed -i 's|/usr/bin/cinnamon-control-center|/usr/lib/cinnamon-control-center-1/panels|' \
-		files/usr/bin/cinnamon-settings || die
+	epatch "${FILESDIR}"/${PN}-2.4.5-gnome-3.14.patch
 
 	# Use pkexec instead of gksu (from Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3565
@@ -176,14 +168,8 @@ src_prepare() {
 	sed -e "s:/usr/lib/:/usr/$(get_libdir)/:" \
 		-e 's:"/usr/lib":"/usr/'"$(get_libdir)"'":' \
 		-i files/usr/share/polkit-1/actions/org.cinnamon.settings-users.policy \
-		-i files/usr/lib/cinnamon-settings-users/cinnamon-settings-users.py \
-		-i files/usr/lib/cinnamon-screensaver-lock-dialog/cinnamon-screensaver-lock-dialog.py \
-		-i files/usr/lib/cinnamon-settings/cinnamon-settings.py \
-		-i files/usr/lib/cinnamon-settings/modules/cs_backgrounds.py \
-		-i files/usr/lib/cinnamon-settings/data/spices/applet-detail.html \
-		-i files/usr/lib/cinnamon-settings/bin/*.py \
-		-i files/usr/lib/cinnamon-desktop-editor/cinnamon-desktop-editor.py \
-		-i files/usr/lib/cinnamon-menu-editor/cme/*.py \
+		-i files/usr/lib/*/*.py \
+		-i files/usr/lib/*/*/*.py \
 		-i files/usr/bin/* || die "sed failed"
 	if [[ "$(get_libdir)" != lib ]]; then
 		mv files/usr/lib "files/usr/$(get_libdir)" || die "mv failed"
@@ -193,26 +179,42 @@ src_prepare() {
 		rm -rv files/usr/share/cinnamon/applets/network@cinnamon.org || die
 	fi
 
-	python_fix_shebang .
+	epatch_user
+
+	# python 2-and-3 shebang fixing craziness
+	local p
+	python_setup 'python3*'
+	for p in $(grep -rl '#!.*python3'); do
+		python_fix_shebang "${p}"
+	done
+
+	python_setup 'python2*'
+	for p in $(grep -rl '#!.*python[^3]'); do
+		python_fix_shebang "${p}"
+	done
 
 	eautoreconf
 	gnome2_src_prepare
 }
 
 src_configure() {
-	# Don't error out on warnings
+	# https://bugs.gentoo.org/show_bug.cgi?id=536374
+	# https://github.com/linuxmint/Cinnamon/issues/3843
+	append-ldflags $(no-as-needed)
+
 	gnome2_src_configure \
+		--libdir="${EPREFIX}/usr/$(get_libdir)" \
+		--disable-rpath \
 		--disable-jhbuild-wrapper-script \
 		$(use_enable networkmanager) \
 		--with-ca-certificates="${EPREFIX}/etc/ssl/certs/ca-certificates.crt" \
 		BROWSER_PLUGIN_DIR="${EPREFIX}/usr/$(get_libdir)/nsbrowser/plugins" \
 		--without-bluetooth
-		#$(use_with bluetooth)
 }
 
 src_install() {
 	gnome2_src_install
-	python_optimize "${ED}usr/$(get_libdir)/cinnamon-"{desktop-editor,json-makepot,launcher,looking-glass,menu-editor,screensaver-lock-dialog,settings,settings-users}
+	python_optimize "${ED}"usr/$(get_libdir)/cinnamon-*
 
 	# Required for gnome-shell on hardened/PaX, bug #398941
 	pax-mark mr "${ED}usr/bin/cinnamon"
