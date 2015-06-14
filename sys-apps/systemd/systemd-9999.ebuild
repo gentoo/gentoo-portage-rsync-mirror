@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.171 2015/06/10 01:40:59 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/systemd/systemd-9999.ebuild,v 1.172 2015/06/14 00:19:49 floppym Exp $
 
 EAPI=5
 
@@ -9,8 +9,7 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 
 if [[ ${PV} == 9999 ]]; then
 	AUTOTOOLS_AUTORECONF=yes
-	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd
-		http://cgit.freedesktop.org/systemd/systemd"
+	EGIT_REPO_URI="https://github.com/systemd/systemd.git"
 	inherit git-r3
 else
 	SRC_URI="http://www.freedesktop.org/software/systemd/${P}.tar.xz"
