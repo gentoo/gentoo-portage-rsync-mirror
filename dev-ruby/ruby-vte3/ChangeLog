@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-vte3
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte3/ChangeLog,v 1.6 2014/12/13 01:11:08 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-vte3/ChangeLog,v 1.7 2015/06/14 08:19:44 graaff Exp $
+
+  14 Jun 2015; Hans de Graaff <graaff@gentoo.org> ruby-vte3-2.2.3.ebuild:
+  Add ruby22.
 
 *ruby-vte3-2.2.3 (13 Dec 2014)
 

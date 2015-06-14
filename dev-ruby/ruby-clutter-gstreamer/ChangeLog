@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-clutter-gstreamer
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter-gstreamer/ChangeLog,v 1.5 2014/12/05 15:44:57 naota Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-clutter-gstreamer/ChangeLog,v 1.6 2015/06/14 08:23:03 graaff Exp $
+
+  14 Jun 2015; Hans de Graaff <graaff@gentoo.org>
+  ruby-clutter-gstreamer-2.2.3.ebuild:
+  Add ruby22.
 
 *ruby-clutter-gstreamer-2.2.3 (05 Dec 2014)
 
