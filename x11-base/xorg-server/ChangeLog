@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xorg-server
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.848 2015/06/13 10:55:05 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-server/ChangeLog,v 1.849 2015/06/14 19:50:29 maekke Exp $
+
+  14 Jun 2015; Markus Meier <maekke@gentoo.org> xorg-server-1.12.4-r5.ebuild:
+  arm stable, bug #548002
 
   13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> xorg-server-1.12.4-r5.ebuild:
   x86 stable wrt bug #548002

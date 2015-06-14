@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/libnfs-1.9.5.ebuild,v 1.6 2015/06/12 05:11:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/libnfs/libnfs-1.9.5.ebuild,v 1.7 2015/06/14 19:36:41 maekke Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ if [[ ${PV} == "9999" ]] ; then
 	inherit git-2 autotools-utils
 else
 	SRC_URI="https://github.com/sahlberg/${PN}/archive/${P}.tar.gz"
-	KEYWORDS="amd64 ~arm hppa ~ppc ppc64 x86"
+	KEYWORDS="amd64 arm hppa ~ppc ppc64 x86"
 	inherit autotools-utils
 fi
 

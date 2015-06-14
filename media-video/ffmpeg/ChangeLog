@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.865 2015/06/10 08:04:05 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.866 2015/06/14 19:42:22 maekke Exp $
+
+  14 Jun 2015; Markus Meier <maekke@gentoo.org> ffmpeg-2.6.3.ebuild:
+  arm stable, bug #547462
 
 *ffmpeg-2.7 (10 Jun 2015)
 

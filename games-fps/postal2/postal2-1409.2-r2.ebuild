@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2-r2.ebuild,v 1.3 2015/02/01 13:35:57 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2/postal2-1409.2-r2.ebuild,v 1.4 2015/06/14 19:46:00 ulm Exp $
 
 EAPI=5
 inherit eutils unpacker cdrom multilib games
@@ -20,17 +20,9 @@ DEPEND="games-util/loki_patch"
 RDEPEND="sys-libs/glibc
 	sys-libs/libstdc++-v3:5
 	amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] )
-	|| (
-		(
-			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
-			>=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)]
-			>=media-libs/openal-1.15.1[abi_x86_32(-)]
-		)
-		(
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-		)
-	)"
+	>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+	>=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)]
+	>=media-libs/openal-1.15.1[abi_x86_32(-)]"
 
 S=${WORKDIR}
 

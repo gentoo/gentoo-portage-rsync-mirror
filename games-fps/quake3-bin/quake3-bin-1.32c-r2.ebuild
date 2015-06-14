@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r2.ebuild,v 1.3 2015/02/01 11:37:10 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3-bin/quake3-bin-1.32c-r2.ebuild,v 1.4 2015/06/14 19:48:25 ulm Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -24,17 +24,11 @@ RDEPEND="sys-libs/glibc
 		teamarena? ( games-fps/quake3-teamarena )
 	)
 	dedicated? ( app-misc/screen )
-	!dedicated? ( || (
-		(
-			>=virtual/opengl-7.0-r1[abi_x86_32(-)]
-			>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-		)
-		(
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-		)
-	) )"
+	!dedicated? (
+		>=virtual/opengl-7.0-r1[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+		>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	)"
 
 S=${WORKDIR}
 

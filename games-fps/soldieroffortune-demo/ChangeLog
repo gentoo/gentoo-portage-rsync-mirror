@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/soldieroffortune-demo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/ChangeLog,v 1.13 2015/01/27 07:24:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/ChangeLog,v 1.14 2015/06/14 19:56:51 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org>
+  soldieroffortune-demo-0.57-r1.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   27 Jan 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -soldieroffortune-demo-0.57.ebuild:

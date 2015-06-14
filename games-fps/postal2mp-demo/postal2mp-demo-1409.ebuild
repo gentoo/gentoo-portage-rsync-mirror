@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1409.ebuild,v 1.4 2015/02/01 11:42:22 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/postal2mp-demo/postal2mp-demo-1409.ebuild,v 1.5 2015/06/14 19:47:06 ulm Exp $
 
 EAPI=5
 inherit eutils unpacker multilib games
@@ -20,16 +20,8 @@ RESTRICT="mirror strip"
 RDEPEND="sys-libs/glibc
 	sys-libs/libstdc++-v3:5
 	amd64? ( sys-libs/glibc[multilib] sys-libs/libstdc++-v3:5[multilib] )
-	|| (
-		(
-			>=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)]
-			>=media-libs/openal-1.15.1[abi_x86_32(-)]
-		)
-		(
-			app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-		)
-	)"
+	>=media-libs/libsdl-1.2.15-r4[X,opengl,abi_x86_32(-)]
+	>=media-libs/openal-1.15.1[abi_x86_32(-)]"
 DEPEND=""
 
 QA_PREBUILT="${GAMES_PREFIX_OPT:1}/${PN}/System/*"

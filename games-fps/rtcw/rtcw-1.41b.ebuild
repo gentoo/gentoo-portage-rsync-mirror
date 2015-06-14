@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.20 2014/10/13 16:44:47 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/rtcw/rtcw-1.41b.ebuild,v 1.21 2015/06/14 19:51:56 ulm Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -17,20 +17,11 @@ KEYWORDS="~amd64 ~x86"
 IUSE="opengl dedicated"
 RESTRICT="strip mirror"
 
-UIDEPEND="
-	|| (
-		(
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)"
+UIDEPEND="x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]"
 RDEPEND="sys-libs/glibc
 	sys-libs/lib-compat
 	dedicated? ( app-misc/screen )

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.134 2015/06/14 12:09:14 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.135 2015/06/14 19:39:41 maekke Exp $
+
+  14 Jun 2015; Markus Meier <maekke@gentoo.org> radvd-2.10.ebuild:
+  arm stable, bug #547534
 
 *radvd-2.11-r1 (14 Jun 2015)
 

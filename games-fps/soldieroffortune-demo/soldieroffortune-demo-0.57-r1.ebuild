@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57-r1.ebuild,v 1.1 2014/07/10 22:14:04 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/soldieroffortune-demo/soldieroffortune-demo-0.57-r1.ebuild,v 1.2 2015/06/14 19:56:51 ulm Exp $
 
 EAPI=5
 inherit eutils unpacker games
@@ -18,21 +18,12 @@ IUSE=""
 RESTRICT="strip"
 
 DEPEND="games-util/loki_patch"
-RDEPEND="|| (
-	(
-		virtual/opengl[abi_x86_32(-)]
-		media-libs/libsdl[X,opengl,sound,abi_x86_32(-)]
-		x11-libs/libXrender[abi_x86_32(-)]
-		x11-libs/libXrandr[abi_x86_32(-)]
-		x11-libs/libXcursor[abi_x86_32(-)]
-		media-libs/smpeg[abi_x86_32(-)]
-	)
-	(
-		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		app-emulation/emul-linux-x86-sdl[-abi_x86_32(-)]
-		app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
-	)
-)"
+RDEPEND="virtual/opengl[abi_x86_32(-)]
+	media-libs/libsdl[X,opengl,sound,abi_x86_32(-)]
+	x11-libs/libXrender[abi_x86_32(-)]
+	x11-libs/libXrandr[abi_x86_32(-)]
+	x11-libs/libXcursor[abi_x86_32(-)]
+	media-libs/smpeg[abi_x86_32(-)]"
 
 S=${WORKDIR}
 
