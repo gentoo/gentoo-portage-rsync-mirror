@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jabref-bin/jabref-bin-2.11_beta_rc2.ebuild,v 1.1 2015/06/13 12:43:33 nicolasbock Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jabref-bin/jabref-bin-2.11_beta_rc2.ebuild,v 1.2 2015/06/14 03:38:30 nicolasbock Exp $
 
 EAPI=5
 
@@ -13,7 +13,7 @@ MY_URI_PV="${MY_URI_PV_1//_/%20}"
 
 DESCRIPTION="Java GUI for managing BibTeX and other bibliographies"
 HOMEPAGE="http://jabref.sourceforge.net/"
-SRC_URI="http://downloads.sourceforge.net/project/jabref/jabref/${MY_URI_PV}/JabRef-${MY_PV}.jar"
+SRC_URI="mirror://sourceforge/jabref/JabRef-${MY_PV}.jar"
 
 LICENSE="GPL-2"
 SLOT="0"
