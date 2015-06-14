@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/radvd
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.133 2015/05/21 13:29:04 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.134 2015/06/14 12:09:14 xmw Exp $
+
+*radvd-2.11-r1 (14 Jun 2015)
+
+  14 Jun 2015; Michael Weber <xmw@gentoo.org>
+  +files/radvd-2.10-musl-libc-fix.patch, +radvd-2.11-r1.ebuild,
+  -radvd-2.5.ebuild, -radvd-2.8.ebuild:
+  Add ARPHRD_IEEE802154_PHY definition for musl (bug 549942).
 
   21 May 2015; Agostino Sarubbo <ago@gentoo.org> radvd-2.10.ebuild:
   Stable for amd64, wrt bug #547534

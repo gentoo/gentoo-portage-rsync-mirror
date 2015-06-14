@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-2.8.ebuild,v 1.2 2014/11/02 09:16:28 swift Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/radvd-2.11-r1.ebuild,v 1.1 2015/06/14 12:09:14 xmw Exp $
 
 EAPI=4
 
@@ -13,14 +13,14 @@ SRC_URI="http://v6web.litech.org/radvd/dist/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~sparc ~x86 ~x86-fbsd"
-IUSE="kernel_FreeBSD selinux"
+IUSE="kernel_FreeBSD selinux test"
 
 CDEPEND="dev-libs/libdaemon"
 DEPEND="${CDEPEND}
-	dev-libs/check
 	sys-devel/bison
 	sys-devel/flex
-	virtual/pkgconfig"
+	virtual/pkgconfig
+	test? ( dev-libs/check )"
 RDEPEND="${CDEPEND}
 	selinux? ( sec-policy/selinux-radvd )
 "
@@ -34,9 +34,14 @@ pkg_setup() {
 	[[ -d ${ROOT}/var/run/radvd ]] && chown radvd:radvd "${ROOT}"/var/run/radvd
 }
 
+src_prepare() {
+	epatch "${FILESDIR}"/${PN}-2.10-musl-libc-fix.patch
+}
+
 src_configure() {
 	econf --with-pidfile=/var/run/radvd/radvd.pid \
-		--disable-silent-rules
+		--disable-silent-rules \
+		$(use_with test check)
 }
 
 src_install() {
