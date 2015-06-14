@@ -1,6 +1,18 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.539 2015/06/09 11:13:23 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.540 2015/06/14 16:18:11 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> wine-1.6.2.ebuild,
+  wine-1.7.0.ebuild, wine-1.7.3.ebuild, wine-1.7.4.ebuild, wine-1.7.8.ebuild,
+  wine-1.7.9.ebuild, wine-1.7.10.ebuild, wine-1.7.11.ebuild,
+  wine-1.7.12.ebuild, wine-1.7.13.ebuild, wine-1.7.14.ebuild,
+  wine-1.7.15.ebuild, wine-1.7.16.ebuild, wine-1.7.17.ebuild,
+  wine-1.7.18.ebuild, wine-1.7.19-r1.ebuild, wine-1.7.20.ebuild,
+  wine-1.7.21.ebuild, wine-1.7.22.ebuild, wine-1.7.28.ebuild,
+  wine-1.7.29.ebuild, wine-1.7.33.ebuild, wine-1.7.38.ebuild,
+  wine-1.7.39.ebuild, wine-1.7.40.ebuild, wine-1.7.41.ebuild,
+  wine-1.7.42.ebuild, wine-1.7.43.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

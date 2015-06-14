@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r11.ebuild,v 1.1 2014/11/12 17:59:52 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/atokx3/atokx3-3.0.0-r11.ebuild,v 1.2 2015/06/14 16:24:39 ulm Exp $
 
 EAPI=5
 
@@ -54,47 +54,29 @@ RDEPEND="!app-i18n/atokx2
 	x11-libs/libdrm
 	x11-libs/pangox-compat
 	multilib? (
-		|| (
-			(
-				>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
-				>=dev-libs/libxml2-2.9.1-r4:2[abi_x86_32(-)]
-				>=media-libs/libpng-1.2.51[abi_x86_32(-)]
-				>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32(-)]
-				>=virtual/pam-0-r1[abi_x86_32(-)]
-			)
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-		)
-		|| (
-			(
-				>=dev-libs/atk-2.10.0[abi_x86_32]
-				>=x11-libs/cairo-1.12.14-r4[abi_x86_32]
-				>=x11-libs/gtk+-2.24.23:2[abi_x86_32]
-				>=x11-libs/pangox-compat-0.0.2[abi_x86_32]
-			)
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-		)
-		|| (
-			>=x11-libs/libdrm-2.4.46[abi_x86_32(-)]
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-		)
-		|| (
-			(
-				>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
-				>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
-				>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
-				>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32(-)]
-				>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
-				>=x11-libs/libXdamage-1.1.4-r1[abi_x86_32(-)]
-				>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
-				>=x11-libs/libXfixes-5.0.1[abi_x86_32(-)]
-				>=x11-libs/libXft-2.3.1-r1[abi_x86_32(-)]
-				>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
-				>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
-				>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
-				>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
-			)
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
+		>=dev-libs/atk-2.10.0[abi_x86_32]
+		>=dev-libs/glib-2.34.3:2[abi_x86_32(-)]
+		>=dev-libs/libxml2-2.9.1-r4:2[abi_x86_32(-)]
+		>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+		>=media-libs/libpng-1.2.51[abi_x86_32(-)]
+		>=sys-apps/tcp-wrappers-7.6.22-r1[abi_x86_32(-)]
+		>=virtual/pam-0-r1[abi_x86_32(-)]
+		>=x11-libs/cairo-1.12.14-r4[abi_x86_32]
+		>=x11-libs/gtk+-2.24.23:2[abi_x86_32]
+		>=x11-libs/libICE-1.0.8-r1[abi_x86_32(-)]
+		>=x11-libs/libSM-1.2.1-r1[abi_x86_32(-)]
+		>=x11-libs/libXcomposite-0.4.4-r1[abi_x86_32(-)]
+		>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+		>=x11-libs/libXdamage-1.1.4-r1[abi_x86_32(-)]
+		>=x11-libs/libXext-1.3.2[abi_x86_32(-)]
+		>=x11-libs/libXfixes-5.0.1[abi_x86_32(-)]
+		>=x11-libs/libXft-2.3.1-r1[abi_x86_32(-)]
+		>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
+		>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
+		>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
+		>=x11-libs/libXxf86vm-1.1.3[abi_x86_32(-)]
+		>=x11-libs/libdrm-2.4.46[abi_x86_32(-)]
+		>=x11-libs/pangox-compat-0.0.2[abi_x86_32]
 	)"
 
 QA_PREBUILT="opt/atokx3/lib/server/*

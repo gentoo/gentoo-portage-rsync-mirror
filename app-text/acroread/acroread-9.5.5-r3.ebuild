@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r3.ebuild,v 1.2 2015/06/08 17:41:59 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-9.5.5-r3.ebuild,v 1.3 2015/06/14 16:28:20 ulm Exp $
 
 EAPI=5
 
@@ -20,7 +20,7 @@ IUSE+=" linguas_zh_CN linguas_zh_TW linguas_ja linguas_ko"
 RESTRICT="strip mirror"
 
 DEPEND=""
-RDEPEND="|| ( (
+RDEPEND="
 	dev-libs/atk[abi_x86_32(-)]
 	dev-libs/glib:2[abi_x86_32(-)]
 	dev-libs/libxml2[abi_x86_32(-)]
@@ -38,20 +38,8 @@ RDEPEND="|| ( (
 		>=x11-libs/pangox-compat-0.0.2[abi_x86_32(-)]
 		<x11-libs/pango-1.31[X]
 	)
-	) (
-		app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-		app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-	) )
-	nsplugin? ( || (
-		x11-libs/libXt[abi_x86_32(-)]
-		app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-	) )
-	ldap? ( || (
-		>=net-nds/openldap-2.4.38-r1[abi_x86_32(-)]
-		app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-	) )
+	nsplugin? ( x11-libs/libXt[abi_x86_32(-)] )
+	ldap? ( >=net-nds/openldap-2.4.38-r1[abi_x86_32(-)] )
 	x86? ( html? (
 		|| (
 			www-client/firefox-bin
