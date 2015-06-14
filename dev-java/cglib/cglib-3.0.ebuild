@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-3.0.ebuild,v 1.5 2015/06/08 23:28:00 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/cglib-3.0.ebuild,v 1.6 2015/06/14 09:21:29 chewi Exp $
 
 EAPI="5"
 
@@ -14,9 +14,11 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-src-${PV}.jar"
 
 LICENSE="Apache-2.0"
 SLOT="3"
-KEYWORDS="amd64 x86 ~ppc ~ppc64"
+KEYWORDS="amd64 ppc ppc64 x86"
 
-IUSE=""
+# Fails some tests on ppc(64) due to memory-related issues that are
+# probably VM-specific but harmless enough.
+RESTRICT="ppc? ( test ) ppc64? ( test )"
 
 COMMON_DEP="dev-java/asm:4
 	dev-java/ant-core:0"

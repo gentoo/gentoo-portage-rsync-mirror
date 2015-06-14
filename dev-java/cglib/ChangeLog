@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/cglib
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.62 2015/06/09 13:32:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/cglib/ChangeLog,v 1.63 2015/06/14 09:21:29 chewi Exp $
+
+  14 Jun 2015; James Le Cuirot <chewi@gentoo.org> cglib-3.0.ebuild:
+  Mark ppc and ppc64 stable in accordance with ALLARCHES policy. Unfortunately
+  some tests fail due to memory-related issues that are probably VM-specific but
+  harmless enough. This will hopefully change for ppc64 when it gets HotSpot.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

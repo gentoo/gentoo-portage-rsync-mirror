@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-4.0.ebuild,v 1.7 2015/04/20 16:45:01 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/asm-4.0.ebuild,v 1.8 2015/06/14 09:18:47 chewi Exp $
 
 MY_P="${PN}-${PV/rc/RC}"
 JAVA_PKG_IUSE="doc source"
@@ -13,7 +13,7 @@ SRC_URI="http://download.forge.objectweb.org/${PN}/${MY_P}.tar.gz"
 LICENSE="BSD"
 SLOT="4"
 IUSE=""
-KEYWORDS="amd64 ~arm ~ppc ~ppc64 x86 ~amd64-fbsd ~x64-macos"
+KEYWORDS="amd64 ~arm ppc ppc64 x86 ~amd64-fbsd ~x64-macos"
 
 DEPEND=">=virtual/jdk-1.5"
 RDEPEND=">=virtual/jre-1.5"
