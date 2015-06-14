@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xstream
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.35 2015/06/13 12:48:37 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xstream/ChangeLog,v 1.36 2015/06/13 23:44:19 monsieurp Exp $
+
+  13 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -xstream-1.3.1-r1.ebuild,
+  -xstream-1.3.1-r2.ebuild:
+  Drop old.
 
 *xstream-1.3.1-r3 (13 Jun 2015)
 

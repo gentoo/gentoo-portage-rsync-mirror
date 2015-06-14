@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/castor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.60 2015/06/13 11:37:20 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/castor/ChangeLog,v 1.61 2015/06/13 23:38:08 monsieurp Exp $
+
+  13 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -castor-0.9.9.1-r6.ebuild,
+  -castor-1.1.1-r2.ebuild:
+  Drop old.
 
   13 Jun 2015; Agostino Sarubbo <ago@gentoo.org> castor-0.9.9.1-r7.ebuild,
   castor-1.1.1-r3.ebuild:
