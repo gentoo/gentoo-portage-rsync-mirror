@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.28.ebuild,v 1.2 2015/04/11 11:29:10 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.28.ebuild,v 1.3 2015/06/14 19:25:46 bircoph Exp $
 
 EAPI=5
 
@@ -41,8 +41,8 @@ VIRTUALX_REQUIRED="api"
 
 DEPEND="
 	app-text/pandoc
-	app-text/texlive
 	dev-haskell/pandoc-citeproc[bibutils]
+	dev-texlive/texlive-latex
 	virtual/pkgconfig
 	api? (
 		media-fonts/dejavu
