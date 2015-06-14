@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r3.ebuild,v 1.1 2015/05/24 08:45:46 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-freebsd/freebsd-sources/freebsd-sources-10.1-r3.ebuild,v 1.2 2015/06/05 16:43:55 mgorny Exp $
 
 EAPI=5
 
