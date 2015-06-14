@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-4.200.0.ebuild,v 1.1 2015/06/13 17:32:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-4.200.0.ebuild,v 1.2 2015/06/14 14:35:34 dilfridge Exp $
 
 EAPI=5
 
@@ -26,7 +26,10 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
-	test? ( >=virtual/perl-Test-Simple-0.980.0 )
+	test? (
+		>=virtual/perl-Test-Simple-0.980.0
+		dev-perl/Test-Warn
+	)
 "
 
 SRC_TEST="do"

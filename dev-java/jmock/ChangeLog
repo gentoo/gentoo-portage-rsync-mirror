@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jmock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.30 2015/06/06 22:51:50 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmock/ChangeLog,v 1.32 2015/06/14 14:58:32 monsieurp Exp $
+
+  14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -jmock-1.1.0-r2.ebuild:
+  Drop old.
+
+  14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> jmock-1.2.0.ebuild:
+  Stable for amd64. Retroactively marking the other arches stable via ALLARCHES.
+  Fix bug 551400.
 
   06 Jun 2015; Patrice Clement <monsieurp@gentoo.org> jmock-1.2.0.ebuild:
   Remove useless dependency on dev-java/cglib:2.2. See bug 546288.
