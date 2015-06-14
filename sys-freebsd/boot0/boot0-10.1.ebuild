@@ -23,8 +23,7 @@ EXTRACTONLY="
 
 RDEPEND=""
 DEPEND="=sys-freebsd/freebsd-mk-defs-${RV}*
-	=sys-freebsd/freebsd-lib-${RV}*
-	!sparc-fbsd? ( sys-devel/clang )"
+	=sys-freebsd/freebsd-lib-${RV}*"
 
 S="${WORKDIR}/sys/boot"
 
@@ -45,7 +44,6 @@ pkg_setup() {
 }
 
 src_prepare() {
-	use sparc-fbsd || export CC=clang
 	sed -e '/-mno-align-long-strings/d' \
 		-i "${S}"/i386/boot2/Makefile \
 		-i "${S}"/i386/gptboot/Makefile \
