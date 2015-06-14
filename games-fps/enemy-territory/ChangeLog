@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/enemy-territory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.56 2015/02/05 03:31:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/ChangeLog,v 1.57 2015/06/14 20:05:27 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org> enemy-territory-2.60b-r1.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   05 Feb 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -enemy-territory-2.60b.ebuild:
