@@ -1,6 +1,21 @@
 # ChangeLog for dev-util/android-sdk-update-manager
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.64 2015/04/01 20:08:34 rich0 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/ChangeLog,v 1.65 2015/06/14 16:34:38 ulm Exp $
+
+  14 Jun 2015; Ulrich Müller <ulm@gentoo.org>
+  android-sdk-update-manager-21.ebuild, android-sdk-update-manager-21.1.ebuild,
+  android-sdk-update-manager-22.ebuild,
+  android-sdk-update-manager-22.0.1.ebuild,
+  android-sdk-update-manager-22.0.1-r1.ebuild,
+  android-sdk-update-manager-22.0.4.ebuild,
+  android-sdk-update-manager-22.0.5.ebuild,
+  android-sdk-update-manager-22.0.5-r1.ebuild,
+  android-sdk-update-manager-22.2.1.ebuild,
+  android-sdk-update-manager-22.3.ebuild,
+  android-sdk-update-manager-22.6.ebuild,
+  android-sdk-update-manager-22.6.1.ebuild,
+  android-sdk-update-manager-23.ebuild:
+  [QA] Remove emul-linux-x86-* from dependencies.
 
   01 Apr 2015; Richard Freeman <rich0@gentoo.org>
   android-sdk-update-manager-23.ebuild:

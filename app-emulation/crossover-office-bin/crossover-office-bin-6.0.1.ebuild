@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.0.1.ebuild,v 1.7 2014/10/15 12:15:36 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/crossover-office-bin/crossover-office-bin-6.0.1.ebuild,v 1.8 2015/06/14 16:49:39 ulm Exp $
 
 EAPI=5
 
@@ -19,19 +19,12 @@ RESTRICT="fetch strip"
 RDEPEND="
 	dev-util/desktop-file-utils
 	sys-libs/glibc
-	|| (
-		(
-			x11-libs/libXrandr[abi_x86_32(-)]
-			x11-libs/libXi[abi_x86_32(-)]
-			x11-libs/libXmu[abi_x86_32(-)]
-			x11-libs/libXxf86dga[abi_x86_32(-)]
-			x11-libs/libXxf86vm[abi_x86_32(-)]
-			nas? ( media-libs/nas[abi_x86_32(-)] )
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	x11-libs/libXrandr[abi_x86_32(-)]
+	x11-libs/libXi[abi_x86_32(-)]
+	x11-libs/libXmu[abi_x86_32(-)]
+	x11-libs/libXxf86dga[abi_x86_32(-)]
+	x11-libs/libXxf86vm[abi_x86_32(-)]
+	nas? ( media-libs/nas[abi_x86_32(-)] )
 "
 
 S=${WORKDIR}

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.3.ebuild,v 1.6 2015/01/14 16:55:15 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/virtualgl/virtualgl-2.3.3.ebuild,v 1.7 2015/06/14 16:45:41 ulm Exp $
 
 EAPI=5
 inherit cmake-multilib multilib systemd
@@ -24,29 +24,16 @@ RDEPEND="
 	x11-libs/libX11[${MULTILIB_USEDEP}]
 	x11-libs/libXext[${MULTILIB_USEDEP}]
 	x11-libs/libXv[${MULTILIB_USEDEP}]
-	amd64? ( abi_x86_32? (
-		|| (
-			>=media-libs/libjpeg-turbo-1.3.0-r3[abi_x86_32]
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32]
-		)
-		|| (
-			(
-				>=x11-libs/libX11-1.6.2[abi_x86_32]
-				>=x11-libs/libXext-1.3.2[abi_x86_32]
-				>=x11-libs/libXv-1.0.10[abi_x86_32]
-			)
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32]
-		)
-		|| (
-			(
-				>=virtual/glu-9.0-r1[abi_x86_32]
-				>=virtual/opengl-7.0-r1[abi_x86_32]
-			)
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32]
-		)
-	) )
 	virtual/glu[${MULTILIB_USEDEP}]
 	virtual/opengl[${MULTILIB_USEDEP}]
+	amd64? ( abi_x86_32? (
+		>=media-libs/libjpeg-turbo-1.3.0-r3[abi_x86_32]
+		>=x11-libs/libX11-1.6.2[abi_x86_32]
+		>=x11-libs/libXext-1.3.2[abi_x86_32]
+		>=x11-libs/libXv-1.0.10[abi_x86_32]
+		>=virtual/glu-9.0-r1[abi_x86_32]
+		>=virtual/opengl-7.0-r1[abi_x86_32]
+	) )
 "
 DEPEND="${RDEPEND}"
 

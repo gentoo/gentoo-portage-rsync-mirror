@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.90.ebuild,v 1.3 2015/04/08 21:32:48 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cndrvcups-lb/cndrvcups-lb-2.90.ebuild,v 1.4 2015/06/14 16:58:01 ulm Exp $
 
 EAPI=5
 inherit eutils autotools multilib versionator
@@ -25,15 +25,8 @@ RDEPEND="
 	net-print/cups
 	~net-print/cndrvcups-common-lb-${PV}
 	x11-libs/gtk+:2
-	|| (
-		(
-			>=dev-libs/libxml2-2.9.1-r4[abi_x86_32(-)]
-			virtual/jpeg:62[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-		)
-	)
+	>=dev-libs/libxml2-2.9.1-r4[abi_x86_32(-)]
+	virtual/jpeg:62[abi_x86_32(-)]
 "
 DEPEND="${DEPEND}"
 

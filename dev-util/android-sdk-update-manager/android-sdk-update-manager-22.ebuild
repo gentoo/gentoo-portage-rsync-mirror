@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.ebuild,v 1.3 2014/10/15 20:22:19 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-sdk-update-manager/android-sdk-update-manager-22.ebuild,v 1.4 2015/06/14 16:34:38 ulm Exp $
 
 EAPI=5
 
@@ -23,14 +23,7 @@ DEPEND="app-arch/tar
 RDEPEND=">=virtual/jdk-1.5
 	>=dev-java/ant-core-1.6.5
 	>=dev-java/swt-3.5[cairo]
-	|| (
-		(
-			>=x11-libs/gtk+-2.24.23-r2:2[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-		)
-	)
+	>=x11-libs/gtk+-2.24.23-r2:2[abi_x86_32(-)]
 "
 
 ANDROID_SDK_DIR="/opt/${PN}"

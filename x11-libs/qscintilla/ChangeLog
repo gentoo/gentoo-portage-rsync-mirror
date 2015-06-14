@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qscintilla
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.111 2015/05/08 17:15:17 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qscintilla/ChangeLog,v 1.112 2015/06/14 16:53:26 pesa Exp $
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org>
+  -files/qscintilla-2.7.1-designer.patch, -qscintilla-2.7.2.ebuild:
+  Drop old version, which was also the only stable version on sparc, see bug
+  #524466 comment #11.
 
   08 May 2015; Jeroen Roovers <jer@gentoo.org> qscintilla-2.8.4-r1.ebuild:
   Stable for PPC64 (bug #524466).
