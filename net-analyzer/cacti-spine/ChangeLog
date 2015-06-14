@@ -1,6 +1,16 @@
 # ChangeLog for net-analyzer/cacti-spine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.40 2015/06/12 05:47:52 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.41 2015/06/14 08:00:16 jer Exp $
+
+*cacti-spine-0.8.8d-r1 (14 Jun 2015)
+
+  14 Jun 2015; Jeroen Roovers <jer@gentoo.org> -cacti-spine-0.8.8d.ebuild,
+  +cacti-spine-0.8.8d-r1.ebuild, +files/cacti-spine-0.8.8d-mysql.patch,
+  +files/cacti-spine-0.8.8d-net-snmp.patch,
+  +files/cacti-spine-0.8.8d-ping.patch,
+  +files/cacti-spine-0.8.8d-polling_time.patch,
+  +files/cacti-spine-0.8.8d-snmp_spine_close.patch:
+  Add build/compatibility patches (bug #552030 by Tomasz Chilinski).
 
 *cacti-spine-0.8.8d (12 Jun 2015)
 

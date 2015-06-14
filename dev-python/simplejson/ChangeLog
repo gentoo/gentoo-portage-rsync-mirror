@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/simplejson
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.151 2015/06/01 10:07:50 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/simplejson/ChangeLog,v 1.152 2015/06/14 07:53:43 idella4 Exp $
+
+  14 Jun 2015; Ian Delaney <idella4@gentoo.org> -simplejson-3.6.5.ebuild,
+  -simplejson-3.7.1.ebuild:
+  rm old
 
 *simplejson-3.7.3 (01 Jun 2015)
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/vzctl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.138 2015/06/13 11:00:14 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vzctl/ChangeLog,v 1.139 2015/06/14 07:55:26 zlogene Exp $
+
+  14 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> -vzctl-4.8.ebuild:
+  Drop old.
 
   13 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> vzctl-4.9.1.ebuild:
   amd64/x86 stable wrt bug #551416
