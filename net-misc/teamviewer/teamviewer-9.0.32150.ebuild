@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-9.0.32150.ebuild,v 1.1 2014/11/12 23:18:50 axs Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-9.0.32150.ebuild,v 1.2 2015/06/14 18:36:29 ulm Exp $
 
 EAPI=5
 
@@ -24,28 +24,18 @@ RDEPEND="
 	app-shells/bash
 	x11-misc/xdg-utils
 	!system-wine? (
-		|| (
-			(
-				media-libs/alsa-lib[abi_x86_32(-)]
-				media-libs/freetype[abi_x86_32(-)]
-				sys-libs/zlib[abi_x86_32(-)]
-				x11-libs/libX11[abi_x86_32(-)]
-				x11-libs/libXau[abi_x86_32(-)]
-				x11-libs/libXdamage[abi_x86_32(-)]
-				x11-libs/libXext[abi_x86_32(-)]
-				x11-libs/libXfixes[abi_x86_32(-)]
-				x11-libs/libXrandr[abi_x86_32(-)]
-				x11-libs/libXrender[abi_x86_32(-)]
-				x11-libs/libSM[abi_x86_32(-)]
-				x11-libs/libXtst[abi_x86_32(-)]
-			)
-			(
-				app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-soundlibs[-abi_x86_32(-)]
-				app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			)
-
-		)
+		media-libs/alsa-lib[abi_x86_32(-)]
+		media-libs/freetype[abi_x86_32(-)]
+		sys-libs/zlib[abi_x86_32(-)]
+		x11-libs/libX11[abi_x86_32(-)]
+		x11-libs/libXau[abi_x86_32(-)]
+		x11-libs/libXdamage[abi_x86_32(-)]
+		x11-libs/libXext[abi_x86_32(-)]
+		x11-libs/libXfixes[abi_x86_32(-)]
+		x11-libs/libXrandr[abi_x86_32(-)]
+		x11-libs/libXrender[abi_x86_32(-)]
+		x11-libs/libSM[abi_x86_32(-)]
+		x11-libs/libXtst[abi_x86_32(-)]
 	)
 	system-wine? ( app-emulation/wine )"
 

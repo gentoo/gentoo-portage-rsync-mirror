@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-7.1.0.ebuild,v 1.2 2014/10/15 21:05:09 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-7.1.0.ebuild,v 1.3 2015/06/14 18:51:43 ulm Exp $
 
 EAPI="5"
 
@@ -19,27 +19,18 @@ QA_PREBUILT="opt/eagle/bin/eagle"
 
 RDEPEND="
 	sys-libs/glibc
-	|| (
-		(
-			|| ( virtual/jpeg:62[abi_x86_32(-)]  media-libs/jpeg:62[abi_x86_32(-)] )
-			>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
-			>=dev-libs/openssl-0.9.8z_p1-r2:0.9.8[abi_x86_32(-)]
-			>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
-			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
-			>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
-			>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
-			>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
-			>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
-
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	|| ( virtual/jpeg:62[abi_x86_32(-)]  media-libs/jpeg:62[abi_x86_32(-)] )
+	>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
+	>=dev-libs/openssl-0.9.8z_p1-r2:0.9.8[abi_x86_32(-)]
+	>=sys-libs/zlib-1.2.8-r1[abi_x86_32(-)]
+	>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+	>=media-libs/fontconfig-2.10.92[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
+	>=x11-libs/libXrandr-1.4.2[abi_x86_32(-)]
+	>=x11-libs/libXcursor-1.1.14[abi_x86_32(-)]
+	>=x11-libs/libXi-1.7.2[abi_x86_32(-)]
 "
 
 # Append ${PV} since that's what upstream installs to

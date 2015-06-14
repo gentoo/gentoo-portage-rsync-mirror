@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/icm-browser-3.6.1i.ebuild,v 1.4 2014/10/16 09:28:56 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/icm-browser/icm-browser-3.6.1i.ebuild,v 1.5 2015/06/14 18:54:38 ulm Exp $
 
 EAPI=5
 
@@ -20,38 +20,29 @@ RESTRICT="fetch"
 
 RDEPEND="!sci-chemistry/icm
 	virtual/libstdc++:3.3
-	|| (
-		(
-			>=app-arch/bzip2-1.0.6-r4[abi_x86_32(-)]
-			>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
-			media-libs/libmng[abi_x86_32(-)]
-			>=media-libs/mesa-9.1.6[osmesa,abi_x86_32(-)]
-			>=media-libs/tiff-3.9.7-r1:3[abi_x86_32(-)]
-			>=sys-apps/keyutils-1.5.9-r1[abi_x86_32(-)]
-			virtual/jpeg:62[abi_x86_32(-)]
-			virtual/krb5[abi_x86_32(-)]
-			virtual/opengl[abi_x86_32(-)]
-			x11-libs/libICE[abi_x86_32(-)]
-			x11-libs/libSM[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdamage[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libXfixes[abi_x86_32(-)]
-			x11-libs/libXmu[abi_x86_32(-)]
-			x11-libs/libXrender[abi_x86_32(-)]
-			x11-libs/libXt[abi_x86_32(-)]
-			x11-libs/libXxf86vm[abi_x86_32(-)]
-			x11-libs/libdrm[abi_x86_32(-)]
-			x11-libs/libxcb[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-opengl[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	>=app-arch/bzip2-1.0.6-r4[abi_x86_32(-)]
+	>=media-libs/freetype-2.5.0.1[abi_x86_32(-)]
+	media-libs/libmng[abi_x86_32(-)]
+	>=media-libs/mesa-9.1.6[osmesa,abi_x86_32(-)]
+	>=media-libs/tiff-3.9.7-r1:3[abi_x86_32(-)]
+	>=sys-apps/keyutils-1.5.9-r1[abi_x86_32(-)]
+	virtual/jpeg:62[abi_x86_32(-)]
+	virtual/krb5[abi_x86_32(-)]
+	virtual/opengl[abi_x86_32(-)]
+	x11-libs/libICE[abi_x86_32(-)]
+	x11-libs/libSM[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdamage[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libXfixes[abi_x86_32(-)]
+	x11-libs/libXmu[abi_x86_32(-)]
+	x11-libs/libXrender[abi_x86_32(-)]
+	x11-libs/libXt[abi_x86_32(-)]
+	x11-libs/libXxf86vm[abi_x86_32(-)]
+	x11-libs/libdrm[abi_x86_32(-)]
+	x11-libs/libxcb[abi_x86_32(-)]
 "
 DEPEND=""
 

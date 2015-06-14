@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.4 2014/10/15 15:09:20 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-plugins/nspluginwrapper/nspluginwrapper-1.4.4-r3.ebuild,v 1.5 2015/06/14 18:33:06 ulm Exp $
 
 EAPI=5
 
@@ -18,18 +18,10 @@ IUSE=""
 RDEPEND=">=x11-libs/gtk+-2:2
 	net-misc/curl
 	>=sys-apps/util-linux-2.13
-	|| (
-		(
-			>=dev-libs/glib-2.34.3[abi_x86_32(-)]
-			>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
-			>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
-			>=x11-libs/libXt-1.1.4[abi_x86_32(-)]
-		)
-		(
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-gtklibs[-abi_x86_32(-)]
-		)
-	)"
+	>=dev-libs/glib-2.34.3[abi_x86_32(-)]
+	>=x11-libs/gtk+-2.24.23:2[abi_x86_32(-)]
+	>=x11-libs/libX11-1.6.2[abi_x86_32(-)]
+	>=x11-libs/libXt-1.1.4[abi_x86_32(-)]"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
 

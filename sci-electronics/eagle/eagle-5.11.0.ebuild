@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.11.0.ebuild,v 1.7 2015/03/21 20:47:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/eagle/eagle-5.11.0.ebuild,v 1.8 2015/06/14 18:51:43 ulm Exp $
 
 EAPI=5
 
@@ -21,21 +21,13 @@ QA_FLAGS_IGNORED="opt/eagle-${PV}/bin/eagle"
 
 RDEPEND="
 	sys-libs/glibc
-	|| (
-		(
-			|| ( virtual/jpeg:62[abi_x86_32(-)]  media-libs/jpeg:62[abi_x86_32(-)] )
-			>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
-			>=dev-libs/openssl-0.9.8z_p1-r2:0.9.8[abi_x86_32(-)]
-			x11-libs/libXext[abi_x86_32(-)]
-			x11-libs/libX11[abi_x86_32(-)]
-			x11-libs/libXau[abi_x86_32(-)]
-			x11-libs/libXdmcp[abi_x86_32(-)]
-		)
-		amd64? (
-			app-emulation/emul-linux-x86-baselibs[-abi_x86_32(-)]
-			app-emulation/emul-linux-x86-xlibs[-abi_x86_32(-)]
-		)
-	)
+	|| ( virtual/jpeg:62[abi_x86_32(-)]  media-libs/jpeg:62[abi_x86_32(-)] )
+	>=media-libs/libpng-1.2.51:1.2[abi_x86_32(-)]
+	>=dev-libs/openssl-0.9.8z_p1-r2:0.9.8[abi_x86_32(-)]
+	x11-libs/libXext[abi_x86_32(-)]
+	x11-libs/libX11[abi_x86_32(-)]
+	x11-libs/libXau[abi_x86_32(-)]
+	x11-libs/libXdmcp[abi_x86_32(-)]
 "
 
 # Append ${PV} since that's what upstream installs to

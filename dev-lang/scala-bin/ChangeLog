@@ -1,6 +1,16 @@
 # ChangeLog for dev-lang/scala-bin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala-bin/ChangeLog,v 1.2 2015/05/18 21:11:24 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/scala-bin/ChangeLog,v 1.5 2015/06/14 18:56:32 monsieurp Exp $
+
+  14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -scala-bin-2.11.4.ebuild,
+  -scala-bin-2.11.5.ebuild:
+  Drop old.
+
+  14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.6.ebuild:
+  Stable for x86 via ALLARCHES. Fix bug 552116.
+
+  14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.6.ebuild:
+  Stable for amd64. Fix bug 552116.
 
   18 May 2015; Patrice Clement <monsieurp@gentoo.org> scala-bin-2.11.4.ebuild:
   Package move from dev-java/scala-bin to dev-lang/scala-bin (mark moved ebuilds
