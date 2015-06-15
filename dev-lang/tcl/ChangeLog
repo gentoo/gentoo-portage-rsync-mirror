@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.220 2015/06/09 14:10:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.221 2015/06/15 09:28:13 jlec Exp $
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> tcl-8.5.17-r100.ebuild:
+  Move blocker into RDEPEND
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml
