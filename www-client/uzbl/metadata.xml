@@ -13,5 +13,7 @@
 		<flag name="gtk3">Use x11-libs/gtk+:3 instead of x11-libs/gtk+:2</flag>
 		<flag name="tabbed">Install the uzbl-tabbed script</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">Dieterbe/uzbl</remote-id>
+	</upstream>
 </pkgmetadata>
-

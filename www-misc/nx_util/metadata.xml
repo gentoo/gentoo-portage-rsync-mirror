@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="google-code">naxsi</remote-id>
+		<remote-id type="github">nbs-system/naxsi</remote-id>
 	</upstream>
 </pkgmetadata>

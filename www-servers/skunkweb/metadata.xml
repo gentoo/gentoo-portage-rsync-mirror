@@ -8,4 +8,7 @@
 		or can be deployed with apache and mod-python. Includes server-side form
 		management libraries (docs in cvs).
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">skunkweb</remote-id>
+	</upstream>
 </pkgmetadata>

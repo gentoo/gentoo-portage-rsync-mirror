@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pandas
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.48 2015/05/15 11:30:51 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pandas/ChangeLog,v 1.49 2015/06/15 20:07:45 jlec Exp $
+
+*pandas-0.16.2 (15 Jun 2015)
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> +pandas-0.16.2.ebuild:
+  Versio Bump
 
 *pandas-0.16.1-r1 (15 May 2015)
 

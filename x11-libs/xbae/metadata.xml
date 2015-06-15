@@ -15,4 +15,7 @@
   In addition the XbaeInput widget is being distributed, a text input field 
   that provides generic customised data entry and formatting for strings.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">xbae</remote-id>
+	</upstream>
 </pkgmetadata>

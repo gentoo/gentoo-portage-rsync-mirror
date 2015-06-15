@@ -7,4 +7,7 @@
 	The main goal of this project is to provide unicode-enabled, embeddable
 	Qt widget for using as a built-in console or terminal emulation widget.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">qterminal/qtermwidget</remote-id>
+	</upstream>
 </pkgmetadata>

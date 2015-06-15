@@ -6,4 +6,7 @@
 		A run utility intended to replace grun or gnome-run. Most prominent
 		features include slim design and bash style auto-completion.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">gmrun</remote-id>
+	</upstream>
 </pkgmetadata>

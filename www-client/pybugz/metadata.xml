@@ -4,4 +4,7 @@
   <maintainer>
     <email>williamh@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">williamh/pybugz</remote-id>
+  </upstream>
 </pkgmetadata>

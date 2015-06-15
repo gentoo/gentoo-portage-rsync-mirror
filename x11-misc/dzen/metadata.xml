@@ -6,4 +6,7 @@
   program for X11. It was designed to be scriptable in any language and
   integrate well with window managers like dwm, wmii and xmonad though it will
   work with any window manager.</longdescription>
+  <upstream>
+    <remote-id type="github">robm/dzen</remote-id>
+  </upstream>
 </pkgmetadata>

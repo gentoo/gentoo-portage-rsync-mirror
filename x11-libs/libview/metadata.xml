@@ -4,5 +4,7 @@
 	<herd>vmware</herd>
 	<longdescription lang="en">
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">view</remote-id>
+	</upstream>
 </pkgmetadata>
-

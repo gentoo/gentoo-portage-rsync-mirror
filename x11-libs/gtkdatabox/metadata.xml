@@ -8,6 +8,9 @@
 	</maintainer>
 	<longdescription>Gtk+ Widgets for live display fluctuating numerical data</longdescription>
 	<use>
-		<flag name='glade'>Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget</flag>
+		<flag name="glade">Build with libglade and glade-3 supports, which includes a glade's module for GtkDataBox widget</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">gtkdatabox</remote-id>
+	</upstream>
 </pkgmetadata>

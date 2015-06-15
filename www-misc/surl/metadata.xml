@@ -5,5 +5,7 @@
 		<email>wired@gentoo.org</email>
 		<name>Alex Alexander</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="launchpad">surl</remote-id>
+	</upstream>
 </pkgmetadata>
-

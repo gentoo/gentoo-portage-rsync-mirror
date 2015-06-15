@@ -5,4 +5,7 @@
 		<email>nikoli@gmx.us</email>
 	</maintainer>
 	<herd>proxy-maintainers</herd>
+	<upstream>
+		<remote-id type="github">clbr/radeontop</remote-id>
+	</upstream>
 </pkgmetadata>

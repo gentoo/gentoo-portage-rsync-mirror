@@ -23,5 +23,6 @@
   </use>
   <upstream>
     <changelog>http://nginx.org/en/CHANGES</changelog>
+    <remote-id type="github">yaoweibin/nginx_ajp_module</remote-id>
   </upstream>
 </pkgmetadata>

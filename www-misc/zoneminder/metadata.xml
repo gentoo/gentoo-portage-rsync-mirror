@@ -11,4 +11,7 @@
 		<flag name="vlc">Enable using media-libs/vlc for streaming from cameras</flag>
 		<flag name="openssl">...</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">ZoneMinder/ZoneMinder</remote-id>
+	</upstream>
 </pkgmetadata>

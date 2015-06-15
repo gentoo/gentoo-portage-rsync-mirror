@@ -5,4 +5,7 @@
 		<email>ryao@gentoo.org</email>
 		<name>Richard Yao</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="launchpad">pipelight</remote-id>
+	</upstream>
 </pkgmetadata>

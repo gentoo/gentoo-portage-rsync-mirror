@@ -10,4 +10,7 @@
 		should make luakit faster.</flag>
 		<flag name="pax_kernel">Use paxctl to mark the luakit binary.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">mason-larobina/luakit</remote-id>
+	</upstream>
 </pkgmetadata>

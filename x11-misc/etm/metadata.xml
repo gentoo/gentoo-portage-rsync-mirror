@@ -15,5 +15,7 @@
 		<flag name="ical">Enable export of ical format files by depending on
 			<pkg>dev-python/icalendar</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">etmeventandtask</remote-id>
+	</upstream>
 </pkgmetadata>
-

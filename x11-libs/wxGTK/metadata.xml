@@ -19,4 +19,7 @@
 			audio.
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">wxpython</remote-id>
+	</upstream>
 </pkgmetadata>

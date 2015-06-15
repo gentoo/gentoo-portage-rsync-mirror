@@ -12,4 +12,7 @@
   <use>
     <flag name="mathml">Use the MathML renderer of the Qt solutions package.</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">qwt</remote-id>
+  </upstream>
 </pkgmetadata>

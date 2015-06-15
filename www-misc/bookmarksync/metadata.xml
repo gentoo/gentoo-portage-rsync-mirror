@@ -9,4 +9,7 @@
 		and types. It preserves current bookmark structures and sorts in new
 		ones correctly in existing directorys or create new one if necessary.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">booksync</remote-id>
+	</upstream>
 </pkgmetadata>

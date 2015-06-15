@@ -6,4 +6,7 @@
     QwtPlot3D isa feature-rich Qt/OpenGL-based C++ programming library,
 	providing essentially a  bunch of 3D-widgets for programmers.
   </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">qwtplot3d</remote-id>
+	</upstream>
 </pkgmetadata>
