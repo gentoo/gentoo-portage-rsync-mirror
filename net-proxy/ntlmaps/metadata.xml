@@ -9,4 +9,7 @@
 		implements samba-like ntlm authentication against a Microsoft Proxy
 		Server (which does not support 'normal' digest authentication).
 	</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">ntlmaps</remote-id>
+  </upstream>
 </pkgmetadata>

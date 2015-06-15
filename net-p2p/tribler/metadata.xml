@@ -10,6 +10,9 @@
 		website or indexing service to discover content.
 	</longdescription>
 	<use>
-		<flag name='vlc'>Enable vlc support.</flag>
+		<flag name="vlc">Enable vlc support.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">Tribler/tribler</remote-id>
+	</upstream>
 </pkgmetadata>

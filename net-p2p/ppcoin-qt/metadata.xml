@@ -6,6 +6,9 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
-		<flag name='qrcode'>Enable generation of QR Codes for receiving payments</flag>
+		<flag name="qrcode">Enable generation of QR Codes for receiving payments</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">ppcoin</remote-id>
+	</upstream>
 </pkgmetadata>

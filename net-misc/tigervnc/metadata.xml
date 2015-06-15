@@ -8,4 +8,7 @@
     <flag name="server">Build TigerVNC server</flag>
     <flag name="xorgmodule">Build the Xorg module</flag>
   </use>
+  <upstream>
+    <remote-id type="github">TigerVNC/tigervnc</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -10,4 +10,7 @@ wol implements Wake On LAN functionality in a small program. It wakes up hardwar
 Consider you have a sleeping or turned-off computer and you want to remotely wake him up. Just type
 "wol MAC-ADDRESS" and the host wakes up (OK, it will boot ;-).
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">ahh</remote-id>
+  </upstream>
 </pkgmetadata>

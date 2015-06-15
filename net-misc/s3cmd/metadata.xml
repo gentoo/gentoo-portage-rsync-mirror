@@ -14,4 +14,7 @@
   <longdescription>
     Command line client for Amazon S3.
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">s3tools</remote-id>
+  </upstream>
 </pkgmetadata>

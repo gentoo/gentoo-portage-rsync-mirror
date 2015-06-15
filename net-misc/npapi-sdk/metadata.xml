@@ -10,4 +10,7 @@
 		<email>anarchy@gentoo.org</email>
 		<name>Jory A. Pratt</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="bitbucket">mgorny/npapi-sdk</remote-id>
+	</upstream>
 </pkgmetadata>

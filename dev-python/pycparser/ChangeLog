@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycparser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.38 2015/06/07 15:23:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycparser/ChangeLog,v 1.39 2015/06/15 18:03:11 jlec Exp $
+
+*pycparser-2.14 (15 Jun 2015)
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> +pycparser-2.14.ebuild:
+  Version Bump
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

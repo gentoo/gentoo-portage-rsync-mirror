@@ -10,4 +10,7 @@
 		<flag name="unzip">Add support for extracting zip files</flag>
 		<flag name="yenc">Use yenc to speed up nntp encoding and decoding</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">sabnzbdplus</remote-id>
+	</upstream>
 </pkgmetadata>

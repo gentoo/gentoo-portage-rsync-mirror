@@ -10,4 +10,7 @@
     <flag name="guionly">enable client build only</flag>
     <flag name="magic">enable use of libmagic</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">mldonkey</remote-id>
+  </upstream>
 </pkgmetadata>

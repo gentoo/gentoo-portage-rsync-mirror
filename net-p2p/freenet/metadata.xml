@@ -5,5 +5,7 @@
 		<email>tommy@gentoo.org</email>
 		<name>Thomas Sachau (Tommy[D])</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">freenet/fred</remote-id>
+	</upstream>
 </pkgmetadata>
-

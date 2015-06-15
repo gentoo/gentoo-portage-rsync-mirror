@@ -5,4 +5,7 @@
 		<email>wired@gentoo.org</email>
 		<name>Alex Alexander</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">wput</remote-id>
+	</upstream>
 </pkgmetadata>

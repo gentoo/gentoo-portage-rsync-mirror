@@ -11,4 +11,7 @@
 	  platforms. Publish your original content to the world without
 	  setting up a website!
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">frostwire</remote-id>
+	</upstream>
 </pkgmetadata>

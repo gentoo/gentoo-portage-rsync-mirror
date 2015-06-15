@@ -8,4 +8,7 @@
     <flag name="gnutella">pull in Gnutella plugin</flag>
     <flag name="openft">pull in OpenFT plugin</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">gift</remote-id>
+  </upstream>
 </pkgmetadata>

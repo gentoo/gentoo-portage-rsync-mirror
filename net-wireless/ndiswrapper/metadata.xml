@@ -9,4 +9,7 @@
 		implementing the Windows(tm) NDIS API. This serves to provide drivers
 		for wireless cards that have no native support.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">ndiswrapper</remote-id>
+	</upstream>
 </pkgmetadata>

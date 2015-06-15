@@ -2,5 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>base-system</herd>
+  <upstream>
+    <remote-id type="github">ago/pps-tools</remote-id>
+  </upstream>
 </pkgmetadata>
-

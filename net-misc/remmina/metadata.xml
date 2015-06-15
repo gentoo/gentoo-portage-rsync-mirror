@@ -11,4 +11,7 @@
 		<flag name="telepathy">Enable telepathy support</flag>
 		<flag name="vte">Enable virtual terminal support (for SSH sessions)</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">FreeRDP/Remmina</remote-id>
+	</upstream>
 </pkgmetadata>

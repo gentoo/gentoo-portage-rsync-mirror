@@ -6,4 +6,7 @@
 		<email>brendan@horan.hk</email>
 		<name>Brendan Horan</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">ser2net</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -8,6 +8,9 @@
     <name>Markos Chandras</name>
   </maintainer>
   <use>
-    <flag name='webui'>Enable the Web UI</flag>
+    <flag name="webui">Enable the Web UI</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">qbittorrent</remote-id>
+  </upstream>
 </pkgmetadata>

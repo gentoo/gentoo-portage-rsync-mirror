@@ -13,4 +13,7 @@
     <name>Jesse Farinacci</name>
     <description>Maintainer by proxy, please CC on all bugs.</description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">x3270</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
     <email>flameeyes@gentoo.org</email>
     <description>Co-maintainer, not trying to call for exclusive</description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">c-icap</remote-id>
+  </upstream>
 </pkgmetadata>

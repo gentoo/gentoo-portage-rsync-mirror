@@ -9,4 +9,7 @@
 		<email>pinkbyte@gentoo.org</email>
 		<name>Sergey Popov</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">zssh</remote-id>
+	</upstream>
 </pkgmetadata>

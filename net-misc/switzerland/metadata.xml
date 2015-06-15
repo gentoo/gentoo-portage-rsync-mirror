@@ -8,5 +8,7 @@
 		packets which are forged or modified between clients, inform you, and
 		give you copies of the modified packets.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">switzerland</remote-id>
+	</upstream>
 </pkgmetadata>
-

@@ -15,5 +15,7 @@
 		<flag name="ubertooth0-firmware">Build/install ubertooth0-firmware</flag>
 		<flag name="ubertooth1-firmware">Build/install ubertooth1-firmware</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">greatscottgadgets/ubertooth</remote-id>
+	</upstream>
 </pkgmetadata>
-

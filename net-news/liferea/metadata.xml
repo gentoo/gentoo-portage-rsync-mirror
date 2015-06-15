@@ -15,8 +15,11 @@
 	based on gnome and xulrunner/webkit.
 	</longdescription>
 	<use>
-		<flag name='libnotify'>
+		<flag name="libnotify">
 			Enable popup notifications
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">liferea</remote-id>
+	</upstream>
 </pkgmetadata>

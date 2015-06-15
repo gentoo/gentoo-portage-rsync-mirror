@@ -4,4 +4,7 @@
   <maintainer>
     <email>caster@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">omniorb</remote-id>
+  </upstream>
 </pkgmetadata>

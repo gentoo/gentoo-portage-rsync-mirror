@@ -7,4 +7,7 @@
   </maintainer>
   <longdescription lang="en">
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">airpwn</remote-id>
+  </upstream>
 </pkgmetadata>

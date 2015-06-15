@@ -3,15 +3,18 @@
 <pkgmetadata>
 	<herd>net-news</herd>
 	<maintainer>
-		 <email>swegener@gentoo.org</email>
-		 <name>Sven Wegener</name>
+		<email>swegener@gentoo.org</email>
+		<name>Sven Wegener</name>
 	</maintainer>
 	<maintainer>
-		 <email>radhermit@gentoo.org</email>
-		 <name>Tim Harder</name>
+		<email>radhermit@gentoo.org</email>
+		<name>Tim Harder</name>
 	</maintainer>
 	<longdescription>A command-line based binary newsgrabber supporting .nzb files.</longdescription>
 	<use>
-		<flag name='parcheck'>Enable support for checking PAR archives</flag>
+		<flag name="parcheck">Enable support for checking PAR archives</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">nzbget</remote-id>
+	</upstream>
 </pkgmetadata>

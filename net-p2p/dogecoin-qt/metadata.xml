@@ -10,6 +10,9 @@
 		Dogecoin is a scrypt-based alternative to Bitcoin.
 	</longdescription>
 	<use>
-		<flag name='qrcode'>Enable generation of QR Codes for receiving payments</flag>
+		<flag name="qrcode">Enable generation of QR Codes for receiving payments</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">dogecoin/dogecoin</remote-id>
+	</upstream>
 </pkgmetadata>

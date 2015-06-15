@@ -19,4 +19,7 @@
       Download and install the ufdbguard reference manual in PDF.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">ufdbguard</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -22,4 +22,7 @@
 		<flag name="static-ppds">Use statically-generated PPDs instead of Dynamic PPDs. Although this is deprecated some printers may still need it to work properly. Use this flag if hp-setup fails to find/create a valid PPD file</flag>
 		<flag name="X">Enables scanner GUI dependencies with USE="scanner" where <pkg>media-gfx/xsane</pkg> is preferred over <pkg>media-gfx/sane-frontends</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">hplip</remote-id>
+	</upstream>
 </pkgmetadata>

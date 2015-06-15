@@ -10,4 +10,7 @@
 		which forwards incoming TCP connections and/or UDP packets to remote
 		hosts.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">portfwd</remote-id>
+	</upstream>
 </pkgmetadata>

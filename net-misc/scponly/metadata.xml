@@ -2,7 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	<email>maintainer-needed@gentoo.org</email>
+		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription lang="en">
 		scponly is an alternative 'shell' (of sorts) for system administrators
@@ -24,4 +24,7 @@
 		<flag name="logging">Enables SFTP logging compatibility</flag>
 		<flag name="wildcards">Enables wildcard processing with potential security risks</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">scponly</remote-id>
+	</upstream>
 </pkgmetadata>
