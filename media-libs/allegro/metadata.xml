@@ -16,4 +16,7 @@ and a GUI.
     <flag name="physfs">Enable physfs support</flag>
     <flag name="vga">Enables the VGA graphics driver</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">alleg</remote-id>
+  </upstream>
 </pkgmetadata>

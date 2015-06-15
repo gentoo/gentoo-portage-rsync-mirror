@@ -8,4 +8,7 @@
 	<use>
 		<flag name="ogm">Support for OGM container format</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">h264enc</remote-id>
+	</upstream>
 </pkgmetadata>

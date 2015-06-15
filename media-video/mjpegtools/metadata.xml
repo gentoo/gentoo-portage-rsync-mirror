@@ -9,5 +9,8 @@
 	</maintainer>
 	<use>
 		<flag name="sdlgfx">Enables y4mhist to display a graphical histogram</flag>
-	</use> 
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">mjpeg</remote-id>
+	</upstream>
 </pkgmetadata>

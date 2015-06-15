@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/dom4j
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.69 2015/06/15 15:13:36 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.70 2015/06/15 16:53:53 monsieurp Exp $
+
+*dom4j-1.6.1-r3 (15 Jun 2015)
+
+  15 Jun 2015; Patrice Clement <monsieurp@gentoo.org> +dom4j-1.6.1-r3.ebuild:
+  Revert previous commit to satisfy jaxen revert dependency for ia64 platform.
 
   15 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -dom4j-1.6.1-r3.ebuild:
   Remove old.

@@ -3,14 +3,17 @@
 <pkgmetadata>
 	<herd>graphics</herd>
 	<use>
-		<flag name='contrast'>
+		<flag name="contrast">
 			enable contrast setting option
 		</flag>
-		<flag name='fits'>
+		<flag name="fits">
 			Enable support for the FITS image format through <pkg>sci-libs/cfitsio</pkg>
 		</flag>
-		<flag name='timezone'>
+		<flag name="timezone">
 			enable DST correction for file timestamps
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">ufraw</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -8,4 +8,7 @@
   <use>
     <flag name="themes">Install theme pack</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">dvd-slideshow</remote-id>
+  </upstream>
 </pkgmetadata>

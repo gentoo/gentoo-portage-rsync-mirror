@@ -6,5 +6,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="rubyforge">ruby-elf</remote-id>
+		<remote-id type="github">Flameeyes/ruby-elf</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -14,5 +14,6 @@
 	</use>
 	<upstream>
 		<remote-id type="google-code">clive</remote-id>
+		<remote-id type="sourceforge">clive</remote-id>
 	</upstream>
 </pkgmetadata>

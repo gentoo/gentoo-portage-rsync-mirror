@@ -4,6 +4,9 @@
   <herd>video</herd>
   <maintainer>
     <email>hwoarang@gentoo.org</email>
-  	<name>Markos Chandras</name>
+    <name>Markos Chandras</name>
   </maintainer>
+  <upstream>
+    <remote-id type="launchpad">griffith</remote-id>
+  </upstream>
 </pkgmetadata>

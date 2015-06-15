@@ -16,4 +16,7 @@
     field, raytracing, scan-line rendering, occlusion culling, global
     illumination, caustics ...
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">pixie</remote-id>
+  </upstream>
 </pkgmetadata>

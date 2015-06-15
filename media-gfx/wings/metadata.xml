@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>graphics</herd>
-<longdescription>
+	<herd>graphics</herd>
+	<longdescription>
 Wings 3D is a polygon mesh modeler inspired by Nendo and 
 Mirai from Izware.
 
@@ -12,4 +12,7 @@ in those features before Wings goes 1.0.
 
 There is no support in Wings for doing animations.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">wings</remote-id>
+	</upstream>
 </pkgmetadata>

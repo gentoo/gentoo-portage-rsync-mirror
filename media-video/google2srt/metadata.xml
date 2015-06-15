@@ -9,6 +9,9 @@
 		do the rest.
 	</longdescription>
 	<use>
-		<flag name='html'>Install HTML documentation</flag>
+		<flag name="html">Install HTML documentation</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">google2srt</remote-id>
+	</upstream>
 </pkgmetadata>

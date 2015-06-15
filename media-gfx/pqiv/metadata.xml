@@ -3,9 +3,10 @@
 <pkgmetadata>
   <herd>graphics</herd>
   <upstream>
-  <maintainer>
-    <email>phillip.berndt@googlemail.com</email>
-    <name>Phillip Berndt</name>
-  </maintainer>
+    <maintainer>
+      <email>phillip.berndt@googlemail.com</email>
+      <name>Phillip Berndt</name>
+    </maintainer>
+    <remote-id type="github">phillipberndt/pqiv</remote-id>
   </upstream>
 </pkgmetadata>

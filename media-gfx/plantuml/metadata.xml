@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-	<email>pva@gentoo.org</email>
-	<name>Peter Volkov</name>
+		<email>pva@gentoo.org</email>
+		<name>Peter Volkov</name>
 	</maintainer>
 	<herd>java</herd>
 	<longdescription lang="en">
@@ -16,4 +16,7 @@
 	or SVG format. It is also possible to generate ASCII art diagrams (only for
 	sequence diagrams).
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">plantuml</remote-id>
+	</upstream>
 </pkgmetadata>

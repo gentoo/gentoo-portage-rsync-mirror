@@ -4,8 +4,11 @@
   <herd>tex</herd>
   <herd>printing</herd>
   <use>
-    <flag name='emf'>Enable <pkg>media-libs/libemf</pkg> support</flag>
-    <flag name='flash'>Enable <pkg>media-libs/ming</pkg> SWF support</flag>
-    <flag name='pptx'>Enable support for generating PowerPoint pptx files</flag>
+    <flag name="emf">Enable <pkg>media-libs/libemf</pkg> support</flag>
+    <flag name="flash">Enable <pkg>media-libs/ming</pkg> SWF support</flag>
+    <flag name="pptx">Enable support for generating PowerPoint pptx files</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">pstoedit</remote-id>
+  </upstream>
 </pkgmetadata>
