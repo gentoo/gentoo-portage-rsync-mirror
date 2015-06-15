@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.7 2015/06/11 07:17:46 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pillow/pillow-2.8.1.ebuild,v 1.8 2015/06/15 08:14:18 jlec Exp $
 
 EAPI=5
 
@@ -46,6 +46,8 @@ S="${WORKDIR}/${MY_P}"
 
 # See _render and _clean in Tests/test_imagefont.py
 DISTUTILS_IN_SOURCE_BUILD=1
+
+PATCHES=( "${FILESDIR}"/${P}-ico-backport.patch )
 
 python_prepare_all() {
 	# Disable all the stuff we don't want.
