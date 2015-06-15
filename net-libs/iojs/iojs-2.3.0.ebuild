@@ -24,8 +24,8 @@ RDEPEND="icu? ( dev-libs/icu )
 	${PYTHON_DEPS}
 	!bundled-libs? (
 		>=net-libs/http-parser-2.5
-		>=dev-libs/libuv-1.5.0
-		>=dev-libs/openssl-1.0.2a[-bindist]
+		>=dev-libs/libuv-1.6.1
+		>=dev-libs/openssl-1.0.2c[-bindist]
 	)"
 DEPEND="${RDEPEND}
 	!!net-libs/nodejs"
