@@ -5,4 +5,7 @@
   <use>
     <flag name="cli">Build commandline client</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">qtscrob</remote-id>
+  </upstream>
 </pkgmetadata>

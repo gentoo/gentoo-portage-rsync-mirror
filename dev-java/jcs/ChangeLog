@@ -1,6 +1,19 @@
 # ChangeLog for dev-java/jcs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.29 2015/06/15 09:54:25 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/ChangeLog,v 1.33 2015/06/15 15:51:24 monsieurp Exp $
+
+  15 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -jcs-1.2.7.9-r1.ebuild,
+  -jcs-1.3-r1.ebuild:
+  Remove vulnerable versions. Fix security bug 385811.
+
+  15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> jcs-2.0.ebuild:
+  Stable for ppc, wrt bug #551992
+
+  15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> jcs-2.0.ebuild:
+  Stable for x86, wrt bug #551992
+
+  15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> jcs-2.0.ebuild:
+  Stable for amd64, wrt bug #551992
 
   15 Jun 2015; Patrice Clement <monsieurp@gentoo.org> jcs-2.0.ebuild:
   Update xmlrpc dependency to xmlrpc:3 wrt to bug 521736. Drop ppc.

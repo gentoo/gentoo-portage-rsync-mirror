@@ -11,4 +11,7 @@
 		<flag name="quodlibet">Enables support for editing <pkg>media-sound/quodlibet</pkg> databases</flag>
 		<flag name="acoustid">Use <pkg>media-libs/chromaprint</pkg> for acoustic fingerprinting</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">puddletag</remote-id>
+	</upstream>
 </pkgmetadata>

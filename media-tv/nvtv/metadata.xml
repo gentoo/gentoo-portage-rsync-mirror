@@ -7,4 +7,7 @@
 		<name>media-tv</name>
 	</maintainer>
 	<longdescription>TV-Out for NVidia cards</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">nv-tv-out</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -15,5 +15,6 @@
     Musepack, and MOD.</longdescription>
 	<upstream>
 		<remote-id type="google-code">quodlibet</remote-id>
+		<remote-id type="github">quodlibet/quodlibet</remote-id>
 	</upstream>
 </pkgmetadata>

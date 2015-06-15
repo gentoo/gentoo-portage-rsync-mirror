@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">tvnamer</remote-id>
+    <remote-id type="github">dbr/tvnamer</remote-id>
   </upstream>
 </pkgmetadata>

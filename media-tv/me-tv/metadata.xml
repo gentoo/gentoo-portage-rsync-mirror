@@ -12,4 +12,7 @@ Me TV works with DVB-T, DVB-S, DVB-C and ATSC devices that are supported by Linu
   <use>
     <flag name="http">Installation of Web-frontend</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">me-tv</remote-id>
+  </upstream>
 </pkgmetadata>

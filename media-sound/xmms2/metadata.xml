@@ -44,4 +44,7 @@
 		<flag name="mlib-update">Enable building of xmms2-mlib-updater client</flag>
 		<flag name="xml">Enable support for various XML based playlists and sources: RSS, XSPF</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">xmms2</remote-id>
+	</upstream>
 </pkgmetadata>

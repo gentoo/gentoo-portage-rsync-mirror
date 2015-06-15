@@ -34,4 +34,7 @@
     <flag name="uk_rt">Britain alternative tv listing grabber</flag>
     <flag name="za">South Africa tv listing grabber</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">xmltv</remote-id>
+  </upstream>
 </pkgmetadata>

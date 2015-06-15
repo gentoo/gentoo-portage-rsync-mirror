@@ -6,4 +6,7 @@
     <flag name="dssi">Enable support for DSSI Soft Synth Interface</flag>
     <flag name="rubberband">Enable support for in-place audio clip pitch-shifting through the rubberband library</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">qtractor</remote-id>
+  </upstream>
 </pkgmetadata>

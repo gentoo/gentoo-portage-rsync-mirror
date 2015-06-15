@@ -9,5 +9,7 @@
 	<use>
 		<flag name="boost">Use boost instead of C++11 libraries</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">vimpc</remote-id>
+	</upstream>
 </pkgmetadata>
-

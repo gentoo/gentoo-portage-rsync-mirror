@@ -9,5 +9,6 @@ A set of Python modules and utility programmes to deal with Replay Gain informat
 	</longdescription>
   <upstream>
     <remote-id type="pypi">rgain</remote-id>
+    <remote-id type="bitbucket">fk/rgain</remote-id>
   </upstream>
 </pkgmetadata>

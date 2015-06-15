@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="google-code">spek</remote-id>
+		<remote-id type="github">alexkay/spek</remote-id>
 	</upstream>
 </pkgmetadata>

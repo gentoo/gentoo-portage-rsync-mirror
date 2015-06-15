@@ -6,4 +6,7 @@
 		<email>billie@gentoo.org</email>
 		<name>Daniel Pielmeier</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">channeleditor</remote-id>
+	</upstream>
 </pkgmetadata>

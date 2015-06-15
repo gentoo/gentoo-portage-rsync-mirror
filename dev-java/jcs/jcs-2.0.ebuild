@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-2.0.ebuild,v 1.2 2015/06/15 09:54:25 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-2.0.ebuild,v 1.5 2015/06/15 15:44:51 ago Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="test doc source"
@@ -16,7 +16,7 @@ SRC_URI="http://apache.mirrors.ovh.net/ftp.apache.org/dist/commons/${PN}/source/
 
 LICENSE="Apache-2.0"
 SLOT="2.0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 ppc x86"
 IUSE="admin"
 
 CDEPEND="dev-java/jisp:2.5

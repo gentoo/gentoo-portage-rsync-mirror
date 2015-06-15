@@ -4,4 +4,7 @@
 	<maintainer>
 		<email>perfinion@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">subsonic</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -6,4 +6,7 @@
     <email>angelos@gentoo.org</email>
     <name>Christoph Mende</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">quimup</remote-id>
+  </upstream>
 </pkgmetadata>
