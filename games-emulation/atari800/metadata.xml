@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 Atari800 is an Atari 800, 800XL, 130XE and 5200 emulator for Unix, Amiga, MS-DOS, Atari 
 TT/Falcon, SDL and WinCE. Our main objective is to create a freely distributable portable 
 emulator (i.e. with source code available). It can be configured to run in the following 
@@ -20,4 +20,7 @@ ways :
     * WinCE
     * MacOS X
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">atari800</remote-id>
+  </upstream>
 </pkgmetadata>

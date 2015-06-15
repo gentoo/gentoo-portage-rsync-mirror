@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+  <herd>games</herd>
+  <longdescription>
 Hello, and welcome to the Freedroid page.
 
 THE CLASSICAL FREEDROID: Freedroid is a clone of the classic game
@@ -45,4 +45,7 @@ classical version are as follows:
    as for the classical version.  I'd like to appologize to all 56K modem
    owners at this point. 
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">freedroid</remote-id>
+  </upstream>
 </pkgmetadata>

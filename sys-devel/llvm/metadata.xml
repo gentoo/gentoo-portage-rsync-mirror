@@ -19,6 +19,7 @@
 		<flag name='cmake'>Enable cmake support (experimental)</flag>
 		<flag name='doc'>Build and install the HTML documentation and regenerate the man pages</flag>
 		<flag name='gold'>Build the gold linker plugin</flag>
+		<flag name='lldb'>Build the lldb debugger</flag>
 		<flag name='llvm-gcc'>Build LLVM with <pkg>sys-devel/llvm-gcc</pkg></flag>
 		<flag name='multitarget'>Build all host targets (default: host only)</flag>
 		<flag name='ncurses'>Support querying terminal properties using ncurses' terminfo</flag>

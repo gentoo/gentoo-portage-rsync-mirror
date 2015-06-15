@@ -5,5 +5,7 @@
 	<use>
 		<flag name="devtools">Build development tools</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">freesynd</remote-id>
+	</upstream>
 </pkgmetadata>
-

@@ -7,4 +7,7 @@
     <flag name="remix">download and install music remix files (large)</flag>
     <flag name="voice">download and install voice files (large)</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">sc2</remote-id>
+  </upstream>
 </pkgmetadata>

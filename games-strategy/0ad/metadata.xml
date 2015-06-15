@@ -14,4 +14,7 @@
 			via <pkg>media-gfx/nvidia-texture-tools</pkg>
 			(might be needed for some mods)</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">zero-ad</remote-id>
+	</upstream>
 </pkgmetadata>

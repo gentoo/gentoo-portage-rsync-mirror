@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>games</herd>
+	<upstream>
+		<remote-id type="launchpad">wargus</remote-id>
+	</upstream>
 </pkgmetadata>

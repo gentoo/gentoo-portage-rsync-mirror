@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription lang="en">
+	<herd>games</herd>
+	<longdescription lang="en">
 GalaxyHack allows you to design a fleet of spaceships which can then be tested
 in AI script based battles against fleets designed by other players. Though
 battles take place in real time, the strategy comes before hand, both in
@@ -20,4 +20,7 @@ capital ships before they destroy yours.
 There can be hundreds of units in any one battle, but there is no harvesting,
 resource management or base building.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">galaxyhack</remote-id>
+	</upstream>
 </pkgmetadata>

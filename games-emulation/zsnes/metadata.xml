@@ -3,7 +3,10 @@
 <pkgmetadata>
   <herd>games</herd>
   <use>
-    <flag name='debug'>Enable the builtin debugger</flag>
-    <flag name='pax_kernel'>Triggers a paxmarking of the binary</flag>
+    <flag name="debug">Enable the builtin debugger</flag>
+    <flag name="pax_kernel">Triggers a paxmarking of the binary</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">zsnes</remote-id>
+  </upstream>
 </pkgmetadata>

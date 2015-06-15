@@ -5,4 +5,7 @@
   <use>
     <flag name="cheats">Enable cheating mode</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">kqlives</remote-id>
+  </upstream>
 </pkgmetadata>

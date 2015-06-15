@@ -7,4 +7,7 @@
 		<flag name="server">Build server target</flag>
 		<flag name="pax_kernel">Triggers a paxmarking of the binary</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">Barbatos/ioq3-for-UrbanTerror-4</remote-id>
+	</upstream>
 </pkgmetadata>

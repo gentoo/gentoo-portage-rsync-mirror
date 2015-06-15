@@ -18,4 +18,7 @@
 		<flag name="system-lua">Use <pkg>dev-lang/lua</pkg> instead of
 			the bundled liblua</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">freeciv</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>games</herd>
 	<use>
-		<flag name='server'>Compile server support</flag>
+		<flag name="server">Compile server support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">sauerbraten</remote-id>
+	</upstream>
 </pkgmetadata>

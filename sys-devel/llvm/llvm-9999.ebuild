@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.116 2015/06/13 20:51:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.117 2015/06/15 12:52:14 voyageur Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ EGIT_REPO_URI="http://llvm.org/git/llvm.git
 LICENSE="UoI-NCSA"
 SLOT="0/${PV}"
 KEYWORDS=""
-IUSE="clang debug doc gold libedit +libffi multitarget ncurses ocaml
+IUSE="clang debug +doc gold libedit +libffi lldb multitarget ncurses ocaml
 	python +static-analyzer test xml video_cards_radeon kernel_Darwin"
 
 COMMON_DEPEND="
@@ -54,6 +54,7 @@ DEPEND="${COMMON_DEPEND}
 	clang? ( xml? ( virtual/pkgconfig ) )
 	doc? ( dev-python/sphinx )
 	libffi? ( virtual/pkgconfig )
+	lldb? ( dev-lang/swig )
 	!!<dev-python/configparser-3.3.0.2
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
@@ -65,7 +66,8 @@ PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
 # pypy gives me around 1700 unresolved tests due to open file limit
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
-	test? ( || ( $(python_gen_useflags 'python*') ) )"
+	test? ( || ( $(python_gen_useflags 'python*') ) )
+	lldb? ( clang )"
 
 pkg_pretend() {
 	# in megs
@@ -128,6 +130,10 @@ src_unpack() {
 		git-r3_fetch "http://llvm.org/git/clang-tools-extra.git
 			https://github.com/llvm-mirror/clang-tools-extra.git"
 	fi
+	if use lldb; then
+		git-r3_fetch "http://llvm.org/git/lldb.git
+			https://github.com/llvm-mirror/lldb.git"
+	fi
 	git-r3_fetch
 
 	if use clang; then
@@ -137,6 +143,10 @@ src_unpack() {
 			"${S}"/tools/clang
 		git-r3_checkout http://llvm.org/git/clang-tools-extra.git \
 			"${S}"/tools/clang/tools/extra
+	fi
+	if use lldb; then
+		git-r3_checkout http://llvm.org/git/lldb.git \
+			"${S}"/tools/lldb
 	fi
 	git-r3_checkout
 }
@@ -176,6 +186,13 @@ src_prepare() {
 		# (that is used only to find LLVMgold.so)
 		# https://llvm.org/bugs/show_bug.cgi?id=23793
 		epatch "${FILESDIR}"/cmake/clang-0002-cmake-Make-CLANG_LIBDIR_SUFFIX-overridable.patch
+	fi
+
+	if use lldb; then
+		# Do not install dummy readline.so module from
+		# https://llvm.org/bugs/show_bug.cgi?id=18841
+		sed -e 's/add_subdirectory(readline)/#&/' \
+			-i tools/lldb/scripts/Python/modules/CMakeLists.txt || die
 	fi
 
 	# User patches
@@ -226,6 +243,10 @@ multilib_src_configure() {
 		-DFFI_LIBRARY_DIR="${ffi_ldflags#-L}"
 
 		-DHAVE_HISTEDIT_H=$(usex libedit)
+
+		-DLLDB_DISABLE_LIBEDIT=$(usex libedit 0 1)
+		-DLLDB_DISABLE_CURSES=$(usex libedit 0 1)
+		-DLLDB_ENABLE_TERMINFO=$(usex ncurses)
 	)
 
 	if ! multilib_is_native_abi || ! use ocaml; then
@@ -260,6 +281,13 @@ multilib_src_configure() {
 				-DLLVM_BINUTILS_INCDIR="${EPREFIX}"/usr/include
 			)
 		fi
+
+		if use lldb; then
+			mycmakeargs+=(
+				-DLLDB_DISABLE_PYTHON=$(usex python 0 1)
+			)
+		fi
+
 	else
 		if use clang; then
 			mycmakeargs+=(
@@ -269,6 +297,12 @@ multilib_src_configure() {
 				# it multiple times
 				-DLLVM_EXTERNAL_COMPILER_RT_BUILD=OFF
 				-DLLVM_EXTERNAL_CLANG_TOOLS_EXTRA_BUILD=OFF
+			)
+		fi
+		if use lldb; then
+			mycmakeargs+=(
+				# only run swig on native abi
+				-DLLDB_DISABLE_PYTHON=ON
 			)
 		fi
 	fi

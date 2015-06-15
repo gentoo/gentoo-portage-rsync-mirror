@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.251 2015/06/14 17:56:07 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.252 2015/06/15 12:52:14 voyageur Exp $
+
+  15 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild,
+  metadata.xml:
+  Add initial support for lldb debugger, bug #464354. Also enable USE=doc by
+  default for live ebuild, useful if you want the man pages
 
   14 Jun 2015; Michał Górny <mgorny@gentoo.org>
   +files/clang-3.6-fbsd-gcc49.patch, llvm-3.6.1.ebuild:

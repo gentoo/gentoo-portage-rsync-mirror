@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+	<herd>games</herd>
+	<longdescription>
 AdvanceMAME and AdvanceMESS are unofficial MAME and MESS versions with an advanced video support for 
 helping the use with TVs, Arcade Monitors, Fixed Frequencies Monitors and also for PC Monitors.
 
@@ -15,4 +15,7 @@ Generally the Advance emulators are able to use a video mode which doesn't requi
 unneeded effects to match the original arcade display. When the stretching is required by hardware 
 limitations you can anyway choice from different types of stretch.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">advancemame</remote-id>
+	</upstream>
 </pkgmetadata>

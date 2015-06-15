@@ -13,4 +13,7 @@
 		is like to develop. Versions 1.0.5 and above are complete
 		and working.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">JPMoresmau/MazesOfMonad</remote-id>
+	</upstream>
 </pkgmetadata>

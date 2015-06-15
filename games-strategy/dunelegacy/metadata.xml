@@ -3,7 +3,8 @@
 <pkgmetadata>
 	<herd>games</herd>
 	<upstream>
-        <bugs-to>http://sourceforge.net/apps/mediawiki/dunelegacy/index.php?title=Development/Reporting_Bugs</bugs-to>
+		<bugs-to>http://sourceforge.net/apps/mediawiki/dunelegacy/index.php?title=Development/Reporting_Bugs</bugs-to>
+		<remote-id type="sourceforge">dunelegacy</remote-id>
 	</upstream>
 	<longdescription lang="en">
 		Dune Legacy is an effort by a handful of developers to revitalize
@@ -19,4 +20,3 @@
 		other houses to stop your harvesting! 
 	</longdescription>
 </pkgmetadata>
-

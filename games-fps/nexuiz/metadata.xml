@@ -5,4 +5,7 @@
   <use>
     <flag name="maps">Install the community map pack</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">nexuiz</remote-id>
+  </upstream>
 </pkgmetadata>

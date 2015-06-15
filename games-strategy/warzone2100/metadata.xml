@@ -11,4 +11,7 @@
 	technologies, combined with the unit design system, allows for
 	a wide variety of possible units and tactics.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">warzone2100</remote-id>
+	</upstream>
 </pkgmetadata>

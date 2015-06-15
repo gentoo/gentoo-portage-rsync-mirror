@@ -4,6 +4,9 @@
   <herd>games</herd>
   <use>
     <flag name="extra-cardsets">Install extra cardsets</flag>
-	<flag name="sound">Enable sound support using <pkg>dev-python/pygame</pkg></flag>
+    <flag name="sound">Enable sound support using <pkg>dev-python/pygame</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">pysolfc</remote-id>
+  </upstream>
 </pkgmetadata>

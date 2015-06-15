@@ -9,4 +9,7 @@
 		<email>joker@gentoo.org</email>
 		<name>Christian Birchinger</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">m64py</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
   <use>
     <flag name="maps">Install extra maps (PadPack)</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">worldofpadman</remote-id>
+  </upstream>
 </pkgmetadata>

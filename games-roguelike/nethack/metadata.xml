@@ -7,4 +7,7 @@
     <name>Luis Ressel</name>
     <description>Maintainer</description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">nethack</remote-id>
+  </upstream>
 </pkgmetadata>

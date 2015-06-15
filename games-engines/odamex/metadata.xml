@@ -18,6 +18,7 @@
 		<changelog>http://odamex.net/changelog.php</changelog>
 		<doc lang="en">http://odamex.net/wiki/Odamex</doc>
 		<bugs-to>http://odamex.net/bugs/</bugs-to>
+		<remote-id type="sourceforge">odamex</remote-id>
 	</upstream>
 	<longdescription lang="en">
 		Odamex is a free and open source port for the classic
@@ -29,4 +30,3 @@
 		on almost any platform. 
 	</longdescription>
 </pkgmetadata>
-

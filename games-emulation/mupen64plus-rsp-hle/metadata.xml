@@ -9,4 +9,7 @@
 		<email>joker@gentoo.org</email>
 		<name>Christian Birchinger</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">mupen64plus/mupen64plus-rsp-hle</remote-id>
+	</upstream>
 </pkgmetadata>

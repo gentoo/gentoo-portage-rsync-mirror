@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+	<herd>games</herd>
+	<longdescription>
 QuakeForge is a 3D graphics game engine based on id Software's legendary 
 Quake and QuakeWorld game engine. Our purpose? To improve the state of 
 the game by improving the engine and making it accessable to the largest 
@@ -26,8 +26,11 @@ Other things we're doing include merging the two code trees, adding
 features, and improving the OpenGL renderer. And QuakeForge is still the 
 most portable source tree based on the id Software code.
 </longdescription>
-<use>
-	<flag name="wildmidi">enable libWildMidi support</flag>
-	<flag name="xdg">enable XDG support</flag>
-</use>
+	<use>
+		<flag name="wildmidi">enable libWildMidi support</flag>
+		<flag name="xdg">enable XDG support</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">quake</remote-id>
+	</upstream>
 </pkgmetadata>
