@@ -4,5 +4,6 @@
   <herd>kernel-misc</herd>
   <upstream>
     <remote-id type="cpe">cpe:/a:fuse:fuse</remote-id>
+    <remote-id type="sourceforge">fuse</remote-id>
   </upstream>
 </pkgmetadata>

@@ -22,5 +22,6 @@
   </longdescription>
   <upstream>
     <doc lang="en">http://docs.joomla.org</doc>
+    <remote-id type="github">joomla/joomla-cms</remote-id>
   </upstream>
 </pkgmetadata>

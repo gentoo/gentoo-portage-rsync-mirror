@@ -14,5 +14,7 @@
 		kernel module. The practical effect of this is that the end user can seamlessly
 		interact with MTP device files.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">phatina/simple-mtpfs</remote-id>
+	</upstream>
 </pkgmetadata>
-

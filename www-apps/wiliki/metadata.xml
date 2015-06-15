@@ -12,4 +12,7 @@
 
 	http://practical-scheme.net/wiliki/
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">wiliki</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -13,4 +13,7 @@
 		without having to change the time system-wide. FTPL allows you to specify both
 		absolute dates (e.g., 2004-01-01) and relative dates (e.g., 10 days ago).
 	</longdescription>
+	<upstream>
+		<remote-id type="github">wolfcw/libfaketime</remote-id>
+	</upstream>
 </pkgmetadata>

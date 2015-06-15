@@ -7,4 +7,7 @@
 		<email>cardoe@gentoo.org</email>
 		<description>Do not CC me on bugs</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">MythTV/mythweb</remote-id>
+	</upstream>
 </pkgmetadata>

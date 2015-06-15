@@ -9,8 +9,9 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="cpe">cpe:/o:linux:linux_kernel</remote-id>
+		<remote-id type="github">NigelCunningham/tuxonice-kernel</remote-id>
 	</upstream>
 	<use>
-		<flag name='experimental'>Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
+		<flag name="experimental">Apply experimental patches; for more information, see "https://wiki.gentoo.org/wiki/Project:Kernel/Experimental".</flag>
 	</use>
 </pkgmetadata>

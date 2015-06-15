@@ -7,5 +7,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">mod_wsgi</remote-id>
+		<remote-id type="github">GrahamDumpleton/mod_wsgi</remote-id>
 	</upstream>
 </pkgmetadata>

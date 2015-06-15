@@ -7,10 +7,10 @@
 		<name>Anthony G. Basile</name>
 	</maintainer>
 	<use>
-		<flag name='netpbm'>Add <pkg>media-libs/netpbm</pkg> support</flag>
-		<flag name='unzip'>Add <pkg>app-arch/unzip</pkg> support for the archive
+		<flag name="netpbm">Add <pkg>media-libs/netpbm</pkg> support</flag>
+		<flag name="unzip">Add <pkg>app-arch/unzip</pkg> support for the archive
 			upload module</flag>
-		<flag name='zip'>Add <pkg>app-arch/zip</pkg> for the zip download
+		<flag name="zip">Add <pkg>app-arch/zip</pkg> for the zip download
 			module</flag>
 	</use>
 	<longdescription>
@@ -23,4 +23,7 @@
 	privacy.  It's great for communities - give accounts to your friends and
 	family and let them upload and manage their own photos on your website!
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">gallery</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -3,7 +3,10 @@
 <pkgmetadata>
 	<herd>web-apps</herd>
 	<use>
-		<flag name='jpgraph'>Add <pkg>dev-php/jpgraph</pkg> support</flag>
-		<flag name='gallery'>Install gallery2 port for eGW</flag>
+		<flag name="jpgraph">Add <pkg>dev-php/jpgraph</pkg> support</flag>
+		<flag name="gallery">Install gallery2 port for eGW</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">egroupware</remote-id>
+	</upstream>
 </pkgmetadata>

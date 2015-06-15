@@ -7,4 +7,7 @@
 		process and file security contexts and to obtain security policy
 		decisions.  Required for any applications that use the SELinux API.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">SELinuxProject/selinux</remote-id>
+	</upstream>
 </pkgmetadata>

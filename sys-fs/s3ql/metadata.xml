@@ -10,5 +10,6 @@
 	</use>
 	<upstream>
 		<remote-id type="google-code">s3ql</remote-id>
+		<remote-id type="bitbucket">nikratio/s3ql</remote-id>
 	</upstream>
 </pkgmetadata>

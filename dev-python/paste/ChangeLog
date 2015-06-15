@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/paste
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.28 2015/04/08 08:05:09 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/paste/ChangeLog,v 1.29 2015/06/15 19:58:05 jlec Exp $
+
+*paste-2.0.2 (15 Jun 2015)
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +files/paste-2.0.2-unbundle-tempita.patch, +paste-2.0.2.ebuild, metadata.xml:
+  Version Bump, bug #549776
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> paste-1.7.5.1-r1.ebuild,
   paste-1.7.5.1-r2.ebuild:

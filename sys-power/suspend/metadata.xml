@@ -6,7 +6,10 @@
 		<name>Michael Weber</name>
 	</maintainer>
 	<use>
-		<flag name='fbsplash'>Add support for framebuffer splash</flag>
-		<flag name='crypt'>Allows suspend and resume from encrypted disk</flag>
+		<flag name="fbsplash">Add support for framebuffer splash</flag>
+		<flag name="crypt">Allows suspend and resume from encrypted disk</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">suspend</remote-id>
+	</upstream>
 </pkgmetadata>

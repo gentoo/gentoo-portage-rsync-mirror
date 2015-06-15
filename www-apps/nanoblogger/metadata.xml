@@ -14,4 +14,7 @@ for relative and absolute links, per-weblog configuration, simple cache system
 for faster content generation, auto-detection of weblog by current directory, no
 database dependencies (uses flat-file), and mutliplatform portability.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">nanoblogger</remote-id>
+	</upstream>
 </pkgmetadata>

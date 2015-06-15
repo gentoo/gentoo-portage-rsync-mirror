@@ -3,8 +3,11 @@
 <pkgmetadata>
 	<herd>cluster</herd>
 	<longdescription>Pacemaker python GUI and management daemon</longdescription>
-    <use>
-       <flag name="heartbeat">Enable support for heartbeat based <pkg>sys-cluster/pacemaker</pkg>.</flag>
-	   <flag name="gtk">Enable the GTK+ based GUI client.</flag>
-    </use>
+	<use>
+		<flag name="heartbeat">Enable support for heartbeat based <pkg>sys-cluster/pacemaker</pkg>.</flag>
+		<flag name="gtk">Enable the GTK+ based GUI client.</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">gao-yan/pacemaker-mgmt</remote-id>
+	</upstream>
 </pkgmetadata>

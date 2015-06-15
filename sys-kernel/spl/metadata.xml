@@ -8,4 +8,7 @@
 	<use>
 		<flag name="debug-log">Enable additional diagnostics</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">zfsonlinux/spl</remote-id>
+	</upstream>
 </pkgmetadata>

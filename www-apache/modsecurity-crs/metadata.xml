@@ -5,4 +5,7 @@
     <email>flameeyes@gentoo.org</email>
     <name>Diego E. Pettenò</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">SpiderLabs/owasp-modsecurity-crs</remote-id>
+  </upstream>
 </pkgmetadata>

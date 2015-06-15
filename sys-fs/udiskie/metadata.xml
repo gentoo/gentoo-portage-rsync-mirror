@@ -4,5 +4,6 @@
   <herd>desktop-misc</herd>
   <upstream>
     <remote-id type="pypi">udiskie</remote-id>
+    <remote-id type="github">coldfix/udiskie</remote-id>
   </upstream>
 </pkgmetadata>

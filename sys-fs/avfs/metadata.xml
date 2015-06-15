@@ -7,4 +7,7 @@
     <email>pete4abw@comcast.net</email>
     <name>Peter Hyman</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">avf</remote-id>
+  </upstream>
 </pkgmetadata>

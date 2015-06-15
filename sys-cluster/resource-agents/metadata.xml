@@ -13,4 +13,7 @@
 		<flag name="libnet">Force use of <pkg>net-libs/libnet</pkg></flag>
 		<flag name="rgmanager">Install resources for <pkg>sys-cluster/rgmanager</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="github">ClusterLabs/resource-agents</remote-id>
+	</upstream>
 </pkgmetadata>

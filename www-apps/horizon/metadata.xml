@@ -11,5 +11,7 @@
 	Dashboard along with an extensible framework for building new dashboards
 	from reusable components.
   </longdescription>
+  <upstream>
+    <remote-id type="launchpad">horizon</remote-id>
+  </upstream>
 </pkgmetadata>
-
