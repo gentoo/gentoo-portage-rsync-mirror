@@ -47,7 +47,7 @@ src_test() {
 	local REDIS_PID="${T}"/hiredis.pid
 	local REDIS_SOCK="${T}"/hiredis.sock
 	local REDIS_PORT=56379
-	local REDIS_TEST_CONFIG=$"daemonize yes
+	local REDIS_TEST_CONFIG="daemonize yes
 		pidfile ${REDIS_PID}
 		port ${REDIS_PORT}
 		bind 127.0.0.1
