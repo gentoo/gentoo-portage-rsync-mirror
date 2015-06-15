@@ -4,4 +4,7 @@
 	<maintainer>
 		<email>mschiff@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">libbsb</remote-id>
+	</upstream>
 </pkgmetadata>

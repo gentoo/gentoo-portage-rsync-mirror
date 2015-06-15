@@ -6,4 +6,7 @@
     <email>chainsaw@gentoo.org</email>
     <name>Tony Vroon</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">modplug-xmms</remote-id>
+  </upstream>
 </pkgmetadata>

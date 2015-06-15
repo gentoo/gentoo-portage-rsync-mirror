@@ -16,5 +16,7 @@
 		also includes a command-line utility, iptc, for editing IPTC data in
 		JPEG files, as well as Python bindings.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">libiptcdata</remote-id>
+	</upstream>
 </pkgmetadata>
-

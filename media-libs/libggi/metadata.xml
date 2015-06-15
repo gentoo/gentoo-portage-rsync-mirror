@@ -8,4 +8,7 @@
   <use>
     <flag name="vis">Enables sparc vis support for libggi</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">ggi</remote-id>
+  </upstream>
 </pkgmetadata>

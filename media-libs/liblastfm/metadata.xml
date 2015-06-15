@@ -5,4 +5,7 @@
   <use>
     <flag name="fingerprint">Build the lastfm-fingerprint library</flag>
   </use>
+  <upstream>
+    <remote-id type="github">lastfm/liblastfm</remote-id>
+  </upstream>
 </pkgmetadata>

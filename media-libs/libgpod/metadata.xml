@@ -9,4 +9,7 @@
 	<use>
 		<flag name="gtk">Enable ArtworkDB support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">gtkpod</remote-id>
+	</upstream>
 </pkgmetadata>

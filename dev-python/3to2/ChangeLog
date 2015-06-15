@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/3to2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/3to2/ChangeLog,v 1.9 2015/06/03 11:46:33 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/3to2/ChangeLog,v 1.10 2015/06/15 14:53:34 mrueg Exp $
+
+*3to2-1.1.1 (15 Jun 2015)
+
+  15 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +3to2-1.1.1.ebuild:
+  Version bump.
 
   03 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml

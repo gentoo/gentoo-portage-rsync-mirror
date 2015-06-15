@@ -8,4 +8,7 @@
 	<use>
 		<flag name="webp">Add support for WEBP image format</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">agl/jbig2enc</remote-id>
+	</upstream>
 </pkgmetadata>

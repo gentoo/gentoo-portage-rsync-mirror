@@ -6,4 +6,7 @@
 	<use>
 		<flag name="serial">Enable serial port support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">gphoto</remote-id>
+	</upstream>
 </pkgmetadata>
