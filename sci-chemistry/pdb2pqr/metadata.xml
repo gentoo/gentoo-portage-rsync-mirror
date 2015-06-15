@@ -6,4 +6,7 @@
     <flag name="opal">Add web interface via opal</flag>
     <flag name="pdb2pka">Install experimental pdb2pka interface</flag>
   </use>
+  <upstream>
+    <remote-id type="github">Electrostatics/apbs-pdb2pqr</remote-id>
+  </upstream>
 </pkgmetadata>

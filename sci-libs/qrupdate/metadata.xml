@@ -5,4 +5,7 @@
   <longdescription lang="en">
 	qrupdate is a library for fast updating of qr and cholesky decompositions.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">qrupdate</remote-id>
+  </upstream>
 </pkgmetadata>

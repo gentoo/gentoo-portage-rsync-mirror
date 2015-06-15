@@ -8,4 +8,7 @@
   garbage collection,a C++ interface with automatic reference
   counting,and much more.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">buddy</remote-id>
+  </upstream>
 </pkgmetadata>

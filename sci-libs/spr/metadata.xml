@@ -9,8 +9,10 @@
     It is used mostly in High Energy Physics.
   </longdescription>
   <use>
-    <flag name='root'>Add <pkg>sci-physics/root</pkg> graphics and i/o
+    <flag name="root">Add <pkg>sci-physics/root</pkg> graphics and i/o
     support</flag>
   </use>
-
+  <upstream>
+    <remote-id type="sourceforge">statpatrec</remote-id>
+  </upstream>
 </pkgmetadata>

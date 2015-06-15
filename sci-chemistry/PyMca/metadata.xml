@@ -16,4 +16,7 @@ interface.
   <use>
     <flag name="matplotlib">Support for plotting through matplotlib</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">pymca</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -15,5 +15,6 @@
   </use>
   <upstream>
     <remote-id type="pypi">scipy</remote-id>
+    <remote-id type="sourceforge">scipy</remote-id>
   </upstream>
 </pkgmetadata>

@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/oauth2client-1.4.11.ebuild,v 1.1 2015/05/20 10:47:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/oauth2client-1.4.11.ebuild,v 1.2 2015/06/15 18:59:01 jlec Exp $
 
 EAPI=5
 
-PYTHON_COMPAT=( python2_7 python3_{3,4} pypy pypy3 )
+PYTHON_COMPAT=( python2_7 python3_{3,4} pypy)
 
 inherit distutils-r1
 

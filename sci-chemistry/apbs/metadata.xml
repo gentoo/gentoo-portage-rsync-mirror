@@ -21,4 +21,7 @@ models for describing electrostatic interactions between molecular solutes in
 salty, aqueous media. Continuum electrostatics plays an important role in 
 several areas of biomolecular simulation
 </longdescription>
+  <upstream>
+    <remote-id type="github">Electrostatics/apbs-pdb2pqr</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -11,4 +11,7 @@
   <use>
     <flag name="swig">Use swig to rebuild language bindings.</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">openbabel</remote-id>
+  </upstream>
 </pkgmetadata>

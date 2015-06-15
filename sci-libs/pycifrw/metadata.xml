@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">PyCifRW</remote-id>
+    <remote-id type="bitbucket">jamesrhester/pycifrw</remote-id>
   </upstream>
 </pkgmetadata>

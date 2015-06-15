@@ -8,4 +8,7 @@
   algebra, machine learning, XML and text parsing, numerical
   optimization, Bayesian nets, and numerous other tasks.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">dclib</remote-id>
+  </upstream>
 </pkgmetadata>

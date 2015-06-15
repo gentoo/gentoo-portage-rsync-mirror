@@ -9,4 +9,7 @@ search, convert, analyze, or store data from molecular modeling, chemistry,
 solid-state materials, biochemistry, or related areas.
 This package enables to access OpenBabel library from Perl programs.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">openbabel</remote-id>
+  </upstream>
 </pkgmetadata>

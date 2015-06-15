@@ -8,4 +8,7 @@
   <maintainer>
     <email>slis@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">cgns</remote-id>
+  </upstream>
 </pkgmetadata>

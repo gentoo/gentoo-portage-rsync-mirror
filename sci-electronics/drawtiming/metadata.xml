@@ -10,4 +10,7 @@
 	Engineering discipline is used, including arrows indicating causal
 	relationships between signal transitions. 
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">drawtiming</remote-id>
+	</upstream>
 </pkgmetadata>

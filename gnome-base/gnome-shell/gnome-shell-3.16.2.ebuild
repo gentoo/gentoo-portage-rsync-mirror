@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.16.2.ebuild,v 1.1 2015/06/09 15:27:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/gnome-shell-3.16.2.ebuild,v 1.2 2015/06/15 18:34:47 eva Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -106,7 +106,7 @@ RDEPEND="${COMMON_DEPEND}
 # avoid circular dependency, see bug #546134
 PDEPEND="
 	>=gnome-base/gdm-3.5[introspection]
-	>=gnome-base/gnome-control-center-3.8.3[bluetooth(+)?]
+	>=gnome-base/gnome-control-center-3.8.3[bluetooth(+)?,networkmanager(+)?]
 "
 DEPEND="${COMMON_DEPEND}
 	dev-libs/libxslt

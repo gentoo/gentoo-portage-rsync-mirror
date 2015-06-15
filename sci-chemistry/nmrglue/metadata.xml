@@ -23,4 +23,7 @@ When used in conjunction with the matplotlib (or other) python plotting library
 nmrglue can be used to create publication quality figures of NMR spectrum or 
 examine data interactively.
 </longdescription>
+  <upstream>
+    <remote-id type="github">jjhelmus/nmrglue</remote-id>
+  </upstream>
 </pkgmetadata>

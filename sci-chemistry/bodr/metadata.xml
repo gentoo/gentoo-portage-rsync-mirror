@@ -9,4 +9,7 @@
 	can use this repository on online webpages or in chemistry software for
 	free.
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">bodr</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -10,4 +10,7 @@
 	molecules quick and easily. Of course you're creation can be exported 
 	afterwards in high quality in a number of vector and bitmap formats. 
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">molsketch</remote-id>
+  </upstream>
 </pkgmetadata>

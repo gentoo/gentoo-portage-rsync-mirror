@@ -19,4 +19,7 @@
       Enable MBTiles support based on <pkg>dev-db/sqlite</pkg>
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">viking</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -8,4 +8,7 @@
   kinds of two-body molecular integrals over Gaussian functions;
   2. the optimizing compiler that generates a Libint library.
 </longdescription>
+  <upstream>
+    <remote-id type="github">evaleev/libint</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -3,10 +3,13 @@
 <pkgmetadata>
   <herd>sci-mathematics</herd>
   <herd>haskell</herd>
-<longdescription lang="en">
+  <longdescription lang="en">
   Agda standard library.
 </longdescription>
-<use>
-	<flag name='ffi'>Install agda-lib-ffi for compilation using the MAlonzo backend</flag>
-</use>
+  <use>
+    <flag name="ffi">Install agda-lib-ffi for compilation using the MAlonzo backend</flag>
+  </use>
+  <upstream>
+    <remote-id type="github">agda/agda-stdlib</remote-id>
+  </upstream>
 </pkgmetadata>

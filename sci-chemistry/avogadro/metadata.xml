@@ -11,4 +11,7 @@
   <use>
     <flag name="glsl">Enable glsl features via GLEW.</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">avogadro</remote-id>
+  </upstream>
 </pkgmetadata>

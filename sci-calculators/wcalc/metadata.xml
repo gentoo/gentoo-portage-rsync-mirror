@@ -11,4 +11,7 @@
   expression entry field. It evaluates expressions using the standard
   order of operations.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">w-calc</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -10,4 +10,7 @@
 		<name>Manuel Rüger</name>
 		<description>CC him on bugs.</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">fritzing/fritzing-app</remote-id>
+	</upstream>
 </pkgmetadata>

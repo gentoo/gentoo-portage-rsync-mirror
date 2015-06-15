@@ -1,6 +1,13 @@
 # ChangeLog for dev-python/oauth2client
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/ChangeLog,v 1.9 2015/06/07 14:24:05 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oauth2client/ChangeLog,v 1.11 2015/06/15 18:59:01 jlec Exp $
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> oauth2client-1.4.11.ebuild,
+  oauth2client-1.4.2.ebuild:
+  Drop pypy3 support everywhere
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org> oauth2client-1.4.6.ebuild:
+  Drop pypy3 support as it requires unreleased pypy3
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

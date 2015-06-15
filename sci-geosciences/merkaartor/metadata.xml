@@ -10,4 +10,7 @@
     Enable QR code scanning with <pkg>media-gfx/zbar</pkg>
     </flag>
   </use>
+  <upstream>
+    <remote-id type="github">openstreetmap/merkaartor</remote-id>
+  </upstream>
 </pkgmetadata>

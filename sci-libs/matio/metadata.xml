@@ -9,4 +9,7 @@
   <use>
     <flag name="sparse">Extend formats for sparse matrix (not matlab)</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">matio</remote-id>
+  </upstream>
 </pkgmetadata>

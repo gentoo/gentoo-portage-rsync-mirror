@@ -4,5 +4,7 @@
 	<maintainer>
 		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">skychart</remote-id>
+	</upstream>
 </pkgmetadata>
-

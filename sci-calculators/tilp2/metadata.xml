@@ -8,4 +8,7 @@
   any link cable. TiLP has all the functions of a linking program and
   more.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">tilp</remote-id>
+	</upstream>
 </pkgmetadata>

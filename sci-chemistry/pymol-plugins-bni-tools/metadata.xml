@@ -6,4 +6,7 @@
     <email>jlec@gentoo.org</email>
     <name>Justin Lecher (jlec)</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">bni-tools</remote-id>
+  </upstream>
 </pkgmetadata>

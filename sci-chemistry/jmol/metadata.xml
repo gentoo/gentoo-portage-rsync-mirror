@@ -10,4 +10,7 @@
     <flag name="client-only">Install the viewer only, no applet files for httpd
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">jmol</remote-id>
+  </upstream>
 </pkgmetadata>

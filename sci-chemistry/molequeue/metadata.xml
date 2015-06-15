@@ -20,4 +20,7 @@ output files collected using a standard interface.
     <flag name="client">Build the client application</flag>
     <flag name="server">Build the serve application</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">molequeue</remote-id>
+  </upstream>
 </pkgmetadata>

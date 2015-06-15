@@ -9,4 +9,7 @@
   <longdescription lang="en">
 A collection of data files to add support for chemical MIME types.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">chemical-mime</remote-id>
+  </upstream>
 </pkgmetadata>

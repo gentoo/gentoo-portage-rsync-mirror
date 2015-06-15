@@ -24,4 +24,7 @@
     <flag name="qhull">Add bindings for <pkg>media-libs/qhull</pkg></flag>
     <flag name="shapefile">Enable support for ESRI shapefiles</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">plplot</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -9,4 +9,7 @@
     <flag name="mikrokopter">Enable telemtry with a mikrokopter</flag>
     <flag name="rmap">Enable support for TwoNav RMAP file format</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">qlandkartegt</remote-id>
+  </upstream>
 </pkgmetadata>

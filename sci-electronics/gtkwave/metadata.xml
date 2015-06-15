@@ -13,4 +13,7 @@
     <flag name="judy">Enables Judy array support.</flag>
     <flag name="packed">Enables '#pragma pack' for data arrays (saves memory, costs time).</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">gtkwave</remote-id>
+  </upstream>
 </pkgmetadata>

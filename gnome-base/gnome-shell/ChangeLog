@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-shell
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.94 2015/06/09 15:27:40 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-shell/ChangeLog,v 1.95 2015/06/15 18:34:47 eva Exp $
+
+  15 Jun 2015; Gilles Dartiguelongue <eva@gentoo.org>
+  gnome-shell-3.16.2.ebuild:
+  Add missing USE dependency on gnome-control-center[networkmanager] now that
+  it is optional again. Thanks to Ole Reifschneider for noticing.
 
 *gnome-shell-3.16.2 (09 Jun 2015)
 

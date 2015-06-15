@@ -7,4 +7,7 @@
 		circuits. The actual simulation is performed by Berkeley Spice, or GNUcap or
 		the new generation ngspice.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">marc-lorber/oregano</remote-id>
+	</upstream>
 </pkgmetadata>

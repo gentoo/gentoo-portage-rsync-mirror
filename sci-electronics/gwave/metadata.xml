@@ -9,4 +9,7 @@
   can also read a generic tabular ASCII format suitable for use with GnuCap or
   homegrown tools.
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">gwave</remote-id>
+  </upstream>
 </pkgmetadata>

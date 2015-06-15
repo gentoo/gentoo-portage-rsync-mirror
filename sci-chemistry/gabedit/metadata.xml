@@ -6,4 +6,7 @@
     <email>jlec@gentoo.org</email>
     <description>Tree Proxy for Max</description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">gabedit</remote-id>
+  </upstream>
 </pkgmetadata>

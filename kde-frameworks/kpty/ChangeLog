@@ -1,6 +1,11 @@
 # ChangeLog for kde-frameworks/kpty
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpty/ChangeLog,v 1.14 2015/05/23 01:33:52 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-frameworks/kpty/ChangeLog,v 1.15 2015/06/15 18:35:13 kensington Exp $
+
+*kpty-5.11.0 (15 Jun 2015)
+
+  15 Jun 2015; Michael Palimaka <kensington@gentoo.org> +kpty-5.11.0.ebuild:
+  Version bump.
 
   23 May 2015; Manuel Rüger <mrueg@gentoo.org> -kpty-5.9.0.ebuild:
   Remove old.
