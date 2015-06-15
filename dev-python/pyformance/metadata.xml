@@ -4,6 +4,7 @@
 	<herd>python</herd>
 	<upstream>
 		<remote-id type="pypi">pyformance</remote-id>
+		<remote-id type="github">omergertel/pyformance</remote-id>
 	</upstream>
 	<maintainer>
 		<email>zmedico@gentoo.org</email>

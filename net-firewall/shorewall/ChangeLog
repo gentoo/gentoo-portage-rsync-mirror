@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.286 2015/05/25 02:52:22 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.287 2015/06/15 11:47:22 mgorny Exp $
+
+*shorewall-4.6.10.1 (15 Jun 2015)
+
+  15 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +files/4.6/shorewall-init-01_remove-ipset-functionality-r1.patch,
+  +shorewall-4.6.10.1.ebuild, -shorewall-4.6.9.ebuild:
+  Version bump. https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/151
+  by Whissi.
 
 *shorewall-4.6.9 (25 May 2015)
 

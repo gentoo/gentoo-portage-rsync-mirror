@@ -10,4 +10,7 @@
 			Enable debugging during compilation.
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">jfreegraphics2d</remote-id>
+	</upstream>
 </pkgmetadata>

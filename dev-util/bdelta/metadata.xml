@@ -7,4 +7,7 @@
     <description>Primary Maintainer</description>
   </maintainer>
   <herd>tools-portage</herd>
+  <upstream>
+    <remote-id type="github">jjwhitney/BDelta</remote-id>
+  </upstream>
 </pkgmetadata>

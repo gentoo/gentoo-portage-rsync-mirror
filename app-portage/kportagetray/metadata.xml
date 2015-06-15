@@ -11,4 +11,8 @@
 		<email>wizzleby@gmail.com</email>
 		<name>Locke Shinseiko (Wizzleby)</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">kportagetray</remote-id>
+		<remote-id type="gitorious">kportagetray</remote-id>
+	</upstream>
 </pkgmetadata>

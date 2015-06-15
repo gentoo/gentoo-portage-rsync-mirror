@@ -30,4 +30,7 @@
   files. These can be used from a command line, or it can be incorporated as 
   classes in another C++ program.  
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">astyle</remote-id>
+  </upstream>
 </pkgmetadata>

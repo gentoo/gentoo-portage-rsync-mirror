@@ -22,5 +22,7 @@
 		good chunk of) the texmf-files that can be installed from the main
 		portage tree.
 	</longdescription>
+	<upstream>
+		<remote-id type="launchpad">texmfind</remote-id>
+	</upstream>
 </pkgmetadata>
-

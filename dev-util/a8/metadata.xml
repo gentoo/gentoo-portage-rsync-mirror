@@ -6,5 +6,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="pypi">a8</remote-id>
+		<remote-id type="github">aliafshar/a8</remote-id>
 	</upstream>
 </pkgmetadata>
