@@ -3,8 +3,8 @@
 <pkgmetadata>
 	<herd>net-im</herd>
 	<maintainer>
-	  <email>polynomial-c@gentoo.org</email>
-	  <name>Lars Wendler</name>
+		<email>polynomial-c@gentoo.org</email>
+		<name>Lars Wendler</name>
 	</maintainer>
 	<longdescription>
 	Pidgin is an instant messaging program for Windows, Linux, BSD, and other Unixes. You can talk to your friends using AIM, ICQ, Jabber/XMPP, MSN Messenger, Yahoo!, Bonjour, Gadu-Gadu, IRC, Novell GroupWise Messenger, QQ, Lotus Sametime, SILC, SIMPLE, and Zephyr.
@@ -23,4 +23,7 @@
 		<flag name="xscreensaver">Use X screensaver protocol extension to monitor idle/active status based on mouse/keyboard events</flag>
 		<flag name="zephyr">Enable Zephyr protocol support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">pidgin</remote-id>
+	</upstream>
 </pkgmetadata>

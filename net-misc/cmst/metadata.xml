@@ -4,5 +4,6 @@
   <herd>qt</herd>
   <upstream>
     <bugs-to>https://github.com/andrew-bibb/cmst/issues</bugs-to>
+    <remote-id type="github">andrew-bibb/cmst</remote-id>
   </upstream>
 </pkgmetadata>

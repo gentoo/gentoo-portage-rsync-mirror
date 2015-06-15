@@ -16,4 +16,7 @@
       if it works
     </description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">lksctp</remote-id>
+  </upstream>
 </pkgmetadata>

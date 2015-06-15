@@ -6,4 +6,7 @@
 		<email>the.telvanni@gmail.com</email>
 		<name>Guillaume Lespinasse</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">chrippa/livestreamer</remote-id>
+	</upstream>
 </pkgmetadata>

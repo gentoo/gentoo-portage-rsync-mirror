@@ -6,4 +6,7 @@
 		<flag name="gnus">Add support for the marks propagation feature in
 			<pkg>app-emacs/gnus</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">mairix</remote-id>
+	</upstream>
 </pkgmetadata>

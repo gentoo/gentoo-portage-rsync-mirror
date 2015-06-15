@@ -5,4 +5,7 @@
 	<maintainer>
 		<email>hanno@gentoo.org</email>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">courier</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -8,5 +8,6 @@
   </maintainer>
   <upstream>
     <remote-id type="google-code">libtorrent</remote-id>
+    <remote-id type="sourceforge">libtorrent</remote-id>
   </upstream>
 </pkgmetadata>

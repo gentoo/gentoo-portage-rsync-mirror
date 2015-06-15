@@ -9,5 +9,7 @@ Besides then screenshots, keyboard and mouse events transfer, jrdesktop includes
 
 jrdesktop uses RMI (Remote Method Invocation) with SSL/TLS to establish a secured connection between the viewer and the server.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">jrdesktop</remote-id>
+	</upstream>
 </pkgmetadata>
-

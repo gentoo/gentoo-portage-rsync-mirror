@@ -10,4 +10,7 @@
     <flag name="sql">Enable support for SQL backends</flag>
     <flag name="tools">Install additional automx-test tool</flag>
   </use>
+  <upstream>
+    <remote-id type="github">sys4/automx</remote-id>
+  </upstream>
 </pkgmetadata>

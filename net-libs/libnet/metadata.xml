@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>netmon</herd>
-<longdescription>
+	<herd>netmon</herd>
+	<longdescription>
 Libnet is a high-level API (toolkit) allowing the application 
 programmer to construct and inject network packets. It provides a 
 portable and simplified interface for low-level network packet 
@@ -18,4 +18,7 @@ effort. With a bit more time, more complex programs can be
 written (Traceroute and ping were easily rewritten using libnet 
 and libpcap).
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">libnet-dev</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -5,5 +5,7 @@
 		<email>yac@gentoo.org</email>
 		<name>Jan Matejka</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">yaccz/cbugzilla</remote-id>
+	</upstream>
 </pkgmetadata>
-

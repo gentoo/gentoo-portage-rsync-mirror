@@ -4,4 +4,7 @@
   <herd>python</herd>
   <longdescription lang="en">
 	</longdescription>
+  <upstream>
+    <remote-id type="github">alejandrogomez/turses</remote-id>
+  </upstream>
 </pkgmetadata>

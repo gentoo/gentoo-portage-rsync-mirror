@@ -7,4 +7,7 @@
 		(commonly provided by an Asterisk PBX system) instead of a traditional
 		phone line and uses a DSP library instead of DSP hardware chipsets.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">iaxmodem</remote-id>
+	</upstream>
 </pkgmetadata>

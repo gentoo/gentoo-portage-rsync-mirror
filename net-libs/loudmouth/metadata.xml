@@ -5,4 +5,7 @@
   <use>
     <flag name="asyncns">Use libasyncns for asynchronous name resolution.</flag>
   </use>
+  <upstream>
+    <remote-id type="github">engineyard/loudmouth</remote-id>
+  </upstream>
 </pkgmetadata>

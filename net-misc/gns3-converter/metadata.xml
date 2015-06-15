@@ -7,5 +7,6 @@
   </maintainer>
   <upstream>
     <remote-id type="pypi">gns3-converter</remote-id>
+    <remote-id type="github">dlintott/gns3-converter</remote-id>
   </upstream>
 </pkgmetadata>

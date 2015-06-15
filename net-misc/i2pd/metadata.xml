@@ -17,4 +17,7 @@
 			Build the libi2pd library
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">PrivacySolutions/i2pd</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -21,5 +21,7 @@
 		<flag name="vxml">Enable VoiceXML support</flag>
 		<flag name="wav">Enable WAVFILE support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">opalvoip</remote-id>
+	</upstream>
 </pkgmetadata>
-

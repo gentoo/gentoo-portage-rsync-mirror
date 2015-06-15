@@ -7,4 +7,7 @@
 		<name>Johan Bergström</name>
 		<description>Proxied Maintainer</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">joyent/http-parser</remote-id>
+	</upstream>
 </pkgmetadata>

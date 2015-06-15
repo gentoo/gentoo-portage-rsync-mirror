@@ -11,5 +11,7 @@
 		the creation of own modules as easy as possible. Including "output routing",
 		TCP/IP socket interface and timer functions.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">lordi/Eiwic</remote-id>
+	</upstream>
 </pkgmetadata>
-

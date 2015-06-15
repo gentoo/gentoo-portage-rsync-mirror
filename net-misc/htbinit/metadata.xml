@@ -15,4 +15,7 @@ CBQ.init に由来したシェル・スクリプトです。HTB (Hierachical Tok
   <use>
     <flag name="esfq">Add support for Enhanced Stochastic Fairness queueing discipline.</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">htbinit</remote-id>
+  </upstream>
 </pkgmetadata>

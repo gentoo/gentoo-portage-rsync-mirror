@@ -5,4 +5,7 @@
 	<longdescription lang="en">
 		A ncurses-based tool for handling postfix queues.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">pfqueue</remote-id>
+	</upstream>
 </pkgmetadata>

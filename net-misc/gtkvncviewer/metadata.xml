@@ -5,5 +5,7 @@
 		<email>angelos@gentoo.org</email>
 		<name>Christoph Mende</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="launchpad">gtkvncviewer</remote-id>
+	</upstream>
 </pkgmetadata>
-

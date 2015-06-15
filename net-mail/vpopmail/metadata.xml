@@ -3,12 +3,15 @@
 <pkgmetadata>
 	<herd>qmail</herd>
 	<use>
-		<flag name='clearpasswd'>Enables cleartext password storage in the
+		<flag name="clearpasswd">Enables cleartext password storage in the
 			vpasswd files</flag>
-		<flag name='ipalias'>Enables enable-ip-alias-domains</flag>
-		<flag name='maildrop'>Enables <pkg>mail-filter/maildrop</pkg> support
+		<flag name="ipalias">Enables enable-ip-alias-domains</flag>
+		<flag name="maildrop">Enables <pkg>mail-filter/maildrop</pkg> support
 			in vdelivermail</flag>
-		<flag name='spamassassin'>Enables <pkg>mail-filter/spamassassin</pkg>
+		<flag name="spamassassin">Enables <pkg>mail-filter/spamassassin</pkg>
 			support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">vpopmail</remote-id>
+	</upstream>
 </pkgmetadata>

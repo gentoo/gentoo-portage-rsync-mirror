@@ -8,4 +8,7 @@
   <use>
     <flag name="maildrop">Filter spam using maildrop</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">qmailadmin</remote-id>
+  </upstream>
 </pkgmetadata>

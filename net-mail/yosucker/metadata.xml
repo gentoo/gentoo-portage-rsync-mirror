@@ -5,4 +5,7 @@
 	<longdescription>
 		YoSucker allows you to download Yahoo mail to a local file or pipe it to procmail. It suppourts multiple accounts, encrypted passwords, transaction safe writes, and more.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">yosucker</remote-id>
+	</upstream>
 </pkgmetadata>

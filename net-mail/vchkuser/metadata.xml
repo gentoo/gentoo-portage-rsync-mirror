@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>qmail</herd>
 	<use>
-		<flag name='debug'>Enables debug messages to syslog</flag>
+		<flag name="debug">Enables debug messages to syslog</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">hollow/vchkuser</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portage-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.170 2015/06/12 09:12:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portage-utils/ChangeLog,v 1.171 2015/06/15 17:45:22 floppym Exp $
+
+  15 Jun 2015; Mike Gilbert <floppym@gentoo.org> portage-utils-0.56.ebuild:
+  Add iniparser to DEPEND.
 
   12 Jun 2015; Mike Frysinger <vapier@gentoo.org>
   +files/portage-utils-0.56-qlop-tz.patch, portage-utils-0.56.ebuild:

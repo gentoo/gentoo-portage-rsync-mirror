@@ -7,4 +7,7 @@
 		<name>Bjarke Istrup Pedersen</name>
 	</maintainer>
 	<longdescription>Anope IRC Services</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">anope</remote-id>
+	</upstream>
 </pkgmetadata>

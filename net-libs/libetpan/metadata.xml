@@ -11,4 +11,7 @@
   <use>
     <flag name="liblockfile">Enable support for liblockfile library</flag>
   </use>
+  <upstream>
+    <remote-id type="github">dinhviethoa/libetpan</remote-id>
+  </upstream>
 </pkgmetadata>

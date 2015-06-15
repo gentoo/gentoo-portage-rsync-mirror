@@ -5,4 +5,7 @@
   <use>
     <flag name="password">Enable save passwords to connect mail servers in user space</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">gnubiff</remote-id>
+  </upstream>
 </pkgmetadata>

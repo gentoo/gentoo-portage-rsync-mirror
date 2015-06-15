@@ -14,5 +14,6 @@
 			<name>Rafael G. Martins</name>
 		</maintainer>
 		<bugs-to>mailto:balde-dev@googlegroups.com</bugs-to>
+		<remote-id type="github">balde/balde-markdown</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -6,5 +6,6 @@
 	</longdescription>
   <upstream>
     <remote-id type="pypi">redirbot</remote-id>
+    <remote-id type="github">yaccz/redirbot</remote-id>
   </upstream>
 </pkgmetadata>

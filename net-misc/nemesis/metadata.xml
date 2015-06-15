@@ -6,4 +6,7 @@
 		<email>rainbow@irh.it</email>
 		<name>rainbow</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">nemesis</remote-id>
+	</upstream>
 </pkgmetadata>
