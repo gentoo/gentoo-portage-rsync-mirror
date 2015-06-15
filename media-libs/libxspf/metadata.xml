@@ -6,4 +6,7 @@
 		libxspf brings XSPF playlist reading and writing support to your C++
 		application.  XSPF is an open XML format for sharing playlists.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">libspiff</remote-id>
+	</upstream>
 </pkgmetadata>

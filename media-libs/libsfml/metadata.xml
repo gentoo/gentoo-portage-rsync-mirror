@@ -1,4 +1,4 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
@@ -13,4 +13,7 @@
 	as a fully-featured multimedia library for building games or interactive
 	programs.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">LaurentGomila/SFML</remote-id>
+	</upstream>
 </pkgmetadata>

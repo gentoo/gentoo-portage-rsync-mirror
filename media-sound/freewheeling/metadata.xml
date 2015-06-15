@@ -5,4 +5,7 @@
 	<use>
 		<flag name="fluidsynth">compile with support for fluidsynth</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">freewheeling</remote-id>
+	</upstream>
 </pkgmetadata>

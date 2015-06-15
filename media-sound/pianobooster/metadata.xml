@@ -5,4 +5,7 @@
 	<use>
 		<flag name="fluidsynth">Enable Fluidsynth MIDI software synthesis</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">pianobooster</remote-id>
+	</upstream>
 </pkgmetadata>

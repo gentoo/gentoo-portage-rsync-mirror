@@ -20,4 +20,7 @@
 		<flag name="tcl">Build the tcl interface and clients</flag>
 		<flag name="utils">Build stand-alone executables for utilities that can also be used via `csound -U`</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">csound</remote-id>
+	</upstream>
 </pkgmetadata>

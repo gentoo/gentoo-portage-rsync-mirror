@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>sound</herd>
 	<herd>kde</herd>
+	<upstream>
+		<remote-id type="sourceforge">drumstick</remote-id>
+	</upstream>
 </pkgmetadata>

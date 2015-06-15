@@ -10,4 +10,7 @@
 	<use>
 		<flag name="pdf">Install extra documentation in PDF format</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">imageworks/OpenColorIO</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -13,7 +13,10 @@
 		a set of Morse Code tutor programs (see USE flag description).
 	</longdescription>
 	<use>
-		<flag name='ncurses'>Enables building the curses based morse code tutor
+		<flag name="ncurses">Enables building the curses based morse code tutor
 			program 'cwcp'.</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">unixcw</remote-id>
+	</upstream>
 </pkgmetadata>

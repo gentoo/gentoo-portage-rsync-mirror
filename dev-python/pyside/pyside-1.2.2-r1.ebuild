@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.2.2-r1.ebuild,v 1.1 2015/03/22 04:22:21 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyside/pyside-1.2.2-r1.ebuild,v 1.2 2015/06/15 15:20:24 pesa Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ SRC_URI="http://download.qt-project.org/official_releases/${PN}/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 arm ppc ~ppc64 x86 ~amd64-linux ~x86-linux"
 
 IUSE="X declarative designer help multimedia opengl phonon script scripttools sql svg test webkit xmlpatterns"
 REQUIRED_USE="

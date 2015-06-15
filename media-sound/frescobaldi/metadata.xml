@@ -4,6 +4,9 @@
   <herd>sound</herd>
   <herd>python</herd>
   <use>
-    <flag name='portmidi'>Enable <pkg>media-libs/portmidi</pkg> support</flag>
+    <flag name="portmidi">Enable <pkg>media-libs/portmidi</pkg> support</flag>
   </use>
+  <upstream>
+    <remote-id type="github">wbsoft/frescobaldi</remote-id>
+  </upstream>
 </pkgmetadata>

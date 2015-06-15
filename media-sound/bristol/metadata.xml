@@ -7,5 +7,7 @@
 		synthesisers, electric pianos and organs. The application consists of a
 		multithreaded audio synthesizer and a user interface called brighton.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">bristol</remote-id>
+	</upstream>
 </pkgmetadata>
-

@@ -6,4 +6,7 @@
   <maintainer>
     <email>nikoli@gmx.us</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">gpodder/libmygpo-qt</remote-id>
+  </upstream>
 </pkgmetadata>

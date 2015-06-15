@@ -6,4 +6,7 @@
     <name>Ben de Groot</name>
   </maintainer>
   <herd>sound</herd>
+  <upstream>
+    <remote-id type="github">Arkq/cmusfm</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -6,5 +6,7 @@
 		<email>angelos@gentoo.org</email>
 		<name>Christoph Mende</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">musicpd</remote-id>
+	</upstream>
 </pkgmetadata>
-

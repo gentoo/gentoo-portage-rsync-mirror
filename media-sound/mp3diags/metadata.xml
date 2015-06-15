@@ -6,4 +6,7 @@
 		<name>Manuel Rüger</name>
 	</maintainer>
 	<herd>qt</herd>
+	<upstream>
+		<remote-id type="sourceforge">mp3diags</remote-id>
+	</upstream>
 </pkgmetadata>

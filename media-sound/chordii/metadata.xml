@@ -25,4 +25,7 @@
 			* The complete ISO 8859-1 character set
 			* Chorus marking
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">chordii</remote-id>
+	</upstream>
 </pkgmetadata>

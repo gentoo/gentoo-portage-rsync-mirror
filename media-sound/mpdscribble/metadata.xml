@@ -14,5 +14,7 @@
 		playlist tailored to the user's taste, and to show interesting
 		statistics about your listening habits.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">musicpd</remote-id>
+	</upstream>
 </pkgmetadata>
-

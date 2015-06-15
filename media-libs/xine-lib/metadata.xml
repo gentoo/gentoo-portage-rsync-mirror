@@ -64,4 +64,7 @@
 			Enable support for XVideo Motion Compensation (accelerated mpeg playback).
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">xine</remote-id>
+	</upstream>
 </pkgmetadata>

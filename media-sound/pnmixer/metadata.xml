@@ -8,5 +8,6 @@
 	<upstream>
 		<doc lang="en">https://github.com/nicklan/pnmixer/wiki</doc>
 		<bugs-to>https://github.com/nicklan/pnmixer/issues</bugs-to>
+		<remote-id type="github">nicklan/pnmixer</remote-id>
 	</upstream>
 </pkgmetadata>

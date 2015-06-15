@@ -5,4 +5,7 @@
   <use>
     <flag name="archive">Use libarchive instead of libtar</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">hydrogen</remote-id>
+  </upstream>
 </pkgmetadata>

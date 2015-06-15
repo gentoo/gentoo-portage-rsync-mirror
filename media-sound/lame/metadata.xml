@@ -5,4 +5,7 @@
   <use>
     <flag name="mp3rtp">Build the mp3-to-RTP streaming utility. **UNSUPPORTED**</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">lame</remote-id>
+  </upstream>
 </pkgmetadata>

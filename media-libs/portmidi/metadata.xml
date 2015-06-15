@@ -5,4 +5,7 @@
   <use>
     <flag name="test-programs">Install various example programs</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">portmedia</remote-id>
+  </upstream>
 </pkgmetadata>

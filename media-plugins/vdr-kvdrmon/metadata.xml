@@ -3,12 +3,15 @@
 <pkgmetadata>
 	<herd>media-tv</herd>
 	<herd>proxy-maintainers</herd>
-		<maintainer>
-			<email>gentoo@bjusystems.de</email>
-			<name>Bernd Juraschek</name>
-		</maintainer>
-		<maintainer>
-			<email>vdr@gentoo.org</email>
-			<name>Gentoo VDR Project</name>
-		</maintainer>
+	<maintainer>
+		<email>gentoo@bjusystems.de</email>
+		<name>Bernd Juraschek</name>
+	</maintainer>
+	<maintainer>
+		<email>vdr@gentoo.org</email>
+		<name>Gentoo VDR Project</name>
+	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">vdr-statusleds</remote-id>
+	</upstream>
 </pkgmetadata>

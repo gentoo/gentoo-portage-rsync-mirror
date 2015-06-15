@@ -12,5 +12,6 @@
 		</maintainer>
 		<bugs-to>mailto:rafael@rafaelmartins.eng.br</bugs-to>
 		<remote-id type="pypi">marrie</remote-id>
+		<remote-id type="github">rafaelmartins/marrie</remote-id>
 	</upstream>
 </pkgmetadata>

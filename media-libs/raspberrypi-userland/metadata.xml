@@ -9,5 +9,7 @@
 		<email>tupone@gentoo.org</email>
 		<name>Tupone Alfredo</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">raspberrypi/userland</remote-id>
+	</upstream>
 </pkgmetadata>
-

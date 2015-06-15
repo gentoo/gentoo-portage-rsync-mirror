@@ -3,8 +3,11 @@
 <pkgmetadata>
 	<herd>graphics</herd>
 	<use>
-		<flag name='colorio'>Use <pkg>media-gfx/opencolorio</pkg></flag>
-		<flag name='opencv'>Use <pkg>media-libs/opencv</pkg></flag>
-		<flag name='tbb'>Use <pkg>dev-cpp/tbb</pkg></flag>
+		<flag name="colorio">Use <pkg>media-gfx/opencolorio</pkg></flag>
+		<flag name="opencv">Use <pkg>media-libs/opencv</pkg></flag>
+		<flag name="tbb">Use <pkg>dev-cpp/tbb</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="github">OpenImageIO/oiio</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -15,5 +15,6 @@
 		reversable. AACGain uses the same command-line user interface as mp3gain.</longdescription>
 	<upstream>
 		<remote-id type="google-code">mp4v2</remote-id>
+		<remote-id type="sourceforge">faac</remote-id>
 	</upstream>
 </pkgmetadata>

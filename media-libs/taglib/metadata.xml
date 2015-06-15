@@ -5,4 +5,7 @@
 	<use>
 		<flag name="asf">Provide support for Microsoft's 'advanced systems format' media container.</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">taglib/taglib</remote-id>
+	</upstream>
 </pkgmetadata>
