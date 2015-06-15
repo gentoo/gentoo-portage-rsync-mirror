@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0-r7.ebuild,v 1.1 2015/06/03 10:07:25 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xen/xen-4.5.0-r8.ebuild,v 1.1 2015/06/15 08:47:07 dlan Exp $
 
 EAPI=5
 
@@ -15,8 +15,8 @@ if [[ $PV == *9999 ]]; then
 	live_eclass="git-2"
 else
 	KEYWORDS="~arm ~arm64 ~amd64"
-	UPSTREAM_VER=5
-	SECURITY_VER=2
+	UPSTREAM_VER=6
+	SECURITY_VER=3
 	GENTOO_VER=
 
 	[[ -n ${UPSTREAM_VER} ]] && \
