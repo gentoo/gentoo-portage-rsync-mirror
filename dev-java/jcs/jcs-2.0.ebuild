@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-2.0.ebuild,v 1.1 2015/06/14 14:38:41 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcs/jcs-2.0.ebuild,v 1.2 2015/06/15 09:54:25 monsieurp Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="test doc source"
@@ -16,12 +16,13 @@ SRC_URI="http://apache.mirrors.ovh.net/ftp.apache.org/dist/commons/${PN}/source/
 
 LICENSE="Apache-2.0"
 SLOT="2.0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="admin"
 
 CDEPEND="dev-java/jisp:2.5
 	dev-db/hsqldb:0
-	dev-java/xmlrpc:0
+	dev-java/log4j:0
+	dev-java/xmlrpc:3
 	dev-java/commons-lang:0
 	dev-java/commons-dbcp:0
 	dev-java/commons-pool:0
@@ -39,9 +40,10 @@ S="${WORKDIR}/${MY_P}"
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="
-	xmlrpc
+	xmlrpc-3
 	hsqldb
 	jisp-2.5
+	log4j
 	commons-lang
 	commons-pool
 	commons-dbcp
