@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.162 2015/05/24 22:44:37 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.163 2015/06/15 21:09:06 chewi Exp $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:
@@ -215,6 +215,37 @@ java-pkg_doexamples() {
 
 	# Let's make a symlink to the directory we have everything else under
 	dosym "${dest}" "${JAVA_PKG_SHAREPATH}/examples" || die
+}
+
+# @FUNCTION: java-pkg_addres
+# @USAGE: <jar> <dir> [<find arguments> ...]
+# @DESCRIPTION:
+# Adds resource files to an existing jar.
+# It is important that the directory given is actually the root of the
+# corresponding resource tree. The target directory as well as
+# sources.lst, MANIFEST.MF, *.class, *.jar, and *.java files are
+# automatically excluded. Symlinks are always followed. Additional
+# arguments are passed through to find.
+#
+# @CODE
+#	java-pkg_addres ${PN}.jar resources ! -name "*.html"
+# @CODE
+#
+# @param $1 - jar file
+# @param $2 - resource tree directory
+# @param $* - arguments to pass to find
+java-pkg_addres() {
+	debug-print-function ${FUNCNAME} $*
+
+	[[ ${#} -lt 2 ]] && die "at least two arguments needed"
+
+	local jar=$(realpath "$1" || die "realpath $1 failed")
+	local dir="$2"
+	shift 2
+
+	pushd "${dir}" > /dev/null || die "pushd ${dir} failed"
+	find -L -type f ! -path "./target/*" ! -path "./sources.lst" ! -name "MANIFEST.MF" ! -regex ".*\.\(class\|jar\|java\)" "${@}" -print0 | xargs -0 jar uf "${jar}" || die "jar failed"
+	popd > /dev/null || die "popd failed"
 }
 
 # @FUNCTION: java-pkg_dojar
