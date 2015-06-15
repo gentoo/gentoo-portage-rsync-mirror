@@ -6,4 +6,7 @@
     <flag name="gpu">GPU support for Enblend</flag>
     <flag name="image-cache">allow for processing of large images</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">enblend</remote-id>
+  </upstream>
 </pkgmetadata>

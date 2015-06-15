@@ -13,4 +13,7 @@
 	commonly used actions on those items (Run, Open, Email, Chat, Play, etc.).
 	GNOME Do is inspired by Quicksilver and GNOME Launch Box.
 	</longdescription>
+	<upstream>
+		<remote-id type="launchpad">do</remote-id>
+	</upstream>
 </pkgmetadata>

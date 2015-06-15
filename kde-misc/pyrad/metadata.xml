@@ -9,5 +9,6 @@
 	<herd>kde</herd>
 	<upstream>
 		<remote-id type="pypi">pyRadKDE</remote-id>
+		<remote-id type="bitbucket">ArneBab/pyrad</remote-id>
 	</upstream>
 </pkgmetadata>

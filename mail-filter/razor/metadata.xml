@@ -11,4 +11,7 @@
 			upstream care.
 		</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">razor</remote-id>
+	</upstream>
 </pkgmetadata>

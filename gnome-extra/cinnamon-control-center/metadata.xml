@@ -6,4 +6,7 @@
 		<flag name="colord">Support color management using
 			<pkg>x11-misc/colord</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="github">linuxmint/cinnamon-control-center</remote-id>
+	</upstream>
 </pkgmetadata>

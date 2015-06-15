@@ -14,4 +14,7 @@
     <flag name="tokyocabinet">Enable tokyocabinet database backend for header
       caching</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">mutt</remote-id>
+  </upstream>
 </pkgmetadata>

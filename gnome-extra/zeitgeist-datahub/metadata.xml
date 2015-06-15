@@ -11,4 +11,7 @@
 			Telepathy logging support for 1-to-1 chats, calls and file transfers
 		</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">zeitgeist-datahub</remote-id>
+  </upstream>
 </pkgmetadata>

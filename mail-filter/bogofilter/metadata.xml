@@ -13,4 +13,7 @@
 	<use>
 		<flag name="tokyocabinet">Enable Tokyo Cabinet database support</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">bogofilter</remote-id>
+	</upstream>
 </pkgmetadata>

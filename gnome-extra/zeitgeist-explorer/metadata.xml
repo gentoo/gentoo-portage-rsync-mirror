@@ -11,4 +11,7 @@ events logged by zeitgeist. In the monitor mode is can show the events logged
 in real-time just like wireshark. In explore mode, it can fetch already 
 logged events for a specific template
 </longdescription>
+  <upstream>
+    <remote-id type="launchpad">zeitgeist-explorer</remote-id>
+  </upstream>
 </pkgmetadata>

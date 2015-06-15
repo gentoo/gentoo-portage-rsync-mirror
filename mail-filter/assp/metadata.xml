@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer>
-                <email>patrick@gentoo.org</email>
-                <name>Patrick Lauer</name>
+		<email>patrick@gentoo.org</email>
+		<name>Patrick Lauer</name>
 	</maintainer>
 	<longdescription>
 	The Anti-Spam SMTP Proxy (ASSP) Server project is an open source
@@ -16,7 +16,10 @@
 	initial setup phase.
 	</longdescription>
 	<use>
-		<flag name='spf'>Adds support for Sender Policy Framework</flag>
-		<flag name='srs'>Adds support for Sender Rewriting Scheme</flag>
+		<flag name="spf">Adds support for Sender Policy Framework</flag>
+		<flag name="srs">Adds support for Sender Rewriting Scheme</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">assp</remote-id>
+	</upstream>
 </pkgmetadata>

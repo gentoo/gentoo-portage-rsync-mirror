@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>fonts</herd>
 	<herd>cjk</herd>
+	<upstream>
+		<remote-id type="sourceforge">mdk-ut</remote-id>
+	</upstream>
 </pkgmetadata>

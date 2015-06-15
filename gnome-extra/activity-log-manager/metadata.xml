@@ -11,4 +11,7 @@ Zeitgeist. It's a user interface written in PyGTK ideated for easily
 browsing and finding files on your computer. It incorporates search, 
 file preview, tag, bookmark and other useful features.
 </longdescription>
+  <upstream>
+    <remote-id type="launchpad">history-manager</remote-id>
+  </upstream>
 </pkgmetadata>

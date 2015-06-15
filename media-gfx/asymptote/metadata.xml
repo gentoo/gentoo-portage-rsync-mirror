@@ -26,4 +26,7 @@
 			Enables off-screen rendering
 		</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">asymptote</remote-id>
+  </upstream>
 </pkgmetadata>

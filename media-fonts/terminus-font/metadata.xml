@@ -40,8 +40,11 @@
       Place the '~' character vertically centered on the line instead of to the
       top.
     </flag>
-	<flag name="pcf-unicode-only">
+    <flag name="pcf-unicode-only">
       Remove non-unicode PCF fonts that could be problematic. See bug #520222.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">terminus-font</remote-id>
+  </upstream>
 </pkgmetadata>

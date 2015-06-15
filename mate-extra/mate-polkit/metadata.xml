@@ -5,4 +5,7 @@
 		<email>TomWij@gentoo.org</email>
 		<name>Tom Wijsman</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">mate-desktop/mate-polkit</remote-id>
+	</upstream>
 </pkgmetadata>

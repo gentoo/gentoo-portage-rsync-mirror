@@ -17,4 +17,7 @@ Extension are Blacklists and Datasource Registery.
     <flag name="sqldebug">debug zeitgeists sql statements</flag>
     <flag name="tracker">Notify Tracker on events</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">zeitgeist-extensions</remote-id>
+  </upstream>
 </pkgmetadata>

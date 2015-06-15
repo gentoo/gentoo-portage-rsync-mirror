@@ -3,5 +3,7 @@
 <pkgmetadata>
   <herd>fonts</herd>
   <herd>cjk</herd>
+  <upstream>
+    <remote-id type="sourceforge-jp">vlgothic</remote-id>
+  </upstream>
 </pkgmetadata>
-

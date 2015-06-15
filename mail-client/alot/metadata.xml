@@ -12,5 +12,7 @@
 		Alot is a terminal interface for <pkg>net-mail/notmuch</pkg> mail
 		written in Python using the <pkg>dev-python/urwid</pkg> toolkit.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">pazz/alot</remote-id>
+	</upstream>
 </pkgmetadata>
-

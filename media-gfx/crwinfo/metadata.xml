@@ -9,4 +9,7 @@
 		Utility to extract thumbnails and information from Canon raw (CRW)
 		files.
 	</longdescription>
+	<upstream>
+		<remote-id type="freshmeat">crwinfo</remote-id>
+	</upstream>
 </pkgmetadata>

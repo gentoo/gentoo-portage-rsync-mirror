@@ -14,4 +14,7 @@
   </maintainer>
   <longdescription lang="en">
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">dispcalgui</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -19,4 +19,7 @@ are logged. It is the heart of Zeitgeist.
     <flag name="sql-debug">Enable SQL debugging</flag>
     <flag name="telepathy">Enable telepathy framework as data source</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">zeitgeist</remote-id>
+  </upstream>
 </pkgmetadata>

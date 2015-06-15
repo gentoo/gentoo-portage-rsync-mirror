@@ -3,4 +3,7 @@
 <pkgmetadata>
 	<herd>cjk</herd>
 	<herd>fonts</herd>
+	<upstream>
+		<remote-id type="sourceforge">wqy</remote-id>
+	</upstream>
 </pkgmetadata>

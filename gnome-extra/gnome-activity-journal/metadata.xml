@@ -6,4 +6,7 @@
     <email>jlec@gentoo.org</email>
     <description>I do the work</description>
   </maintainer>
+  <upstream>
+    <remote-id type="launchpad">gnome-activity-journal</remote-id>
+  </upstream>
 </pkgmetadata>
