@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/hiredis
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.21 2015/06/06 18:59:32 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/hiredis/ChangeLog,v 1.22 2015/06/15 06:58:52 mgorny Exp $
+
+*hiredis-0.13.1 (15 Jun 2015)
+
+  15 Jun 2015; Michał Górny <mgorny@gentoo.org>
+  +files/hiredis-0.13.1-disable-network-tests.patch, +hiredis-0.13.1.ebuild:
+  Version bump with some fixes. Install a pkg-config file. Run tests against a
+  isolated redis instance.
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
