@@ -6,4 +6,7 @@
   Apertium is an open-source shallow-transfer machine translation
   engine and toolbox.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">apertium</remote-id>
+  </upstream>
 </pkgmetadata>

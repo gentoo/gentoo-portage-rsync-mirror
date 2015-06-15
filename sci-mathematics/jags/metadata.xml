@@ -12,4 +12,7 @@
     distributions and samplers.
   * To be a plaftorm for experimentation with ideas in Bayesian modelling
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">mcmc-jags</remote-id>
+  </upstream>
 </pkgmetadata>

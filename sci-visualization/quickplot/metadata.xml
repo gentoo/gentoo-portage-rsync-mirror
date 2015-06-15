@@ -10,4 +10,7 @@
   ASCII text and sound files. It has lots of command line options, making it
   very shell script friendly.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">quickplot</remote-id>
+  </upstream>
 </pkgmetadata>

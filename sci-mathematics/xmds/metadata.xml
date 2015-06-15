@@ -12,5 +12,7 @@ SDEs are all supported).  The system of equations to be integrated is specified
 in a XML file, which XMDS then uses to generate a C++ integrator.  The code can
 autamatically take advantage of MPI and FFTW.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">xmds</remote-id>
+	</upstream>
 </pkgmetadata>
-

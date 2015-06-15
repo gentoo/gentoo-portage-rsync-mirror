@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.21 2015/06/04 10:36:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/intel-sdp.eclass,v 1.22 2015/06/15 19:09:28 jlec Exp $
 
 # @ECLASS: intel-sdp.eclass
 # @MAINTAINER:
@@ -416,7 +416,13 @@ intel-sdp_src_unpack() {
 # @DESCRIPTION:
 # Install everything
 intel-sdp_src_install() {
-	if [[ -d "${INTEL_SDP_DIR}"/Documentation ]]; then
+	if path_exists "${INTEL_SDP_DIR}"/uninstall*; then
+		ebegin "Cleaning out uninstall information"
+		find "${INTEL_SDP_DIR}"/uninstall* -delete || die
+		eend
+	fi
+
+	if path_exists "${INTEL_SDP_DIR}"/Documentation; then
 		dodoc -r "${INTEL_SDP_DIR}"/Documentation/*
 
 		ebegin "Cleaning out documentation"
@@ -424,7 +430,7 @@ intel-sdp_src_install() {
 		eend
 	fi
 
-	if [[ -d "${INTEL_SDP_DIR}"/Samples ]]; then
+	if path_exists "${INTEL_SDP_DIR}"/Samples; then
 		if use examples ; then
 			insinto /usr/share/${P}/examples/
 			doins -r "${INTEL_SDP_DIR}"/Samples/*
@@ -434,7 +440,7 @@ intel-sdp_src_install() {
 		eend
 	fi
 
-	if [[ -d "${INTEL_SDP_DIR}"/eclipse_support ]]; then
+	if path_exists "${INTEL_SDP_DIR}"/eclipse_support; then
 		if has eclipse ${IUSE} && use eclipse; then
 			_isdp_link_eclipse_plugins
 		else
@@ -444,7 +450,7 @@ intel-sdp_src_install() {
 		fi
 	fi
 
-	if [[ -d "${INTEL_SDP_DIR}"/man ]]; then
+	if path_exists "${INTEL_SDP_DIR}"/man; then
 		path_exists "${INTEL_SDP_DIR}"/man/en_US/man1/* && \
 			doman "${INTEL_SDP_DIR}"/man/en_US/man1/*
 		path_exists "${INTEL_SDP_DIR}"/man/man1/* && \

@@ -11,4 +11,7 @@
 		without the need to reboot in a DOS environement. A power off/on cycle of the
 		drive will still be mandatory for new settings to be taken into account.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">idle3-tools</remote-id>
+	</upstream>
 </pkgmetadata>

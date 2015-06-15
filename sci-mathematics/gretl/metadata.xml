@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sci-mathematics</herd>
-<longdescription lang="en">
+  <herd>sci-mathematics</herd>
+  <longdescription lang="en">
   GNU Regression, Econometrics and Time-series Library provides
   a library which comprises various functions relating to econometric
   estimation, a command-line client program and a GUI. The library is
@@ -14,7 +14,10 @@
   data, and uses gnuplot for graphing. It can output regression results
   in LaTeX format.
 </longdescription>
-<use>
-  <flag name="R">Enable support for <pkg>dev-lang/R</pkg></flag>
-</use>
+  <use>
+    <flag name="R">Enable support for <pkg>dev-lang/R</pkg></flag>
+  </use>
+  <upstream>
+    <remote-id type="sourceforge">gretl</remote-id>
+  </upstream>
 </pkgmetadata>

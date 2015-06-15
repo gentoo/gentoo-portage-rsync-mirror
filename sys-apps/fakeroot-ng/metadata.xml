@@ -6,4 +6,7 @@
     <email>anthoine.bourgeois@gmail.com</email>
     <description>Maintainer, assign bugs</description>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">fakerootng</remote-id>
+  </upstream>
 </pkgmetadata>

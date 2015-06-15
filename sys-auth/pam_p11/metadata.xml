@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>crypto</herd>
   <herd>pam</herd>
+  <upstream>
+    <remote-id type="sourceforge">opensc</remote-id>
+  </upstream>
 </pkgmetadata>

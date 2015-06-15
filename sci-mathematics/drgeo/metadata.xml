@@ -10,4 +10,7 @@
     secondary level. It also features an integrated Scheme
     programming language to define scripts within a figure.
   </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">ofset</remote-id>
+	</upstream>
 </pkgmetadata>

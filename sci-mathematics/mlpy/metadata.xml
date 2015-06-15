@@ -12,4 +12,7 @@
   finding a reasonable compromise among modularity, maintainability,
   reproducibility, usability and efficiency.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">mlpy</remote-id>
+  </upstream>
 </pkgmetadata>

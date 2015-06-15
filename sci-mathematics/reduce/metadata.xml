@@ -10,4 +10,7 @@
 A general-purpose computer algebra system.
 Powerful, mature and efficient.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">reduce-algebra</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -4,13 +4,16 @@
   <herd>crypto</herd>
   <herd>pam</herd>
   <use>
-    <flag name='pcsc-lite'>
+    <flag name="pcsc-lite">
       Build the card_eventmanager binary used to detect card removal and lock the sessions. This
       needs <pkg>sys-apps/pcsc-lite</pkg>.
     </flag>
-    <flag name='nss'>
+    <flag name="nss">
       Use Mozilla NSS (<pkg>dev-libs/nss</pkg>) as provider for PKCS#11 access, rather than using
       OpenSSL with a custom implementation of the PKC#11 protocol.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">opensc</remote-id>
+  </upstream>
 </pkgmetadata>

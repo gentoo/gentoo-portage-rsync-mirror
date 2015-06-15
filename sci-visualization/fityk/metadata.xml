@@ -24,4 +24,7 @@
   <use>
     <flag name="nlopt">Enable optimization with <pkg>sci-libs/nlopt</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="github">wojdyr/fityk</remote-id>
+  </upstream>
 </pkgmetadata>

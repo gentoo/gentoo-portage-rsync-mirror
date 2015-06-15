@@ -3,9 +3,12 @@
 <pkgmetadata>
 	<!-- used by infra, please do not non-maintainer drop -->
 	<herd>sysadmin</herd>
-<longdescription>
+	<longdescription>
 This project is a small collection of programs for examining configuration and
 status of LSI megaraid adapters, especially Dell PERC RAID adapters, and
 attached storage devices.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">megactl</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -16,4 +16,7 @@
 		of the distribution along with an identifier of who produces
 		the distribution.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">lsb</remote-id>
+	</upstream>
 </pkgmetadata>

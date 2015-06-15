@@ -12,4 +12,7 @@
   drawing, e.g. line widths, colors, and fonts. A TeX-like syntax
   provides common mathematical symbols.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">gri</remote-id>
+  </upstream>
 </pkgmetadata>

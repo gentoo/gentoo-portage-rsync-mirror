@@ -3,4 +3,7 @@
 <pkgmetadata>
   <herd>xbox</herd>
   <longdescription>Xbox boot loader (prebuilt binary)</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">xbox-linux</remote-id>
+  </upstream>
 </pkgmetadata>

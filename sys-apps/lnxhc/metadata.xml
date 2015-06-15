@@ -5,4 +5,7 @@
 		<email>creffett@gentoo.org</email>
 		<name>Chris Reffett</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">lnxhc</remote-id>
+	</upstream>
 </pkgmetadata>

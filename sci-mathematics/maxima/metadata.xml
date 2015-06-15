@@ -26,4 +26,7 @@
     <flag name="sbcl">Compile maxima with Steel Bank Common Lisp
     (<pkg>dev-lisp/sbcl</pkg>)</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">maxima</remote-id>
+  </upstream>
 </pkgmetadata>
