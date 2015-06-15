@@ -2,5 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>netmon</herd>
-	<use><flag name='messages'>enable console messages</flag></use>
+	<use>
+		<flag name="messages">enable console messages</flag>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">fprobe</remote-id>
+	</upstream>
 </pkgmetadata>

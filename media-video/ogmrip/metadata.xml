@@ -13,4 +13,7 @@
     <flag name="ogm">Support for OGM container format</flag>
     <flag name="srt">Support for SRT subtitle format</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">ogmrip</remote-id>
+  </upstream>
 </pkgmetadata>

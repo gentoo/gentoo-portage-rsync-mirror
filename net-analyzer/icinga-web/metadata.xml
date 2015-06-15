@@ -11,5 +11,7 @@
 	<use>
 		<flag name="pnp">Enables pnp4nagios integration</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">icinga</remote-id>
+	</upstream>
 </pkgmetadata>
-

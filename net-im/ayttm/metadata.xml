@@ -13,5 +13,7 @@
 		<flag name="smtp">Adds support for sending messages via RFC2821 SMTP</flag>
 		<flag name="webcam">Adds webcam support for Yahoo Messenger</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">ayttm</remote-id>
+	</upstream>
 </pkgmetadata>
-

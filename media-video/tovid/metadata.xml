@@ -4,5 +4,6 @@
 	<herd>video</herd>
 	<upstream>
 		<remote-id type="google-code">tovid</remote-id>
+		<remote-id type="github">tovid-suite/tovid</remote-id>
 	</upstream>
 </pkgmetadata>

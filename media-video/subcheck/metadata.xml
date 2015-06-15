@@ -8,4 +8,7 @@
 		rewrite subtitle lines with another character length (useful for Yamada,
 		KISS and other hardware divxplayers), etc. It is highly configurable.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">subcheck</remote-id>
+	</upstream>
 </pkgmetadata>

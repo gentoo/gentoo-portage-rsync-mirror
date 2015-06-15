@@ -8,4 +8,7 @@
   <use>
     <flag name="vdr">Enables Video Disk Recorder support</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">xine</remote-id>
+  </upstream>
 </pkgmetadata>

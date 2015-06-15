@@ -10,4 +10,7 @@
 		<flag name="shaper">Support for traffic shaping</flag>
 		<flag name="valgrind">Compile in valgrind hints</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">accel-ppp</remote-id>
+	</upstream>
 </pkgmetadata>

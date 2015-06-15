@@ -30,4 +30,7 @@
 			and can be kept disabled without risks.
 		</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">netatalk</remote-id>
+  </upstream>
 </pkgmetadata>

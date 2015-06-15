@@ -8,4 +8,7 @@
   <longdescription lang="en">
 Interfaces with speedtest.net's server from the command line.
 </longdescription>
+  <upstream>
+    <remote-id type="github">sivel/speedtest-cli</remote-id>
+  </upstream>
 </pkgmetadata>

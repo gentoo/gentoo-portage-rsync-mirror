@@ -2,18 +2,18 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-      <email>andrew@ahamilto.net</email>
-      <name>Andrew Hamilton</name>
-      <description>Maintainer. Assign bugs to him.</description>
+    <email>andrew@ahamilto.net</email>
+    <name>Andrew Hamilton</name>
+    <description>Maintainer. Assign bugs to him.</description>
   </maintainer>
   <maintainer>
-      <email>creffett@gentoo.org</email>
-      <name>Chris Reffett</name>
-      <description>Proxy maintainer. CC him on bugs.</description>
+    <email>creffett@gentoo.org</email>
+    <name>Chris Reffett</name>
+    <description>Proxy maintainer. CC him on bugs.</description>
   </maintainer>
   <maintainer>
-      <email>mjo@gentoo.org</email>
-      <name>Michael Orlitzky</name>
+    <email>mjo@gentoo.org</email>
+    <name>Michael Orlitzky</name>
   </maintainer>
   <herd>proxy-maintainers</herd>
   <herd>sysadmin</herd>
@@ -31,8 +31,11 @@
     browser.
   </longdescription>
   <use>
-    <flag name='classicui'>use the classic web theme</flag>
-    <flag name='lighttpd'>install <pkg>www-servers/lighttpd</pkg> config</flag>
-    <flag name='web'>enable web interface</flag>
+    <flag name="classicui">use the classic web theme</flag>
+    <flag name="lighttpd">install <pkg>www-servers/lighttpd</pkg> config</flag>
+    <flag name="web">enable web interface</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">nagios</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -6,4 +6,7 @@
     Gadu-Gadu is a IM network vary famous in Poland, this package will
     enable your jabber server to talk to that network.
   </longdescription>
+  <upstream>
+    <remote-id type="github">Jajcus/jggtrans</remote-id>
+  </upstream>
 </pkgmetadata>

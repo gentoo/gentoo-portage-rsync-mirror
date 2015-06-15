@@ -5,4 +5,7 @@
   <maintainer>
     <email>ayatana-bugs@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="launchpad">indicator-messages</remote-id>
+  </upstream>
 </pkgmetadata>

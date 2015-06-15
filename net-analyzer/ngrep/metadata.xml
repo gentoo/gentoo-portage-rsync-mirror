@@ -8,4 +8,7 @@
 		<name>Jordan Ritter</name>
 		<description>Program author who would like to be notified of bugs</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">ngrep</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -6,4 +6,7 @@
 		Subtitle Synchronizer is a easy command-line utility that synchronizes
 		subrip(srt) subtitles that use time format to given timings.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">subsync</remote-id>
+	</upstream>
 </pkgmetadata>

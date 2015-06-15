@@ -14,4 +14,7 @@
 		<flag name="extras">Install example apparmor policy</flag>
 		<flag name="udp-server">Build fwknopd with UDP server mode only</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">mrash/fwknop</remote-id>
+	</upstream>
 </pkgmetadata>

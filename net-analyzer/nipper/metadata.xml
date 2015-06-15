@@ -6,4 +6,7 @@
 		<name>Mike Auty</name>
 	</maintainer>
 	<longdescription>A security tool for auditing cisco and other firewall device configurations.</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">nipper</remote-id>
+	</upstream>
 </pkgmetadata>

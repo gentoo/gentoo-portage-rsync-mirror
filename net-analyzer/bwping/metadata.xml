@@ -11,6 +11,7 @@
 			<email>oleg.derevenetz@gmail.com</email>
 			<name>Oleg Derevenetz</name>
 		</maintainer>
+		<remote-id type="sourceforge">bwping</remote-id>
 	</upstream>
 	<longdescription>
 	A tool to measure bandwidth and response times between two hosts using

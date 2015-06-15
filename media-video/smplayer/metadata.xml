@@ -4,12 +4,15 @@
   <herd>qt</herd>
   <herd>video</herd>
   <use>
-    <flag name='autoshutdown'>
+    <flag name="autoshutdown">
       Enable the option to shutdown your computer after finishing the playlist.
       This requires <pkg>dev-qt/qtdbus</pkg> as dependency.
     </flag>
-	<flag name='streaming'>Support for streaming video sites through
+    <flag name="streaming">Support for streaming video sites through
       <pkg>net-misc/youtube-dl</pkg> (MPV only).
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">smplayer</remote-id>
+  </upstream>
 </pkgmetadata>

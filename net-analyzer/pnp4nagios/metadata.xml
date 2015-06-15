@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>sysadmin</herd>
+  <upstream>
+    <remote-id type="sourceforge">pnp4nagios</remote-id>
+  </upstream>
 </pkgmetadata>

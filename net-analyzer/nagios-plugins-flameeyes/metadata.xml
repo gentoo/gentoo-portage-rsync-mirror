@@ -6,12 +6,14 @@
     <email>flameeyes@gentoo.org</email>
   </maintainer>
   <use>
-    <flag name='smart'>
+    <flag name="smart">
       Install <pkg>sys-apps/smartmontools</pkg> required for
       S.M.A.R.T. disk monitoring. Disabling the flag removes the
       plugin file. This plugin also requires the sudo flag to be
       enable.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="github">Flameeyes/nagios-plugins-flameeyes</remote-id>
+  </upstream>
 </pkgmetadata>
-

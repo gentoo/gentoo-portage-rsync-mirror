@@ -11,4 +11,7 @@
     <flag name="nfsv41">Enable support for NFSv4.1</flag>
     <flag name="uuid">Support UUID lookups in rpc.mountd</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">nfs</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/tbb
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.52 2015/06/15 16:50:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/ChangeLog,v 1.53 2015/06/15 17:08:07 jlec Exp $
+
+*tbb-4.3.20150611 (15 Jun 2015)
+
+  15 Jun 2015; Justin Lecher <jlec@gentoo.org>
+  +files/tbb-4.3.20150611-build.patch, +tbb-4.3.20150611.ebuild,
+  -tbb-4.2.20131118.ebuild, -tbb-4.2.20140122.ebuild,
+  tbb-4.3.20141023-r1.ebuild:
+  Version Bump; drop old
 
 *tbb-4.3.20141023-r1 (15 Jun 2015)
 

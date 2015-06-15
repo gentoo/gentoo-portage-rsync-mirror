@@ -4,7 +4,10 @@
   <herd>video</herd>
   <herd>qt</herd>
   <maintainer>
-  	<email>hwoarang@gentoo.org</email>
-	<name>Markos Chandras</name>
+    <email>hwoarang@gentoo.org</email>
+    <name>Markos Chandras</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">xviservicethief</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>netmon</herd>
-<maintainer>
-  <email>robbat2@gentoo.org</email>
-</maintainer>
-	<longdescription lang="en">
+  <herd>netmon</herd>
+  <maintainer>
+    <email>robbat2@gentoo.org</email>
+  </maintainer>
+  <longdescription lang="en">
  This is the fastest Internet port scanner. It can scan the
  entire Internet in under 6 minutes, transmitting 10 million
  packets per second.
@@ -17,4 +17,7 @@
  scanners. In addition, it's more flexible, allowing
  arbitrary address ranges and port ranges.
 	</longdescription>
+  <upstream>
+    <remote-id type="github">robertdavidgraham/masscan</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -5,4 +5,7 @@
 	<use>
 		<flag name="telepathy">Enable support for the real-time communication framework telepathy</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">choqok</remote-id>
+	</upstream>
 </pkgmetadata>

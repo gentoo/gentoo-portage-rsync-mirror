@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.3.20141023-r1.ebuild,v 1.1 2015/06/15 16:50:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/tbb/tbb-4.3.20141023-r1.ebuild,v 1.2 2015/06/15 17:08:07 jlec Exp $
 
 EAPI=5
-inherit eutils flag-o-matic versionator toolchain-funcs multilib-minimal
+
+inherit eutils flag-o-matic multilib-minimal toolchain-funcs versionator
 
 PV1="$(get_version_component_range 1)"
 PV2="$(get_version_component_range 2)"
@@ -14,7 +15,6 @@ DESCRIPTION="High level abstract threading library"
 HOMEPAGE="http://www.threadingbuildingblocks.org/"
 SRC_URI="http://threadingbuildingblocks.org/sites/default/files/software_releases/source/${MYP}_src.tgz"
 LICENSE="GPL-2-with-exceptions"
-
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~ppc64 ~x86 ~amd64-fbsd ~amd64-linux ~x86-linux"
 IUSE="debug doc examples"
@@ -75,15 +75,15 @@ local_src_compile() {
 	local comp arch
 
 	case ${MULTILIB_ABI_FLAG} in
-	abi_x86_64) arch=x86_64 ;;
-	abi_x86_32) arch=ia32 ;;
+		abi_x86_64) arch=x86_64 ;;
+		abi_x86_32) arch=ia32 ;;
 	esac
 
 	case "$(tc-getCXX)" in
-	*g++*) comp="gcc" ;;
-	*ic*c) comp="icc" ;;
-	*clang*) comp="clang" ;;
-	*) die "compiler $(tc-getCXX) not supported by build system" ;;
+		*g++*) comp="gcc" ;;
+		*ic*c) comp="icc" ;;
+		*clang*) comp="clang" ;;
+		*) die "compiler $(tc-getCXX) not supported by build system" ;;
 	esac
 
 	CXX="$(tc-getCXX)" \
@@ -104,7 +104,7 @@ multilib_src_test() {
 }
 
 multilib_src_install() {
-	cd "${BUILD_DIR}_release"
+	cd "${BUILD_DIR}_release" || die
 	local l
 	for l in $(find . -name lib\*.so.\*); do
 		dolib.so ${l}
@@ -112,7 +112,7 @@ multilib_src_install() {
 		dosym ${bl} /usr/$(get_libdir)/${bl%.*}
 	done
 
-	cd "${BUILD_DIR}"
+	cd "${BUILD_DIR}" || die
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins *.pc
 }

@@ -4,5 +4,6 @@
 	<herd>qt</herd>
 	<upstream>
 		<remote-id type="google-code">nmapsi4</remote-id>
+		<remote-id type="sourceforge">nmapsi</remote-id>
 	</upstream>
 </pkgmetadata>

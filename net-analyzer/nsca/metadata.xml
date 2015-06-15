@@ -19,17 +19,19 @@
     This package provides the send_nsca utility running on the client.
   </longdescription>
   <use>
-    <flag name='crypt'>
+    <flag name="crypt">
       Build support for crypted communication with nsca, through
       <pkg>dev-libs/mcrypt</pkg>. It's recommended not to disable this
       flag unless all the communication will be handled in an
       absolutely safe environment.
     </flag>
-    <flag name='minimal'>
+    <flag name="minimal">
       Only build and install the send_nsca command and not the
       daemon. This allows a very minimal install with no overhead when
       setting up a node.
     </flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">nagios</remote-id>
+  </upstream>
 </pkgmetadata>
-

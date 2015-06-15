@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-	<email>maintainer-needed@gentoo.org</email>
-</maintainer>
-<longdescription>
+	<maintainer>
+		<email>maintainer-needed@gentoo.org</email>
+	</maintainer>
+	<longdescription>
 A nameserver basically responds to a query. Interoperability is an obvious
 requirement here. The standard protocol behaviour of different DNS
 implementations is expected to be the same.
@@ -25,4 +25,7 @@ protocol set, and there are implementations that do not conform to standards.
 Also, new features added to - or bugs removed allow for differentiations between
 versions of an implementation.
 </longdescription>
+	<upstream>
+		<remote-id type="github">kirei/fpdns</remote-id>
+	</upstream>
 </pkgmetadata>

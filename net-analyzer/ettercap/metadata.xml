@@ -13,4 +13,7 @@
 	<use>
 		<flag name="plugins">Install ettercap plugins (et_*.so)</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">Ettercap/ettercap</remote-id>
+	</upstream>
 </pkgmetadata>

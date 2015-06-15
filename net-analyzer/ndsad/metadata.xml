@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>netmon</herd>
+	<herd>netmon</herd>
 	<longdescription lang="en">
 		The NetUP ndsad (NetUp Data Stream Accounting Daemon) utility captures
 		IP-traffic from network interfaces and export NetFlow v.5. Data is
@@ -16,4 +16,7 @@
 		winpcap в Windows. В качестве источника данных вы также можете
 		использовать tee/divert сокеты в FreeBSD и ULOG в Linux.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">ndsad</remote-id>
+	</upstream>
 </pkgmetadata>

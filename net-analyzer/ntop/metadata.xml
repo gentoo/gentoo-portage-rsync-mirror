@@ -1,4 +1,4 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>netmon</herd>
@@ -10,4 +10,7 @@
   (that acts as a web server) traffic information and get a dump of the network
   status. In the latter case, ntop can be seen as a simple RMON-like agent with an
   embedded web interface.</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">ntop</remote-id>
+  </upstream>
 </pkgmetadata>

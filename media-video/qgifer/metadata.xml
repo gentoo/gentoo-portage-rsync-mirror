@@ -13,4 +13,7 @@
 	<use>
 		<flag name="imagemagick">Use imagemagick for image operations</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">qgifer</remote-id>
+	</upstream>
 </pkgmetadata>

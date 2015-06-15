@@ -6,4 +6,7 @@
     <email>idl0r@gentoo.org</email>
     <name>Christian Ruppert</name>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">nagstamon</remote-id>
+  </upstream>
 </pkgmetadata>

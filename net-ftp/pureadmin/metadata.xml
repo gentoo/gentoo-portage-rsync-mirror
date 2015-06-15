@@ -5,4 +5,7 @@
 		<email>maintainer-needed@gentoo.org</email>
 	</maintainer>
 	<longdescription>Graphical tool used to make the management of PureFTPd a little easier.</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">purify</remote-id>
+	</upstream>
 </pkgmetadata>
