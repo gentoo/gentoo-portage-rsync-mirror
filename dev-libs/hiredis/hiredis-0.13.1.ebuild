@@ -66,7 +66,7 @@ src_test() {
 src_install() {
 	_build PREFIX="${ED%/}/usr" install
 	use static-libs || rm "${ED%/}/usr/$(get_libdir)/libhiredis.a"
-	use examples && dohtml -r examples
+	use examples && dodoc -r examples
 
 	insinto /usr/$(get_libdir)/pkgconfig
 	doins ${PN}.pc
