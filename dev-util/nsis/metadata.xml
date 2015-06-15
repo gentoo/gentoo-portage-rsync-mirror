@@ -17,4 +17,7 @@ software components, install or update shared components and more.
   <use>
     <flag name="config-log">Enable the logging facility (useful in debugging installers)</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">nsis</remote-id>
+  </upstream>
 </pkgmetadata>

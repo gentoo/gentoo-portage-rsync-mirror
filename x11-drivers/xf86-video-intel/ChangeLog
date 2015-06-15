@@ -1,6 +1,13 @@
 # ChangeLog for x11-drivers/xf86-video-intel
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.169 2015/06/13 22:53:00 chithanh Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/xf86-video-intel/ChangeLog,v 1.170 2015/06/15 12:26:19 chithanh Exp $
+
+*xf86-video-intel-2.99.917-r2 (15 Jun 2015)
+
+  15 Jun 2015; Chí-Thanh Christopher Nguyễn <chithanh@gentoo.org>
+  +files/xf86-video-intel-2.99.917-libdrm-kernel-4_0-crash.patch,
+  +xf86-video-intel-2.99.917-r2.ebuild:
+  Add patch to fix SNA crash with newer libdrm/kernel, bug #552124.
 
 *xf86-video-intel-2.99.917-r1 (13 Jun 2015)
 

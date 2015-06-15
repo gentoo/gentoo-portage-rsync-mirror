@@ -12,4 +12,7 @@
     <flag name="gpg">Support signing with GnuPG.</flag>
     <flag name="nautilus">Integrate with Nautilus file manager</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">bzr-gtk</remote-id>
+  </upstream>
 </pkgmetadata>

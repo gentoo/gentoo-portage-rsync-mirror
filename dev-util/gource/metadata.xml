@@ -12,5 +12,6 @@
   </maintainer>
   <upstream>
     <remote-id type="google-code">gource</remote-id>
+    <remote-id type="github">acaudwell/Gource</remote-id>
   </upstream>
 </pkgmetadata>

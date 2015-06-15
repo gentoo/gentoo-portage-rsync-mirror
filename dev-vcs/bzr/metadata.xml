@@ -13,4 +13,7 @@
   <use>
     <flag name="sftp">Enable sftp support</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">bzr</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -10,4 +10,7 @@
 		automated tests in C++. The focus lies on usability and extendability.
 		Several output formats are supported and new ones are easily added.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">cpptest</remote-id>
+	</upstream>
 </pkgmetadata>

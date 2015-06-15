@@ -5,4 +5,7 @@
   <use>
     <flag name="extras">Install some extra themes</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">pasang-emas</remote-id>
+  </upstream>
 </pkgmetadata>

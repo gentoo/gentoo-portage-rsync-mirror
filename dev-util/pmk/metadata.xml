@@ -9,4 +9,7 @@
     aims to be considered as an alternative to GNU autoconf, GNU libtool
     and pkg-config.
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">pmk</remote-id>
+  </upstream>
 </pkgmetadata>

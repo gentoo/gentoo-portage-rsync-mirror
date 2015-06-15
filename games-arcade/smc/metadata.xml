@@ -5,4 +5,7 @@
 	<use>
 		<flag name="music">Download and install the music files</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">smclone</remote-id>
+	</upstream>
 </pkgmetadata>

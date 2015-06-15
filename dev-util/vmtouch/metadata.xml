@@ -10,4 +10,7 @@
   of unix and unix-like systems. It is BSD licensed so you can basically 
   do whatever you want with it.
   </longdescription>
+  <upstream>
+    <remote-id type="github">hoytech/vmtouch</remote-id>
+  </upstream>
 </pkgmetadata>

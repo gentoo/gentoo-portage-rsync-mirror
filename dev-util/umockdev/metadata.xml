@@ -5,4 +5,8 @@
 		<email>radhermit@gentoo.org</email>
 		<name>Tim Harder</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="launchpad">umockdev</remote-id>
+		<remote-id type="github">martinpitt/umockdev</remote-id>
+	</upstream>
 </pkgmetadata>

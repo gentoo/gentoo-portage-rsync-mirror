@@ -6,4 +6,7 @@
     <name>Andrew Savchenko</name>
   </maintainer>
   <longdescription>A transparent low-overhead system-wide profiler</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">oprofile</remote-id>
+  </upstream>
 </pkgmetadata>

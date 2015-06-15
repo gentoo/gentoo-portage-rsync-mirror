@@ -9,4 +9,7 @@
 		<email>alexxy@gentoo.org</email>
 		<name>Alexey Shvetosov</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="sourceforge">uncrustify</remote-id>
+	</upstream>
 </pkgmetadata>

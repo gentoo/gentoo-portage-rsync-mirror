@@ -16,6 +16,7 @@
 		<changelog>https://github.com/ninja-ide/ninja-ide/commits/master</changelog>
 		<doc lang="en">https://github.com/ninja-ide/ninja-ide/wiki</doc>
 		<bugs-to>https://github.com/ninja-ide/ninja-ide/issues</bugs-to>
+		<remote-id type="github">ninja-ide/ninja-ide</remote-id>
 	</upstream>
 	<longdescription lang="en">
 		NINJA-IDE (from the recursive acronym: "Ninja-IDE Is Not Just
@@ -27,4 +28,3 @@
 		enjoyable.
 	</longdescription>
 </pkgmetadata>
-

@@ -5,4 +5,7 @@
   <use>
     <flag name="themes">Install additional themes</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">lgames</remote-id>
+  </upstream>
 </pkgmetadata>

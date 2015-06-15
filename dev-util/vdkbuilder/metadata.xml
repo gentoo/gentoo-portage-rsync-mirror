@@ -2,4 +2,7 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<herd>lang-misc</herd>
+	<upstream>
+		<remote-id type="sourceforge">vdkbuilder</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -10,5 +10,9 @@
 		<flag name="songs">Install a few demo songs</flag>
 		<flag name="tools">Install tools</flag>
 		<flag name="webcam">Enable Webcam support</flag>
-    </use>
+	</use>
+	<upstream>
+		<remote-id type="sourceforge">performous</remote-id>
+		<remote-id type="github">performous/performous</remote-id>
+	</upstream>
 </pkgmetadata>

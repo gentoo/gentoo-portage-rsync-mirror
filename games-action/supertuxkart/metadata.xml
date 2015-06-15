@@ -3,7 +3,10 @@
 <pkgmetadata>
 	<herd>games</herd>
 	<use>
-		<flag name='fribidi'>Support for right-to-left languages</flag>
-		<flag name='wiimote'>Support for wiimote input devices</flag>
+		<flag name="fribidi">Support for right-to-left languages</flag>
+		<flag name="wiimote">Support for wiimote input devices</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">supertuxkart</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -11,4 +11,7 @@
 			breakpad crash reporting system
 		</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">openlierox</remote-id>
+	</upstream>
 </pkgmetadata>

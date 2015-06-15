@@ -7,4 +7,7 @@
 		and ctags. It can generate cross-reference tag files that can be interfaced
 		with the Vim CCTree plugin.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">ccglue</remote-id>
+	</upstream>
 </pkgmetadata>

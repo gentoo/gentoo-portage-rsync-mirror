@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription>
+	<herd>games</herd>
+	<longdescription>
 Epiar is a space adventure/combat game written in C with SDL 
 (Simple DirectMedia Layer). It is absolutely free (released 
 under the General Public License v2).
@@ -12,4 +12,7 @@ rebel factions. You start your adventure off doing whatever
 you want, but generally trying to save up money for a new 
 starship, and your adventure takes off from there ...
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">epiar</remote-id>
+	</upstream>
 </pkgmetadata>

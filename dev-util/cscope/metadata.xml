@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>vim</herd>
-<herd>emacs</herd>
-<longdescription>
+  <herd>vim</herd>
+  <herd>emacs</herd>
+  <longdescription>
 Cscope is a developer's tool for browsing source code.  Cscope allows
 searching code for:
 
@@ -24,4 +24,7 @@ Other features:
 Cscope is distributed with xcscope which provides tight integration
 with GNU Emacs.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">cscope</remote-id>
+  </upstream>
 </pkgmetadata>

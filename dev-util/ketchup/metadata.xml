@@ -9,4 +9,7 @@
 		-git, -rc, -mm, -rt (Ingo Molnar's realtime kernel), -ck, and other
 		kernel source trees
 	</longdescription>
+	<upstream>
+		<remote-id type="github">psomas/ketchup</remote-id>
+	</upstream>
 </pkgmetadata>

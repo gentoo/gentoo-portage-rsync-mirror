@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>games</herd>
-<longdescription lang="en">
+	<herd>games</herd>
+	<longdescription lang="en">
 Lasca (or Laska) is a game similar to Draughts but with some really cool
 enhancements. You'll find a great description in the help system of Ascal. In
 the meantime the article on Wikipedia and on
@@ -11,4 +11,7 @@ rules. Ascal tries to give a great Gnome Version of Lasca for one and two
 players. You can undo moves, save and load games and all that on a nifty
 graphical board.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">ascal</remote-id>
+	</upstream>
 </pkgmetadata>

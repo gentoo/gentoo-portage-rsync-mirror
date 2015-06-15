@@ -5,4 +5,7 @@
   <use>
     <flag name="ada">Enable Ada support</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">gnuada</remote-id>
+  </upstream>
 </pkgmetadata>

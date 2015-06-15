@@ -20,4 +20,7 @@
 		also strict ANSI C and in standard C++. All documentation exists in
 		ASCII, TeX dvi, Postsrcipt, HTML, and GNU info formats. 
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">cocom</remote-id>
+	</upstream>
 </pkgmetadata>

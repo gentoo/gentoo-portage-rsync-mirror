@@ -5,5 +5,7 @@
 		<email>idl0r@gentoo.org</email>
 		<name>Christian Ruppert</name>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">git-deploy/git-deploy</remote-id>
+	</upstream>
 </pkgmetadata>
-

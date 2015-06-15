@@ -15,5 +15,6 @@
 			<name>Rafael G. Martins</name>
 		</maintainer>
 		<remote-id type="pypi">github-pages-publish</remote-id>
+		<remote-id type="github">rafaelmartins/github-pages-publish</remote-id>
 	</upstream>
 </pkgmetadata>

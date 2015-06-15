@@ -8,4 +8,7 @@ An Othello game with strong AI.
   <use>
     <flag name="gtp">Install the GTP (Go/Game Text Protocol) frontend</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">rhino</remote-id>
+  </upstream>
 </pkgmetadata>

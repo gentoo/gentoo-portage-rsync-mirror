@@ -6,4 +6,7 @@
   </maintainer>
   <longdescription lang="en">
 	</longdescription>
+  <upstream>
+    <remote-id type="github">rtomayko/git-sh</remote-id>
+  </upstream>
 </pkgmetadata>

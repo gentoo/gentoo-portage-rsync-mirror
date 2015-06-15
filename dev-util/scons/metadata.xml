@@ -9,4 +9,7 @@
     as well as the features it provides itself SCons allows you to use
     the full power of Python to control compilation.
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">scons</remote-id>
+  </upstream>
 </pkgmetadata>

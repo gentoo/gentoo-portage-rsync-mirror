@@ -6,4 +6,7 @@
 		<name>Andrey Grozin</name>
 	</maintainer>
 	<longdescription>A graphical tool to compare and merge text files</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">diffuse</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -14,4 +14,7 @@ The Linux version of the popular german cardgame "Doppelkopf"
     <flag name="openclipartcards">Install the openclipartcards card set</flag>
     <flag name="backgrounds">Install additional background images</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">free-doko</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -2,8 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <maintainer>
-	<email>titanofold@gentoo.org</email>
-	<name>Aaron W. Swenson</name>
+    <email>titanofold@gentoo.org</email>
+    <name>Aaron W. Swenson</name>
   </maintainer>
   <longdescription lang="en">
 	Describe your software project just once, using Premake's simple and
@@ -12,5 +12,7 @@
 	Windows, Mac OS X, and Linux. Use the full featured Lua scripting
 	engine to make build configuration tasks a breeze.
   </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">premake</remote-id>
+  </upstream>
 </pkgmetadata>
-
