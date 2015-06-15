@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/graphite-web-0.9.13-r1.ebuild,v 1.1 2015/05/08 18:57:51 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/graphite-web/graphite-web-0.9.13-r1.ebuild,v 1.2 2015/06/15 07:52:33 grobian Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -9,7 +9,8 @@ inherit distutils-r1 python-utils-r1 prefix
 
 DESCRIPTION="Enterprise scalable realtime graphing"
 HOMEPAGE="http://graphite.readthedocs.org/"
-SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
+SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz
+	https://raw.githubusercontent.com/graphite-project/graphite-web/522d84fed687bd946878e48d85982d59f7bd1267/webapp/content/img/share.png -> ${P}-share.png"
 
 LICENSE="Apache-2.0"
 SLOT="0"
@@ -68,7 +69,7 @@ python_install() {
 	python_fix_shebang "${ED}"/usr/bin/${PN}-manage
 
 	# shortener image isn't included for some reason
-	cp "${FILESDIR}"/share.png "${ED}"/usr/share/${PN}/webapp/content/img/
+	cp "${DISTDIR}"/"${P}"-share.png "${ED}"/usr/share/${PN}/webapp/content/img/
 
 	insinto /etc/${PN}
 	newins webapp/graphite/local_settings.py.example local_settings.py

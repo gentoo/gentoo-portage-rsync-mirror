@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.20.ebuild,v 1.1 2015/06/03 05:41:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vice/vice-2.4.20.ebuild,v 1.2 2015/06/15 07:38:33 mr_bones_ Exp $
 
 EAPI=5
 inherit autotools eutils toolchain-funcs flag-o-matic games
@@ -12,13 +12,20 @@ SRC_URI="mirror://sourceforge/vice-emu/releases/${P}.tar.gz"
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~sparc ~x86"
-IUSE="Xaw3d alsa ethernet ffmpeg fullscreen gtk2 +gtk3 ipv6 lame nls oss png pulseaudio sdl +sdlsound threads vte zlib"
+IUSE="Xaw3d alsa ethernet ffmpeg fullscreen +gtk2 ipv6 lame nls oss png pulseaudio sdl +sdlsound threads vte zlib"
 
-REQUIRED_USE="?? ( gtk2 gtk3 sdl )"
+# upstream says gtk3 and sdl2 shouldn't be exposed yet.
+#REQUIRED_USE="?? ( gtk2 gtk3 sdl )"
+REQUIRED_USE="?? ( gtk2 sdl )"
 
 GTK_COMMON="
 	x11-libs/pango
 	x11-libs/cairo"
+#	gtk3? (
+#		x11-libs/gtk+:3
+#		vte? ( x11-libs/vte:2.90 )
+#		${GTK_COMMON}
+#	)
 RDEPEND="
 	virtual/jpeg:0
 	virtual/opengl
@@ -52,28 +59,23 @@ RDEPEND="
 		x11-libs/gtkglext
 		${GTK_COMMON}
 	)
-	gtk3? (
-		x11-libs/gtk+:3
-		vte? ( x11-libs/vte:2.90 )
-		${GTK_COMMON}
-	)
-	!sdl? ( !gtk2? ( !gtk3? (
+	!sdl? ( !gtk2? (
 		x11-libs/libXmu
 		x11-libs/libXpm
 		x11-libs/libXt
 		x11-libs/libXv
 		Xaw3d? ( x11-libs/libXaw3d )
 		!Xaw3d? ( x11-libs/libXaw )
-	) ) )
+	) )
 	"
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	!sdl? (
 		fullscreen? ( x11-proto/xf86vidmodeproto )
-		!gtk2? ( !gtk3? (
+		!gtk2? (
 			x11-libs/libICE
 			x11-libs/libSM
-		) )
+		)
 	)
 	x11-apps/bdftopcf
 	x11-apps/mkfontdir
@@ -127,11 +129,12 @@ src_configure() {
 	gui_arg+=" $(use_enable sdl sdlui)"
 	# The gtk UI code has raw calls to XOpenDisplay and
 	# is missing -lX11 if vte doesn't pull it in.
-	if use gtk2 || use gtk3 ; then
+	#if use gtk2 || use gtk3 ; then
+	if use gtk2 ; then
 		use vte || append-libs -lX11
 	fi
 	gui_arg+=" $(use_enable gtk2 gnomeui)"
-	gui_arg+=" $(use_enable gtk3 gnomeui3)"
+	#gui_arg+=" $(use_enable gtk3 gnomeui3)"
 	gui_arg+=" $(use_enable Xaw3d xaw3d)"
 
 	# --with-readline is forced to avoid using the embedded copy
