@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10132 2015/06/14 16:02:36 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10133 2015/06/15 16:13:32 grobian Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  15 Jun 2015; Fabian Groffen <grobian@gentoo.org> package.mask:
+  Extend Exim 4.86 RC mask
 
   14 Jun 2015; Patrice Clement <monsieurp@gentoo.org> package.mask:
   Masked dev-java/aspecktwerkz for removal.
