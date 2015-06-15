@@ -34,8 +34,8 @@ multilib_src_configure() {
 }
 
 multilib_src_test() {
-	mkdir "${BUILD_DIR}"/test || die
-	cp -pPR "${S}"/test/fixtures "${BUILD_DIR}"/test/fixtures || die
+	mkdir test || die
+	cp -pPR "${S}"/test/fixtures test/fixtures || die
 	default
 }
 
