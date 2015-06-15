@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.269 2015/05/05 15:32:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.270 2015/06/15 22:05:42 chutzpah Exp $
+
+*dnsmasq-2.73 (15 Jun 2015)
+
+  15 Jun 2015; Patrick McLean <chutzpah@gentoo.org> +dnsmasq-2.73.ebuild:
+  Version bump, add new "inotify" USE flag.
 
   05 May 2015; Mike Frysinger <vapier@gentoo.org> dnsmasq-2.72-r2.ebuild:
   Drop s390 arch protections now that the dep is keyworded.

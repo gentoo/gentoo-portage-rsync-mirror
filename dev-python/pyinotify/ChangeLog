@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyinotify
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.62 2015/04/08 08:05:16 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyinotify/ChangeLog,v 1.63 2015/06/15 22:27:36 mrueg Exp $
+
+*pyinotify-0.9.6 (15 Jun 2015)
+
+  15 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +pyinotify-0.9.6.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> pyinotify-0.9.4-r1.ebuild:
   Drop old Python implementations

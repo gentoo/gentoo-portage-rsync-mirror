@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.117 2015/06/15 12:52:14 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/llvm-9999.ebuild,v 1.118 2015/06/15 22:26:52 voyageur Exp $
 
 EAPI=5
 
@@ -66,8 +66,8 @@ PDEPEND="clang? ( =sys-devel/clang-${PV}-r100 )"
 # pypy gives me around 1700 unresolved tests due to open file limit
 # being exceeded. probably GC does not close them fast enough.
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
-	test? ( || ( $(python_gen_useflags 'python*') ) )
-	lldb? ( clang )"
+	lldb? ( clang )
+	test? ( || ( $(python_gen_useflags 'python*') ) )"
 
 pkg_pretend() {
 	# in megs
@@ -243,11 +243,15 @@ multilib_src_configure() {
 		-DFFI_LIBRARY_DIR="${ffi_ldflags#-L}"
 
 		-DHAVE_HISTEDIT_H=$(usex libedit)
-
-		-DLLDB_DISABLE_LIBEDIT=$(usex libedit 0 1)
-		-DLLDB_DISABLE_CURSES=$(usex libedit 0 1)
-		-DLLDB_ENABLE_TERMINFO=$(usex ncurses)
 	)
+
+	if use lldb; then
+		mycmakeargs+=(
+			-DLLDB_DISABLE_LIBEDIT=$(usex !libedit)
+			-DLLDB_DISABLE_CURSES=$(usex !ncurses)
+			-DLLDB_ENABLE_TERMINFO=$(usex ncurses)
+		)
+	fi
 
 	if ! multilib_is_native_abi || ! use ocaml; then
 		mycmakeargs+=(
@@ -284,7 +288,7 @@ multilib_src_configure() {
 
 		if use lldb; then
 			mycmakeargs+=(
-				-DLLDB_DISABLE_PYTHON=$(usex python 0 1)
+				-DLLDB_DISABLE_PYTHON=$(usex !python)
 			)
 		fi
 
