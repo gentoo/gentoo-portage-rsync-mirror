@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.5.1.ebuild,v 1.2 2015/04/14 10:06:22 dlan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/criu/criu-1.6.ebuild,v 1.1 2015/06/15 10:29:53 dlan Exp $
 
 EAPI=5
 
@@ -30,7 +30,6 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-1.3.1-flags.patch
 	epatch "${FILESDIR}"/${PN}-1.3.1-makefile.patch
 	epatch "${FILESDIR}"/${PN}-1.5-automagic-libbsd.patch
-	epatch "${FILESDIR}"/${P}-arm64-ptrace.patch
 }
 
 src_compile() {
@@ -47,5 +46,5 @@ src_test() {
 
 src_install() {
 	emake SYSCONFDIR="${EPREFIX}"/etc PREFIX="${EPREFIX}"/usr DESTDIR="${D}" install
-	dodoc CREDITS README
+	dodoc CREDITS README.md
 }
