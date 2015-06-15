@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/msv
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.34 2014/06/17 10:43:13 mrueg Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.35 2015/06/15 21:33:35 chewi Exp $
+
+*msv-20130601 (15 Jun 2015)
+
+  15 Jun 2015; James Le Cuirot <chewi@gentoo.org> +msv-20130601.ebuild,
+  -files/build-20050627.xml:
+  Version and EAPI bump. apicheck shows some breakage but rdeps build fine so
+  sticking to SLOT 0.
 
   17 Jun 2014; Manuel Rüger <mrueg@gentoo.org> -msv-20050627-r1.ebuild:
   NM: Cleanup superseeded ebuilds.
