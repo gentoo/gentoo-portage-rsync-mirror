@@ -8,4 +8,7 @@
 		and some other kind of 3D fractals like Mandelbox, Bulbbox, Juliabulb, 
 		Menger Sponge.
 	</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">mandelbulber</remote-id>
+	</upstream>
 </pkgmetadata>

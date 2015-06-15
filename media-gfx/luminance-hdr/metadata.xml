@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>graphics</herd>
-<longdescription lang="en">
+	<herd>graphics</herd>
+	<longdescription lang="en">
 Qtpfsgui is an open source graphical user interface application that aims to provide a workflow for HDR imaging.
 
 Supported HDR formats:
@@ -23,5 +23,7 @@ Supported features:
 	* Copy exif data between sets of images.
 	* Supports internationalization.
 </longdescription>
+	<upstream>
+		<remote-id type="sourceforge">qtpfsgui</remote-id>
+	</upstream>
 </pkgmetadata>
-

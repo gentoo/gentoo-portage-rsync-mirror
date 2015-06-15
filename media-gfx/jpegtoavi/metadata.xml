@@ -6,4 +6,7 @@
   <maintainer>
     <email>media-video@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="sourceforge">jpegtoavi</remote-id>
+  </upstream>
 </pkgmetadata>

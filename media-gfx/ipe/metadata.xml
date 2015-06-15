@@ -8,4 +8,7 @@
   for inclusion into LaTeX documents as well as making multi-page PDF
   presentations.
 </longdescription>
+  <upstream>
+    <remote-id type="sourceforge">ipe7</remote-id>
+  </upstream>
 </pkgmetadata>

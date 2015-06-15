@@ -6,4 +6,7 @@
 		<name>Bernard Cafarelli</name>
 	</maintainer>
 	<longdescription>OpenGL accelerated panorama viewer and browser plugin (supports Quicktime, PangeaVR and GLPanoView panoramas)</longdescription>
+	<upstream>
+		<remote-id type="sourceforge">freepv</remote-id>
+	</upstream>
 </pkgmetadata>
