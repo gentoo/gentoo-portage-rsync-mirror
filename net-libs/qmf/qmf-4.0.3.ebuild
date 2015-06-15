@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.3.ebuild,v 1.6 2015/03/30 15:34:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/qmf-4.0.3.ebuild,v 1.7 2015/06/14 23:29:01 pesa Exp $
 
 EAPI=5
 
@@ -36,10 +36,9 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( >=dev-qt/qttest-4.8:4 )
-	!!<net-libs/qmf-2.0_p201209
 "
 
-DOCS=(CHANGES)
+DOCS=( CHANGES )
 PATCHES=(
 	"${FILESDIR}/${PN}-4.0.2-tests.patch"
 )
@@ -78,7 +77,6 @@ src_configure() {
 }
 
 src_test() {
-	echo ">>> Test phase [QTest]: ${CATEGORY}/${PF}"
 	cd "${S}"/tests
 
 	export QMF_DATA=${T}
@@ -103,7 +101,7 @@ src_install() {
 	if use doc; then
 		emake docs
 
-		dohtml -r doc/html/*
+		dodoc -r doc/html
 		dodoc doc/html/qmf.qch
 		docompress -x /usr/share/doc/${PF}/qmf.qch
 	fi

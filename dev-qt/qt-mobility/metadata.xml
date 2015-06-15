@@ -24,6 +24,6 @@
 </use>
 <upstream>
 	<bugs-to>https://bugreports.qt.io/</bugs-to>
-	<doc>http://doc.qt.digia.com/qtmobility/</doc>
+	<doc>http://doc-snapshots.qt.io/qt-mobility/index.html</doc>
 </upstream>
 </pkgmetadata>

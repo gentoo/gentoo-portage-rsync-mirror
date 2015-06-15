@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/qmf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.15 2015/03/30 15:34:56 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/qmf/ChangeLog,v 1.16 2015/06/14 23:29:01 pesa Exp $
+
+  14 Jun 2015; Davide Pesavento <pesa@gentoo.org> qmf-4.0.3.ebuild:
+  Remove obsolete blocker; delete redundant echo.
 
   30 Mar 2015; Davide Pesavento <pesa@gentoo.org> qmf-4.0.3.ebuild:
   Switch to code.qt.io (bug 544860) and to git-r3 eclass.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/retroshare-0.6.0_pre20150415.ebuild,v 1.1 2015/04/27 09:51:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/retroshare-0.6.0_pre20150415.ebuild,v 1.2 2015/06/14 23:14:34 pinkbyte Exp $
 
 EAPI=5
 
@@ -15,10 +15,9 @@ LICENSE="GPL-2 GPL-3 Apache-2.0 LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-IUSE="cli feedreader links-cloud qt5 voip"
+IUSE="cli feedreader qt5 voip"
 REQUIRED_USE="|| ( cli qt5 )
 	feedreader? ( qt5 )
-	links-cloud? ( qt5 )
 	voip? ( qt5 )"
 
 RDEPEND="
@@ -69,7 +68,6 @@ src_prepare() {
 	rs_src_dirs="libbitdht/src openpgpsdk/src libretroshare/src supportlibs/pegmarkdown"
 	use cli && rs_src_dirs="${rs_src_dirs} retroshare-nogui/src"
 	use qt5 && rs_src_dirs="${rs_src_dirs} retroshare-gui/src"
-	use links-cloud && rs_src_dirs="${rs_src_dirs} plugins/LinksCloud"
 	use feedreader && rs_src_dirs="${rs_src_dirs} plugins/FeedReader"
 
 	use voip && rs_src_dirs="${rs_src_dirs} plugins/VOIP"
@@ -106,7 +104,6 @@ src_install() {
 
 	exeinto "${extension_dir}"
 	use feedreader && doexe plugins/FeedReader/*.so*
-	use links-cloud && doexe plugins/LinksCloud/*.so*
 	use voip && doexe plugins/VOIP/*.so*
 
 	insinto /usr/share/RetroShare06

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/retroshare
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.10 2015/04/27 09:51:51 pinkbyte Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/retroshare/ChangeLog,v 1.11 2015/06/14 23:14:34 pinkbyte Exp $
+
+  14 Jun 2015; Sergey Popov <pinkbyte@gentoo.org>
+  retroshare-0.6.0_pre20150415.ebuild:
+  Remove USE-flag for discontinued links-cloud plugin, wrt bug #549704
 
 *retroshare-0.6.0_pre20150415 (27 Apr 2015)
 
