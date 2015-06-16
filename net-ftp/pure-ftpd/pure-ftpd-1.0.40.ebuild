@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.38.ebuild,v 1.1 2015/05/27 09:23:09 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.40.ebuild,v 1.1 2015/06/16 07:37:48 polynomial-c Exp $
 
 EAPI=5
 inherit eutils confutils flag-o-matic
