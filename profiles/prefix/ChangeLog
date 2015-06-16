@@ -1,6 +1,9 @@
 # ChangeLog for profiles/prefix
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.462 2015/06/13 05:56:19 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/prefix/ChangeLog,v 1.463 2015/06/16 11:30:27 grobian Exp $
+
+  16 Jun 2015; Fabian Groffen <grobian@gentoo.org> darwin/package.mask:
+  Masked Python 2.7.10 on Darwin
 
   13 Jun 2015; Fabian Groffen <grobian@gentoo.org> package.mask:
   Mask latest portage, bug #551678
