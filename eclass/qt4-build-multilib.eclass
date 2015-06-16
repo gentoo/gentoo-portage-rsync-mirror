@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.26 2015/06/13 23:05:46 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.27 2015/06/16 17:49:13 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -87,11 +87,6 @@ multilib_src_install_all()	{ qt4_multilib_src_install_all; }
 # @DESCRIPTION:
 # Space-separated list of directories that will be configured,
 # compiled, and installed. All paths must be relative to ${S}.
-
-# @ECLASS-VARIABLE: QT4_VERBOSE_BUILD
-# @DESCRIPTION:
-# Set to false to reduce build output during compilation.
-: ${QT4_VERBOSE_BUILD:=true}
 
 # @ECLASS-VARIABLE: QCONFIG_ADD
 # @DEFAULT_UNSET
@@ -381,8 +376,8 @@ qt4_multilib_src_configure() {
 		# disable rpath on non-prefix (bugs 380415 and 417169)
 		$(usex prefix '' -no-rpath)
 
-		# verbosity of the configure and build phases
-		-verbose $(${QT4_VERBOSE_BUILD} || echo -silent)
+		# print verbose information about each configure test
+		-verbose
 
 		# precompiled headers don't work on hardened, where the flag is masked
 		$(in_iuse pch && qt_use pch || echo -no-pch)

@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1665 2015/06/15 21:09:06 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1667 2015/06/16 17:49:13 pesa Exp $
+
+  16 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Drop QT4_VERBOSE_BUILD variable (always true now).
+
+  16 Jun 2015; Davide Pesavento <pesa@gentoo.org> qmake-utils.eclass:
+  Use use_if_iuse().
 
   15 Jun 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass:
   Add java-pkg_addres function for adding resource files to an existing jar.

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.9 2015/05/31 12:51:07 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qmake-utils.eclass,v 1.10 2015/06/16 17:47:24 pesa Exp $
 
 # @ECLASS: qmake-utils.eclass
 # @MAINTAINER:
@@ -141,14 +141,13 @@ eqmake4() {
 
 	local qmake_args=("$@")
 
-	# check if project file was passed as a first argument
-	# if not, then search for it
+	# Check if the project file name was passed as first argument. If not, look for candidates.
 	local regexp='.*\.pro'
 	if ! [[ ${1} =~ ${regexp} ]]; then
 		local project_file=$(qmake-utils_find_pro_file)
 		if [[ -z ${project_file} ]]; then
 			echo
-			eerror "No project files found in '${PWD}'!"
+			eerror "No project files found in '${PWD}'"
 			eerror "This shouldn't happen - please send a bug report to https://bugs.gentoo.org/"
 			echo
 			die "eqmake4 failed"
@@ -156,13 +155,12 @@ eqmake4() {
 		qmake_args+=("${project_file}")
 	fi
 
-	# make sure CONFIG variable is correctly set
-	# for both release and debug builds
-	local config_add="release"
-	local config_remove="debug"
-	if has debug ${IUSE} && use debug; then
-		config_add="debug"
-		config_remove="release"
+	# Make sure the CONFIG variable is correctly set for both release and debug builds.
+	local config_add=release
+	local config_remove=debug
+	if use_if_iuse debug; then
+		config_add=debug
+		config_remove=release
 	fi
 
 	local awkscript='BEGIN {
@@ -240,7 +238,6 @@ eqmake4() {
 		QMAKE_LIBDIR_OPENGL="${EPREFIX}"/usr/$(get_libdir) \
 		"${qmake_args[@]}"
 
-	# was qmake successful?
 	if ! eend $? ; then
 		echo
 		eerror "Running qmake has failed! (see above for details)"
@@ -288,7 +285,6 @@ eqmake5() {
 		QMAKE_LFLAGS_DEBUG= \
 		"$@"
 
-	# was qmake successful?
 	if ! eend $? ; then
 		echo
 		eerror "Running qmake has failed! (see above for details)"
