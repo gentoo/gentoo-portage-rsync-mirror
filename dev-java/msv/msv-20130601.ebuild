@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20130601.ebuild,v 1.1 2015/06/15 21:33:35 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/msv-20130601.ebuild,v 1.2 2015/06/16 21:02:22 chewi Exp $
 
 EAPI=5
 
@@ -30,6 +30,7 @@ DEPEND="${CDEPEND}
 	>=virtual/jdk-1.5"
 
 JAVA_GENTOO_CLASSPATH="iso-relax,relaxng-datatype,xsdlib"
+JAVAC_ARGS="-XDignore.symbol.file"
 
 src_compile() {
 	java-pkg-simple_src_compile

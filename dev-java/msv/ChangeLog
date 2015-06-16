@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/msv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.35 2015/06/15 21:33:35 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/msv/ChangeLog,v 1.36 2015/06/16 21:02:22 chewi Exp $
+
+  16 Jun 2015; James Le Cuirot <chewi@gentoo.org> msv-20130601.ebuild:
+  Fix building with Oracle. Still doesn't work with ibm-jdk-bin but we'll be
+  removing that soon. Closes #552264.
 
 *msv-20130601 (15 Jun 2015)
 

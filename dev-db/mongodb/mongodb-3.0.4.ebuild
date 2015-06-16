@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-3.0.3.ebuild,v 1.3 2015/05/27 12:49:37 ultrabug Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mongodb/mongodb-3.0.4.ebuild,v 1.1 2015/06/16 21:20:42 ultrabug Exp $
 
 EAPI=5
 SCONS_MIN_VERSION="2.3.0"
@@ -19,12 +19,12 @@ SRC_URI="http://downloads.mongodb.org/src/${MY_P}.tar.gz"
 LICENSE="AGPL-3 Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="debug kerberos mms-agent ssl test +tools"
+IUSE="debug kerberos mms-agent ssl +tools"
 
 RDEPEND="app-arch/snappy
 	>=dev-cpp/yaml-cpp-0.5.1
 	>=dev-libs/boost-1.50[threads(+)]
-	>=dev-libs/libpcre-8.37[cxx]
+	>=dev-libs/libpcre-8.30[cxx]
 	dev-libs/snowball-stemmer
 	dev-util/google-perftools[-minimal]
 	net-libs/libpcap
@@ -35,8 +35,7 @@ DEPEND="${RDEPEND}
 	>=sys-devel/gcc-4.8.2:*
 	sys-libs/ncurses
 	sys-libs/readline
-	kerberos? ( dev-libs/cyrus-sasl[kerberos] )
-	test? ( dev-python/pymongo )"
+	kerberos? ( dev-libs/cyrus-sasl[kerberos] )"
 PDEPEND="tools? ( >=app-admin/mongo-tools-${PV} )"
 
 S=${WORKDIR}/${MY_P}

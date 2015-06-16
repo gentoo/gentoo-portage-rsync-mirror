@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/actionpack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.305 2015/06/07 16:38:30 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/actionpack/ChangeLog,v 1.306 2015/06/16 21:11:53 graaff Exp $
+
+*actionpack-3.2.22 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +actionpack-3.2.22.ebuild:
+  Version bump.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

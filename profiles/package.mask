@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16624 2015/06/15 16:13:32 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16625 2015/06/16 21:12:28 jauhien Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,13 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+# Jauhien Piatlicki <jauhien@gentoo.org> (16 Jun 2015)
+# Upstream does not provide these as separated packages.
+# Nobody interested in maintaining them in Gentoo.
+# A number of open bugs.
+# Masked for removal in 30 days.
+dev-util/ext4_utils
+dev-util/libsparse
 
 # Patrice Clement <monsieurp@gentoo.org> (14 Jun 2015)
 # Upstream dead. No update since 2005.

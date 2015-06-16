@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/activerecord
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.293 2015/06/09 14:39:00 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activerecord/ChangeLog,v 1.294 2015/06/16 21:12:29 graaff Exp $
+
+*activerecord-3.2.22 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +activerecord-3.2.22.ebuild:
+  Version bump.
 
   09 Jun 2015; Manuel Rüger <mrueg@gentoo.org> activerecord-3.2.21.ebuild,
   activerecord-4.0.13.ebuild, activerecord-4.1.10.ebuild,
