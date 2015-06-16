@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.23.ebuild,v 1.2 2015/04/08 18:28:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/tevent/tevent-0.9.25.ebuild,v 1.1 2015/06/16 12:09:58 polynomial-c Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-fbsd ~x86-fbsd ~arm-linux ~x86-linux"
 IUSE="python"
 
-RDEPEND=">=sys-libs/talloc-2.1.1[${MULTILIB_USEDEP}]
+RDEPEND=">=sys-libs/talloc-2.1.2[${MULTILIB_USEDEP}]
 	python? ( ${PYTHON_DEPS} )"
 
 DEPEND="${RDEPEND}

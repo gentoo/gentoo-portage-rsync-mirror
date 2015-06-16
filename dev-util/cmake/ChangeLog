@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cmake
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.313 2015/06/16 04:47:38 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cmake/ChangeLog,v 1.314 2015/06/16 12:22:37 zlogene Exp $
+
+  16 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> cmake-3.2.2.ebuild:
+  x86 stable wrt bug #545870
 
   16 Jun 2015; Jeroen Roovers <jer@gentoo.org> cmake-3.2.2.ebuild:
   Stable for HPPA PPC64 (bug #545870).
