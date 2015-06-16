@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/web-console/web-console-2.1.2.ebuild,v 1.1 2015/04/02 05:20:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/web-console/web-console-2.1.3.ebuild,v 1.1 2015/06/16 20:17:35 graaff Exp $
 
 EAPI=5
 USE_RUBY="ruby20 ruby21"
@@ -20,10 +20,10 @@ KEYWORDS="~amd64"
 IUSE=""
 
 ruby_add_rdepend "
-	>=dev-ruby/activemodel-4.0
+	>=dev-ruby/activemodel-4.0:*
 	>=dev-ruby/binding_of_caller-0.7.2
-	>=dev-ruby/railties-4.0
-	>=dev-ruby/sprockets-rails-2.0 <dev-ruby/sprockets-rails-4.0
+	>=dev-ruby/railties-4.0:*
+	>=dev-ruby/sprockets-rails-2.0:* <dev-ruby/sprockets-rails-4.0:*
 "
 
 ruby_add_bdepend "test? (

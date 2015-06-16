@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/jquery-rails
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.45 2015/05/28 04:27:07 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/jquery-rails/ChangeLog,v 1.46 2015/06/16 20:10:43 graaff Exp $
+
+*jquery-rails-4.0.4 (16 Jun 2015)
+*jquery-rails-3.1.3 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +jquery-rails-3.1.3.ebuild,
+  +jquery-rails-4.0.4.ebuild:
+  Version bump for security bug 552326.
 
   28 May 2015; Hans de Graaff <graaff@gentoo.org> jquery-rails-2.3.0.ebuild,
   jquery-rails-3.1.2.ebuild:
