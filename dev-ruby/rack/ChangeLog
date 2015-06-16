@@ -1,6 +1,19 @@
 # ChangeLog for dev-ruby/rack
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.144 2015/05/07 05:58:42 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rack/ChangeLog,v 1.146 2015/06/16 20:00:58 graaff Exp $
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> -rack-1.5.2-r2.ebuild,
+  -rack-1.5.2-r3.ebuild, -rack-1.5.2-r4.ebuild, -rack-1.5.3.ebuild,
+  -rack-1.6.0.ebuild, -rack-1.6.1.ebuild:
+  Cleanup.
+
+*rack-1.6.2 (16 Jun 2015)
+*rack-1.5.4-r1 (16 Jun 2015)
+*rack-1.5.4 (16 Jun 2015)
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +rack-1.5.4.ebuild,
+  +rack-1.5.4-r1.ebuild, +rack-1.6.2.ebuild:
+  Version bump for security bug 552324.
 
 *rack-1.5.3 (07 May 2015)
 

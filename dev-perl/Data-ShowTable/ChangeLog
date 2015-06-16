@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Data-ShowTable
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.25 2015/04/03 21:23:02 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-ShowTable/ChangeLog,v 1.26 2015/06/16 19:58:41 monsieurp Exp $
+
+  16 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  Data-ShowTable-3.300.0-r1.ebuild, Data-ShowTable-4.600.0.ebuild:
+  Remove broken test. Fix bug 403881.
 
 *Data-ShowTable-4.600.0 (03 Apr 2015)
 
