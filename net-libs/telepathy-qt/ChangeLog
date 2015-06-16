@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/telepathy-qt
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.39 2015/05/15 13:25:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/ChangeLog,v 1.40 2015/06/16 01:16:53 pesa Exp $
+
+*telepathy-qt-0.9.6.1 (16 Jun 2015)
+
+  16 Jun 2015; Davide Pesavento <pesa@gentoo.org>
+  +files/0.9.6.1-default-source.patch, +files/0.9.6.1-yes-release.patch,
+  +telepathy-qt-0.9.6.1.ebuild, -telepathy-qt-0.9.6.ebuild:
+  Version bump.
 
 *telepathy-qt-0.9.6 (15 May 2015)
 

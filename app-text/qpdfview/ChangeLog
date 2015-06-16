@@ -1,6 +1,9 @@
 # ChangeLog for app-text/qpdfview
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.72 2015/06/09 12:37:18 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/qpdfview/ChangeLog,v 1.73 2015/06/16 01:23:10 pesa Exp $
+
+  16 Jun 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Fix metadata indentation.
 
   09 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Updating remote-id in metadata.xml

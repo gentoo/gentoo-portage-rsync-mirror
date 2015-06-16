@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.6.ebuild,v 1.1 2015/05/15 13:25:08 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/telepathy-qt/telepathy-qt-0.9.6.1.ebuild,v 1.1 2015/06/16 01:16:53 pesa Exp $
 
 EAPI=5
 
@@ -50,8 +50,14 @@ DEPEND="${RDEPEND}
 
 DOCS=( AUTHORS ChangeLog HACKING NEWS README )
 
+PATCHES=(
+	"${FILESDIR}/${PV}-default-source.patch"
+	"${FILESDIR}/${PV}-yes-release.patch"
+)
+
 pkg_setup() {
 	python-any-r1_pkg_setup
+
 	MULTIBUILD_VARIANTS=( $(usev qt4) $(usev qt5) )
 }
 
@@ -62,7 +68,6 @@ src_configure() {
 			$(cmake-utils_use_enable farstream)
 			$(cmake-utils_use_enable test TESTS)
 			-DENABLE_EXAMPLES=OFF
-			-ENABLE_SERVICE_SUPPORT=ON
 		)
 		if [[ ${MULTIBUILD_VARIANT} = qt4 ]]; then
 			mycmakeargs+=(-DDESIRED_QT_VERSION=4)
