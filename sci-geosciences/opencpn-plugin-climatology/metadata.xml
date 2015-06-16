@@ -8,5 +8,6 @@
 	</maintainer>
 	<upstream>
 		<remote-id type="sourceforge">opencpnplugins</remote-id>
+		<remote-id type="github">seandepagnier/climatology_pi</remote-id>
 	</upstream>
 </pkgmetadata>

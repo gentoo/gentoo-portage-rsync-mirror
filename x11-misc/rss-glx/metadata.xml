@@ -3,6 +3,9 @@
 <pkgmetadata>
 	<herd>desktop-misc</herd>
 	<use>
-		<flag name='quesoglc'>Enable support for OpenGL Character Renderer</flag>
+		<flag name="quesoglc">Enable support for OpenGL Character Renderer</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">rss-glx</remote-id>
+	</upstream>
 </pkgmetadata>

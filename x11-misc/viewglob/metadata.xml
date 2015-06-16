@@ -9,4 +9,7 @@
 		tracking shell directory changes. It is compatible with zsh and bash,
 		and helper files and documentation are provided.
 	</longdescription>
+  <upstream>
+    <remote-id type="sourceforge">viewglob</remote-id>
+  </upstream>
 </pkgmetadata>

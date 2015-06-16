@@ -15,7 +15,7 @@
 	(e.g., QoS, ACLs, network monitoring, etc).
   </longdescription>
   <use>
-		<flag name="compute-only">Only install things needed on compute hosts</flag>
+    <flag name="compute-only">Only install things needed on compute hosts</flag>
     <flag name="dhcp">Installs the initscripts for the neutron dhcp service</flag>
     <flag name="l3">Installs the initscripts for the neutron l3 agent service</flag>
     <flag name="metadata">Installs the initscripts for the neutron metadata agent service</flag>
@@ -23,5 +23,7 @@
     <flag name="linuxbridge">Installs the initscripts for the neutron linuxbridge agent service</flag>
     <flag name="server">Installs the initscripts for the neutron server service</flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">neutron</remote-id>
+  </upstream>
 </pkgmetadata>
-

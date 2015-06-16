@@ -13,4 +13,7 @@
     <email>ssuominen@gentoo.org</email>
     <name>Samuli Suominen</name>
   </maintainer>
+  <upstream>
+    <remote-id type="github">limansky/tinymount</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -8,5 +8,6 @@
   </use>
   <upstream>
     <remote-id type="sourceforge">ipmitool</remote-id>
+    <remote-id type="launchpad">ubuntu</remote-id>
   </upstream>
 </pkgmetadata>

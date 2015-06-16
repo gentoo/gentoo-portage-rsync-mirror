@@ -17,4 +17,7 @@
 			libvncserver (experimental)</flag>
 		<flag name="tk">Support the simple tcl/tk -gui option</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">libvncserver</remote-id>
+	</upstream>
 </pkgmetadata>

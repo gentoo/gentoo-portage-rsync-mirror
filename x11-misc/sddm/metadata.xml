@@ -15,4 +15,7 @@
     turn gives the designer the ability to create smooth, animated
     user interfaces.
   </longdescription>
+  <upstream>
+    <remote-id type="github">sddm/sddm</remote-id>
+  </upstream>
 </pkgmetadata>

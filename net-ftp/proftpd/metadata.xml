@@ -57,5 +57,6 @@ server.</longdescription>
 	</use>
 	<upstream>
 		<remote-id type="sourceforge">gssmod</remote-id>
+		<remote-id type="github">Castaglia/proftpd-mod_vroot</remote-id>
 	</upstream>
 </pkgmetadata>

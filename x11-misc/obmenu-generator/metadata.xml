@@ -8,5 +8,6 @@
 		<maintainer status="active">
 			<email>trizenx@gmail.com</email>
 		</maintainer>
+		<remote-id type="github">trizen/obmenu-generator</remote-id>
 	</upstream>
 </pkgmetadata>

@@ -12,4 +12,7 @@
 		<name>Sergey Popov</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="launchpad">magick-rotation</remote-id>
+	</upstream>
 </pkgmetadata>

@@ -9,5 +9,6 @@
  i3status wrapper written in python</longdescription>
 	<upstream>
 		<remote-id type="pypi">py3status</remote-id>
+		<remote-id type="github">ultrabug/py3status</remote-id>
 	</upstream>
 </pkgmetadata>
