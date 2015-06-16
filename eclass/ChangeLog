@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1667 2015/06/16 17:49:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1669 2015/06/16 21:40:51 williamh Exp $
+
+  16 Jun 2015; William Hubbs <williamh@gentoo.org> +golang-vcs.eclass:
+  Add golang-vcs.eclass to retrieve go packages from vcs repositories
+  for live ebuilds of software written in the Go programming language.
+
+  16 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
+  Minor changes to reduce diff with qt5-build.eclass
 
   16 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt4-build-multilib.eclass:
   Drop QT4_VERBOSE_BUILD variable (always true now).

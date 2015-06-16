@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.27 2015/06/16 17:49:13 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt4-build-multilib.eclass,v 1.28 2015/06/16 21:38:00 pesa Exp $
 
 # @ECLASS: qt4-build-multilib.eclass
 # @MAINTAINER:
@@ -25,22 +25,25 @@ SLOT="4"
 
 case ${PV} in
 	4.?.9999)
+		# git stable branch
 		QT4_BUILD_TYPE="live"
-		EGIT_REPO_URI=(
-			"git://code.qt.io/qt/qt.git"
-			"https://code.qt.io/git/qt/qt.git"
-			"https://github.com/qtproject/qt.git"
-		)
 		EGIT_BRANCH=${PV%.9999}
-		inherit git-r3
 		;;
 	*)
+		# official stable release
 		QT4_BUILD_TYPE="release"
 		MY_P=qt-everywhere-opensource-src-${PV/_/-}
 		SRC_URI="http://download.qt.io/official_releases/qt/${PV%.*}/${PV}/${MY_P}.tar.gz"
 		S=${WORKDIR}/${MY_P}
 		;;
 esac
+
+EGIT_REPO_URI=(
+	"git://code.qt.io/qt/qt.git"
+	"https://code.qt.io/git/qt/qt.git"
+	"https://github.com/qtproject/qt.git"
+)
+[[ ${QT4_BUILD_TYPE} == live ]] && inherit git-r3
 
 if [[ ${PN} != qttranslations ]]; then
 	IUSE="aqua debug pch"
@@ -507,21 +510,19 @@ qt4_multilib_src_install_all() {
 		find "${S}"/src/${moduledir} -type f -name '*_p.h' -exec doins '{}' + || die
 	fi
 
-	# remove .la files since we are building only shared libraries
 	prune_libtool_files
 }
 
 # @FUNCTION: qt4-build-multilib_pkg_postinst
 # @DESCRIPTION:
-# Regenerate configuration, plus throw a message about possible
-# breakages and proposed solutions.
+# Regenerate configuration after installation or upgrade/downgrade.
 qt4-build-multilib_pkg_postinst() {
 	qt4_regenerate_global_qconfigs
 }
 
 # @FUNCTION: qt4-build-multilib_pkg_postrm
 # @DESCRIPTION:
-# Regenerate configuration when the package is completely removed.
+# Regenerate configuration when a module is completely removed.
 qt4-build-multilib_pkg_postrm() {
 	qt4_regenerate_global_qconfigs
 }
@@ -590,16 +591,19 @@ qt4_prepare_env() {
 # @DESCRIPTION:
 # Executes the given command inside each directory listed in QT4_TARGET_DIRECTORIES.
 qt4_foreach_target_subdir() {
-	local subdir
+	local ret=0 subdir=
 	for subdir in ${QT4_TARGET_DIRECTORIES}; do
 		mkdir -p "${subdir}" || die
 		pushd "${subdir}" >/dev/null || die
 
 		einfo "Running $* ${subdir:+in ${subdir}}"
 		"$@"
+		((ret+=$?))
 
 		popd >/dev/null || die
 	done
+
+	return ${ret}
 }
 
 # @FUNCTION: qt4_symlink_tools_to_build_dir
