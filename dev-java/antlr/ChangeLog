@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.117 2015/06/07 08:28:31 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.118 2015/06/16 08:58:33 monsieurp Exp $
+
+  16 Jun 2015; Patrice Clement <monsieurp@gentoo.org> antlr-4.4.ebuild:
+  Stable for ppc via ALLARCHES. Fix bug 549586.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

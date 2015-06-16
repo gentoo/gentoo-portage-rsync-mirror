@@ -10,4 +10,4 @@ RDEPEND=boost? ( dev-libs/boost ) samples? ( x11-libs/libX11 virtual/opengl medi
 SLOT=0
 SRC_URI=mirror://sourceforge/assimp/assimp--3.0.1270-source-only.zip
 _eclasses_=cmake-utils	0430c386d85cec959d72640afd63ea91	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=c4c663f7c3a3dadf601f732e7a395f9a
+_md5_=14feb668a3cf55f989e40894a8b9fdbf
