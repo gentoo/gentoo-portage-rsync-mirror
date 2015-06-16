@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.6.0.ebuild,v 1.1 2015/06/02 08:24:05 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.6.0.ebuild,v 1.2 2015/06/16 00:39:31 pesa Exp $
 
 EAPI=5
 
@@ -22,19 +22,19 @@ REQUIRED_USE="^^ ( qt4 qt5 )"
 DEPEND="
 	dev-db/sqlite:3
 	dev-java/antlr:0[cxx]
-	dev-libs/qcustomplot[qt4?,qt5?]
+	dev-libs/qcustomplot[qt5=]
 	x11-libs/qscintilla
 	qt4? (
 		dev-qt/qtcore:4
 		dev-qt/qtgui:4
-		)
+	)
 	qt5? (
 		dev-qt/linguist:5
 		dev-qt/linguist-tools:5
 		dev-qt/qtnetwork:5
 		dev-qt/qttest:5
 		dev-qt/qtwidgets:5
-		)"
+	)"
 RDEPEND="${DEPEND}"
 
 PATCHES=( "${FILESDIR}"/${P}-unbundle-keep-qscintilla.patch )

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.3.1.ebuild,v 1.3 2015/03/21 08:30:48 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlitebrowser/sqlitebrowser-3.3.1.ebuild,v 1.4 2015/06/16 00:39:31 pesa Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND="
 	dev-java/antlr:0[cxx]
-	dev-libs/qcustomplot
+	dev-libs/qcustomplot[-qt5(-)]
 	dev-qt/qtcore:4
 	dev-qt/qtgui:4"
 RDEPEND="${DEPEND}"
