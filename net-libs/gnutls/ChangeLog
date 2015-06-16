@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.544 2015/05/27 13:00:48 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.545 2015/06/16 20:57:15 alonbl Exp $
+
+*gnutls-3.4.2 (16 Jun 2015)
+
+  16 Jun 2015; Alon Bar-Lev <alonbl@gentoo.org> +files/gnutls-3.4.2-build.patch,
+  +gnutls-3.4.2.ebuild:
+  Version bump
 
   27 May 2015; Agostino Sarubbo <ago@gentoo.org> gnutls-3.3.15.ebuild:
   Stable for arm, wrt bug #548636
