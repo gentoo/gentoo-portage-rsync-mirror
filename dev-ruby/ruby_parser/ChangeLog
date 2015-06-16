@@ -1,6 +1,13 @@
 # ChangeLog for dev-ruby/ruby_parser
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.73 2015/06/07 19:43:21 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby_parser/ChangeLog,v 1.75 2015/06/16 05:02:56 graaff Exp $
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> ruby_parser-3.6.6.ebuild:
+  Create stable candidate.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> -ruby_parser-3.6.4.ebuild,
+  -ruby_parser-3.6.5.ebuild:
+  Cleanup.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

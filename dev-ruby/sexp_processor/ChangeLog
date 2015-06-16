@@ -1,6 +1,19 @@
 # ChangeLog for dev-ruby/sexp_processor
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.42 2015/06/07 05:58:57 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sexp_processor/ChangeLog,v 1.45 2015/06/16 05:09:12 graaff Exp $
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +sexp_processor-4.4.4.ebuild:
+  Create stable candidate.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> +sexp_processor-4.4.4.ebuild,
+  sexp_processor-4.4.5.ebuild:
+  Restore this version since it does not need a newer minitest stable yet.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> sexp_processor-4.4.5.ebuild:
+  Create stable candidate.
+
+  16 Jun 2015; Hans de Graaff <graaff@gentoo.org> -sexp_processor-4.4.4.ebuild:
+  Cleanup.
 
 *sexp_processor-4.6.0 (07 Jun 2015)
 
