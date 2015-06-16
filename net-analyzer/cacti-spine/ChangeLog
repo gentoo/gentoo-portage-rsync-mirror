@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/cacti-spine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.42 2015/06/15 08:17:39 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti-spine/ChangeLog,v 1.44 2015/06/16 04:33:58 jer Exp $
+
+  16 Jun 2015; Jeroen Roovers <jer@gentoo.org> -cacti-spine-0.8.7i.ebuild,
+  -cacti-spine-0.8.8a.ebuild, -cacti-spine-0.8.8b.ebuild,
+  -files/cacti-spine-0.8.8b-fix-ac-macro.patch:
+  Old.
+
+  16 Jun 2015; Jeroen Roovers <jer@gentoo.org> cacti-spine-0.8.8d-r1.ebuild:
+  Stable for HPPA too.
 
   15 Jun 2015; Agostino Sarubbo <ago@gentoo.org> cacti-spine-0.8.8d-r1.ebuild:
   stable for amd64/x86 wrt bug #551728
