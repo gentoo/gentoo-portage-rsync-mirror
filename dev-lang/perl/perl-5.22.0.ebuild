@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.22.0.ebuild,v 1.1 2015/06/15 21:54:14 civil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.22.0.ebuild,v 1.3 2015/06/16 13:20:30 dilfridge Exp $
 
 EAPI=5
 
@@ -31,7 +31,7 @@ KEYWORDS="~alpha ~amd64 ~amd64-fbsd ~amd64-linux ~arm ~arm64 ~hppa ~hppa-hpux ~i
 IUSE="berkdb debug doc gdbm ithreads"
 
 RDEPEND="
-	berkdb? ( sys-libs/db )
+	berkdb? ( sys-libs/db:* )
 	gdbm? ( >=sys-libs/gdbm-1.8.3 )
 	app-arch/bzip2
 	sys-libs/zlib
@@ -49,19 +49,18 @@ PDEPEND="
 S="${WORKDIR}/${MY_P}"
 
 dual_scripts() {
-	src_remove_dual      perl-core/Archive-Tar        1.960.0       ptar ptardiff ptargrep
-	src_remove_dual      perl-core/Digest-SHA         5.880.0       shasum
-	src_remove_dual      perl-core/CPAN               2.50.0        cpan
-	src_remove_dual      perl-core/Encode             2.730.0       enc2xs piconv
-	src_remove_dual      perl-core/ExtUtils-MakeMaker 7.40.0       instmodsh
-	src_remove_dual      perl-core/ExtUtils-ParseXS   3.240.0       xsubpp
-	src_remove_dual      perl-core/IO-Compress        2.64.0        zipdetails
-	src_remove_dual      perl-core/JSON-PP            2.272.30      json_pp
-	src_remove_dual      perl-core/Module-Build       0.420.500     config_data
-	src_remove_dual      perl-core/Module-CoreList    5.201.502.140 corelist
-	src_remove_dual      perl-core/Pod-Parser         1.620.0       pod2usage podchecker podselect
-	src_remove_dual      perl-core/Pod-Perldoc        3.230.0       perldoc
-	src_remove_dual      perl-core/Test-Harness       3.330.0       prove
+	src_remove_dual      perl-core/Archive-Tar        2.40.0       ptar ptardiff ptargrep
+	src_remove_dual      perl-core/Digest-SHA         5.950.0       shasum
+	src_remove_dual      perl-core/CPAN               2.110.0        cpan
+	src_remove_dual      perl-core/Encode             2.720.0       enc2xs piconv
+	src_remove_dual      perl-core/ExtUtils-MakeMaker 7.40.100       instmodsh
+	src_remove_dual      perl-core/ExtUtils-ParseXS   3.280.0       xsubpp
+	src_remove_dual      perl-core/IO-Compress        2.68.0        zipdetails
+	src_remove_dual      perl-core/JSON-PP            2.273.0      json_pp
+	src_remove_dual      perl-core/Module-CoreList    5.201.505.200 corelist
+	src_remove_dual      perl-core/Pod-Parser         1.630.0       pod2usage podchecker podselect
+	src_remove_dual      perl-core/Pod-Perldoc        3.250.0       perldoc
+	src_remove_dual      perl-core/Test-Harness       3.350.0       prove
 	src_remove_dual      perl-core/podlators          2.5.3         pod2man pod2text
 	src_remove_dual_man  perl-core/podlators          2.5.3         /usr/share/man/man1/perlpodstyle.1
 }
@@ -101,7 +100,6 @@ eblit-run() {
 	eblit-run-maybe eblit-$1-post
 }
 
-#src_unpack()	{ eblit-run src_unpack    v50160001 ; }
 src_prepare()	{ eblit-run src_prepare   v50160001 ; }
 src_configure()	{ eblit-run src_configure v50180002 ; }
 #src_compile()	{ eblit-run src_compile   v50160001 ; }
@@ -114,7 +112,7 @@ src_install()	{ eblit-run src_install   v50200001 ; }
 # FILESDIR might not be available during binpkg install
 # FIXME: version passing
 for x in setup {pre,post}{inst,rm} ; do
-	e="${FILESDIR}/eblits/pkg_${x}-v50160001.eblit"
+	e="${FILESDIR}/eblits/pkg_${x}-v50220001.eblit"
 	if [[ -e ${e} ]] ; then
 		. "${e}"
 		eval "pkg_${x}() { eblit-run pkg_${x} v50160001 ; }"
