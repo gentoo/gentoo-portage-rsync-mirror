@@ -11,4 +11,7 @@
       module to KDE's SystemSettings</flag>
     <flag name="windeco">Enable window decoration for KWin</flag>
   </use>
+  <upstream>
+    <remote-id type="github">QtCurve/qtcurve</remote-id>
+  </upstream>
 </pkgmetadata>

@@ -14,5 +14,6 @@
 	</maintainer>
 	<upstream>
 		<bugs-to>https://bugs.launchpad.net/pidgin-birthday-reminder</bugs-to>
+		<remote-id type="launchpad">pidgin-birthday-reminder</remote-id>
 	</upstream>
 </pkgmetadata>

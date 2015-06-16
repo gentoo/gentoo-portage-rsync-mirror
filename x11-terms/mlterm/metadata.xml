@@ -11,4 +11,7 @@
     <flag name="uim">Enable <pkg>app-i18n/uim</pkg> support</flag>
     <flag name="utempter">Enable <pkg>sys-libs/libutempter</pkg> support</flag>
   </use>
+  <upstream>
+    <remote-id type="sourceforge">mlterm</remote-id>
+  </upstream>
 </pkgmetadata>

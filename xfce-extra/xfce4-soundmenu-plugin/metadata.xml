@@ -3,8 +3,11 @@
 <pkgmetadata>
   <herd>xfce</herd>
   <use>
-    <flag name='glyr'>Enable music metadata searchengine support using <pkg>media-libs/glyr</pkg></flag>
-    <flag name='lastfm'>Enable last.fm support using <pkg>media-libs/libclastfm</pkg></flag>
-    <flag name='keybinder'>Enable shortcut support using <pkg>dev-libs/keybinder</pkg></flag>
+    <flag name="glyr">Enable music metadata searchengine support using <pkg>media-libs/glyr</pkg></flag>
+    <flag name="lastfm">Enable last.fm support using <pkg>media-libs/libclastfm</pkg></flag>
+    <flag name="keybinder">Enable shortcut support using <pkg>dev-libs/keybinder</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="github">matiasdelellis/xfce4-soundmenu-plugin</remote-id>
+  </upstream>
 </pkgmetadata>

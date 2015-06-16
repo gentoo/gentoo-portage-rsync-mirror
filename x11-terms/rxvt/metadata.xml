@@ -11,8 +11,11 @@
 		uses much less swap space.
 	</longdescription>
 	<use>
-		<flag name='linuxkeys'>Define LINUX_KEYS (changes Home/End key)</flag>
-		<flag name='xgetdefault'>Enable resources via X instead of rxvt small
+		<flag name="linuxkeys">Define LINUX_KEYS (changes Home/End key)</flag>
+		<flag name="xgetdefault">Enable resources via X instead of rxvt small
 			version</flag>
 	</use>
+	<upstream>
+		<remote-id type="sourceforge">rxvt</remote-id>
+	</upstream>
 </pkgmetadata>

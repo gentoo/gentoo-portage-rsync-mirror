@@ -12,4 +12,7 @@
 		<name>Sergey Popov</name>
 		<description>Proxy maintainer. CC him on bugs</description>
 	</maintainer>
+	<upstream>
+		<remote-id type="github">segler-alex/Pidgin-GPG</remote-id>
+	</upstream>
 </pkgmetadata>

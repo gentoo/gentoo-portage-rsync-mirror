@@ -6,4 +6,7 @@
   <maintainer>
     <email>ayatana-bugs@gentoo.org</email>
   </maintainer>
+  <upstream>
+    <remote-id type="github">shimmerproject/Greybird</remote-id>
+  </upstream>
 </pkgmetadata>

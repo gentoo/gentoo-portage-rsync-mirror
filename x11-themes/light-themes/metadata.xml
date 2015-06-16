@@ -13,4 +13,7 @@
 	<use>
 		<flag name="gtk3">Support GTK 3.x, too</flag>
 	</use>
+	<upstream>
+		<remote-id type="launchpad">light-themes</remote-id>
+	</upstream>
 </pkgmetadata>

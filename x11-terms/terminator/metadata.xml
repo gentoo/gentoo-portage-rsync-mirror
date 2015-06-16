@@ -14,4 +14,7 @@
   <use>
     <flag name="libnotify">Enables desktop notifications via<pkg>dev-python/notify-python</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="launchpad">terminator</remote-id>
+  </upstream>
 </pkgmetadata>

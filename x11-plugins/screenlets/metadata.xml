@@ -17,5 +17,7 @@
 		<flag name="svg">Highly Recommended: Enable SVG graphics via
 			<pkg>dev-python/librsvg-python</pkg></flag>
 	</use>
+	<upstream>
+		<remote-id type="launchpad">screenlets</remote-id>
+	</upstream>
 </pkgmetadata>
-

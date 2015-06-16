@@ -10,4 +10,7 @@
 		It is able to emulate the looks of Motif, OS/2, and Windows, and allows you
 		to have a customizable look using pixmaps.
 	</longdescription>
+	<upstream>
+		<remote-id type="github">bbidulock/icewm</remote-id>
+	</upstream>
 </pkgmetadata>
