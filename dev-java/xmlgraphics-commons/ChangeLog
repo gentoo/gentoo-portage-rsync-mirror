@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlgraphics-commons
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.26 2014/08/10 20:27:30 slyfox Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlgraphics-commons/ChangeLog,v 1.27 2015/06/16 07:18:34 ago Exp $
+
+  16 Jun 2015; Agostino Sarubbo <ago@gentoo.org> xmlgraphics-commons-1.5.ebuild:
+  Stable for amd64, wrt bug #543858
 
   10 Aug 2014; Sergei Trofimovich <slyfox@gentoo.org>
   xmlgraphics-commons-1.2-r1.ebuild, xmlgraphics-commons-1.3.1.ebuild,

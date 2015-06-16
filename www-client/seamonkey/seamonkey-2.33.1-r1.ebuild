@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.33.1-r1.ebuild,v 1.1 2015/05/06 07:31:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/seamonkey-2.33.1-r1.ebuild,v 1.2 2015/06/16 07:27:55 polynomial-c Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -164,6 +164,11 @@ src_prepare() {
 	# Don't error out when there's no files to be removed:
 	sed 's@\(xargs rm\)$@\1 -f@' \
 		-i "${ms}"/toolkit/mozapps/installer/packager.mk || die
+
+	if has_version '>=media-libs/freetype-2.6' ; then
+		sed '/ftcache\.h/aftfntfmt.h' \
+			-i "${S}/mozilla/config/system-headers" || die
+	fi
 
 	eautoreconf
 	cd "${S}"/mozilla || die

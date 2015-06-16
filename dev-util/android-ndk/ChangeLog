@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/android-ndk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.16 2015/05/11 15:35:59 zx2c4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/android-ndk/ChangeLog,v 1.17 2015/06/16 07:14:01 perfinion Exp $
+
+  16 Jun 2015; Jason Zaman <perfinion@gentoo.org> metadata.xml:
+  take over maintainership from jauhien
 
 *android-ndk-10d (11 May 2015)
 

@@ -1,6 +1,10 @@
 # ChangeLog for www-client/seamonkey
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.518 2015/05/06 07:31:15 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/seamonkey/ChangeLog,v 1.519 2015/06/16 07:27:55 polynomial-c Exp $
+
+  16 Jun 2015; Lars Wendler <polynomial-c@gentoo.org> -seamonkey-2.32.ebuild,
+  -seamonkey-2.33.ebuild, seamonkey-2.33.1-r1.ebuild:
+  Removed old versions. Fixed compilation with >=media-libs/freetype-2.6
 
 *seamonkey-2.33.1-r1 (06 May 2015)
 
