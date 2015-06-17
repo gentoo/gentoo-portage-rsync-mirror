@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/thunderbird
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.333 2015/06/14 14:15:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/ChangeLog,v 1.334 2015/06/17 02:45:48 patrick Exp $
+
+  17 Jun 2015; Patrick Lauer <patrick@gentoo.org> thunderbird-38.0.1.ebuild:
+  Whitespace
 
   14 Jun 2015;  <anarchy@gentoo.org> thunderbird-38.0.1.ebuild:
   Fix nss/nspr dep, bug #552078

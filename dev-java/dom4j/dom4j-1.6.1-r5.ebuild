@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r3.ebuild,v 1.17 2015/06/15 16:53:53 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/dom4j-1.6.1-r5.ebuild,v 1.1 2015/06/17 02:36:39 patrick Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc source test"
@@ -38,9 +38,7 @@ src_test() {
 	java-pkg-2_src_test
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
+src_prepare() {
 	# Add missing methods to compile on Java 5
 	# see bug #137970
 	epatch "${WORKDIR}/${P}-java5.patch"
@@ -71,6 +69,8 @@ src_unpack() {
 		java-pkg_jar-from --build-only xalan,junitperf,junit
 	fi
 	rm -vr "${S}"/lib/tools/* || die
+
+	java-pkg-2_src_prepare
 }
 
 EANT_BUILD_TARGET="clean package"

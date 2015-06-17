@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-38.0.1.ebuild,v 1.2 2015/06/14 14:15:57 anarchy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-38.0.1.ebuild,v 1.3 2015/06/17 02:45:48 patrick Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -289,7 +289,6 @@ src_install() {
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		unzip "${enigmail_xpipath}"/enigmail*.xpi || die
 	fi
-
 
 	# Required in order for jit to work on hardened, for mozilla-31
 	use jit && pax-mark pm "${ED}"${MOZILLA_FIVE_HOME}/{thunderbird,thunderbird-bin}
