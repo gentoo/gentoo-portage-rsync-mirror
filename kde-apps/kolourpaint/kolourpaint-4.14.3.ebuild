@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/kolourpaint/kolourpaint-4.14.3.ebuild,v 1.1 2015/06/04 18:44:39 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/kolourpaint/kolourpaint-4.14.3.ebuild,v 1.2 2015/06/17 13:04:24 mrueg Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 pkg_postinst() {
 	kde4-base_pkg_postinst
 
-	if ! has_version kde-base/ksaneplugin:${SLOT} ; then
-		elog "To enable scanner support, please install kde-base/ksaneplugin:${SLOT}"
+	if ! has_version kde-apps/ksaneplugin:${SLOT} ; then
+		elog "To enable scanner support, please install kde-apps/ksaneplugin:${SLOT}"
 	fi
 }

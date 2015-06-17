@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/bokeh
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.17 2015/06/17 08:00:23 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bokeh/ChangeLog,v 1.18 2015/06/17 13:27:04 jlec Exp $
+
+  17 Jun 2015; Justin Lecher <jlec@gentoo.org> -files/0.5.0-setup.patch,
+  -files/bokeh-0.4.4-fix_test_object.patch, metadata.xml:
+  Drop obsolete patches and local USE
 
   17 Jun 2015; Ian Delaney <idella4@gentoo.org> -bokeh-0.4.1.ebuild,
   -bokeh-0.4.2.ebuild, -bokeh-0.4.4.ebuild, -bokeh-0.4.ebuild,

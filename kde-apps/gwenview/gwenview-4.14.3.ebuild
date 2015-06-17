@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/gwenview/gwenview-4.14.3.ebuild,v 1.1 2015/06/04 18:44:46 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/gwenview/gwenview-4.14.3.ebuild,v 1.2 2015/06/17 13:02:59 mrueg Exp $
 
 EAPI=5
 
@@ -54,8 +54,8 @@ src_configure() {
 pkg_postinst() {
 	kde4-base_pkg_postinst
 
-	if ! has_version kde-base/svgpart:${SLOT} ; then
-		elog "For SVG support, install kde-base/svgpart:${SLOT}"
+	if ! has_version kde-apps/svgpart:${SLOT} ; then
+		elog "For SVG support, install kde-apps/svgpart:${SLOT}"
 	fi
 
 	if use kipi && ! has_version media-plugins/kipi-plugins ; then
