@@ -1,10 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.4.ebuild,v 1.12 2014/10/10 16:59:08 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.9.4.ebuild,v 1.13 2015/06/17 18:08:59 grknight Exp $
 
 EAPI="4"
 
-inherit depend.php eutils
+inherit eutils
 
 PEAR="${PV}"
 
@@ -27,8 +27,6 @@ PDEPEND="dev-php/pear"
 S="${WORKDIR}"
 
 pkg_setup() {
-	has_php
-
 	[[ -z "${PEAR_CACHEDIR}" ]] && PEAR_CACHEDIR="${EPREFIX}/var/cache/pear"
 	[[ -z "${PEAR_DOWNLOADDIR}" ]] && PEAR_DOWNLOADDIR="${EPREFIX}/var/tmp/pear"
 	[[ -z "${PEAR_TEMPDIR}" ]] && PEAR_TEMPDIR="${EPREFIX}/tmp"

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.23.ebuild,v 1.1 2015/05/13 12:18:53 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-visualization/veusz/veusz-1.23.ebuild,v 1.2 2015/06/17 18:12:02 pesa Exp $
 
 EAPI=5
 
@@ -19,7 +19,7 @@ IUSE="dbus doc emf fits hdf5 minuit vo"
 
 CDEPEND="
 	dev-python/numpy[${PYTHON_USEDEP}]
-	>=dev-python/PyQt4-4.6[X,svg,${PYTHON_USEDEP}]
+	>=dev-python/PyQt4-4.11.4[X,svg,${PYTHON_USEDEP}]
 "
 RDEPEND="${CDEPEND}
 	dbus? ( dev-python/dbus-python[${PYTHON_USEDEP}] )

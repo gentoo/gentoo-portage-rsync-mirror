@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/PEAR-PEAR
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.166 2015/04/14 18:03:37 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/ChangeLog,v 1.167 2015/06/17 18:09:00 grknight Exp $
+
+  17 Jun 2015; Brian Evans <grknight@gentoo.org> PEAR-PEAR-1.9.4.ebuild,
+  PEAR-PEAR-1.9.5.ebuild:
+  Drop depend.php.eclass and has_php function; Historical reference with no
+  meaning today
 
   14 Apr 2015; Brian Evans <grknight@gentoo.org> PEAR-PEAR-1.9.5.ebuild:
   Fix repoman warning wrt slot operator
