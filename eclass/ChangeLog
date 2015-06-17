@@ -1,6 +1,13 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1671 2015/06/17 15:48:58 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1672 2015/06/17 19:23:34 grknight Exp $
+
+  17 Jun 2015; <grknight@gentoo.org> php-common-r1.eclass,
+  php-ext-base-r1.eclass, php-ezc.eclass:
+  Mark 3 eclasses as deprecated for removal on 2015-07-17 wrt bug 551910
+
+  17 Jun 2015; <grknight@gentoo.org> depend.php.eclass
+  Deprecate unused functions in depend.php.eclass
 
   17 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
   Update from qt overlay: allow configuring debug/release on a per-package
