@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/curl
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.414 2015/05/24 13:55:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/ChangeLog,v 1.415 2015/06/17 11:48:41 blueness Exp $
+
+*curl-7.43.0 (17 Jun 2015)
+
+  17 Jun 2015; Anthony G. Basile <blueness@gentoo.org> +curl-7.43.0.ebuild:
+  Version bump.
 
 *curl-7.42.1-r1 (24 May 2015)
 
