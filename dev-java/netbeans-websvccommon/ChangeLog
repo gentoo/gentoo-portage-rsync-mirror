@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/netbeans-websvccommon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/ChangeLog,v 1.26 2015/05/21 14:57:05 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/netbeans-websvccommon/ChangeLog,v 1.27 2015/06/17 10:48:09 fordfrog Exp $
+
+  17 Jun 2015; Miroslav Šulc <fordfrog@gentoo.org>
+  netbeans-websvccommon-8.0.2.ebuild, +files/italian-patch.patch:
+  fixed bug #435022
 
   21 May 2015; Patrice Clement <monsieurp@gentoo.org>
   -netbeans-websvccommon-7.2.ebuild:
