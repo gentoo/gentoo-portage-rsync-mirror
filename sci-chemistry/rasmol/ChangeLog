@@ -1,6 +1,10 @@
 # ChangeLog for sci-chemistry/rasmol
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.45 2015/05/18 07:01:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/ChangeLog,v 1.46 2015/06/17 14:39:33 jlec Exp $
+
+  17 Jun 2015; Justin Lecher <jlec@gentoo.org> -rasmol-2.7.5.2-r1.ebuild,
+  rasmol-2.7.5.2-r2.ebuild:
+  Fix compilation problems on ppc, bug #547318; drop old
 
 *rasmol-2.7.5.2-r2 (18 May 2015)
 

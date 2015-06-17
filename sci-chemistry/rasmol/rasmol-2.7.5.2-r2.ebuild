@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2-r2.ebuild,v 1.1 2015/05/18 07:01:19 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.5.2-r2.ebuild,v 1.2 2015/06/17 14:39:33 jlec Exp $
 
 EAPI=5
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/open${PN}/RasMol/RasMol_2.7.5/${P}-${VERS}.tar.gz"
 
 LICENSE="|| ( GPL-2 RASLIC )"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ppc x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
 RDEPEND="
@@ -66,6 +66,19 @@ src_prepare() {
 	epatch "${FILESDIR}"/2.7.5-bundled-lib.patch
 
 	eprefixify Imakefile
+
+	sed \
+		-e 's:vector.c:v_ector.c:g' \
+		-e 's:vector.o:v_ector.o:g' \
+		-e 's:vector.h:v_ector.h:g' \
+		-i *akefile* || die
+
+	sed \
+		-e 's:vector.h:v_ector.h:g' \
+		-i *.c *.h || die
+
+	mv vector.c v_ector.c || die
+	mv vector.h v_ector.h || die
 
 	xmkmf -DGTKWIN || die "xmkmf failed with ${myconf}"
 }
