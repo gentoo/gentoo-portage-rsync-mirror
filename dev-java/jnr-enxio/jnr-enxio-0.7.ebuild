@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-enxio/jnr-enxio-0.7.ebuild,v 1.2 2015/04/03 09:27:41 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-enxio/jnr-enxio-0.7.ebuild,v 1.3 2015/06/17 18:38:06 monsieurp Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/jnr/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="https://github.com/jnr/jnr-enxio"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="Apache-2.0"
 
 CDEPEND="dev-java/jnr-constants:0

@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.4.2.ebuild,v 1.1 2015/06/16 20:57:15 alonbl Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-3.4.2-r1.ebuild,v 1.1 2015/06/17 18:42:05 alonbl Exp $
 
 EAPI=5
 
@@ -100,7 +100,6 @@ multilib_src_configure() {
 		$(use_enable dane libdane) \
 		$(multilib_native_use_enable tools) \
 		$(multilib_native_use_enable doc gtk-doc) \
-		$(multilib_native_use_enable doc gtk-doc-pdf) \
 		$(multilib_native_use_enable guile) \
 		$(multilib_native_use_enable crywrap) \
 		$(multilib_native_use_enable test tests) \
@@ -121,7 +120,6 @@ multilib_src_install_all() {
 	dodoc doc/certtool.cfg
 
 	if use doc; then
-		dodoc doc/gnutls.pdf
 		dohtml doc/gnutls.html
 	else
 		rm -fr "${ED}/usr/share/doc/${PF}/html"

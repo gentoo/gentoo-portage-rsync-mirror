@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-45.0.2421.0.ebuild,v 1.1 2015/06/08 20:32:00 phajdan.jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/chromium/chromium-45.0.2431.0.ebuild,v 1.1 2015/06/17 18:47:11 phajdan.jr Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -216,6 +216,7 @@ src_prepare() {
 		'third_party/cld_2' \
 		'third_party/cros_system_api' \
 		'third_party/cython/python_flags.py' \
+		'third_party/devscripts' \
 		'third_party/dom_distiller_js' \
 		'third_party/dom_distiller_js/dist/proto_gen/third_party/dom_distiller_js' \
 		'third_party/ffmpeg' \
@@ -578,8 +579,6 @@ src_install() {
 
 	newman out/Release/chrome.1 chromium${CHROMIUM_SUFFIX}.1 || die
 	newman out/Release/chrome.1 chromium-browser${CHROMIUM_SUFFIX}.1 || die
-
-	doexe out/Release/libffmpegsumo.so || die
 
 	# Install icons and desktop entry.
 	local branding size

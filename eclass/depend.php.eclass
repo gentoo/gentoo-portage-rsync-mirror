@@ -1,6 +1,6 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.32 2012/06/02 19:16:31 zmedico Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.33 2015/06/17 18:54:44 grknight Exp $
 
 # @ECLASS: depend.php.eclass
 # @MAINTAINER:
@@ -24,6 +24,7 @@ inherit eutils multilib phpconfutils
 # Set this after setting DEPEND/RDEPEND in your ebuild if the ebuild requires PHP5
 # with cli SAPI.
 need_php5_cli() {
+	eqawarn "(need_php5_cli) Deprecated function call.  Set to be removed on 2015-07-17"
 	DEPEND="${DEPEND} =dev-lang/php-5*"
 	RDEPEND="${RDEPEND} =dev-lang/php-5*"
 	PHP_VERSION="5"
@@ -34,6 +35,7 @@ need_php5_cli() {
 # Set this after setting DEPEND/RDEPEND in your ebuild if the ebuild requires PHP5
 # with either cgi or apache2 SAPI.
 need_php5_httpd() {
+	eqawarn "(need_php5_httpd) Deprecated function call.  Set to be removed on 2015-07-17"
 	DEPEND="${DEPEND} =virtual/httpd-php-5*"
 	RDEPEND="${RDEPEND} =virtual/httpd-php-5*"
 	PHP_VERSION="5"
@@ -75,6 +77,7 @@ uses_php5() {
 # Set this after setting DEPEND/RDEPEND in your ebuild if the ebuild requires PHP
 # (any version) with cli SAPI.
 need_php_cli() {
+	eqawarn "(need_php_cli) Deprecated function call.  Set to be removed on 2015-07-17"
 	DEPEND="${DEPEND} dev-lang/php"
 	RDEPEND="${RDEPEND} dev-lang/php"
 }
@@ -104,6 +107,7 @@ need_php() {
 # determined by ${CATEGORY} - any PHP version or PHP5 for dev-php or
 # dev-php5, respectively.
 need_php_by_category() {
+	eqawarn "(need_php_by_category) Deprecated function call.  Set to be removed on 2015-07-17"
 	case "${CATEGORY}" in
 		dev-php) need_php ;;
 		*) die "Version of PHP required by packages in category ${CATEGORY} unknown"
@@ -145,6 +149,7 @@ has_php() {
 # and need_php[45]_httpd functions cannot guarantee these requirements.
 # See Bug 2272 for details.
 require_php_sapi_from() {
+	eqawarn "(require_php_sapi_from) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	local has_sapi="0"
@@ -248,6 +253,7 @@ require_php_with_use() {
 # any of specified USE flags. Returns if any of the listed USE flags are enabled.
 # Dies if all of the listed USE flags are disabled.
 require_php_with_any_use() {
+	eqawarn "(require_php_with_any_use) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	local missing_use=""
@@ -296,6 +302,7 @@ require_php_with_any_use() {
 # Check if our PHP was compiled with ZTS (Zend Thread Safety) enabled.
 # @RETURN: 0 if true, 1 otherwise
 has_zts() {
+	eqawarn "(has_zts) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	if built_with_use =${PHP_PKG} apache2 threads || phpconfutils_built_with_use =${PHP_PKG} apache2 threads ; then
@@ -310,6 +317,7 @@ has_zts() {
 # Check if our PHP was built with debug support enabled.
 # @RETURN: 0 if true, 1 otherwise
 has_debug() {
+	eqawarn "(has_debug) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	if built_with_use =${PHP_PKG} debug || phpconfutils_built_with_use =${PHP_PKG} debug ; then
@@ -324,6 +332,7 @@ has_debug() {
 # Check if our PHP was built with the concurrentmodphp support enabled.
 # @RETURN: 0 if true, 1 otherwise
 has_concurrentmodphp() {
+	eqawarn "(has_concurrentmodphp) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	if built_with_use =${PHP_PKG} apache2 concurrentmodphp || phpconfutils_built_with_use =${PHP_PKG} apache2 concurrentmodphp ; then
@@ -347,6 +356,7 @@ has_concurrentmodphp() {
 # You should use require_php_with_use pdo instead now.
 # @RETURN: die if feature is missing
 require_pdo() {
+	eqawarn "(require_pdo) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	# Was PHP5 compiled with internal PDO support?
@@ -439,6 +449,7 @@ require_php_cgi() {
 # Require a PHP built with SQLite support
 # @RETURN: die if feature is missing
 require_sqlite() {
+	eqawarn "(require_sqlite) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	# Has our PHP been built with SQLite support?
@@ -461,6 +472,7 @@ require_sqlite() {
 # Require a PHP built with GD support
 # @RETURN: die if feature is missing
 require_gd() {
+	eqawarn "(require_gd) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	# Do we have the internal GD support installed?
@@ -494,6 +506,7 @@ require_gd() {
 # @DESCRIPTION:
 # Executes some checks needed when installing a binary PHP extension.
 php_binary_extension() {
+	eqawarn "(php_binary_extension) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
 	local PUSE_ENABLED=""
