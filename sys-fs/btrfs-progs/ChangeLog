@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/btrfs-progs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.106 2015/06/13 09:37:36 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/ChangeLog,v 1.107 2015/06/17 15:11:48 floppym Exp $
+
+  17 Jun 2015; Mike Gilbert <floppym@gentoo.org> btrfs-progs-9999.ebuild:
+  Set EGIT_BRANCH=devel.
 
 *btrfs-progs-4.0.1 (13 Jun 2015)
 

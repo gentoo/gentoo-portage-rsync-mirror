@@ -2366,7 +2366,7 @@ dev-qt/qtcore:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtcore:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtdbus:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
 dev-qt/qtdeclarative:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtdeclarative:gles2 - Use OpenGL ES instead of desktop OpenGL
+dev-qt/qtdeclarative:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtdeclarative:localstorage - Build the LocalStorage import for QtQuick (requires QtSql)
 dev-qt/qtdeclarative:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtdeclarative:webkit - Build the WebView QML component
@@ -2386,7 +2386,7 @@ dev-qt/qtgui:egl - Use EGL instead of default GLX to manage OpenGL contexts
 dev-qt/qtgui:eglfs - Compile EGL Full Screen/Single Surface support
 dev-qt/qtgui:evdev - Enable evdev input support
 dev-qt/qtgui:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtgui:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
+dev-qt/qtgui:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtgui:glib - Enable dev-libs/glib eventloop support
 dev-qt/qtgui:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
 dev-qt/qtgui:harfbuzz - Use media-libs/harfbuzz for text shaping
@@ -2404,7 +2404,7 @@ dev-qt/qtnetwork:connman - Enable net-misc/connman-based bearer plugin
 dev-qt/qtnetwork:networkmanager - Enable net-misc/networkmanager-based bearer plugin
 dev-qt/qtopengl:egl - Use EGL instead of default GLX to manage OpenGL contexts on the desktop
 dev-qt/qtopengl:exceptions - Add support for exceptions - like catching them inside the event loop (recommended by upstream)
-dev-qt/qtopengl:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
+dev-qt/qtopengl:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtopengl:qt3support - Enable the Qt3Support libraries for Qt4
 dev-qt/qtopenvg:exceptions - Build with support for exceptions
 dev-qt/qtopenvg:qt3support - Enable the Qt3Support libraries for Qt4
@@ -2412,6 +2412,7 @@ dev-qt/qtphonon:exceptions - Add support for exceptions - like catching them ins
 dev-qt/qtphonon:qt3support - Enable the Qt3Support libraries for Qt4. Note that this does not mean you can compile pure Qt3 programs with Qt4.
 dev-qt/qtpositioning:geoclue - Use enhanced location information from app-misc/geoclue
 dev-qt/qtpositioning:qml - Build QML bindings
+dev-qt/qtprintsupport:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtquick1:designer - Build plugin for dev-qt/designer
 dev-qt/qtquick1:webkit - Build the WebView import for QtQuick1 (requires QtWebKit)
 dev-qt/qtquick1:xml - Build the XmlListModel import for QtQuick1 (requires QtXmlPatterns)
@@ -2434,7 +2435,7 @@ dev-qt/qtwebkit:printsupport - Enable printing via dev-qt/qtprintsupport
 dev-qt/qtwebkit:qml - Build QML/QtQuick bindings
 dev-qt/qtwebkit:webp - Add support for WebP image format
 dev-qt/qtwebsockets:qml - Build QML bindings
-dev-qt/qtwidgets:gles2 - Use OpenGL ES 2.0 instead of desktop OpenGL
+dev-qt/qtwidgets:gles2 - Use GLES 2.0 or later instead of full OpenGL
 dev-qt/qtwidgets:gtkstyle - Build a Qt style called GTK+ that mimics the active GTK+ theme
 dev-ruby/barby:cairo - Add support for writing images (PNG, PS, EPS and, if supported, PDF and SVG) using dev-ruby/rcairo. Not available on JRuby.
 dev-ruby/barby:datamatrix - Add support for datamatrix using dev-ruby/semacode.

@@ -1,6 +1,13 @@
 # ChangeLog for dev-qt/qtwebkit
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.37 2015/05/30 10:56:39 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwebkit/ChangeLog,v 1.38 2015/06/17 15:24:04 pesa Exp $
+
+*qtwebkit-5.4.2 (17 Jun 2015)
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org>
+  +files/qtwebkit-5.4.2-system-leveldb.patch, +qtwebkit-5.4.2.ebuild,
+  -qtwebkit-5.4.1.ebuild, metadata.xml:
+  Version bump.
 
   30 May 2015; Markus Meier <maekke@gentoo.org> qtwebkit-4.8.6-r1.ebuild:
   arm stable, bug #530238

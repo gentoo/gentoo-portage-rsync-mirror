@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.44 2015/04/19 14:59:53 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/btrfs-progs/btrfs-progs-9999.ebuild,v 1.45 2015/06/17 15:11:48 floppym Exp $
 
 EAPI=5
 
@@ -18,6 +18,7 @@ else
 	inherit autotools git-r3
 	EGIT_REPO_URI="git://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git
 		https://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git"
+	EGIT_BRANCH="devel"
 fi
 
 DESCRIPTION="Btrfs filesystem utilities"

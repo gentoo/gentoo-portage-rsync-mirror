@@ -8,7 +8,7 @@
 		<flag name="evdev">Enable evdev input support</flag>
 		<flag name="exceptions">Add support for exceptions - like catching them
 			inside the event loop (recommended by upstream)</flag>
-		<flag name="gles2">Use OpenGL ES 2.0 instead of desktop OpenGL</flag>
+		<flag name="gles2">Use GLES 2.0 or later instead of full OpenGL</flag>
 		<flag name="glib">Enable <pkg>dev-libs/glib</pkg> eventloop support</flag>
 		<flag name="gtkstyle">Build a Qt style called GTK+ that mimics the active
 			GTK+ theme</flag>
@@ -24,6 +24,6 @@
 	</use>
 	<upstream>
 		<bugs-to>https://bugreports.qt.io/</bugs-to>
-		<doc>http://qt-project.org/doc/</doc>
+		<doc>http://doc.qt.io/</doc>
 	</upstream>
 </pkgmetadata>

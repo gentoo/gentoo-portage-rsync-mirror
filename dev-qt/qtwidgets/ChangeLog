@@ -1,6 +1,12 @@
 # ChangeLog for dev-qt/qtwidgets
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.16 2015/05/16 10:26:06 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtwidgets/ChangeLog,v 1.17 2015/06/17 15:24:18 pesa Exp $
+
+*qtwidgets-5.4.2 (17 Jun 2015)
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> +qtwidgets-5.4.2.ebuild,
+  -qtwidgets-5.4.1.ebuild, metadata.xml:
+  Version bump.
 
   16 May 2015; Jeroen Roovers <jer@gentoo.org> qtwidgets-5.4.1.ebuild:
   Mark ~ppc64 too.
