@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.6.ebuild,v 1.1 2015/06/15 18:27:15 chutzpah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-auth/nss-pam-ldapd/nss-pam-ldapd-0.9.6.ebuild,v 1.2 2015/06/17 21:39:14 prometheanfire Exp $
 
 EAPI=5
 
 PYTHON_COMPAT=(python2_7)
-inherit eutils prefix user python-r1 multilib multilib-minimal systemd
+inherit eutils prefix user python-r1 multilib multilib-minimal systemd s6
 
 DESCRIPTION="NSS module for name lookups using LDAP"
 HOMEPAGE="http://arthurdejong.org/nss-pam-ldapd/"
@@ -80,6 +80,9 @@ multilib_src_install_all() {
 	local script
 
 	newinitd "${FILESDIR}"/nslcd-init-r1 nslcd
+	newinitd "${FILESDIR}"/nslcd-init-r2 nslcd
+	newinitd "${FILESDIR}"/nslcd-init-s6 nslcd-s6
+	s6_install_service nslcd "${FILESDIR}"/run-s6
 
 	insinto /usr/share/nss-pam-ldapd
 	doins "${WORKDIR}/${P}/nslcd.conf"
@@ -114,6 +117,11 @@ pkg_postinst() {
 	echo
 	elog "You can add it to the default runlevel like so:"
 	elog " # rc-update add nslcd default"
+	elog
+	elog "If you have >=sys-apps/openrc-0.16.3, you can also use s6"
+	elog "to supervise this service."
+	elog "To do this, emerge sys-apps/s6 then add nslcd-s6"
+	elog "default runlevel instead of nslcd."
 	elog
 	elog "If you are upgrading, keep in mind that /etc/nss-ldapd.conf"
 	elog " is now named /etc/nslcd.conf"
