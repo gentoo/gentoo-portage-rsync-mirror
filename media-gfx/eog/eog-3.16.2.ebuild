@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.16.2.ebuild,v 1.1 2015/06/09 16:26:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-3.16.2.ebuild,v 1.2 2015/06/17 03:14:24 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="The Eye of GNOME image viewer"
 HOMEPAGE="https://wiki.gnome.org/Apps/EyeOfGnome"
@@ -42,6 +42,13 @@ DEPEND="${RDEPEND}
 	sys-devel/gettext
 	virtual/pkgconfig
 "
+
+src_prepare() {
+	# https://bugzilla.gnome.org/show_bug.cgi?id=751007
+	epatch "${FILESDIR}"/${PN}-3.16.2-without-libexif.patch
+
+	gnome2_src_prepare
+}
 
 src_configure() {
 	DOCS="AUTHORS ChangeLog HACKING MAINTAINERS NEWS README THANKS TODO"

@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/eog
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.322 2015/06/09 16:26:48 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.323 2015/06/17 03:14:24 tetromino Exp $
+
+  17 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org> eog-3.16.2.ebuild,
+  +files/eog-3.16.2-without-libexif.patch:
+  Fix USE=-exif build failure (bug #552288, thanks to bill).
 
 *eog-3.16.2 (09 Jun 2015)
 
