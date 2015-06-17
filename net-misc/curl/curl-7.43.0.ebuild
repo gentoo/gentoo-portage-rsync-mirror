@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.43.0.ebuild,v 1.1 2015/06/17 11:48:41 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.43.0.ebuild,v 1.2 2015/06/17 17:48:25 vapier Exp $
 
 EAPI="5"
 
@@ -55,7 +55,7 @@ RDEPEND="ldap? ( >=net-nds/openldap-2.4.38-r1[${MULTILIB_USEDEP}] )
 			app-misc/ca-certificates
 		)
 	)
-	http2? ( =net-libs/nghttp2-0.7*[${MULTILIB_USEDEP}] )
+	http2? ( net-libs/nghttp2[${MULTILIB_USEDEP}] )
 	idn? ( >=net-dns/libidn-1.28[static-libs?,${MULTILIB_USEDEP}] )
 	adns? ( >=net-dns/c-ares-1.10.0-r1[${MULTILIB_USEDEP}] )
 	kerberos? ( >=virtual/krb5-0-r1[${MULTILIB_USEDEP}] )

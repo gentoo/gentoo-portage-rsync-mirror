@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/nghttp2-9999.ebuild,v 1.2 2015/06/17 17:45:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nghttp2/nghttp2-1.0.2.ebuild,v 1.1 2015/06/17 17:45:20 vapier Exp $
 
 # TODO: Add python support.
 
 EAPI="5"
 
-inherit multilib-minimal
+inherit eutils multilib-minimal
 
 if [[ ${PV} == 9999 ]] ; then
 	EGIT_REPO_URI="https://github.com/tatsuhiro-t/nghttp2.git"
@@ -36,6 +36,10 @@ RDEPEND="
 DEPEND="${RDEPEND}
 	virtual/pkgconfig
 	test? ( >=dev-util/cunit-2.1[${MULTILIB_USEDEP}] )"
+
+src_prepare() {
+	epatch "${FILESDIR}"/${P}-third-party.patch
+}
 
 multilib_src_configure() {
 	ECONF_SOURCE=${S} \
