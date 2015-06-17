@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1669 2015/06/16 21:40:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1670 2015/06/17 09:48:12 chewi Exp $
+
+  17 Jun 2015; James Le Cuirot <chewi@gentoo.org> java-pkg-2.eclass:
+  Remove eclass dependency on python[xml] and replace with some ugly grep that
+  should suffice. Closes #552332.
 
   16 Jun 2015; William Hubbs <williamh@gentoo.org> +golang-vcs.eclass:
   Add golang-vcs.eclass to retrieve go packages from vcs repositories
