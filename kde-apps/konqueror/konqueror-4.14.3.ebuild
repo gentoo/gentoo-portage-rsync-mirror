@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-apps/konqueror/konqueror-4.14.3.ebuild,v 1.1 2015/06/04 18:44:41 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-apps/konqueror/konqueror-4.14.3.ebuild,v 1.3 2015/06/17 12:58:09 mrueg Exp $
 
 EAPI=5
 
@@ -47,9 +47,9 @@ src_prepare() {
 pkg_postinst() {
 	kde4-meta_pkg_postinst
 
-	if ! has_version kde-base/dolphin:${SLOT} ; then
+	if ! has_version kde-apps/dolphin:${SLOT} ; then
 		elog "If you want to use konqueror as a filemanager, install the dolphin kpart:"
-		elog "kde-base/dolphin:${SLOT}"
+		elog "kde-apps/dolphin:${SLOT}"
 	fi
 
 	if ! has_version virtual/jre ; then
