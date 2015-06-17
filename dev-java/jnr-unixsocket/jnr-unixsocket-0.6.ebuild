@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-unixsocket/jnr-unixsocket-0.6.ebuild,v 1.1 2015/04/16 13:34:32 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-unixsocket/jnr-unixsocket-0.6.ebuild,v 1.2 2015/06/17 17:14:09 monsieurp Exp $
 
 EAPI="5"
 
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/jnr/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 HOMEPAGE="https://github.com/jnr/jnr-unixsocket"
 
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 LICENSE="Apache-2.0"
 
 CDEPEND="dev-java/jnr-constants:0

@@ -1,8 +1,8 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/jnr-posix-2.4.0.ebuild,v 1.1 2013/02/07 14:23:17 sera Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-posix/jnr-posix-2.4.0.ebuild,v 1.2 2015/06/17 17:13:00 monsieurp Exp $
 
-EAPI="4"
+EAPI="5"
 
 JAVA_PKG_IUSE="doc source test"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jnr/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="|| ( CPL-1.0 GPL-2 LGPL-2.1 )"
 SLOT="2.4"
-KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux ~x86-solaris"
+KEYWORDS="amd64 x86 ~amd64-linux ~x86-linux ~x86-solaris"
 IUSE=""
 
 COMMON_DEP="

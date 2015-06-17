@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jnr-unixsocket
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-unixsocket/ChangeLog,v 1.4 2015/06/06 18:48:41 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-unixsocket/ChangeLog,v 1.5 2015/06/17 17:14:09 monsieurp Exp $
+
+  17 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  -jnr-unixsocket-0.3.ebuild, jnr-unixsocket-0.6.ebuild:
+  Stable for x86+amd64 through ALLARCHES. Remove old. Fix bug 552362.
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
