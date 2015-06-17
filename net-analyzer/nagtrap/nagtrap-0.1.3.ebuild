@@ -1,10 +1,10 @@
-# Copyright 1999-2009 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagtrap/nagtrap-0.1.3.ebuild,v 1.2 2009/02/23 20:41:43 dertobi123 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagtrap/nagtrap-0.1.3.ebuild,v 1.3 2015/06/17 20:00:26 grknight Exp $
 
 EAPI=2
 
-inherit eutils depend.php multilib
+inherit eutils multilib
 
 DESCRIPTION="NagTrap is an integrated snmptt visualization addon for the Nagios monitoring system"
 HOMEPAGE="http://www.nagtrap.org/"
@@ -15,12 +15,11 @@ SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="virtual/httpd-php"
 RDEPEND="dev-lang/php[mysql]
 		net-analyzer/snmptt[mysql]
-		net-analyzer/nagios-core"
-
-need_php_httpd
+		net-analyzer/nagios-core
+		virtual/httpd-php"
 
 src_install() {
 	dodoc ChangeLog THANKS
