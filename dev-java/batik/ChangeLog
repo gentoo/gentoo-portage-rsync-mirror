@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.75 2015/06/16 07:18:29 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.76 2015/06/17 07:31:34 ago Exp $
+
+  17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> batik-1.8.ebuild:
+  Stable for x86, wrt bug #543858
 
   16 Jun 2015; Agostino Sarubbo <ago@gentoo.org> batik-1.8.ebuild:
   Stable for amd64, wrt bug #543858
