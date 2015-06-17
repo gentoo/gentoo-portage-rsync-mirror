@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtdemo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.22 2015/06/02 12:17:50 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtdemo/ChangeLog,v 1.23 2015/06/17 15:52:55 pesa Exp $
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Update upstream metadata.
 
   02 Jun 2015; Davide Pesavento <pesa@gentoo.org> qtdemo-4.8.7.ebuild:
   media-libs/phonon is multilib now.

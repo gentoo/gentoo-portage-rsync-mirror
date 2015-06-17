@@ -1,6 +1,11 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1670 2015/06/17 09:48:12 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1671 2015/06/17 15:48:58 pesa Exp $
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> qt5-build.eclass:
+  Update from qt overlay: allow configuring debug/release on a per-package
+  basis; add instruction set support (similarly to qt4-build-multilib); use
+  usex().
 
   17 Jun 2015; James Le Cuirot <chewi@gentoo.org> java-pkg-2.eclass:
   Remove eclass dependency on python[xml] and replace with some ugly grep that

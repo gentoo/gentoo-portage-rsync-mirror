@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.19 2015/06/09 20:16:59 pesa Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/qt5-build.eclass,v 1.20 2015/06/17 15:48:58 pesa Exp $
 
 # @ECLASS: qt5-build.eclass
 # @MAINTAINER:
@@ -39,19 +39,19 @@ case ${PV} in
 		EGIT_BRANCH="dev"
 		;;
 	5.?.9999)
-		# git stable branches (5.x)
+		# git stable branch
 		QT5_BUILD_TYPE="live"
 		EGIT_BRANCH=${PV%.9999}
 		;;
 	*_alpha*|*_beta*|*_rc*)
-		# development releases
+		# development release
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV/_/-}
 		SRC_URI="http://download.qt.io/development_releases/qt/${PV%.*}/${PV/_/-}/submodules/${MY_P}.tar.xz"
 		S=${WORKDIR}/${MY_P}
 		;;
 	*)
-		# official stable releases
+		# official stable release
 		QT5_BUILD_TYPE="release"
 		MY_P=${QT5_MODULE}-opensource-src-${PV}
 		SRC_URI="http://download.qt.io/official_releases/qt/${PV%.*}/${PV}/submodules/${MY_P}.tar.xz"
@@ -77,9 +77,9 @@ DEPEND="
 "
 if [[ ${PN} != qttest ]]; then
 	if [[ ${QT5_MODULE} == qtbase ]]; then
-		DEPEND+=" test? ( ~dev-qt/qttest-${PV}[debug=] )"
+		DEPEND+=" test? ( ~dev-qt/qttest-${PV} )"
 	else
-		DEPEND+=" test? ( >=dev-qt/qttest-${PV}:5[debug=] )"
+		DEPEND+=" test? ( >=dev-qt/qttest-${PV}:5 )"
 	fi
 fi
 RDEPEND="
@@ -321,18 +321,17 @@ qt5-build_pkg_postrm() {
 ######  Public helpers  ######
 
 # @FUNCTION: qt_use
-# @USAGE: <flag> [feature] [enableopt]
+# @USAGE: <flag> [feature] [enableval]
 # @DESCRIPTION:
 # <flag> is the name of a flag in IUSE.
 #
-# Echoes "-${enableopt}-${feature}" if <flag> is enabled, or "-no-${feature}"
-# if it is disabled. If [feature] is not specified, it defaults to the value
-# of <flag>. If [enableopt] is not specified, the whole "-${enableopt}" prefix
-# is omitted.
+# Outputs "-${enableval}-${feature}" if <flag> is enabled, "-no-${feature}"
+# otherwise. If [feature] is not specified, <flag> is used in its place.
+# If [enableval] is not specified, the "-${enableval}" prefix is omitted.
 qt_use() {
 	[[ $# -ge 1 ]] || die "${FUNCNAME}() requires at least one argument"
 
-	use "$1" && echo "${3:+-$3}-${2:-$1}" || echo "-no-${2:-$1}"
+	usex "$1" "${3:+-$3}-${2:-$1}" "-no-${2:-$1}"
 }
 
 # @FUNCTION: qt_use_compile_test
@@ -490,8 +489,9 @@ qt5_base_configure() {
 		-examplesdir "${QT5_EXAMPLESDIR}"
 		-testsdir "${QT5_TESTSDIR}"
 
-		# debug/release
-		$(use debug && echo -debug || echo -release)
+		# configure in release mode by default,
+		# override via the CONFIG qmake variable
+		-release
 		-no-separate-debug-info
 
 		# licensing stuff
@@ -516,6 +516,17 @@ qt5_base_configure() {
 
 		# obsolete flag, does nothing
 		#-qml-debug
+
+		# instruction set support
+		$(is-flagq -mno-sse2    && echo -no-sse2)
+		$(is-flagq -mno-sse3    && echo -no-sse3)
+		$(is-flagq -mno-ssse3   && echo -no-ssse3)
+		$(is-flagq -mno-sse4.1  && echo -no-sse4.1)
+		$(is-flagq -mno-sse4.2  && echo -no-sse4.2)
+		$(is-flagq -mno-avx     && echo -no-avx)
+		$(is-flagq -mno-avx2    && echo -no-avx2)
+		$(is-flagq -mno-dsp     && echo -no-mips_dsp)
+		$(is-flagq -mno-dspr2   && echo -no-mips_dspr2)
 
 		# use pkg-config to detect include and library paths
 		-pkg-config
@@ -552,7 +563,7 @@ qt5_base_configure() {
 		-no-compile-examples
 
 		# disable rpath on non-prefix (bugs 380415 and 417169)
-		$(use prefix || echo -no-rpath)
+		$(usex prefix '' -no-rpath)
 
 		# print verbose information about each configure test
 		-verbose
@@ -639,6 +650,8 @@ qt5_qmake() {
 	fi
 
 	"${qmakepath}"/qmake \
+		CONFIG+=$(usex debug debug release) \
+		CONFIG-=$(usex debug release debug) \
 		QMAKE_AR="$(tc-getAR) cqs" \
 		QMAKE_CC="$(tc-getCC)" \
 		QMAKE_LINK_C="$(tc-getCC)" \

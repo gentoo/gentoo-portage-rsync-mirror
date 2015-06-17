@@ -1,6 +1,9 @@
 # ChangeLog for dev-qt/qtphonon
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/ChangeLog,v 1.18 2015/06/04 19:01:21 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-qt/qtphonon/ChangeLog,v 1.19 2015/06/17 15:51:57 pesa Exp $
+
+  17 Jun 2015; Davide Pesavento <pesa@gentoo.org> metadata.xml:
+  Update upstream metadata.
 
   04 Jun 2015; Michael Palimaka <kensington@gentoo.org> qtphonon-4.8.5.ebuild,
   qtphonon-4.8.6-r1.ebuild, qtphonon-4.8.7.ebuild:

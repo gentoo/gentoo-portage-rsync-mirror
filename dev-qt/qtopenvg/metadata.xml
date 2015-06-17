@@ -8,6 +8,6 @@
 	</use>
 	<upstream>
 		<bugs-to>https://bugreports.qt.io/</bugs-to>
-		<doc>http://qt-project.org/doc/</doc>
+		<doc>http://doc.qt.io/</doc>
 	</upstream>
 </pkgmetadata>
