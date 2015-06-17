@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/nikola
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.27 2015/06/04 11:07:27 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nikola/ChangeLog,v 1.28 2015/06/17 04:47:02 yngwin Exp $
+
+*nikola-7.5.1 (17 Jun 2015)
+
+  17 Jun 2015; Ben de Groot <yngwin@gentoo.org> +nikola-7.5.1.ebuild,
+  -nikola-7.3.0.ebuild, nikola-7.3.1.ebuild:
+  Update deps in 7.3.1. Version bump to 7.5.1 (bug #551006).
 
   04 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add pypi to remote-id in metadata.xml
