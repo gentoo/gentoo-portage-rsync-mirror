@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.5.6.ebuild,v 1.1 2015/03/03 11:18:50 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.5.6-r1.ebuild,v 1.1 2015/06/17 22:12:55 blueness Exp $
 
 EAPI="5"
 
@@ -21,18 +21,20 @@ IUSE="-debug jemalloc php minimal elibc_musl elibc_uclibc monkeyd_plugins_auth m
 # uclibc is often compiled without backtrace info so we should
 # force this off.  If someone complains, consider relaxing it.
 # ssl is borken, so we remove "ssl? ( monkeyd_plugins_polarssl )"
-REQUIRED_USE="elibc_uclibc? ( !debug )"
+REQUIRED_USE="
+	elibc_uclibc? ( !debug )
+	cgi? ( php )"
 
 DEPEND="jemalloc? ( >=dev-libs/jemalloc-3.3.1 )"
-RDEPEND="php? ( dev-lang/php )"
+RDEPEND="
+	php? ( dev-lang/php )
+	cgi? ( dev-lang/php[cgi] )"
 
 S="${WORKDIR}/${MY_P}"
 
 WEBROOT="/var/www/localhost"
 
 pkg_setup() {
-	use php && require_php_cgi
-
 	if use debug; then
 		ewarn
 		ewarn "\033[1;33m**************************************************\033[00m"
@@ -106,6 +108,7 @@ src_configure() {
 		--logdir=/var/log/${PN} \
 		--mandir=/usr/share/man \
 		--libdir=/usr/$(get_libdir) \
+		--pidfile=/var/run/monkey.pid \
 		--plugdir=/usr/$(get_libdir)/monkeyd/plugins \
 		--sysconfdir=/etc/${PN} \
 		--platform="generic" \
