@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-7.1.36.ebuild,v 1.1 2015/04/30 13:08:29 keri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog/swi-prolog-7.2.0.ebuild,v 1.1 2015/06/17 14:27:02 keri Exp $
 
 EAPI=4
 
@@ -10,7 +10,7 @@ PATCHSET_VER="0"
 
 DESCRIPTION="free, small, and standard compliant Prolog compiler"
 HOMEPAGE="http://www.swi-prolog.org/"
-SRC_URI="http://www.swi-prolog.org/download/devel/src/pl-${PV}.tar.gz
+SRC_URI="http://www.swi-prolog.org/download/stable/src/swipl-${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo-patchset-${PATCHSET_VER}.tar.gz"
 
 LICENSE="LGPL-2.1"
@@ -25,7 +25,7 @@ RDEPEND="sys-libs/ncurses
 	readline? ( sys-libs/readline )
 	gmp? ( dev-libs/gmp )
 	ssl? ( dev-libs/openssl )
-	java? ( >=virtual/jdk-1.4 )
+	java? ( >=virtual/jdk-1.5 )
 	X? (
 		virtual/jpeg
 		x11-libs/libX11
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 	X? ( x11-proto/xproto )
 	java? ( test? ( =dev-java/junit-3.8* ) )"
 
-S="${WORKDIR}/pl-${PV}"
+S="${WORKDIR}/swipl-${PV}"
 
 src_prepare() {
 	EPATCH_FORCE=yes
