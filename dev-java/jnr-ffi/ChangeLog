@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jnr-ffi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/ChangeLog,v 1.19 2015/06/06 18:46:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/ChangeLog,v 1.20 2015/06/17 16:55:02 monsieurp Exp $
+
+  17 Jun 2015; Patrice Clement <monsieurp@gentoo.org> -jnr-ffi-0.7.11.ebuild,
+  -jnr-ffi-0.7.7.ebuild, -jnr-ffi-0.7.9.ebuild, -jnr-ffi-1.0.6.ebuild,
+  jnr-ffi-0.7.11-r1.ebuild, jnr-ffi-1.0.10.ebuild, jnr-ffi-2.0.2.ebuild:
+  Stable for x86+amd64 through ALLARCHES. Remove old. Fix bug 552362.
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

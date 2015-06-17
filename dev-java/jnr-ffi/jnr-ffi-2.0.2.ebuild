@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/jnr-ffi-2.0.2.ebuild,v 1.4 2015/04/02 22:37:02 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jnr-ffi/jnr-ffi-2.0.2.ebuild,v 1.5 2015/06/17 16:55:02 monsieurp Exp $
 
 EAPI="5"
 
@@ -14,7 +14,7 @@ SRC_URI="https://github.com/jnr/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="|| ( Apache-2.0 LGPL-3 )"
 SLOT="2"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 
 COMMON_DEP="
 	dev-java/jffi:1.2
