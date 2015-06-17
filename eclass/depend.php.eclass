@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.33 2015/06/17 18:54:44 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.34 2015/06/17 20:11:28 grknight Exp $
 
 # @ECLASS: depend.php.eclass
 # @MAINTAINER:
@@ -380,6 +380,7 @@ require_pdo() {
 # depending on the CLI SAPI.
 # @RETURN: die if feature is missing
 require_php_cli() {
+	eqawarn "(require_php_cli) Deprecated function call.  Set to be removed on 2015-07-17"
 	# If PHP_PKG is set, then we have remembered our PHP settings
 	# from last time
 	if [[ -n ${PHP_PKG} ]] ; then

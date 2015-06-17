@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1672 2015/06/17 19:23:34 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1673 2015/06/17 20:11:28 grknight Exp $
+
+  17 Jun 2015; <grknight@gentoo.org> depend.php.eclass:
+  Add require_php_cli to the list of deprecated functions to be removed
 
   17 Jun 2015; <grknight@gentoo.org> php-common-r1.eclass,
   php-ext-base-r1.eclass, php-ezc.eclass:
