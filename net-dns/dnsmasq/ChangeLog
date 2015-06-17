@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.272 2015/06/17 07:21:43 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.273 2015/06/17 08:51:10 ago Exp $
+
+  17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> dnsmasq-2.72-r2.ebuild:
+  Stable for sparc, wrt bug #547966
 
   17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> dnsmasq-2.72-r2.ebuild:
   Stable for x86, wrt bug #547966

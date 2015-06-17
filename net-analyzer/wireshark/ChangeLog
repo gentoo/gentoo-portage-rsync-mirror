@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.722 2015/06/01 05:54:01 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.723 2015/06/17 08:51:00 ago Exp $
+
+  17 Jun 2015; Agostino Sarubbo <ago@gentoo.org> wireshark-1.12.5.ebuild:
+  Stable for sparc, wrt bug #549432
 
   01 Jun 2015; Jeroen Roovers <jer@gentoo.org> -wireshark-1.99.5.ebuild,
   -files/wireshark-1.99.0.1975-gcc_option.patch:

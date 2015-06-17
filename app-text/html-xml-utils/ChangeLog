@@ -1,6 +1,12 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.50 2015/05/14 07:38:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.51 2015/06/17 08:48:20 monsieurp Exp $
+
+*html-xml-utils-6.9 (17 Jun 2015)
+
+  17 Jun 2015; Patrice Clement <monsieurp@gentoo.org>
+  +html-xml-utils-6.9.ebuild, metadata.xml:
+  Version bump. Take over maintainership. Fix bug 552354.
 
   14 May 2015; Michael Sterrett <mr_bones_@gentoo.org>
   -html-xml-utils-6.0.ebuild:
