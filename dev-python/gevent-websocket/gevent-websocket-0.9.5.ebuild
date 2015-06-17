@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-websocket/gevent-websocket-0.9.2.ebuild,v 1.2 2015/04/08 08:05:15 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gevent-websocket/gevent-websocket-0.9.5.ebuild,v 1.1 2015/06/17 07:17:37 idella4 Exp $
 
 EAPI=5
 
@@ -17,7 +17,5 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND=""
-DEPEND="${RDEPEND}
-	dev-python/gevent[${PYTHON_USEDEP}]
-	dev-python/setuptools[${PYTHON_USEDEP}]"
+RDEPEND="dev-python/gevent[${PYTHON_USEDEP}]"
+DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"
