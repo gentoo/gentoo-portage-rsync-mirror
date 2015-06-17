@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/nova
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.99 2015/05/27 05:48:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/ChangeLog,v 1.100 2015/06/17 21:10:37 prometheanfire Exp $
+
+*nova-2015.1.0-r3 (17 Jun 2015)
+
+  17 Jun 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +nova-2015.1.0-r3.ebuild, -nova-2015.1.0-r2.ebuild, metadata.xml,
+  nova-2015.1.9999.ebuild:
+  adding memcached as a use flag'd dep
 
   27 May 2015; Matthew Thode <prometheanfire@gentoo.org>
   nova-2015.1.0-r2.ebuild, nova-2015.1.9999.ebuild:

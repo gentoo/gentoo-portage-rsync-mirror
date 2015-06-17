@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2015.1.9999.ebuild,v 1.4 2015/05/12 05:25:33 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cinder/cinder-2015.1.9999.ebuild,v 1.5 2015/06/17 21:16:47 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,7 +15,7 @@ EGIT_BRANCH="stable/kilo"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+api +scheduler +volume iscsi lvm mysql postgres sqlite test"
+IUSE="+api +scheduler +volume iscsi lvm +memcached mysql postgres sqlite test"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 #sudo is a build dep because I want the sudoers.d directory to exist, lazy.
@@ -128,6 +128,7 @@ RDEPEND="
 		|| ( >=sys-block/iscsitarget-1.4.20.2_p20130821 sys-block/tgt )
 		sys-block/open-iscsi )
 	lvm? ( sys-fs/lvm2 )
+	memcached? ( net-misc/memcached )
 	sys-fs/sysfsutils"
 
 PATCHES=( )

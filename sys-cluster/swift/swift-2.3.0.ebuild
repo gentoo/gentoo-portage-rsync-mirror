@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.3.0.ebuild,v 1.2 2015/05/02 20:46:02 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/swift/swift-2.3.0.ebuild,v 1.3 2015/06/17 21:12:59 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -14,7 +14,7 @@ SRC_URI="http://launchpad.net/${PN}/kilo/${PV}/+download/${P}.tar.gz"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="proxy account container object test +memcache"
+IUSE="proxy account container object test +memcached"
 REQUIRED_USE="|| ( proxy account container object )"
 
 DEPEND="
@@ -49,7 +49,7 @@ RDEPEND="
 	>=dev-python/simplejson-2.0.9[${PYTHON_USEDEP}]
 	dev-python/pyxattr[${PYTHON_USEDEP}]
 	>=dev-python/PyECLib-1.0.7[${PYTHON_USEDEP}]
-	memcache? ( net-misc/memcached )
+	memcached? ( net-misc/memcached )
 	net-misc/rsync[xattr]"
 
 CONFIG_CHECK="~EXT3_FS_XATTR ~SQUASHFS_XATTR ~CIFS_XATTR ~JFFS2_FS_XATTR
@@ -91,7 +91,7 @@ python_install() {
 	if use proxy; then
 		newinitd "${FILESDIR}/swift-proxy.initd" "swift-proxy"
 		newins "etc/proxy-server.conf-sample" "proxy-server.conf"
-		if use memcache; then
+		if use memcached; then
 			sed -i '/depend/a\
     need memcached' "${D}/etc/init.d/swift-proxy"
 		fi

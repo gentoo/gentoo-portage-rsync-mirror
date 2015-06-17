@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.12 2015/05/27 05:48:31 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/nova/nova-2015.1.9999.ebuild,v 1.13 2015/06/17 21:10:37 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -15,9 +15,9 @@ EGIT_BRANCH="stable/kilo"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS=""
-IUSE="+compute compute-only +kvm +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen iscsi"
+IUSE="+compute compute-only +kvm +memcached +novncproxy openvswitch +rabbitmq sqlite mysql postgres xen iscsi"
 REQUIRED_USE="!compute-only? ( || ( mysql postgres sqlite ) )
-						compute-only? ( compute !rabbitmq !mysql !postgres !sqlite )
+						compute-only? ( compute !rabbitmq !memcached !mysql !postgres !sqlite )
 						compute? ( ^^ ( kvm xen ) )"
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]
@@ -110,6 +110,7 @@ RDEPEND="
 	sys-apps/iproute2
 	openvswitch? ( net-misc/openvswitch )
 	rabbitmq? ( net-misc/rabbitmq-server )
+	memcached? ( net-misc/memcached )
 	sys-fs/sysfsutils
 	sys-fs/multipath-tools
 	net-misc/bridge-utils
