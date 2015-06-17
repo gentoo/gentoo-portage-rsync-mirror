@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/sonata
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.60 2015/04/08 17:59:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/ChangeLog,v 1.61 2015/06/17 05:45:52 yngwin Exp $
+
+  17 Jun 2015; Ben de Groot <yngwin@gentoo.org> -sonata-1.6.2.1.ebuild,
+  metadata.xml, sonata-1.6.2.1-r1.ebuild:
+  Mark stable on amd64 and x86. Remove old. Update homepage and source location
+  (bug #551584). Fix indenting and whitespace.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> sonata-1.6.2.1-r1.ebuild:
   Drop old Python implementations

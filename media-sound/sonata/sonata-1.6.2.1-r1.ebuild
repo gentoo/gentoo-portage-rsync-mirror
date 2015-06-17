@@ -1,21 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1-r1.ebuild,v 1.3 2015/04/08 17:59:42 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sonata/sonata-1.6.2.1-r1.ebuild,v 1.4 2015/06/17 05:45:52 yngwin Exp $
 
 EAPI=5
-
 PYTHON_COMPAT=( python2_7 )
 DISTUTILS_SINGLE_IMPL=true
-
 inherit distutils-r1
 
-DESCRIPTION="an elegant GTK+ music client for the Music Player Daemon (MPD)"
-HOMEPAGE="http://sonata.berlios.de/"
-SRC_URI="http://codingteam.net/project/${PN}/download/file/${P}.tar.bz2"
+DESCRIPTION="An elegant GTK+ music client for the Music Player Daemon (MPD)"
+HOMEPAGE="http://www.nongnu.org/sonata/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+# now released at https://github.com/multani/sonata/releases
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="amd64 ~ppc x86"
 IUSE="dbus lyrics taglib +trayicon"
 
 RDEPEND=">=dev-python/pygtk-2.12
