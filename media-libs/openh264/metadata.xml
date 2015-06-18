@@ -7,6 +7,7 @@
 	</maintainer>
 	<use>
 		<flag name="plugin">Install the Gecko Media Plugin (GMP) for use with Mozilla packages</flag>
+		<flag name="utils">Install the CLI encoder and decoder utilities</flag>
 	</use>
 	<upstream>
 		<remote-id type="github">mozilla/gmp-api</remote-id>

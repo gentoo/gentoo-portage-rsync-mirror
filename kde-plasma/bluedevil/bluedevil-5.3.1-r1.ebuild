@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/bluedevil/bluedevil-5.3.1.ebuild,v 1.1 2015/05/31 22:06:16 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/bluedevil/bluedevil-5.3.1-r1.ebuild,v 1.1 2015/06/18 22:02:27 johu Exp $
 
 EAPI=5
 
@@ -12,6 +12,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 COMMON_DEPEND="
+	$(add_frameworks_dep bluez-qt)
 	$(add_frameworks_dep kcompletion)
 	$(add_frameworks_dep kconfig)
 	$(add_frameworks_dep kconfigwidgets)
@@ -24,7 +25,6 @@ COMMON_DEPEND="
 	$(add_frameworks_dep knotifications)
 	$(add_frameworks_dep kwidgetsaddons)
 	$(add_frameworks_dep plasma)
-	$(add_plasma_dep bluez-qt)
 	dev-qt/qtdbus:5
 	dev-qt/qtdeclarative:5
 	dev-qt/qtgui:5
@@ -40,6 +40,8 @@ RDEPEND="${COMMON_DEPEND}
 	!net-wireless/bluedevil
 	!net-wireless/kbluetooth
 "
+
+PATCHES=( "${FILESDIR}"/${P}-frameworks-fix.patch )
 
 pkg_postinst() {
 	kde5_pkg_postinst

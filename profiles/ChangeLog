@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10135 2015/06/18 08:38:17 np-hardass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10136 2015/06/18 22:11:25 johu Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  18 Jun 2015; Johannes Huber <johu@gentoo.org> package.mask:
+  Update KDE Plasma 5.3.1 mask.
 
   18 Jun 2015; NP-Hardass <NP-Hardass@gentoo.org> package.mask:
   Remove mask for =net-misc/teamviewer-10.0.36281 as it is no longer in the

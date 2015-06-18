@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16626 2015/06/18 08:38:17 np-hardass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16627 2015/06/18 22:11:25 johu Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -204,7 +204,6 @@ dev-lang/php:7.0
 # Upgrade guide: https://wiki.gentoo.org/wiki/KDE/Plasma_5_upgrade
 ~kde-plasma/baloo-5.9.1
 ~kde-plasma/bluedevil-5.3.1
-~kde-plasma/bluez-qt-5.3.1
 ~kde-plasma/breeze-5.3.1
 ~kde-plasma/kde-cli-tools-5.3.1
 ~kde-plasma/kde-gtk-config-5.3.1
