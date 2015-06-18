@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/replicant/replicant-0.3.1.ebuild,v 1.1 2013/12/11 03:44:56 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/replicant/replicant-0.7.1.ebuild,v 1.1 2015/06/18 02:44:40 patrick Exp $
 EAPI=4
 
 DESCRIPTION="Hyperdex replicant support library"
@@ -17,5 +17,6 @@ DEPEND=">=dev-libs/libpo6-0.4
 	>=dev-libs/libe-0.4
 	>=dev-libs/busybee-0.4
 	dev-libs/hyperleveldb
-	dev-cpp/glog"
+	dev-cpp/glog
+	dev-cpp/sparsehash"
 RDEPEND="${DEPEND}"
