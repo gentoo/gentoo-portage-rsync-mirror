@@ -17,6 +17,7 @@ if [ -n "${PUPPETMASTER_PORT}" ] ; then
 fi
 
 command="/usr/bin/puppet"
+extra_started_commands="reload"
 
 depend() {
 	need localmount
@@ -27,4 +28,10 @@ start_pre() {
 	checkpath --directory --owner puppet:puppet "${PUPPETMASTER_PID_DIR}"
 	checkpath --directory --owner puppet:puppet --mode 750 ${PUPPET_LOG_DIR}
 	checkpath --file --owner puppet:puppet --mode 640 "${PUPPET_LOG_DIR}/masterhttp.log"
+}
+
+reload() {
+    ebegin "Reloading $RC_SVCNAME"
+    start-stop-daemon --signal SIGHUP --pidfile "${pidfile}"
+    eend $?
 }
