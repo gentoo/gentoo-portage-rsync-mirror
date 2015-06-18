@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.5.6-r1.ebuild,v 1.1 2015/06/17 22:12:55 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/monkeyd/monkeyd-1.5.6-r1.ebuild,v 1.2 2015/06/18 00:59:58 blueness Exp $
 
 EAPI="5"
 
@@ -108,7 +108,7 @@ src_configure() {
 		--logdir=/var/log/${PN} \
 		--mandir=/usr/share/man \
 		--libdir=/usr/$(get_libdir) \
-		--pidfile=/var/run/monkey.pid \
+		--pidfile=/run/monkey.pid \
 		--plugdir=/usr/$(get_libdir)/monkeyd/plugins \
 		--sysconfdir=/etc/${PN} \
 		--platform="generic" \
