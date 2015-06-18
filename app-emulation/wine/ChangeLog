@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.540 2015/06/14 16:18:11 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.541 2015/06/18 06:06:00 np-hardass Exp $
+
+*wine-1.7.45 (18 Jun 2015)
+
+  18 Jun 2015; NP-Hardass <NP-Hardass@gentoo.org>
+  +files/wine-1.7.45-libunwind-osx-only.patch, +wine-1.7.45.ebuild,
+  metadata.xml:
+  Version bump.  See https://www.winehq.org/announce/1.7.45 for the announcement
 
   14 Jun 2015; Ulrich Müller <ulm@gentoo.org> wine-1.6.2.ebuild,
   wine-1.7.0.ebuild, wine-1.7.3.ebuild, wine-1.7.4.ebuild, wine-1.7.8.ebuild,

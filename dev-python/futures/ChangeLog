@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/futures
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.16 2015/06/16 08:51:54 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/futures/ChangeLog,v 1.17 2015/06/18 06:25:27 patrick Exp $
+
+*futures-3.0.3 (18 Jun 2015)
+
+  18 Jun 2015; Patrick Lauer <patrick@gentoo.org> +futures-3.0.3.ebuild:
+  Bump
 
 *futures-3.0.2 (16 Jun 2015)
 

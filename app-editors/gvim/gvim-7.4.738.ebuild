@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.712.ebuild,v 1.3 2015/06/18 06:17:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.738.ebuild,v 1.1 2015/06/18 06:17:53 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -9,13 +9,11 @@ PYTHON_REQ_USE=threads
 inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 prefix python-r1
 
 if [[ ${PV} == 9999* ]] ; then
-	inherit mercurial
-	EHG_REPO_URI="https://vim.googlecode.com/hg/"
-	EHG_PROJECT="vim"
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/vim/vim.git"
 else
-	VIM_ORG_PATCH="vim-${PV}.patch.xz"
-	SRC_URI="ftp://ftp.vim.org/pub/vim/unix/vim-${VIM_VERSION}.tar.bz2
-		http://dev.gentoo.org/~radhermit/vim/${VIM_ORG_PATCH}
+	MY_PV=${PV//./-}
+	SRC_URI="https://github.com/vim/vim/archive/v${MY_PV}.tar.gz -> vim-${PV}.tar.gz
 		http://dev.gentoo.org/~radhermit/vim/vim-7.4.542-gentoo-patches.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
 fi
@@ -77,7 +75,7 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 "
 
-S=${WORKDIR}/vim${VIM_VERSION/.}
+S=${WORKDIR}/vim-${MY_PV}
 
 pkg_setup() {
 	# people with broken alphabets run into trouble. bug 82186.
@@ -91,11 +89,6 @@ pkg_setup() {
 
 src_prepare() {
 	if [[ ${PV} != 9999* ]] ; then
-		if [[ -f "${WORKDIR}"/${VIM_ORG_PATCH%.xz} ]] ; then
-			# Apply any patches available from vim.org for this version
-			epatch "${WORKDIR}"/${VIM_ORG_PATCH%.xz}
-		fi
-
 		if [[ -d "${WORKDIR}"/patches/ ]]; then
 			# Gentoo patches to fix runtime issues, cross-compile errors, etc
 			EPATCH_SUFFIX="patch" EPATCH_FORCE="yes" \
