@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/llvm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.253 2015/06/15 22:26:52 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/llvm/ChangeLog,v 1.254 2015/06/18 12:40:13 voyageur Exp $
+
+  18 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-2.8-r2.ebuild,
+  llvm-2.9-r2.ebuild, metadata.xml:
+  Remove last llvm-gcc references, this was removed years ago
 
   15 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org> llvm-9999.ebuild:
   lldb fixes thanks to mgorny's review

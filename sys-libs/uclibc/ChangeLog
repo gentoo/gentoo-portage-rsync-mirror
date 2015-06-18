@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/uclibc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.101 2015/06/18 12:29:11 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/ChangeLog,v 1.102 2015/06/18 12:32:46 blueness Exp $
+
+  18 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
+  -uclibc-0.9.33.2-r1.ebuild, -uclibc-0.9.33.2-r10.ebuild,
+  -uclibc-0.9.33.2-r11.ebuild, -uclibc-0.9.33.2-r12.ebuild,
+  -uclibc-0.9.33.2-r13.ebuild, -uclibc-0.9.33.2-r14.ebuild,
+  -uclibc-0.9.33.2-r2.ebuild, -uclibc-0.9.33.2-r3.ebuild,
+  -uclibc-0.9.33.2-r4.ebuild, -uclibc-0.9.33.2-r5.ebuild,
+  -uclibc-0.9.33.2-r6.ebuild, -uclibc-0.9.33.2-r7.ebuild,
+  -uclibc-0.9.33.2-r8.ebuild, -uclibc-0.9.33.2-r9.ebuild,
+  -uclibc-0.9.33.2.ebuild:
+  Remove all older versions susceptible to bug #539226.
 
   18 Jun 2015; Anthony G. Basile <blueness@gentoo.org>
   uclibc-0.9.33.2-r15.ebuild:

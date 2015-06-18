@@ -3,11 +3,11 @@ DEPEND=dev-lang/perl >=sys-devel/make-3.79 >=sys-devel/flex-2.5.4 >=sys-devel/bi
 DESCRIPTION=Low Level Virtual Machine
 EAPI=4
 HOMEPAGE=http://llvm.org/
-IUSE=debug +libffi llvm-gcc multitarget ocaml test udis86
+IUSE=debug +libffi multitarget ocaml test udis86
 KEYWORDS=amd64 ppc x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=UoI-NCSA
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://llvm.org/releases/2.8/llvm-2.8.tgz -> llvm-2.8-r1.tgz
 _eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=95de326f0679b997e99481f62c2132f2
+_md5_=fe222651095dee8d33f3287d94ae33e0

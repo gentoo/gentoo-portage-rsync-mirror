@@ -1,11 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/amd64/package.mask,v 1.8 2015/06/02 09:15:35 ulm Exp $
-
-# Mask e2fsprogs-1.42.12 because of
-# possible data corruption.  Bug #548950.
->sys-libs/e2fsprogs-libs-1.42.11
->sys-fs/e2fsprogs-1.42.11
+# $Header: /var/cvsroot/gentoo-x86/profiles/default/linux/uclibc/amd64/package.mask,v 1.9 2015/06/18 12:36:02 blueness Exp $
 
 # AMD64 Team <amd64@gentoo.org>
 # Mask packages that rely on amd64 multilib
