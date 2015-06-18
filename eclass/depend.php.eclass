@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.34 2015/06/17 20:11:28 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/depend.php.eclass,v 1.35 2015/06/18 14:22:59 grknight Exp $
 
 # @ECLASS: depend.php.eclass
 # @MAINTAINER:
@@ -15,7 +15,7 @@
 # for specific PHP features, SAPIs etc. Also provides dodoc-php wrapper to install
 # documentation for PHP packages to php-specific location.
 
-inherit eutils multilib phpconfutils
+inherit eutils multilib
 
 # PHP5-only depend functions
 
@@ -158,7 +158,7 @@ require_php_sapi_from() {
 	einfo "Checking for compatible SAPI(s)"
 
 	for x in $@ ; do
-		if built_with_use =${PHP_PKG} ${x} || phpconfutils_built_with_use =${PHP_PKG} ${x} ; then
+		if built_with_use =${PHP_PKG} ${x} ; then
 			einfo "  Discovered compatible SAPI ${x}"
 			has_sapi="1"
 		fi
@@ -219,7 +219,7 @@ require_php_with_use() {
 				;;
 		esac
 
-		if ! built_with_use =${PHP_PKG} ${x} && ! phpconfutils_built_with_use =${PHP_PKG} ${x} ; then
+		if ! built_with_use =${PHP_PKG} ${x} ; then
 			einfo "  Discovered missing USE flag: ${x}"
 			missing_use="${missing_use} ${x}"
 		fi
@@ -262,7 +262,7 @@ require_php_with_any_use() {
 	einfo "Checking for required PHP feature(s) ..."
 
 	for x in $@ ; do
-		if built_with_use =${PHP_PKG} ${x} || phpconfutils_built_with_use =${PHP_PKG} ${x} ; then
+		if built_with_use =${PHP_PKG} ${x} ; then
 			einfo "  USE flag ${x} is enabled, ok ..."
 			return
 		else
@@ -305,7 +305,7 @@ has_zts() {
 	eqawarn "(has_zts) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
-	if built_with_use =${PHP_PKG} apache2 threads || phpconfutils_built_with_use =${PHP_PKG} apache2 threads ; then
+	if built_with_use =${PHP_PKG} apache2 threads ; then
 		return 0
 	fi
 
@@ -320,7 +320,7 @@ has_debug() {
 	eqawarn "(has_debug) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
-	if built_with_use =${PHP_PKG} debug || phpconfutils_built_with_use =${PHP_PKG} debug ; then
+	if built_with_use =${PHP_PKG} debug ; then
 		return 0
 	fi
 
@@ -335,7 +335,7 @@ has_concurrentmodphp() {
 	eqawarn "(has_concurrentmodphp) Deprecated function call.  Set to be removed on 2015-07-17"
 	has_php
 
-	if built_with_use =${PHP_PKG} apache2 concurrentmodphp || phpconfutils_built_with_use =${PHP_PKG} apache2 concurrentmodphp ; then
+	if built_with_use =${PHP_PKG} apache2 concurrentmodphp ; then
 		return 0
 	fi
 
@@ -360,7 +360,7 @@ require_pdo() {
 	has_php
 
 	# Was PHP5 compiled with internal PDO support?
-	if built_with_use =${PHP_PKG} pdo || phpconfutils_built_with_use =${PHP_PKG} pdo ; then
+	if built_with_use =${PHP_PKG} pdo ; then
 		return
 	else
 		eerror
@@ -392,7 +392,7 @@ require_php_cli() {
 	if has_version '=dev-lang/php-5*' ; then
 		PHP_PACKAGE_FOUND="1"
 		pkg="$(best_version '=dev-lang/php-5*')"
-		if built_with_use =${pkg} cli || phpconfutils_built_with_use =${pkg} cli ; then
+		if built_with_use =${pkg} cli ; then
 			PHP_VERSION="5"
 		fi
 	fi
@@ -427,7 +427,7 @@ require_php_cgi() {
 	if has_version '=dev-lang/php-5*' ; then
 		PHP_PACKAGE_FOUND="1"
 		pkg="$(best_version '=dev-lang/php-5*')"
-		if built_with_use =${pkg} cgi || phpconfutils_built_with_use =${pkg} cgi ; then
+		if built_with_use =${pkg} cgi ; then
 			PHP_VERSION="5"
 		fi
 	fi
@@ -454,7 +454,7 @@ require_sqlite() {
 	has_php
 
 	# Has our PHP been built with SQLite support?
-	if built_with_use =${PHP_PKG} sqlite || phpconfutils_built_with_use =${PHP_PKG} sqlite ; then
+	if built_with_use =${PHP_PKG} sqlite ; then
 		return
 	fi
 
@@ -477,12 +477,12 @@ require_gd() {
 	has_php
 
 	# Do we have the internal GD support installed?
-	if built_with_use =${PHP_PKG} gd || phpconfutils_built_with_use =${PHP_PKG} gd ; then
+	if built_with_use =${PHP_PKG} gd ; then
 		return
 	fi
 
 	# Ok, maybe GD was built using the external library support?
-	if built_with_use =${PHP_PKG} gd-external || phpconfutils_built_with_use =${PHP_PKG} gd-external ; then
+	if built_with_use =${PHP_PKG} gd-external ; then
 		return
 	fi
 
