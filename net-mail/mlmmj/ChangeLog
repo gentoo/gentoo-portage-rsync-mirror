@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mlmmj
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.45 2014/02/05 20:38:56 robbat2 Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mlmmj/ChangeLog,v 1.46 2015/06/18 00:08:33 robbat2 Exp $
+
+*mlmmj-1.2.19.0 (18 Jun 2015)
+
+  18 Jun 2015; Robin H. Johnson <robbat2@gentoo.org> +mlmmj-1.2.19.0.ebuild:
+  Bump.
 
 *mlmmj-1.2.18.1 (05 Feb 2014)
 
