@@ -1,6 +1,12 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1674 2015/06/18 14:22:59 grknight Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1675 2015/06/18 15:19:04 williamh Exp $
+
+  18 Jun 2015; William Hubbs <williamh@gentoo.org> golang-vcs.eclass:
+  Add the EGO_SRC variable for repositories that contain multiple Go
+  packages.
+  Change references from ${S} to ${WORKDIR}/${P} to match other eclasses.
+  Copy the appropriate sources to${WORKDIR}/${P}.
 
   18 Jun 2015; <grknight@gentoo.org> depend.php.eclass:
   Remove phpconfutils calls in preparation for its deprecation

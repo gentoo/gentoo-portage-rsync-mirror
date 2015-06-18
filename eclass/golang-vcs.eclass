@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/golang-vcs.eclass,v 1.1 2015/06/16 21:40:51 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/golang-vcs.eclass,v 1.2 2015/06/18 15:19:04 williamh Exp $
 
 # @ECLASS: golang-vcs.eclass
 # @MAINTAINER:
@@ -38,6 +38,20 @@ DEPEND=">=dev-lang/go-1.4.2"
 # @CODE
 # EGO_PN="github.com/user/package"
 # EGO_PN="github.com/user1/package1 github.com/user2/package2"
+# @CODE
+
+# @ECLASS-VARIABLE: EGO_SRC
+# @DESCRIPTION:
+# This is the Go upstream repository which will be copied to
+# ${WORKDIR}/${P}.
+# If it isn't set, it defaults to the first word of ${EGO_PN}.
+# This should be set if you are retrieving a repository that includes
+# multiple packages, e.g. golang.org/x/tools.
+#
+# Example:
+# @CODE
+# EGO_PN="github.com/user/repository/package"
+# EGO_SRC="github.com/user/repository"
 # @CODE
 
 # @ECLASS-VARIABLE: EGO_STORE_DIR
@@ -85,8 +99,12 @@ _golang-vcs_env_setup() {
 	export GOPATH="${EGO_STORE_DIR}"
 
 	[[ -n ${EVCS_UMASK} ]] && eumask_pop
-	mkdir -p "${S}" ||
-		die "${ECLASS}: unable to create ${S}"
+	mkdir -p "${WORKDIR}/${P}/src" ||
+		die "${ECLASS}: unable to create ${WORKDIR}/${P}"
+	if [ -z "${EGO_SRC}" ]; then
+		set -- ${EGO_PN}
+		EGO_SRC="$1"
+	fi
 	return 0
 }
 
@@ -101,7 +119,7 @@ _golang-vcs_fetch() {
 		die "${ECLASS}: EGO_PN is not set"
 
 	if [[ -n ${EVCS_OFFLINE} ]]; then
-		export GOPATH="${S}:${GOPATH}"
+		export GOPATH="${WORKDIR}/${P}:${GOPATH}"
 		return 0
 	fi
 
@@ -118,7 +136,14 @@ _golang-vcs_fetch() {
 	# downloading the top level repository is successful.
 
 	[[ -n ${EVCS_UMASK} ]] && eumask_pop
-	export GOPATH="${S}:${EGO_STORE_DIR}"
+	export GOPATH="${WORKDIR}/${P}:${EGO_STORE_DIR}"
+	set -- mkdir -p "${WORKDIR}/${P}/src/${EGO_SRC}"
+	echo "$@"
+	"$@" || die "Unable to create ${WORKDIR}/${P}/src/${EGO_SRC}"
+	set -- cp -r "${EGO_STORE_DIR}/src/${EGO_SRC}/*" \
+		"${WORKDIR}/${P}/src/${EGO_SRC}"
+	echo "$@"
+	$@ || die "Unable to copy sources to ${WORKDIR}/${P}"
 	return 0
 }
 
