@@ -1,6 +1,17 @@
 # ChangeLog for www-apps/drupal
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.117 2015/05/08 20:04:00 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/ChangeLog,v 1.118 2015/06/18 13:54:33 jmbsvicetto Exp $
+
+*drupal-7.38 (18 Jun 2015)
+*drupal-6.36 (18 Jun 2015)
+*drupal-8.0.0_beta11 (18 Jun 2015)
+
+  18 Jun 2015; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +drupal-6.36.ebuild, +drupal-7.38.ebuild, +drupal-8.0.0_beta11.ebuild,
+  -drupal-6.35.ebuild, -drupal-7.36.ebuild, -drupal-7.37.ebuild,
+  -drupal-8.0.0_beta10.ebuild, -drupal-8.0.0_beta9.ebuild:
+  Bump drupal to releases 7.38 and 6.36 - fixes bug 552416. Security bump -
+  CVE-2015-{3231,3232,3233,3234}. Add drupal-8.0.0_beta11 from my overlay.
 
 *drupal-8.0.0_beta10 (08 May 2015)
 *drupal-7.37 (08 May 2015)
