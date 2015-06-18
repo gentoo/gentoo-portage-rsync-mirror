@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/gnu-efi
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.26 2015/04/13 05:50:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/ChangeLog,v 1.27 2015/06/18 19:30:56 radhermit Exp $
+
+  18 Jun 2015; Tim Harder <radhermit@gentoo.org> gnu-efi-3.0.2.ebuild:
+  Update HOMEPAGE.
 
 *gnu-efi-3.0.2 (13 Apr 2015)
 

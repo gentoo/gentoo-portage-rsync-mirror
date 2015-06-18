@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0.2.ebuild,v 1.1 2015/04/13 05:50:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/gnu-efi/gnu-efi-3.0.2.ebuild,v 1.2 2015/06/18 19:30:56 radhermit Exp $
 
 EAPI=5
 
 inherit multilib
 
 DESCRIPTION="Library for build EFI Applications"
-HOMEPAGE="http://developer.intel.com/technology/efi"
+HOMEPAGE="http://gnu-efi.sourceforge.net/"
 SRC_URI="mirror://sourceforge/gnu-efi/${P}.tar.bz2"
 
 LICENSE="GPL-2"
