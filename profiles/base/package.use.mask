@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.686 2015/06/09 22:57:57 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.687 2015/06/18 02:31:14 patrick Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -40,11 +40,6 @@ dev-java/proguard j2me
 # Christoph Junghans <ottxor@gentoo.org> (03 Apr 2015)
 # >=~sys-devel/dragonegg-3.6 is broken (bug #543644)
 sys-devel/byfl dragonegg
-
-# Michał Górny <mgorny@gentoo.org> (02 Apr 2015)
-# DirectFB support was removed from libsdl, mask the relevant flag
-# due to unsolvable deps, bug #545246.
-media-tv/freevo directfb
 
 # Lars Wendler <polynomial-c@gentoo.org> (19 Mar 2015)
 # >=games-strategy/freeciv-2.5.0 requires >=dev-lang/lua-5.2

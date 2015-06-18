@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.21 2015/03/21 18:45:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.9.0.ebuild,v 1.22 2015/06/18 02:29:37 patrick Exp $
 
 EAPI="3"
 PYTHON_DEPEND="2:2.5"
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ppc x86"
-IUSE="directfb cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matrox mixer nls tv vorbis xine X"
+IUSE="cdparanoia doc dvd encode fbcon flac gphoto2 jpeg lame lirc matrox mixer nls tv vorbis xine X"
 
 RDEPEND="dev-python/beautifulsoup:python-2
 	virtual/python-imaging
@@ -29,15 +29,14 @@ RDEPEND="dev-python/beautifulsoup:python-2
 	>=dev-python/kaa-imlib2-0.2.3
 	dev-python/kaa-display
 
-	media-video/mplayer[directfb?,fbcon?]
-	>=media-libs/libsdl-1.2.5[directfb?,fbcon?]
+	media-video/mplayer[fbcon?]
+	>=media-libs/libsdl-1.2.5[fbcon?]
 	media-libs/sdl-image[jpeg,png]
 	x11-apps/xset
 
 	cdparanoia? ( media-sound/cdparanoia )
 	dvd? (
 		>=media-video/lsdvd-0.10
-		directfb? ( media-libs/xine-lib[directfb] )
 		fbcon? ( media-libs/xine-lib[fbcon] )
 		encode? ( media-video/dvdbackup )
 	)
@@ -53,11 +52,11 @@ RDEPEND="dev-python/beautifulsoup:python-2
 	vorbis? ( media-sound/vorbis-tools )"
 
 pkg_setup() {
-	if ! { use X || use directfb || use fbcon || use matrox ; } ; then
+	if ! { use X || use fbcon || use matrox ; } ; then
 		echo
 		ewarn "WARNING - no video support specified in USE flags."
 		ewarn "Please be sure that media-libs/libsdl supports whatever video"
-		ewarn "support (X11, fbcon, directfb, etc) you plan on using."
+		ewarn "support (X11, fbcon, etc.) you plan on using."
 		echo
 	fi
 
@@ -112,12 +111,8 @@ src_install() {
 	cd "${S}/src"
 	if [ "${PROFILE_ARCH}" == "xbox" ]; then
 		myconf="${myconf} --geometry=640x480 --display=x11"
-	elif use matrox && use directfb; then
-		myconf="${myconf} --geometry=768x576 --display=dfbmga"
 	elif use matrox ; then
 		myconf="${myconf} --geometry=768x576 --display=mga"
-	elif use directfb; then
-		myconf="${myconf} --geometry=768x576 --display=directfb"
 	elif use X ; then
 		myconf="${myconf} --geometry=800x600 --display=x11"
 	else

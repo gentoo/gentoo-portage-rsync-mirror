@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/freevo
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.88 2015/03/21 18:45:40 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.89 2015/06/18 02:29:37 patrick Exp $
+
+  18 Jun 2015; Patrick Lauer <patrick@gentoo.org> freevo-1.9.0-r1.ebuild,
+  freevo-1.9.0.ebuild:
+  Drop directfb useflag as dependencies for it are unsatisfiable #545246
 
   21 Mar 2015; Justin Lecher <jlec@gentoo.org> freevo-1.9.0-r1.ebuild,
   freevo-1.9.0.ebuild:
