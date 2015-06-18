@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-plasma/plasma-meta/plasma-meta-5.3.1.ebuild,v 1.2 2015/06/11 20:00:24 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-plasma/plasma-meta/plasma-meta-5.3.1.ebuild,v 1.3 2015/06/18 21:57:37 johu Exp $
 
 EAPI=5
 
@@ -42,7 +42,6 @@ RDEPEND="
 	$(add_plasma_dep systemsettings)
 	bluetooth? (
 		$(add_plasma_dep bluedevil)
-		$(add_plasma_dep bluez-qt)
 	)
 	gtk? ( $(add_plasma_dep kde-gtk-config) )
 	display-manager? (
