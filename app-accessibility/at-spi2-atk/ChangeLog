@@ -1,6 +1,15 @@
 # ChangeLog for app-accessibility/at-spi2-atk
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.73 2015/06/09 09:52:47 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/ChangeLog,v 1.74 2015/06/18 04:29:20 tetromino Exp $
+
+*at-spi2-atk-2.16.0-r1 (18 Jun 2015)
+
+  18 Jun 2015; Alexandre Rostovtsev <tetromino@gentoo.org>
+  +at-spi2-atk-2.16.0-r1.ebuild, +files/at-spi2-atk-2.16.0-atk_suite.h,
+  +files/at-spi2-atk-2.16.0-null-gobject.patch,
+  +files/at-spi2-atk-2.16.0-out-of-source.patch:
+  Fix test suite build (note: test suite itself still doesn't quite run), bug
+  #552346, thanks to Patrick Lauer. Reduce logspam at runtime.
 
 *at-spi2-atk-2.16.0 (09 Jun 2015)
 

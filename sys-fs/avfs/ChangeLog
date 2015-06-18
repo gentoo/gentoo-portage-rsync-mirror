@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/avfs
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.51 2014/08/31 06:11:12 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/avfs/ChangeLog,v 1.52 2015/06/18 04:24:44 radhermit Exp $
+
+*avfs-1.0.3 (18 Jun 2015)
+
+  18 Jun 2015; Tim Harder <radhermit@gentoo.org> +avfs-1.0.3.ebuild:
+  Version bump.
 
 *avfs-1.0.2 (31 Aug 2014)
 

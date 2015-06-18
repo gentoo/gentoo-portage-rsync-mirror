@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/fuse
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.201 2015/03/07 21:34:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/fuse/ChangeLog,v 1.202 2015/06/18 04:17:14 radhermit Exp $
+
+*fuse-2.9.4 (18 Jun 2015)
+
+  18 Jun 2015; Tim Harder <radhermit@gentoo.org> +fuse-2.9.4.ebuild:
+  Security bump (bug #550152).
 
   07 Mar 2015; Mike Frysinger <vapier@gentoo.org>
   +files/fuse-2.9.3-kernel-types.patch, fuse-2.9.3.ebuild:
