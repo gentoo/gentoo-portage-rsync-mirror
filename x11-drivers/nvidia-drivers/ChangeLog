@@ -1,6 +1,12 @@
 # ChangeLog for x11-drivers/nvidia-drivers
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.624 2015/06/14 16:55:32 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-drivers/nvidia-drivers/ChangeLog,v 1.625 2015/06/18 04:48:48 jer Exp $
+
+*nvidia-drivers-352.21 (18 Jun 2015)
+
+  18 Jun 2015; Jeroen Roovers <jer@gentoo.org> -nvidia-drivers-352.09.ebuild,
+  +nvidia-drivers-352.21.ebuild:
+  Version bump.
 
   14 Jun 2015; Ulrich Müller <ulm@gentoo.org> nvidia-drivers-346.72.ebuild:
   [QA] Remove emul-linux-x86-* from dependencies.

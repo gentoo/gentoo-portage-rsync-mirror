@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xlsx2csv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/ChangeLog,v 1.14 2015/06/06 09:19:11 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xlsx2csv/ChangeLog,v 1.15 2015/06/18 04:31:50 radhermit Exp $
+
+*xlsx2csv-0.7.2 (18 Jun 2015)
+
+  18 Jun 2015; Tim Harder <radhermit@gentoo.org> +xlsx2csv-0.7.2.ebuild:
+  Version bump.
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
