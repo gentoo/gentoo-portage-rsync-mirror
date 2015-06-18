@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/umockdev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.24 2015/04/08 17:54:03 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/umockdev/ChangeLog,v 1.25 2015/06/18 05:01:34 radhermit Exp $
+
+*umockdev-0.8.9 (18 Jun 2015)
+
+  18 Jun 2015; Tim Harder <radhermit@gentoo.org> +umockdev-0.8.9.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> umockdev-0.8.2.ebuild:
   Drop old Python implementations

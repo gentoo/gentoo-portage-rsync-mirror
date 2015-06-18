@@ -1,6 +1,15 @@
 # ChangeLog for dev-ruby/syslogger
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/ChangeLog,v 1.17 2015/06/07 19:55:54 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/syslogger/ChangeLog,v 1.19 2015/06/18 05:19:57 graaff Exp $
+
+*syslogger-1.6.3 (18 Jun 2015)
+
+  18 Jun 2015; Hans de Graaff <graaff@gentoo.org> +syslogger-1.6.3.ebuild:
+  Version bump.
+
+  18 Jun 2015; Hans de Graaff <graaff@gentoo.org> -syslogger-1.6.0.ebuild,
+  -syslogger-1.6.1.ebuild:
+  Cleanup.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

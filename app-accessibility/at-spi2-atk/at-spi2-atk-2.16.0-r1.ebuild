@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.16.0-r1.ebuild,v 1.1 2015/06/18 04:29:20 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-spi2-atk/at-spi2-atk-2.16.0-r1.ebuild,v 1.2 2015/06/18 05:29:21 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2 multilib-minimal virtualx
+inherit autotools eutils gnome2 multilib-minimal
 
 DESCRIPTION="Gtk module for bridging AT-SPI to Atk"
 HOMEPAGE="http://live.gnome.org/Accessibility"
@@ -42,6 +42,8 @@ src_prepare() {
 	# Upstream forgot to put this in tarball :/
 	# https://bugzilla.gnome.org/show_bug.cgi?id=751138
 	cp -n "${FILESDIR}"/${PN}-2.16.0-atk_suite.h tests/atk_suite.h || die
+	mkdir tests/data/ || die
+	cp -n "${FILESDIR}"/${PN}-2.16.0-tests-data/*.xml tests/data/ || die
 
 	eautoreconf
 	gnome2_src_prepare
@@ -53,9 +55,8 @@ multilib_src_configure() {
 }
 
 multilib_src_test() {
-	# droute test requires session bus; ignore it
 	unset DBUS_SESSION_BUS_ADDRESS
-	Xemake check
+	dbus-run-session -- emake check
 }
 
 multilib_src_compile() { gnome2_src_compile; }
