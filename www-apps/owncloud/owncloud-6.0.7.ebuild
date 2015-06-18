@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-6.0.7.ebuild,v 1.1 2015/03/11 16:21:57 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/owncloud-6.0.7.ebuild,v 1.2 2015/06/18 12:17:08 voyageur Exp $
 
 EAPI=5
 
-inherit eutils webapp depend.php
+inherit eutils webapp
 
 DESCRIPTION="Web-based storage application where all your data is under your own control"
 HOMEPAGE="http://owncloud.org"
@@ -16,9 +16,8 @@ IUSE="+curl mysql postgres +sqlite"
 REQUIRED_USE="|| ( mysql postgres sqlite )"
 
 DEPEND=""
-RDEPEND="dev-lang/php[curl?,filter,gd,hash,json,mysql?,pdo,postgres?,simplexml,sqlite?,xmlwriter,zip]"
-need_httpd_cgi
-need_php_httpd
+RDEPEND="dev-lang/php[curl?,filter,gd,hash,json,mysql?,pdo,postgres?,simplexml,sqlite?,xmlwriter,zip]
+	virtual/httpd-php"
 
 S=${WORKDIR}/${PN}
 

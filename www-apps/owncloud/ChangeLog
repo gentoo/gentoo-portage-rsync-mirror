@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/owncloud
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.66 2015/06/10 13:18:32 voyageur Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/owncloud/ChangeLog,v 1.67 2015/06/18 12:17:08 voyageur Exp $
+
+  18 Jun 2015; Bernard Cafarelli <voyageur@gentoo.org> owncloud-5.0.19.ebuild,
+  owncloud-6.0.7.ebuild, owncloud-6.0.8.ebuild, owncloud-7.0.5.ebuild,
+  owncloud-7.0.6.ebuild:
+  Drop depend.php eclass use in older versions too
 
 *owncloud-8.0.4 (10 Jun 2015)
 *owncloud-7.0.6 (10 Jun 2015)
