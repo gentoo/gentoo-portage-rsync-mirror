@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.738.ebuild,v 1.1 2015/06/18 06:17:53 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/gvim-7.4.738.ebuild,v 1.2 2015/06/18 06:34:35 radhermit Exp $
 
 EAPI=5
 VIM_VERSION="7.4"
@@ -8,11 +8,13 @@ PYTHON_COMPAT=( python{2_7,3_3,3_4} )
 PYTHON_REQ_USE=threads
 inherit eutils vim-doc flag-o-matic fdo-mime versionator bash-completion-r1 prefix python-r1
 
+MY_PV=${PV//./-}
+
 if [[ ${PV} == 9999* ]] ; then
 	inherit git-r3
 	EGIT_REPO_URI="https://github.com/vim/vim.git"
+	EGIT_CHECKOUT_DIR=${WORKDIR}/vim-${MY_PV}
 else
-	MY_PV=${PV//./-}
 	SRC_URI="https://github.com/vim/vim/archive/v${MY_PV}.tar.gz -> vim-${PV}.tar.gz
 		http://dev.gentoo.org/~radhermit/vim/vim-7.4.542-gentoo-patches.tar.bz2"
 	KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd ~x86-interix ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos ~x86-solaris"
