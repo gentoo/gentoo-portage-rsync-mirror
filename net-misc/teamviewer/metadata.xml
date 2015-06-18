@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>proxy-maintainers</herd>
+	<herd>wine</herd>
 	<maintainer>
-		<email>dct23@cornell.edu</email>
-		<name>Devrin Talen</name>
-	</maintainer>
-	<maintainer>
-		<email>np.hardass@gmail.com</email>
-		<name>>NP-Hardass</name>		
-	<description>Maintainers, assign bugs to them</description>
+		<email>np.hardass@gentoo.org</email>
+		<name>NP-Hardass</name>		
 	</maintainer>
 	<use>
-		<flag name="system-wine">Use <pkg>app-emulation/wine</pkg> instead of bundled one.</flag>
+		<flag name="system-wine">Use <pkg>app-emulation/wine</pkg> instead of bundled wine.</flag>
 	</use>
 </pkgmetadata>
-

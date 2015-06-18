@@ -1,6 +1,16 @@
 # ChangeLog for net-misc/teamviewer
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.19 2015/06/14 18:36:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/ChangeLog,v 1.20 2015/06/18 08:35:17 np-hardass Exp $
+
+*teamviewer-10.0.41499 (18 Jun 2015)
+
+  18 Jun 2015; NP-Hardass <NP-Hardass@gentoo.org> +files/teamviewer.init,
+  +files/teamviewer.sh, +files/teamviewerd.conf, +files/teamviewerd9.init,
+  +teamviewer-10.0.41499.ebuild, -files/teamviewer-10.0.36281-gentoo.patch,
+  -files/teamviewer-9.0.30203-gentoo.patch, -teamviewer-10.0.36281.ebuild,
+  files/teamviewerd.init, metadata.xml, teamviewer-9.0.32150.ebuild:
+  Version bump to 10.0.41499 and drop 10.0.36281.  Resolves bug #544222 and
+  #542728
 
   14 Jun 2015; Ulrich Müller <ulm@gentoo.org> teamviewer-9.0.32150.ebuild:
   [QA] Remove emul-linux-x86-* from dependencies.

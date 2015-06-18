@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16625 2015/06/16 21:12:28 jauhien Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16626 2015/06/18 08:38:17 np-hardass Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -375,11 +375,6 @@ app-emulation/emul-linux-x86-jna
 dev-lang/php:5.3
 virtual/httpd-php:5.3
 =mail-client/squirrelmail-1.4.22
-
-# Ulrich Müller <ulm@gentoo.org> (9 Mar 2015)
-# Broken multilib dependencies causing blockers, bug 542728.
-# Masked by QA until maintainer will sort this out.
-=net-misc/teamviewer-10.0.36281
 
 # Lars Wendler <polynomial-c@gentoo.org> (8 Mar 2015)
 # Masked for testing

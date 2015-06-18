@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.687 2015/06/18 02:31:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.688 2015/06/18 08:35:03 np-hardass Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -452,7 +452,9 @@ sci-libs/flann cuda
 
 # Julian Ospald <hasufell@gentoo.org> (20 Feb 2013)
 # Unsupported and experimental.
-net-misc/teamviewer system-wine
+# NP-Hardass <NP-Hardass@gentoo.org> (18 Jun 2015)
+# Change to <10
+<net-misc/teamviewer-10 system-wine
 
 # Alexis Ballier <aballier@gentoo.org> (15 Feb 2013)
 # Needs a huge patch to build against recent releases of FFmpeg/libav.

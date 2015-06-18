@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.811 2015/06/18 02:31:14 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.812 2015/06/18 08:35:03 np-hardass Exp $
+
+  18 Jun 2015; NP-Hardass <NP-Hardass@gentoo.org> package.use.mask:
+  Unmask system-wine use flag for >=net-misc/teamviewer-10
 
   18 Jun 2015; Patrick Lauer <patrick@gentoo.org> package.use.mask:
   Remove obsolete freevo[directfb] mask

@@ -1,8 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/htmlc-2.60.0.ebuild,v 1.1 2014/11/30 12:59:06 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmlc/htmlc-2.60.0.ebuild,v 1.2 2015/06/18 08:45:33 aballier Exp $
 
 EAPI=5
+
+inherit eutils
 
 # Override version: 2.4.0 > 2.21.0 so we name it 2.40.0
 MY_P="${P/0[.]/.}"
@@ -22,6 +24,10 @@ DEPEND=">=dev-lang/ocaml-3.11.2:=[ocamlopt?]"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/${MY_P}"
+
+src_prepare() {
+	epatch "${FILESDIR}/werror.patch"
+}
 
 src_configure() {
 	./configure \

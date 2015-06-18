@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-9.0.32150.ebuild,v 1.2 2015/06/14 18:36:29 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/teamviewer/teamviewer-9.0.32150.ebuild,v 1.3 2015/06/18 08:35:17 np-hardass Exp $
 
 EAPI=5
 
@@ -59,7 +59,7 @@ src_prepare() {
 
 	sed \
 		-e "s#@TVV@#${MV}/tv_bin#g" \
-		"${FILESDIR}"/${PN}d.init > "${T}"/${PN}d${MV} || die
+		"${FILESDIR}"/${PN}d${MV}.init > "${T}"/${PN}d${MV} || die
 }
 
 src_install () {
