@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.14 2015/06/14 17:37:18 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tsmuxer/tsmuxer-1.10.6-r1.ebuild,v 1.15 2015/06/18 18:44:37 ulm Exp $
 
 EAPI=5
 
@@ -53,9 +53,6 @@ RDEPEND="
 			>=x11-libs/libXrender-0.9.8[abi_x86_32(-)]
 		)
 	)"
-
-# cli is linked to freetype, when it will be fixed,
-# we will remove app-emulation/emul-linux-x86-xlibs dep.
 
 S="${WORKDIR}"
 

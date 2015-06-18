@@ -1,6 +1,10 @@
 # ChangeLog for app-office/lotus-notes
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/ChangeLog,v 1.5 2013/07/31 14:10:38 ulm Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/ChangeLog,v 1.6 2015/06/18 18:52:39 ulm Exp $
+
+  18 Jun 2015; Ulrich Müller <ulm@gentoo.org> lotus-notes-8.5.3.ebuild:
+  Remove dependencies commented out in previous commit, since emul-linux-x86*
+  packages are gone.
 
   31 Jul 2013; Ulrich Müller <ulm@gentoo.org> lotus-notes-8.5.3.ebuild:
   Drop ~amd64 keyword, bug 474364. Non-maintainer commit for scarabeus.

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.5 2013/07/31 14:10:38 ulm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lotus-notes/lotus-notes-8.5.3.ebuild,v 1.6 2015/06/18 18:52:39 ulm Exp $
 
 EAPI=5
 
@@ -53,11 +53,6 @@ RDEPEND="
 	dev-libs/icu
 	sys-apps/dbus[X]
 "
-#	amd64? (
-#		app-emulation/emul-linux-x86-gtklibs
-#		app-emulation/emul-linux-x86-motif
-#		app-emulation/emul-linux-x86-xlibs
-#	)
 DEPEND="${RDEPEND}"
 
 RESTRICT="mirror fetch strip"
