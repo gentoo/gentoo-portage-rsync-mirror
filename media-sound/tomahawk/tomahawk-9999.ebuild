@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.33 2015/05/30 21:07:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-9999.ebuild,v 1.34 2015/06/19 12:27:23 johu Exp $
 
 EAPI=5
 
@@ -29,7 +29,6 @@ DEPEND="
 	dev-cpp/lucene++
 	dev-cpp/sparsehash
 	dev-libs/boost:=
-	dev-libs/quazip
 	>=media-libs/taglib-1.8.0
 	>=net-libs/gnutls-3.2
 	x11-libs/libX11
@@ -40,6 +39,7 @@ DEPEND="
 		>=dev-libs/libattica-0.4.0
 		dev-libs/qjson
 		dev-libs/qtkeychain[qt4]
+		dev-libs/quazip[qt4]
 		dev-qt/designer:4
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4
@@ -55,6 +55,7 @@ DEPEND="
 	qt5? (
 		app-crypt/qca:2[qt5]
 		dev-libs/qtkeychain[qt5]
+		dev-libs/quazip[qt5]
 		dev-qt/designer:5
 		dev-qt/qtcore:5
 		dev-qt/qtsvg:5

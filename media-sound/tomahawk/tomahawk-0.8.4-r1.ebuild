@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.8.4-r1.ebuild,v 1.1 2015/05/30 21:07:18 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/tomahawk/tomahawk-0.8.4-r1.ebuild,v 1.2 2015/06/19 12:27:23 johu Exp $
 
 EAPI=5
 
@@ -25,17 +25,10 @@ IUSE="debug +hatchet kde qt5 telepathy xmpp"
 
 REQUIRED_USE="telepathy? ( kde )"
 
-# TODO
-# qt5 use flag needs some work:
-# - deps with missing qt4/qt5 use flags
-# - does not build with in-tree only deps
 DEPEND="
 	dev-cpp/lucene++
 	dev-cpp/sparsehash
 	dev-libs/boost:=
-	dev-libs/quazip
-	>=media-libs/libechonest-2.2.0:=
-	media-libs/liblastfm
 	>=media-libs/taglib-1.8.0
 	>=net-libs/gnutls-3.2
 	x11-libs/libX11
@@ -46,6 +39,7 @@ DEPEND="
 		>=dev-libs/libattica-0.4.0
 		dev-libs/qjson
 		dev-libs/qtkeychain[qt4]
+		dev-libs/quazip[qt4]
 		dev-qt/designer:4
 		dev-qt/qtcore:4
 		dev-qt/qtdbus:4
@@ -54,11 +48,14 @@ DEPEND="
 		dev-qt/qtsvg:4
 		dev-qt/qtwebkit:4
 		media-libs/phonon[qt4]
+		>=media-libs/libechonest-2.3.0:=[qt4]
+		media-libs/liblastfm[qt4]
 		telepathy? ( net-libs/telepathy-qt[qt4] )
 	)
 	qt5? (
 		app-crypt/qca:2[qt5(+)]
 		dev-libs/qtkeychain[qt5]
+		dev-libs/quazip[qt5]
 		dev-qt/designer:5
 		dev-qt/qtcore:5
 		dev-qt/qtsvg:5
@@ -66,6 +63,8 @@ DEPEND="
 		dev-qt/qtwidgets:5
 		kde-frameworks/attica:5
 		media-libs/phonon[qt5]
+		>=media-libs/libechonest-2.3.0:=[qt5]
+		media-libs/liblastfm[qt5]
 		telepathy? ( net-libs/telepathy-qt[qt5] )
 	)
 "
