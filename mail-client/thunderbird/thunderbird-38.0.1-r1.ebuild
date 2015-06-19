@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-38.0.1.ebuild,v 1.3 2015/06/17 02:45:48 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/thunderbird/thunderbird-38.0.1-r1.ebuild,v 1.1 2015/06/19 01:19:17 anarchy Exp $
 
 EAPI=5
 WANT_AUTOCONF="2.1"
@@ -189,6 +189,7 @@ src_configure() {
 
 	mozconfig_annotate '' --enable-extensions="${MEXTENSIONS}"
 	mozconfig_annotate '' --disable-mailnews
+	mozconfig_annotate '' --enable-calendar
 
 	# Other tb-specific settings
 	mozconfig_annotate '' --with-default-mozilla-five-home=${MOZILLA_FIVE_HOME}
@@ -267,6 +268,9 @@ src_install() {
 	MOZ_MAKE_FLAGS="${MAKEOPTS}" \
 	emake DESTDIR="${D}" install
 
+	# Install language packs
+	mozlinguas_src_install
+
 	if ! use bindist; then
 		newicon "${S}"/other-licenses/branding/thunderbird/content/icon48.png thunderbird-icon.png
 		domenu "${FILESDIR}"/icon/${PN}.desktop
@@ -289,6 +293,7 @@ src_install() {
 		cd "${D}"${MOZILLA_FIVE_HOME}/extensions/${emid} || die
 		unzip "${enigmail_xpipath}"/enigmail*.xpi || die
 	fi
+
 
 	# Required in order for jit to work on hardened, for mozilla-31
 	use jit && pax-mark pm "${ED}"${MOZILLA_FIVE_HOME}/{thunderbird,thunderbird-bin}
@@ -318,4 +323,9 @@ pkg_postinst() {
 	elog "If you experience problems with plugins please issue the"
 	elog "following command : rm \${HOME}/.thunderbird/*/extensions.sqlite ,"
 	elog "then restart thunderbird"
+	elog
+	elog "If calendar fails to show up in extensions please open config editor"
+	elog "and set extensions.lastAppVersion to 38.0.0 to force a reload. If this"
+	elog "fails to show the calendar extension after restarting with above change"
+	elog "please file a bug report."
 }
