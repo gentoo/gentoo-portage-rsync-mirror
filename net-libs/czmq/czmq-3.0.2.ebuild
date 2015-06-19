@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-2.2.0-r2.ebuild,v 1.7 2015/06/19 07:14:06 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/czmq-3.0.2.ebuild,v 1.1 2015/06/19 07:14:06 jlec Exp $
 
 EAPI=5
 
@@ -14,14 +14,12 @@ SRC_URI="http://download.zeromq.org/${P}.tar.gz"
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 arm hppa x86"
-IUSE="doc static-libs"
+KEYWORDS="~amd64 ~arm ~hppa ~x86"
+IUSE="doc static-libs test"
 
 RDEPEND="
-	dev-libs/libsodium:=
 	sys-apps/util-linux
-	>=net-libs/zeromq-2.1
-	<net-libs/zeromq-4
+	net-libs/zeromq
 "
 DEPEND="${RDEPEND}
 	doc? (
@@ -31,9 +29,17 @@ DEPEND="${RDEPEND}
 
 DOCS=( NEWS AUTHORS )
 
+# Network access
+RESTRICT=test
+
 src_prepare() {
+	use test && AUTOTOOLS_IN_SOURCE_BUILD=1
 	sed -i -e 's|-Werror||g' configure.ac || die
 	autotools-utils_src_prepare
+}
+
+src_test() {
+	autotools-utils_src_test check-verbose VERBOSE=1
 }
 
 src_install() {

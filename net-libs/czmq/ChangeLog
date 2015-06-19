@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/czmq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.24 2015/04/07 14:30:20 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/czmq/ChangeLog,v 1.25 2015/06/19 07:14:06 jlec Exp $
+
+*czmq-3.0.2 (19 Jun 2015)
+
+  19 Jun 2015; Justin Lecher <jlec@gentoo.org> +czmq-3.0.2.ebuild,
+  czmq-2.2.0-r2.ebuild:
+  Version Bump; correct dependency version of zeromq, bug #552494
 
   02 Mar 2015; Justin Lecher <jlec@gentoo.org> -czmq-1.2.0-r1.ebuild,
   -czmq-1.2.0.ebuild:
