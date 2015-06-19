@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-12.8.2.ebuild,v 1.2 2015/05/16 11:03:25 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-11.18.0.ebuild,v 1.1 2015/06/19 11:14:05 chainsaw Exp $
 
 EAPI=5
 inherit autotools base eutils linux-info multilib user systemd
@@ -10,7 +10,7 @@ MY_P="${PN}-${PV/_/-}"
 DESCRIPTION="Asterisk: A Modular Open Source PBX System"
 HOMEPAGE="http://www.asterisk.org/"
 SRC_URI="http://downloads.asterisk.org/pub/telephony/asterisk/releases/${MY_P}.tar.gz
-	 mirror://gentoo/gentoo-asterisk-patchset-3.14.tar.bz2"
+	 mirror://gentoo/gentoo-asterisk-patchset-3.16.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
@@ -32,7 +32,6 @@ PATCHES=( "${WORKDIR}/asterisk-patchset" )
 
 CDEPEND="dev-db/sqlite:3
 	dev-libs/popt
-	dev-libs/jansson
 	dev-libs/libxml2
 	dev-libs/openssl:*
 	sys-libs/ncurses
@@ -276,7 +275,7 @@ src_install() {
 	# install logrotate snippet; bug #329281
 	#
 	insinto /etc/logrotate.d
-	newins "${FILESDIR}/1.6.2/asterisk.logrotate3" asterisk
+	newins "${FILESDIR}/1.6.2/asterisk.logrotate4" asterisk
 }
 
 pkg_postinst() {
@@ -295,8 +294,8 @@ pkg_postinst() {
 	elog "#gentoo-voip @ irc.freenode.net"
 	echo
 	echo
-	elog "Please read the Asterisk 12 upgrade document:"
-	elog "https://wiki.asterisk.org/wiki/display/AST/Upgrading+to+Asterisk+12"
+	elog "Please read the Asterisk 11 upgrade document:"
+	elog "https://wiki.asterisk.org/wiki/display/AST/Upgrading+to+Asterisk+11"
 }
 
 pkg_config() {
