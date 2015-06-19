@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/easytags-3.9.1.ebuild,v 1.1 2014/11/25 23:41:05 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/easytags/easytags-3.9.1.ebuild,v 1.2 2015/06/19 06:17:47 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -11,7 +11,7 @@ DESCRIPTION="vim plugin: automated tag file generation and syntax highlighting"
 HOMEPAGE="http://peterodding.com/code/vim/easytags/"
 SRC_URI="https://github.com/xolox/vim-${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}

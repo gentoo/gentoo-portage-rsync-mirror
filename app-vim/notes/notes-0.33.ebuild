@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.27.ebuild,v 1.1 2014/10/18 04:00:18 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.33.ebuild,v 1.1 2015/06/19 06:27:54 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
-	>=app-vim/vim-misc-1.16.1"
+	>=app-vim/vim-misc-1.17.6"
 
 VIM_PLUGIN_HELPFILES="${PN}.txt"
 

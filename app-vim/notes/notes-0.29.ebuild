@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.29.ebuild,v 1.1 2014/11/28 15:10:11 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/notes-0.29.ebuild,v 1.2 2015/06/19 06:28:22 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -12,7 +12,7 @@ DESCRIPTION="vim plugin: easy note taking in vim"
 HOMEPAGE="http://peterodding.com/code/vim/notes/"
 SRC_URI="https://github.com/xolox/vim-notes/archive/${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="MIT"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}

@@ -1,6 +1,19 @@
 # ChangeLog for app-vim/notes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/ChangeLog,v 1.23 2015/06/07 08:14:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/notes/ChangeLog,v 1.26 2015/06/19 06:28:52 radhermit Exp $
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> -notes-0.23.4.ebuild,
+  -notes-0.23.10.ebuild, -notes-0.23.11.ebuild, -notes-0.27.ebuild,
+  -notes-0.28.ebuild, -notes-0.28.1.ebuild:
+  Remove old.
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> notes-0.29.ebuild:
+  Stabilize for amd64/x86.
+
+*notes-0.33 (19 Jun 2015)
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> +notes-0.33.ebuild:
+  Version bump.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

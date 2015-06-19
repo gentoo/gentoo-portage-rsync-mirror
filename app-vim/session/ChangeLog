@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/session
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/session/ChangeLog,v 1.19 2015/06/07 08:16:46 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/session/ChangeLog,v 1.20 2015/06/19 06:24:44 radhermit Exp $
+
+*session-2.10.1 (19 Jun 2015)
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> +session-2.10.1.ebuild:
+  Version bump.
 
   07 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml
