@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-NoWarnings
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.51 2015/06/13 11:25:15 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-NoWarnings/ChangeLog,v 1.52 2015/06/19 08:21:42 dilfridge Exp $
+
+*Test-NoWarnings-1.40.0-r2 (19 Jun 2015)
+
+  19 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  +Test-NoWarnings-1.40.0-r2.ebuild, -Test-NoWarnings-1.40.0-r1.ebuild:
+  Identical revbump to force updating the VDB dependencies- maybe this helps
+  with resolving the Perl 5.22 version bump
 
   13 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
   Test-NoWarnings-1.40.0-r1.ebuild:

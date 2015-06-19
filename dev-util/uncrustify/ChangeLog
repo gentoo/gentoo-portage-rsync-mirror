@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/uncrustify
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.23 2015/04/19 07:42:27 grobian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/uncrustify/ChangeLog,v 1.24 2015/06/19 08:10:43 mrueg Exp $
+
+*uncrustify-0.61-r1 (19 Jun 2015)
+
+  19 Jun 2015; Manuel Rüger <mrueg@gentoo.org> +uncrustify-0.61-r1.ebuild,
+  -uncrustify-0.60.ebuild, uncrustify-9999.ebuild:
+  Migrate to python-any-r1.
 
 *uncrustify-0.61 (19 Apr 2015)
 
