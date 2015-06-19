@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1675 2015/06/18 15:19:04 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1676 2015/06/19 14:11:24 chewi Exp $
+
+  19 Jun 2015; James Le Cuirot <chewi@gentoo.org> java-utils-2.eclass:
+  Allow EANT_GENTOO_CLASSPATH_EXTRA to work when EANT_GENTOO_CLASSPATH is
+  unset.
 
   18 Jun 2015; William Hubbs <williamh@gentoo.org> golang-vcs.eclass:
   Add the EGO_SRC variable for repositories that contain multiple Go

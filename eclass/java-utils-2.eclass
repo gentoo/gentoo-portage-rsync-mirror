@@ -6,7 +6,7 @@
 #
 # Licensed under the GNU General Public License, v2
 #
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.163 2015/06/15 21:09:06 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-utils-2.eclass,v 1.164 2015/06/19 14:11:24 chewi Exp $
 
 # @ECLASS: java-utils-2.eclass
 # @MAINTAINER:
@@ -1934,17 +1934,15 @@ eant() {
 	local cp
 
 	for atom in ${gcp}; do
-		cp="${cp}:$(java-pkg_getjars ${getjarsarg} ${atom})"
+		cp+=":$(java-pkg_getjars ${getjarsarg} ${atom})"
 	done
 
-	[[ -n "${EANT_NEEDS_TOOLS}" ]] && cp="${cp}:$(java-config --tools)"
+	[[ ${EANT_NEEDS_TOOLS} ]] && cp+=":$(java-config --tools)"
+	[[ ${EANT_GENTOO_CLASSPATH_EXTRA} ]] && cp+=":${EANT_GENTOO_CLASSPATH_EXTRA}"
 
-	if [[ ${cp} ]]; then
+	if [[ ${cp#:} ]]; then
 		# It seems ant does not like single quotes around ${cp}
-		cp=${cp#:}
-		[[ ${EANT_GENTOO_CLASSPATH_EXTRA} ]] && \
-			cp="${cp}:${EANT_GENTOO_CLASSPATH_EXTRA}"
-		antflags="${antflags} -Dgentoo.classpath=\"${cp}\""
+		antflags="${antflags} -Dgentoo.classpath=\"${cp#:}\""
 	fi
 
 	[[ -n ${JAVA_PKG_DEBUG} ]] && echo ant ${antflags} "${@}"

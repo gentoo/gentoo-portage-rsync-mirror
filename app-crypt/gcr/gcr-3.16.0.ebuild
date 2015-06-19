@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.16.0.ebuild,v 1.1 2015/06/09 10:01:27 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gcr/gcr-3.16.0.ebuild,v 1.2 2015/06/19 14:01:48 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 VALA_USE_DEPEND="vapigen"
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 
 inherit gnome2 python-any-r1 vala virtualx
 
