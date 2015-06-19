@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.688 2015/06/18 08:35:03 np-hardass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/package.use.mask,v 1.689 2015/06/19 12:33:20 johu Exp $
 
 # This file requires >=portage-2.1.1
 # New entries go on top.
@@ -154,7 +154,7 @@ net-libs/ortp zrtp
 dev-libs/libattica qt5
 
 # Johannes Huber <johu@gentoo.org> (12 Sep 2014)
-# Masked until all dependencies are packaged.
+# Segmentation fault, needs further investigation.
 media-sound/tomahawk qt5
 
 # Michał Górny <mgorny@gentoo.org> (06 Sep 2014)

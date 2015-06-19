@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/puddletag
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.38 2015/01/30 11:18:03 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/ChangeLog,v 1.39 2015/06/19 12:51:25 billie Exp $
+
+  19 Jun 2015; Daniel Pielmeier <billie@gentoo.org> puddletag-1.0.5.ebuild,
+  +files/puddletag-1.0.5-pyqt4.11.4.patch:
+  Add patch to make puddletag work with dev-python/PyQt4-4.11.4. This fixes bug
+  #552248. Thanks to Fabio Coatti for the report.
 
   30 Jan 2015; Daniel Pielmeier <billie@gentoo.org> -puddletag-1.0.3.ebuild:
   Remove old.

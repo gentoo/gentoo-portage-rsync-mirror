@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.5.ebuild,v 1.1 2014/11/20 20:36:14 billie Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/puddletag/puddletag-1.0.5.ebuild,v 1.2 2015/06/19 12:51:25 billie Exp $
 
 EAPI=5
 
@@ -29,4 +29,6 @@ RDEPEND=">=dev-python/PyQt4-4.9.6-r2[${PYTHON_USEDEP},svg]
 	>=dev-python/sip-4.14.2-r1:0[${PYTHON_USEDEP}]
 	>=dev-python/lxml-3.0.1[${PYTHON_USEDEP}]"
 
-DOCS=( changelog HACKING NEWS README THANKS TODO)
+DOCS=(changelog HACKING NEWS README THANKS TODO)
+
+PATCHES=("${FILESDIR}/${P}-pyqt4.11.4.patch")

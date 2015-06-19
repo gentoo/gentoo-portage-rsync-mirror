@@ -1,6 +1,9 @@
 # ChangeLog for Gentoo base-profile
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.812 2015/06/18 08:35:03 np-hardass Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/ChangeLog,v 1.813 2015/06/19 12:33:20 johu Exp $
+
+  19 Jun 2015; Johannes Huber <johu@gentoo.org> package.use.mask:
+  Update media-sound/tomahawk[qt5] mask
 
   18 Jun 2015; NP-Hardass <NP-Hardass@gentoo.org> package.use.mask:
   Unmask system-wine use flag for >=net-misc/teamviewer-10
