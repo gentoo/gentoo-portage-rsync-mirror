@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/calendar
-# Copyright 1999-2012 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.39 2012/09/02 05:03:48 radhermit Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/calendar/ChangeLog,v 1.40 2015/06/19 06:36:25 radhermit Exp $
+
+*calendar-2.9 (19 Jun 2015)
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> +calendar-2.9.ebuild:
+  Version bump.
 
   02 Sep 2012; Tim Harder <radhermit@gentoo.org> -calendar-2.2.ebuild:
   Remove old.

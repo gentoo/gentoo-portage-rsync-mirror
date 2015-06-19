@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/json
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/json/ChangeLog,v 1.3 2015/06/06 09:28:09 jlec Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/json/ChangeLog,v 1.4 2015/06/19 06:48:36 radhermit Exp $
+
+*json-20150511 (19 Jun 2015)
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> +json-20150511.ebuild:
+  Version bump.
 
   06 Jun 2015; Justin Lecher <jlec@gentoo.org> metadata.xml:
   Add github to remote-id in metadata.xml

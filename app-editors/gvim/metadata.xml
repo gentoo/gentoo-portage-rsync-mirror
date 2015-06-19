@@ -7,4 +7,7 @@
     <flag name="netbeans">Include netbeans external editor integration support</flag>
     <flag name="racket">Enable support for Scheme using <pkg>dev-lang/racket</pkg></flag>
   </use>
+  <upstream>
+    <remote-id type="github">vim/vim</remote-id>
+  </upstream>
 </pkgmetadata>
