@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.274 2015/06/17 19:14:08 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.275 2015/06/19 05:26:36 jer Exp $
+
+  19 Jun 2015; Jeroen Roovers <jer@gentoo.org> dnsmasq-2.72-r2.ebuild:
+  Stable for HPPA (bug #547966).
 
   17 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> dnsmasq-2.72-r2.ebuild:
   arm stable wrt bug #547966
