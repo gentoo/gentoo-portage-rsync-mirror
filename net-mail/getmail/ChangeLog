@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/getmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.240 2015/04/08 18:18:33 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.241 2015/06/19 06:00:54 radhermit Exp $
+
+*getmail-4.48.0 (19 Jun 2015)
+
+  19 Jun 2015; Tim Harder <radhermit@gentoo.org> +getmail-4.48.0.ebuild:
+  Version bump.
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> getmail-4.46.0.ebuild:
   Drop old Python implementations

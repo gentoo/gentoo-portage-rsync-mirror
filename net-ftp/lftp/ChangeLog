@@ -1,6 +1,12 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.523 2015/05/25 05:29:54 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.524 2015/06/19 05:42:48 jer Exp $
+
+*lftp-4.6.3a (19 Jun 2015)
+
+  19 Jun 2015; Jeroen Roovers <jer@gentoo.org> +lftp-4.6.3a.ebuild,
+  +files/lftp-4.6.3a-autopoint.patch:
+  Version bump.
 
   25 May 2015; Jeroen Roovers <jer@gentoo.org> -lftp-4.6.0.ebuild,
   -files/lftp-4.6.0-gnutls-2-compat.patch, -files/lftp-4.6.0-no-ssl.patch:
