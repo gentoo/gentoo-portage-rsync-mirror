@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/Test-Tester-0.114.0.ebuild,v 1.2 2015/06/20 20:13:23 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-use-ok/Test-use-ok-0.160.0.ebuild,v 1.1 2015/06/20 20:12:38 dilfridge Exp $
 
 EAPI=5
 
-DESCRIPTION="Ease testing test modules built with Test::Builder"
+DESCRIPTION="Alternative to Test::More::use_ok"
 
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~ppc-aix ~x86-fbsd ~amd64-linux ~x86-linux ~ppc-macos ~x86-macos"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 HOMEPAGE="http://www.gentoo.org/"
 LICENSE="GPL-2"

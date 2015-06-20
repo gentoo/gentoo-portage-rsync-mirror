@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.12.1-r2.ebuild,v 1.1 2015/06/20 19:53:25 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4ui/libxfce4ui-4.12.1-r2.ebuild,v 1.2 2015/06/20 20:02:05 mgorny Exp $
 
 EAPI=5
 inherit xfconf
@@ -38,7 +38,6 @@ pkg_setup() {
 		# requires deprecated glade:3 (gladeui-1.0), bug #551296
 		--disable-gladeui
 		--with-vendor-info=Gentoo
-		--with-html-dir="${EPREFIX}"/usr/share/doc/${PF}/html
 		)
 
 	[[ ${CHOST} == *-darwin* ]] && XFCONF+=( --disable-visibility ) #366857

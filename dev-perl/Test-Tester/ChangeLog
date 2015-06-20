@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Tester
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.62 2015/06/20 19:55:11 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Tester/ChangeLog,v 1.63 2015/06/20 20:13:23 dilfridge Exp $
+
+  20 Jun 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  Test-Tester-0.114.0.ebuild:
+  Loosen version dependency
 
 *Test-Tester-0.114.0 (20 Jun 2015)
 
