@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.0.0.ebuild,v 1.5 2015/05/20 04:03:28 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-3.2.0.ebuild,v 1.1 2015/06/22 09:45:52 jlec Exp $
 
 EAPI=5
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
+KEYWORDS="~amd64 ~arm ~ppc64 ~x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-macos"
 IUSE="doc examples matplotlib mongodb notebook nbconvert octave qt4 +smp test wxwidgets"
 
 REQUIRED_USE="test? ( doc matplotlib mongodb notebook nbconvert octave qt4 wxwidgets )"
@@ -39,7 +39,7 @@ RDEPEND="${CDEPEND}
 		dev-python/jsonschema[${PYTHON_USEDEP}]
 		>=dev-python/mistune-0.5[${PYTHON_USEDEP}]
 		dev-python/pygments[${PYTHON_USEDEP}]
-		>=dev-python/pyzmq-2.1.11[${PYTHON_USEDEP}]
+		>=dev-python/pyzmq-13[${PYTHON_USEDEP}]
 		>=dev-python/terminado-0.3.3[${PYTHON_USEDEP}]
 		>=www-servers/tornado-3.1[${PYTHON_USEDEP}]
 	)
@@ -53,8 +53,9 @@ RDEPEND="${CDEPEND}
 	)
 	qt4? (
 		|| (
-			dev-python/PyQt4[${PYTHON_USEDEP}]
-			dev-python/pyside[${PYTHON_USEDEP}]
+			dev-python/PyQt4[${PYTHON_USEDEP},svg]
+			dev-python/PyQt5[${PYTHON_USEDEP},svg]
+			dev-python/pyside[${PYTHON_USEDEP},svg]
 		)
 		dev-python/pygments[${PYTHON_USEDEP}]
 		>=dev-python/pyzmq-13[${PYTHON_USEDEP}] )"
@@ -123,8 +124,7 @@ python_test() {
 
 python_install() {
 	distutils-r1_python_install
-	ln -snf "${EPREFIX}"/usr/share/mathjax \
-		"${D}$(python_get_sitedir)"/IPython/html/static/mathjax || die
+	use notebook && dosym /usr/share/mathjax $(python_get_sitedir)/IPython/html/static/mathjax
 
 	# Create ipythonX.Y symlinks.
 	# TODO:
