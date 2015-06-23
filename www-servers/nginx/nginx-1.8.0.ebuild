@@ -120,12 +120,6 @@ HTTP_STICKY_MODULE_P="nginx_http_sticky_module_ng-${HTTP_STICKY_MODULE_PV}"
 HTTP_STICKY_MODULE_URI="https://bitbucket.org/nginx-goodies/nginx-sticky-module-ng/get/${HTTP_STICKY_MODULE_PV}.tar.bz2"
 HTTP_STICKY_MODULE_WD="${WORKDIR}/nginx-goodies-nginx-sticky-module-ng-bd312d586752"
 
-# ajp-module (https://github.com/yaoweibin/nginx_ajp_module, BSD-2)
-HTTP_AJP_MODULE_PV="0.3.0"
-HTTP_AJP_MODULE_P="ngx_http_ajp_module-${HTTP_AJP_MODULE_PV}"
-HTTP_AJP_MODULE_URI="https://github.com/yaoweibin/nginx_ajp_module/archive/v${HTTP_AJP_MODULE_PV}.tar.gz"
-HTTP_AJP_MODULE_WD="${WORKDIR}/nginx_ajp_module-${HTTP_AJP_MODULE_PV}"
-
 # mogilefs-module (http://www.grid.net.ru/nginx/mogilefs.en.html, BSD-2)
 HTTP_MOGILEFS_MODULE_PV="1.0.4"
 HTTP_MOGILEFS_MODULE_P="ngx_mogilefs_module-${HTTP_MOGILEFS_MODULE_PV}"
@@ -154,7 +148,6 @@ SRC_URI="http://nginx.org/download/${P}.tar.gz
 	nginx_modules_http_security? ( ${HTTP_SECURITY_MODULE_URI} -> ${HTTP_SECURITY_MODULE_P}.tar.gz )
 	nginx_modules_http_push_stream? ( ${HTTP_PUSH_STREAM_MODULE_URI} -> ${HTTP_PUSH_STREAM_MODULE_P}.tar.gz )
 	nginx_modules_http_sticky? ( ${HTTP_STICKY_MODULE_URI} -> ${HTTP_STICKY_MODULE_P}.tar.bz2 )
-	nginx_modules_http_ajp? ( ${HTTP_AJP_MODULE_URI} -> ${HTTP_AJP_MODULE_P}.tar.gz )
 	nginx_modules_http_mogilefs? ( ${HTTP_MOGILEFS_MODULE_URI} -> ${HTTP_MOGILEFS_MODULE_P}.tar.gz )"
 
 LICENSE="BSD-2 BSD SSLeay MIT GPL-2 GPL-2+
@@ -269,6 +262,13 @@ pkg_setup() {
 	if use !http; then
 		ewarn "To actually disable all http-functionality you also have to disable"
 		ewarn "all nginx http modules."
+	fi
+
+	if use nginx_modules_http_ajp; then
+		eerror "The AJP module currently doesn't build for nginx >1.8."
+		eerror "It will be reintroduced with the 1.9 series when proven stable."
+		eerror "Either disable it or stick with nginx 1.7.x."
+		die "AJP module not supported"
 	fi
 }
 
@@ -433,11 +433,6 @@ src_configure() {
 	if use nginx_modules_http_sticky ; then
 		http_enabled=1
 		myconf+=" --add-module=${HTTP_STICKY_MODULE_WD}"
-	fi
-
-	if use nginx_modules_http_ajp ; then
-		http_enabled=1
-		myconf+=" --add-module=${HTTP_AJP_MODULE_WD}"
 	fi
 
 	if use nginx_modules_http_mogilefs ; then
@@ -625,11 +620,6 @@ src_install() {
 	if use nginx_modules_http_sticky; then
 		docinto ${HTTP_STICKY_MODULE_P}
 		dodoc "${HTTP_STICKY_MODULE_WD}"/{README.md,Changelog.txt,docs/sticky.pdf}
-	fi
-
-	if use nginx_modules_http_ajp; then
-		docinto ${HTTP_AJP_MODULE_P}
-		dodoc "${HTTP_AJP_MODULE_WD}"/README
 	fi
 }
 
