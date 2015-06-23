@@ -281,10 +281,6 @@ src_prepare() {
 
 	if use nginx_modules_http_lua; then
 		sed -i -e 's/-llua5.1/-llua/' "${HTTP_LUA_MODULE_WD}/config"
-		# fix for nginx 1.7.5
-		cd "${HTTP_LUA_MODULE_WD}"
-		epatch "${FILESDIR}/lua-${P}.patch"
-		cd "${S}"
 	fi
 
 	find auto/ -type f -print0 | xargs -0 sed -i 's:\&\& make:\&\& \\$(MAKE):' || die
