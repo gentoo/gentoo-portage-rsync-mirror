@@ -588,12 +588,6 @@ src_install() {
 		dodoc "${HTTP_UPSTREAM_CHECK_MODULE_WD}"/{README,CHANGES}
 	fi
 
-# README.md is still empty
-#	if use nginx_modules_http_metrics; then
-#		docinto ${HTTP_METRICS_MODULE_P}
-#		dodoc "${HTTP_METRICS_MODULE_WD}"/README.md
-#	fi
-
 	if use nginx_modules_http_naxsi; then
 		insinto /etc/nginx
 		doins "${HTTP_NAXSI_MODULE_WD}"/../naxsi_config/naxsi_core.rules
