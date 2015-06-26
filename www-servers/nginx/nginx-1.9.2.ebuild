@@ -319,7 +319,7 @@ src_configure() {
 
 	local myconf= http_enabled= mail_enabled=
 
-	use aio       && myconf+=" --with-file-aio --with-aio_module"
+	use aio       && myconf+=" --with-file-aio"
 	use debug     && myconf+=" --with-debug"
 	use ipv6      && myconf+=" --with-ipv6"
 	use libatomic && myconf+=" --with-libatomic"
