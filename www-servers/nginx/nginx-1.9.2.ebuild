@@ -276,7 +276,7 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-1.4.1-fix-perl-install-path.patch"
 
 	if use nginx_modules_http_upstream_check; then
-		epatch "${FILESDIR}"/check_1.7.2+.patch
+		epatch "${FILESDIR}/check-${PV}".patch
 	fi
 
 	if use nginx_modules_http_lua; then
