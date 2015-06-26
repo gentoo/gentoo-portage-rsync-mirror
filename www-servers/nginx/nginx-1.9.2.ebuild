@@ -279,6 +279,8 @@ pkg_setup() {
 }
 
 src_prepare() {
+	epatch_user
+
 	epatch "${FILESDIR}/${PN}-1.4.1-fix-perl-install-path.patch"
 
 	if use nginx_modules_http_upstream_check; then
@@ -302,8 +304,6 @@ src_prepare() {
 			sed -i -e "/${module}/d" auto/install || die
 		fi
 	done
-
-	epatch_user
 }
 
 src_configure() {
