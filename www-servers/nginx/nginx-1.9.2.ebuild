@@ -323,60 +323,60 @@ src_configure() {
 
 	cd "${S}"
 
-	local myconf= http_enabled= mail_enabled=
+	local myconf=() http_enabled= mail_enabled=
 
-	use aio       && myconf+=" --with-file-aio"
-	use debug     && myconf+=" --with-debug"
-	use ipv6      && myconf+=" --with-ipv6"
-	use libatomic && myconf+=" --with-libatomic"
-	use pcre      && myconf+=" --with-pcre"
-	use pcre-jit  && myconf+=" --with-pcre-jit"
-	use threads   && myconf+=" --with-threads"
+	use aio       && myconf+=( --with-file-aio )
+	use debug     && myconf+=( --with-debug )
+	use ipv6      && myconf+=( --with-ipv6 )
+	use libatomic && myconf+=( --with-libatomic )
+	use pcre      && myconf+=( --with-pcre )
+	use pcre-jit  && myconf+=( --with-pcre-jit )
+	use threads   && myconf+=( --with-threads )
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
 		if use nginx_modules_http_${mod}; then
 			http_enabled=1
 		else
-			myconf+=" --without-http_${mod}_module"
+			myconf+=( --without-http_${mod}_module )
 		fi
 	done
 
 	for mod in $NGINX_MODULES_OPT; do
 		if use nginx_modules_http_${mod}; then
 			http_enabled=1
-			myconf+=" --with-http_${mod}_module"
+			myconf+=( --with-http_${mod}_module )
 		fi
 	done
 
 	if use nginx_modules_http_fastcgi; then
-		myconf+=" --with-http_realip_module"
+		myconf+=( --with-http_realip_module )
 	fi
 
 	# third-party modules
 	if use nginx_modules_http_upload_progress; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_UPLOAD_PROGRESS_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_UPLOAD_PROGRESS_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_headers_more; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_HEADERS_MORE_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_HEADERS_MORE_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_cache_purge; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_CACHE_PURGE_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_CACHE_PURGE_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_slowfs_cache; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_SLOWFS_CACHE_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_SLOWFS_CACHE_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_fancyindex; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_FANCYINDEX_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_FANCYINDEX_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_lua; then
@@ -388,63 +388,63 @@ src_configure() {
 			export LUA_LIB=$(pkg-config --variable libdir lua)
 			export LUA_INC=$(pkg-config --variable includedir lua)
 		fi
-		myconf+=" --add-module=${DEVEL_KIT_MODULE_WD}"
-		myconf+=" --add-module=${HTTP_LUA_MODULE_WD}"
+		myconf+=( --add-module=${DEVEL_KIT_MODULE_WD} )
+		myconf+=( --add-module=${HTTP_LUA_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_auth_pam; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_AUTH_PAM_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_AUTH_PAM_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_upstream_check; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_UPSTREAM_CHECK_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_UPSTREAM_CHECK_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_metrics; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_METRICS_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_METRICS_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_naxsi ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_NAXSI_MODULE_WD}"
+		myconf+=(  --add-module=${HTTP_NAXSI_MODULE_WD} )
 	fi
 
 	if use rtmp ; then
 		http_enabled=1
-		myconf+=" --add-module=${RTMP_MODULE_WD}"
+		myconf+=( --add-module=${RTMP_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_dav_ext ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_DAV_EXT_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_DAV_EXT_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_echo ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_ECHO_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_ECHO_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_security ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_SECURITY_MODULE_WD}/nginx/modsecurity"
+		myconf+=( --add-module=${HTTP_SECURITY_MODULE_WD}/nginx/modsecurity )
 	fi
 
 	if use nginx_modules_http_push_stream ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_PUSH_STREAM_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_PUSH_STREAM_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_sticky ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_STICKY_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_STICKY_MODULE_WD} )
 	fi
 
 	if use nginx_modules_http_mogilefs ; then
 		http_enabled=1
-		myconf+=" --add-module=${HTTP_MOGILEFS_MODULE_WD}"
+		myconf+=( --add-module=${HTTP_MOGILEFS_MODULE_WD} )
 	fi
 
 	if use http || use http-cache; then
@@ -452,10 +452,10 @@ src_configure() {
 	fi
 
 	if [ $http_enabled ]; then
-		use http-cache || myconf+=" --without-http-cache"
-		use ssl && myconf+=" --with-http_ssl_module"
+		use http-cache || myconf+=( --without-http-cache )
+		use ssl && myconf+=( --with-http_ssl_module )
 	else
-		myconf+=" --without-http --without-http-cache"
+		myconf+=( --without-http --without-http-cache )
 	fi
 
 	# MAIL modules
@@ -463,18 +463,18 @@ src_configure() {
 		if use nginx_modules_mail_${mod}; then
 			mail_enabled=1
 		else
-			myconf+=" --without-mail_${mod}_module"
+			myconf+=( --without-mail_${mod}_module )
 		fi
 	done
 
 	if [ $mail_enabled ]; then
-		myconf+=" --with-mail"
-		use ssl && myconf+=" --with-mail_ssl_module"
+		myconf+=( --with-mail )
+		use ssl && myconf+=( --with-mail_ssl_module )
 	fi
 
 	# custom modules
 	for mod in $NGINX_ADD_MODULES; do
-		myconf+=" --add-module=${mod}"
+		myconf+=(  --add-module=${mod} )
 	done
 
 	# https://bugs.gentoo.org/286772
@@ -482,7 +482,7 @@ src_configure() {
 	tc-export CC
 
 	if ! use prefix; then
-		myconf+=" --user=${PN} --group=${PN}"
+		myconf+=( --user=${PN}" "--group=${PN} )
 	fi
 
 	./configure \
@@ -499,7 +499,7 @@ src_configure() {
 		--http-fastcgi-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/fastcgi \
 		--http-scgi-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/scgi \
 		--http-uwsgi-temp-path="${EPREFIX}${NGINX_HOME_TMP}"/uwsgi \
-		${myconf} || die "configure failed"
+		"${myconf[@]}" || die "configure failed"
 
 	# A purely cosmetic change that makes nginx -V more readable. This can be
 	# good if people outside the gentoo community would troubleshoot and
