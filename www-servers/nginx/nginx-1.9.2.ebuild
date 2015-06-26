@@ -183,7 +183,7 @@ NGINX_MODULES_3RD="
 	http_mogilefs"
 
 IUSE="aio debug +http +http-cache ipv6 libatomic luajit +pcre pcre-jit rtmp
-selinux ssl userland_GNU vim-syntax"
+selinux ssl threads userland_GNU vim-syntax"
 
 for mod in $NGINX_MODULES_STD; do
 	IUSE="${IUSE} +nginx_modules_http_${mod}"
@@ -270,6 +270,12 @@ pkg_setup() {
 		eerror "Either disable it or stick with nginx 1.7.x."
 		die "AJP module not supported"
 	fi
+
+	if use nginx_modules_http_mogilefs && use threads; then
+		eerror "mogilefs won't compile with threads support."
+		eerror "Please disable either flag and try again."
+		die "Can't compile mogilefs with threads support"
+	fi
 }
 
 src_prepare() {
@@ -325,6 +331,7 @@ src_configure() {
 	use libatomic && myconf+=" --with-libatomic"
 	use pcre      && myconf+=" --with-pcre"
 	use pcre-jit  && myconf+=" --with-pcre-jit"
+	use threads   && myconf+=" --with-threads"
 
 	# HTTP modules
 	for mod in $NGINX_MODULES_STD; do
