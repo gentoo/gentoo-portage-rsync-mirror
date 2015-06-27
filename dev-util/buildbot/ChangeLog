@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/buildbot
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.172 2015/06/27 12:38:34 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/buildbot/ChangeLog,v 1.173 2015/06/27 13:25:35 zlogene Exp $
+
+  27 Jun 2015; Mikle Kolyada <zlogene@gentoo.org> buildbot-0.8.12.ebuild:
+  x86 stable wrt bug #551980
 
   27 Jun 2015; Markus Meier <maekke@gentoo.org> buildbot-0.8.12.ebuild:
   arm stable, bug #551980
