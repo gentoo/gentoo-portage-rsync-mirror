@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/fop
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.74 2015/06/27 13:04:00 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.76 2015/06/27 17:53:42 ago Exp $
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> fop-2.0.ebuild:
+  Stable for x86, wrt bug #553370
+
+  27 Jun 2015; Agostino Sarubbo <ago@gentoo.org> fop-2.0.ebuild:
+  Stable for amd64, wrt bug #553370
 
   27 Jun 2015; Patrice Clement <monsieurp@gentoo.org> fop-2.0.ebuild:
   Make use of ${P} where we can in order to avoid clashing with other SLOTs. Fix
