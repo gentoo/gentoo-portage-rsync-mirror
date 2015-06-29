@@ -1,9 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-go/go-oauth2/go-oauth2-9999.ebuild,v 1.3 2015/06/29 15:59:38 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-go/go-oauth2/go-oauth2-9999.ebuild,v 1.4 2015/06/29 16:01:21 williamh Exp $
 
 EAPI=5
 EGO_PN=golang.org/x/oauth2
+EGO_SRC=golang.org/x/oauth2
 
 if [[ ${PV} = *9999* ]]; then
 	inherit golang-vcs
