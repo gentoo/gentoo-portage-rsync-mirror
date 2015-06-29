@@ -26,6 +26,7 @@ RDEPEND="icu? ( dev-libs/icu )
 		>=net-libs/http-parser-2.5
 		>=dev-libs/libuv-1.6.1
 		>=dev-libs/openssl-1.0.2c[-bindist]
+		sys-libs/zlib
 	)"
 DEPEND="${RDEPEND}
 	!!net-libs/nodejs"
