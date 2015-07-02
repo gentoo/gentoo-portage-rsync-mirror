@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-bind
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.89 2015/07/02 17:59:39 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-bind/ChangeLog,v 1.90 2015/07/02 18:06:59 perfinion Exp $
+
+  02 Jul 2015; Jason Zaman <perfinion@gentoo.org>
+  selinux-bind-2.20141203-r6.ebuild:
+  Stabilize policy 2.20141203-r6
 
 *selinux-bind-2.20141203-r7 (02 Jul 2015)
 

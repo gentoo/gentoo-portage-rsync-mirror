@@ -1,6 +1,10 @@
 # ChangeLog for sec-policy/selinux-munin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.73 2015/07/02 17:59:31 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-munin/ChangeLog,v 1.74 2015/07/02 18:06:52 perfinion Exp $
+
+  02 Jul 2015; Jason Zaman <perfinion@gentoo.org>
+  selinux-munin-2.20141203-r6.ebuild:
+  Stabilize policy 2.20141203-r6
 
 *selinux-munin-2.20141203-r7 (02 Jul 2015)
 
