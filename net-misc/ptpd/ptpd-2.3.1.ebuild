@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit autotools eutils flag-o-matic systemd
+inherit eutils flag-o-matic systemd
 
 DESCRIPTION="Precision Time Protocol daemon"
 HOMEPAGE="http://ptpd.sf.net"
@@ -16,15 +16,11 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="debug experimental ntp +pcap snmp slave-only +statistics"
 RDEPEND="
-	pcap? ( net-libs/libpcap )
-	snmp? ( net-analyzer/net-snmp )"
+	pcap? ( net-libs/libpcap:= )
+	snmp? ( net-analyzer/net-snmp:= )"
 DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}
 	ntp? ( net-misc/ntp )"
-
-src_prepare() {
-	eautoreconf
-}
 
 src_configure() {
 	append-flags -fno-strict-aliasing
