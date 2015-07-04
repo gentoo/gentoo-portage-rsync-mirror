@@ -1,14 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.4.6.ebuild,v 1.4 2015/06/20 02:32:11 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/cinnamon/cinnamon-2.6.9.ebuild,v 1.1 2015/07/04 19:15:09 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python2_7 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
 PYTHON_REQ_USE="xml"
 
-inherit autotools eutils flag-o-matic gnome2 multilib pax-utils python-single-r1
+inherit autotools eutils flag-o-matic gnome2 multilib pax-utils python-r1
 
 DESCRIPTION="A fork of GNOME Shell with layout similar to GNOME 2"
 HOMEPAGE="http://cinnamon.linuxmint.com/"
@@ -20,17 +20,24 @@ SRC_URI="https://github.com/linuxmint/Cinnamon/archive/${MY_PV}.tar.gz -> ${MY_P
 
 LICENSE="GPL-2+"
 SLOT="0"
-# bluetooth support dropped due bug #511648
-IUSE="+l10n +networkmanager" #+bluetooth
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-KEYWORDS="amd64 x86"
+# bluetooth support dropped due bug #511648
+IUSE="+nls +networkmanager" #+bluetooth
+
+# We need *both* python 2.7 and 3.x
+REQUIRED_USE="${PYTHON_REQUIRED_USE}
+	python_targets_python2_7
+	|| ( python_targets_python3_3 python_targets_python3_4 )
+	"
+
+KEYWORDS="~amd64 ~x86"
 
 COMMON_DEPEND="
+	app-accessibility/at-spi2-atk:2
 	app-misc/ca-certificates
 	dev-libs/dbus-glib
-	>=dev-libs/glib-2.29.10:2
-	>=dev-libs/gobject-introspection-0.10.1
+	>=dev-libs/glib-2.29.10:2[dbus]
+	>=dev-libs/gobject-introspection-0.10.1:=
 	>=dev-libs/json-glib-0.13.2
 	>=dev-libs/libcroco-0.6.2:0.6
 	dev-libs/libxml2:2
@@ -39,7 +46,7 @@ COMMON_DEPEND="
 	>=gnome-extra/cinnamon-desktop-2.4:0=[introspection]
 	gnome-extra/cinnamon-menus[introspection]
 	>=gnome-extra/cjs-2.4
-	>=media-libs/clutter-1.7.5:1.0[introspection]
+	>=media-libs/clutter-1.10:1.0[introspection]
 	media-libs/cogl:1.0=[introspection]
 	>=gnome-base/gsettings-desktop-schemas-2.91.91
 	media-libs/gstreamer:1.0
@@ -48,7 +55,7 @@ COMMON_DEPEND="
 	net-libs/libsoup:2.4[introspection]
 	>=sys-auth/polkit-0.100[introspection]
 	x11-libs/gdk-pixbuf:2[introspection]
-	>=x11-libs/gtk+-3.0.0:3[introspection]
+	>=x11-libs/gtk+-3.9.12:3[introspection]
 	x11-libs/pango[introspection]
 	>=x11-libs/startup-notification-0.11
 	x11-libs/libX11
@@ -90,15 +97,15 @@ RDEPEND="${COMMON_DEPEND}
 
 	x11-misc/xdg-utils
 
-	dev-python/dbus-python[${PYTHON_USEDEP}]
-	dev-python/gconf-python:2[${PYTHON_USEDEP}]
-	dev-python/lxml[${PYTHON_USEDEP}]
-	dev-python/pexpect[${PYTHON_USEDEP}]
-	dev-python/pycairo[${PYTHON_USEDEP}]
+	dev-python/dbus-python[python_targets_python2_7]
+	dev-python/gconf-python:2[python_targets_python2_7]
+	dev-python/lxml[python_targets_python2_7]
+	dev-python/pexpect[python_targets_python2_7]
+	dev-python/pycairo[python_targets_python2_7]
 	dev-python/pygobject:3[${PYTHON_USEDEP}]
-	dev-python/pyinotify[${PYTHON_USEDEP}]
-	dev-python/pypam[${PYTHON_USEDEP}]
-	virtual/python-imaging[${PYTHON_USEDEP}]
+	dev-python/pyinotify[python_targets_python2_7]
+	dev-python/pypam[python_targets_python2_7]
+	virtual/python-imaging[python_targets_python2_7]
 
 	x11-themes/gnome-themes-standard[gtk]
 	x11-themes/gnome-icon-theme-symbolic
@@ -109,16 +116,16 @@ RDEPEND="${COMMON_DEPEND}
 
 	gnome-extra/polkit-gnome
 
-	l10n? ( >=gnome-extra/cinnamon-translations-2.4 )
 	networkmanager? (
 		gnome-extra/nm-applet
 		net-misc/mobile-broadband-provider-info
 		sys-libs/timezone-data )
+	nls? ( >=gnome-extra/cinnamon-translations-2.4 )
 "
 #bluetooth? ( net-wireless/cinnamon-bluetooth )
 
 DEPEND="${COMMON_DEPEND}
-	dev-python/polib[${PYTHON_USEDEP}]
+	dev-python/polib[python_targets_python2_7]
 	>=sys-devel/gettext-0.17
 	virtual/pkgconfig
 	>=dev-util/intltool-0.40
@@ -131,7 +138,7 @@ DEPEND="${COMMON_DEPEND}
 S="${WORKDIR}/Cinnamon-${PV}"
 
 pkg_setup() {
-	python-single-r1_pkg_setup
+	python_setup
 }
 
 src_prepare() {
@@ -143,11 +150,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.2.6-automagic-gnome-bluetooth.patch
 
 	# Optional NetworkManager, bug #488684
-	epatch "${FILESDIR}"/${PN}-2.4.5-optional-networkmanager.patch
+	epatch "${FILESDIR}"/${PN}-2.6.7-optional-networkmanager.patch
 
 	# Use wheel group instead of sudo (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3576
-	epatch "${FILESDIR}"/${PN}-2.4.5-set-wheel.patch
+	epatch "${FILESDIR}"/${PN}-2.6.7-set-wheel.patch
 
 	# Fix GNOME 3.14 support (from Fedora/Arch)
 	# https://github.com/linuxmint/Cinnamon/issues/3577
@@ -179,7 +186,17 @@ src_prepare() {
 
 	epatch_user
 
-	python_fix_shebang .
+	# python 2-and-3 shebang fixing craziness
+	local p
+	python_setup 'python3*'
+	for p in $(grep -rl '#!.*python3'); do
+		python_fix_shebang "${p}"
+	done
+
+	python_setup 'python2*'
+	for p in $(grep -rl '#!.*python[^3]'); do
+		python_fix_shebang "${p}"
+	done
 
 	eautoreconf
 	gnome2_src_prepare
@@ -237,16 +254,5 @@ pkg_postinst() {
 		ewarn "Cinnamon has been reported to show graphical corruption under"
 		ewarn "x11-drivers/ati-drivers-11.*; you may want to switch to"
 		ewarn "open-source drivers."
-	fi
-
-	if has_version "media-libs/mesa[video_cards_radeon]" ||
-	   has_version "media-libs/mesa[video_cards_r300]" ||
-	   has_version "media-libs/mesa[video_cards_r600]"; then
-		elog "Cinnamon is unstable under classic-mode r300/r600 mesa drivers."
-		elog "Make sure that gallium architecture for r300 and r600 drivers is"
-		elog "selected using 'eselect mesa'."
-		if ! has_version "media-libs/mesa[gallium]"; then
-			ewarn "You will need to emerge media-libs/mesa with USE=gallium."
-		fi
 	fi
 }
