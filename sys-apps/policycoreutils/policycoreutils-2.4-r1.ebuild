@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-9999.ebuild,v 1.2 2015/07/04 12:43:43 perfinion Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-2.4-r1.ebuild,v 1.1 2015/07/04 12:43:43 perfinion Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -20,25 +20,12 @@ IUSE="audit pam dbus"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="https://github.com/SELinuxProject/selinux/wiki"
-
-if [[ ${PV} == 9999 ]] ; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/SELinuxProject/selinux.git"
-	SRC_URI="mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
-	S1="${WORKDIR}/${MY_P}/${PN}"
-	S2="${WORKDIR}/policycoreutils-extra"
-	S="${S1}"
-else
-	SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/${MY_RELEASEDATE}/${MY_P}.tar.gz
-		http://dev.gentoo.org/~perfinion/distfiles/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
-	KEYWORDS="~amd64 ~x86"
-	S1="${WORKDIR}/${MY_P}"
-	S2="${WORKDIR}/policycoreutils-extra"
-	S="${S1}"
-fi
+SRC_URI="https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/${MY_RELEASEDATE}/${MY_P}.tar.gz
+	http://dev.gentoo.org/~perfinion/distfiles/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=sys-libs/libselinux-${SELNX_VER}:=[python]
 	>=sys-libs/glibc-2.4
@@ -65,30 +52,18 @@ RDEPEND="${DEPEND}
 	app-misc/pax-utils
 	!<sys-apps/openrc-0.14"
 
-src_unpack() {
-	# Override default one because we need the SRC_URI ones even in case of 9999 ebuilds
-	if [[ ${PV} == 9999 ]] ; then
-		git-r3_src_unpack
-	fi
-	if [ -n ${A} ] ; then
-		S="${S2}"
-		unpack ${A};
-	fi
-}
+S1="${WORKDIR}/${MY_P}"
+S2="${WORKDIR}/policycoreutils-extra"
+S="${S1}"
 
 src_prepare() {
-	S="${S1}"
-	cd "${S}" || die "Failed to switch to ${S}"
-	if [[ ${PV} != 9999 ]] ; then
-		# If needed for live ebuilds please use /etc/portage/patches
-		epatch "${FILESDIR}/0010-remove-sesandbox-support.patch"
-		epatch "${FILESDIR}/0020-disable-autodetection-of-pam-and-audit.patch"
-		epatch "${FILESDIR}/0030-make-inotify-check-use-flag-triggered.patch"
-		epatch "${FILESDIR}/0040-reverse-access-check-in-run_init.patch"
-		epatch "${FILESDIR}/0070-remove-symlink-attempt-fails-with-gentoo-sandbox-approach.patch"
-		epatch "${FILESDIR}/0110-build-mcstrans-bug-472912.patch"
-		epatch "${FILESDIR}/0120-build-failure-for-mcscolor-for-CONTEXT__CONTAINS.patch"
-	fi
+	epatch "${FILESDIR}/0010-remove-sesandbox-support.patch"
+	epatch "${FILESDIR}/0020-disable-autodetection-of-pam-and-audit.patch"
+	epatch "${FILESDIR}/0030-make-inotify-check-use-flag-triggered.patch"
+	epatch "${FILESDIR}/0040-reverse-access-check-in-run_init.patch"
+	epatch "${FILESDIR}/0070-remove-symlink-attempt-fails-with-gentoo-sandbox-approach.patch"
+	epatch "${FILESDIR}/0110-build-mcstrans-bug-472912.patch"
+	epatch "${FILESDIR}/0120-build-failure-for-mcscolor-for-CONTEXT__CONTAINS.patch"
 
 	# rlpkg is more useful than fixfiles
 	sed -i -e '/^all/s/fixfiles//' "${S}/scripts/Makefile" \
