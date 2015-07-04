@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/oyranos/oyranos-0.9.5.ebuild,v 1.3 2015/05/27 20:31:04 tamiko Exp $
+# $Header: $
 
 EAPI=5
 
@@ -21,15 +21,13 @@ LICENSE="BSD"
 SLOT="0"
 IUSE="X cairo cups doc exif fltk qt4 raw test"
 
-RDEPEND="
+CDEPEND="
 	|| (
 		=app-admin/elektra-0.7*:0[${MULTILIB_USEDEP}]
 		>=app-admin/elektra-0.8.4:0[${MULTILIB_USEDEP}]
 	)
 	>=dev-libs/libxml2-2.9.1-r4[${MULTILIB_USEDEP}]
 	>=dev-libs/yajl-2.0.4-r1[${MULTILIB_USEDEP}]
-	media-libs/icc-profiles-basiccolor-printing2009
-	media-libs/icc-profiles-openicc
 	>=media-libs/lcms-2.5:2[${MULTILIB_USEDEP}]
 	>=media-libs/libpng-1.6.10:0[${MULTILIB_USEDEP}]
 	>=media-libs/libXcm-0.5.3[${MULTILIB_USEDEP}]
@@ -43,13 +41,16 @@ RDEPEND="
 		>=x11-libs/libXrandr-1.4.2[${MULTILIB_USEDEP}]
 		>=x11-libs/libXxf86vm-1.1.3[${MULTILIB_USEDEP}]
 		>=x11-libs/libXinerama-1.1.3[${MULTILIB_USEDEP}] )"
-DEPEND="${RDEPEND}
+DEPEND="${CDEPEND}
 	doc? (
 		app-doc/doxygen
 		media-gfx/graphviz
 	)"
+RDEPEND="${CDEPEND}
+	media-libs/icc-profiles-basiccolor-printing2009
+	media-libs/icc-profiles-openicc"
 
-DOCS="AUTHORS ChangeLog README"
+DOCS=( AUTHORS ChangeLog README )
 RESTRICT="test"
 
 MULTILIB_CHOST_TOOLS=(
