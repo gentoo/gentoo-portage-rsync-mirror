@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.14.2.ebuild,v 1.5 2015/03/15 13:29:45 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-3.16.2.ebuild,v 1.1 2015/07/04 14:27:57 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -22,45 +22,37 @@ REQUIRED_USE="
 	zeitgeist? ( introspection )
 "
 
-KEYWORDS="amd64 ~arm ~ia64 ~ppc ~ppc64 x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~arm ~ia64 ~ppc ~ppc64 ~x86 ~x86-fbsd"
 
-# TODO:
-# Cone (VLC) plugin needs someone with the right setup to test it
-#
 # FIXME:
-# Automagic tracker-0.9.0
 # Runtime dependency on gnome-session-2.91
 RDEPEND="
-	>=dev-libs/glib-2.35:2
-	>=x11-libs/gdk-pixbuf-2.23.0:2
-	>=x11-libs/gtk+-3.11.5:3[introspection?]
-	>=dev-libs/totem-pl-parser-3.10.1:0=[introspection?]
-	>=dev-libs/libpeas-1.1.0[gtk]
-	x11-libs/cairo
+	>=dev-libs/glib-2.35:2[dbus]
+	>=dev-libs/libpeas-1.1[gtk]
 	>=dev-libs/libxml2-2.6:2
+	>=dev-libs/totem-pl-parser-3.10.1:0=[introspection?]
 	>=media-libs/clutter-1.17.3:1.0[gtk]
-	>=media-libs/clutter-gst-1.5.5:2.0
+	>=media-libs/clutter-gst-2.99.2:3.0
 	>=media-libs/clutter-gtk-1.5.5:1.0
-	x11-libs/mx:1.0
+	>=x11-libs/cairo-1.14
+	>=x11-libs/gdk-pixbuf-2.23.0:2
+	>=x11-libs/gtk+-3.16:3[introspection?]
 
-	>=media-libs/grilo-0.2.11:0.2[playlist]
+	>=media-libs/grilo-0.2.12:0.2[playlist]
 	media-plugins/grilo-plugins:0.2
 	>=media-libs/gstreamer-1.3.1:1.0
 	>=media-libs/gst-plugins-base-1.4.2:1.0[X,introspection?,pango]
 	media-libs/gst-plugins-good:1.0
-	media-plugins/gst-plugins-taglib:1.0
 	media-plugins/gst-plugins-meta:1.0
+	media-plugins/gst-plugins-taglib:1.0
 
-	x11-libs/libICE
-	x11-libs/libSM
 	x11-libs/libX11
-	>=x11-libs/libXxf86vm-1.0.1
 
 	gnome-base/gnome-desktop:3
 	gnome-base/gsettings-desktop-schemas
 	x11-themes/gnome-icon-theme-symbolic
 
-	introspection? ( >=dev-libs/gobject-introspection-0.6.7 )
+	introspection? ( >=dev-libs/gobject-introspection-0.6.7:= )
 	lirc? ( app-misc/lirc )
 	nautilus? ( >=gnome-base/nautilus-2.91.3 )
 	python? (
@@ -74,15 +66,14 @@ RDEPEND="
 "
 DEPEND="${RDEPEND}
 	app-text/docbook-xml-dtd:4.5
-	app-text/scrollkeeper
 	app-text/yelp-tools
 	dev-libs/appstream-glib
 	>=dev-util/gtk-doc-am-1.14
-	>=dev-util/intltool-0.40
+	>=dev-util/intltool-0.50.1
 	sys-devel/gettext
+	virtual/pkgconfig
 	x11-proto/xextproto
 	x11-proto/xproto
-	virtual/pkgconfig
 
 	dev-libs/gobject-introspection-common
 	gnome-base/gnome-common
@@ -115,7 +106,7 @@ src_prepare() {
 src_configure() {
 	# Disabled: sample-python, sample-vala
 	local plugins="apple-trailers,autoload-subtitles,brasero-disc-recorder"
-	plugins+=",chapters,im-status,gromit,media-player-keys,ontop"
+	plugins+=",im-status,gromit,media-player-keys,ontop"
 	plugins+=",properties,recent,rotation,screensaver,screenshot"
 	plugins+=",skipto,vimeo"
 	use lirc && plugins+=",lirc"
@@ -124,6 +115,8 @@ src_configure() {
 	use zeitgeist && plugins+=",zeitgeist-dp"
 
 	# pylint is checked unconditionally, but is only used for make check
+	# appstream-util overriding necessary until upstream fixes their macro
+	# to respect configure switch
 	gnome2_src_configure \
 		--disable-run-in-source-tree \
 		--disable-static \
@@ -134,5 +127,6 @@ src_configure() {
 		$(use_enable python) \
 		PYLINT=$(type -P true) \
 		VALAC=$(type -P true) \
+		APPSTREAM_UTIL=$(type -P true) \
 		--with-plugins=${plugins}
 }
