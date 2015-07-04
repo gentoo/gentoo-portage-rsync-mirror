@@ -1,11 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.1.9.ebuild,v 1.4 2015/04/08 07:30:36 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt-glib/libvirt-glib-0.2.1.ebuild,v 1.1 2015/07/04 18:46:43 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
 GNOME2_LA_PUNT="yes"
-VALA_MIN_API_VERSION="0.14"
 PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2 python-single-r1 vala
@@ -16,7 +15,7 @@ SRC_URI="ftp://libvirt.org/libvirt/glib/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+introspection python +vala"
 REQUIRED_USE="
 	python? ( ${PYTHON_REQUIRED_USE} )
@@ -51,13 +50,4 @@ src_configure() {
 		$(use_enable introspection) \
 		$(use_enable vala) \
 		$(use_with python)
-}
-
-src_compile() {
-	# https://bugzilla.redhat.com/show_bug.cgi?id=1093631
-	if use vala; then
-		MAKEOPTS="${MAKEOPTS} -j1" gnome2_src_compile
-	else
-		gnome2_src_compile
-	fi
 }
