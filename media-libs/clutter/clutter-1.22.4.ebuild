@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.22.2.ebuild,v 1.1 2015/06/08 22:23:32 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clutter/clutter-1.22.4.ebuild,v 1.1 2015/07/04 13:45:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -41,7 +41,7 @@ RDEPEND="
 		x11-libs/libxkbcommon
 	)
 	gtk? ( >=x11-libs/gtk+-3.3.18:3[aqua?] )
-	introspection? ( >=dev-libs/gobject-introspection-1.39 )
+	introspection? ( >=dev-libs/gobject-introspection-1.39:= )
 	X? (
 		media-libs/fontconfig
 		>=x11-libs/libX11-1.3.1
@@ -62,8 +62,8 @@ DEPEND="${RDEPEND}
 		>=dev-util/gtk-doc-1.20
 		>=app-text/docbook-sgml-utils-0.6.14[jadetex]
 		dev-libs/libxslt )
-	test? ( x11-libs/gdk-pixbuf )"
-
+	test? ( x11-libs/gdk-pixbuf )
+"
 # Tests fail with both swrast and llvmpipe
 # They pass under r600g or i965, so the bug is in mesa
 #RESTRICT="test"
