@@ -26,6 +26,7 @@ RDEPEND="icu? ( dev-libs/icu )
 		>=net-libs/http-parser-2.5
 		>=dev-libs/libuv-1.6.1
 		>=dev-libs/openssl-1.0.2c[-bindist]
+		sys-libs/zlib
 	)"
 DEPEND="${RDEPEND}
 	!!net-libs/nodejs"
@@ -56,7 +57,7 @@ src_prepare() {
 
 	# proper libdir, hat tip @ryanpcmcquen https://github.com/iojs/io.js/issues/504
 	local LIBDIR=$(get_libdir)
-	sed -i -e "s|lib/|${LIBDIR}/|g" tools/install.py || die
+	sed -i -e "s|/lib/|/${LIBDIR}/|g" tools/install.py || die
 	sed -i -e "s/'lib'/'${LIBDIR}'/" lib/module.js || die
 	sed -i -e "s|\"lib\"|\"${LIBDIR}\"|" deps/npm/lib/npm.js || die
 
