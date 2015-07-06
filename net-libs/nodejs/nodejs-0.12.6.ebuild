@@ -59,6 +59,8 @@ src_prepare() {
 		sed -i -e "s|out/Release/|out/Debug/|g" tools/install.py || die
 		BUILDTYPE=Debug
 	fi
+
+	epatch_user
 }
 
 src_configure() {
