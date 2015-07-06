@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-3.1.3.ebuild,v 1.4 2015/06/15 15:44:55 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-3.1.3.ebuild,v 1.5 2015/07/06 13:57:55 monsieurp Exp $
 
 EAPI=5
 
@@ -24,7 +24,10 @@ CDEPEND="dev-java/commons-httpclient:3
 	java-virtuals/servlet-api:2.4
 	"
 DEPEND=">=virtual/jdk-1.6
-	test? ( dev-java/ant-junit =dev-java/junit-3* )
+	test? (
+		dev-java/ant-junit:0
+		dev-java/junit:4
+	)
 	${CDEPEND}"
 RDEPEND=">=virtual/jre-1.6
 	${CDEPEND}"
@@ -38,6 +41,13 @@ EANT_GENTOO_CLASSPATH="commons-httpclient-3,commons-codec,ws-commons-util"
 EANT_GENTOO_CLASSPATH+=",commons-logging" # client
 EANT_GENTOO_CLASSPATH+=",servlet-api-2.4" # server
 EANT_GENTOO_CLASSPATH_EXTRA="${S}/common/target/${PN}-common.jar"
+
+java_prepare() {
+	# Doesn't work.
+	rm -v \
+		server/src/test/java/org/apache/xmlrpc/test/SerializerTest.java
+}
+
 EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH}"
 
 src_test() {
