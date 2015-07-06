@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-3.1.3.ebuild,v 1.5 2015/07/06 13:57:55 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-3.1.3.ebuild,v 1.6 2015/07/06 14:02:04 monsieurp Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ java_prepare() {
 		server/src/test/java/org/apache/xmlrpc/test/SerializerTest.java
 }
 
-EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH}"
+EANT_TEST_GENTOO_CLASSPATH="${EANT_GENTOO_CLASSPATH},junit-4,ant-junit"
 
 src_test() {
 	java-pkg-2_src_test
