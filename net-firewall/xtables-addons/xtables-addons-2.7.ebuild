@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-2.7.ebuild,v 1.1 2015/07/06 12:03:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-2.7.ebuild,v 1.2 2015/07/06 12:38:13 blueness Exp $
 
 EAPI="5"
 
@@ -139,6 +139,17 @@ src_prepare() {
 			sed "s/\(build_${mod}=\).*/\1n/I" -i mconfig || die
 		fi
 	done
+
+	# Bug #553630.  echo fails to build on linux-4 kernels.
+	KV_max=4.0.0
+	if use xtables_addons_echo && kernel_is ge ${KV_max//./ }; then
+		eerror
+		eerror "XTABLES_ADDONS=echo fails to build on linux ${KV_max} or above."
+		eerror "Either XTABLES_ADDONS=echo or use an earlier version of the kernel."
+		eerror
+		die
+	fi
+
 	einfo "${MODULE_NAMES}" # for debugging
 
 	sed -e 's/depmod -a/true/' -i Makefile.in || die
