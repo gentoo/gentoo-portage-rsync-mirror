@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-2.6.ebuild,v 1.2 2015/07/06 12:38:13 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/xtables-addons/xtables-addons-2.6.ebuild,v 1.4 2015/07/06 13:14:40 blueness Exp $
 
 EAPI="5"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/xtables-addons/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
+KEYWORDS="amd64 x86"
 IUSE="modules"
 
 MODULES="quota2 psd pknock lscan length2 ipv4options ipp2p iface gradm geoip fuzzy condition tarpit sysrq logmark ipmark echo dnetmap dhcpmac delude chaos account"
@@ -119,9 +119,28 @@ XA_get_module_name() {
 	done
 }
 
+# Die on modules known to fial on certain kernel version.
+XA_known_failure() {
+	local module_name=$1
+	local KV_max=$2
+	
+	if use xtables_addons_${module_name} && kernel_is ge ${KV_max//./ }; then
+		eerror
+		eerror "XTABLES_ADDONS=${module_name} fails to build on linux ${KV_max} or above."
+		eerror "Either remove XTABLES_ADDONS=${module_name} or use an earlier version of the kernel."
+		eerror
+		die
+	fi
+}
+
 src_prepare() {
 	XA_qa_check
 	XA_has_something_to_build
+
+	# Bug #553630#c0.  tarpit fails on linux-4.1 and above.
+	# Bug #553630#c2.  echo fails on linux-4 and above.
+	XA_known_failure "tarpit" 4.1
+	XA_known_failure "echo" 4
 
 	local mod module_name
 	if use modules; then
@@ -139,17 +158,6 @@ src_prepare() {
 			sed "s/\(build_${mod}=\).*/\1n/I" -i mconfig || die
 		fi
 	done
-
-	# Bug #553630.  echo fails to build on linux-4 kernels.
-	KV_max=4.0.0
-	if use xtables_addons_echo && kernel_is ge ${KV_max//./ }; then
-		eerror
-		eerror "XTABLES_ADDONS=echo fails to build on linux ${KV_max} or above."
-		eerror "Either XTABLES_ADDONS=echo or use an earlier version of the kernel."
-		eerror
-		die
-	fi
-
 	einfo "${MODULE_NAMES}" # for debugging
 
 	sed -e 's/depmod -a/true/' -i Makefile.in || die
