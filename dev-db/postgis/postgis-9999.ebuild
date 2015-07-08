@@ -1,19 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-2.1.6.ebuild,v 1.2 2015/07/08 06:04:05 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-9999.ebuild,v 1.1 2015/07/08 06:28:11 patrick Exp $
 
 EAPI="5"
-POSTGRES_COMPAT=( 9.{0,1,2,3,4} )
+POSTGRES_COMPAT=( 9.{0,1,2,3,4,5} )
 
-inherit autotools eutils versionator
+inherit autotools eutils versionator subversion
 
 MY_PV=$(replace_version_separator 3 '')
 MY_P="${PN}-${MY_PV}"
 S="${WORKDIR}/${MY_P}"
 
+ESVN_REPO_URI="http://svn.osgeo.org/postgis/trunk/"
+
 DESCRIPTION="Geographic Objects for PostgreSQL"
 HOMEPAGE="http://postgis.net"
-SRC_URI="http://download.osgeo.org/postgis/source/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
@@ -21,6 +22,7 @@ IUSE="doc gtk static-libs test"
 
 RDEPEND="
 		|| (
+			dev-db/postgresql:9.5[server]
 			dev-db/postgresql:9.4[server]
 			dev-db/postgresql:9.3[server]
 			dev-db/postgresql:9.2[server]
@@ -49,7 +51,8 @@ DEPEND="${RDEPEND}
 		test? ( dev-util/cunit )
 "
 
-PGIS="$(get_version_component_range 1-2)"
+# TODO can be read from Version.config
+PGIS="2.2"
 
 REQUIRED_USE="test? ( doc )"
 
@@ -90,9 +93,9 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${PN}-2.1-ldflags.patch" \
-		"${FILESDIR}/${PN}-2.0-arflags.patch" \
-		"${FILESDIR}/${PN}-2.1.4-pkgconfig-json.patch"
+	epatch "${FILESDIR}/${PN}-2.1-ldflags.patch"
+#	epatch "${FILESDIR}/${PN}-2.0-arflags.patch"
+#	epatch "${FILESDIR}/${PN}-2.1.4-pkgconfig-json.patch"
 
 	local AT_M4DIR="macros"
 	eautoreconf
