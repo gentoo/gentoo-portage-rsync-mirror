@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-9999.ebuild,v 1.1 2015/07/08 06:28:11 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-9999.ebuild,v 1.2 2015/07/08 08:09:22 patrick Exp $
 
 EAPI="5"
 POSTGRES_COMPAT=( 9.{0,1,2,3,4,5} )
@@ -17,7 +17,7 @@ DESCRIPTION="Geographic Objects for PostgreSQL"
 HOMEPAGE="http://postgis.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS=""
 IUSE="doc gtk static-libs test"
 
 RDEPEND="
