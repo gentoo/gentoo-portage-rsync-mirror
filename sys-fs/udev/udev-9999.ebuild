@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.328 2015/06/10 02:37:44 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-9999.ebuild,v 1.330 2015/07/09 04:10:18 williamh Exp $
 
 EAPI=5
 
@@ -8,11 +8,10 @@ inherit autotools bash-completion-r1 eutils linux-info multilib multilib-minimal
 
 if [[ ${PV} = 9999* ]]; then
 	EGIT_REPO_URI="git://anongit.freedesktop.org/systemd/systemd"
-	inherit git-2
-	patchset=
+	inherit git-r3
 else
 	patchset=
-	SRC_URI="http://www.freedesktop.org/software/systemd/systemd-${PV}.tar.xz"
+	SRC_URI="https://github.com/systemd/systemd/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	if [[ -n "${patchset}" ]]; then
 				SRC_URI="${SRC_URI}
 					http://dev.gentoo.org/~ssuominen/${P}-patches-${patchset}.tar.xz
@@ -30,7 +29,7 @@ IUSE="acl doc +kmod selinux static-libs"
 
 RESTRICT="test"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.20
+COMMON_DEPEND=">=sys-apps/util-linux-2.24
 	acl? ( sys-apps/acl )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
@@ -49,15 +48,11 @@ DEPEND="${COMMON_DEPEND}
 	virtual/os-headers
 	virtual/pkgconfig
 	>=sys-devel/make-3.82-r4
-	>=sys-kernel/linux-headers-3.9"
-# Try with `emerge -C docbook-xml-dtd` to see the build failure without DTDs
-if [[ ${PV} = 9999* ]]; then
-	DEPEND="${DEPEND}
-		app-text/docbook-xml-dtd:4.2
-		app-text/docbook-xml-dtd:4.5
-		app-text/docbook-xsl-stylesheets
-		dev-libs/libxslt"
-fi
+	>=sys-kernel/linux-headers-3.9
+	app-text/docbook-xml-dtd:4.2
+	app-text/docbook-xml-dtd:4.5
+	app-text/docbook-xsl-stylesheets
+	dev-libs/libxslt"
 RDEPEND="${COMMON_DEPEND}
 	!<sys-fs/lvm2-2.02.103
 	!<sec-policy/selinux-base-2.20120725-r10"
@@ -128,14 +123,16 @@ src_prepare() {
 	# change rules back to group uucp instead of dialout for now wrt #454556
 	sed -i -e 's/GROUP="dialout"/GROUP="uucp"/' rules/*.rules || die
 
+	# stub out the am_path_libcrypt function
+	echo 'AC_DEFUN([AM_PATH_LIBGCRYPT],[:])' > m4/gcrypt.m4
+
 	# apply user patches
 	epatch_user
 
-	if [[ ! -e configure ]]; then
-		eautoreconf
-	else
+	eautoreconf
+
+	if ! [[ ${PV} = 9999* ]]; then
 		check_default_rules
-		elibtoolize
 	fi
 
 	# Restore possibility of running --enable-static wrt #472608

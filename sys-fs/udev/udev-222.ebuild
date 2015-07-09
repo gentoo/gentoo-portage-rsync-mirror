@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-222.ebuild,v 1.1 2015/07/09 03:53:58 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-222.ebuild,v 1.2 2015/07/09 04:10:18 williamh Exp $
 
 EAPI=5
 
@@ -29,7 +29,7 @@ IUSE="acl doc +kmod selinux static-libs"
 
 RESTRICT="test"
 
-COMMON_DEPEND=">=sys-apps/util-linux-2.20
+COMMON_DEPEND=">=sys-apps/util-linux-2.24
 	acl? ( sys-apps/acl )
 	kmod? ( >=sys-apps/kmod-16 )
 	selinux? ( >=sys-libs/libselinux-2.1.9 )
