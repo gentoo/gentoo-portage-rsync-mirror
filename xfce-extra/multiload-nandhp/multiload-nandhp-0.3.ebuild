@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="amd64 x86"
 IUSE=""
 
-RDEPEND=">=x11-libs/gtk+-2.14:2
+RDEPEND=">=x11-libs/gtk+-2.14:2=
 	x11-libs/cairo:=
 	>=gnome-base/libgtop-2.11.92:=
 	>=xfce-base/libxfce4ui-4.10:=
@@ -37,7 +37,7 @@ src_prepare() {
 }
 
 src_configure() {
-	econf xfce4
+	econf --with-xfce4
 }
 
 src_install() {
