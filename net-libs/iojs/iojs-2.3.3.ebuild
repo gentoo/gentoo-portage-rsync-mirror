@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iojs/iojs-2.3.3.ebuild,v 1.1 2015/07/06 02:37:51 patrick Exp $
+# $Header: $
 
 EAPI=5
 
@@ -18,15 +18,13 @@ SRC_URI="http://iojs.org/dist/${MY_PV}/${MY_P}.tar.xz"
 LICENSE="Apache-1.1 Apache-2.0 BSD BSD-2 MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~x86 ~x64-macos"
-IUSE="bundled-libs debug icu +npm snapshot +ssl"
+IUSE="debug icu +npm snapshot +ssl"
 
 RDEPEND="icu? ( dev-libs/icu )
 	${PYTHON_DEPS}
-	!bundled-libs? (
-		>=net-libs/http-parser-2.5
-		>=dev-libs/libuv-1.6.1
-		>=dev-libs/openssl-1.0.2c[-bindist]
-	)"
+	>=net-libs/http-parser-2.5:=
+	>=dev-libs/libuv-1.6.1:=
+	>=dev-libs/openssl-1.0.2c:=[-bindist]"
 DEPEND="${RDEPEND}
 	!!net-libs/nodejs"
 S="${WORKDIR}/${MY_P}"
@@ -77,9 +75,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local myconf=()
 	local myarch=""
-	use bundled-libs || myconf+=( --shared-openssl --shared-libuv --shared-http-parser --shared-zlib )
+	local myconf=( --shared-openssl --shared-libuv --shared-http-parser --shared-zlib )
 	use npm || myconf+=( --without-npm )
 	use icu && myconf+=( --with-intl=system-icu )
 	use snapshot && myconf+=( --with-snapshot )
