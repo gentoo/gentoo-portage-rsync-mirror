@@ -1,38 +1,26 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ptpd/ptpd-2.3.1_rc4.ebuild,v 1.1 2015/06/12 10:55:53 mgorny Exp $
+# $Header: $
 
 EAPI=5
 
-inherit autotools eutils flag-o-matic systemd
+inherit eutils flag-o-matic systemd
 
 DESCRIPTION="Precision Time Protocol daemon"
 HOMEPAGE="http://ptpd.sf.net"
 
-MY_PV=${PV/_rc*/}
-MY_P=${P/_rc/-rc}
-
-SRC_URI="mirror://sourceforge/ptpd/${MY_PV}/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/ptpd/${PV}/${P}.tar.gz"
 KEYWORDS="~amd64 ~arm ~x86"
 
 LICENSE="BSD"
 SLOT="0"
 IUSE="debug experimental ntp +pcap snmp slave-only +statistics"
 RDEPEND="
-	pcap? ( net-libs/libpcap )
-	snmp? ( net-analyzer/net-snmp )"
+	pcap? ( net-libs/libpcap:= )
+	snmp? ( net-analyzer/net-snmp:= )"
 DEPEND="${RDEPEND}"
 RDEPEND="${RDEPEND}
 	ntp? ( net-misc/ntp )"
-
-S="${WORKDIR}/${MY_P}"
-
-src_prepare() {
-	# QA
-	epatch "${FILESDIR}/${P}-debug-display.patch"
-
-	eautoreconf
-}
 
 src_configure() {
 	append-flags -fno-strict-aliasing
