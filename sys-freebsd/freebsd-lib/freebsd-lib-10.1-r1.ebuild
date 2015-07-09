@@ -10,7 +10,9 @@ DESCRIPTION="FreeBSD's base system libraries"
 SLOT="0"
 
 # Security Advisory and Errata patches.
-UPSTREAM_PATCHES=( "SA-14:27/stdio.patch" )
+UPSTREAM_PATCHES=( "SA-14:27/stdio.patch"
+	"EN-15:09/xlocale.patch"
+	"EN-15:10/iconv.patch" )
 
 # Crypto is needed to have an internal OpenSSL header
 # sys is needed for libalias, probably we can just extract that instead of
