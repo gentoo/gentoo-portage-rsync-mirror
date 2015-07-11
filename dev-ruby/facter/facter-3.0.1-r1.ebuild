@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-3.0.1-r1.ebuild,v 1.2 2015/07/11 21:58:49 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-3.0.1-r1.ebuild,v 1.3 2015/07/11 22:13:43 prometheanfire Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
 
-inherit cmake-utils ruby-ng
+inherit cmake-utils multilib ruby-ng
 
 DESCRIPTION="A cross-platform Ruby library for retrieving facts from operating systems"
 HOMEPAGE="http://www.puppetlabs.com/puppet/related-projects/facter/"
@@ -53,11 +53,12 @@ src_configure() {
 }
 
 each_ruby_install() {
-	doruby "${D}usr/lib64/ruby/vendor_ruby/facter.rb"
+	doruby "${D}usr/$(get_libdir)/ruby/vendor_ruby/facter.rb"
+	doruby "${D}usr/$(get_libdir)/ruby/vendor_ruby/facter.jar"
 }
 
 src_install() {
 	cmake-utils_src_install
 	ruby-ng_src_install
-	rm -R "${D}usr/lib64/ruby/vendor_ruby" || die
+	rm -R "${D}usr/$(get_libdir)/ruby/vendor_ruby" || die
 }
