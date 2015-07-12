@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.3.4.ebuild,v 1.1 2015/06/19 06:07:54 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.3.4.ebuild,v 1.2 2015/07/12 09:53:38 graaff Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -77,6 +77,9 @@ src_prepare() {
 	epatch "${FILESDIR}/${PN}-6.2.3-CMakeLists.patch" \
 		"${FILESDIR}/${PN}-6.2.5-wbcopytables.patch" \
 		"${FILESDIR}/${PN}-6.3.3-mysql_options4.patch"
+
+	sed -i -e '/target_link_libraries/ s/sqlparser.grt/sqlparser.grt sqlparser/' \
+		modules/db.mysql.sqlparser/CMakeLists.txt
 
 	## remove hardcoded CXXFLAGS
 	sed -i -e 's/-O0 -g3//' ext/scintilla/gtk/CMakeLists.txt || die
