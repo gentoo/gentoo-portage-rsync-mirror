@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.3.4.ebuild,v 1.2 2015/07/12 09:53:38 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql-workbench/mysql-workbench-6.3.4.ebuild,v 1.3 2015/07/12 10:07:55 graaff Exp $
 
 EAPI=5
 GCONF_DEBUG="no"
@@ -36,7 +36,7 @@ CDEPEND="${PYTHON_DEPS}
 		gnome-base/libglade:2.0
 		>=x11-libs/cairo-1.5.12[glib,svg]
 		dev-libs/libsigc++:2
-		dev-libs/boost
+		>=dev-libs/boost-1.55.0
 		>=dev-cpp/ctemplate-0.95
 		>=dev-libs/libxml2-2.6.2:2
 		dev-libs/libzip
