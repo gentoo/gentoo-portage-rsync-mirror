@@ -36,6 +36,7 @@ limit_conn - This module makes it possible to limit the number of simultaneous c
 limit_zone - This module makes it possible to limit the number of simultaneous connections for the assigned session
 lua - Embed the power of Lua into nginx
 map - This module allows you to classify, or map a set of values into a different set of values and store the result in a variable.
+memc - An extended version of the standard memcached module that supports set, add, delete, and many more memcached commands.
 memcached - You can use this module to perform simple caching.
 metrics - Module to export various metrics in easy-parseable JSON.
 mogilefs - Enable support for MogileFS.
