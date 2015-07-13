@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.8 2015/07/13 08:24:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-3.5.0.ebuild,v 1.9 2015/07/13 08:38:32 vapier Exp $
 
 EAPI="5"
 
@@ -72,10 +72,12 @@ src_prepare() {
 }
 
 src_configure() {
+	# sdbinutils subdir doesn't pass down --docdir properly, so need to
+	# expand $(datarootdir) ourselves.
 	econf \
 		ac_cv_prog_AS="$(tc-getAS)" \
 		ac_cv_prog_AR="$(tc-getAR)" \
-		--docdir='$(datarootdir)'/doc/${PF} \
+		--docdir="${EPREFIX}/usr/share/doc/${PF}" \
 		--without-ccache \
 		$(use_enable mcs51 mcs51-port) \
 		$(use_enable z80 z80-port) \
