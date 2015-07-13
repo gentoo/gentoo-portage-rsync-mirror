@@ -1,14 +1,14 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.2 2015/07/10 09:38:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-9999.ebuild,v 1.5 2015/07/13 07:54:31 vapier Exp $
 
-EAPI="2"
+EAPI="5"
 
 inherit eutils
 
 if [[ ${PV} == "9999" ]] ; then
 	ESVN_REPO_URI="https://sdcc.svn.sourceforge.net/svnroot/sdcc/trunk/sdcc"
-	inherit subversion autotools
+	inherit subversion
 	docs_compile() { return 0; }
 else
 	SRC_URI="mirror://sourceforge/sdcc/${PN}-src-${PV}.tar.bz2
@@ -25,10 +25,10 @@ SLOT="0"
 IUSE="+boehm-gc doc"
 RESTRICT="strip"
 
-RDEPEND="sys-libs/ncurses
-	sys-libs/readline
+RDEPEND="sys-libs/ncurses:=
+	sys-libs/readline:0=
 	>=dev-embedded/gputils-0.13.7
-	boehm-gc? ( dev-libs/boehm-gc )
+	boehm-gc? ( dev-libs/boehm-gc:= )
 	!dev-embedded/sdcc-svn"
 DEPEND="${RDEPEND}"
 if docs_compile ; then
@@ -53,7 +53,8 @@ src_prepare() {
 	sed -i -e '/SDCC_DOC/d' Makefile.in || die
 	sed -i -e 's/ doc//' sim/ucsim/packages_in.mk || die
 
-	[[ ${PV} == "9999" ]] && eautoreconf
+	# Make sure timestamps don't get messed up.
+	[[ ${PV} == "9999" ]] && find "${S}" -type f -exec touch -r . {} +
 
 	# workaround parallel build issues with lyx
 	mkdir -p "${HOME}"/.lyx
@@ -67,9 +68,9 @@ src_configure() {
 }
 
 src_install() {
-	emake DESTDIR="${D}" install || die
-	dodoc doc/*.txt doc/*/*.txt
-	find "${D}" -name .deps -exec rm -rf {} +
+	default
+	dodoc doc/*.txt
+	find "${D}" -name .deps -exec rm -rf {} + || die
 
 	if use doc ; then
 		docs_compile || cd "${WORKDIR}"/doc
