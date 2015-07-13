@@ -25,7 +25,7 @@ RDEPEND="
 	!sci-misc/boinc-bin
 	!app-admin/quickswitch
 	>=app-misc/ca-certificates-20080809
-	dev-libs/openssl:=
+	dev-libs/openssl:0=
 	net-misc/curl[ssl,-gnutls(-),-nss(-),curl_ssl_openssl(+)]
 	sys-apps/util-linux
 	sys-libs/zlib
