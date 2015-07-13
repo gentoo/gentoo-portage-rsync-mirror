@@ -455,10 +455,10 @@ src_configure() {
 		myconf+=( --add-module=${HTTP_MOGILEFS_MODULE_WD} )
 	fi
 
-        if use nginx_modules_http_memc ; then
-                http_enabled=1
-                myconf+=( --add-module=${HTTP_MEMC_MODULE_WD} )
-        fi
+	if use nginx_modules_http_memc ; then
+		http_enabled=1
+		myconf+=( --add-module=${HTTP_MEMC_MODULE_WD} )
+	fi
 
 	if use http || use http-cache; then
 		http_enabled=1
@@ -636,10 +636,10 @@ src_install() {
 		dodoc "${HTTP_STICKY_MODULE_WD}"/{README.md,Changelog.txt,docs/sticky.pdf}
 	fi
 
-        if use nginx_modules_http_memc; then
-                docinto ${HTTP_MEMC_MODULE_P}
-                dodoc "${HTTP_MEMC_MODULE_WD}"/README.markdown
-        fi
+	if use nginx_modules_http_memc; then
+		docinto ${HTTP_MEMC_MODULE_P}
+		dodoc "${HTTP_MEMC_MODULE_WD}"/README.markdown
+	fi
 }
 
 pkg_postinst() {
