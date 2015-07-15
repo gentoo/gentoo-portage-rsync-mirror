@@ -1,8 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20140525.ebuild,v 1.3 2015/07/12 17:21:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/bibtexu/bibtexu-3.71_p20140525.ebuild,v 1.4 2015/07/15 09:44:17 aballier Exp $
 
 EAPI=5
+
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="8-bit Implementation of BibTeX 0.99 with a Very Large Capacity"
 HOMEPAGE="http://tug.org/texlive/"
@@ -36,6 +38,7 @@ done
 SRC_URI="${SRC_URI} ) "
 
 src_configure() {
+	has_version '>=dev-libs/kpathsea-6.2.1' && append-cppflags "$($(tc-getPKG_CONFIG) --cflags kpathsea)"
 	econf \
 		--with-system-kpathsea \
 		--with-system-icu
