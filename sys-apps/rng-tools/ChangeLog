@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rng-tools
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.58 2015/07/17 08:51:19 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rng-tools/ChangeLog,v 1.59 2015/07/17 09:30:21 idella4 Exp $
+
+  17 Jul 2015; Ian Delaney <idella4@gentoo.org> +files/larger-poolsize.patch,
+  rng-tools-5-r1.ebuild, rng-tools-5.ebuild:
+  patch to fix Bug 517942, sourced from Debian, attached to bug #517942 by
+  cilly, also prompted by proxy maintainer
 
 *rng-tools-5-r1 (17 Jul 2015)
 
