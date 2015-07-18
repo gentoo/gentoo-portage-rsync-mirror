@@ -1,18 +1,17 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.10.2.ebuild,v 1.1 2014/10/27 15:58:28 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/tiled/tiled-0.12.0.ebuild,v 1.1 2015/07/18 14:26:56 kensington Exp $
 
 EAPI=5
 
-PLOCALES="cs de en es fr he it ja lv nl pt pt_BR ru zh zh_TW"
 PYTHON_COMPAT=( python2_7 )
-inherit multilib l10n python-single-r1 qt4-r2
+inherit fdo-mime multilib python-single-r1 qt4-r2
 
 DESCRIPTION="A general purpose tile map editor"
 HOMEPAGE="http://www.mapeditor.org/"
 SRC_URI="https://github.com/bjorn/tiled/archive/v${PV}/${P}.tar.gz"
 
-LICENSE="BSD GPL-2"
+LICENSE="BSD-2 GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="examples python"
@@ -34,8 +33,6 @@ pkg_setup() {
 
 src_prepare() {
 	rm -r src/zlib || die
-	sed -e "s/^LANGUAGES =.*/LANGUAGES = $(l10n_get_locales)/" \
-		-i translations/translations.pro || die
 }
 
 src_configure() {
@@ -49,4 +46,14 @@ src_install() {
 		docompress -x /usr/share/doc/${PF}/examples
 		dodoc -r examples
 	fi
+}
+
+pkg_postinst() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
+}
+
+pkg_postrm() {
+	fdo-mime_desktop_database_update
+	fdo-mime_mime_database_update
 }
