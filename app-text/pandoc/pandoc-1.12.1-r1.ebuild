@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.12.ebuild,v 1.5 2015/02/18 21:20:05 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/pandoc-1.12.1-r1.ebuild,v 1.2 2015/07/18 12:47:02 slyfox Exp $
 
 EAPI=5
 
@@ -30,15 +30,14 @@ RDEPEND=">=dev-haskell/aeson-0.6:=[profile?] <dev-haskell/aeson-0.7:=[profile?]
 	>=dev-haskell/http-4000.0.5:=[profile?] <dev-haskell/http-4000.3:=[profile?]
 	>=dev-haskell/mtl-1.1:=[profile?] <dev-haskell/mtl-2.2:=[profile?]
 	>=dev-haskell/network-2:=[profile?] <dev-haskell/network-2.5:=[profile?]
-	>=dev-haskell/pandoc-types-1.12:=[profile?] <dev-haskell/pandoc-types-1.13:=[profile?]
+	>=dev-haskell/pandoc-types-1.12.3:=[profile?] <dev-haskell/pandoc-types-1.13:=[profile?]
 	>=dev-haskell/parsec-3.1:=[profile?] <dev-haskell/parsec-3.2:=[profile?]
 	>=dev-haskell/random-1:=[profile?] <dev-haskell/random-1.1:=[profile?]
-	>=dev-haskell/stringable-0.1:=[profile?] <dev-haskell/stringable-0.2:=[profile?]
 	>=dev-haskell/syb-0.1:=[profile?] <dev-haskell/syb-0.5:=[profile?]
 	>=dev-haskell/tagsoup-0.12.5:=[profile?] <dev-haskell/tagsoup-0.14:=[profile?]
 	>=dev-haskell/temporary-1.1:=[profile?] <dev-haskell/temporary-1.2:=[profile?]
 	>=dev-haskell/texmath-0.6.4:=[profile?] <dev-haskell/texmath-0.7:=[profile?]
-	>=dev-haskell/text-0.11:=[profile?] <dev-haskell/text-0.12:=[profile?]
+	>=dev-haskell/text-0.11:=[profile?]
 	>=dev-haskell/unordered-containers-0.2:=[profile?] <dev-haskell/unordered-containers-0.3:=[profile?]
 	>=dev-haskell/vector-0.10:=[profile?] <dev-haskell/vector-0.11:=[profile?]
 	>=dev-haskell/xml-1.3.12:=[profile?] <dev-haskell/xml-1.4:=[profile?]
@@ -51,8 +50,8 @@ RDEPEND=">=dev-haskell/aeson-0.6:=[profile?] <dev-haskell/aeson-0.7:=[profile?]
 			>=dev-haskell/http-types-0.8:=[profile?] <dev-haskell/http-types-0.9:=[profile?] )
 "
 DEPEND="${RDEPEND}
-	>=dev-haskell/cabal-1.10.0.0
 	dev-haskell/alex
+	>=dev-haskell/cabal-1.10.0.0
 	dev-haskell/happy
 	test? ( >=dev-haskell/ansi-terminal-0.5 <dev-haskell/ansi-terminal-0.7
 		>=dev-haskell/diff-0.2 <dev-haskell/diff-0.4
@@ -63,17 +62,13 @@ DEPEND="${RDEPEND}
 		>=dev-haskell/test-framework-quickcheck2-0.2.9 <dev-haskell/test-framework-quickcheck2-0.4 )
 "
 
+src_prepare() {
+	cabal_chdeps \
+		'text >= 0.11 && < 0.12' 'text >= 0.11'
+}
+
 src_configure() {
 	haskell-cabal_src_configure \
 		$(cabal_flag embed_data_files embed_data_files) \
 		$(cabal_flag http-conduit http-conduit)
-}
-
-src_install() {
-	cabal_src_install
-
-	doman "${S}/man/man1/${PN}.1"
-
-	# COPYING is installed by the Cabal eclass
-	dodoc README COPYRIGHT changelog
 }
