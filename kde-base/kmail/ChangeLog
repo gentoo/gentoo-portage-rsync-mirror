@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kmail
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.443 2015/07/12 22:07:36 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/ChangeLog,v 1.444 2015/07/18 22:06:14 johu Exp $
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org> -kmail-4.14.6-r1.ebuild:
+  Remove KDE PIM 4.14.6
 
 *kmail-4.4.2015.06 (12 Jul 2015)
 

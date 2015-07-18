@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/knotes
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.333 2015/07/12 22:08:29 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/knotes/ChangeLog,v 1.334 2015/07/18 22:06:14 johu Exp $
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org> -knotes-4.14.6.ebuild:
+  Remove KDE PIM 4.14.6
 
 *knotes-4.4.2015.06 (12 Jul 2015)
 

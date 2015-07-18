@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/freespacenotifier
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/freespacenotifier/ChangeLog,v 1.168 2015/07/02 13:22:59 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/freespacenotifier/ChangeLog,v 1.170 2015/07/18 22:16:22 johu Exp $
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org>
+  -freespacenotifier-4.11.20.ebuild:
+  Remove KDE Workspace 4.11.20
+
+  18 Jul 2015; Johannes Huber <johu@gentoo.org>
+  -freespacenotifier-4.11.17.ebuild:
+  Remove KDE Workspace 4.11.17
 
 *freespacenotifier-4.11.21 (02 Jul 2015)
 
