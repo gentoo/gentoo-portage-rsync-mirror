@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.28.ebuild,v 1.3 2015/06/14 19:25:46 bircoph Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-5.34.32.ebuild,v 1.1 2015/07/18 13:43:44 bircoph Exp $
 
 EAPI=5
 
@@ -78,9 +78,9 @@ src_configure() {
 			--prefix="${EPREFIX}/usr" \
 			--etcdir="${EPREFIX}/etc/root" \
 			--libdir="${EPREFIX}/usr/$(get_libdir)/${PN}" \
-			--docdir="${EPREFIX}/usr/share/doc/${PF}" \
-			--tutdir="${EPREFIX}/usr/share/doc/${PF}/examples/tutorials" \
-			--testdir="${EPREFIX}/usr/share/doc/${PF}/examples/tests" \
+			--docdir="${EPREFIX}${DOC_DIR}" \
+			--tutdir="${EPREFIX}${DOC_DIR}/examples/tutorials" \
+			--testdir="${EPREFIX}${DOC_DIR}/examples/tests" \
 			--with-llvm-config="${EPREFIX}/usr/bin/llvm-config" \
 			--with-sys-iconpath="${EPREFIX}/usr/share/pixmaps" \
 			--nohowto
@@ -108,7 +108,7 @@ src_compile() {
 		# if root.exe crashes, return code will be 0 due to gdb attach,
 		# so we need to check if last html file was generated;
 		# this check is volatile and can't catch crash on the last file.
-		[[ -f htmldoc/tableDescriptor_st.html ]] || die "html doc generation crashed"
+		[[ -f htmldoc/timespec.html ]] || die "html doc generation crashed"
 	fi
 }
 
