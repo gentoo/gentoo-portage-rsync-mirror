@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppetdb/puppetdb-3.0.1.ebuild,v 1.2 2015/07/18 07:57:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppetdb/puppetdb-3.0.1.ebuild,v 1.3 2015/07/18 08:30:16 prometheanfire Exp $
 
 EAPI=5
 
@@ -62,7 +62,7 @@ src_install() {
 	doins ext/cli/foreground
 	doins ext/cli/anonymize
 	doins ext/cli/import
-	insinto opt/puppetlabs/server/apps/puppetdb/bin
+	insinto /opt/puppetlabs/server/apps/puppetdb/bin
 	doins ext/bin/puppetdb
 	insopts -m0644
 	dodir /opt/puppetlabs/server/bin
