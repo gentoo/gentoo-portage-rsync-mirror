@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.16.3.ebuild,v 1.1 2015/06/08 22:12:44 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-3.16.5.ebuild,v 1.1 2015/07/19 10:06:21 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
@@ -38,7 +38,7 @@ COMMON_DEPEND="
 		>=dev-libs/json-glib-1.0[${MULTILIB_USEDEP}] )
 	colord? ( >=x11-misc/colord-0.1.9:0=[${MULTILIB_USEDEP}] )
 	cups? ( >=net-print/cups-1.2[${MULTILIB_USEDEP}] )
-	introspection? ( >=dev-libs/gobject-introspection-1.39 )
+	introspection? ( >=dev-libs/gobject-introspection-1.39:= )
 	wayland? (
 		>=dev-libs/wayland-1.5.91[${MULTILIB_USEDEP}]
 		media-libs/mesa[wayland,${MULTILIB_USEDEP}]
@@ -133,7 +133,7 @@ src_prepare() {
 		strip_builddir SRC_SUBDIRS examples Makefile.{am,in}
 	fi
 
-	# Do no build and install gtk-update-icon-cache which is done by gtk+:2
+	# gtk-update-icon-cache is installed by dev-util/gtk-update-icon-cache 
 	epatch "${FILESDIR}"/${PN}-3.16.2-remove_update-icon-cache.patch
 
 	epatch_user
