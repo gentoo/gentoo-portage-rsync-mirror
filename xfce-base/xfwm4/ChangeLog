@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfwm4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.241 2015/07/12 09:25:42 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfwm4/ChangeLog,v 1.242 2015/07/19 12:39:06 klausman Exp $
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> xfwm4-4.12.3-r1.ebuild:
+  Stable on alpha, bug 553500
 
   12 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfwm4-4.12.3.ebuild:
   Stable for PPC64 (bug #553500).

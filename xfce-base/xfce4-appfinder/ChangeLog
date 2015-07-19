@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-appfinder
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-appfinder/ChangeLog,v 1.48 2015/07/12 09:10:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-appfinder/ChangeLog,v 1.49 2015/07/19 12:37:57 klausman Exp $
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
+  xfce4-appfinder-4.12.0-r1.ebuild:
+  Stable on alpha, bug 553500
 
   12 Jul 2015; Jeroen Roovers <jer@gentoo.org>
   xfce4-appfinder-4.12.0-r1.ebuild:

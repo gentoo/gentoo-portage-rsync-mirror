@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfconf
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.85 2015/07/12 09:08:24 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfconf/ChangeLog,v 1.86 2015/07/19 12:38:46 klausman Exp $
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> xfconf-4.12.0-r1.ebuild:
+  Stable on alpha, bug 553500
 
   12 Jul 2015; Jeroen Roovers <jer@gentoo.org> xfconf-4.12.0-r1.ebuild:
   Stable for PPC64 (bug #553500).
