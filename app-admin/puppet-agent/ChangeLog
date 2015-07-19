@@ -1,0 +1,14 @@
+# ChangeLog for app-admin/puppet-agent
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-agent/ChangeLog,v 1.2 2015/07/18 23:23:39 prometheanfire Exp $
+
+  18 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> metadata.xml:
+  signing it
+
+*puppet-agent-1.2.1 (18 Jul 2015)
+
+  18 Jul 2015; Matthew Thode <prometheanfire@gentoo.org>
+  +files/mcollective.initd, +files/mcollective.service,
+  +files/puppet-agent.conf.tmpfilesd, +files/puppet.initd,
+  +files/puppet.service, +metadata.xml, +puppet-agent-1.2.1.ebuild:
+  initial add of puppet-agent
