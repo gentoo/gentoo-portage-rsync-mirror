@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/dunst
-# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/ChangeLog,v 1.6 2014/05/08 05:59:22 wired Exp $
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/ChangeLog,v 1.7 2015/07/19 19:51:49 vikraman Exp $
+
+*dunst-1.1.0 (19 Jul 2015)
+
+  19 Jul 2015; Vikraman Choudhury (vikraman) <vikraman@gentoo.org>
+  +dunst-1.1.0.ebuild:
+  Bump to version 1.1.0. Fixes bug 543340.
 
 *dunst-1.0.0-r1 (08 May 2014)
 
