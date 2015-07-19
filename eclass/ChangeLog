@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1720 2015/07/18 00:07:01 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1721 2015/07/19 10:46:47 johu Exp $
+
+  19 Jul 2015; Johannes Huber <johu@gentoo.org> kde4-base.eclass:
+  Cleanup SRC_URIs.
 
   18 Jul 2015; Mike Gilbert <floppym@gentoo.org> distutils-r1.eclass:
   Add entire python directory to SANDBOX_PREDICT, bug 554252.

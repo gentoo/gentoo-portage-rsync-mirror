@@ -1,13 +1,13 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.17.0_alpha4.ebuild,v 1.1 2015/07/18 10:23:54 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libraw/libraw-0.17.0_beta2.ebuild,v 1.1 2015/07/19 11:00:22 maekke Exp $
 
 EAPI=5
 
 inherit autotools-multilib toolchain-funcs
 
 MY_PN=LibRaw
-MY_PV=${PV/_a/-A}
+MY_PV=${PV/_b/-B}
 MY_P=${MY_PN}-${MY_PV}
 
 DESCRIPTION="LibRaw is a library for reading RAW files obtained from digital photo cameras"
