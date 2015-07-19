@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-3.0.1-r4.ebuild,v 1.1 2015/07/14 04:43:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/facter-3.0.1-r4.ebuild,v 1.2 2015/07/19 08:47:50 jer Exp $
 
 EAPI=5
 USE_RUBY="ruby19 ruby20 ruby21 ruby22"
@@ -15,7 +15,7 @@ S="${S}/all/${P}"
 LICENSE="Apache-2.0"
 SLOT="0"
 IUSE="debug test"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
 CDEPEND="
 	>=sys-devel/gcc-4.8:*

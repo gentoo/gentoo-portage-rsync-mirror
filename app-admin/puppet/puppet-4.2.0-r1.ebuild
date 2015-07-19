@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.2.0-r1.ebuild,v 1.1 2015/07/18 23:29:20 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.2.0-r1.ebuild,v 1.2 2015/07/19 08:49:09 jer Exp $
 
 EAPI="5"
 
@@ -16,7 +16,7 @@ SRC_URI="http://downloads.puppetlabs.com/puppet/${P}.tar.gz"
 
 LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite vim-syntax xemacs"
 
 ruby_add_rdepend "
