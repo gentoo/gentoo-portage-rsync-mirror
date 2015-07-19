@@ -1,12 +1,12 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.16.1.ebuild,v 1.1 2015/06/09 14:34:35 eva Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/epiphany/epiphany-3.16.3.ebuild,v 1.1 2015/07/19 11:20:13 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="yes"
 GNOME2_LA_PUNT="yes"
 
-inherit autotools eutils gnome2 pax-utils versionator virtualx
+inherit eutils gnome2 pax-utils versionator virtualx
 
 DESCRIPTION="GNOME webbrowser based on Webkit"
 HOMEPAGE="https://wiki.gnome.org/Apps/Web"
@@ -21,7 +21,7 @@ COMMON_DEPEND="
 	>=app-crypt/gcr-3.5.5
 	>=app-crypt/libsecret-0.14
 	>=app-text/iso-codes-0.35
-	>=dev-libs/glib-2.38:2
+	>=dev-libs/glib-2.38:2[dbus]
 	>=dev-libs/libxml2-2.6.12:2
 	>=dev-libs/libxslt-1.1.7
 	>=gnome-base/gsettings-desktop-schemas-0.0.1
@@ -56,14 +56,13 @@ DEPEND="${COMMON_DEPEND}
 "
 
 src_prepare() {
-	# Fix missing symbol in webextension.so, bug #728972
-	epatch "${FILESDIR}"/${PN}-3.14.0-missing-symbol.patch
-
 	# Fix unittests
+	# https://bugzilla.gnome.org/show_bug.cgi?id=751591
 	epatch "${FILESDIR}"/${PN}-3.16.0-unittest-1.patch
+
+	# https://bugzilla.gnome.org/show_bug.cgi?id=751593
 	epatch "${FILESDIR}"/${PN}-3.14.0-unittest-2.patch
 
-	eautoreconf
 	gnome2_src_prepare
 }
 
@@ -73,8 +72,7 @@ src_configure() {
 		--disable-static \
 		--with-distributor-name=Gentoo \
 		$(use_enable nss) \
-		$(use_enable test tests) \
-		ITSTOOL=$(type -P true)
+		$(use_enable test tests)
 }
 
 src_compile() {
