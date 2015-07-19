@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.1.0.ebuild,v 1.1 2015/07/19 19:51:49 vikraman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/dunst/dunst-1.1.0.ebuild,v 1.2 2015/07/19 21:19:54 vikraman Exp $
 
 EAPI=5
 
@@ -39,6 +39,11 @@ src_prepare() {
 		s:-g::
 		s:-O.::
 	}" config.mk || die "sed failed"
+
+	if use dunstify; then
+		# add dunstify to the all target
+		sed -ie "/^all:/ s:$: dunstify:" Makefile || die "sed failed"
+	fi
 
 	epatch_user
 }
