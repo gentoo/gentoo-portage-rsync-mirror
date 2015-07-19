@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/lftp
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.529 2015/07/19 17:58:41 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/ChangeLog,v 1.530 2015/07/19 18:03:29 zlogene Exp $
+
+  19 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> lftp-4.6.3a.ebuild:
+  amd64 stable wrt bug #555034
 
   19 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> lftp-4.6.3a.ebuild:
   x86 stable wrt bug #555034
