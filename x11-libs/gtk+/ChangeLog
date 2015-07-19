@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.793 2015/07/19 10:06:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.794 2015/07/19 12:29:08 klausman Exp $
+
+  19 Jul 2015; Tobias Klausmann <klausman@gentoo.org> gtk+-3.14.13.ebuild:
+  Stable on alpha, bug 553500
 
 *gtk+-3.16.5 (19 Jul 2015)
 
