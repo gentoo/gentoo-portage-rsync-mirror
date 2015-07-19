@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/git-sources
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1438 2015/07/13 00:37:37 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/git-sources/ChangeLog,v 1.1439 2015/07/19 15:21:48 mpagano Exp $
+
+  19 Jul 2015; Mike Pagano <mpagano@gentoo.org> git-sources-4.2_rc2.ebuild:
+  Bump KBASE_VER to 4.1 Bug #554702. Thanks to jospezial.
 
 *git-sources-4.2_rc2 (13 Jul 2015)
 
