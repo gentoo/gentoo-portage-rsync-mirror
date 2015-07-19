@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.13.1.ebuild,v 1.1 2015/06/12 23:47:38 tetromino Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.13.3.ebuild,v 1.1 2015/07/19 09:31:34 pacho Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -18,9 +18,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE=""
 
-RDEPEND="
-	${PYTHON_DEPS}
-	>=dev-libs/glib-2.36:2
+RDEPEND="${PYTHON_DEPS}
+	>=dev-libs/glib-2.36:2[dbus]
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-3.8:3[cairo,${PYTHON_USEDEP}]
 	gnome-base/gsettings-desktop-schemas

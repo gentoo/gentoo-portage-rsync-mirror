@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/uhttpmock/uhttpmock-0.3.3.ebuild,v 1.4 2014/12/19 13:42:10 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/uhttpmock/uhttpmock-0.5.0.ebuild,v 1.1 2015/07/19 09:41:58 pacho Exp $
 
 EAPI=5
 GCONF_DEBUG="yes"
@@ -9,23 +9,21 @@ VALA_USE_DEPEND="vapigen"
 inherit gnome2 vala
 
 DESCRIPTION="HTTP web service mocking library"
-HOMEPAGE="http://gitorious.org/uhttpmock/"
+HOMEPAGE="https://gitlab.com/uhttpmock/uhttpmock"
 SRC_URI="http://tecnocode.co.uk/downloads/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2"
 SLOT="0"
 
 IUSE="+introspection vala"
-REQUIRED_USE="
-	vala? ( introspection )
-"
+REQUIRED_USE="vala? ( introspection )"
 
-KEYWORDS="amd64 ~arm hppa ~ppc ~ppc64 x86"
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
 
 RDEPEND="
-	>=dev-libs/glib-2.31:2
+	>=dev-libs/glib-2.36.0:2
 	>=net-libs/libsoup-2.37.91:2.4
-	introspection? ( >=dev-libs/gobject-introspection-0.9.7 )
+	introspection? ( >=dev-libs/gobject-introspection-0.9.7:= )
 "
 DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.14
