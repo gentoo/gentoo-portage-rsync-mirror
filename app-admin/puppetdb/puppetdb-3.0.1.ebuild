@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppetdb/puppetdb-3.0.1.ebuild,v 1.4 2015/07/18 09:11:01 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppetdb/puppetdb-3.0.1.ebuild,v 1.5 2015/07/19 03:06:36 prometheanfire Exp $
 
 EAPI=5
 
@@ -16,7 +16,7 @@ IUSE=""
 # will need the same keywords as puppet
 KEYWORDS="~amd64 ~x86"
 
-RDEPEND+="virtual/jdk:1.7"
+RDEPEND+=">=virtual/jdk-1.7.0"
 DEPEND+=""
 
 pkg_setup() {

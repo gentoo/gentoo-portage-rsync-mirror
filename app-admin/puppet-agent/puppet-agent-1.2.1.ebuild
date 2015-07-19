@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-agent/puppet-agent-1.2.1.ebuild,v 1.1 2015/07/18 23:22:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet-agent/puppet-agent-1.2.1.ebuild,v 1.3 2015/07/19 03:18:06 prometheanfire Exp $
 
 EAPI=5
 inherit eutils systemd unpacker
 
-DESCRIPTION="general puppet client utils"
+DESCRIPTION="general puppet client utils along with mcollective hiera and facter"
 HOMEPAGE="https://puppetlabs.com/"
 SRC_BASE="http://apt.puppetlabs.com/pool/wheezy/PC1/${PN:0:1}/${PN}/${PN}_${PV}-1wheezy"
 SRC_URI="
@@ -53,6 +53,7 @@ src_install() {
 	systemd_dounit "${FILESDIR}/mcollective.service"
 	systemd_newtmpfilesd "${FILESDIR}/puppet-agent.conf.tmpfilesd" puppet-agent.conf
 	# symlinks
+	fperms 755 /opt/puppetlabs/puppet/bin/*
 	dosym /opt/puppetlabs/bin/facter /usr/bin/facter
 	dosym /opt/puppetlabs/bin/hiera /usr/bin/hiera
 	dosym /opt/puppetlabs/bin/mco /usr/bin/mco
