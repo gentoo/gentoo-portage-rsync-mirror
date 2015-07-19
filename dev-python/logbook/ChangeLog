@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/logbook
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.25 2015/07/19 01:51:25 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logbook/ChangeLog,v 1.26 2015/07/19 04:21:53 idella4 Exp $
+
+  19 Jul 2015; Ian Delaney <idella4@gentoo.org> -logbook-0.8.1.ebuild,
+  -logbook-0.9.0.ebuild, logbook-0.10.0.ebuild, logbook-0.9.1.ebuild:
+  add missing dep, typos, rm old
 
 *logbook-0.10.0 (19 Jul 2015)
 
