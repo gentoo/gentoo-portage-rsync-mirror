@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16676 2015/07/19 09:30:06 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16677 2015/07/19 22:27:14 chewi Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -575,11 +575,6 @@ www-apache/mod_spdy
 # - do not compile in some USE-flag combinations
 # - requires at least gcc 4.7(and possibly even 4.8 for some features)
 >=dev-libs/botan-1.11.0
-
-# Tom Wijsman <TomWij@gentoo.org> (15 Aug 2013)
-# Dependencies are unable to satisfy current version,
-# broken; needs a version bump from bug #475552.
-dev-java/itext:5
 
 # Julian Ospald <hasufell@gentoo.org> (21 Jul 2013)
 # Mask all unfetchable versions and those with tons of random

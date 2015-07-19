@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10193 2015/07/19 09:30:06 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10194 2015/07/19 22:27:14 chewi Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  19 Jul 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
+  Remove dev-java/itext:5 mask as bug #475552 now looks good.
 
   19 Jul 2015; James Le Cuirot <chewi@gentoo.org> package.mask:
   app-eselect/eselect-ecj has been removed.
