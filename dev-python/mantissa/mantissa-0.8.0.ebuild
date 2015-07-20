@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.8.0.ebuild,v 1.1 2015/07/19 10:47:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mantissa/mantissa-0.8.0.ebuild,v 1.2 2015/07/20 04:30:36 idella4 Exp $
 
 EAPI="5"
 PYTHON_COMPAT=( python2_7 )
@@ -35,7 +35,11 @@ TWISTED_PLUGINS=( axiom.plugins nevow.plugins xmantissa.plugins )
 
 python_test() {
 	# https://github.com/twisted/mantissa/issues/27
-	einfo ""; einfo "suite currently lists a failure and errors, filed upstream"; einfo ""
+	einfo ""; einfo "suite currently lists 1 failure and 7 errors now known upstream";
+	einfo "A folder with required modules are absent form the source"
+	einfo "All are expected to be fixed in a next release consequent to the bug"
+	einfo "filed upstream, now expected very soon"; einfo ""
+	die "dud"
 	trial xmantissa || die "tests failed with ${EPYTHON}"
 }
 
