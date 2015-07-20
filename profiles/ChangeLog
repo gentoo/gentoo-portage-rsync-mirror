@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10196 2015/07/20 15:24:39 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10197 2015/07/20 17:31:09 jauhien Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2015; Jauhien Piatlicki <jauhien@gentoo.org> package.mask:
+  Remove dev-util/ext4_utils and dev-util/libsparse mask, as they were removed
+  from the tree
 
   20 Jul 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
   Mask media-sound/audacity-2.1.1 WIP (bug #524242)
