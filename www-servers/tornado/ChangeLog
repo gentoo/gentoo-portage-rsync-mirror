@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/tornado
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.80 2015/07/20 02:00:31 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tornado/ChangeLog,v 1.81 2015/07/20 02:01:59 alunduil Exp $
+
+  20 Jul 2015; Alex Brandt <alunduil@gentoo.org> -tornado-3.2.1.ebuild:
+  remove version 3.2.1
 
   20 Jul 2015; Alex Brandt <alunduil@gentoo.org> -tornado-3.2.ebuild:
   remove version 3.2
