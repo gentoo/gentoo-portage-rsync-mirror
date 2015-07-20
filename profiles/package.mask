@@ -1,5 +1,5 @@
 ####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16677 2015/07/19 22:27:14 chewi Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.16678 2015/07/20 15:24:39 yngwin Exp $
 #
 # When you add an entry to the top of this file, add your name, the date, and
 # an explanation of why something is getting masked. Please be extremely
@@ -29,6 +29,11 @@
 ## app-misc/some-package
 
 #--- END OF EXAMPLES ---
+
+# Ben de Groot <yngwin@gentoo.org> (20 Jul 2015)
+# Version bump is a WIP, see bug #524242
+# It works (except USE=vamp) but is not up to Gentoo standards yet
+=media-sound/audacity-2.1.1
 
 # Ian Stakenvicius <axs@gentoo.org> (16 Jul 2015)
 # Mask thunerbird-24.x as it is no longer supported, but
@@ -75,7 +80,7 @@ dev-java/mckoi
 dev-util/fujaba
 
 # Patrice Clement <monsieurp@gentoo.org> (5 Jul 2015)
-# SRC_URI unreachable. Upstream looks dead. 
+# SRC_URI unreachable. Upstream looks dead.
 # Removal in 30 days. See bug #502994.
 app-arch/dczip
 

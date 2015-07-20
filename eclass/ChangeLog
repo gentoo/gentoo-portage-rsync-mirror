@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1722 2015/07/19 15:46:03 mpagano Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1723 2015/07/20 15:05:49 slyfox Exp $
+
+  20 Jul 2015; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
+  Workaround upstream cabal tests hangup bug #537500 by Michael Orlitzky; use
+  ghc's haddock for doc generation.
 
   19 Jul 2015; Mike Pagano <mpagano@gentoo.org> kernel-2.eclass:
   Change kernel upgrade http link and remove reference to deblob in elog

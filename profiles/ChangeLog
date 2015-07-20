@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10195 2015/07/20 14:20:11 yngwin Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10196 2015/07/20 15:24:39 yngwin Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  20 Jul 2015; Ben de Groot <yngwin@gentoo.org> package.mask:
+  Mask media-sound/audacity-2.1.1 WIP (bug #524242)
 
   20 Jul 2015; Ben de Groot <yngwin@gentoo.org>
   arch/powerpc/ppc32/package.use.mask, arch/powerpc/ppc64/package.use.mask,
