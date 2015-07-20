@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-8.2.0.ebuild,v 1.1 2015/07/19 10:20:14 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mkvtoolnix/mkvtoolnix-8.2.0-r1.ebuild,v 1.1 2015/07/20 05:24:17 yngwin Exp $
 
 EAPI=5
 WX_GTK_VER="3.0"
@@ -13,7 +13,7 @@ SRC_URI="http://www.bunkus.org/videotools/mkvtoolnix/sources/${P}.tar.xz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~ppc64 ~x86 ~x86-fbsd ~amd64-linux ~x86-linux"
-IUSE="debug pch qt5 wxwidgets"
+IUSE="curl debug pch qt5 wxwidgets"
 
 ruby_atom() {
 	local ruby_slot=${1/ruby/}
@@ -70,10 +70,11 @@ src_prepare() {
 			break
 		fi
 	done
-
 	[[ -z ${RUBY} ]] && die "No available ruby implementations to build with"
 
 	epatch "${FILESDIR}"/${PN}-5.8.0-boost-configure.patch
+	epatch "${FILESDIR}"/${P}-fix-curl-support.patch #555340
+	epatch_user
 	eautoreconf
 }
 
@@ -99,13 +100,13 @@ src_configure() {
 		$(use_enable debug) \
 		$(use_enable qt5 qt) \
 		$(use_enable wxwidgets) \
+		$(use_with curl) \
 		$(usex pch "" --disable-precompiled-headers) \
 		"${myconf[@]}" \
 		--disable-optimization \
 		--docdir="${EPREFIX}"/usr/share/doc/${PF} \
 		--with-boost="${EPREFIX}"/usr \
-		--with-boost-libdir="${EPREFIX}"/usr/$(get_libdir) \
-		--without-curl
+		--with-boost-libdir="${EPREFIX}"/usr/$(get_libdir)
 }
 
 src_compile() {
