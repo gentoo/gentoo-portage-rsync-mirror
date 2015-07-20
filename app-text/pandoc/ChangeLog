@@ -1,6 +1,11 @@
 # ChangeLog for app-text/pandoc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.43 2015/07/20 18:18:47 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pandoc/ChangeLog,v 1.44 2015/07/20 19:04:24 slyfox Exp $
+
+*pandoc-1.15.0.6 (20 Jul 2015)
+
+  20 Jul 2015; Sergei Trofimovich <slyfox@gentoo.org> +pandoc-1.15.0.6.ebuild:
+  Version bump with help from Blackb|rd!
 
 *pandoc-1.14.0.4 (20 Jul 2015)
 
