@@ -2,10 +2,6 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>qemu</herd>
-<maintainer>
-	<email>cardoe@gentoo.org</email>
-	<name>Doug Goldstein</name>
-</maintainer>
 <use>
 	<flag name='accessibility'>Adds support for braille displays using brltty</flag>
 	<flag name='aio'>Enables support for Linux's Async IO</flag>

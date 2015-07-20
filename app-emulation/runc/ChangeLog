@@ -1,0 +1,10 @@
+# ChangeLog for app-emulation/runc
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/runc/ChangeLog,v 1.1 2015/07/20 02:37:38 cardoe Exp $
+
+*runc-0.0.2 (20 Jul 2015)
+
+  20 Jul 2015; Doug Goldstein <cardoe@gentoo.org> +runc-0.0.2.ebuild,
+  +metadata.xml:
+  initial version - feedback welcome
+

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.335 2015/07/20 02:19:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.336 2015/07/20 02:33:42 vapier Exp $
+
+  20 Jul 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml:
+  Use the herd tag only so people assign bugs correctly.
 
   20 Jul 2015; Mike Frysinger <vapier@gentoo.org> metadata.xml,
   qemu-9999.ebuild:
