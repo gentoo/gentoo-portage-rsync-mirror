@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.118 2015/07/21 05:01:26 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.119 2015/07/21 08:32:59 vapier Exp $
+
+  21 Jul 2015; Mike Frysinger <vapier@gentoo.org> keychain-2.8.1.ebuild:
+  Mark arm64/ia64/m68k/s390/sh stable #555408.
 
   21 Jul 2015; Jeroen Roovers <jer@gentoo.org> keychain-2.8.1.ebuild:
   Stable for AMD64 x86 (bug #555408).
