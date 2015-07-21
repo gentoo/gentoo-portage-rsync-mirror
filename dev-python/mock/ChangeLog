@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mock
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.91 2015/04/08 08:05:27 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/ChangeLog,v 1.92 2015/07/21 18:05:58 alunduil Exp $
+
+*mock-1.2.0 (21 Jul 2015)
+
+  21 Jul 2015; Alex Brandt <alunduil@gentoo.org> +mock-1.2.0.ebuild:
+  add version 1.2.0
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> mock-1.0.1-r1.ebuild:
   Drop old Python implementations
