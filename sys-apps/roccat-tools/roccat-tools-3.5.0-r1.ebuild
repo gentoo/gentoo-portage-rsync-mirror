@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-3.1.0.ebuild,v 1.1 2015/03/10 08:09:25 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-3.5.0-r1.ebuild,v 1.1 2015/07/21 08:20:46 idella4 Exp $
 
 EAPI=5
 
@@ -32,19 +32,22 @@ IUSE_INPUT_DEVICES="
 	input_devices_roccat_ryostkl
 	input_devices_roccat_tyon
 "
-IUSE="${IUSE_INPUT_DEVICES} lua"
+IUSE="${IUSE_INPUT_DEVICES} lua lua51 lua52"
 REQUIRED_USE="
 	lua? ( input_devices_roccat_ryosmk )
+	lua? ( ^^ ( lua51 lua52 ) )
 "
 
 RDEPEND="
-	>=dev-libs/libgaminggear-0.6
+	>=dev-libs/libgaminggear-0.10
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	media-libs/libcanberra
 	virtual/libusb:1
 	dev-libs/dbus-glib
 	virtual/libgudev:=
+	lua51? ( || ( dev-lang/lua:5.1 dev-lang/lua:0 ) )
+	lua52? ( dev-lang/lua:5.2 )
 "
 
 DEPEND="${RDEPEND}"
@@ -59,8 +62,12 @@ src_configure() {
 	mycmakeargs=(
 		-DDEVICES=${MODELS// /;} \
 		-DUDEVDIR="${UDEVDIR/"//"//}"
-		$(cmake-utils_use_with lua LUA)
 	)
+	if use lua51 ; then
+		mycmakeargs+=( -DWITH_LUA=5.1 )
+	elif use lua52 ; then
+		mycmakeargs+=( -DWITH_LUA=5.2 )
+	fi
 	cmake-utils_src_configure
 }
 src_install() {
@@ -82,8 +89,10 @@ pkg_postinst() {
 	ewarn "so konextdconfig is now roccatkonextdconfig and so on"
 	ewarn "Everything that was ryos is now ryosmk to distinguish it from the ryostkl product range"
 	ewarn
-	ewarn "In version ${P} the support for Python as a scripting language for RyosMKPro"
-	ewarn "ripple effects was dropped and replaced with Lua. Use USE=lua to enable it"
+	ewarn "In version 3.5.0-r1 the support for Lua as a scripting language for RyosMKPro"
+	ewarn "ripple effects has been changed. Now in combination with USE=lua to enable it"
+	ewarn "one also needs to put additional use flag depending on which lua version is wanted - "
+	ewarn "it can be USE=lua51 for Lua 5.1 or USE=lua52 for 5.2"
 	ewarn
 }
 

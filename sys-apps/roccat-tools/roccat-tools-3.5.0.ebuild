@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-3.2.0.ebuild,v 1.1 2015/03/24 05:24:49 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/roccat-tools/roccat-tools-3.5.0.ebuild,v 1.1 2015/07/21 08:20:46 idella4 Exp $
 
 EAPI=5
 
@@ -38,13 +38,14 @@ REQUIRED_USE="
 "
 
 RDEPEND="
-	>=dev-libs/libgaminggear-0.7
+	>=dev-libs/libgaminggear-0.10
 	x11-libs/gtk+:2
 	x11-libs/libnotify
 	media-libs/libcanberra
 	virtual/libusb:1
 	dev-libs/dbus-glib
 	virtual/libgudev:=
+	lua? ( || ( dev-lang/lua:5.1 dev-lang/lua:0 ) )
 "
 
 DEPEND="${RDEPEND}"
@@ -59,8 +60,10 @@ src_configure() {
 	mycmakeargs=(
 		-DDEVICES=${MODELS// /;} \
 		-DUDEVDIR="${UDEVDIR/"//"//}"
-		$(cmake-utils_use_with lua LUA)
 	)
+	if use lua ; then
+		mycmakeargs+=( -DWITH_LUA=5.1 )
+	fi
 	cmake-utils_src_configure
 }
 src_install() {
@@ -81,9 +84,6 @@ pkg_postinst() {
 	ewarn "Starting from version 3.0.0, executables were renamed and now prefixed with 'roccat',"
 	ewarn "so konextdconfig is now roccatkonextdconfig and so on"
 	ewarn "Everything that was ryos is now ryosmk to distinguish it from the ryostkl product range"
-	ewarn
-	ewarn "In version 3.0.0 the support for Python as a scripting language for RyosMKPro"
-	ewarn "ripple effects was dropped and replaced with Lua. Use USE=lua to enable it"
 	ewarn
 }
 
