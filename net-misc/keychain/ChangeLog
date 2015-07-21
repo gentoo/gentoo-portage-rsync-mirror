@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/keychain
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.116 2015/07/20 17:43:25 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/keychain/ChangeLog,v 1.117 2015/07/21 05:00:26 jer Exp $
+
+  21 Jul 2015; Jeroen Roovers <jer@gentoo.org> keychain-2.8.1.ebuild:
+  Stable for HPPA PPC64 (bug #555408).
 
   20 Jul 2015; Tobias Klausmann <klausman@gentoo.org> keychain-2.8.1.ebuild:
   Stable on alpha, bug 555408
