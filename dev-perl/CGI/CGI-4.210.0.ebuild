@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-4.90.0.ebuild,v 1.2 2015/06/13 17:32:31 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CGI/CGI-4.210.0.ebuild,v 1.1 2015/07/21 22:06:59 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=LEEJO
-MODULE_VERSION=4.09
+MODULE_VERSION=4.21
 inherit perl-module
 
 DESCRIPTION="Simple Common Gateway Interface Class"
@@ -16,15 +16,20 @@ IUSE="test"
 
 RDEPEND="
 	virtual/perl-Carp
+	virtual/perl-Encode
 	virtual/perl-Exporter
 	>=virtual/perl-File-Spec-0.820.0
 	virtual/perl-File-Temp
+	>=dev-perl/HTML-Parser-3.690.0
 	virtual/perl-if
 	>=virtual/perl-parent-0.225.0
 "
 DEPEND="${RDEPEND}
 	virtual/perl-ExtUtils-MakeMaker
-	test? ( >=virtual/perl-Test-Simple-0.980.0 )
+	test? (
+		>=virtual/perl-Test-Simple-0.980.0
+		dev-perl/Test-Warn
+	)
 "
 
-SRC_TEST="do"
+SRC_TEST="do parallel"
