@@ -1,11 +1,10 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/MARC-XML-1.000.300.ebuild,v 1.1 2014/01/23 17:15:46 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MARC-XML/MARC-XML-1.0.3.ebuild,v 1.1 2015/07/21 22:40:09 dilfridge Exp $
 
 EAPI=5
 
 MODULE_AUTHOR=GMCHARLT
-MODULE_VERSION=1.0.3
 inherit perl-module
 
 DESCRIPTION="A subclass of MARC.pm to provide XML support"
