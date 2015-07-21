@@ -1,6 +1,6 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.11.ebuild,v 1.1 2014/10/18 02:39:10 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythonmagick/pythonmagick-0.9.11.ebuild,v 1.2 2015/07/21 07:57:23 idella4 Exp $
 
 EAPI="5"
 AUTOTOOLS_AUTORECONF=1
@@ -34,8 +34,8 @@ DEPEND="${RDEPEND}
 S="${WORKDIR}/${MY_P}"
 
 PATCHES=(
-	"${FILESDIR}/${PN}-0.9.10-Makefile.am.patch"
-	"${FILESDIR}/${PN}-0.9.10-ax_boost_python.patch"
+	"${FILESDIR}"/${PN}-0.9.10-Makefile.am.patch
+	"${FILESDIR}"/${PN}-0.9.10-ax_boost_python.patch 
 )
 
 src_configure() {
