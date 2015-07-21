@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.99 2015/07/20 20:58:10 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.100 2015/07/21 06:56:01 amynka Exp $
+
+  21 Jul 2015; Amy Winston <amynka@gentoo.org> metadata.xml:
+  Remove myself as a maintainer and add Nick Andrade as a maintainer.
 
   20 Jul 2015; Amy Winston <amynka@gentoo.org> metadata.xml:
   Add myself as a maintainer.
