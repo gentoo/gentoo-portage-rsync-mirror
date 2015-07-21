@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.360 2015/07/12 00:27:07 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.361 2015/07/21 15:33:26 monsieurp Exp $
+
+*tomcat-6.0.44-r0 (21 Jul 2015)
+*tomcat-7.0.59-r2 (21 Jul 2015)
+*tomcat-8.0.23-r2 (21 Jul 2015)
+
+  21 Jul 2015; Patrice Clement <monsieurp@gentoo.org> +tomcat-6.0.44-r0.ebuild,
+  +tomcat-7.0.59-r2.ebuild, +tomcat-8.0.23-r2.ebuild:
+  Create logs directory in $CATALINA_BASE and set up perms to 0750. Fix security
+  bug 458890.
 
   12 Jul 2015; Patrick Lauer <patrick@gentoo.org> -tomcat-8.0.22-r1.ebuild,
   -tomcat-8.0.22.ebuild:
