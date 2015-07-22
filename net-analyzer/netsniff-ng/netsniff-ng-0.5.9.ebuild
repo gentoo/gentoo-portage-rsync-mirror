@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.9.ebuild,v 1.1 2015/07/21 23:01:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.9.ebuild,v 1.2 2015/07/22 18:08:07 mrueg Exp $
 
 EAPI=5
 
@@ -48,7 +48,7 @@ src_prepare() {
 
 src_compile() {
 	emake CC="$(tc-getCC)" LD="$(tc-getCC)" CCACHE="" \
-		LEX=lex YAAC=bison STRIP=@true \
+		LEX=lex YAAC=bison STRIP=true \
 		Q= HARDENING=1
 }
 

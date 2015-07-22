@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-3.0.0.ebuild,v 1.1 2015/07/10 22:02:43 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-3.0.0.ebuild,v 1.2 2015/07/22 18:27:21 amynka Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_2,3_3,3_4} )
@@ -82,6 +82,10 @@ DEPEND="${RDEPEND}
 	eigen? ( dev-cpp/eigen:3 )
 	java? ( >=virtual/jdk-1.6 )
 "
+
+PATCHES=(
+	"${FILESDIR}/${P}-gles.patch"
+)
 
 pkg_setup() {
 	use python && python-single-r1_pkg_setup

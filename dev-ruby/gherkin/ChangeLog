@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/gherkin
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.91 2015/07/18 11:24:25 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/gherkin/ChangeLog,v 1.92 2015/07/22 18:28:10 zlogene Exp $
+
+  22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> gherkin-2.12.2.ebuild:
+  add ~x86 keyword wrt bug #553470
 
   18 Jul 2015; Jeroen Roovers <jer@gentoo.org> gherkin-2.12.2.ebuild:
   Mark ~hppa ~ppc64 (bug #553470).
