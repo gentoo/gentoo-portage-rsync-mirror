@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.14.18.ebuild,v 1.1 2015/02/04 01:16:30 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.15.3.ebuild,v 1.1 2015/07/21 23:16:20 xmw Exp $
 EAPI=5
 
 # PyCObject_Check and PyCObject_AsVoidPtr vanished with python 3.3, and setup.py not python3.2 copmat
@@ -14,7 +14,7 @@ SRC_URI="http://xpra.org/src/${P}.tar.xz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86 ~amd64-linux ~x86-linux"
-IUSE="+client +clipboard csc dec_av dec_av2 libav opengl pulseaudio +rencode server sound vpx webp x264"
+IUSE="+client +clipboard csc cups dec_av2 libav opengl pulseaudio server sound vpx webp x264 x265"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}
 	clipboard? ( || ( server client ) )
@@ -36,8 +36,8 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 		!libav? ( >=media-video/ffmpeg-1.2.2:0= )
 		libav? ( media-video/libav:0= )
 	)
-	dec_av? (
-		!libav? ( >=media-video/ffmpeg-1.2.2:0= )
+	dec_av2? (
+		!libav? ( >=media-video/ffmpeg-2:0= )
 		libav? ( media-video/libav:0= )
 	)
 	opengl? ( dev-python/pygtkglext )
@@ -49,6 +49,10 @@ COMMON_DEPEND=""${PYTHON_DEPS}"
 	webp? ( media-libs/libwebp )
 	x264? ( media-libs/x264
 		!libav? ( >=media-video/ffmpeg-1.0.4:0= )
+		libav? ( media-video/libav:0= )
+	)
+	x265? ( media-libs/x265
+		!libav? ( >=media-video/ffmpeg-2:0= )
 		libav? ( media-video/libav:0= )
 	)"
 
@@ -71,7 +75,7 @@ DEPEND="${COMMON_DEPEND}
 python_prepare_all() {
 	epatch \
 		"${FILESDIR}"/${PN}-0.13.1-ignore-gentoo-no-compile.patch \
-		"${FILESDIR}"/${PN}-0.14.0-prefix.patch
+		"${FILESDIR}"/${PN}-0.15.0-prefix.patch
 
 	if use libav ; then
 		if ! has_version ">=media-video/libav-9" ; then
@@ -87,23 +91,19 @@ python_configure_all() {
 		$(use_with client)
 		$(use_with clipboard)
 		$(use_with csc csc_swscale)
-		$(use_with dec_av dec_avcodec)
+		$(use_with cups printing)
 		$(use_with dec_av2 dec_avcodec2)
 		$(use_with opengl)
-		$(use_with rencode)
-		$(use_with server cymaths)
 		$(use_with server shadow)
 		$(use_with server)
 		$(use_with sound)
 		$(use_with vpx)
 		$(use_with webp)
 		$(use_with x264 enc_x264)
+		$(use_with x265 enc_x265)
 		--with-Xdummy
-		--with-argb
-		--with-cyxor
 		--with-gtk2
 		--without-gtk3
-		--without-qt4
 		--with-strict
 		--with-warn
 		--with-x11

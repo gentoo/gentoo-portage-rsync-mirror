@@ -1,18 +1,18 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-9999.ebuild,v 1.3 2015/07/21 23:01:41 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netsniff-ng/netsniff-ng-0.5.9.ebuild,v 1.1 2015/07/21 23:01:41 xmw Exp $
 
 EAPI=5
 
-inherit git-2 eutils multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="high performance network sniffer for packet inspection"
 HOMEPAGE="http://netsniff-ng.org/"
-EGIT_REPO_URI="git://github.com/borkmann/${PN}.git"
+SRC_URI="http://pub.${PN}.org/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="dev-libs/geoip
