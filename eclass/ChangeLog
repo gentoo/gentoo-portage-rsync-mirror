@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1724 2015/07/22 09:20:07 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1725 2015/07/22 12:47:40 kensington Exp $
+
+  22 Jul 2015; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
+  Fix oldpim unpack by Andreas Sturmlechner <andreas.sturmlechner@gmail.com>
+  wrt bug #555566.
 
   22 Jul 2015; Patrice Clement <monsieurp@gentoo.org> java-utils-2.eclass:
   Introduce java-pkg_rm_files as a helper function along with JAVA_RM_FILES
