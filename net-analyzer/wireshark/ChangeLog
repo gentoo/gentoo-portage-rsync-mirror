@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/wireshark
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.738 2015/07/22 15:32:49 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wireshark/ChangeLog,v 1.739 2015/07/22 17:34:09 zlogene Exp $
+
+  22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> -wireshark-1.12.4.ebuild:
+  Drop old insecure version
 
   22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> wireshark-1.12.6.ebuild:
   ia64 stable wrt bug #552434
