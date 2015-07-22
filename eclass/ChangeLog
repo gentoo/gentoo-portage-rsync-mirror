@@ -1,6 +1,10 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1723 2015/07/20 15:05:49 slyfox Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1724 2015/07/22 09:20:07 monsieurp Exp $
+
+  22 Jul 2015; Patrice Clement <monsieurp@gentoo.org> java-utils-2.eclass:
+  Introduce java-pkg_rm_files as a helper function along with JAVA_RM_FILES
+  array to readily get rid of useless files.
 
   20 Jul 2015; Sergei Trofimovich <slyfox@gentoo.org> haskell-cabal.eclass:
   Workaround upstream cabal tests hangup bug #537500 by Michael Orlitzky; use
