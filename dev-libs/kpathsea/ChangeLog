@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/kpathsea
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.49 2015/07/22 19:14:08 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/kpathsea/ChangeLog,v 1.50 2015/07/22 21:07:26 mrueg Exp $
+
+  22 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -kpathsea-6.0.1_p20110705.ebuild:
+  Remove old.
 
   22 Jul 2015; Anthony G. Basile <blueness@gentoo.org>
   kpathsea-6.2.0_p20140525.ebuild:
