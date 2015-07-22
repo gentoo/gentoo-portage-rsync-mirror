@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.42 2015/04/14 22:02:17 mrueg Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.43 2015/07/22 01:22:28 vapier Exp $
+
+*cronbase-0.3.4 (22 Jul 2015)
+
+  22 Jul 2015; Mike Frysinger <vapier@gentoo.org> +cronbase-0.3.4.ebuild,
+  +files/run-crons-0.3.4:
+  Change how we filter script names to ignore .* and *~ files #427212 by David
+  Voge.
 
   14 Apr 2015; Manuel Rüger <mrueg@gentoo.org> -cronbase-0.3.2-r1.ebuild,
   -cronbase-0.3.2.ebuild, -files/run-crons-0.3.2:
