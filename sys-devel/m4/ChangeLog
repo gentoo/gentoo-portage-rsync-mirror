@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/m4
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.166 2015/07/20 04:31:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.167 2015/07/22 11:45:11 mrueg Exp $
+
+  22 Jul 2015; Manuel Rüger <mrueg@gentoo.org>
+  -files/m4-1.4.15-git-version-gen.patch,
+  -files/m4-1.4.15-uclibc-sched_param-def.patch, -m4-1.4.15.ebuild:
+  Remove old.
 
   20 Jul 2015; Mike Frysinger <vapier@gentoo.org> m4-1.4.16.ebuild,
   m4-1.4.17.ebuild:
