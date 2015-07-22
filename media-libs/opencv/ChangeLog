@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/opencv
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.128 2015/07/22 18:27:21 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/ChangeLog,v 1.129 2015/07/22 20:04:38 amynka Exp $
+
+  22 Jul 2015; Amy Winston <amynka@gentoo.org> opencv-3.0.0.ebuild:
+  Cmake use build added for -java bug #555650
 
   22 Jul 2015; Amy Winston <amynka@gentoo.org> +files/opencv-3.0.0-gles.patch,
   opencv-3.0.0.ebuild:
