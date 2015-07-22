@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.15.3.ebuild,v 1.1 2015/07/21 23:16:20 xmw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/xpra/xpra-0.15.3.ebuild,v 1.3 2015/07/21 23:38:47 xmw Exp $
 EAPI=5
 
 # PyCObject_Check and PyCObject_AsVoidPtr vanished with python 3.3, and setup.py not python3.2 copmat
@@ -60,6 +60,7 @@ RDEPEND="${COMMON_DEPEND}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	dev-python/ipython[${PYTHON_USEDEP}]
 	dev-python/numpy[${PYTHON_USEDEP}]
+	dev-python/rencode[${PYTHON_USEDEP}]
 	virtual/python-imaging[${PYTHON_USEDEP}]
 	virtual/ssh
 	x11-apps/setxkbmap
@@ -73,6 +74,8 @@ DEPEND="${COMMON_DEPEND}
 	>=dev-python/cython-0.16[${PYTHON_USEDEP}]"
 
 python_prepare_all() {
+	rm -rf rencode || die
+
 	epatch \
 		"${FILESDIR}"/${PN}-0.13.1-ignore-gentoo-no-compile.patch \
 		"${FILESDIR}"/${PN}-0.15.0-prefix.patch

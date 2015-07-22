@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/freecad
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.26 2015/04/08 17:58:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/ChangeLog,v 1.27 2015/07/21 23:55:11 xmw Exp $
+
+  21 Jul 2015; Michael Weber <xmw@gentoo.org> freecad-9999.ebuild:
+  Update EGIT_REPO_URI to github, fix README installation (thanks Fabian Kislat
+  , bug 553362).
 
   08 Apr 2015; Michał Górny <mgorny@gentoo.org> freecad-0.13.1830-r1.ebuild,
   freecad-0.14.3702-r1.ebuild, freecad-0.14.3702.ebuild, freecad-9999.ebuild:

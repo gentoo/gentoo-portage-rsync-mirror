@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-9999.ebuild,v 1.6 2015/04/08 17:58:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-9999.ebuild,v 1.7 2015/07/21 23:55:11 xmw Exp $
 
 EAPI=5
 
@@ -10,7 +10,7 @@ inherit cmake-utils eutils git-r3 fortran-2 multilib python-single-r1
 
 DESCRIPTION="QT based Computer Aided Design application"
 HOMEPAGE="http://www.freecadweb.org/"
-EGIT_REPO_URI="git://git.code.sf.net/p/free-cad/code"
+EGIT_REPO_URI="https://github.com/FreeCAD/FreeCAD.git"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -128,7 +128,7 @@ src_install() {
 	newicon src/Main/icon.ico ${PN}.ico
 	make_desktop_entry FreeCAD
 
-	dodoc README.Linux ChangeLog.txt
+	dodoc README ChangeLog.txt
 
 	# disable compression of QT assistant help files
 	>> "${ED}"usr/share/doc/${P}/freecad.qhc.ecompress.skip
