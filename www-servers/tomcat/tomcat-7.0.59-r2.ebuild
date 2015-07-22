@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.59-r2.ebuild,v 1.1 2015/07/21 15:33:26 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/tomcat-7.0.59-r2.ebuild,v 1.2 2015/07/22 12:21:07 monsieurp Exp $
 
 EAPI=5
 
@@ -109,8 +109,8 @@ src_install() {
 
 	# create "logs" directory in $CATALINA_BASE
 	# and set correct perms, see #458890
-	dodir logs
-	fperms 0750 logs
+	dodir "${dest}"/logs
+	fperms 0750 "${dest}"/logs
 
 	# replace the default pw with a random one, see #92281
 	local randpw=$(echo ${RANDOM}|md5sum|cut -c 1-15)

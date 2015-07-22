@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r3.ebuild,v 1.3 2015/07/12 18:15:04 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20090611_p1038-r3.ebuild,v 1.4 2015/07/22 12:22:17 aballier Exp $
 
 EAPI=4
 
-inherit latex-package toolchain-funcs java-pkg-opt-2
+inherit latex-package toolchain-funcs java-pkg-opt-2 flag-o-matic
 
 IUSE=""
 
@@ -21,10 +21,13 @@ KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86 ~amd64-
 SLOT="0"
 
 DEPEND=">=sys-apps/sed-4
+	virtual/pkgconfig
+	dev-libs/kpathsea
 	java? ( >=virtual/jdk-1.5 )"
 
 RDEPEND="app-text/ghostscript-gpl
 	media-gfx/imagemagick
+	dev-libs/kpathsea
 	java? ( >=virtual/jre-1.5 )"
 
 IUSE="java"
@@ -47,6 +50,8 @@ src_prepare() {
 }
 
 src_compile() {
+	has_version '>=dev-libs/kpathsea-6.2.1' && append-cppflags "$($(tc-getPKG_CONFIG) --cflags kpathsea)"
+
 	cd "${S}/src/"
 	einfo "Compiling postprocessor sources..."
 	for f in tex4ht t4ht htcmd ; do
