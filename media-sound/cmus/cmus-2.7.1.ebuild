@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.7.1.ebuild,v 1.2 2015/07/22 03:17:57 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cmus/cmus-2.7.1.ebuild,v 1.3 2015/07/22 07:42:47 yngwin Exp $
 
 EAPI=5
 inherit bash-completion-r1 multilib
@@ -12,8 +12,8 @@ SRC_URI="http://github.com/cmus/cmus/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~ppc ~x86 ~x86-fbsd ~amd64-linux ~x86-linux ~x86-solaris"
-IUSE="aac alsa ao cue cdio cddb discid debug examples +flac jack libsamplerate \
-	+mad mikmod modplug mp4 musepack opus oss pidgin pulseaudio tremor +unicode \
+IUSE="aac alsa ao cue cdio cddb discid debug examples +flac jack libsamplerate
+	+mad mikmod modplug mp4 musepack opus oss pidgin pulseaudio tremor +unicode
 	+vorbis wavpack wma"
 
 CDEPEND="sys-libs/ncurses[unicode?]
