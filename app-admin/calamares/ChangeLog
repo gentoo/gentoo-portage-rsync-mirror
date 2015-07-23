@@ -1,0 +1,10 @@
+# ChangeLog for app-admin/calamares
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/calamares/ChangeLog,v 1.1 2015/07/23 19:32:04 johu Exp $
+
+*calamares-1.1.2 (23 Jul 2015)
+
+  23 Jul 2015; Johannes Huber <johu@gentoo.org> +calamares-1.1.2.ebuild,
+  +files/calamares-pkexec, +metadata.xml:
+  New package. Imported from my dev overlay. Initial ebuild by Francesco Ferro
+  <skullbocks@dark-lab.net>. Improvements by me.
