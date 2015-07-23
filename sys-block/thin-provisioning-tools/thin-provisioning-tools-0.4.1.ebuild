@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.4.1.ebuild,v 1.2 2015/07/20 17:31:28 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-block/thin-provisioning-tools/thin-provisioning-tools-0.4.1.ebuild,v 1.3 2015/07/23 20:03:50 pacho Exp $
 
 EAPI=5
 inherit autotools eutils
@@ -13,7 +13,7 @@ SRC_URI="http://github.com/jthornber/${PN}/archive/v${PV}${EXT} -> ${BASE_A}"
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ppc ~ppc64 ~s390 ~sh ~sparc ~x86 ~amd64-linux ~x86-linux"
 IUSE="test"
 
 RDEPEND="dev-libs/expat

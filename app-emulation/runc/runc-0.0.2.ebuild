@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/runc/runc-0.0.2.ebuild,v 1.1 2015/07/20 02:37:38 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/runc/runc-0.0.2.ebuild,v 1.2 2015/07/23 20:29:32 cardoe Exp $
 
 EAPI=5
 
@@ -10,9 +10,8 @@ HOMEPAGE="http://runc.io"
 GITHUB_URI="github.com/opencontainers/runc"
 
 if [[ ${PV} == *9999* ]]; then
-	SRC_URI=""
 	EGIT_REPO_URI="git://${GITHUB_URI}.git"
-	inherit git-2
+	inherit git-r3
 else
 	SRC_URI="https://${GITHUB_URI}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64"
@@ -46,5 +45,5 @@ src_compile() {
 }
 
 src_install() {
-	newbin runc runc
+	dobin runc
 }
