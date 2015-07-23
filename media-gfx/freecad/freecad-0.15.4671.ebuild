@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.14.3702.ebuild,v 1.3 2015/04/08 17:58:14 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.15.4671.ebuild,v 1.2 2015/07/23 21:37:17 xmw Exp $
 
 EAPI=5
 
@@ -10,42 +10,36 @@ inherit cmake-utils eutils fortran-2 multilib python-single-r1
 
 DESCRIPTION="QT based Computer Aided Design application"
 HOMEPAGE="http://www.freecadweb.org/"
-SRC_URI="mirror://sourceforge/free-cad/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/free-cad/${PN}_${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 COMMON_DEPEND="dev-cpp/eigen:3
-	dev-games/ode
 	dev-libs/boost
-	dev-libs/libf2c
-	dev-libs/libspnav[X]
 	dev-libs/xerces-c[icu]
 	dev-python/matplotlib
+	dev-python/pyside[X]
+	dev-python/pyside-tools
 	dev-python/shiboken
 	dev-qt/designer:4
 	dev-qt/qtgui:4
 	dev-qt/qtopengl:4
 	dev-qt/qtsvg:4
 	dev-qt/qtwebkit:4
-	media-libs/SoQt
-	media-libs/coin[doc]
-	net-libs/ptlib
-	sci-libs/gts
-	sci-libs/opencascade
+	media-libs/coin
+	|| ( sci-libs/opencascade:6.8.0 sci-libs/opencascade:6.7.1 sci-libs/opencascade:6.6.0 sci-libs/opencascade:6.5.5 )
 	sys-libs/zlib
 	virtual/glu
 	${PYTHON_DEPS}"
 RDEPEND="${COMMON_DEPEND}
 	dev-qt/assistant:4
-	dev-python/pycollada
 	dev-python/pivy
-	dev-python/PyQt4[svg]
-	dev-python/pyopencl
 	dev-python/numpy"
 DEPEND="${COMMON_DEPEND}
+	dev-python/pyside-tools
 	>=dev-lang/swig-2.0.4-r1:0"
 
 # http://bugs.gentoo.org/show_bug.cgi?id=352435
@@ -60,28 +54,23 @@ RESTRICT="bindist mirror"
 pkg_setup() {
 	fortran-2_pkg_setup
 	python-single-r1_pkg_setup
+
+	[ -z "${CASROOT}" ] && die "empty \$CASROOT, run eselect opencascade set or define otherwise"
 }
 
 src_prepare() {
 	einfo remove bundled libs
 	rm -rf src/3rdParty/{boost,Pivy*}
 
-	epatch "${FILESDIR}"/${P}-install-paths.patch
+	epatch "${FILESDIR}"/${PN}-0.14.3702-install-paths.patch
 
-	einfo "Patching cMake/FindCoin3DDoc.cmake ..."
-	local my_coin_version=$(best_version media-libs/coin)
-	local my_coin_path="${EROOT}"usr/share/doc/${my_coin_version##*/}/html
-	sed -e "s:/usr/share/doc/libcoin60-doc/html:${my_coin_path}:" \
-		-i cMake/FindCoin3DDoc.cmake || die
+	#bug 518996
+	sed -e "/LibDir = /s:'lib':'"$(get_libdir)"':g" \
+		-i src/App/FreeCADInit.py || die
+
 }
 
 src_configure() {
-	local my_occ_env=${EROOT}etc/env.d/50opencascade
-	if [ -e "${EROOT}etc//env.d/51opencascade" ] ; then
-		my_occ_env=${EROOT}etc/env.d/51opencascade
-	fi
-	export CASROOT=$(sed -ne '/^CASROOT=/{s:.*=:: ; p}' $my_occ_env)
-
 	local mycmakeargs=(
 		-DOCC_INCLUDE_DIR="${CASROOT}"/inc
 		-DOCC_INCLUDE_PATH="${CASROOT}"/inc
