@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/facter
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.140 2015/07/19 08:47:50 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/facter/ChangeLog,v 1.141 2015/07/23 02:42:27 prometheanfire Exp $
+
+*facter-3.0.2 (23 Jul 2015)
+
+  23 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> +facter-3.0.2.ebuild:
+  bup
 
   19 Jul 2015; Jeroen Roovers <jer@gentoo.org> facter-3.0.1-r4.ebuild:
   Mark ~hppa (bug #553952).

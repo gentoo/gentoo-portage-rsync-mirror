@@ -1,6 +1,18 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.44 2015/07/22 07:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.46 2015/07/23 02:57:41 vapier Exp $
+
+*cronbase-0.3.6 (23 Jul 2015)
+
+  23 Jul 2015; Mike Frysinger <vapier@gentoo.org> +cronbase-0.3.6.ebuild,
+  +files/run-crons-0.3.6:
+  Rewrite run-crons in POSIX shell #530416 by Alexander Hof.
+
+*cronbase-0.3.5-r1 (23 Jul 2015)
+
+  23 Jul 2015; Mike Frysinger <vapier@gentoo.org> +cronbase-0.3.5-r1.ebuild,
+  -cronbase-0.3.5.ebuild, files/run-crons-0.3.5:
+  Use err level when logging failed scripts #540274 by Tobias Klausmann.
 
 *cronbase-0.3.5 (22 Jul 2015)
 

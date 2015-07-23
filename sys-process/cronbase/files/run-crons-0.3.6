@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.3.5,v 1.2 2015/07/23 02:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/files/run-crons-0.3.6,v 1.1 2015/07/23 02:57:41 vapier Exp $
 #
 # 12 Oct 2008; Thilo Bangert <bangert@gentoo.org> run-crons:
 #     ignore emacs backup files (bug #237200)
@@ -36,7 +36,7 @@ LOCKFILE=${LOCKDIR}/lock
 # Usage: log <level> <args to logger>
 # Log a message via syslog.
 log() {
-	local level=$1
+	local level="$1"
 	shift
 	logger -i -p "cron.${level}" -t run-crons "$@"
 }
@@ -45,7 +45,8 @@ mkdir -p ${LOCKDIR}
 
 # Make sure we're not running multiple instances at once.
 # Try twice to lock, otherwise give up.
-for ((i = 0; i < 2; i = i + 1)); do
+i=0
+while [ $(( i += 1 )) -le 2 ] ; do
 	ln -sn $$ ${LOCKFILE} 2>/dev/null && break
 
 	# lock failed, check for a running process.
@@ -56,7 +57,9 @@ for ((i = 0; i < 2; i = i + 1)); do
 
 	# better than kill -0 because we can verify that it's really
 	# another run-crons process
-	if [[ $(</proc/${cronpid}/cmdline) == $(</proc/$$/cmdline) ]] 2>/dev/null; then
+	cmdline1=$(cat /proc/${cronpid}/cmdline 2>/dev/null) || :
+	cmdline2=$(cat /proc/$$/cmdline)
+	if [ "${cmdline1}" = "${cmdline2}" ] ; then
 		# whoa, another process is really running
 		exit 0
 	else
@@ -65,13 +68,13 @@ for ((i = 0; i < 2; i = i + 1)); do
 done
 
 # Check to make sure locking was successful
-if [[ ! -L ${LOCKFILE} ]]; then
+if [ ! -L "${LOCKFILE}" ] ; then
 	echo "Can't create or read existing ${LOCKFILE}, giving up"
 	exit 1
 fi
 
 # Set a trap to remove the lockfile when we're finished
-trap "rm -f ${LOCKFILE}" 0 1 2 3 15
+trap "rm -f ${LOCKFILE}" EXIT HUP INT QUIT TERM
 
 
 EXIT_STATUS=0
@@ -96,7 +99,7 @@ for BASE in hourly daily weekly monthly ; do
 			TIME="-cmin +44645" ;;
 		esac
 
-		find ${LOCKDIR} -name cron.$BASE $TIME -exec rm {} \; &>/dev/null || true
+		find ${LOCKDIR} -name cron.$BASE $TIME -exec rm {} \; 2>/dev/null || :
 	fi
 
 	# if there is no touch file, make one then run the scripts
@@ -105,7 +108,7 @@ for BASE in hourly daily weekly monthly ; do
 
 		set +e
 		for SCRIPT in $CRONDIR/* ; do
-			if [[ -x $SCRIPT && ! -d $SCRIPT ]]; then
+			if [ -x "${SCRIPT}" ] && [ ! -d "${SCRIPT}" ] ; then
 				# Filter out files people do not expect to be executed.
 				case ${SCRIPT} in
 				.*|*~) continue ;;
@@ -125,6 +128,6 @@ done
 
 # Clean out bogus cron.$BASE files with future times
 touch ${LOCKDIR}
-find ${LOCKDIR} -newer ${LOCKDIR} -exec /bin/rm -f {} \; &>/dev/null || true
+find ${LOCKDIR} -newer ${LOCKDIR} -exec /bin/rm -f {} \; 2>/dev/null || :
 
 exit ${EXIT_STATUS}
