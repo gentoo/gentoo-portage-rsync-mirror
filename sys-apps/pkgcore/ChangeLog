@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pkgcore
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.191 2015/07/18 17:01:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/ChangeLog,v 1.192 2015/07/23 06:25:12 radhermit Exp $
+
+  23 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcore-9999.ebuild:
+  Add setuptools dep.
 
   18 Jul 2015; Tim Harder <radhermit@gentoo.org> -pkgcore-0.9.ebuild,
   pkgcore-9999.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pkgcheck
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcheck/ChangeLog,v 1.5 2015/07/18 17:00:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pkgcheck/ChangeLog,v 1.6 2015/07/23 06:27:54 radhermit Exp $
+
+  23 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcheck-9999.ebuild:
+  Add setuptools dep.
 
   18 Jul 2015; Tim Harder <radhermit@gentoo.org> pkgcheck-9999.ebuild:
   Revert py3 targets addition, a bit more work should be done first.

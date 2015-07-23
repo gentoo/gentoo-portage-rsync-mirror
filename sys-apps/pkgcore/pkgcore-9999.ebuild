@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.27 2015/07/18 17:01:33 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pkgcore/pkgcore-9999.ebuild,v 1.28 2015/07/23 06:25:12 radhermit Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -23,6 +23,7 @@ IUSE="doc test"
 
 RDEPEND="=dev-python/snakeoil-9999[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
+	dev-python/setuptools[${PYTHON_USEDEP}]
 	dev-python/pyparsing[${PYTHON_USEDEP}]
 	dev-python/sphinx[${PYTHON_USEDEP}]
 	test? ( $(python_gen_cond_dep 'dev-python/mock[${PYTHON_USEDEP}]' python2_7) )
