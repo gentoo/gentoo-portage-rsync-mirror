@@ -9,4 +9,4 @@ RDEPEND=>=sys-libs/libselinux-9999:=[python] >=sys-libs/glibc-2.4 >=sys-libs/lib
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~perfinion/distfiles/policycoreutils-extra-1.34.tar.bz2
 _eclasses_=bash-completion-r1	c8399c7c7ecbcf7ed6e5bd3abb3d4af3	eutils	9fb270e417e0e83d64ca52586c4a79de	git-r3	727a612b4c6247766904e3f74a326e2b	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	62927b3db3a589b0806255f3a002d5d3	python-r1	23846c6ba39f6655e2027001eeed8e81	python-utils-r1	ae9becb5d45344c01939c3f57df0d3fd	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=710ae65d04c76b862ffdb36d567189c0
+_md5_=522d14f3aacad7fc87f1fd3d6e6867c1
