@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome/google-chrome-43.0.2357.134_p1.ebuild,v 1.1 2015/07/15 13:13:37 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/google-chrome-unstable/google-chrome-unstable-45.0.2454.12_p1.ebuild,v 1.1 2015/07/22 23:04:05 floppym Exp $
 
 EAPI="5"
 
