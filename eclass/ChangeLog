@@ -1,6 +1,9 @@
 # ChangeLog for eclass directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1725 2015/07/22 12:47:40 kensington Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ChangeLog,v 1.1726 2015/07/23 15:42:26 williamh Exp $
+
+  23 Jul 2015; William Hubbs <williamh@gentoo.org> golang-build.eclass:
+  Add functions to retrieve Go library paths and install Go packages.
 
   22 Jul 2015; Michael Palimaka <kensington@gentoo.org> kde4-meta.eclass:
   Fix oldpim unpack by Andreas Sturmlechner <andreas.sturmlechner@gmail.com>
