@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/suds-jurko
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/suds-jurko/ChangeLog,v 1.1 2015/07/23 03:26:03 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/suds-jurko/ChangeLog,v 1.2 2015/07/23 03:33:20 prometheanfire Exp $
+
+  23 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> suds-jurko-0.6.ebuild:
+  adding x86
 
 *suds-jurko-0.6 (23 Jul 2015)
 
