@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.288 2015/07/17 12:12:36 klausman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.289 2015/07/23 20:58:46 pacho Exp $
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> shorewall-4.6.10.1.ebuild:
+  ppc stable wrt bug #555188
 
   17 Jul 2015; Tobias Klausmann <klausman@gentoo.org>
   shorewall-4.6.10.1.ebuild:

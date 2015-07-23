@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dvisvgm
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.76 2015/07/20 05:38:07 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvisvgm/ChangeLog,v 1.77 2015/07/23 20:44:37 pacho Exp $
+
+  23 Jul 2015; Pacho Ramos <pacho@gentoo.org> dvisvgm-1.8.1.ebuild:
+  ppc stable wrt bug #534906
 
   20 Jul 2015; Jeroen Roovers <jer@gentoo.org> dvisvgm-1.8.1.ebuild:
   Stable for HPPA (bug #534906).
