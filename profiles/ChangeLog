@@ -1,10 +1,13 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10198 2015/07/21 08:09:17 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10199 2015/07/23 17:36:30 pesa Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  23 Jul 2015; Davide Pesavento <pesa@gentoo.org> package.mask:
+  Mask new version of qtwebkit:4 from 2.3 upstream branch.
 
   21 Jul 2015; Ian Delaney <idella4@gentoo.org> package.mask:
   Mask roccat-tools-3.5.0-r1 until deps satisfy
