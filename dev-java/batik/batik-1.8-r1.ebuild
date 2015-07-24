@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.8-r1.ebuild,v 1.4 2015/06/28 14:58:49 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/batik-1.8-r1.ebuild,v 1.5 2015/07/24 09:46:03 monsieurp Exp $
 
 EAPI=5
 JAVA_PKG_IUSE="doc"
@@ -74,7 +74,7 @@ src_compile() {
 
 	cd "${S}"/"${P}/lib" || die
 
-	# batik-all-1.8.jar is a all-in-one jar that contains all other jars. 
+	# batik-all-1.8.jar is a all-in-one jar that contains all other jars.
 	# We don't want to package it.
 	rm -v ${PN}-all-${PV}.jar
 }
