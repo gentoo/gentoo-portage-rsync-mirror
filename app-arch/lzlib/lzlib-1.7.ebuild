@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lzlib/lzlib-1.5.ebuild,v 1.1 2014/02/27 10:55:45 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lzlib/lzlib-1.7.ebuild,v 1.1 2015/07/24 20:31:55 polynomial-c Exp $
 
 EAPI=5
 
@@ -8,7 +8,7 @@ inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Library for lzip compression"
 HOMEPAGE="http://www.nongnu.org/lzip/lzlib.html"
-SRC_URI="http://download.savannah.gnu.org/releases-noredirect/lzip/${P}.tar.gz"
+SRC_URI="http://download.savannah.gnu.org/releases-noredirect/lzip/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-3"
 SLOT="0"
