@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-vmware/oslo-vmware-0.11.2.ebuild,v 1.1 2015/07/23 03:33:58 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/oslo-vmware/oslo-vmware-0.11.2.ebuild,v 1.2 2015/07/24 06:07:53 prometheanfire Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_4 )
@@ -55,8 +55,7 @@ RDEPEND="
 	<dev-python/oslo-utils-1.5.0[${PYTHON_USEDEP}]
 	>=dev-python/Babel-1.3[${PYTHON_USEDEP}]
 	>=dev-python/pyyaml-3.1.0[${PYTHON_USEDEP}]
-	>=dev-python/suds-0.4[$(python_gen_usedep 'python2*')]
-	>=dev-python/suds-jurko-0.6[$(python_gen_usedep 'python3*')]
+	>=dev-python/suds-0.6[${PYTHON_USEDEP}]
 	>=dev-python/eventlet-0.16.1[${PYTHON_USEDEP}]
 	!~dev-python/eventlet-0.17.0[${PYTHON_USEDEP}]
 	>=dev-python/requests-2.2.0[${PYTHON_USEDEP}]
@@ -66,6 +65,9 @@ RDEPEND="
 	>=dev-python/oslo-concurrency-1.8.0[${PYTHON_USEDEP}]
 	<dev-python/oslo-concurrency-1.9.0[${PYTHON_USEDEP}]
 "
+python_prepare() {
+	sed -i '/suds-jurko/d' requirements-py3.txt || die
+}
 
 python_test() {
 	nosetests tests/ || die "test failed under ${EPYTHON}"
