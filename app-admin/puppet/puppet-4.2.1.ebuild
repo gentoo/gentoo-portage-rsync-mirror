@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.2.1.ebuild,v 1.1 2015/07/23 23:03:42 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/puppet/puppet-4.2.1.ebuild,v 1.2 2015/07/24 00:24:19 prometheanfire Exp $
 
 EAPI="5"
 
@@ -18,11 +18,13 @@ LICENSE="Apache-2.0 GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~hppa ~ppc ~x86"
 IUSE="augeas diff doc emacs ldap rrdtool selinux shadow sqlite vim-syntax xemacs"
+RESTRICT="test"
 
 ruby_add_rdepend "
 	dev-ruby/hiera
 	>=dev-ruby/rgen-0.6.5 =dev-ruby/rgen-0.6*
 	dev-ruby/json
+	>=dev-ruby/facter-3.0.0
 	augeas? ( dev-ruby/ruby-augeas )
 	diff? ( dev-ruby/diff-lcs )
 	doc? ( dev-ruby/rdoc )
@@ -31,12 +33,19 @@ ruby_add_rdepend "
 	sqlite? ( dev-ruby/sqlite3 )
 	virtual/ruby-ssl"
 
-DEPEND="${DEPEND}
-	dev-lang/ruby
-	>=dev-ruby/facter-3.0.0
+ruby_add_bdepend "
+	test? (
+		dev-ruby/mocha
+		dev-ruby/rack
+		dev-ruby/rspec-its
+	)"
+# this should go in the above lists, but isn't because of test deps not being keyworded
+#		dev-ruby/rspec-collection_matchers
+
+DEPEND+=" ${DEPEND}
 	emacs? ( virtual/emacs )
 	xemacs? ( app-editors/xemacs )"
-RDEPEND="${RDEPEND}
+RDEPEND+=" ${RDEPEND}
 	rrdtool? ( >=net-analyzer/rrdtool-1.2.23[ruby] )
 	selinux? (
 		sys-libs/libselinux[ruby]
@@ -55,6 +64,9 @@ pkg_setup() {
 all_ruby_prepare() {
 	# Avoid spec that require unpackaged json-schema.
 	rm spec/lib/matchers/json.rb $( grep -Rl matchers/json spec) || die
+
+	# can't be run within portage.
+	epatch "${FILESDIR}/puppet-fix-tests-4.x.patch"
 
 	# Avoid specs that can only run in the puppet.git repository. This
 	# should be narrowed down to the specific specs.
