@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.448 2015/07/23 07:09:16 patrick Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.449 2015/07/24 05:54:09 jer Exp $
+
+  24 Jul 2015; Jeroen Roovers <jer@gentoo.org> postgresql-9.0.22.ebuild,
+  postgresql-9.1.18.ebuild, postgresql-9.2.13.ebuild, postgresql-9.3.9.ebuild,
+  postgresql-9.4.4.ebuild:
+  Stable for HPPA (bug #554970).
 
   23 Jul 2015; Patrick Lauer <patrick@gentoo.org> postgresql-9999.ebuild:
   Fix slot

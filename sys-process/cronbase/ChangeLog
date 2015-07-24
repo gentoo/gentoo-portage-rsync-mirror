@@ -1,6 +1,13 @@
 # ChangeLog for sys-process/cronbase
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.46 2015/07/23 02:57:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/cronbase/ChangeLog,v 1.47 2015/07/24 05:45:03 vapier Exp $
+
+*cronbase-0.3.7 (24 Jul 2015)
+
+  24 Jul 2015; Mike Frysinger <vapier@gentoo.org> +cronbase-0.3.7.ebuild,
+  +files/run-crons-0.3.7:
+  Split global lock up into one lock per /etc/cron.xxx dir #157547 by Radoslaw
+  Stachowiak.
 
 *cronbase-0.3.6 (23 Jul 2015)
 
