@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libgudev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgudev/ChangeLog,v 1.10 2015/07/24 14:58:47 floppym Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgudev/ChangeLog,v 1.11 2015/07/24 15:13:33 floppym Exp $
+
+  24 Jul 2015; Mike Gilbert <floppym@gentoo.org> libgudev-230.ebuild:
+  Drop IUSE=doc and gtk-doc support. If the gnome team wants to fix it, they are
+  welcome to do so.
 
   24 Jul 2015; Mike Gilbert <floppym@gentoo.org> libgudev-230.ebuild:
   Make the doc USE flag do something.
