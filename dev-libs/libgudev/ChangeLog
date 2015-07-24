@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/libgudev
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgudev/ChangeLog,v 1.8 2015/07/23 18:01:33 maksbotan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgudev/ChangeLog,v 1.10 2015/07/24 14:58:47 floppym Exp $
+
+  24 Jul 2015; Mike Gilbert <floppym@gentoo.org> libgudev-230.ebuild:
+  Make the doc USE flag do something.
+
+  24 Jul 2015; Mike Gilbert <floppym@gentoo.org> libgudev-230.ebuild:
+  Remove duplicate dep on gobject-introspection.
 
   23 Jul 2015; Maxim Koltsov <maksbotan@gentoo.org> libgudev-230.ebuild:
   Add gobject-introspection dependency, as it was in sys-fs/udev package. Bug
