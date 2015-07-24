@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.7.0-r1.ebuild,v 1.1 2015/07/07 20:19:11 williamh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/docker/docker-1.7.1.ebuild,v 1.1 2015/07/24 18:48:39 xarthisius Exp $
 
 EAPI=5
 
@@ -18,7 +18,7 @@ else
 	MY_P="${PN}-${MY_PV}"
 	SRC_URI="https://${GITHUB_URI}/archive/v${MY_PV}.tar.gz -> ${MY_P}.tar.gz"
 	S="${WORKDIR}/${MY_P}"
-	DOCKER_GITCOMMIT="0baf609"
+	DOCKER_GITCOMMIT="786b29d"
 	KEYWORDS="~amd64"
 	[ "$DOCKER_GITCOMMIT" ] || die "DOCKER_GITCOMMIT must be added manually for each bump!"
 fi
@@ -79,7 +79,7 @@ CONFIG_CHECK="
 	NAMESPACES NET_NS PID_NS IPC_NS UTS_NS
 	DEVPTS_MULTIPLE_INSTANCES
 	CGROUPS CGROUP_CPUACCT CGROUP_DEVICE CGROUP_FREEZER CGROUP_SCHED CPUSETS
-	MACVLAN VETH BRIDGE
+	MACVLAN VETH BRIDGE BRIDGE_NETFILTER
 	NF_NAT_IPV4 IP_NF_FILTER IP_NF_TARGET_MASQUERADE
 	NETFILTER_XT_MATCH_ADDRTYPE NETFILTER_XT_MATCH_CONNTRACK
 	NF_NAT NF_NAT_NEEDED
@@ -87,7 +87,9 @@ CONFIG_CHECK="
 	POSIX_MQUEUE
 
 	~MEMCG_SWAP ~MEMCG_SWAP_ENABLED
-	~RESOURCE_COUNTERS
+
+	~BLK_CGROUP
+	~IOSCHED_CFQ
 	~CGROUP_PERF
 	~CFS_BANDWIDTH
 "
@@ -118,6 +120,12 @@ pkg_setup() {
 		ewarn "  (and was backported to 3.15.5+, 3.14.12+, and 3.12.25+)"
 		ewarn ""
 		ewarn "See also https://github.com/docker/docker/issues/2960"
+	fi
+
+	if kernel_is le 3 18; then
+		CONFIG_CHECK+="
+			~RESOURCE_COUNTERS
+		"
 	fi
 
 	if use aufs; then
