@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/github_api/github_api-0.11.3.ebuild,v 1.4 2015/07/25 07:31:27 graaff Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/github_api/github_api-0.11.3-r1.ebuild,v 1.1 2015/07/25 07:31:27 graaff Exp $
 
 EAPI=5
-USE_RUBY="ruby19 ruby20"
+USE_RUBY="ruby19 ruby20 ruby21"
 
 RUBY_FAKEGEM_RECIPE_TEST="rspec"
 RUBY_FAKEGEM_RECIPE_DOC="rdoc"
