@@ -1,11 +1,11 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/B-Utils-0.250.0.ebuild,v 1.3 2015/05/01 11:51:42 dilfridge Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/B-Utils/B-Utils-0.270.0.ebuild,v 1.1 2015/07/25 17:18:30 dilfridge Exp $
 
 EAPI=5
 
-MODULE_AUTHOR=JJORE
-MODULE_VERSION=0.25
+MODULE_AUTHOR=ETHER
+MODULE_VERSION=0.27
 inherit perl-module
 
 DESCRIPTION="Helper functions for op tree manipulation"
@@ -14,6 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~arm ~ppc ~x86"
 IUSE="test"
 
+# needs Scalar::Util
 RDEPEND="
 	virtual/perl-Exporter
 	virtual/perl-Scalar-List-Utils
@@ -27,4 +28,4 @@ DEPEND="${RDEPEND}
 	)
 "
 
-SRC_TEST=do
+SRC_TEST="do parallel"
