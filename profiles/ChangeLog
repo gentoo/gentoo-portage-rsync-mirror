@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10202 2015/07/25 16:00:54 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10203 2015/07/25 16:05:59 mgorny Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  25 Jul 2015; Michał Górny <mgorny@gentoo.org> updates/3Q-2015:
+  Slotmove for dev-util/kdevelop-qmake.
+  https://github.com/gentoo/gentoo-portage-rsync-mirror/pull/170 by a17r.
 
   25 Jul 2015; Michał Górny <mgorny@gentoo.org> updates/3Q-2015:
   Add slotmove for dev-util/kdevelop-pg-qt.

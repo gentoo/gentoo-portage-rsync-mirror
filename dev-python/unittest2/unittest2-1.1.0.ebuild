@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-1.1.0.ebuild,v 1.1 2015/07/19 23:50:45 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/unittest2-1.1.0.ebuild,v 1.2 2015/07/25 16:04:23 alunduil Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -18,6 +18,7 @@ IUSE=""
 
 CDEPEND="
 	dev-python/setuptools[${PYTHON_USEDEP}]
+	dev-python/linecache2[${PYTHON_USEDEP}]
 	>=dev-python/six-1.4[${PYTHON_USEDEP}]
 	dev-python/traceback2[${PYTHON_USEDEP}]
 "
