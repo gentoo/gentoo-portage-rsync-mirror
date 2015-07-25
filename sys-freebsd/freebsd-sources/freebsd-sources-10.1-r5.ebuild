@@ -17,6 +17,7 @@ UPSTREAM_PATCHES=( "SA-15:02/sctp.patch"
 	"SA-15:04/igmp.patch"
 	"SA-15:04/igmp-errata.patch"
 	"SA-15:09/ipv6.patch"
+	"SA-15:13/tcp.patch"
 	"EN-15:01/vt.patch"
 	"EN-15:05/ufs.patch"
 	"EN-15:07/zfs.patch" )
