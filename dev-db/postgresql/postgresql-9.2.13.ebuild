@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.2.13.ebuild,v 1.6 2015/07/24 10:11:29 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-9.2.13.ebuild,v 1.7 2015/07/25 11:14:10 maekke Exp $
 
 EAPI="5"
 
@@ -9,7 +9,7 @@ PYTHON_COMPAT=( python{2_{6,7},3_{2,3,4}} )
 inherit eutils flag-o-matic linux-info multilib pam prefix python-single-r1 \
 		systemd user versionator
 
-KEYWORDS="alpha amd64 ~arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
+KEYWORDS="alpha amd64 arm hppa ~ia64 ~mips ~ppc ppc64 ~s390 ~sh ~sparc x86 ~amd64-fbsd ~sparc-fbsd ~x86-fbsd ~ppc-macos ~x86-solaris"
 
 SLOT="$(get_version_component_range 1-2)"
 

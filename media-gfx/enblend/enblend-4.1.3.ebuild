@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.1.3.ebuild,v 1.6 2015/07/23 19:38:26 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/enblend/enblend-4.1.3.ebuild,v 1.7 2015/07/25 11:21:33 maekke Exp $
 
 EAPI=5
 
@@ -27,7 +27,7 @@ RDEPEND="
 	>=media-libs/openexr-1.0:=
 	media-libs/plotutils[X]
 	media-libs/tiff:=
-	>=media-libs/vigra-1.8.0
+	>=media-libs/vigra-1.8.0[openexr]
 	sci-libs/gsl
 	virtual/jpeg:0=
 	debug? ( dev-libs/dmalloc )
