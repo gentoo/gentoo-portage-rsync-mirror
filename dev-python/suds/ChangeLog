@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/suds
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.16 2015/07/24 05:58:16 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/suds/ChangeLog,v 1.17 2015/07/25 04:06:47 prometheanfire Exp $
+
+*suds-0.6-r1 (25 Jul 2015)
+
+  25 Jul 2015; Matthew Thode <prometheanfire@gentoo.org> +suds-0.6-r1.ebuild:
+  adding tests/doc stuff from bug 498022
 
 *suds-0.6 (24 Jul 2015)
 
