@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.10.ebuild,v 1.5 2015/07/25 08:20:45 amynka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/opencv/opencv-2.4.10.ebuild,v 1.6 2015/07/25 08:43:27 amynka Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 )
@@ -68,7 +68,6 @@ RDEPEND="
 	xine? ( media-libs/xine-lib )
 "
 DEPEND="${RDEPEND}
-	dev-util/cmake
 	virtual/pkgconfig
 	eigen? ( dev-cpp/eigen:3 )
 	java? ( >=virtual/jdk-1.6 )
