@@ -40,6 +40,7 @@ kde-apps/kdebase-kioslaves minimal
 kde-apps/kdebase-meta minimal
 kde-apps/kdebase-runtime-meta -crash-reporter minimal
 kde-apps/kdesu -handbook
+kde-apps/solid-runtime -bluetooth
 kde-base/baloo minimal
 kde-base/kactivities minimal
 kde-base/kde-meta minimal
