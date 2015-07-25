@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.80 2015/07/25 21:36:21 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-9999.ebuild,v 1.81 2015/07/25 22:06:10 tamiko Exp $
 
 EAPI=5
 
@@ -120,35 +120,38 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-XPath
 	dev-libs/libxslt"
 
-DOC_CONTENTS=" For the basic networking support (bridged and routed networks)
-you don't need any extra software. For more complex network modes
-including but not limited to NATed network, you can enable the
-'virt-network' USE flag.\n\n
-If you are using dnsmasq on your system, you will have
-to configure /etc/dnsmasq.conf to enable the following settings:
+# gentoo.readme stuff:
+DISABLE_AUTOFORMATTING=true
+DOC_CONTENTS="For the basic networking support (bridged and routed networks) you don't
+need any extra software. For more complex network modes including but not
+limited to NATed network, you can enable the 'virt-network' USE flag.
+
+If you are using dnsmasq on your system, you will have to configure
+/etc/dnsmasq.conf to enable the following settings:
 	bind-interfaces
 	interface or except-interface
-Otherwise you might have issues with your existing DNS server.\n\n
+Otherwise you might have issues with your existing DNS server.
+
 The systemd service-file configuration under /etc/sysconfig has been
 removed. Please use
 	/etc/systemd/system/libvirtd.service.d/00gentoo.conf
-to control the '--listen' parameter for libvirtd. The configuration for the
-libvirt-guests.service is now found under
+to control the '--listen' parameter for libvirtd.
+
+The configuration for the 'libvirt-guests.service' is now found under
 	/etc/libvirt/libvirt-guests.conf
-The openrc configuration has not been changed. Thus no action is
-required for the openrc service manager."
 
-if ! use policykit; then
-	DOC_CONTENTS+="\n\n"
-	DOC_CONTENTS+="To allow normal users to connect to libvirtd you must change the\n"
-	DOC_CONTENTS+="unix sock group and/or perms in /etc/libvirt/libvirtd.conf\n"
-fi
+The openrc configuration has not been changed. Thus no action is required
+for the openrc service manager."
 
-if use caps && use qemu; then
-	DOC_CONTENTS+="\n\n"
-	DOC_CONTENTS+="libvirt will now start qemu/kvm VMs with non-root privileges.\n"
-	DOC_CONTENTS+="Ensure any resources your VMs use are accessible by qemu:qemu\n"
-fi
+! use policykit && DOC_CONTENTS+="
+
+To allow normal users to connect to libvirtd you must change the unix sock
+group and/or perms in /etc/libvirt/libvirtd.conf"
+
+use caps && use qemu && DOC_CONTENTS+="
+
+libvirt will now start qemu/kvm VMs with non-root privileges. Ensure any
+resources your VMs use are accessible by qemu:qemu"
 
 LXC_CONFIG_CHECK="
 	~CGROUPS
