@@ -553,6 +553,7 @@ app-emulation/libguestfs:inspect-icons - Use media-gfx/icoutilsfor acces icon fi
 app-emulation/libguestfs:introspection - Use dev-libs/gobject-introspection for introspection
 app-emulation/libguestfs:systemtap - Use dev-util/systemtap to inspect VM via "probes" way
 app-emulation/libspectrum:gcrypt - Use dev-libs/libgcrypt for low-level crypto of some features, including logfiles.
+app-emulation/libvirt:apparmor - Enable AppArmor support
 app-emulation/libvirt:audit - support sys-process/audit
 app-emulation/libvirt:firewalld - DBus interface to iptables/ebtables allowing for better runtime management of your firewall.
 app-emulation/libvirt:fuse - Allow LXC to use sys-fs/fuse for mount points

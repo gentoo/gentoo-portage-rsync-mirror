@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.17.ebuild,v 1.2 2015/07/02 12:47:14 tamiko Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libvirt/libvirt-1.2.17-r1.ebuild,v 1.1 2015/07/25 21:36:21 tamiko Exp $
 
 EAPI=5
 
@@ -37,8 +37,8 @@ DESCRIPTION="C toolkit to manipulate virtual machines"
 HOMEPAGE="http://www.libvirt.org/"
 LICENSE="LGPL-2.1"
 # TODO: Reenable IUSE wireshark-plugins
-IUSE="audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm lxc \
-	+macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
+IUSE="apparmor audit avahi +caps firewalld fuse glusterfs iscsi +libvirtd lvm \
+	lxc +macvtap nfs nls numa openvz parted pcap phyp policykit +qemu rbd sasl \
 	selinux +udev uml +vepa virtualbox virt-network wireshark-plugins xen \
 	elibc_glibc systemd"
 REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
@@ -60,6 +60,8 @@ REQUIRED_USE="libvirtd? ( || ( lxc openvz qemu uml virtualbox xen ) )
 RDEPEND="sys-libs/readline:=
 	sys-libs/ncurses
 	>=net-misc/curl-7.18.0
+	net-firewall/ebtables
+	>=net-firewall/iptables-1.4.10[ipv6]
 	dev-libs/libgcrypt:0
 	>=dev-libs/libxml2-2.7.6
 	dev-libs/libnl:3
@@ -70,6 +72,7 @@ RDEPEND="sys-libs/readline:=
 	sys-devel/gettext
 	>=net-analyzer/netcat6-1.0-r2
 	app-misc/scrub
+	apparmor? ( sys-libs/libapparmor )
 	audit? ( sys-process/audit )
 	avahi? ( >=net-dns/avahi-0.6[dbus] )
 	caps? ( sys-libs/libcap-ng )
@@ -104,9 +107,7 @@ RDEPEND="sys-libs/readline:=
 	xen? ( app-emulation/xen-tools app-emulation/xen )
 	udev? ( virtual/udev >=x11-libs/libpciaccess-0.10.9 )
 	virt-network? ( net-dns/dnsmasq[script]
-		>=net-firewall/iptables-1.4.10[ipv6]
 		net-misc/radvd
-		net-firewall/ebtables
 		sys-apps/iproute2[-minimal]
 		firewalld? ( net-firewall/firewalld )
 	)
@@ -119,15 +120,35 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-XPath
 	dev-libs/libxslt"
 
-DOC_CONTENTS="For the basic networking support (bridged and routed networks)
+DOC_CONTENTS=" For the basic networking support (bridged and routed networks)
 you don't need any extra software. For more complex network modes
 including but not limited to NATed network, you can enable the
 'virt-network' USE flag.\n\n
 If you are using dnsmasq on your system, you will have
-to configure /etc/dnsmasq.conf to enable the following settings:\n\n
-	bind-interfaces\n
-	interface or except-interface\n\n
-Otherwise you might have issues with your existing DNS server."
+to configure /etc/dnsmasq.conf to enable the following settings:
+	bind-interfaces
+	interface or except-interface
+Otherwise you might have issues with your existing DNS server.\n\n
+The systemd service-file configuration under /etc/sysconfig has been
+removed. Please use
+	/etc/systemd/system/libvirtd.service.d/00gentoo.conf
+to control the '--listen' parameter for libvirtd. The configuration for the
+libvirt-guests.service is now found under
+	/etc/libvirt/libvirt-guests.conf
+The openrc configuration has not been changed. Thus no action is
+required for the openrc service manager."
+
+if ! use policykit; then
+	DOC_CONTENTS+="\n\n"
+	DOC_CONTENTS+="To allow normal users to connect to libvirtd you must change the\n"
+	DOC_CONTENTS+="unix sock group and/or perms in /etc/libvirt/libvirtd.conf\n"
+fi
+
+if use caps && use qemu; then
+	DOC_CONTENTS+="\n\n"
+	DOC_CONTENTS+="libvirt will now start qemu/kvm VMs with non-root privileges.\n"
+	DOC_CONTENTS+="Ensure any resources your VMs use are accessible by qemu:qemu\n"
+fi
 
 LXC_CONFIG_CHECK="
 	~CGROUPS
@@ -287,6 +308,8 @@ src_configure() {
 	myconf+=" --with-vmware"
 
 	## additional host drivers
+	myconf+=" $(use_with apparmor)"
+	myconf+=" $(use_with apparmor apparmor-profiles)"
 	myconf+=" $(use_with virt-network network)"
 	myconf+=" --with-storage-fs"
 	myconf+=" $(use_with lvm storage-lvm)"
@@ -436,31 +459,8 @@ pkg_postinst() {
 		touch "${ROOT}"/etc/libvirt/qemu/networks/default.xml
 	fi
 
-	if ! use policykit; then
-		elog "To allow normal users to connect to libvirtd you must change the"
-		elog "unix sock group and/or perms in /etc/libvirt/libvirtd.conf"
-	fi
-
 	use libvirtd || return 0
 	# From here, only libvirtd-related instructions, be warned!
 
 	readme.gentoo_print_elog
-
-	if use caps && use qemu; then
-		elog "libvirt will now start qemu/kvm VMs with non-root privileges."
-		elog "Ensure any resources your VMs use are accessible by qemu:qemu"
-	fi
-
-	if [[ -n "${REPLACING_VERSIONS}" ]]; then
-		elog ""
-		elog "The systemd service-file configuration under /etc/sysconfig has"
-		elog "been removed. Please use"
-		elog "    /etc/systemd/system/libvirtd.service.d/00gentoo.conf"
-		elog "to control the '--listen' parameter for libvirtd. The configuration"
-		elog "for the libvirt-guests.service is now found under"
-		elog "    /etc/libvirt/libvirt-guests.conf"
-		elog "The openrc configuration has not been changed. Thus no action is"
-		elog "required for the openrc service manager."
-		elog ""
-	fi
 }
