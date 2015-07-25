@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/batik
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.86 2015/07/24 09:46:03 monsieurp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/batik/ChangeLog,v 1.87 2015/07/25 14:45:41 chewi Exp $
+
+  25 Jul 2015; James Le Cuirot <chewi@gentoo.org> batik-1.8-r1.ebuild:
+  Add some missing dies. Closes bug #555870.
 
   24 Jul 2015; Patrice Clement <monsieurp@gentoo.org> batik-1.8-r1.ebuild:
   Suppress QA warning wrt a trailing whitespace.
