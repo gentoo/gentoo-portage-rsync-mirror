@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.63 2015/07/22 18:34:32 zlogene Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.65 2015/07/25 13:20:27 mrueg Exp $
+
+  25 Jul 2015; Manuel Rüger <mrueg@gentoo.org> -aruba-0.5.3.ebuild:
+  Remove old.
+
+  25 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> aruba-0.5.4-r1.ebuild:
+  sparc stable wrt bug #542574
 
   22 Jul 2015; Mikle Kolyada <zlogene@gentoo.org> aruba-0.8.1.ebuild:
   Add ~x86 keyword wrt bug #555312
