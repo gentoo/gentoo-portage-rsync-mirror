@@ -1,6 +1,10 @@
 # ChangeLog for app-text/libexttextcat
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.17 2015/07/22 19:33:16 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/libexttextcat/ChangeLog,v 1.18 2015/07/26 00:42:49 dilfridge Exp $
+
+  26 Jul 2015; Andreas K. Huettel <dilfridge@gentoo.org>
+  -libexttextcat-3.4.0.ebuild:
+  Remove old
 
   22 Jul 2015; Agostino Sarubbo <ago@gentoo.org> libexttextcat-3.4.4.ebuild:
   Stable for x86, wrt bug #555584
