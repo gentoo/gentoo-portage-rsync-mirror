@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/singledispatch/singledispatch-3.4.0.3.ebuild,v 1.6 2015/07/20 04:38:02 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/singledispatch/singledispatch-3.4.0.3.ebuild,v 1.7 2015/07/26 10:11:51 maekke Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${PF}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 ~hppa ~ppc64 x86"
+KEYWORDS="amd64 ~arm ~hppa ~ppc64 x86"
 IUSE=""
 
 DEPEND="dev-python/setuptools[${PYTHON_USEDEP}]"

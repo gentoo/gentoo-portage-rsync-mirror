@@ -1,10 +1,14 @@
 # ChangeLog for profile directory
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10204 2015/07/25 16:34:20 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/ChangeLog,v 1.10205 2015/07/26 10:20:32 pacho Exp $
 #
 # This ChangeLog should include records for all changes in profiles directory.
 # Only typo fixes which don't affect portage/repoman behaviour could be avoided
 # here. If in doubt put a record here!
+
+  26 Jul 2015; Pacho Ramos <pacho@gentoo.org> base/package.use:
+  Set here proper defaults for python-single-r1 consumers in profiles instead
+  of in ebuilds (#555930 by mgorny)
 
   25 Jul 2015; Sebastian Pipping <sping@gentoo.org> package.mask:
   Remove www-apps/wordpress removal mask, ebuilds removed
