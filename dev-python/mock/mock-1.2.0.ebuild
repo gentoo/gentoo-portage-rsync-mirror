@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-1.2.0.ebuild,v 1.1 2015/07/21 18:05:58 alunduil Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mock/mock-1.2.0.ebuild,v 1.2 2015/07/26 07:20:04 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
@@ -13,7 +13,7 @@ SRC_URI="mirror://pypi/${PN:0:1}/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~m68k ~mips ~s390 ~sh ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
+KEYWORDS="~amd64 ~arm64 ~hppa ~m68k ~mips ~s390 ~sh ~amd64-fbsd ~x86-fbsd ~amd64-linux ~x86-linux ~x64-macos"
 IUSE="doc test"
 
 CDEPEND="$(python_gen_cond_dep 'dev-python/funcsigs[${PYTHON_USEDEP}]' 'python2_7')"

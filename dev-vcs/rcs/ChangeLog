@@ -1,6 +1,9 @@
 # ChangeLog for dev-vcs/rcs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.33 2015/07/25 07:40:28 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-vcs/rcs/ChangeLog,v 1.34 2015/07/26 07:10:43 jer Exp $
+
+  26 Jul 2015; Jeroen Roovers <jer@gentoo.org> rcs-5.9.3.ebuild:
+  Stable for HPPA (bug #555838).
 
 *rcs-5.9.4 (25 Jul 2015)
 
