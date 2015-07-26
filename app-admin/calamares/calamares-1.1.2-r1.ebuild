@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/calamares/calamares-1.1.2.ebuild,v 1.1 2015/07/23 19:32:04 johu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/calamares/calamares-1.1.2-r1.ebuild,v 1.1 2015/07/26 11:54:25 johu Exp $
 
 EAPI=5
 
@@ -24,7 +24,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="${PYTHON_DEPS}
 	>=dev-cpp/yaml-cpp-0.5.1
-	>=dev-libs/boost-1.55[${PYTHON_USEDEP}]
+	>=dev-libs/boost-1.55:=[${PYTHON_USEDEP}]
 	$(add_frameworks_dep kconfig)
 	$(add_frameworks_dep ki18n)
 	$(add_frameworks_dep kcoreaddons)
