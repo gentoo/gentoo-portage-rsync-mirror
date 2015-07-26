@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aruba
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.66 2015/07/26 08:26:44 maekke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aruba/ChangeLog,v 1.67 2015/07/26 17:51:01 jer Exp $
+
+  26 Jul 2015; Jeroen Roovers <jer@gentoo.org> aruba-0.8.1.ebuild:
+  Mark ~hppa (bug #555312).
 
   26 Jul 2015; Markus Meier <maekke@gentoo.org> aruba-0.8.1.ebuild:
   add ~arm, bug #555312
