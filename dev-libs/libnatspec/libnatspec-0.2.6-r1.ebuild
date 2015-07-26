@@ -27,6 +27,10 @@ DEPEND="${RDEPEND}
 	doc? ( app-doc/doxygen )
 	python? ( dev-lang/tcl:0= )"
 
+pkg_setup() {
+	use python && python-single-r1_pkg_setup
+}
+
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-iconv.patch
 	# regenerate to fix imcompatible readlink usage
