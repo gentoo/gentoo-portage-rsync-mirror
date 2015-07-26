@@ -1,10 +1,10 @@
 # ChangeLog for dev-python/unittest2
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.65 2015/07/26 14:57:41 idella4 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/unittest2/ChangeLog,v 1.66 2015/07/26 15:14:30 idella4 Exp $
 
   26 Jul 2015; Ian Delaney <idella4@gentoo.org> -unittest2-1.0.1.ebuild,
   unittest2-1.0.1-r1.ebuild, unittest2-1.1.0.ebuild:
-  re-add pypy support dropped from prior versions
+  re-add pypy support dropped from prior versions, rm redundant -1.0.1
 
   25 Jul 2015; Alex Brandt <alunduil@gentoo.org> unittest2-1.1.0.ebuild:
   1.1.0: add dev-python/linecache2 dependence

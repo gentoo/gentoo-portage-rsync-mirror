@@ -1,9 +1,9 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/fixtures-1.3.1-r1.ebuild,v 1.1 2015/07/23 06:24:51 prometheanfire Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/fixtures/fixtures-1.3.1-r1.ebuild,v 1.2 2015/07/26 15:17:58 idella4 Exp $
 
 EAPI=5
-PYTHON_COMPAT=( python2_7 python3_3 python3_4 )
+PYTHON_COMPAT=( python2_7 python3_3 python3_4 pypy )
 
 inherit distutils-r1
 
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-python/six[${PYTHON_USEDEP}]
 	>=dev-python/testtools-0.9.22[${PYTHON_USEDEP}]"
 DEPEND="${RDEPEND}
-	test? ( dev-python/mock[$(python_gen_usedep 'python2*')] )"
+	test? ( dev-python/mock[$(python_gen_usedep python2_7 pypy)] )"
 #DISTUTILS_IN_SOURCE_BUILD=1
 
 python_test() {
