@@ -1,6 +1,6 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-8.3.4.ebuild,v 1.1 2014/12/07 17:46:17 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcm2ps/abcm2ps-8.8.3.ebuild,v 1.1 2015/07/26 19:00:59 polynomial-c Exp $
 
 EAPI=5
 inherit toolchain-funcs
