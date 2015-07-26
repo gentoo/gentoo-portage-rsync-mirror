@@ -1,6 +1,8 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20090123.ebuild,v 1.9 2014/03/26 14:16:40 polynomial-c Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-power/iasl/iasl-20150717.ebuild,v 1.1 2015/07/26 12:43:10 polynomial-c Exp $
+
+EAPI=5
 
 inherit toolchain-funcs flag-o-matic eutils
 
@@ -14,7 +16,7 @@ SRC_URI="http://www.acpica.org/sites/acpica/files/${MY_P}.tar.gz
 
 LICENSE="iASL"
 SLOT="0"
-KEYWORDS="amd64 ppc x86 ~x86-fbsd"
+KEYWORDS="~amd64 ~ppc ~x86 ~amd64-fbsd ~x86-fbsd"
 IUSE="test"
 
 DEPEND="sys-devel/bison
@@ -33,40 +35,30 @@ pkg_setup() {
 	fi
 }
 
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}"/iasl-20080701-parallelmake.patch
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-20140828-locale.patch" \
+		"${FILESDIR}/${PN}-20140214-nostrip.patch"
 
-	sed -i -e 's:LDFLAGS=:LDLIBS+=:' \
-		"${S}"/compiler/Makefile || die "unable to fix compiler Makefile"
+	find "${S}" -type f -name 'Makefile*' -print0 | \
+		xargs -0 -I '{}' \
+		sed -r -e 's:-\<Werror\>::g' -i '{}' \
+		|| die
+
+	# BITS is tied to ARCH - please set appropriately if you add new keywords
+	if [[ $ARCH == @(amd64|amd64-fbsd) ]] ; then
+		export BITS=64
+	else
+		export BITS=32
+	fi
+}
+
+src_configure() {
+	:
 }
 
 src_compile() {
-	local target bin
-	append-flags -fno-strict-aliasing
-
-	for target in compiler tools/acpisrc tools/acpixtract tools/acpiexec
-	do
-		einfo "Compiling in ${target}/"
-		cd "${S}"/${target}
-		case "${target}" in
-			compiler) bin=iasl;;
-			*) bin=${target#*/};;
-		esac
-
-		emake CC="$(tc-getCC)" || die "emake in ${target} failed"
-		einfo "Finished compiling ${target}"
-
-		mv ${bin} "${T}" || die "mv ${bin} failed"
-		einfo "Finished moving ${bin}"
-
-		make clean || die "make clean in ${target} failed"
-		einfo "Finished cleaning ${target}"
-
-		echo ${bin} >>"${T}"/binlist
-	done
-	einfo "$(<"${T}"/binlist)"
+	cd acpica/generate/unix
+	emake BITS=${BITS}
 }
 
 src_test() {
@@ -76,11 +68,19 @@ src_test() {
 }
 
 src_install() {
-	local bin
-	for bin in $(<"${T}"/binlist) ; do
-		dobin "${T}"/${bin}
-	done
-	dodoc README changes.txt
+	cd acpica/generate/unix
+	emake install DESTDIR="${D}" BITS=${BITS}
+	default_src_install
+	#local bin
+	#for bin in $(<"${T}"/binlist) ; do
+	#	dobin "${T}"/${bin}
+	#done
+	dodoc "${S}"/changes.txt
+	newdoc "${S}"/source/compiler/readme.txt compiler-readme.txt
+	newdoc "${S}"/generate/unix/readme.txt unix-readme.txt
+	newdoc "${S}"/generate/lint/readme.txt lint-readme.txt
+	newdoc "${S}"/source/compiler/new_table.txt compiler-new_table.txt
+
 	if use test && has test ${FEATURES}; then
 		tb="${T}"/testresults.tar.bz2
 		export ASLTSDIR="$(<"${T}"/asltdir)"
@@ -89,21 +89,21 @@ src_install() {
 		eend $?
 		dodir /usr/share/${PF}
 		insinto /usr/share/${PF}
-		doins ${tb} || die "doins testresults.tar.bz2 failed"
+		doins ${tb}
 	fi
 
 }
 
 aslts_test() {
-	export	ASL="${T}"/iasl \
-		acpiexec="${T}"/acpiexec \
+	export	ASL="${S}"/generate/unix/bin/iasl \
+		acpiexec="${S}"/generate/unix/bin/acpiexec \
 		ASLTSDIR="${WORKDIR}/${MY_TESTS_P}"/tests/aslts
 	export	PATH="${PATH}:${ASLTSDIR}/bin"
 	echo "$ASLTSDIR" >"${T}"/asltdir
 	cd "${ASLTSDIR}"
 	edos2unix $(find . -type 'f')
 	make install || die "make install aslts test failed"
-	chmod +x $(find bin/ | sed  -r -e '/\/[A-Z_]+$/d') || die "chmod bin +x failed"
+	chmod +x $(find bin/ ! -regex 'ERROR_OPCODES|HOW_TO_USE|README' ) || die "chmod bin +x failed"
 
 	#The below Do commands runs the tests twice and then dies if the results aren't
 	#Identical.
