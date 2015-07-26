@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/racc
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.115 2015/07/23 20:56:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/racc/ChangeLog,v 1.116 2015/07/26 08:36:40 maekke Exp $
+
+  26 Jul 2015; Markus Meier <maekke@gentoo.org> racc-1.4.11.ebuild:
+  arm stable, bug #518094
 
   23 Jul 2015; Pacho Ramos <pacho@gentoo.org> racc-1.4.11.ebuild:
   ppc stable wrt bug #518094
