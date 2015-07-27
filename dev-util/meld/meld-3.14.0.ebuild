@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.13.2.ebuild,v 1.1 2015/07/04 14:18:21 pacho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-3.14.0.ebuild,v 1.1 2015/07/27 14:00:06 tetromino Exp $
 
 EAPI="5"
 GCONF_DEBUG="no"
@@ -23,7 +23,7 @@ RDEPEND="${PYTHON_DEPS}
 	dev-python/dbus-python[${PYTHON_USEDEP}]
 	>=dev-python/pygobject-3.8:3[cairo,${PYTHON_USEDEP}]
 	gnome-base/gsettings-desktop-schemas
-	>=x11-libs/gtk+-3.6:3[introspection]
+	>=x11-libs/gtk+-3.12:3[introspection]
 	>=x11-libs/gtksourceview-3.10:3.0[introspection]
 	x11-themes/hicolor-icon-theme
 "
