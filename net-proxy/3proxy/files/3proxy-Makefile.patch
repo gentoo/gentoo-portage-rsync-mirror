@@ -1,0 +1,25 @@
+--- Makefile.Linux.orig	2015-04-18 01:55:14.195955388 +0300
++++ Makefile.Linux	2015-05-20 02:28:59.116176489 +0300
+@@ -11,11 +11,11 @@
+ BUILDDIR =
+ CC = gcc
+ 
+-CFLAGS = -Wall -g -O2 -c -pthread -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
++CFLAGS += -Wall -g -c -pthread -DGETHOSTBYNAME_R -D_THREAD_SAFE -D_REENTRANT -DNOODBC -DWITH_STD_MALLOC -DFD_SETSIZE=4096 -DWITH_POLL
+ COUT = -o 
+ LN = gcc
+ DCFLAGS = -fpic
+-LDFLAGS = -Wall -O2 -pthread
++LDFLAGS += -Wall -pthread
+ DLFLAGS = -shared
+ DLSUFFICS = .ld.so
+ # -lpthreads may be reuqired on some platforms instead of -pthreads
+@@ -38,7 +38,7 @@
+ include Makefile.inc
+ 
+ allplugins:
+-	@list='$(PLUGINS)'; for p in $$list; do cp Makefile Makefile.var plugins/$$p; cd plugins/$$p ; make ;	cd ../.. ; done
++	@list='$(PLUGINS)'; for p in $$list; do cp Makefile Makefile.var plugins/$$p; cd plugins/$$p ; $(MAKE) ; cd ../.. ; done
+ 
+ DESTDIR		=
+ prefix		= /usr/local
