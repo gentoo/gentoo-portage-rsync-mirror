@@ -61,19 +61,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local wxconf=""
-
 	# add gtk includes
 	use X && append-flags "$(pkg-config --cflags gtk+-2.0)"
-
-	# look for wxGTK
-	if use X; then
-		WX_GTK_VER="2.8"
-		need-wxwidgets unicode
-		wxconf+=" --with-wx-config=${WX_CONFIG}"
-	else
-		wxconf+=" --without-wxdir"
-	fi
 
 	local myeconfargs=(
 		--disable-server
@@ -84,8 +73,17 @@ src_configure() {
 		--with-ssl
 		$(use_with X x)
 		$(use_enable X manager)
-		${wxconf}
 	)
+
+	# look for wxGTK
+	if use X; then
+		WX_GTK_VER="2.8"
+		need-wxwidgets unicode
+		myeconfargs+=(--with-wx-config=${WX_CONFIG})
+	else
+		myeconfargs+=(--without-wxdir)
+	fi
+
 	autotools-utils_src_configure
 }
 
