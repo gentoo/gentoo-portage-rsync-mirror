@@ -37,7 +37,7 @@ RDEPEND="
 		dev-db/sqlite:3
 		media-libs/freeglut
 		sys-libs/glibc:2.2
-		virtual/jpeg:=
+		virtual/jpeg:0=
 		x11-libs/gtk+:2
 		>=x11-libs/libnotify-0.7
 		x11-libs/wxGTK:2.8[X,opengl]
