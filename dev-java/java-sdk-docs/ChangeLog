@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-sdk-docs
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.130 2015/07/30 09:58:35 ago Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/ChangeLog,v 1.131 2015/07/30 10:09:57 chewi Exp $
+
+  30 Jul 2015; James Le Cuirot <chewi@gentoo.org>
+  -java-sdk-docs-1.8.0.45.ebuild:
+  Drop old 1.8 version.
 
   30 Jul 2015; Agostino Sarubbo <ago@gentoo.org> java-sdk-docs-1.8.0.51.ebuild:
   Stable for x86, wrt bug #554886
