@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.884 2015/08/04 12:00:23 aballier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.885 2015/08/04 12:02:39 aballier Exp $
+
+  04 Aug 2015; Alexis Ballier <aballier@gentoo.org> metadata.xml:
+  remove unused usedesc
 
   04 Aug 2015; Alexis Ballier <aballier@gentoo.org> -ffmpeg-2.2.16.ebuild,
   -files/ladspadl.patch:
