@@ -3,8 +3,9 @@
 # $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.8.12.1-r1.ebuild,v 1.13 2015/03/31 20:05:20 ulm Exp $
 
 EAPI="5"
+WANT_AUTOCONF=2.5
 
-inherit eutils flag-o-matic versionator multilib-minimal
+inherit autotools eutils flag-o-matic versionator multilib-minimal
 
 DESCRIPTION="GTK+ version of wxWidgets, a cross-platform C++ GUI toolkit"
 HOMEPAGE="http://wxwidgets.org/"
@@ -74,6 +75,11 @@ src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.7-mmedia.patch              # Bug #174874
 	epatch "${FILESDIR}"/${PN}-2.8.10.1-odbc-defines.patch     # Bug #310923
 
+	# Bug #421851
+	epatch "${FILESDIR}"/${P}-libdir.patch
+	epatch "${FILESDIR}"/${P}-bakefile.patch
+	epatch "${FILESDIR}"/${P}-autoconf.patch
+
 	# prefix https://bugs.gentoo.org/394123
 	sed -i -e "s:/usr:${EPREFIX}/usr:g" \
 		-e '/SEARCH_INCLUDE="\\/,/"/cSEARCH_INCLUDE="'${EPREFIX}'/usr/include"' \
@@ -81,12 +87,8 @@ src_prepare() {
 
 	epatch_user
 
-	multilib_prepare() {
-		# x32 https://bugs.gentoo.org/421851
-		sed -i -e "/wx_cv_std_libpath=/s:=.*:=$(get_libdir):" "${BUILD_DIR}"/configure || die
-	}
-	multilib_copy_sources
-	multilib_parallel_foreach_abi multilib_prepare
+	mv configure.in configure.ac || die
+	eautoconf
 }
 
 multilib_src_configure() {
@@ -140,7 +142,7 @@ multilib_src_configure() {
 			--disable-gui"
 	fi
 
-	econf ${myconf}
+	ECONF_SOURCE="${S}" econf ${myconf}
 }
 
 multilib_src_compile() {
