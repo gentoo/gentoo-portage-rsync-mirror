@@ -1,20 +1,20 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-99999999.ebuild,v 1.8 2015/08/04 06:22:14 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fail2ban/fail2ban-0.9.2-r1.ebuild,v 1.1 2015/08/04 06:22:14 jer Exp $
 
 EAPI=5
 PYTHON_COMPAT=( python{2_7,3_3,3_4} pypy )
 DISTUTILS_SINGLE_IMPL=1
 
-inherit distutils-r1 eutils git-r3 systemd vcs-snapshot
+inherit distutils-r1 eutils systemd vcs-snapshot
 
 DESCRIPTION="scans log files and bans IPs that show malicious signs"
 HOMEPAGE="http://www.fail2ban.org/"
-EGIT_REPO_URI="https://github.com/${PN}/${PN}/"
+SRC_URI="https://github.com/${PN}/${PN}/tarball/${PV} -> ${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86 ~x86-fbsd"
 IUSE="selinux systemd"
 
 RDEPEND="
@@ -29,11 +29,9 @@ RDEPEND="
 	)' 'python*' ) )
 "
 
-DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
+REQUIRED_USE="systemd? ( !python_single_target_pypy )"
 
-src_unpack() {
-	git-r3_src_unpack
-}
+DOCS=( ChangeLog DEVELOP README.md THANKS TODO doc/run-rootless.txt )
 
 src_prepare() {
 	# Replace /var/run with /run, but not in the top source directory
