@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/boinc-7.2.0.ebuild,v 1.1 2013/06/30 14:52:47 jlec Exp $
+# $Header: $
 
 EAPI=5
 
@@ -8,16 +8,18 @@ EAPI=5
 
 AUTOTOOLS_AUTORECONF=true
 
-inherit autotools-utils flag-o-matic eutils wxwidgets user
+inherit autotools-utils eutils flag-o-matic systemd user versionator wxwidgets
+
+MY_PV=$(get_version_component_range 1-2)
 
 DESCRIPTION="The Berkeley Open Infrastructure for Network Computing"
 HOMEPAGE="http://boinc.ssl.berkeley.edu/"
-SRC_URI="http://dev.gentoo.org/~jlec/distfiles/${P}.tar.xz"
+SRC_URI="https://github.com/BOINC/boinc/archive/client_release/${MY_PV}/${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="X cuda static-libs"
+IUSE="X cuda static-libs systemd"
 
 RDEPEND="
 	!sci-misc/boinc-bin
@@ -47,9 +49,7 @@ DEPEND="${RDEPEND}
 	app-text/docbook2X
 "
 
-PATCHES=(
-	"${FILESDIR}"/${P}-fix_subdirs.patch
-)
+S="${WORKDIR}/${PN}-client_release-${MY_PV}-${PV}"
 
 AUTOTOOLS_IN_SOURCE_BUILD=1
 
@@ -61,19 +61,8 @@ src_prepare() {
 }
 
 src_configure() {
-	local wxconf=""
-
 	# add gtk includes
-	append-flags "$(pkg-config --cflags gtk+-2.0)"
-
-	# look for wxGTK
-	if use X; then
-		WX_GTK_VER="2.8"
-		need-wxwidgets unicode
-		wxconf+=" --with-wx-config=${WX_CONFIG}"
-	else
-		wxconf+=" --without-wxdir"
-	fi
+	use X && append-flags "$(pkg-config --cflags gtk+-2.0)"
 
 	local myeconfargs=(
 		--disable-server
@@ -84,8 +73,17 @@ src_configure() {
 		--with-ssl
 		$(use_with X x)
 		$(use_enable X manager)
-		${wxconf}
 	)
+
+	# look for wxGTK
+	if use X; then
+		WX_GTK_VER="2.8"
+		need-wxwidgets unicode
+		myeconfargs+=(--with-wx-config=${WX_CONFIG})
+	else
+		myeconfargs+=(--without-wxdir)
+	fi
+
 	autotools-utils_src_configure
 }
 
@@ -105,35 +103,36 @@ src_install() {
 
 	newinitd "${FILESDIR}"/${PN}.init ${PN}
 	newconfd "${FILESDIR}"/${PN}.conf ${PN}
+	systemd_dounit "${FILESDIR}"/${PN}.service
 }
 
 pkg_preinst() {
 	enewgroup ${PN}
 	# note this works only for first install so we have to
 	# elog user about the need of being in video group
+	local groups="${PN}"
 	if use cuda; then
-		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN},video"
-	else
-		enewuser ${PN} -1 -1 /var/lib/${PN} "${PN}"
+		group+=",video"
 	fi
+	enewuser ${PN} -1 -1 /var/lib/${PN} "${groups}"
 }
 
 pkg_postinst() {
 	echo
-	elog "You are using the source compiled version of ${PN}."
-	use X && elog "The graphical manager can be found at /usr/bin/${PN}mgr"
+	elog "You are using the source compiled version of boinc."
+	use X && elog "The graphical manager can be found at /usr/bin/boincmgr"
 	elog
-	elog "You need to attach to a project to do anything useful with ${PN}."
-	elog "You can do this by running /etc/init.d/${PN} attach"
+	elog "You need to attach to a project to do anything useful with boinc."
+	elog "You can do this by running /etc/init.d/boinc attach"
 	elog "The howto for configuration is located at:"
 	elog "http://boinc.berkeley.edu/wiki/Anonymous_platform"
 	elog
 	# Add warning about the new password for the client, bug 121896.
 	if use X; then
 		elog "If you need to use the graphical manager the password is in:"
-		elog "/var/lib/${PN}/gui_rpc_auth.cfg"
+		elog "/var/lib/boinc/gui_rpc_auth.cfg"
 		elog "Where /var/lib/ is default RUNTIMEDIR, that can be changed in:"
-		elog "/etc/conf.d/${PN}"
+		elog "/etc/conf.d/boinc"
 		elog "You should change this password to something more memorable (can be even blank)."
 		elog "Remember to launch init script before using manager. Or changing the password."
 		elog

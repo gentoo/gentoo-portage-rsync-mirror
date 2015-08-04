@@ -1,6 +1,16 @@
 # ChangeLog for sci-misc/boinc
-# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
 # $Header: /var/cvsroot/gentoo-x86/sci-misc/boinc/ChangeLog,v 1.112 2013/12/31 13:05:51 pacho Exp $
+
+*boinc-7.4.42 (31 May 2015)
+
+  31 May 2015; Marius Brehler <marbre@linux.sungazer.de> +boinc-7.4.42.ebuild:
+  Version bump, fixes Bug #492602. Thanks to Sven Eden and Mihai Donțu for
+  preparing the bump.
+
+  31 May 2015; Marius Brehler <marbre@linux.sungazer.de> boinc-7.2.0-r1.ebuild,
+  boinc-7.2.0.ebuild:
+  Fix slotting
 
 *boinc-7.2.0-r1 (31 Dec 2013)
 
