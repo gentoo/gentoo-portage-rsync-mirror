@@ -35,7 +35,7 @@ COMMON_DEPEND="
 	>=media-libs/libXcm-0.5.3[${MULTILIB_USEDEP}]
 	cairo? ( >=x11-libs/cairo-1.12.14-r4[${MULTILIB_USEDEP}] )
 	cups? ( >=net-print/cups-1.7.1-r1[${MULTILIB_USEDEP}] )
-	exif? ( >=media-gfx/exiv2-0.23-r2[${MULTILIB_USEDEP}] )
+	exif? ( >=media-gfx/exiv2-0.23-r2:=[${MULTILIB_USEDEP}] )
 	fltk? ( x11-libs/fltk:1 )
 	jpeg? ( virtual/jpeg:0[${MULTILIB_USEDEP}] )
 	qt5? (
