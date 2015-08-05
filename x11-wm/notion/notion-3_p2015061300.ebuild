@@ -1,20 +1,18 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-9999.ebuild,v 1.8 2014/05/25 13:01:33 jer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/notion/notion-3_p2013030200.ebuild,v 1.4 2014/05/25 13:01:33 jer Exp $
 
 EAPI=5
 
-EGIT_REPO_URI="git://notion.git.sourceforge.net/gitroot/notion/notion"
-EGIT_HAS_SUBMODULES="1"
-
-inherit eutils git-2 multilib toolchain-funcs
+inherit eutils multilib toolchain-funcs
 
 DESCRIPTION="Notion is a tiling, tabbed window manager for the X window system"
 HOMEPAGE="http://notion.sourceforge.net"
+SRC_URI="https://github.com/raboof/${PN}/archive/${PV/_p/-}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="nls xinerama +xrandr"
 
 RDEPEND=">=dev-lang/lua-5.1
@@ -27,6 +25,8 @@ RDEPEND=">=dev-lang/lua-5.1
 
 DEPEND="${RDEPEND}
 	virtual/pkgconfig"
+
+S=${WORKDIR}/${P/_p/-}
 
 src_prepare() {
 	sed -e "/^CFLAGS=/s:=:+=:" \
