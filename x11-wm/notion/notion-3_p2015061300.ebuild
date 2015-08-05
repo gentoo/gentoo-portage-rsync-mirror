@@ -24,7 +24,7 @@ RDEPEND=">=dev-lang/lua-5.1
 	xrandr? ( x11-libs/libXrandr )"
 
 DEPEND="${RDEPEND}
-		virtual/pkgconfig"
+	virtual/pkgconfig"
 
 S=${WORKDIR}/${P/_p/-}
 
@@ -41,8 +41,10 @@ src_prepare() {
 		-e "s:^\(VARDIR=\).*$:\1${ROOT}var/cache/${PN}:" \
 		-e "s:^\(X11_PREFIX=\).*:\1\$(PREFIX)/usr:" \
 		-i system-autodetect.mk || die
+
 	sed -e 's/gcc/$(CC)/g' \
 		-i ioncore/Makefile || die
+
 	export STRIPPROG=true
 
 	tc-export CC

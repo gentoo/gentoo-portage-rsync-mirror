@@ -26,23 +26,25 @@ RDEPEND=">=dev-lang/lua-5.1
 	xrandr? ( x11-libs/libXrandr )"
 
 DEPEND="${RDEPEND}
-		virtual/pkgconfig"
+	virtual/pkgconfig"
 
 src_prepare() {
 	sed -e "/^CFLAGS=/s:=:+=:" \
-                -e "/^CFLAGS/{s:-Os:: ; s:-g::}" \
-                -e "/^LDFLAGS=/{s:=:+=: ; s:-Wl,--as-needed::}" \
-                -e "/^CC=/s:=:?=:" \
-                -e "s:^\(PREFIX=\).*$:\1${ROOT}usr:" \
-                -e "s:^\(ETCDIR=\).*$:\1${ROOT}etc/notion:" \
-                -e "s:^\(LIBDIR=\).*:\1\$(PREFIX)/$(get_libdir):" \
-                -e "s:^\(DOCDIR=\).*:\1\$(PREFIX)/share/doc/${PF}:" \
-                -e "s:^\(LUA_DIR=\).*$:\1\$(PREFIX)/usr:" \
-                -e "s:^\(VARDIR=\).*$:\1${ROOT}var/cache/${PN}:" \
-                -e "s:^\(X11_PREFIX=\).*:\1\$(PREFIX)/usr:" \
+		-e "/^CFLAGS/{s:-Os:: ; s:-g::}" \
+		-e "/^LDFLAGS=/{s:=:+=: ; s:-Wl,--as-needed::}" \
+		-e "/^CC=/s:=:?=:" \
+		-e "s:^\(PREFIX=\).*$:\1${ROOT}usr:" \
+		-e "s:^\(ETCDIR=\).*$:\1${ROOT}etc/notion:" \
+		-e "s:^\(LIBDIR=\).*:\1\$(PREFIX)/$(get_libdir):" \
+		-e "s:^\(DOCDIR=\).*:\1\$(PREFIX)/share/doc/${PF}:" \
+		-e "s:^\(LUA_DIR=\).*$:\1\$(PREFIX)/usr:" \
+		-e "s:^\(VARDIR=\).*$:\1${ROOT}var/cache/${PN}:" \
+		-e "s:^\(X11_PREFIX=\).*:\1\$(PREFIX)/usr:" \
 		-i system-autodetect.mk || die
+
 	sed -e 's/gcc/$(CC)/g' \
 		-i ioncore/Makefile || die
+
 	export STRIPPROG=true
 
 	tc-export CC
