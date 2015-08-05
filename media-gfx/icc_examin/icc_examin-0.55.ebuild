@@ -1,24 +1,32 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icc_examin/icc_examin-0.55.ebuild,v 1.1 2014/07/31 06:39:45 xmw Exp $
+# $Header: $
 
 EAPI=4
 
+MY_PN=${PN/_/-}
+
 inherit eutils toolchain-funcs
 
-DESCRIPTION="viewer for ICC and CGATS profiles, argylls gamut vrml visualisations and video card gamma tables"
+DESCRIPTION="Viewer for ICC and CGATS profiles, argylls gamut vrml visualisations and GPU gamma tables"
 HOMEPAGE="http://www.oyranos.org/wiki/index.php?title=ICC_Examin"
-SRC_URI="mirror://sourceforge/oyranos/ICC%20Examin/ICC%20Examin%20${PV}/${P}.tar.bz2"
+if [[ ${PV} == "9999" ]] ; then
+	EGIT_REPO_URI="https://github.com/oyranos-cms/${MY_PN}.git"
+	inherit git-r3
+	KEYWORDS=""
+else
+	SRC_URI="https://github.com/oyranos-cms/${MY_PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64 ~x86"
+fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 RDEPEND="app-admin/elektra
 	media-libs/ftgl
 	media-libs/libXcm
-	>=media-libs/oyranos-0.9.5
+	=media-libs/oyranos-0.9.5*
 	media-libs/tiff
 	x11-libs/fltk
 	x11-libs/libX11
