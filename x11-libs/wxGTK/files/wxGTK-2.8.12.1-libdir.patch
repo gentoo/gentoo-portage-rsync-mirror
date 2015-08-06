@@ -1,12 +1,12 @@
-From 0d7fd900f60843de9fd207f6cde8a50b47b36510 Mon Sep 17 00:00:00 2001
+From e87336e8d583044d62b1a9400db4c29f1474fa50 Mon Sep 17 00:00:00 2001
 From: nE0sIghT <ykonotopov@gmail.com>
-Date: Wed, 5 Aug 2015 22:03:53 +0300
+Date: Wed, 5 Aug 2015 12:37:36 +0300
 Subject: [PATCH 1/2] Backported new libraries search code
 
 ---
- acinclude.m4 | 75 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
- configure.in | 51 +++++++++++++++++++----------------------
- 2 files changed, 94 insertions(+), 32 deletions(-)
+ acinclude.m4 | 75 ++++++++++++++++++++++++++++++++++++++++++++---
+ configure.in | 96 +++++++++++++++++++++++-------------------------------------
+ 2 files changed, 107 insertions(+), 64 deletions(-)
 
 diff --git a/acinclude.m4 b/acinclude.m4
 index a44747c..1e307c9 100644
@@ -108,7 +108,7 @@ index a44747c..1e307c9 100644
  dnl C++ features test
  dnl ===========================================================================
 diff --git a/configure.in b/configure.in
-index 021845d..8252918 100644
+index 021845d..9c78ba3 100644
 --- a/configure.in
 +++ b/configure.in
 @@ -2767,7 +2767,7 @@ if test "$build" != "$host" -a "$GCC" = yes; then
@@ -156,7 +156,80 @@ index 021845d..8252918 100644
              if test "$ac_find_libraries" != "" ; then
                  WX_LINK_PATH_EXIST($ac_find_libraries,$GUI_TK_LIBRARY)
                  GUI_TK_LIBRARY="$GUI_TK_LIBRARY$ac_path_to_link"
-@@ -4295,51 +4295,46 @@ if test "$wxUSE_OPENGL" = "yes"; then
+@@ -4192,41 +4192,23 @@ dnl ---------------------------------------------------------------------------
+ dnl wxDisplay Sanity checks
+ dnl ---------------------------------------------------------------------------
+ 
++USE_XINERAMA=0
+ if test "$wxUSE_DISPLAY" = "yes"; then
+ dnl ---------------------------------------------------------------------------
+ dnl Xinerama (for unix ) - Brian Victor
+ dnl ---------------------------------------------------------------------------
+     if test "$wxUSE_UNIX" = "yes" -a "$wxUSE_MAC" != 1 -a "$wxUSE_COCOA" != 1; then
+-        AC_MSG_CHECKING([for Xinerama])
+-        WX_PATH_FIND_LIBRARIES([$SEARCH_LIB],Xinerama)
++        WX_FIND_LIB(Xinerama, XineramaQueryScreens)
+         if test "$ac_find_libraries" != "" ; then
+-            WX_LINK_PATH_EXIST([$ac_find_libraries],[$LDFLAGS])
+-            if test "$ac_path_to_link" != " -L/usr/lib" ; then
+-                LDFLAGS="$LDFLAGS $ac_path_to_link"
++            if test "$ac_find_libraries" != "std" ; then
++              WX_LINK_PATH_EXIST([$ac_find_libraries],[$LDFLAGS])
++              if test "$ac_path_to_link" != " -L/usr/lib" ; then
++                  LDFLAGS="$LDFLAGS $ac_path_to_link"
++              fi
+             fi
++            USE_XINERAMA=1
+             GUI_TK_LIBRARY="$GUI_TK_LIBRARY -lXinerama"
+-            AC_MSG_RESULT([yes])
+-
+-            AC_MSG_CHECKING([for Xxf86vm extension])
+-            WX_PATH_FIND_LIBRARIES([$SEARCH_LIB],Xxf86vm)
+-            if test "$ac_find_libraries" != "" ; then
+-                AC_MSG_RESULT([yes])
+-                AC_CHECK_HEADERS([X11/extensions/xf86vmode.h],
+-                                 [
+-                                  GUI_TK_LIBRARY="$GUI_TK_LIBRARY -lXxf86vm"
+-                                 ],
+-                                 [],
+-                                 [
+-                                      #if HAVE_X11_XLIB_H
+-                                        #include <X11/Xlib.h>
+-                                      #endif
+-                                 ])
+-            else
+-                AC_MSG_RESULT([no])
+-            fi
+-
+         else
+-            AC_MSG_RESULT([no])
+             AC_MSG_WARN([Xinerama not found; disabling wxDisplay])
+             wxUSE_DISPLAY="no"
+         fi
+@@ -4243,17 +4225,16 @@ dnl X11 session management
+ dnl ---------------------------------------------------------------------------
+ if test "$wxUSE_DETECT_SM" = "yes"; then
+     if test "$wxUSE_UNIX" = "yes" -a "$wxUSE_MAC" != 1 -a "$wxUSE_COCOA" != 1; then
+-        AC_MSG_CHECKING([for -lSM - X11 session management])
+-        WX_PATH_FIND_LIBRARIES([$SEARCH_LIB],SM)
++        WX_FIND_LIB(SM, SmcOpenConnection)
+         if test "$ac_find_libraries" != "" ; then
+-            WX_LINK_PATH_EXIST([$ac_find_libraries],[$LDFLAGS])
+-            if test "$ac_path_to_link" != " -L/usr/lib" ; then
++            if test "$ac_find_libraries" != "std" ; then
++              WX_LINK_PATH_EXIST([$ac_find_libraries],[$LDFLAGS])
++              if test "$ac_path_to_link" != " -L/usr/lib" ; then
+                 LDFLAGS="$LDFLAGS $ac_path_to_link"
++              fi
+             fi
+             GUI_TK_LIBRARY="$GUI_TK_LIBRARY -lSM"
+-            AC_MSG_RESULT([yes])
+         else
+-            AC_MSG_RESULT([no])
+             AC_MSG_WARN([libSM not found; disabling session management detection])
+             wxUSE_DETECT_SM="no"
+         fi
+@@ -4295,51 +4276,46 @@ if test "$wxUSE_OPENGL" = "yes"; then
              AC_CHECK_HEADER(GL/glu.h, [
                  found_gl=0
  
