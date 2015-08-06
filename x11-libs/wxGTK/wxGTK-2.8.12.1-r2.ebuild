@@ -68,6 +68,10 @@ LICENSE="wxWinLL-3
 
 S="${WORKDIR}/wxPython-src-${PV}"
 
+MULTILIB_CHOST_TOOLS=(
+	usr/bin/wx-config-2.8
+)
+
 src_prepare() {
 	epatch "${FILESDIR}"/${PN}-2.8.11-unicode-odbc.patch
 	epatch "${FILESDIR}"/${PN}-2.8.11-collision.patch
@@ -160,6 +164,13 @@ multilib_src_install() {
 		cd contrib/src || die
 		emake DESTDIR="${D}" install
 	fi
+
+	# Manually symlink wxconfig tool to make MULTILIB_CHOST_TOOLS work
+	local wxconfig=$(readlink "${ED}${MULTILIB_CHOST_TOOLS[0]}")
+	local wxconfig_dir=${wxconfig%/*}
+	local wxconfig_name=${wxconfig##*/}
+
+	ln -s "${wxconfig_name}" "${ED}${wxconfig_dir}/${CHOST}-${wxconfig_name}" || die
 }
 
 multilib_src_install_all() {
