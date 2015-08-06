@@ -1,0 +1,347 @@
+From b9be633dfe3c086c2cd9cb6ebe7fad9a1bb18ff3 Mon Sep 17 00:00:00 2001
+From: nE0sIghT <ykonotopov@gmail.com>
+Date: Sat, 18 Apr 2015 23:27:55 +0300
+Subject: [PATCH] Stripped optimization flags.
+ https://github.com/nE0sIghT/vortex-overlay/issues/4
+
+---
+ common/src/Utilities/CMakeLists.txt                | 41 ----------------------
+ common/src/x86emitter/CMakeLists.txt               | 41 ----------------------
+ pcsx2/CMakeLists.txt                               | 41 ----------------------
+ plugins/CDVDiso/src/CMakeLists.txt                 |  4 ---
+ plugins/CDVDlinuz/Src/CMakeLists.txt               |  5 ---
+ plugins/GSdx/CMakeLists.txt                        |  5 ---
+ plugins/onepad/CMakeLists.txt                      |  4 ---
+ plugins/spu2-x/src/CMakeLists.txt                  |  4 ---
+ plugins/zerogs/dx/CMakeLists.txt                   |  4 +--
+ plugins/zerogs/opengl/CMakeLists.txt               |  4 ---
+ plugins/zerospu2/CMakeLists.txt                    |  4 ---
+ plugins/zzogl-pg/opengl/CMakeLists.txt             |  4 ---
+ .../zzogl-pg/opengl/ZeroGSShaders/CMakeLists.txt   |  4 ---
+ tools/bin2cpp/CMakeLists.txt                       |  2 +-
+ 14 files changed, 3 insertions(+), 164 deletions(-)
+
+diff --git a/common/src/Utilities/CMakeLists.txt b/common/src/Utilities/CMakeLists.txt
+index 8f97604..0f0102a 100644
+--- a/common/src/Utilities/CMakeLists.txt
++++ b/common/src/Utilities/CMakeLists.txt
+@@ -14,47 +14,6 @@ set(CommonFlags
+ 	-fno-strict-aliasing
+     )
+ 
+-# set optimization flags
+-set(OptimizationFlags
+-	-falign-functions
+-	-falign-jumps
+-	-falign-labels
+-	-falign-loops
+-	-fcaller-saves
+-	-fcprop-registers
+-	-fcrossjumping
+-	-fcse-follow-jumps
+-	-fcse-skip-blocks
+-	-fdefer-pop
+-	-fdelete-null-pointer-checks
+-	-fgcse
+-	-fgcse-lm
+-	-fif-conversion
+-	-fif-conversion2
+-	-fmerge-constants
+-	-foptimize-sibling-calls
+-	-fpeephole2
+-	-fregmove
+-	-freorder-blocks
+-	-freorder-functions 
+-	-frerun-cse-after-loop
+-	-fsched-interblock
+-	-fsched-spec
+-	-fstrict-overflow
+-	-fthread-jumps
+-	-ftree-ccp
+-	-ftree-ch
+-	-ftree-copyrename
+-	-ftree-dce
+-	-ftree-dominator-opts
+-	-ftree-fre
+-	-ftree-lrs
+-	-ftree-pre
+-	-ftree-sra
+-	-ftree-ter
+-	-ftree-vrp
+-	-funit-at-a-time)
+-
+ #Clang doesn't support a few common flags that GCC does.
+ if(NOT USE_CLANG)
+ 	set(UtilitiesFinalFlags
+diff --git a/common/src/x86emitter/CMakeLists.txt b/common/src/x86emitter/CMakeLists.txt
+index b37e22a..2ae819e 100644
+--- a/common/src/x86emitter/CMakeLists.txt
++++ b/common/src/x86emitter/CMakeLists.txt
+@@ -14,47 +14,6 @@ set(CommonFlags
+ 	-fno-strict-aliasing
+     )
+ 
+-# set optimization flags
+-set(OptimizationFlags
+-	-falign-functions
+-	-falign-jumps
+-	-falign-labels
+-	-falign-loops
+-	-fcaller-saves
+-	-fcprop-registers
+-	-fcrossjumping
+-	-fcse-follow-jumps
+-	-fcse-skip-blocks
+-	-fdefer-pop
+-	-fdelete-null-pointer-checks
+-	-fgcse
+-	-fgcse-lm
+-	-fif-conversion
+-	-fif-conversion2
+-	-fmerge-constants
+-	-foptimize-sibling-calls
+-	-fpeephole2
+-	-fregmove
+-	-freorder-blocks
+-	-freorder-functions 
+-	-frerun-cse-after-loop
+-	-fsched-interblock
+-	-fsched-spec
+-	-fstrict-overflow
+-	-fthread-jumps
+-	-ftree-ccp
+-	-ftree-ch
+-	-ftree-copyrename
+-	-ftree-dce
+-	-ftree-dominator-opts
+-	-ftree-fre
+-	-ftree-lrs
+-	-ftree-pre
+-	-ftree-sra
+-	-ftree-ter
+-	-ftree-vrp
+-	-funit-at-a-time)
+-
+ #Clang doesn't support a few common flags that GCC does.
+ if(NOT USE_CLANG)
+ 	set(x86emitterFinalFlags
+diff --git a/pcsx2/CMakeLists.txt b/pcsx2/CMakeLists.txt
+index 871713e..1a59d4e 100644
+--- a/pcsx2/CMakeLists.txt
++++ b/pcsx2/CMakeLists.txt
+@@ -27,47 +27,6 @@ set(CommonFlags
+     -DWX_PRECOMP
+ 	)
+ 
+-# set optimization flags
+-set(OptimizationFlags
+-	-falign-functions
+-	-falign-jumps
+-	-falign-labels
+-	-falign-loops
+-	-fcaller-saves
+-	-fcprop-registers
+-	-fcrossjumping
+-	-fcse-follow-jumps
+-	-fcse-skip-blocks
+-	-fdefer-pop
+-	-fdelete-null-pointer-checks
+-	-fgcse
+-	-fgcse-lm
+-	-fif-conversion
+-	-fif-conversion2
+-	-fmerge-constants
+-	-foptimize-sibling-calls
+-	-fpeephole2
+-	-fregmove
+-	-freorder-blocks
+-	-freorder-functions
+-	-frerun-cse-after-loop
+-	-fsched-interblock
+-	-fsched-spec
+-	-fstrict-overflow
+-	-fthread-jumps
+-	-ftree-ccp
+-	-ftree-ch
+-	-ftree-copyrename
+-	-ftree-dce
+-	-ftree-dominator-opts
+-	-ftree-fre
+-	-ftree-lrs
+-	-ftree-pre
+-	-ftree-sra
+-	-ftree-ter
+-	-ftree-vrp
+-	-funit-at-a-time)
+-
+ #Clang doesn't support a few common flags that GCC does.
+ if(NOT USE_CLANG)
+ 	set(pcsx2FinalFlags ${CommonFlags} -fno-guess-branch-probability -fno-dse -fno-tree-dse)
+diff --git a/plugins/CDVDiso/src/CMakeLists.txt b/plugins/CDVDiso/src/CMakeLists.txt
+index 519c92a..c4f7f45 100644
+--- a/plugins/CDVDiso/src/CMakeLists.txt
++++ b/plugins/CDVDiso/src/CMakeLists.txt
+@@ -9,10 +9,6 @@ endif()
+ # plugin name
+ set(Output CDVDiso)
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(CDVDisoFinalFlags "")
+ 
+diff --git a/plugins/CDVDlinuz/Src/CMakeLists.txt b/plugins/CDVDlinuz/Src/CMakeLists.txt
+index 943780f..256fdbf 100644
+--- a/plugins/CDVDlinuz/Src/CMakeLists.txt
++++ b/plugins/CDVDlinuz/Src/CMakeLists.txt
+@@ -7,11 +7,6 @@ set(CommonFlags
+     -D_LARGEFILE64_SOURCE
+     )
+ 
+-set(OptimizationFlags
+-    -O2
+-    -fomit-frame-pointer
+-    )
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(CDVDlinuzFinalFlags ${CommonFlags})
+ 
+diff --git a/plugins/GSdx/CMakeLists.txt b/plugins/GSdx/CMakeLists.txt
+index 8859044..847fde6 100644
+--- a/plugins/GSdx/CMakeLists.txt
++++ b/plugins/GSdx/CMakeLists.txt
+@@ -18,11 +18,6 @@ set(CommonFlags
+     -Wunused-variable # __dummy variable need to be investigated
+     )
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(GSdxFinalFlags ${GSdxFinalFlags} ${CommonFlags} -D_DEBUG)
+ 
+diff --git a/plugins/onepad/CMakeLists.txt b/plugins/onepad/CMakeLists.txt
+index 6a12cd7..08086fc 100644
+--- a/plugins/onepad/CMakeLists.txt
++++ b/plugins/onepad/CMakeLists.txt
+@@ -9,10 +9,6 @@ endif()
+ # plugin name
+ set(Output onepad-1.1.0)
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(onepadFinalFlags "")
+ 
+diff --git a/plugins/spu2-x/src/CMakeLists.txt b/plugins/spu2-x/src/CMakeLists.txt
+index 720c4ac..f5e78d6 100644
+--- a/plugins/spu2-x/src/CMakeLists.txt
++++ b/plugins/spu2-x/src/CMakeLists.txt
+@@ -15,10 +15,6 @@ endif()
+ # plugin name
+ set(Output spu2x-2.0.0)
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(spu2xFinalFlags "")
+ 
+diff --git a/plugins/zerogs/dx/CMakeLists.txt b/plugins/zerogs/dx/CMakeLists.txt
+index 70813e0..068cc7e 100644
+--- a/plugins/zerogs/dx/CMakeLists.txt
++++ b/plugins/zerogs/dx/CMakeLists.txt
+@@ -65,8 +65,8 @@ endif(CMAKE_BUILD_TYPE STREQUAL Devel)
+ 
+ # Release - Build
+ if(CMAKE_BUILD_TYPE STREQUAL Release)
+-	set(CMAKE_C_FLAGS_RELEASE "-Wall -fPIC -m32 -O2 -s")
+-	set(CMAKE_CXX_FLAGS_RELEASE "-Wall -fPIC -m32 -O2 -s")
++	set(CMAKE_C_FLAGS_RELEASE "-Wall -fPIC -m32 -s")
++	set(CMAKE_CXX_FLAGS_RELEASE "-Wall -fPIC -m32 -s")
+ 	
+ 	# add defines
+ 	add_definitions()
+diff --git a/plugins/zerogs/opengl/CMakeLists.txt b/plugins/zerogs/opengl/CMakeLists.txt
+index fd33949..7872c28 100644
+--- a/plugins/zerogs/opengl/CMakeLists.txt
++++ b/plugins/zerogs/opengl/CMakeLists.txt
+@@ -7,10 +7,6 @@ set(CommonFlags
+     -Wall
+     )
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ # Debug - Build
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+ 	# add defines
+diff --git a/plugins/zerospu2/CMakeLists.txt b/plugins/zerospu2/CMakeLists.txt
+index c3e3243..44e663b 100644
+--- a/plugins/zerospu2/CMakeLists.txt
++++ b/plugins/zerospu2/CMakeLists.txt
+@@ -9,10 +9,6 @@ endif()
+ # plugin name
+ set(Output zerospu2)
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(zerospu2FinalFlags "")
+ 
+diff --git a/plugins/zzogl-pg/opengl/CMakeLists.txt b/plugins/zzogl-pg/opengl/CMakeLists.txt
+index fe93246..a294555 100644
+--- a/plugins/zzogl-pg/opengl/CMakeLists.txt
++++ b/plugins/zzogl-pg/opengl/CMakeLists.txt
+@@ -26,10 +26,6 @@ set(CommonFlags
+     -Wunused-variable
+     )
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ #Clang doesn't support a few common flags that GCC does.
+ if(NOT USE_CLANG)
+ 	set(zzoglFinalFlags
+diff --git a/plugins/zzogl-pg/opengl/ZeroGSShaders/CMakeLists.txt b/plugins/zzogl-pg/opengl/ZeroGSShaders/CMakeLists.txt
+index 156189c..d6393d5 100644
+--- a/plugins/zzogl-pg/opengl/ZeroGSShaders/CMakeLists.txt
++++ b/plugins/zzogl-pg/opengl/ZeroGSShaders/CMakeLists.txt
+@@ -17,10 +17,6 @@ set(CommonFlags
+     -DNVIDIA_CG_API
+     )
+ 
+-set(OptimizationFlags
+-    -O2
+-    )
+-
+ if(CMAKE_BUILD_TYPE STREQUAL Debug)
+     set(zerogsshadersFinalFlags
+         ${CommonFlags} -D_DEBUG
+diff --git a/tools/bin2cpp/CMakeLists.txt b/tools/bin2cpp/CMakeLists.txt
+index 1689620..982c7a4 100644
+--- a/tools/bin2cpp/CMakeLists.txt
++++ b/tools/bin2cpp/CMakeLists.txt
+@@ -23,7 +23,7 @@ endif(CMAKE_BUILD_TYPE STREQUAL Devel)
+ if(CMAKE_BUILD_TYPE STREQUAL Release)
+ 	# add defines
+ 	set(bin2cppFinalFlags
+-		-O2 -s -Wall -fexceptions
++		-s -Wall -fexceptions
+ 	)
+ endif(CMAKE_BUILD_TYPE STREQUAL Release)
+ 
+-- 
+2.0.5
+

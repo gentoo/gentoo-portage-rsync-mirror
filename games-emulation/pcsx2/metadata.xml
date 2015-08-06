@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>ykonotopov@gmail.com</email>
+		<name>Yuri Konotopov</name>
+	</maintainer>
+	<use>
+		<flag name="cg">Use CG backend of ZZogl</flag>
+		<flag name="custom-cflags">Strip upstream provided optimization flags (unsupported)</flag>
+		<flag name="egl">Enable EGL support for GSdx plugin</flag>
+		<flag name="glew">Enable ZZogl plugin</flag>
+		<flag name="glsl">Use GLSL backend of ZZogl</flag>
+		<flag name="joystick">Control joystick support</flag>
+		<flag name="png">Allow to dump texture as PNG (require <pkg>dev-cpp/pngpp</pkg>)</flag>
+		<flag name="sdl">
+		    Use Simple Directmedia Layer (<pkg>media-libs/libsdl</pkg>) for
+	            audio and joystick support.
+		</flag>
+		<flag name="sound">Build sound plugins</flag>
+		<flag name="video">Build video plugins</flag>
+	</use>
+</pkgmetadata>

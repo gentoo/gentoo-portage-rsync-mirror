@@ -1,0 +1,27 @@
+From d113fa7846e6804cc204fc158f0ea853f56aeba4 Mon Sep 17 00:00:00 2001
+From: nE0sIghT <ykonotopov@gmail.com>
+Date: Sat, 2 May 2015 17:54:54 +0300
+Subject: [PATCH] Dirty hack for broken Gentoo's eselect-opengl.
+ https://bugs.gentoo.org/show_bug.cgi?id=510730
+
+---
+ plugins/GSdx/stdafx.h | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/plugins/GSdx/stdafx.h b/plugins/GSdx/stdafx.h
+index 2467405..e358bc1 100644
+--- a/plugins/GSdx/stdafx.h
++++ b/plugins/GSdx/stdafx.h
+@@ -185,6 +185,9 @@ using namespace std;
+ 	// Note use GL/glcorearb.h on the future
+ 	#include <GL/gl.h>
+ 	#include <GL/glext.h>
++	#ifndef PFNGLBLENDCOLORPROC
++		typedef void (APIENTRYP PFNGLBLENDCOLORPROC) (GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
++	#endif
+ #endif
+ 	#include "GLLoader.h"
+ 
+-- 
+2.3.6
+
