@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.97.4.ebuild,v 1.2 2015/08/08 00:49:16 blueness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ipv6calc-0.98.0.ebuild,v 1.1 2015/08/08 00:49:16 blueness Exp $
 
 EAPI="5"
 inherit eutils
@@ -25,6 +25,10 @@ DEPEND="${RDEPEND}
 #dev-perl/URI is needed for web interface, that is not installed now
 
 src_configure() {
+	# These options are broken.  You can't disable them.  That's
+	# okay because we want then force enabled.
+	# --disable-db-as-registry
+	# --disable-db-cc-registry
 	if use geoip; then
 		myconf=$(use_enable geoip)
 		myconf+=" --with-geoip-db=${EPREFIX}/usr/share/GeoIP"
@@ -37,6 +41,8 @@ src_configure() {
 		--enable-db-ieee \
 		--enable-db-ipv4 \
 		--enable-db-ipv6 \
+		--disable-dbip \
+		--disable-external \
 		--disable-ip2location \
 		${myconf}
 }
