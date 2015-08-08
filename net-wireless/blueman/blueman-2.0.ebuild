@@ -1,10 +1,10 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-9999.ebuild,v 1.11 2015/08/08 15:35:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-2.0.ebuild,v 1.1 2015/08/08 15:35:02 mgorny Exp $
 
 EAPI="5"
 
-PYTHON_COMPAT=( python{2_7,3_4} )
+PYTHON_COMPAT=( python2_7 )
 inherit eutils python-single-r1 gnome2-utils autotools
 
 DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks"
@@ -16,7 +16,7 @@ if [[ ${PV} == "9999" ]] ; then
 	KEYWORDS=""
 else
 	SRC_URI="https://github.com/blueman-project/${PN}/releases/download/${PV}/${P}.tar.xz"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-3"
@@ -25,7 +25,7 @@ IUSE="appindicator network nls policykit pulseaudio thunar"
 
 COMMON_DEPEND="
 	dev-python/pygobject:3
-	>=net-wireless/bluez-5:=
+	>=net-wireless/bluez-4.61:=
 	${PYTHON_DEPS}"
 DEPEND="${COMMON_DEPEND}
 	dev-python/cython[${PYTHON_USEDEP}]
@@ -56,7 +56,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 src_prepare() {
 	epatch \
-		"${FILESDIR}/${PN}-9999-set-codeset-for-gettext-to-UTF-8-always.patch"
+		"${FILESDIR}/${P}-set-codeset-for-gettext-to-UTF-8-always.patch"
 	[[ ${PV} == 9999 ]] && eautoreconf
 }
 
@@ -65,10 +65,8 @@ src_configure() {
 		--docdir=/usr/share/doc/${PF} \
 		--disable-runtime-deps-check \
 		--disable-static \
-		$(use_enable appindicator) \
 		$(use_enable policykit polkit) \
 		$(use_enable nls) \
-		$(use_enable pulseaudio) \
 		$(use_enable thunar thunar-sendto)
 }
 
@@ -77,6 +75,9 @@ src_install() {
 
 	python_fix_shebang "${D}"
 	rm "${D}"/$(python_get_sitedir)/*.la || die
+
+	use appindicator || { rm "${D}"/$(python_get_sitedir)/${PN}/plugins/applet/AppIndicator.py* || die; }
+	use pulseaudio || { rm "${D}"/$(python_get_sitedir)/${PN}/{main/Pulse*.py*,plugins/manager/Pulse*.py*} || die; }
 }
 
 pkg_preinst() {
