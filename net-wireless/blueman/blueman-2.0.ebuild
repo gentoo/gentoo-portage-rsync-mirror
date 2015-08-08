@@ -1,17 +1,17 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-2.0.ebuild,v 1.1 2015/08/08 15:35:02 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/blueman-2.0.ebuild,v 1.2 2015/08/08 16:16:09 mgorny Exp $
 
 EAPI="5"
 
 PYTHON_COMPAT=( python2_7 )
-inherit eutils python-single-r1 gnome2-utils autotools
+inherit eutils gnome2-utils linux-info python-single-r1
 
 DESCRIPTION="GTK+ Bluetooth Manager, designed to be simple and intuitive for everyday bluetooth tasks"
 HOMEPAGE="https://github.com/blueman-project/blueman"
 
 if [[ ${PV} == "9999" ]] ; then
-	inherit git-r3
+	inherit autotools git-r3
 	EGIT_REPO_URI="https://github.com/blueman-project/blueman.git"
 	KEYWORDS=""
 else
@@ -43,9 +43,16 @@ RDEPEND="${COMMON_DEPEND}
 		x11-themes/mate-icon-theme
 	)
 	appindicator? ( dev-libs/libappindicator:3[introspection] )
-	network? ( || ( net-dns/dnsmasq
-		net-misc/dhcp
-		>=net-misc/networkmanager-0.8 ) )
+	network? (
+		net-dns/avahi[autoipd]
+		net-firewall/iptables
+		sys-apps/net-tools
+		|| (
+			net-dns/dnsmasq
+			net-misc/dhcp
+			>=net-misc/networkmanager-0.8
+		)
+	)
 	policykit? ( sys-auth/polkit )
 	pulseaudio? ( media-sound/pulseaudio[bluetooth] )
 	thunar? ( xfce-base/thunar )
@@ -53,6 +60,19 @@ RDEPEND="${COMMON_DEPEND}
 "
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+
+pkg_pretend() {
+	if use network; then
+		local CONFIG_CHECK="~BRIDGE ~IP_NF_IPTABLES
+			~IP_NF_NAT ~IP_NF_TARGET_MASQUERADE"
+		linux-info_pkg_setup
+	fi
+}
+
+pkg_setup() {
+	pkg_pretend
+	python-single-r1_pkg_setup
+}
 
 src_prepare() {
 	epatch \

@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/blueman
 # Copyright 1999-2015 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.38 2015/08/08 15:42:23 mgorny Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/blueman/ChangeLog,v 1.39 2015/08/08 16:16:09 mgorny Exp $
+
+  08 Aug 2015; Michał Górny <mgorny@gentoo.org> blueman-2.0.ebuild,
+  blueman-9999.ebuild:
+  Add additional deps and kernel checks for USE=network. Bug #487378.
 
   08 Aug 2015; Michał Górny <mgorny@gentoo.org> -blueman-1.23-r1.ebuild,
   -blueman-1.23.ebuild, -blueman-1.23_p20140717-r1.ebuild,
