@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11b_beta20150326.ebuild,v 1.2 2015/08/08 01:05:15 sping Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacup/javacup-0.11b_beta20150326.ebuild,v 1.3 2015/08/08 12:56:22 sping Exp $
 
 EAPI="5"
 
@@ -37,6 +37,7 @@ S="${WORKDIR}"
 
 src_prepare() {
 	epatch "${FILESDIR}"/${P}-build-xml.patch
+	epatch "${FILESDIR}"/${P}-build-xml-svn.patch
 
 	find . -name '*.class' -delete || die
 
