@@ -2711,10 +2711,13 @@ dev-vcs/git-annex:androidsplice - Get TH splices for Android.
 dev-vcs/git-annex:asciiprogress - Use ascii-progress library (experimental)
 dev-vcs/git-annex:assistant - Enable git-annex assistant and watch command
 dev-vcs/git-annex:cryptohash - Enable use of cryptohash for checksumming
+dev-vcs/git-annex:database - Enable building with dev-haskell/persistent for database use
 dev-vcs/git-annex:desktop-notify - Enable desktop environment notifications
+dev-vcs/git-annex:desktopnotify - Enable desktop environment notifications
 dev-vcs/git-annex:dns - Enable the haskell DNS library for DNS lookup
 dev-vcs/git-annex:ekg - Enable use of EKG to monitor git-annex as it runs.
 dev-vcs/git-annex:feed - Enable podcast feed support
+dev-vcs/git-annex:network-uri - Get Network.URI from the network-uri package.
 dev-vcs/git-annex:pairing - Enable pairing of git annex repositories
 dev-vcs/git-annex:production - Enable production build (slower build; faster binary)
 dev-vcs/git-annex:quvi - Enable use of quvi to download videos
@@ -2845,7 +2848,6 @@ games-engines/odamex:odalaunch - Build the wxwidgets based launcher.
 games-engines/odamex:portmidi - Enable portmidi support.
 games-engines/odamex:server - Build server target.
 games-engines/openmw:devtools - Install development tools like bsatool, esmtool and opencs.
-games-engines/openmw:launcher - Install the launcher for configuring OpenMW.
 games-engines/renpy:development - Install IDE for game developers and an empty game template
 games-engines/scummvm:fluidsynth - compile with support for fluidsynth
 games-engines/scummvm:mpeg2 - enable mpeg2 codec for cutscenes
@@ -4551,10 +4553,10 @@ media-video/gnome-mplayer:gda - Enable support for gnome-extra/libgda
 media-video/google2srt:html - Install HTML documentation
 media-video/h264enc:ogm - Support for OGM container format
 media-video/handbrake:fdk - Support for encoding AAC using media-libs/fdk-aac.
-media-video/handbrake:ffmpeg - Use FFmpeg from media-video/ffmpeg to decode MPEG-2 instead of media-plugins/gst-plugins-mpeg2dec.
 media-video/handbrake:gstreamer - Support for the streaming media framework from media-libs/gstreamer.
 media-video/handbrake:gtk - Support for Gimp ToolKit + from x11-libs/gtk+, requirement for a GUI-based HandBrake.
 media-video/handbrake:libav-aac - Support for encoding AAC using media-libs/libav's internal encoder.
+media-video/handbrake:x265 - Support for encoding h265 using media-libs/x265.
 media-video/kdenlive:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 media-video/kino:gpac - Enable GPAC support when exporting to 3GPP format
 media-video/kmplayer:npp - Compile the npp backend that plays xembed style browser plugins.
@@ -6627,7 +6629,8 @@ sci-libs/nlopt:octave - Add plugin for sci-mathematics/octave
 sci-libs/octomap:dynamicEDT3D - Build and install dynamicEDT3D library: A library for incrementally updatable Euclidean distance transforms in 3D.
 sci-libs/opencascade:freeimage - Enable support for image i/o via media-libs/freeimage
 sci-libs/opencascade:gl2ps - Use gl2ps PostScript printing library
-sci-libs/opencascade:tbb - tEnable multithreading with the Intel Threads Building Block dev-cpp/tbb
+sci-libs/opencascade:tbb - Enable multithreading with the Intel Threads Building Block dev-cpp/tbb
+sci-libs/opencascade:vtk - Enable Virtualisation Toolkit
 sci-libs/openfoam:opendx - Install opendx visualisation tool
 sci-libs/openfoam:paraview - Enable support for paraview library
 sci-libs/openfoam:src - Install source files

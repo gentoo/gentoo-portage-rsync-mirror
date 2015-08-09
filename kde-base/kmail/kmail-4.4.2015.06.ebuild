@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kmail/kmail-4.4.2015.06.ebuild,v 1.1 2015/07/12 22:07:36 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
@@ -10,7 +10,7 @@ VIRTUALX_REQUIRED=test
 inherit flag-o-matic kde4-meta
 
 DESCRIPTION="Email component of Kontact, the integrated personal information manager of KDE (noakonadi branch)"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 DEPEND="

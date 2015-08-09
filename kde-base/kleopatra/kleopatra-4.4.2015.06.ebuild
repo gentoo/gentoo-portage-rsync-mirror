@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kleopatra/kleopatra-4.4.2015.06.ebuild,v 1.1 2015/07/12 22:07:10 dilfridge Exp $
+# $Id$
 
 EAPI=5
 
@@ -9,7 +9,7 @@ KDE_HANDBOOK=optional
 inherit kde4-meta
 
 DESCRIPTION="Kleopatra - KDE X.509 key manager (noakonadi branch)"
-KEYWORDS="~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="amd64 ~ppc x86 ~amd64-linux ~x86-linux"
 IUSE="debug"
 
 SRC_URI+=" http://dev.gentoo.org/~dilfridge/distfiles/${PN}-4.4.11.1-libassuan2.patch.bz2"

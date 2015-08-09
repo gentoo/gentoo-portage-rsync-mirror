@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 # NOTE: The comments in this file are for instruction and documentation.
 # They're not meant to appear with your final, production ebuild.  Please
@@ -8,7 +8,7 @@
 # doesn't mean you can't add your own comments though.
 
 # The 'Header' on the third line should just be left alone.  When your ebuild
-# will be committed to cvs, the details on that line will be automatically
+# will be committed to git, the details on that line will be automatically
 # generated to contain the correct data.
 
 # The EAPI variable tells the ebuild format in use.

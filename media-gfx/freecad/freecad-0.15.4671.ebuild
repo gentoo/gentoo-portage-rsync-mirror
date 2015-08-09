@@ -1,6 +1,6 @@
 # Copyright 1999-2015 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/freecad/freecad-0.15.4671.ebuild,v 1.2 2015/07/23 21:37:17 xmw Exp $
+# $Id$
 
 EAPI=5
 
@@ -30,7 +30,7 @@ COMMON_DEPEND="dev-cpp/eigen:3
 	dev-qt/qtsvg:4
 	dev-qt/qtwebkit:4
 	media-libs/coin
-	|| ( sci-libs/opencascade:6.8.0 sci-libs/opencascade:6.7.1 sci-libs/opencascade:6.6.0 sci-libs/opencascade:6.5.5 )
+	|| ( sci-libs/opencascade:6.9.0[vtk] sci-libs/opencascade:6.8.0 sci-libs/opencascade:6.7.1 sci-libs/opencascade:6.6.0 sci-libs/opencascade:6.5.5 )
 	sys-libs/zlib
 	virtual/glu
 	${PYTHON_DEPS}"
