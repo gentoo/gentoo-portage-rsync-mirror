@@ -1,0 +1,22 @@
+--- a/config/CMakeChecks.txt	2015-07-19 14:17:22.857046105 +0200
++++ b/config/CMakeChecks.txt	2015-07-19 14:23:11.606686135 +0200
+@@ -37,6 +37,8 @@
+ INCLUDE( CheckCSourceCompiles )
+ INCLUDE( CheckCXXSourceCompiles )
+ 
++INCLUDE( GNUInstallDirs )
++
+ INCLUDE( FindIconv )
+ 
+ SET( STDC_HEADERS ON )
+--- a/src/CMakeLists.txt	2015-07-19 14:06:54.104906589 +0200
++++ b/src/CMakeLists.txt	2015-07-19 14:12:37.982607526 +0200
+@@ -321,7 +321,7 @@
+ 
+ # ******************************************************************************
+ # Man page
+-INSTALL( FILES exiv2.1 DESTINATION man/man1 )
++INSTALL( FILES exiv2.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1 )
+ 
+ # That's all Folks!
+ ##
