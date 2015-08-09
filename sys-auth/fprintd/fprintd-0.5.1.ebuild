@@ -13,7 +13,7 @@ SRC_URI="http://cgit.freedesktop.org/libfprint/${PN}/snapshot/${MY_PV}.tar.bz2 -
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm ia64 ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="doc pam static-libs"
 
 RDEPEND="dev-libs/dbus-glib

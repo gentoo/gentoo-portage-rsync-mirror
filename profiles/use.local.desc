@@ -3220,7 +3220,6 @@ kde-base/kdebindings-meta:csharp - Enable C# language bindings for KDE and Qt
 kde-base/kdelibs:nepomuk - Enable Nepomuk based semantic desktop support (deprecated)
 kde-base/kdelibs:opengl - Enable OpenGL support for Plasma (GLApplet)
 kde-base/kdepim-common-libs:google - Google service integration via net-libs/libkgapi
-kde-base/kdepim-meta:akonadi - Enables support for kde-base/akonadi
 kde-base/kdepim-runtime:facebook - Facebook service integration via net-libs/libkfbapi
 kde-base/kdepim-runtime:google - Google service integration via net-libs/libkgapi
 kde-base/kdepimlibs:prison - Enable support for QRcodes in contacts
