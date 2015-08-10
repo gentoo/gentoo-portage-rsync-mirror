@@ -379,9 +379,6 @@
   <email>java@gentoo.org</email>
   <description>Java-related packages</description>
   <maintainer>
-    <email>betelgeuse@gentoo.org</email>
-  </maintainer>
-  <maintainer>
     <email>caster@gentoo.org</email>
   </maintainer>
   <maintainer>
