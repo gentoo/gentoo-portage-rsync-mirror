@@ -14,42 +14,27 @@ EGIT_REPO_URI="git://github.com/PCSX2/pcsx2.git"
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="custom-cflags egl joystick png +sdl +sound +video"
-REQUIRED_USE="
-	egl? ( video )
-	joystick? ( sdl )
-	sound? ( sdl )
-"
+IUSE="png +wxwidgets3"
 
 RDEPEND="
 	app-arch/bzip2[abi_x86_32]
+	app-arch/xz-utils[abi_x86_32]
 	dev-libs/libaio[abi_x86_32]
+	media-libs/alsa-lib[abi_x86_32]
+	media-libs/libpng:=[abi_x86_32]
+	media-libs/libsdl[abi_x86_32,joystick,sound]
+	media-libs/libsoundtouch[abi_x86_32]
+	media-libs/portaudio[abi_x86_32]
 	>=sys-libs/zlib-1.2.4[abi_x86_32]
 	virtual/jpeg:62[abi_x86_32]
+	virtual/opengl[abi_x86_32]
 	x11-libs/gtk+:2[abi_x86_32]
 	x11-libs/libICE[abi_x86_32]
 	x11-libs/libX11[abi_x86_32]
 	x11-libs/libXext[abi_x86_32]
 
-	|| (
-		x11-libs/wxGTK:2.8[abi_x86_32,X]
-		x11-libs/wxGTK:3.0[abi_x86_32,X]
-	)
-
-	video? (
-		media-libs/libpng:=[abi_x86_32]
-		virtual/opengl[abi_x86_32]
-		egl? ( media-libs/mesa[abi_x86_32,egl] )
-		app-arch/xz-utils[abi_x86_32]
-	)
-
-	sdl? ( media-libs/libsdl[abi_x86_32,joystick?,sound?] )
-
-	sound? (
-		media-libs/alsa-lib[abi_x86_32]
-		media-libs/portaudio[abi_x86_32]
-		media-libs/libsoundtouch[abi_x86_32]
-	)
+	!wxwidgets3? ( x11-libs/wxGTK:2.8[abi_x86_32,X] )
+	wxwidgets3? ( x11-libs/wxGTK:3.0[abi_x86_32,X] )
 "
 DEPEND="${RDEPEND}
 	!<app-eselect/eselect-opengl-1.3.1
@@ -67,15 +52,6 @@ clean_locale() {
 
 src_prepare() {
 	cmake-utils_src_prepare
-	if ! use video; then
-		sed -i -e "s:GSdx TRUE:GSdx FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
-	if ! use joystick; then
-		sed -i -e "s:onepad TRUE:onepad FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
-	if ! use sound; then
-		sed -i -e "s:spu2-x TRUE:spu2-x FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
 
 	ebegin "Cleaning up locales..."
 	l10n_for_each_disabled_locale_do clean_locale
@@ -109,24 +85,18 @@ src_configure() {
 		-DCMAKE_INSTALL_PREFIX=/usr
 		-DCMAKE_LIBRARY_PATH=/usr/$(get_libdir)/"${PN}"
 		-DDOC_DIR=/usr/share/doc/"${PF}"
+		-DEGL_API=FALSE
 		-DGTK3_API=FALSE
 		-DPLUGIN_DIR=/usr/$(get_libdir)/"${PN}"
 		# wxGTK must be built against same sdl version
 		-DSDL2_API=FALSE
 
-		$(cmake-utils_use egl EGL_API)
+		$(cmake-utils_useno wxwidgets3 DWX28_API)
 	)
 
-	local WX_GTK_VER="2.8"
-	# Prefer wxGTK:3
-	if has_version 'x11-libs/wxGTK:3.0[abi_x86_32,X]'; then
-		WX_GTK_VER="3.0"
-	fi
-
-	if [ $WX_GTK_VER == '3.0' ]; then
-		mycmakeargs+=(-DWX28_API=FALSE)
-	else
-		mycmakeargs+=(-DWX28_API=TRUE)
+	local WX_GTK_VER="3.0"
+	if ! use wxwidgets3; then
+		WX_GTK_VER="2.8"
 	fi
 
 	need-wxwidgets unicode

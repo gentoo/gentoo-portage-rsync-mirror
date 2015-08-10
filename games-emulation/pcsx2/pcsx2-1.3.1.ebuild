@@ -16,18 +16,16 @@ HOMEPAGE="http://www.pcsx2.net"
 LICENSE="GPL-3"
 SLOT="0"
 
-IUSE="cg egl glew glsl joystick sdl sound video"
-REQUIRED_USE="
-	glew? ( || ( cg glsl ) )
-	joystick? ( sdl )
-	sound? ( sdl )
-	video? ( || ( egl glew ) )
-	?? ( cg glsl )
-"
+IUSE="+wxwidgets3"
 
 RDEPEND="
 	app-arch/bzip2[abi_x86_32]
 	dev-libs/libaio[abi_x86_32]
+	media-libs/alsa-lib[abi_x86_32]
+	media-libs/libsdl[abi_x86_32,joystick,sound]
+	media-libs/portaudio[abi_x86_32]
+	media-libs/libsoundtouch[abi_x86_32]
+	virtual/opengl[abi_x86_32]
 	>=sys-libs/zlib-1.2.4[abi_x86_32]
 	virtual/jpeg:62[abi_x86_32]
 	x11-libs/gtk+:2[abi_x86_32]
@@ -35,25 +33,8 @@ RDEPEND="
 	x11-libs/libX11[abi_x86_32]
 	x11-libs/libXext[abi_x86_32]
 
-	|| (
-		x11-libs/wxGTK:2.8[abi_x86_32,X]
-		x11-libs/wxGTK:3.0[abi_x86_32,X]
-	)
-
-	video? (
-		virtual/opengl[abi_x86_32]
-		egl? ( media-libs/mesa[abi_x86_32,egl] )
-		glew? ( media-libs/glew[abi_x86_32] )
-		cg? ( media-gfx/nvidia-cg-toolkit[abi_x86_32] )
-	)
-
-	sdl? ( media-libs/libsdl[abi_x86_32,joystick?,sound?] )
-
-	sound? (
-		media-libs/alsa-lib[abi_x86_32]
-		media-libs/portaudio[abi_x86_32]
-		media-libs/libsoundtouch[abi_x86_32]
-	)
+	!wxwidgets3? ( x11-libs/wxGTK:2.8[abi_x86_32,X] )
+	wxwidgets3? ( x11-libs/wxGTK:3.0[abi_x86_32,X] )
 "
 DEPEND="${RDEPEND}
 	!<app-eselect/eselect-opengl-1.3.1
@@ -62,7 +43,10 @@ DEPEND="${RDEPEND}
 "
 
 PATCHES=(
+	"${FILESDIR}"/"${P}-egl-optional.patch"
+	"${FILESDIR}"/"${P}-packaging.patch"
 	"${FILESDIR}"/"${P}-cflags.patch"
+
 )
 
 # Upstream issue: https://github.com/PCSX2/pcsx2/issues/417
@@ -74,22 +58,6 @@ clean_locale() {
 
 src_prepare() {
 	cmake-utils_src_prepare
-
-	if ! use egl; then
-		sed -i -e "s:GSdx TRUE:GSdx FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
-	if ! use glew || ! use cg; then
-		sed -i -e "s:zerogs TRUE:zerogs FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
-	if ! use glew; then
-		sed -i -e "s:zzogl TRUE:zzogl FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
-	if ! use joystick; then
-		sed -i -e "s:onepad TRUE:onepad FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
-	if ! use sound; then
-		sed -i -e "s:spu2-x TRUE:spu2-x FALSE:g" cmake/SelectPcsx2Plugins.cmake || die
-	fi
 
 	ebegin "Cleaning up locales..."
 	l10n_for_each_disabled_locale_do clean_locale
@@ -113,7 +81,11 @@ src_configure() {
 
 	local mycmakeargs=(
 		-DARCH_FLAG=
+		-DEGL_API=FALSE
 		-DEXTRA_PLUGINS=FALSE
+		-DGLES_API=FALSE
+		-DGLSL_API=FALSE
+		-DGTK3_API=FALSE
 		-DPACKAGE_MODE=TRUE
 		-DOPTIMIZATION_FLAG=
 		-DXDG_STD=TRUE
@@ -121,25 +93,16 @@ src_configure() {
 		-DCMAKE_INSTALL_PREFIX=/usr
 		-DCMAKE_LIBRARY_PATH=/usr/$(get_libdir)/"${PN}"
 		-DDOC_DIR=/usr/share/doc/"${PF}"
-		-DGTK3_API=FALSE
 		-DPLUGIN_DIR=/usr/$(get_libdir)/"${PN}"
 		# wxGTK must be built against same sdl version
 		-DSDL2_API=FALSE
 
-		$(cmake-utils_use egl EGL_API)
-		$(cmake-utils_use glsl GLSL_API)
+		$(cmake-utils_useno wxwidgets3 DWX28_API)
 	)
 
-	local WX_GTK_VER="2.8"
-	# Prefer wxGTK:3
-	if has_version 'x11-libs/wxGTK:3.0[abi_x86_32,X]'; then
-		WX_GTK_VER="3.0"
-	fi
-
-	if [ $WX_GTK_VER == '3.0' ]; then
-		mycmakeargs+=(-DWX28_API=FALSE)
-	else
-		mycmakeargs+=(-DWX28_API=TRUE)
+	local WX_GTK_VER="3.0"
+	if ! use wxwidgets3; then
+		WX_GTK_VER="2.8"
 	fi
 
 	need-wxwidgets unicode

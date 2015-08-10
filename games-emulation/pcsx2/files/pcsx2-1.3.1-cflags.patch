@@ -1,8 +1,8 @@
-From f98309d1e9d92485465233a73fd5e7a2be3d8238 Mon Sep 17 00:00:00 2001
+From 2a314d6a373386507e755325532652d3c06db554 Mon Sep 17 00:00:00 2001
 From: nE0sIghT <ykonotopov@gmail.com>
 Date: Sat, 8 Aug 2015 19:12:37 +0300
-Subject: [PATCH] Use global compiler optimization flags instead of defining
- them for every plugin/binary
+Subject: [PATCH 3/3] Use global compiler optimization flags instead of
+ defining them for every plugin/binary
 
 # Conflicts:
 #	common/src/Utilities/CMakeLists.txt
@@ -416,7 +416,7 @@ index fd5a45e..aaf9e4e 100644
  # FWnull sources
  set(FWnullSources
 diff --git a/plugins/GSdx/CMakeLists.txt b/plugins/GSdx/CMakeLists.txt
-index 8859044..cfe77a0 100644
+index 13b30c7..6fd6253 100644
 --- a/plugins/GSdx/CMakeLists.txt
 +++ b/plugins/GSdx/CMakeLists.txt
 @@ -18,19 +18,14 @@ set(CommonFlags
