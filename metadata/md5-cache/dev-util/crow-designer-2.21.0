@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=>=dev-libs/guiloader-2.21 >=dev-libs/guiloader-c++-2.21 dev-cpp/gtkmm:2.4 >=dev-libs/dbus-glib-0.86
 SLOT=0
 SRC_URI=http://nothing-personal.googlecode.com/files/crow-2.21.0.tar.bz2
-_md5_=1c62cae3d286a26476d26912a2d76352
+_md5_=87f7767162707ba970402a8f8a5e01d2

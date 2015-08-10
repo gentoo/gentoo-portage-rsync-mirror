@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://james.dyndns.ws/pub/Dictionary/StarDict-James/DucViet45K.zip
-_eclasses_=stardict	0377e6bf21060f0d18a39ea68f54a162
-_md5_=f7b7e37ebc529def12262104f80d91a9
+_eclasses_=stardict	f2fd36b0af07ceaba9852e6caec6ac7f
+_md5_=7e890ecbace46fcab32b5df56fc14e8d

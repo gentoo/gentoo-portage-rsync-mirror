@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-20
 SLOT=20
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-issue20.tar.gz
-_md5_=36f052548d623669c3cacc68a9a5f8ea
+_md5_=f63642b26271f2d352501f1ce8b2ad2b

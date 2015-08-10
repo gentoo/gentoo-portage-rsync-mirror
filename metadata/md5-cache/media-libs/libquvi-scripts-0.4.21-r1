@@ -10,4 +10,4 @@ RDEPEND=!=media-libs/libquvi-scripts-0.4*:0
 RESTRICT=test
 SLOT=0.4
 SRC_URI=mirror://sourceforge/quvi/0.4/libquvi-scripts-0.4.21.tar.xz
-_md5_=1c6433513a4c22c860da0d9083ace736
+_md5_=83671bd901752021c7804f282adaa02e

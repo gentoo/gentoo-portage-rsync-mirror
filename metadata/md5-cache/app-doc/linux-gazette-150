@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-150
 SLOT=150
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-150.tar.gz
-_md5_=0d73fd7eb19803cfd575eec0aef53ada
+_md5_=0f451e0aca192a9fb413043a90486b2d

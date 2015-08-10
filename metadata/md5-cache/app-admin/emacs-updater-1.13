@@ -8,4 +8,4 @@ LICENSE=GPL-2+
 RDEPEND=>=app-portage/portage-utils-0.3 virtual/emacs
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~ulm/emacs/emacs-updater-1.13.tar.xz
-_md5_=6134179f8f7c711c40c84d8ca72303d9
+_md5_=f6602783ebebdc31f7f2fe7601b03d39

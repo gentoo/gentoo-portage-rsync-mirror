@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=|| ( >=sys-apps/portage-2.1.6 >=sys-apps/paludis-0.56.0 )
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~floppym/dist/python-updater-0.11.tar.bz2
-_md5_=a7b512efed4db623d1979e648a259021
+_md5_=95fa3144dc6995d489cdba71837f1f30

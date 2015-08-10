@@ -7,4 +7,4 @@ KEYWORDS=amd64 ppc x86
 LICENSE=public-domain
 SLOT=0
 SRC_URI=http://download.openclipart.org/downloads/0.20/openclipart-0.20.tar.bz2
-_md5_=34cadb71fecc5757936054770d3ec8f0
+_md5_=53a018572efea2ae0902315f03d585e5

@@ -10,5 +10,5 @@ RDEPEND=dev-libs/glib:2 >=dev-libs/icu-4.0.1 >=net-libs/libsoup-2.24:2.4 !gtk3? 
 REQUIRED_USE=tabbed? ( browser )
 SLOT=0
 SRC_URI=http://github.com/Dieterbe/uzbl/tarball/2012.05.14 -> uzbl-2012.05.14.tar.gz
-_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=2013a603a2beab4e2dc9253e5e7a6141
+_eclasses_=vcs-snapshot	2ecbc36efd3f6b8486f63fcf8530c1bd
+_md5_=0c40f7b81c3bcc2cf9af2e6489ca95c5

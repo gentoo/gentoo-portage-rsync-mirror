@@ -7,4 +7,4 @@ LICENSE=LGPL-2.1
 RDEPEND=>=x11-wm/icewm-1.2.6
 SLOT=0
 SRC_URI=http://sandbox.cz/~covex/icewm/iceicons/iceicons-default-0.10.0.tar.gz
-_md5_=e9b10ddb81c25515e4d8247b8eaa852a
+_md5_=51b30b1e6d52ffa25fd461d2c2a92fea

@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=virtual/udev
 SLOT=0
 SRC_URI=http://linux.dell.com/biosdevname/biosdevname-0.4.0/biosdevname-0.4.0.tar.gz
-_md5_=f0a65767acc01e7020e6f87f023d2718
+_md5_=1553a5b95a0d5cb139b16567b53e5626

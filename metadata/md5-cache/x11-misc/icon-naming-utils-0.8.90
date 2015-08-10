@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-perl/XML-Simple-2 >=dev-lang/perl-5
 SLOT=0
 SRC_URI=http://tango.freedesktop.org/releases/icon-naming-utils-0.8.90.tar.gz
-_md5_=e947440a4a2945d66233adc8830c6048
+_md5_=121bb409ba7cdc49f0271c6dccccb3f9

@@ -9,5 +9,5 @@ LICENSE=BSD
 RDEPEND=net-libs/libpcap selinux? ( sys-libs/libselinux )
 SLOT=0
 SRC_URI=http://www.cs.uit.no/~daniels/PingTunnel/PingTunnel-0.72.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=a896db6f2e0dde2e9b0fd884495b49ca
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=6baadfd8b4efea8e1e9351429e2689c7

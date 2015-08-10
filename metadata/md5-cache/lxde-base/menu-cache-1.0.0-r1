@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 x11-libs/libfm-extra
 SLOT=0/2
 SRC_URI=mirror://sourceforge/lxde/menu-cache-1.0.0.tar.xz
-_md5_=f0c33cd8ff2af674e3d0592ca5ea0011
+_md5_=a6d54ec3bd63e48566108217acca304e

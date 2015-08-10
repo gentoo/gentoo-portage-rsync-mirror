@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-114
 SLOT=114
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-114.tar.gz
-_md5_=cc6c0668213c1f5bec9c8ea7497f7910
+_md5_=0f451e0aca192a9fb413043a90486b2d

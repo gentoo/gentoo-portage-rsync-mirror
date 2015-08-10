@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/sounds-wav-1.12-pkg.tar.gz
-_eclasses_=xemacs-packages	29b865270cd0de904945912d5041f1cc
-_md5_=3f07d8149aaca7e8a75d8e01de72e27f
+_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
+_md5_=f758a8cfec9fdb1234a4f4d47e2552e4

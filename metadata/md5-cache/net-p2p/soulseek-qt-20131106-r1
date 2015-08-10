@@ -8,4 +8,4 @@ RDEPEND=dev-qt/qtgui:4 dev-qt/qtcore:4
 RESTRICT=mirror
 SLOT=0
 SRC_URI=x86? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-11-6.tgz ) amd64? ( http://www.soulseekqt.net/SoulseekQT/Linux/SoulseekQt-2013-11-6-64bit.tgz )
-_md5_=1de7c30f0f8c67cedb3df7d58f7fba2e
+_md5_=ff45c475fe8d96bda560e04c7d850795

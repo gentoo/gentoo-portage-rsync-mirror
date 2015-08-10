@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-138
 SLOT=138
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-138.tar.gz
-_md5_=4876f824476478ac0f919b3e0bd4db4e
+_md5_=0f451e0aca192a9fb413043a90486b2d

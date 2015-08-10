@@ -9,4 +9,4 @@ PDEPEND=dev-php/pear
 RDEPEND=>=dev-lang/php-5.4:* >=dev-php/PEAR-PEAR-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Console_Getopt-1.4.0.tgz
-_md5_=53ac08d998c0673f4bca0b12107dda7b
+_md5_=2a7d4c72b9e53fe238f80b4186be974a

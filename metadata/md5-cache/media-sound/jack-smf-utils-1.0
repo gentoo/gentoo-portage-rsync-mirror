@@ -8,4 +8,4 @@ LICENSE=BSD-2
 RDEPEND=readline? ( sys-libs/readline ) >=dev-libs/glib-2.2 >=media-sound/jack-audio-connection-kit-0.102 lash? ( media-sound/lash )
 SLOT=0
 SRC_URI=http://pin.if.uz.zgora.pl/~trasz/jack-smf-utils/jack-smf-utils-1.0.tar.gz
-_md5_=30e839fdf854c0fe725c0bd617a5df75
+_md5_=b7e3ee226f5f65b7bf4b669fb793668c

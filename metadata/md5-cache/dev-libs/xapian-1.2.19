@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=http://oligarchy.co.uk/xapian/1.2.19/xapian-core-1.2.19.tar.xz
-_md5_=d7362e96620c4b32c190cc2e5f058ffc
+_md5_=e602f4da77adccdfb555e4f876350a35

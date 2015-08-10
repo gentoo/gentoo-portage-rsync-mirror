@@ -8,5 +8,5 @@ LICENSE=freedist
 RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/ChiNCVs-1.0.zip
-_eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
-_md5_=f21a436753cf96a9d41aa6730ff73dd2
+_eclasses_=sword-module	0a2b0800a67ad11742c7657239b19b20
+_md5_=bea496de1e7d07d347a717e3ba79bf36

@@ -10,4 +10,4 @@ RDEPEND=emboss? ( >=sci-biology/emboss-5.0.0 )
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/rebase-1507.tar.xz
-_md5_=ef1ba1249ac5d13be61177aad067f744
+_md5_=240cbdb0cd11904ea10f0872d9f54cb3

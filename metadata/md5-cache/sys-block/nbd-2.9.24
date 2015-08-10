@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.0
 SLOT=0
 SRC_URI=mirror://sourceforge/nbd/nbd-2.9.24.tar.bz2
-_md5_=20448b294bcf7ea3cef21a8b22a54b86
+_md5_=6d76d4b16925306b45d722052a55fae2

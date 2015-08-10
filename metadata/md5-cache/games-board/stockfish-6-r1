@@ -8,4 +8,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=https://stockfish.s3.amazonaws.com/stockfish-6-src.zip
-_md5_=d9f2cca71932cb594675e80a241c713d
+_md5_=d1acdaf761e1ff14b11fdb0321b97efe

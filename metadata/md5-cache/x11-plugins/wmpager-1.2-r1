@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=x11-libs/libX11 x11-libs/libXpm x11-libs/libXext
 SLOT=0
 SRC_URI=mirror://sourceforge/wmpager/wmpager-1.2.tar.gz
-_md5_=1a410391b8267505e127ab79b3ad0ff4
+_md5_=35bb111ce1eaf974ee8589b47e291c4a

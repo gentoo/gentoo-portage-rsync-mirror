@@ -7,4 +7,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://kernel/software/network/ethtool/ethtool-3.10.tar.xz
-_md5_=34ee587a66de841313adbe9dd186d5fa
+_md5_=6c5ec8e613db65e9a05ea61b61de2f97

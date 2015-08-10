@@ -6,4 +6,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.3
 SLOT=0
 SRC_URI=mirror://gentoo/eselect-python-20111108.tar.bz2
-_md5_=957fcf4fd85ffe996ea766fcc7c1cd6a
+_md5_=fd5fe2a212487eb552fca97eb722a0c0

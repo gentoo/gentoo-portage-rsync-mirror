@@ -9,4 +9,4 @@ LICENSE=LGPL-2.1
 RDEPEND=nls? ( virtual/libintl )
 SLOT=0
 SRC_URI=http://libhangul.googlecode.com/files/libhangul-0.1.0.tar.gz
-_md5_=f78740d68f417fe1cb5d12748e2f383e
+_md5_=a64c495835e14cbe82a38ee65e003699

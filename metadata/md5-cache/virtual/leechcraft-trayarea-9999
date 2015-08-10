@@ -3,4 +3,4 @@ DESCRIPTION=Virtual for LeechCraft plugins providing a tray area
 EAPI=4
 RDEPEND=app-leechcraft/lc-sb2
 SLOT=0
-_md5_=a1286cf99a14c4ef2a3752b71ace0fb0
+_md5_=8c3564a5654e882f239f68bc17ff0bf4

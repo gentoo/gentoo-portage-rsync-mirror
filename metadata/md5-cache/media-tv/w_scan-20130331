@@ -8,4 +8,4 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://wirbel.htpc-forum.de/w_scan/w_scan-20130331.tar.bz2
-_md5_=bdf2f90156552e99023fd25cb9404a61
+_md5_=8e4f6f4c0fe57bf6453b4fd2bb533a88

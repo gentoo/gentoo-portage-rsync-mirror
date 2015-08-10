@@ -5,5 +5,5 @@ KEYWORDS=~ppc-aix ~ia64-hpux ~x86-interix ~x86-linux ~sparc-solaris ~x86-solaris
 LICENSE=GPL-3
 RDEPEND=sys-devel/gcc-config
 SLOT=0
-_eclasses_=prefix	21058c21ca48453d771df15500873ede
-_md5_=4c7116b103a62d470ee28d5a5c985f40
+_eclasses_=prefix	e7f2b9c6e57342e5d25eac22fce23062
+_md5_=c43475ab409b3d16a1eab721cb0f6ccb

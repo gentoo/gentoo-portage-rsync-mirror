@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-cpp/gtkmm-3.0:3.0 >=dev-libs/libsigc++-2.2:2 >=media-libs/libcanberra-0.16[gtk3] >=media-sound/pulseaudio-0.9.16[glib] virtual/freedesktop-icon-theme
 SLOT=0
 SRC_URI=http://freedesktop.org/software/pulseaudio/pavucontrol/pavucontrol-1.0.tar.xz
-_md5_=fb588f1505129fb9e673db96f11c8b32
+_md5_=2fa62a34c2c01fe04c1a0ce818575db1

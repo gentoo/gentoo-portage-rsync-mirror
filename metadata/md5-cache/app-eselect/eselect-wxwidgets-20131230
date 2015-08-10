@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=app-admin/eselect
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~dirtyepic/dist/wxwidgets.eselect-20131230.bz2
-_md5_=b60b6981cdd8fa1fcab7d9f277f07552
+_md5_=30e2606be10db1348afef6cb40cc71de

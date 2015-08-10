@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RDEPEND=net-libs/libpcap sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://github/simsong/tcpflow/tcpflow-1.3.0.tar.gz
-_md5_=844794fe186ec54340304d48c4c10ccf
+_md5_=09783c22cc2274aa58041783d4d14f3e

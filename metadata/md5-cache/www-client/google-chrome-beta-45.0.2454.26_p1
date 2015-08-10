@@ -10,5 +10,5 @@ RDEPEND=app-arch/bzip2 app-misc/ca-certificates dev-libs/expat dev-libs/glib:2 d
 RESTRICT=bindist mirror strip
 SLOT=0
 SRC_URI=amd64? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-beta/google-chrome-beta_45.0.2454.26-1_amd64.deb ) x86? ( http://dl.google.com/linux/chrome/deb/pool/main/g/google-chrome-beta/google-chrome-beta_45.0.2454.26-1_i386.deb )
-_eclasses_=chromium	ee8d79e69886593b65f7ee5e9d2710b4	eutils	9fb270e417e0e83d64ca52586c4a79de	fdo-mime	0acfe1a88fd8751a1d5dc671168219fa	gnome2-utils	5cdfd22a2163c9d3a891648bd19453a7	linux-info	8cbc678e083c23e4ad546ca6509cf304	multilib	62927b3db3a589b0806255f3a002d5d3	pax-utils	dfe060cb70d89757fde5c1ff8405e950	readme.gentoo	106edea5533517715013de909a333abd	toolchain-funcs	42408102d713fbad60ca21349865edb4	unpacker	f300a7ca9131b1024a79762e8edd3c52	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=e6344724883ace3a93696e5d34152acc
+_eclasses_=chromium	42c117bfaf5616a3ef1cc107b91ec909	eutils	351a78113be5b393c09a2c948701ad36	fdo-mime	92d07846ea8ea54172f8c0112a47ae3d	gnome2-utils	ba8b66b446cac0566ae76d6e5bf2f914	linux-info	8f92e5ac1a1da684c5450b1b21a1f56a	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	pax-utils	a472fe09c2264598d61d4887809e6016	readme.gentoo	13aa6ffcee3f5f1d3a39515b001a39f5	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	unpacker	1ca344bd9b922a7f8084a3fa02933b79	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=34e171f6d46d9a7af7bda54e03822800

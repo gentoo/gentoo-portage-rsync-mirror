@@ -6,4 +6,4 @@ LICENSE=GPL-2
 RESTRICT=strip binchecks
 SLOT=0
 SRC_URI=http://cekirdek.pardus.org.tr/~caglar/Tulliana-2.0.tar.gz
-_md5_=c8c192c160683591886585eeb9cae727
+_md5_=29597ca553c72e5fbae10cdc14c5c9d7

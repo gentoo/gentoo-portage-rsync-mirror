@@ -6,4 +6,4 @@ KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~sparc ~x86
 LICENSE=GPL-2
 RDEPEND=~net-analyzer/nagios-core-4.0.8 || ( net-analyzer/nagios-plugins net-analyzer/monitoring-plugins ) !net-analyzer/nagios-imagepack
 SLOT=0
-_md5_=3ef18543e1b950ca229ec06aea93629e
+_md5_=a731f32e14c7a4ff191d38bfe9033bdd

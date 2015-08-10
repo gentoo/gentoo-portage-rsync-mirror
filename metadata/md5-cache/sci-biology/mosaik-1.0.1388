@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://mosaik-aligner.googlecode.com/files/Mosaik-1.0.1388-source.tar.bz2
-_md5_=8f847b5ca8a49f829b42026324b744eb
+_md5_=182829f6302a9e1eb21be19250ced0a2

@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=gnome-base/libglade:2.0 x11-libs/gtk+:2 dev-libs/libxml2:2 sci-chemistry/gamess
 SLOT=0
 SRC_URI=mirror://sourceforge/gtk-gamess/gtk-gamess-2.00.tar.gz
-_md5_=041cfcd173374ad63062bdf23df25453
+_md5_=0b4d15c53dc2599d0a33872f7d9d48ae

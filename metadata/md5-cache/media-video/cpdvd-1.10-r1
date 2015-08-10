@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=media-video/transcode-0.6.2[dvd] >=dev-lang/perl-5.8.0-r12 >=media-video/cpvts-1.2
 SLOT=0
 SRC_URI=http://www.lallafa.de/bp/files/cpdvd-1.10.gz
-_md5_=b6a78464614008d25c07b1d99a5e272c
+_md5_=c1061ed1a8d561e6ec27feaed1c2d2f6

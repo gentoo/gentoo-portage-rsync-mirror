@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 sparc x86
 RDEPEND=|| ( =dev-lang/perl-5.20.2* ~perl-core/CPAN-2.90.0 ) !<perl-core/CPAN-2.90.0 !>perl-core/CPAN-2.90.0-r999
 SLOT=0
-_md5_=507a017494fc7427e6ed09714542cd09
+_md5_=143026a94a9807852837a1d6fdab3543

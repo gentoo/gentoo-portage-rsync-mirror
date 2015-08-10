@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/fsf-compat app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/apel-1.32-pkg.tar.gz
-_eclasses_=xemacs-packages	29b865270cd0de904945912d5041f1cc
-_md5_=786a558c8328c990eb41b48f1d7ea126
+_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
+_md5_=dd7a60f76b579d36b80fdc996fdbf484

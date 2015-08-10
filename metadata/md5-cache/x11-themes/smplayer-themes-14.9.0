@@ -7,4 +7,4 @@ LICENSE=CC-BY-2.5 CC-BY-SA-2.5 CC-BY-SA-3.0 GPL-2 LGPL-3
 RDEPEND=media-video/smplayer
 SLOT=0
 SRC_URI=mirror://sourceforge/smplayer/smplayer-themes-14.9.0.tar.bz2
-_md5_=b468e16fddf76aa0f497bc01597ffa12
+_md5_=611279f4c519514e2777a0f5e5c3a264

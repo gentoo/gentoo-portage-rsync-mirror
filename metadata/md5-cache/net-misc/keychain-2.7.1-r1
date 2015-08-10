@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=app-shells/bash virtual/ssh
 SLOT=0
 SRC_URI=http://www.funtoo.org/archive/keychain/keychain-2.7.1.tar.bz2
-_md5_=7ab66d7dec249f55fe70fce255ab3f61
+_md5_=6de6d0e2ae225c0c383071a2c780333c

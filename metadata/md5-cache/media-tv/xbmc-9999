@@ -5,4 +5,4 @@ HOMEPAGE=http://kodi.tv/ http://kodi.wiki/
 LICENSE=metapackage
 RDEPEND=media-tv/kodi
 SLOT=0
-_md5_=f4374d8f36bd15cc2731f456a2d767b3
+_md5_=608ad90258f331223cd5bbf801dd1e73

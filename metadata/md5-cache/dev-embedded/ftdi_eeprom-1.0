@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=LGPL-2
 RDEPEND=dev-embedded/libftdi[tools]
 SLOT=0
-_md5_=a425f0dbaf24417bee51c5336e696c5c
+_md5_=7602e78dd3413141302e62597e4b33c0

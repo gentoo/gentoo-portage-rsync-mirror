@@ -7,4 +7,4 @@ LICENSE=public-domain
 RDEPEND=dev-lang/gdl
 SLOT=0
 SRC_URI=http://idlastro.gsfc.nasa.gov//ftp/astron.tar.gz -> idlastro-20140125.tar.gz
-_md5_=f24e898b088ee5bdc064ee11b76eaa86
+_md5_=b8a50bbe4e1befcc242914d332188812

@@ -8,4 +8,4 @@ KEYWORDS=~amd64
 LICENSE=Apache-2.0
 SLOT=0
 SRC_URI=https://github.com/coreos/etcdctl/archive/v0.4.6.zip -> etcdctl-0.4.6.zip
-_md5_=e0150bc690feabde920abde1ba5f5484
+_md5_=c80ee7723383443d5f1625918e6ac9f2

@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=!<net-dialup/ppp-2.4.7-r1
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~pinkbyte/distfiles/ppp-scripts-0.tar.xz
-_md5_=b29c174b5fc74404ac79efb31976f1d9
+_md5_=2c03d5ac209710dc63c6dc09e6f7c2ee

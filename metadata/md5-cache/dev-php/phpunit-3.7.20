@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=dev-lang/php:*[phar,xml]
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~olemarkus/phpunit/phpunit-3.7.20.phar
-_md5_=07db4570f9538f6a1d5c4f3f11edcbe9
+_md5_=f61b00ad8d299627c05ecb6881f89ec2

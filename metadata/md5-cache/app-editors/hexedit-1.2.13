@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=http://rigaux.org/hexedit-1.2.13.src.tgz
-_md5_=a3160dfad8e62b89505dbf821ebc87b0
+_md5_=38a0e075589617ab0d526c36e56f30cb

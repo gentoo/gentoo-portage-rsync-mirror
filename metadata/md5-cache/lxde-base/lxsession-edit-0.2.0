@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-libs/glib:2 x11-libs/gtk+:2 lxde-base/lxde-common lxde-base/lxsession
 SLOT=0
 SRC_URI=mirror://sourceforge/lxde/lxsession-edit-0.2.0.tar.gz
-_md5_=fba7a37dcf67c972e8a050ca6c894878
+_md5_=ec8632ae08f30c823b78701705db29ce

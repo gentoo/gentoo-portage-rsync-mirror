@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-125
 SLOT=125
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-125.tar.gz
-_md5_=7854e477b0aecc69d9c4f8796ee310ad
+_md5_=0f451e0aca192a9fb413043a90486b2d

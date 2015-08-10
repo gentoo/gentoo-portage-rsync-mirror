@@ -7,4 +7,4 @@ LICENSE=astrolog
 RDEPEND=app-misc/astrolog
 SLOT=0
 SRC_URI=http://www.astrolog.org/ftp/ephem/ephemall.zip
-_md5_=3cc6dc5f9501691341a635f15d240f0d
+_md5_=b36464369cc099764b8606a83a83ae46

@@ -9,4 +9,4 @@ RDEPEND=dev-vcs/git
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://kernel/linux/kernel/people/jsipek/guilt/guilt-0.32.tar.bz2 mirror://gentoo/guilt-manpages-0.32.tar.bz2
-_md5_=35cb5f9b27ca41484f3390b2cb88ebc0
+_md5_=e951e7284cf81d472580df91e8f5d351

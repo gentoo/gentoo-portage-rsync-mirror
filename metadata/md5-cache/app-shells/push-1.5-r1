@@ -6,5 +6,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~m68k ~mips ppc ppc64 ~s390 ~sh sparc x86 ~pp
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://github.com/vaeth/push/tarball/1.5 -> push-1.5.tar.gz
-_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=766bfe8c7b31271dfeabccb37e77ecaf
+_eclasses_=vcs-snapshot	2ecbc36efd3f6b8486f63fcf8530c1bd
+_md5_=195e846133210e3550ae34f5e2975ec8

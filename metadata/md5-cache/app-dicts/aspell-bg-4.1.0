@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/aspell-0.60
 SLOT=0
 SRC_URI=mirror://gnu/aspell/dict/bg/aspell6-bg-4.1-0.tar.bz2
-_eclasses_=aspell-dict	fc25d5442beb66c8ff5933832df2222b
-_md5_=6f5d551694caea1a332e8a9b2ad73661
+_eclasses_=aspell-dict	6df2ba61a621be13d44ec68128cc1343
+_md5_=d7a5b414d42a856d79baa1f5656b75bf

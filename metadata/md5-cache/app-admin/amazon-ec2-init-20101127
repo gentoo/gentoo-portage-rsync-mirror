@@ -6,4 +6,4 @@ KEYWORDS=-* ~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=net-misc/wget
 SLOT=0
-_md5_=42da0d3f4dd628bff55e998c5bf90c90
+_md5_=e09e6f9e7aa210dfbe845b4abf88a7b8

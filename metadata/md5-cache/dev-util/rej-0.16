@@ -6,4 +6,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl !<app-editors/mp-5 !dev-lang/qu-prolog !dev-util/mpatch
 SLOT=0
 SRC_URI=http://ftp.suse.com/pub/people/mason/rej/rej-0.16.tar.gz
-_md5_=227e2f37ca555d656221348c4de21a2c
+_md5_=8724ce02ef36bb46e699a354b48de96f

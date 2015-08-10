@@ -7,4 +7,4 @@ KEYWORDS=amd64 ~arm ~ia64 x86 ~x64-macos ~x86-linux
 LICENSE=BSD
 SLOT=0
 SRC_URI=mirror://sourceforge/mcpp/mcpp-2.7.2.tar.gz
-_md5_=4acc02324646e61b4ad1c5467364b113
+_md5_=5e5bfe78229131d107d07139cab75d8f

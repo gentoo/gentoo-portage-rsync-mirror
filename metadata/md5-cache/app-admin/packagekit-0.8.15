@@ -8,4 +8,4 @@ KEYWORDS=~amd64 ~arm ~x86
 LICENSE=GPL-2
 RDEPEND=gtk? ( ~app-admin/packagekit-gtk-0.8.15 ) qt4? ( =app-admin/packagekit-qt4-0.8* )
 SLOT=0
-_md5_=544c00f5dd8c6b2ccbf1e45cd095f41e
+_md5_=3b5eac54502dd88cc3ae2cdb351483e5

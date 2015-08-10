@@ -9,4 +9,4 @@ LICENSE=BSD
 RDEPEND=>=dev-lang/ocaml-3.12:=[ocamlopt?]
 SLOT=0/1.2.0
 SRC_URI=http://erratique.ch/software/react/releases/react-1.2.0.tbz
-_md5_=bda407abcc017065dbdf2a93c9fb0bff
+_md5_=db7378450b229f75f61476bb1bcf356d

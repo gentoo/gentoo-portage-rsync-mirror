@@ -8,4 +8,4 @@ LICENSE=ZLIB
 RDEPEND=>=media-libs/libpng-1.2:0 sys-libs/zlib
 SLOT=0
 SRC_URI=http://catb.org/~esr/gif2png/gif2png-2.5.10.tar.gz
-_md5_=98cfe2c4365e2ec10202e6f9032a848b
+_md5_=185edaeaa52d63b714124c5eb30bd8d9

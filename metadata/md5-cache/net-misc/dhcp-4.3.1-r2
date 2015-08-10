@@ -9,5 +9,5 @@ LICENSE=ISC BSD SSLeay GPL-2
 RDEPEND=client? ( kernel_linux? ( ipv6? ( sys-apps/iproute2 ) sys-apps/net-tools ) ) ldap? ( net-nds/openldap ssl? ( dev-libs/openssl ) ) selinux? ( sec-policy/selinux-dhcp ) vim-syntax? ( app-vim/dhcpd-syntax )
 SLOT=0
 SRC_URI=ftp://ftp.isc.org/isc/dhcp/dhcp-4.3.1.tar.gz ftp://ftp.isc.org/isc/dhcp/4.3.1/dhcp-4.3.1.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	42408102d713fbad60ca21349865edb4	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=1a28e23b15f42e40340f2f2e74859036
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	systemd	6b4f0cefa642270eded7e6ca816fd181	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	user	906f3c8eb3a2350a4f1191a89baa3e46
+_md5_=86c3ed7d6053f03a557789a5c7a2efd3

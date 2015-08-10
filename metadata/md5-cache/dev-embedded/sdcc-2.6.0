@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=!dev-embedded/sdcc-svn
 SLOT=0
 SRC_URI=mirror://sourceforge/sdcc/sdcc-src-2.6.0.tar.gz doc? ( mirror://sourceforge/sdcc/sdcc-doc-2.6.0.tar.gz )
-_md5_=15844ba89a3cacb223d34d683b6a8369
+_md5_=b2368347aa2a657efcab98599233aee7

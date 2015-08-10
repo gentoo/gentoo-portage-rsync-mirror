@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=sys-fs/fuse
 SLOT=0
 SRC_URI=http://podgorny.cz/unionfs-fuse/releases/unionfs-fuse-0.25.tar.bz2
-_md5_=8d3403b4c0c1e1ddd62a254b28bec8c4
+_md5_=268c3f50fa7b0ae8d6a7c648ad8ed791

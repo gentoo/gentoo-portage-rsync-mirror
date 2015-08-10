@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=>=sys-apps/dmidecode-2.8 >=sys-apps/pciutils-2.2.0
 SLOT=0
 SRC_URI=http://hardware4linux.info/res/hwreport-0.10.0.tar.bz2
-_eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=54e85094173d5d53632f010cd306fc25
+_eclasses_=multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=7b4296c7de9dcfc5a2fe4f8825f03c9b

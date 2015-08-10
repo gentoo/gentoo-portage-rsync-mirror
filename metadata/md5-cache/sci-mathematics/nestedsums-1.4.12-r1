@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=sci-mathematics/ginac-1.5
 SLOT=0
 SRC_URI=http://wwwthep.physik.uni-mainz.de/~stefanw/download/nestedsums-1.4.12.tar.gz
-_md5_=409def432a7371009475b09007dac2ae
+_md5_=6173ba55bc0c446cb0ed79ecfc3e34f5

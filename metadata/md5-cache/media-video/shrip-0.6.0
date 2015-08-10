@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.14:2 >=media-video/ogmrip-0.13.4
 SLOT=0
 SRC_URI=mirror://sourceforge/ogmrip/shrip-0.6.0.tar.gz
-_md5_=6a44183889312e7e3c9c5af1ad64c8c5
+_md5_=0ef4f106ded6e3f8cff1f0f80701d9b4

@@ -9,4 +9,4 @@ LICENSE=tarsnap
 RDEPEND=dev-libs/openssl:0 sys-libs/e2fsprogs-libs sys-libs/zlib acl? ( sys-apps/acl ) bzip2? ( app-arch/bzip2 ) lzma? ( app-arch/xz-utils ) xattr? ( sys-apps/attr )
 SLOT=0
 SRC_URI=https://www.tarsnap.com/download/tarsnap-autoconf-1.0.35.tgz
-_md5_=aba04741acf7d73bb04254676813bc2a
+_md5_=6a3f4c5cb44cf78e1dc9f3a73b63fbdf

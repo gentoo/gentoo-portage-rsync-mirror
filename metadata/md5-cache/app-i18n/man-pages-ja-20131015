@@ -7,4 +7,4 @@ LICENSE=GPL-2+ GPL-2 LGPL-2+ LGPL-2 BSD MIT ISC HPND FDL-1.1+ LDP-1 LDP-1a man-p
 RDEPEND=virtual/man
 SLOT=0
 SRC_URI=http://linuxjm.sourceforge.jp/man-pages-ja-20131015.tar.gz http://dev.gentoo.org/~hattya/distfiles/portage-man-pages-ja-20060415.tar.gz
-_md5_=171d2330f0d05511407bac6df4876b1f
+_md5_=f923520e887a9b03acdc0c6d431aa730

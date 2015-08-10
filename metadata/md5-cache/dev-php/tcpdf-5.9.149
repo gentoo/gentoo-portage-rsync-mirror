@@ -9,4 +9,4 @@ LICENSE=LGPL-3
 RDEPEND=dev-lang/php
 SLOT=0
 SRC_URI=mirror://sourceforge/tcpdf/tcpdf_5_9_149.zip
-_md5_=17540f4a0ed9bb93be2530bd62c4b91c
+_md5_=942824346fc89625188f5328ada54dfb

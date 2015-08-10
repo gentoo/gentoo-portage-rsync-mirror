@@ -9,5 +9,5 @@ LICENSE=GPL-2
 RDEPEND=>=media-libs/libpng-1.2.16 gtk? ( dev-libs/glib:2 >=x11-libs/gtk+-2.12:2 x11-libs/cairo ) libkms? ( x11-libs/libdrm[libkms] ) pango? ( >=x11-libs/pango-1.21 ) virtual/udev !<sys-kernel/dracut-0.37-r3
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~aidecoe/distfiles/sys-boot/plymouth/gentoo-logo.png http://www.freedesktop.org/software/plymouth/releases/plymouth-0.9.0.tar.bz2
-_eclasses_=autotools	2264f05fbbbaaf83d34ec81e72b38ffd	autotools-utils	dbce0f7913bd240fdf0ef428149855c0	eutils	9fb270e417e0e83d64ca52586c4a79de	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	readme.gentoo	106edea5533517715013de909a333abd	systemd	090342761f573a8280dd5aa6b0345f3b	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=40f754d70851f52c2a4bb7acb03b5b3f
+_eclasses_=autotools	8056957fdccf2b3cd6e282a4b4551d1a	autotools-utils	0bf099a6e3dfeaf20a7a94504d8dd896	eutils	351a78113be5b393c09a2c948701ad36	libtool	7f78cd7d403808a350c9ae23f5821fb4	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	readme.gentoo	13aa6ffcee3f5f1d3a39515b001a39f5	systemd	6b4f0cefa642270eded7e6ca816fd181	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=0adf6abf39c5c7d7472c970c1d624d13

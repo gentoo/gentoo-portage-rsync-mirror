@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RESTRICT=binchecks mirror strip
 SLOT=3.10.38_pre-r20140427
 SRC_URI=https://dev.gentoo.org/~xmw/raspberrypi-image/raspberrypi-image-3.10.38_pre-r20140427.tar.xz
-_md5_=9be35a3a0c45107d509680281d5a598d
+_md5_=2c86f2776c1c7148825998227fe51c33

@@ -8,4 +8,4 @@ LICENSE=BSD-2
 RDEPEND=>=dev-libs/efl-1.8.1 >=media-libs/elementary-1.8.0
 SLOT=0
 SRC_URI=http://download.enlightenment.org/rel/apps/terminology/terminology-0.5.0.tar.bz2
-_md5_=08b43dc0d18127647ef974d73131b2a4
+_md5_=a128d012504dfd8c3c96427aa97ade6f

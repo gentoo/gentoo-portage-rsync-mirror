@@ -10,5 +10,5 @@ RDEPEND=|| ( >=sys-libs/db-4.8.30:4.8 sys-libs/db:4.7 sys-libs/db:4.6 sys-libs/d
 REQUIRED_USE=tcl? ( !unicode )
 SLOT=0
 SRC_URI=http://garage.linux.student.kuleuven.be/~skimo/nvi/devel/nvi-1.81.6.tar.bz2
-_eclasses_=autotools	2264f05fbbbaaf83d34ec81e72b38ffd	db-use	82d0e62839f20e1e0d5a2259abd5316f	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=f9a36f01eb927636951fd758ec73f752
+_eclasses_=autotools	8056957fdccf2b3cd6e282a4b4551d1a	db-use	a4966c7f4f7df444ead1212848c13cc9	eutils	351a78113be5b393c09a2c948701ad36	flag-o-matic	02090c5a622458303e6bf68837ac6b96	libtool	7f78cd7d403808a350c9ae23f5821fb4	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=271dcb78f2dc73564f52d47fb6845502

@@ -6,5 +6,5 @@ LICENSE=GPL-2
 RDEPEND=app-xemacs/xemacs-base app-editors/xemacs
 SLOT=0
 SRC_URI=http://ftp.xemacs.org/pub/xemacs/packages/textools-1.15-pkg.tar.gz
-_eclasses_=xemacs-packages	29b865270cd0de904945912d5041f1cc
-_md5_=e1276a1d13e50f32f64ad88c3adbfd45
+_eclasses_=xemacs-packages	3efe8d071b1fa620109b658175e85267
+_md5_=0e04a0b7d2d12d29bbe21c3be344be8f

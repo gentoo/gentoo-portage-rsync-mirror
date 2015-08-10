@@ -4,4 +4,4 @@ EAPI=4
 KEYWORDS=amd64 x86
 RDEPEND=~app-leechcraft/lc-lhtr-0.6.60
 SLOT=0
-_md5_=241707bfa26e7b4210e86370f1a58d33
+_md5_=04e4c6c83caac8caa7d3893f71d8ebe5

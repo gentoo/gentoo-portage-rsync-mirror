@@ -10,4 +10,4 @@ RDEPEND=html? ( app-arch/unzip )
 REQUIRED_USE=|| ( html pdf )
 SLOT=0
 SRC_URI=html? ( http://www.smarty.net/files/docs/manual-en-3.0.zip -> smarty-docs-3.0-en.zip ) pdf? ( http://www.smarty.net/files/docs/manual-en-3.0.pdf -> smarty-docs-3.0-en.pdf )
-_md5_=627dc21bb47564253432b2ee6904d125
+_md5_=cbbb7059ab74d620a504b781bd86a445

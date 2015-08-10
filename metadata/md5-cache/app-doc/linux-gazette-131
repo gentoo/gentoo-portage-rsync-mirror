@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-131
 SLOT=131
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-131.tar.gz
-_md5_=5c9d2547d5d239a0654f37696dc55b8a
+_md5_=0f451e0aca192a9fb413043a90486b2d

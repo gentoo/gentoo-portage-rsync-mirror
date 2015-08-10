@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-130
 SLOT=130
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-130.tar.gz
-_md5_=8cf35e2e70b4629746c9958860923439
+_md5_=0f451e0aca192a9fb413043a90486b2d

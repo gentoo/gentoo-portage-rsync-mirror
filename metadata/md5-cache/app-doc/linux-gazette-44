@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-44
 SLOT=44
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-issue44.tar.gz
-_md5_=6ced0d385db7179612e0a2b87578e845
+_md5_=f63642b26271f2d352501f1ce8b2ad2b

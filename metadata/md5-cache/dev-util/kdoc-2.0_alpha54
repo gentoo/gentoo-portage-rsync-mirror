@@ -8,4 +8,4 @@ RDEPEND=dev-lang/perl
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://gentoo/kdoc-2.0a54.tar.bz2
-_md5_=2d8c8caa17d7516f240d27ab5ba9ac66
+_md5_=4c6cfb902c7b030c681bcde04e59ce68

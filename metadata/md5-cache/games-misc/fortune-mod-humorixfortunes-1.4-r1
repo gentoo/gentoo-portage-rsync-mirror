@@ -7,4 +7,4 @@ LICENSE=freedist fairuse
 RDEPEND=games-misc/fortune-mod
 SLOT=0
 SRC_URI=http://humorix.org/downloads/humorixfortunes-1.4.tar.gz
-_md5_=670d7bf78f0fafcf5aed1840dcb212ba
+_md5_=d1dff2a4b38499aa4a441a8dafe33931

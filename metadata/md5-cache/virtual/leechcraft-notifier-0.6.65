@@ -4,4 +4,4 @@ EAPI=5
 KEYWORDS=~amd64 ~x86
 RDEPEND=|| ( app-leechcraft/lc-kinotify app-leechcraft/lc-dbusmanager )
 SLOT=0
-_md5_=e9baacd264ba7cd954388fe93b6984fc
+_md5_=0c6d3e1219782daed44dacd9882d0354

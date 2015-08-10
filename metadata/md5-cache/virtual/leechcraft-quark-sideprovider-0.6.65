@@ -4,4 +4,4 @@ EAPI=4
 KEYWORDS=~amd64 ~x86
 RDEPEND=app-leechcraft/lc-sb2
 SLOT=0
-_md5_=01f19d8ca9f04c58ee41499eec36e394
+_md5_=e2c40affa846b98382fe1d097b26fc6d

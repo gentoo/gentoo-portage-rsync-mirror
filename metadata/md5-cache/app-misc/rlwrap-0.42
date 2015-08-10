@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/readline
 SLOT=0
 SRC_URI=http://utopia.knoware.nl/~hlub/uck/rlwrap/rlwrap-0.42.tar.gz
-_md5_=f4195ee3b66dd9823cda67ed7447e9fd
+_md5_=a44189dec7c7cb0ef9d5267c0345e3e8

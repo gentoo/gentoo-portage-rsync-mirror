@@ -10,5 +10,5 @@ RDEPEND=abi_x86_32? ( !app-emulation/emul-linux-x86-medialibs[-abi_x86_32(-)] )
 REQUIRED_USE=cpu_flags_x86_sse2? ( cpu_flags_x86_mmx ) cpu_flags_x86_ssse3? ( cpu_flags_x86_sse2 )
 SLOT=0/2
 SRC_URI=http://storage.googleapis.com/downloads.webmproject.org/releases/webm/libvpx-1.4.0.tar.bz2 test? ( mirror://gentoo/libvpx-testdata-1.4.0.tar.bz2 )
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	multibuild	6d4858dc00f8bc51caf3f957f8430eb0	multilib	62927b3db3a589b0806255f3a002d5d3	multilib-build	e733e978b7fa70607cc221fd9c070db6	multilib-minimal	13dd976916c35a1e2c8d170e840c7018	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=dc4ad74ebbe67647209ed81fe44ed081
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multibuild	4550e10791f720f7af3fdd911aedf518	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	multilib-build	c47eec09e82c8a750127ff2abf0745b1	multilib-minimal	a93a9b4153a5f1c746bdd3b20ef9d834	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=042a040326f38062441f1321d0bb5422

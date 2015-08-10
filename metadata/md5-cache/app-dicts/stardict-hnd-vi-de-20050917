@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://james.dyndns.ws/pub/Dictionary/StarDict-James/VietDuc12K.zip
-_eclasses_=stardict	0377e6bf21060f0d18a39ea68f54a162
-_md5_=f8a9db8225bfb59460f39ea39b6030d0
+_eclasses_=stardict	f2fd36b0af07ceaba9852e6caec6ac7f
+_md5_=46cda6bfdee708e0e1be1af0e9515b2b

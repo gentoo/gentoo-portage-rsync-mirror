@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-168
 SLOT=168
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-168.tar.gz
-_md5_=7b5da8722b34d589ef7c0c66b01b7c8c
+_md5_=0f451e0aca192a9fb413043a90486b2d

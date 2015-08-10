@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=x11-libs/libX11 x11-libs/libXmu
 SLOT=0
 SRC_URI=mirror://sourceforge/xclip/xclip-0.12.tar.gz
-_md5_=ecd3de67d6a5446847422a7b377e0eea
+_md5_=f179cba3b68898c36652691c9fcb818e

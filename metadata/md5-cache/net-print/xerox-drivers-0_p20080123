@@ -7,4 +7,4 @@ LICENSE=public-domain
 RDEPEND=net-print/cups
 SLOT=0
 SRC_URI=http://download.support.xerox.com/pub/drivers/DocuColor_2006/drivers/unix/en/LinuxCupsPrinterPkg.tar.gz
-_md5_=056f7a4e7f5b6d2f7eef51c8b81b70d6
+_md5_=e63ac5d8ca58f8b3c241befe7f53e45e

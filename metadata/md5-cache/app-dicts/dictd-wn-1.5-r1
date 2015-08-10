@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/dictd-1.5.5
 SLOT=0
 SRC_URI=ftp://ftp.dict.org/pub/dict/pre/dict-wn-1.5-pre.tar.gz
-_md5_=1a1eeddf4ecd0a827c65a5a83b80ea47
+_md5_=5e486af41897670a39bbd16b9bcb9f4b

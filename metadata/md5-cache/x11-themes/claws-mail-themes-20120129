@@ -7,4 +7,4 @@ RDEPEND=mail-client/claws-mail
 RESTRICT=mirror bindist
 SLOT=0
 SRC_URI=http://www.claws-mail.org/themes/claws-mail-themes-20120129.tar.gz
-_md5_=ef6c95a0eadeebbc8b518c9a2d6cb144
+_md5_=8e0ab8c764c8e95c94da2fc8218d13ce

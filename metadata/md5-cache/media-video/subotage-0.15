@@ -6,4 +6,4 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-3
 SLOT=0
 SRC_URI=mirror://sourceforge/subotage/subotage_0.15.tgz
-_md5_=f8f2f4c0261bebe4c82790e04cfe5885
+_md5_=c187129a24bf6463c2731c549c28acd8

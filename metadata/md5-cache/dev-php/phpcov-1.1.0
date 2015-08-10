@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=dev-lang/php[phar] dev-php/xdebug
 SLOT=0
 SRC_URI=https://phar.phpunit.de/phpcov-1.1.0.phar
-_md5_=7d5f4ca2b24a70e50a0662be4a9110e0
+_md5_=f81d0c5bf7573511f71a356255d28894

@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-51
 SLOT=51
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-issue51.tar.gz
-_md5_=ca8a7e590787ff088e5485fa0b1db2a5
+_md5_=f63642b26271f2d352501f1ce8b2ad2b

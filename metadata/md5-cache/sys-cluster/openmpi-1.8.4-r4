@@ -10,5 +10,5 @@ RDEPEND=!sys-cluster/mpich !sys-cluster/mpich2 !sys-cluster/mpiexec dev-libs/lib
 REQUIRED_USE=openmpi_rm_slurm? ( !openmpi_rm_pbs ) openmpi_rm_pbs? ( !openmpi_rm_slurm ) openmpi_fabrics_psm? ( openmpi_fabrics_ofed ) openmpi_ofed_features_control-hdr-padding? ( openmpi_fabrics_ofed ) openmpi_ofed_features_connectx-xrc? ( openmpi_fabrics_ofed ) openmpi_ofed_features_udcm? ( openmpi_fabrics_ofed ) openmpi_ofed_features_rdmacm? ( openmpi_fabrics_ofed ) openmpi_ofed_features_dynamic-sl? ( openmpi_fabrics_ofed ) openmpi_ofed_features_failover? ( openmpi_fabrics_ofed )
 SLOT=0
 SRC_URI=http://www.open-mpi.org/software/ompi/v1.8/downloads/openmpi-1.8.4.tar.bz2
-_eclasses_=autotools	2264f05fbbbaaf83d34ec81e72b38ffd	cuda	2c8df288287b71bc5abbb1ae33869059	eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	fortran-2	db8710b355fc5598015c4bc3aad3bdb0	libtool	52d0e17251d04645ffaa61bfdd858944	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	versionator	cd0bcdb170807e4a1984115e9d53a26f
-_md5_=896d6315c5f65e88d33fde58d318a2f5
+_eclasses_=autotools	8056957fdccf2b3cd6e282a4b4551d1a	cuda	005e306be76ac11f3468389ef2e4da10	eutils	351a78113be5b393c09a2c948701ad36	flag-o-matic	02090c5a622458303e6bf68837ac6b96	fortran-2	eb14fa8f4c3b9977b8d26c2c653ca325	libtool	7f78cd7d403808a350c9ae23f5821fb4	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=efad6ff750700859872b6bc103803bb2

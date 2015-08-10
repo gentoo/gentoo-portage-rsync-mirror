@@ -7,5 +7,5 @@ LICENSE=vim.org
 RDEPEND=|| ( >=app-editors/vim-7.3 >=app-editors/gvim-7.3 )
 SLOT=0
 SRC_URI=mirror://gentoo/nagios-syntax-20050105.tar.bz2 http://dev.gentoo.org/~radhermit/vim/nagios-syntax-20050105.tar.bz2
-_eclasses_=vim-doc	1c18baeec98cec3287524cbf2fee2bd2	vim-plugin	286547e90fbbc4c841eee80cd73e646c
-_md5_=13011bfe9fab13715a9423ba8c55fdcb
+_eclasses_=vim-doc	1b0813c9dadf2431c96854a8d46f5eaf	vim-plugin	222d094e412102a0169617b4d68b6250
+_md5_=926fc6c16134d6ddc970e99c3ee598ab

@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~jlec/distfiles/pdbcns.2.0.010504.perl.tgz
-_md5_=95cef4a763ef99ccfb79e5ce8162fc00
+_md5_=065458c0651f72f3b2421fe0e200c3ce

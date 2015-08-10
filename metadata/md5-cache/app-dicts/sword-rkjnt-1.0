@@ -8,5 +8,5 @@ LICENSE=public-domain
 RDEPEND=app-text/sword
 SLOT=0
 SRC_URI=mirror://gentoo/RKJNT-1.0.zip
-_eclasses_=sword-module	c52595ffeb9df1c705120bffa624d484
-_md5_=d2888c06cccf833c6a3ceb1cddb6859b
+_eclasses_=sword-module	0a2b0800a67ad11742c7657239b19b20
+_md5_=b5d22b7096e429c186201347adaf5810

@@ -7,4 +7,4 @@ LICENSE=GPL-1
 RDEPEND=dev-lang/perl tk? ( dev-perl/perl-tk dev-perl/Tk-CursorControl ) mysql? ( dev-perl/DBD-mysql ) || ( app-accessibility/festival app-accessibility/flite ) dev-perl/GD virtual/perl-DB_File dev-perl/TermReadKey virtual/perl-Time-HiRes dev-perl/Audio-Mixer dev-perl/Text-LevenshteinXS
 SLOT=0
 SRC_URI=mirror://sourceforge/misterhouse/misterhouse-2.103.tar.gz
-_md5_=b6a297c93b7c7f6bd359c9390fcc1404
+_md5_=8a19576656986cc8b1d26bd64316365d

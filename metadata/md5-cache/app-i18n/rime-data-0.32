@@ -8,5 +8,5 @@ LICENSE=GPL-3
 RDEPEND=app-i18n/librime
 SLOT=0
 SRC_URI=http://rimeime.googlecode.com/files/brise-0.32.tar.gz
-_eclasses_=vcs-snapshot	58b766562c9fbfb3268b04e33cdf2f66
-_md5_=4bbdbc3a0e82a458b0c37f0f5fd89e2c
+_eclasses_=vcs-snapshot	2ecbc36efd3f6b8486f63fcf8530c1bd
+_md5_=cafcf0cdfc35023a64f65da0639beaf2

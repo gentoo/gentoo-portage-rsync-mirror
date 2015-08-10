@@ -10,4 +10,4 @@ RDEPEND=idn? ( net-dns/libidn ) libsecret? ( app-crypt/libsecret ) nls? ( virtua
 REQUIRED_USE=gnutls? ( ssl )
 SLOT=0
 SRC_URI=mirror://sourceforge/mpop/mpop-1.2.0.tar.xz
-_md5_=4ea9c555d8aede3f53948795c8bcaf6d
+_md5_=669fd5feea38d6692d05cee918c2361a

@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RDEPEND=emacs? ( virtual/emacs ) X? ( x11-libs/libICE x11-libs/libSM x11-libs/libX11 )
 SLOT=0
 SRC_URI=mirror://gentoo/ucblogo-5.5.tar.gz
-_eclasses_=elisp-common	9a16929c1a6aec7e1c903289983e114c	eutils	9fb270e417e0e83d64ca52586c4a79de	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=04dc2819aac5c95e46150d74e7c413bb
+_eclasses_=elisp-common	73c48c11ad6a6494eda0d0cca848c8fa	eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=c4ffdefe85b6bda3a4352ca1761cb03a

@@ -9,4 +9,4 @@ PDEPEND=dev-php/pear
 RDEPEND=dev-lang/php:*[bzip2,posix,zlib] dev-lang/php:*[pcre(+)] >=dev-php/PEAR-PEAR-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Archive_Tar-1.3.15.tgz
-_md5_=3664271186b2b7edd4f35c49b26b0b81
+_md5_=b7a030f0f0a63e4fb6e4884679f24c3f

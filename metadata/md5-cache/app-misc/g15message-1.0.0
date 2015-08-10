@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-misc/g15daemon-1.9.0 dev-libs/libg15 dev-libs/libg15render sys-libs/zlib
 SLOT=0
 SRC_URI=mirror://sourceforge/g15daemon/g15message-1.0.0.tar.bz2
-_md5_=02b559d9cbabea41b4ac54cdd7248233
+_md5_=3850a39c1c10ca5458850de38399f53a

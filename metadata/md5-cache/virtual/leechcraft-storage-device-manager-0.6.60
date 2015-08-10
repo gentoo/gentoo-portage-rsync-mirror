@@ -4,4 +4,4 @@ EAPI=4
 KEYWORDS=amd64 x86
 RDEPEND=app-leechcraft/lc-vrooby
 SLOT=0
-_md5_=0ab8733d93f35f763f078cd66397930b
+_md5_=b9ce4f487e3e04f15b6964aac3d166ae

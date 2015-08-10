@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.28:2 dev-libs/libnl >=sys-apps/dbus-1.2.24
 SLOT=0
 SRC_URI=mirror://kernel/linux/network/nfc/neard-0.13.tar.xz
-_md5_=2e2bed2ce7b862efb3a9bed70c970cad
+_md5_=896047a1c0a6982eb01f03904e4b845f

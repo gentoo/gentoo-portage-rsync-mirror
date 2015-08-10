@@ -8,5 +8,5 @@ LICENSE=MIT LGPL-2 GPL-2
 RDEPEND=!sys-apps/getent
 SLOT=0
 SRC_URI=http://www.musl-libc.org/releases/musl-1.1.10.tar.gz
-_eclasses_=eutils	9fb270e417e0e83d64ca52586c4a79de	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4
-_md5_=7feadf87a2b85f16938e70b1c1e62410
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	flag-o-matic	02090c5a622458303e6bf68837ac6b96	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=f2e841b67e0a3fb4b8a4c1aad9a75fab

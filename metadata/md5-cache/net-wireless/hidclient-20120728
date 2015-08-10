@@ -8,4 +8,4 @@ LICENSE=GPL-2+
 RDEPEND=net-wireless/bluez x11-apps/xinput
 SLOT=0
 SRC_URI=http://anselm.hoffmeister.be/computer/hidclient/hidclient-20120728.tar.bz2
-_md5_=e6fbf424a2e8fffb1ca5ebb987f2ff6c
+_md5_=5ed2c36768870bfcbeb57b706bd8ae98

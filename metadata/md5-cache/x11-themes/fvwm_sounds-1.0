@@ -6,4 +6,4 @@ LICENSE=GPL-2 FVWM
 RDEPEND=>=x11-wm/fvwm-2.6.2
 SLOT=0
 SRC_URI=http://www.fvwm.org/generated/sounds_download/fvwm_sounds.tgz
-_md5_=de4b7081efc8282377ea581428f717eb
+_md5_=0b963502aa64c7e485ee2862918dfeaf

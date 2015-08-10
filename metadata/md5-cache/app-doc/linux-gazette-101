@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-101
 SLOT=101
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-101.tar.gz
-_md5_=25000353c95dde2438c68dceefebfcc9
+_md5_=0f451e0aca192a9fb413043a90486b2d

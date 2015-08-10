@@ -5,4 +5,4 @@ KEYWORDS=alpha amd64 arm hppa ia64 m68k ~mips ppc ppc64 s390 sh sparc x86 ~sparc
 LICENSE=GPL-2
 RDEPEND=userland_GNU? ( >=sys-apps/findutils-4.2 )
 SLOT=0
-_md5_=d22285791dadc73d9d29f9373a025bfb
+_md5_=b5ebd2d239715b817fcd9b5629681fd5

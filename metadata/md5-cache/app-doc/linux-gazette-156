@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-156
 SLOT=156
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-156.tar.gz
-_md5_=7e8d91d8f74c4b496ea930779b2ebeca
+_md5_=0f451e0aca192a9fb413043a90486b2d

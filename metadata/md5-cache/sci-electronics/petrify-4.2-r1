@@ -8,4 +8,4 @@ RDEPEND=media-gfx/graphviz
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://www.lsi.upc.edu/~jordicf/petrify/distrib/petrify-4.2-linux.tgz
-_md5_=c47c2d049ccfe136ce40d53fc9de789f
+_md5_=52f1720b21603931dcf51bbb8d97073f

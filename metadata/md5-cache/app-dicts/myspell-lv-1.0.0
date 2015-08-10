@@ -7,5 +7,5 @@ KEYWORDS=alpha amd64 arm hppa ia64 ~mips ppc ppc64 ~sh sparc x86 ~amd64-fbsd ~x8
 LICENSE=LGPL-2.1
 SLOT=0
 SRC_URI=http://dict.dv.lv/download/lv_LV-1.0.0.zip
-_eclasses_=myspell-r2	16f301e982001f671a68d8c364cabbd0
-_md5_=962937ef4dfce24b136a776a9cdaee50
+_eclasses_=myspell-r2	3f98144882500b2caaa0ab2bf3202ada
+_md5_=05677678f5609903954f090a1f8a1730

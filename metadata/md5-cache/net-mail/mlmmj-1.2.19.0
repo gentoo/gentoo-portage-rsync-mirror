@@ -7,4 +7,4 @@ KEYWORDS=~amd64 ~ppc ~x86 ~amd64-linux ~x86-linux ~ppc-macos
 LICENSE=MIT
 SLOT=0
 SRC_URI=http://mlmmj.org/releases/mlmmj-1.2.19.0.tar.bz2
-_md5_=2e25467b1f28a94add756286c31e539c
+_md5_=b0c8c9dc3869c8c4207ed15ae352c111

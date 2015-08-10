@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=media-gfx/graphviz
 SLOT=0
 SRC_URI=http://pasky.ji.cz/~pasky/irc/ircmap.tar.gz
-_md5_=a95845a5ae11945752e3009d215f1338
+_md5_=127ba2c1401613ad89e9ecfb52df948d

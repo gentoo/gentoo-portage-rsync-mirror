@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.2.0
 SLOT=0
 SRC_URI=http://dev.gentoo.org/~flameeyes/ruby-team/eselect-rails-0.21.tar.xz
-_md5_=8004e7617890e447718de958730af53c
+_md5_=4c9933c7c94a46432ec4d2b06f15f070

@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/ncurses
 SLOT=0
 SRC_URI=mirror://sourceforge/libspe/spu-tools-2.2.80-95.tar.gz
-_md5_=d1c35a43b4ca90fa591f94d361fcfcac
+_md5_=bd4ee850a905b176ec00f9ec975487d0

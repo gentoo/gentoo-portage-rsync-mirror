@@ -7,4 +7,4 @@ LICENSE=BSD
 RDEPEND=app-editors/vim
 SLOT=0
 SRC_URI=mirror://gentoo/vilearn-1.0.tar.gz
-_md5_=f3c4672df6cad0065d315b23cdc3305c
+_md5_=053cc83d4e02adc96206499fd88ab59c

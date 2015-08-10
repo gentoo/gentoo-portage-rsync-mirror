@@ -8,5 +8,5 @@ RDEPEND=net-dns/bind-tools
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( http://http.distributed.net/pub/dcti/v2.9110/dnetc519b-linux-amd64.tar.gz )
-_eclasses_=user	f54e098dd38ba1c0847a13e685b87747
-_md5_=fac0bee205f4b509da676755f277bbbf
+_eclasses_=user	906f3c8eb3a2350a4f1191a89baa3e46
+_md5_=a3bd268923198f6c2276f7cd382406da

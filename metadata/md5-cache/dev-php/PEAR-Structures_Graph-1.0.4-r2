@@ -9,4 +9,4 @@ PDEPEND=dev-php/pear
 RDEPEND=dev-lang/php:*[pcre(+)] >=dev-php/PEAR-PEAR-1.8.1
 SLOT=0
 SRC_URI=http://pear.php.net/get/Structures_Graph-1.0.4.tgz
-_md5_=967a43eca592b47887945bff53de929a
+_md5_=7fd14b745eab618b9c44f20f29830ea9

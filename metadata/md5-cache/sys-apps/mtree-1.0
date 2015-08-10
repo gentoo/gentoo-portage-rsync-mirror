@@ -6,4 +6,4 @@ KEYWORDS=~amd64
 LICENSE=BSD
 SLOT=0
 SRC_URI=http://mtree-port.googlecode.com/files/mtree-1.0.tar.gz
-_md5_=dc6f595d2517b11930b3ba764e41ae4f
+_md5_=23e232e7fac12029f8bdbed868c11446

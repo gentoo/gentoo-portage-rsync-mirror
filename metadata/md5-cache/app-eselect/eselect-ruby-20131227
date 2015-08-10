@@ -6,4 +6,4 @@ LICENSE=GPL-2
 RDEPEND=>=app-admin/eselect-1.0.2
 SLOT=0
 SRC_URI=http://dev.a3li.li/gentoo/distfiles/ruby.eselect-20131227.bz2
-_md5_=ed31758b6edfa9992c86f84312c2e3a4
+_md5_=1bcd247273cf1aacd868b39165654154

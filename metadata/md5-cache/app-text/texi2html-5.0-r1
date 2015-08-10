@@ -10,4 +10,4 @@ RDEPEND=>=dev-lang/perl-5.10.1 >=dev-perl/libintl-perl-1.200 unicode? ( dev-perl
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://nongnu/texi2html/texi2html-5.0.tar.bz2
-_md5_=34fb205b2e0a698c5c9e510e1555f2d6
+_md5_=3cfa8e3046795be0860b16398c5a28c8

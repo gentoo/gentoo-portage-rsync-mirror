@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/libpo6-0.6.0 >=dev-libs/libe-0.6.0
 SLOT=0
 SRC_URI=http://hyperdex.org/src/busybee-0.6.0.tar.gz
-_md5_=b89efa0e4c7309633ff4c311afbec335
+_md5_=3dc642a7f098b74e138d55e08ffb2612

@@ -6,4 +6,4 @@ KEYWORDS=amd64 arm x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=mirror://berlios/iat/iat-0.1.7.tar.bz2
-_md5_=23d755bee34dbd9dfc845a9b01c6ffb4
+_md5_=5b889c8fbf558de3a44fff96c547a6b6

@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-120
 SLOT=120
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-120.tar.gz
-_md5_=f7c1bd194be9049a2b43f750f0db9570
+_md5_=0f451e0aca192a9fb413043a90486b2d

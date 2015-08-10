@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=!sys-apps/sysvinit >=sys-apps/systemd-201 >=sys-apps/util-linux-2.24.1-r2
 SLOT=0
 SRC_URI=http://www.freedesktop.org/software/systemd/systemd-215.tar.xz
-_md5_=6ec1910513a80a06ec3d638575cee42e
+_md5_=8922b8cac3262349892bb451e4bdbcea

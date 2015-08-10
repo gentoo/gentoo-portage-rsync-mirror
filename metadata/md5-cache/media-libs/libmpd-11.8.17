@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=>=dev-libs/glib-2.16:2
 SLOT=0
 SRC_URI=http://download.sarine.nl/Programs/gmpc/11.8/libmpd-11.8.17.tar.gz
-_md5_=71c547c04bd8e1adcdd741fd512c551d
+_md5_=8e64bee375b396294afb7350e9b9eb16

@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/perl
 SLOT=0
 SRC_URI=http://jaakko.home.cern.ch/jaakko/Soft/adifmerg31.tgz
-_md5_=e921b6b049e181a4136875cc0a00fcab
+_md5_=d7ef7af2ad02df21aaa6dd28cafb8312

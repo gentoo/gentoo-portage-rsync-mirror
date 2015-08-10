@@ -7,5 +7,5 @@ LICENSE=GPL-2
 RDEPEND=>=app-text/aspell-0.60
 SLOT=0
 SRC_URI=mirror://sourceforge/linguistico/aspell6-it-2.4-20070901-0.tar.bz2
-_eclasses_=aspell-dict	fc25d5442beb66c8ff5933832df2222b
-_md5_=c13a047fd9e6e4c5242d8c3f63906e85
+_eclasses_=aspell-dict	6df2ba61a621be13d44ec68128cc1343
+_md5_=9d0990ac3a4806ac6b71de751938fc20

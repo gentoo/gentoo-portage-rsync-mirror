@@ -8,4 +8,4 @@ LICENSE=BSD
 RDEPEND=>=dev-libs/libpo6-0.7.0 >=dev-libs/libe-0.10.0
 SLOT=0
 SRC_URI=http://hyperdex.org/src/libtreadstone-0.2.0.tar.gz
-_md5_=eebd71755208c94a1a84419810285d3d
+_md5_=55be0ad795959fddf9b9494336e689fc

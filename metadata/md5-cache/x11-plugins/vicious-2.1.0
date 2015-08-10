@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=x11-wm/awesome
 SLOT=0
 SRC_URI=http://git.sysphere.org/vicious/snapshot/vicious-2.1.0.tar.xz
-_md5_=06c75dacd8d766a48b6073cde70c3b61
+_md5_=8e7dec6414ad101cbf1f2ec80783d93e

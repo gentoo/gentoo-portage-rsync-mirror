@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-98
 SLOT=98
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-issue98.tar.gz
-_md5_=7fdc8ae0f7232eb06c098922a9706bf8
+_md5_=f63642b26271f2d352501f1ce8b2ad2b

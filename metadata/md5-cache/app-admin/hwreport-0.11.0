@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=virtual/libusb:1 >=sys-apps/dmidecode-2.8 >=sys-apps/pciutils-2.2.0
 SLOT=0
 SRC_URI=http://hardware4linux.info/res/hwreport-0.11.0.tar.bz2
-_md5_=197889f554e59727795b52a12a829e17
+_md5_=03dbeacafa1e7896cadef0097430eeea

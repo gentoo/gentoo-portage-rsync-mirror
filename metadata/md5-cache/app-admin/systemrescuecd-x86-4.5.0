@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RESTRICT=mirror
 SLOT=4.5.0
 SRC_URI=mirror://sourceforge/systemrescuecd/sysresccd-x86/4.5.0/systemrescuecd-x86-4.5.0.iso
-_md5_=304939217e63b1fd9c7aec2efaf65216
+_md5_=a8a1f25992dd192475678157e41cb419

@@ -8,5 +8,5 @@ LICENSE=Apache-2.0
 RDEPEND=dev-libs/openssl:0
 SLOT=0
 SRC_URI=https://github.com/grobian/carbon-c-relay/archive/v0.40.tar.gz -> carbon-c-relay-0.40.tar.gz
-_eclasses_=multilib	62927b3db3a589b0806255f3a002d5d3	toolchain-funcs	42408102d713fbad60ca21349865edb4	user	f54e098dd38ba1c0847a13e685b87747
-_md5_=0103c981ae1e940c9e6512e9cb83b93f
+_eclasses_=multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	user	906f3c8eb3a2350a4f1191a89baa3e46
+_md5_=55fdb1a0fe5f1cce395d8c775b3e803f

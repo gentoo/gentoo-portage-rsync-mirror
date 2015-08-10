@@ -7,4 +7,4 @@ LICENSE=OPL
 RDEPEND=>=app-doc/linux-gazette-base-174
 SLOT=174
 SRC_URI=http://linuxgazette.net/ftpfiles/lg-174.tar.gz
-_md5_=152c0109f75ad00a0862c55c1fa601e2
+_md5_=0f451e0aca192a9fb413043a90486b2d

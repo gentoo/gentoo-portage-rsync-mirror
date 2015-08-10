@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=sys-fs/squashfs-tools
 SLOT=0
 SRC_URI=mirror://gentoo/gnap-tools-2.0.tar.bz2 !minimal? ( mirror://gentoo/gnap-basefs-2.0.tar.bz2 mirror://gentoo/gnap-extensions-2.0.tar )
-_md5_=fe3566ea471fc74719cd8b6431dc2a75
+_md5_=659b8bec69d744a368e82cbdeea6ac8e

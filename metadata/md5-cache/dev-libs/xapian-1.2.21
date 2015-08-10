@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=sys-libs/zlib
 SLOT=0
 SRC_URI=http://oligarchy.co.uk/xapian/1.2.21/xapian-core-1.2.21.tar.xz
-_md5_=3763e01bafc9b7d9133ccd9e809ef0cc
+_md5_=24c824772cc9c61eeb49fc67b4f77c86

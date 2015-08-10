@@ -9,4 +9,4 @@ LICENSE=GPL-2
 RDEPEND=net-libs/libpcap
 SLOT=0
 SRC_URI=ftp://ftp.ucarp.org/pub/ucarp/ucarp-1.5.2.tar.gz
-_md5_=01eff91f51fbe383833479c9fbe3dbb4
+_md5_=45f925cb56a4189f013ab486e3c5dc73

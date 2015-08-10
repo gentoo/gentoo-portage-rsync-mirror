@@ -7,4 +7,4 @@ LICENSE=GPL-2
 RDEPEND=app-cdr/cdrtools sys-fs/dosfstools <sys-boot/syslinux-5
 SLOT=0
 SRC_URI=mirror://gentoo/gnap-tools-2.0.tar.bz2 !minimal? ( mirror://gentoo/gnap-core-2.0.tar )
-_md5_=e5060d2e8e91d6943742722789d78600
+_md5_=38a390ff97ddb76121d92bea6f3eb65b

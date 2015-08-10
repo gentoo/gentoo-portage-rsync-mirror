@@ -9,4 +9,4 @@ LICENSE=GPL-3
 RDEPEND=>=dev-libs/glib-2 media-libs/alsa-lib x11-libs/gtk+:3 x11-libs/libX11 libnotify? ( >=x11-libs/libnotify-0.7 )
 SLOT=0
 SRC_URI=http://softwarebakery.com/maato/files/volumeicon/volumeicon-0.5.0.tar.gz
-_md5_=71fdde2c24ff114b0adec788f04abb66
+_md5_=8241d98f4ede9aededc9b84d7cd06e0e

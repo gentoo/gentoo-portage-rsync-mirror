@@ -7,4 +7,4 @@ LICENSE=GPL-3
 RESTRICT=binchecks strip
 SLOT=0
 SRC_URI=mirror://gentoo/reference-structures-2.tar.gz
-_md5_=c208c415332c0be64d55b19a3efeb228
+_md5_=5d32f3476e48fa9a8782b1858cee19c6

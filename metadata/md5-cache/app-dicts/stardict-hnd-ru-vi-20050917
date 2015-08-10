@@ -8,5 +8,5 @@ LICENSE=GPL-2
 RESTRICT=strip
 SLOT=0
 SRC_URI=http://james.dyndns.ws/pub/Dictionary/StarDict-James/NgaViet38K.zip
-_eclasses_=stardict	0377e6bf21060f0d18a39ea68f54a162
-_md5_=fd27c994bd2d14947db5f74960ee2f50
+_eclasses_=stardict	f2fd36b0af07ceaba9852e6caec6ac7f
+_md5_=f88f153df4219dcaebade18882b04f70

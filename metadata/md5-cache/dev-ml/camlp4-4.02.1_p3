@@ -9,4 +9,4 @@ LICENSE=LGPL-2-with-linking-exception
 RDEPEND=>=dev-lang/ocaml-4.02:=[ocamlopt?] !<dev-lang/ocaml-4.02 !<dev-ml/findlib-1.5.5-r1
 SLOT=0/4.02.1_p3
 SRC_URI=https://github.com/ocaml/camlp4/archive/4.02.1+3.tar.gz -> camlp4-4.02.1_p3.tar.gz
-_md5_=0396e9ec6eff6d395b90ee68d768a61a
+_md5_=5f8cf284672a2d356f273d91ec4d9a10

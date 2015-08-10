@@ -6,4 +6,4 @@ LICENSE=GPL-2
 RDEPEND=x11-themes/fvwm-themes
 SLOT=0
 SRC_URI=mirror://sourceforge/fvwm-themes/fvwm-themes-extra-0.7.0.tar.bz2
-_md5_=592ef9304ba950fcd00e82f55c29e97e
+_md5_=e98d379d6d3ecba4ba34cc73f6b7da6f

@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=virtual/jpeg media-libs/freetype
 SLOT=0
 SRC_URI=mirror://sourceforge/sswf/sswf-1.8.4-src.tar.bz2 mirror://sourceforge/sswf/sswf-1.8.4-doc.tar.bz2
-_md5_=d60afb101433af7f58b8386bb029d276
+_md5_=0437fb12b5bcad896e40e817743ad6f6

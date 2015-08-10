@@ -7,4 +7,4 @@ LICENSE=GPL-3
 RDEPEND=!=gnome-base/gnome-common-3.14.0 !>=gnome-base/gnome-common-3.14.0-r1[-autoconf-archive(+)]
 SLOT=0
 SRC_URI=mirror://gnu/autoconf-archive/autoconf-archive-2015.02.24.tar.xz
-_md5_=97e1b967a71e2a52f77255de697a98ad
+_md5_=a40cc3a97695f6112711e64ad0786870

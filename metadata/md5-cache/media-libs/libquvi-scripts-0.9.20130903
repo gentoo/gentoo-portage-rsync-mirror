@@ -10,4 +10,4 @@ RDEPEND=>=dev-lua/LuaBitOp-1.0.1 >=dev-lua/luaexpat-1.2.0 >=dev-lua/luajson-1.1.
 RESTRICT=test
 SLOT=0
 SRC_URI=mirror://sourceforge/quvi/libquvi-scripts-0.9.20130903.tar.xz
-_md5_=6ae53dead379a00d947b8c49e7ade5a2
+_md5_=3f63ed40b4032232c4f84b078a47835e

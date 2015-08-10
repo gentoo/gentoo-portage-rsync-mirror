@@ -6,4 +6,4 @@ LICENSE=qlogic-fibre-channel-firmware
 RDEPEND=!sys-kernel/linux-firmware
 SLOT=0
 SRC_URI=mirror://gentoo/qla-fc-firmware-20071207.tar.bz2
-_md5_=e2ab0565a25f972ac2eadf8f3a1eb21c
+_md5_=2116467b31f56c44c24209f7986dfb9c

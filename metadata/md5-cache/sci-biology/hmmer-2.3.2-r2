@@ -8,4 +8,4 @@ LICENSE=GPL-2
 RDEPEND=pvm? ( sys-cluster/pvm )
 SLOT=0
 SRC_URI=ftp://ftp.genetics.wustl.edu/pub/eddy/hmmer/2.3.2/hmmer-2.3.2.tar.gz
-_md5_=ceeeddbd919fe1b30610582fca869b31
+_md5_=facf72fb5eac940cd2a42cd5375b8887

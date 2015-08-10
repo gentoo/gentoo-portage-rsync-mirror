@@ -7,4 +7,4 @@ KEYWORDS=amd64 x86
 LICENSE=GPL-2
 SLOT=0
 SRC_URI=http://www.maier-komor.de/xjobs/xjobs-20140125.tgz
-_md5_=b641b287f6d953767593b5becc04afb3
+_md5_=bcc62384daef8bc66dbc424544ed84a8
