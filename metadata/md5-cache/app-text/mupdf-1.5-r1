@@ -10,4 +10,4 @@ RDEPEND=dev-libs/openssl[static-libs?] media-libs/freetype:2[static-libs?] media
 SLOT=0/1.5
 SRC_URI=http://git.ghostscript.com/?p=mupdf.git;a=snapshot;h=b2f096de23e5341fbbcd7c290f3a144423741906;sf=tgz -> mupdf-1.5.tar.gz
 _eclasses_=eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	vcs-snapshot	2ecbc36efd3f6b8486f63fcf8530c1bd
-_md5_=50a03453258718e87b311dfb35fcb050
+_md5_=5a418cb8e13af744f5760125e0991cab
