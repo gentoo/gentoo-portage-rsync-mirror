@@ -415,6 +415,10 @@ app-crypt/shishi:null - Enable dummy NULL encryption/checksum type.
 app-crypt/tc-play:openssl - Use openssl crypto backend.
 app-crypt/tpm-tools:pkcs11 - Build Token data management utilities based on OpenCryptoki's (dev-libs/opencryptoki) PKCS#11 implementation.
 app-crypt/truecrypt:asm - Enable assembly for optimization
+app-crypt/zuluCrypt:gnome - Enable support for the freedesktop.org Secret Service API via app-crypt/libsecret. This does not control the gui!
+app-crypt/zuluCrypt:gui - Whether to build the QT gui. Highly recommended.
+app-crypt/zuluCrypt:kde - Enable support for KDE, e.g. via kde-base/kwalletd. This does not control the gui, but NEEDS GUI ENABLED!
+app-crypt/zuluCrypt:udev - Whether udev will be consulted when deciding if a volume is system or not.
 app-dicts/aspell-be:classic - Support classic spelling by default
 app-dicts/gwaei:hunspell - Enable app-text/hunspell spellchecking and morphological analysis
 app-dicts/gwaei:mecab - Enable app-text/mecab support
