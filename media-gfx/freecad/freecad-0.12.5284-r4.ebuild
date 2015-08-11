@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="dev-cpp/eigen:3
 	dev-games/ode
-	dev-libs/boost
+	<dev-libs/boost-1.57
 	dev-libs/libf2c
 	dev-libs/libspnav[X]
 	dev-libs/xerces-c[icu]
@@ -34,7 +34,7 @@ RDEPEND="dev-cpp/eigen:3
 	media-libs/SoQt
 	media-libs/coin[doc]
 	sci-libs/gts
-	|| ( sci-libs/opencascade:6.7.1 sci-libs/opencascade:6.6.0 sci-libs/opencascade:6.5.5 )
+	sci-libs/opencascade:6.7.1
 	sys-libs/zlib
 	virtual/glu"
 DEPEND="${RDEPEND}
