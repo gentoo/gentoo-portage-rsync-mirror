@@ -688,6 +688,10 @@ check_modules_supported() {
 # It checks the kernel config options specified by CONFIG_CHECK. It dies only when a required config option (i.e.
 # the prefix ~ is not used) doesn't satisfy the directive.
 check_extra_config() {
+	# CONFIG_CHECK is re-declared here to ensure that this variable will be
+	# available in environment.bz2
+	declare -g CONFIG_CHECK="${CONFIG_CHECK}"
+
 	local config negate die error reworkmodulenames
 	local soft_errors_count=0 hard_errors_count=0 config_required=0
 	# store the value of the QA check, because otherwise we won't catch usages
