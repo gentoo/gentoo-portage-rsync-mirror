@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>proxy-maintainers</herd>
+	<maintainer>
+		<email>ykonotopov@gmail.com</email>
+		<name>Yuri Konotopov</name>
+	</maintainer>
+	<use>
+		<flag name="png">Allow to dump texture as PNG (require <pkg>dev-cpp/pngpp</pkg>)</flag>
+		<flag name="wxwidgets3">Link against version 3.0 of <pkg>x11-libs/wxGTK</pkg> instead of 2.8</flag>
+	</use>
+</pkgmetadata>
